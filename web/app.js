@@ -101,7 +101,7 @@ async function selectCase(item, requestedVariant) {
       if (!groups.has(groupName)) { const group = newNode('optgroup'); group.label = groupName; groups.set(groupName, group); $('#variantSelect').append(group); }
       const option = newNode('option'); option.value = variant.id;
       const part = multiPart ? `部件 ${Number(variant.id.match(/part(\d+)/)?.[1] || 1)} · ` : '';
-      option.textContent = variant.role?.startsWith('ordinary_') ? `${part}${variant.role === 'ordinary_control' ? '控制' : '挑战'} · R${variant.radius_mm} mm` : (variant.label || variant.id).replace('先导原生重建 · ', '补充 · ');
+      option.textContent = variant.role?.startsWith('ordinary_') ? `${part}${variant.role === 'ordinary_control' ? '控制' : '挑战'} · ${variant.radius_label || `R${variant.radius_mm} mm`}` : (variant.label || variant.id).replace('先导原生重建 · ', '补充 · ');
       option.title = variantLabel(variant); groups.get(groupName).append(option);
     }
     $('#beforeToggle').checked = false;
@@ -133,6 +133,8 @@ function renderNotice() {
   const parts = [];
   if (variant.pairing === 'same_source_geometry_and_request_different_representations') {
     parts.push('同源几何与目标参数 · OCCT：原解析 BREP · SMLib：有限 NURBS / 共享拓扑。');
+  } else if (variant.pairing === 'same_end_constraints_law_equivalence_unverified') {
+    parts.push('同源输入、相同物理两端半径；各内核采用默认内插。全程半径规律等价未验证，不能当成同一沿程 law 评分。');
   } else if (variant.pairing === 'unmatched_special_protocol') {
     parts.push('独立特殊协议：两侧尚未核对同输入、同半径和特殊参数，普通轨结果不能替代。');
   } else parts.push(text(variant.input_construction_note || variant.input_note || variant.representation_note || state.currentCase.representation_note, '内核输入表示与构建方法见记录。'));
@@ -190,9 +192,13 @@ async function renderModels(token) {
     catch (error) { return { engine, mesh: null, reason: `网格读取失败：${error.message}` }; }
   });
   const results = await Promise.all(tasks);
+  // A retained fragment must not expand to fill the frame. Keep the exact same
+  // world bounds for before/after, including both inputs and both real outputs.
+  const boundSources = [...new Set([variant.input_mesh, ...['occt', 'smlib'].flatMap((engine) => [variant[engine]?.before_mesh, variant[engine]?.mesh])].filter(Boolean))];
+  const boundMeshes = await Promise.all(boundSources.map((source) => readMesh(source).catch(() => null)));
   if (token !== state.token) return;
   const bounds = new THREE.Box3();
-  for (const { mesh } of results) if (validMesh(mesh)) for (const vertex of mesh.vertices) bounds.expandByPoint(new THREE.Vector3(...vertex));
+  for (const mesh of boundMeshes) if (validMesh(mesh)) for (const vertex of mesh.vertices) bounds.expandByPoint(new THREE.Vector3(...vertex));
   for (const entry of results) {
     const stage = $(`#${entry.engine}Stage`);
     $('.stage-busy', stage).hidden = true;

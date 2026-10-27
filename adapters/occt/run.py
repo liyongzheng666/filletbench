@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded, fresh ordinary OCCT fillet execution. No FreeCAD dependency."""
+"""Bounded, fresh ordinary constant/two-end-radius OCCT fillets. No FreeCAD."""
 from __future__ import annotations
 
 import argparse
@@ -18,7 +18,7 @@ from time import perf_counter
 
 ROOT = Path(__file__).resolve().parents[2]
 PIN = "7.9.3.1.1"
-BOUNDARY = ("Ordinary constant-radius edge fillet only. Neither API completion nor "
+BOUNDARY = ("Ordinary constant or explicitly bound linear two-end-radius edge fillet only. Neither API completion nor "
             "BREP validity certifies the source illustration's special feature, "
             "whole-shape equivalence, G2 continuity, or human appearance acceptance.")
 
@@ -63,11 +63,11 @@ def initial(job_path, job):
         "expected_input_kind": job.get("expected_input_kind"),
         "started_at": datetime.now(timezone.utc).isoformat(),
         "outcome": "initializing", "reason": None, "api_success": False,
-        "api": "BRepFilletAPI_MakeFillet.Add(radius, edge); Build()",
+        "api": None, "parameters": {}, "request_parameters_verified": False,
         "native_call_executed": False, "api_result": {}, "valid": None,
         "solids": None, "input_stats": None, "result_stats": None,
         "selection": [], "metrics": {}, "artifacts": {},
-        "scope": "ordinary_constant_radius_edge_fillet",
+        "scope": "ordinary_edge_fillet",
         "only_ordinary": True, "special_feature_certified": False,
         "validation_boundary": BOUNDARY,
         "pairing_eligibility": bool(job.get("runnable_by_selected_edge_runner")),
@@ -92,7 +92,7 @@ def worker(job_path, out):
     try:
         import OCP
         from OCP.BRep import BRep_Tool, BRep_Builder
-        from OCP.BRepAdaptor import BRepAdaptor_Curve
+        from OCP.BRepAdaptor import BRepAdaptor_Curve, BRepAdaptor_Surface
         from OCP.BRepBndLib import BRepBndLib
         from OCP.BRepCheck import BRepCheck_Analyzer
         from OCP.BRepClass3d import BRepClass3d_SolidClassifier
@@ -101,7 +101,7 @@ def worker(job_path, out):
         from OCP.BRepMesh import BRepMesh_IncrementalMesh
         from OCP.BRepTools import BRepTools
         from OCP.Bnd import Bnd_Box
-        from OCP.GeomAbs import GeomAbs_Line, GeomAbs_Circle
+        from OCP.GeomAbs import GeomAbs_Line, GeomAbs_Circle, GeomAbs_Plane
         from OCP.GeomAPI import GeomAPI_ProjectPointOnCurve
         from OCP.GProp import GProp_GProps
         from OCP.TopAbs import (TopAbs_COMPOUND, TopAbs_SOLID, TopAbs_SHELL,
@@ -238,6 +238,29 @@ def worker(job_path, out):
         radius = float(job["radius_mm"])
         if not math.isfinite(radius) or radius <= 0:
             raise ValueError("Radius must be finite and positive")
+        variable_keys = {key for key in job if key.startswith("variable_")}
+        known_variable = {"variable_start_mm", "variable_end_mm", "variable_physical_start",
+                          "variable_physical_end", "variable_radius_orientation_rule"}
+        required_variable = known_variable - {"variable_radius_orientation_rule"}
+        variable = bool(variable_keys) or "variable" in job["job_id"]
+        if variable and (variable_keys-known_variable or not required_variable.issubset(variable_keys)):
+            summary.update(outcome="unsupported_parameters", reason="Incomplete or unhandled variable-radius request; constant-radius fallback is forbidden")
+            checkpoint("parameter_rejected")
+            return 0
+        if variable:
+            r_start, r_end = float(job["variable_start_mm"]), float(job["variable_end_mm"])
+            physical_start, physical_end = job["variable_physical_start"], job["variable_physical_end"]
+            if (not all(math.isfinite(r) and r>0 for r in (r_start,r_end)) or
+                    any(len(p)!=3 or not all(math.isfinite(x) for x in p) for p in (physical_start,physical_end)) or
+                    dist(physical_start,physical_end)<=1e-6):
+                summary.update(outcome="unsupported_parameters", reason="Invalid variable radii or physical endpoints")
+                checkpoint("parameter_rejected")
+                return 0
+            summary["parameters"] = {"radius_mode":"two_end_variable", "interpolation":"native_two_endpoint_default", **{key:job[key] for key in required_variable}}
+            summary["api"] = "BRepFilletAPI_MakeFillet.Add(R1, R2, edge); Build()"
+        else:
+            summary["parameters"] = {"radius_mode":"constant", "radius_mm":radius}
+            summary["api"] = "BRepFilletAPI_MakeFillet.Add(radius, edge); Build()"
         shape = TopoDS_Shape()
         if not BRepTools.Read_s(shape, str(source), BRep_Builder()) or shape.IsNull():
             raise ValueError("BREP read failed or returned a null shape")
@@ -373,8 +396,56 @@ def worker(job_path, out):
         mesh(before, "before", selected)
         checkpoint("native_setup")
         fillet = BRepFilletAPI_MakeFillet(before)
-        for edge in selected:
-            fillet.Add(radius, edge)
+        if variable:
+            if len(selected)!=1 or BRepAdaptor_Curve(selected[0]).GetType()!=GeomAbs_Line:
+                summary.update(outcome="unsupported_parameters",reason="Two-end law currently requires exactly one straight native edge")
+                checkpoint("parameter_rejected")
+                return 0
+            curve=BRepAdaptor_Curve(selected[0])
+            native_first=xyz(curve.Value(curve.FirstParameter()))
+            native_last=xyz(curve.Value(curve.LastParameter()))
+            tolerance=min(float(t.get("coverage_tolerance_mm",1e-5)) for t in job["targets"])
+            forward=max(dist(native_first,physical_start),dist(native_last,physical_end))<=tolerance
+            reverse=max(dist(native_first,physical_end),dist(native_last,physical_start))<=tolerance
+            if forward==reverse:
+                summary.update(outcome="unsupported_parameters",reason="Cannot uniquely bind variable physical endpoints to finite native parameter ends")
+                checkpoint("parameter_rejected")
+                return 0
+            native_r1,native_r2=(r_start,r_end) if forward else (r_end,r_start)
+            support_faces=[TopoDS.Face_s(face) for face in faces
+                if any(selected[0].IsSame(e) for e in shapes(face,TopAbs_EDGE))]
+            if len(support_faces)!=2 or any(BRepAdaptor_Surface(face).GetType()!=GeomAbs_Plane for face in support_faces):
+                summary.update(outcome="unsupported_parameters",reason="Two-end measured law currently requires two planar supports")
+                checkpoint("parameter_rejected")
+                return 0
+            planes=[BRepAdaptor_Surface(face).Plane() for face in support_faces]
+            if abs(planes[0].Axis().Direction().Dot(planes[1].Axis().Direction()))>1e-7:
+                summary.update(outcome="unsupported_parameters",reason="Two-end measured law currently requires orthogonal planar supports")
+                checkpoint("parameter_rejected")
+                return 0
+            fillet.Add(native_r1,native_r2,selected[0])
+            if fillet.NbContours()!=1 or fillet.NbEdges(1)!=1:
+                summary.update(outcome="unsupported_parameters",reason="Automatic tangent contour extends beyond the single physically bound edge")
+                checkpoint("parameter_rejected")
+                return 0
+            contour_first=xyz(BRep_Tool.Pnt_s(fillet.FirstVertex(1)))
+            contour_last=xyz(BRep_Tool.Pnt_s(fillet.LastVertex(1)))
+            if max(dist(contour_first,native_first),dist(contour_last,native_last))>tolerance:
+                summary.update(outcome="unsupported_parameters",reason="Native contour orientation differs from the proven native parameter orientation")
+                checkpoint("parameter_rejected")
+                return 0
+            summary["variable_radius_binding"]={"native_first_point_mm":native_first,
+                "native_last_point_mm":native_last,"native_start_radius_mm":native_r1,
+                "native_end_radius_mm":native_r2,"reversed_from_physical_endpoints":reverse,
+                "contour_first_point_mm":contour_first,"contour_last_point_mm":contour_last,
+                "contour_edge_count":1,"endpoint_gap_mm":max(dist(native_first,physical_end if reverse else physical_start),dist(native_last,physical_start if reverse else physical_end)),"verified":True}
+        else:
+            for edge in selected:
+                fillet.Add(radius, edge)
+            summary["request_parameters_verified"] = True
+        summary["api_result"]["effective_parameters"]={"method":"Add(R1,R2,edge)" if variable else "Add(radius,edge)",
+            **summary["parameters"],"continuity":"default_internal_C1","fillet_shape":"ChFi3d_Rational",
+            "support_scope":"one straight native edge, two orthogonal planar supports; no source-special law" if variable else "ordinary selected-edge constant-radius contour; no source-special law"}
         contours = []
         for i in range(1, fillet.NbContours()+1):
             contours.append({"contour_index_1based": i, "edge_count": fillet.NbEdges(i),
@@ -421,8 +492,65 @@ def worker(job_path, out):
         summary["metrics"]["protected_probes"] = probes
         save_brep(result, "result")
         mesh(result, "result")
+        if variable:
+            # Read back the exported BREP. Measure both contact curves on the
+            # two original support planes at fixed physical spine stations.
+            measured=TopoDS_Shape()
+            if not BRepTools.Read_s(measured,str(out/"result.brep"),BRep_Builder()):
+                raise RuntimeError("Variable result BREP readback failed")
+            result_faces=[TopoDS.Face_s(f) for f in shapes(measured,TopAbs_FACE)]
+            contact_edges=[]
+            spine_length=dist(physical_start,physical_end)
+            direction=[(b-a)/spine_length for a,b in zip(physical_start,physical_end)]
+            coordinate=lambda p:sum((x-a)*d for x,a,d in zip(p,physical_start,direction))/spine_length
+            for raw in shapes(measured,TopAbs_EDGE):
+                edge=TopoDS.Edge_s(raw)
+                owners=[face for face in result_faces if any(edge.IsSame(e) for e in shapes(face,TopAbs_EDGE))]
+                if len(owners)!=2 or not any(BRepAdaptor_Surface(face).GetType()!=GeomAbs_Plane for face in owners):
+                    continue
+                support=[face for face in owners if BRepAdaptor_Surface(face).GetType()==GeomAbs_Plane and
+                    all(BRepAdaptor_Surface(face).Plane().Distance(gp_Pnt(*p))<=1e-6 for p in (physical_start,physical_end))]
+                if len(support)!=1:
+                    continue
+                c=BRepAdaptor_Curve(edge);a,b=c.FirstParameter(),c.LastParameter()
+                ca,cb=coordinate(xyz(c.Value(a))),coordinate(xyz(c.Value(b)))
+                samples=[]
+                for fraction in (0.,.1,.25,.5,.75,.9,1.):
+                    lo,hi=a,b
+                    for _ in range(64):
+                        middle=(lo+hi)/2
+                        value=coordinate(xyz(c.Value(middle)))
+                        if (value<fraction)==(cb>ca):lo=middle
+                        else:hi=middle
+                    point=xyz(c.Value((lo+hi)/2));actual_fraction=coordinate(point)
+                    foot=[a+actual_fraction*spine_length*d for a,d in zip(physical_start,direction)]
+                    contact_radius=dist(point,foot)
+                    expected_radius=r_start+(r_end-r_start)*fraction
+                    samples.append({"physical_spine_fraction":fraction,"actual_spine_fraction":actual_fraction,
+                        "contact_point_mm":point,"measured_contact_distance_mm":contact_radius,
+                        "expected_linear_radius_mm":expected_radius,"radius_error_mm":abs(contact_radius-expected_radius)})
+                contact_edges.append({"endpoint_spine_fractions":[ca,cb],"samples":samples,
+                    "measured_radius_range_mm":[min(p['measured_contact_distance_mm'] for p in samples),max(p['measured_contact_distance_mm'] for p in samples)]})
+            max_error=max((p['radius_error_mm'] for row in contact_edges for p in row['samples']),default=None)
+            max_station_error=max((abs(p['actual_spine_fraction']-p['physical_spine_fraction']) for row in contact_edges for p in row['samples']),default=None)
+            nonconstant=bool(contact_edges) and all(row['measured_radius_range_mm'][1]-row['measured_radius_range_mm'][0]>abs(r_end-r_start)*.9 for row in contact_edges)
+            endpoint_error=max((p['radius_error_mm'] for row in contact_edges for p in row['samples'] if p['physical_spine_fraction'] in (0.,1.)),default=None)
+            passed=len(contact_edges)==2 and endpoint_error is not None and endpoint_error<=1e-4 and max_station_error<=1e-6 and (nonconstant or abs(r_end-r_start)<=1e-6)
+            summary["variable_radius_validation"]={"method":"Exported BREP readback; two actual blend/support contact curves, distance from original spine at seven fixed physical stations", "contact_curves":contact_edges,
+                "maximum_radius_error_mm":max_error,"maximum_station_fraction_error":max_station_error,
+                "maximum_endpoint_radius_error_mm":endpoint_error,
+                "endpoint_radii_verified":len(contact_edges)==2 and endpoint_error is not None and endpoint_error<=1e-4,
+                "nonconstant_radius_observed":nonconstant,"passed":passed,
+                "full_linear_contact_law_passed":len(contact_edges)==2 and max_error is not None and max_error<=1e-4,
+                "verification_scope":"Same two physical endpoint radii and nonconstant output only; interior linear reference differences are observations, not API failures",
+                "boundary":"No full interpolation-law equivalence, source asymmetric range law, or rho certification"}
+            summary["request_parameters_verified"]=passed
+            summary["pairing_status"]="same_physical_two_endpoint_constraints_only" if passed else "two_endpoint_geometry_unverified"
+            summary["full_variable_law_equivalence_verified"]=False
         summary.update(outcome="ok" if summary["valid"] and output_kind_ok else "invalid_result",
                        reason=None if summary["valid"] and output_kind_ok else "BREP invalid or expected input kind not preserved")
+        if variable and summary["outcome"]=="ok" and not summary["request_parameters_verified"]:
+            summary.update(outcome="parameter_validation_failed",reason="Physical endpoint radii and nonconstant output did not verify")
         checkpoint("complete")
         return 0
     except Exception as error:

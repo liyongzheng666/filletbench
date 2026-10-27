@@ -9,17 +9,24 @@ from __future__ import annotations
 
 import argparse
 import collections
+import copy
 import datetime
 import hashlib
 import json
 import math
 from pathlib import Path
 import re
+import shlex
 import subprocess
 
 POSITION = 1e-6
 SHARP_DEGREES = 1.0
 TAU = 2 * math.pi
+PARAMETER_CORRECTIONS = [
+    dict(job_id='33.part01.ordinary_challenge.r2p43305-variable-control',
+         superseded_occt_summary_sha256='0a8c55330dd100d7677e1018a0a053ce591c76c625c45f2ba523c0c1ed9917f7'),
+    dict(job_id='34.part01.ordinary_challenge.r16p8574-variable-control',
+         superseded_occt_summary_sha256='cbd6dce1b566376023c1a0ff8a424f6fd6966cb43ca0ca938f81f7da78acae5d')]
 
 
 def read(path, default=None):
@@ -324,6 +331,142 @@ def source_metric_check(expected, actual, engine):
                 limitation='Scalar and face/edge/vertex census consistency with source component; not finite trim or global geometry equivalence proof')
 
 
+def parameter_audit(job, summary, run, engine):
+    """Bind actual API family/settings and endpoint radii to world positions."""
+    start, end = job.get('variable_start_mm'), job.get('variable_end_mm')
+    variable = start is not None and end is not None
+    request = dict(operation=job.get('operation'), radius_mode='two_end' if variable else 'constant',
+                   radius_mm=job.get('radius_mm'), variable_start_mm=start, variable_end_mm=end,
+                   variable_physical_start=job.get('variable_physical_start'),
+                   variable_physical_end=job.get('variable_physical_end'),
+                   xsect_type=job.get('xsect_type',1), continuity=job.get('continuity',1),
+                   thumbweight=job.get('thumbweight',1))
+    checks, actual = {}, {}
+    native = bool(summary.get('native_call_executed') if engine=='occt' else (summary.get('execution') or {}).get('native_call_started'))
+    gaps = dict(source_specific_controls_expressed=bool(job.get('source_special_flags_expressed')),
+                reason=job.get('source_feature_adapter_gap'),
+                cap_limit_cliff_rho_softness_not_certified=True)
+    if not native:
+        return dict(status='not_executed', request=request, actual=actual, checks=checks, source_special_gap=gaps)
+    checks['operation'] = request['operation']=='native_edge_fillet'
+    checks['both_variable_radii_present_or_absent'] = (start is None)==(end is None)
+    for key in ['cap','cap_mode','limit','cliff','rho','softness','transfer','allow_overlap']:
+        if job.get(key) is not None:
+            checks['no_unimplemented_requested_'+key] = False
+    if engine=='smlib':
+        execution = read(run/'execution.json', {})
+        actual.update(method=execution.get('native_api'), xsect_type=execution.get('xsect_type'),
+                      continuity=execution.get('continuity'), thumbweight=execution.get('thumbweight'),
+                      radius_mm=execution.get('radius_mm'), need_reverse=execution.get('needReverse'))
+        expected_method = 'SmApiVariableRadiusFillet' if variable else 'SmApiFilletEdges'
+        checks['method'] = actual['method']==expected_method
+        for key in ['xsect_type','continuity','thumbweight','radius_mm']:
+            checks[key] = actual[key]==request[key]
+        tokens = {}
+        for line in (run/'job.tokens').read_text().splitlines():
+            fields = shlex.split(line)
+            if fields and fields[0] in {'VARIABLE','PARAMS','RADIUS'}:
+                tokens[fields[0]] = [float(x) for x in fields[1:]]
+        checks['native_token_radius'] = tokens.get('RADIUS')==[request['radius_mm']]
+        checks['native_token_settings'] = tokens.get('PARAMS')==[request['xsect_type'],request['continuity'],request['thumbweight']]
+        expected_var = [1.,start,end] if variable else [0.,0.,0.]
+        checks['native_token_radius_mode'] = tokens.get('VARIABLE')==expected_var
+        checks['no_cap_or_limit_claim'] = execution.get('native_cap_or_limit_option_supplied') is False
+        actual['thumbweight_use'] = 'not_used_by_variable_API_signature' if variable else 'passed_to_SmApiFilletEdges'
+        if variable:
+            checks['variable_does_not_silently_ignore_thumb_control'] = request['thumbweight']==1
+            for source_key, actual_key in [('variable_start_mm','variable_start_radius_mm'),('variable_end_mm','variable_end_radius_mm')]:
+                checks[source_key] = execution.get(actual_key)==request[source_key]
+            before, selection = read(run/'before.json', {}), read(run/'selection.json', {})
+            ids = {c['edge_id'] for t in selection.get('targets',[]) for c in t.get('candidates',[])}
+            edges = [e for e in before.get('geometry',{}).get('edges',[]) if e.get('id') in ids]
+            points = edges[0].get('points') if len(edges)==1 else None
+            actual['native_first_point_mm'] = points[0] if points else None
+            actual['native_last_point_mm'] = points[-1] if points else None
+            actual['native_start_radius_mm'] = end if actual['need_reverse'] else start
+            actual['native_end_radius_mm'] = start if actual['need_reverse'] else end
+            samples = job['targets'][0].get('samples_mm',job['targets'][0].get('samples'))
+            checks['native_variable_anchor_matches_explicit_physical_endpoints'] = bool(samples and
+                math.dist(samples[0],request['variable_physical_start'])<=POSITION and
+                math.dist(samples[-1],request['variable_physical_end'])<=POSITION)
+    else:
+        effective = (summary.get('api_result') or {}).get('effective_parameters', {})
+        actual.update(effective)
+        actual['api'] = summary.get('api')
+        checks['method'] = effective.get('method')==('Add(R1,R2,edge)' if variable else 'Add(radius,edge)')
+        checks['radius_mode'] = effective.get('radius_mode') in ({'two_end','two_end_variable','linear_two_end'} if variable else {'constant'})
+        checks['circular_section'] = request['xsect_type']==1 and effective.get('fillet_shape')=='ChFi3d_Rational'
+        checks['continuity'] = request['continuity']==1 and effective.get('continuity')=='default_internal_C1'
+        checks['thumbweight_no_unsupported_control'] = request['thumbweight']==1
+        if variable:
+            parameters = summary.get('parameters') or {}
+            for key in ['variable_start_mm','variable_end_mm','variable_physical_start','variable_physical_end']:
+                checks[key] = parameters.get(key)==request[key]
+            binding = summary.get('variable_radius_binding') or {}
+            actual['binding'] = binding
+            actual.update({key:binding.get(key) for key in ['native_first_point_mm','native_last_point_mm','native_start_radius_mm','native_end_radius_mm']})
+            actual['need_reverse'] = binding.get('reversed_from_physical_endpoints')
+            meshes = read(run/'before.mesh.json', {}).get('selected_edges',[])
+            checks['binding_agrees_with_saved_native_parameter_endpoints'] = bool(len(meshes)==1 and
+                actual['native_first_point_mm'] and actual['native_last_point_mm'] and
+                math.dist(actual['native_first_point_mm'],meshes[0][0])<=POSITION and
+                math.dist(actual['native_last_point_mm'],meshes[0][-1])<=POSITION)
+            checks['binding_runtime_verified'] = binding.get('verified') is True
+            checks['Add_contour_endpoints_match_native_parameter_endpoints'] = bool(binding.get('contour_edge_count')==1 and
+                binding.get('contour_first_point_mm') and binding.get('contour_last_point_mm') and
+                actual['native_first_point_mm'] and actual['native_last_point_mm'] and
+                math.dist(binding['contour_first_point_mm'],actual['native_first_point_mm'])<=POSITION and
+                math.dist(binding['contour_last_point_mm'],actual['native_last_point_mm'])<=POSITION)
+        else:
+            checks['radius_mm'] = effective.get('radius_mm')==request['radius_mm']
+    if variable:
+        first, last = actual.get('native_first_point_mm'), actual.get('native_last_point_mm')
+        physical_first, physical_last = request['variable_physical_start'],request['variable_physical_end']
+        if first and last and physical_first and physical_last:
+            direct = max(math.dist(first,physical_first),math.dist(last,physical_last))
+            reverse = max(math.dist(first,physical_last),math.dist(last,physical_first))
+            reversed_expected = reverse < direct
+            checks['actual_edge_covers_both_physical_endpoints'] = min(direct,reverse)<=POSITION
+            checks['reversal_from_actual_world_endpoints'] = actual.get('need_reverse') is reversed_expected
+            checks['native_first_radius_at_correct_world_endpoint'] = actual.get('native_start_radius_mm')==(end if reversed_expected else start)
+            checks['native_last_radius_at_correct_world_endpoint'] = actual.get('native_end_radius_mm')==(start if reversed_expected else end)
+            actual['independent_max_endpoint_gap_mm'] = min(direct,reverse)
+        else:
+            checks['actual_world_endpoint_binding_available'] = False
+    return dict(status='checked' if all(checks.values()) else 'failed', request=request, actual=actual, checks=checks,
+                source_special_gap=gaps,
+                boundary='Effective call settings and physical endpoint binding; no proof of whole output law, G1/G2 or source-special-feature equivalence')
+
+
+def variable_contact_audit(job, summary):
+    raw = (summary.get('variable_radius_validation') or {}).get('contact_curves',[])
+    if not raw:
+        return dict(status='unverified', reason='No actual contact-curve station samples')
+    origin, finish = job['variable_physical_start'],job['variable_physical_end']
+    axis = sub(finish,origin)
+    squared = dot(axis,axis)
+    curves = []
+    for curve in raw:
+        points = []
+        for sample in curve.get('samples',[]):
+            p = sample['contact_point_mm']
+            fraction = dot(sub(p,origin),axis)/squared
+            projected = [x+fraction*d for x,d in zip(origin,axis)]
+            distance = math.dist(p,projected)
+            linear = job['variable_start_mm']+fraction*(job['variable_end_mm']-job['variable_start_mm'])
+            points.append(dict(contact_point_mm=p, actual_world_spine_fraction=fraction,
+                requested_station_fraction=sample['physical_spine_fraction'],
+                station_error=abs(fraction-sample['physical_spine_fraction']), contact_distance_mm=distance,
+                physical_linear_reference_mm=linear, physical_linear_reference_error_mm=abs(distance-linear)))
+        curves.append(dict(samples=points, maximum_linear_reference_error_mm=max(p['physical_linear_reference_error_mm'] for p in points),
+            endpoint_constraints_passed=all(p['physical_linear_reference_error_mm']<=1e-5 for p in points if min(abs(p['actual_world_spine_fraction']),abs(1-p['actual_world_spine_fraction']))<1e-6),
+            nonconstant_distance_observed=max(p['contact_distance_mm'] for p in points)-min(p['contact_distance_mm'] for p in points)>1e-5))
+    maximum = max(c['maximum_linear_reference_error_mm'] for c in curves)
+    return dict(status='checked', physical_linear_reference_passed=maximum<=1e-5,
+        maximum_physical_linear_reference_error_mm=maximum, curves=curves,
+        boundary='Independent projection of saved real contact points onto physical spine. Linear law is a diagnostic reference, not a promised common native interpolation law or source-special-feature test.')
+
+
 def public_scan(root):
     command = ['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z']
     proc = subprocess.run(command, cwd=root, capture_output=True, check=True)
@@ -418,6 +561,31 @@ def saved_smooth_control(root):
     return dict(status='unverified', reason='No eligible saved smooth edge')
 
 
+def parameter_regression_controls(root):
+    ident = '34.part01.ordinary_challenge.r16p8574-variable-control'
+    job = read(root/'data/jobs'/f'{ident}.json')
+    run = root/'runs/fresh-occt'/ident
+    summary = read(run/'summary.json', {})
+    if parameter_audit(job,summary,run,'occt')['status']!='checked':
+        return dict(status='unverified', reason='Corrected variable baseline not available yet')
+    old_constant = copy.deepcopy(summary)
+    old_constant['api_result']['effective_parameters']['method'] = 'Add(radius,edge)'
+    old_constant['api_result']['effective_parameters']['radius_mode'] = 'constant'
+    assert parameter_audit(job,old_constant,run,'occt')['status']=='failed'
+    wrong_end = copy.deepcopy(summary)
+    binding = wrong_end['variable_radius_binding']
+    binding['native_start_radius_mm'],binding['native_end_radius_mm'] = binding['native_end_radius_mm'],binding['native_start_radius_mm']
+    checked = parameter_audit(job,wrong_end,run,'occt')
+    assert checked['status']=='failed' and not checked['checks']['native_first_radius_at_correct_world_endpoint']
+    wrong_requested_section = copy.deepcopy(job)
+    wrong_requested_section['xsect_type'] = 2
+    smlib_run = root/'runs/fresh-smlib'/ident
+    assert parameter_audit(wrong_requested_section,read(smlib_run/'summary.json'),smlib_run,'smlib')['status']=='failed'
+    return dict(status='passed', source_job=ident, mutations_written_to_disk=False,
+        checks=['superseded constant API substituted for variable request rejected',
+                'endpoint radii swapped on reverse native edge rejected','requested section silently replaced by native default rejected'])
+
+
 def published_pairs(root, jobs, raw_rows):
     variants = {}
     for path in sorted((root/'web/data/cases').glob('*.json')):
@@ -435,6 +603,8 @@ def published_pairs(root, jobs, raw_rows):
                 failures.append(dict(job_id=job['job_id'], kind='published_request_mismatch', field=field))
         if variant.get('special_protocol_verified'):
             failures.append(dict(job_id=job['job_id'], kind='ordinary_request_promoted_to_special_protocol'))
+        if job.get('variable_start_mm') is not None and variant.get('pairing')!='same_end_constraints_law_equivalence_unverified':
+            failures.append(dict(job_id=job['job_id'], kind='variable_pairing_must_distinguish_endpoint_constraints_from_full_law'))
         for engine in ['occt','smlib']:
             row = raw.get((job['job_id'],engine))
             if not row:
@@ -449,6 +619,18 @@ def published_pairs(root, jobs, raw_rows):
                 relative = public.get(field)
                 if relative and not (root/'web'/relative).is_file():
                     failures.append(dict(job_id=job['job_id'], engine=engine, kind='missing_published_artifact', field=field))
+            public_summary = read(root/'web'/public['summary'], {}) if public.get('summary') else {}
+            local_summary = read(root/row['run']/'summary.json', {})
+            if engine=='occt':
+                for key in ['parameters','variable_radius_binding','variable_radius_validation']:
+                    if public_summary.get(key)!=local_summary.get(key):
+                        failures.append(dict(job_id=job['job_id'], engine=engine, kind='published_effective_parameters_or_profiles_stale', field=key))
+                if (public_summary.get('api_result') or {}).get('effective_parameters')!=(local_summary.get('api_result') or {}).get('effective_parameters'):
+                    failures.append(dict(job_id=job['job_id'], engine=engine, kind='published_effective_parameters_or_profiles_stale', field='effective_parameters'))
+            else:
+                for key in ['native_api','radius_mm','xsect_type','continuity','thumbweight','variable_start_radius_mm','variable_end_radius_mm','needReverse']:
+                    if (public_summary.get('execution') or {}).get(key)!=(local_summary.get('execution') or {}).get(key):
+                        failures.append(dict(job_id=job['job_id'], engine=engine, kind='published_effective_parameters_or_profiles_stale', field=key))
             for finding in row['scientific_findings']:
                 if finding['kind'] in {'native_invalid_result','solid_became_open_or_sheet','original_sharp_target_retained'}:
                     if row.get('native_api_status') in (True,1000) and public.get('status') != 'geometry_failed':
@@ -478,7 +660,8 @@ def audit(root, engines):
             summary = read(summary_path)
             row = dict(job_id=job['job_id'], number=job['number'], engine=engine,
                        radius_mm=job['radius_mm'], run=run.relative_to(root).as_posix(),
-                       scope='ordinary_constant_radius_edge_fillet', source_feature_pass_claimed=False,
+                       scope='ordinary_two_end_radius_edge_fillet' if job.get('variable_start_mm') is not None else 'ordinary_constant_radius_edge_fillet',
+                       source_feature_pass_claimed=False,
                        scientific_findings=[], integrity_findings=[])
             if summary is None:
                 row['integrity_findings'].append(dict(kind='missing_summary'))
@@ -537,10 +720,21 @@ def audit(root, engines):
                     row['scientific_findings'].append(dict(kind='expected_body_kind_not_preserved'))
                 if summary.get('special_feature_certified'):
                     row['integrity_findings'].append(dict(kind='unsupported_source_feature_pass_claim'))
+                if job.get('variable_start_mm') is not None and summary.get('native_call_executed'):
+                    row['independent_variable_contact_audit'] = variable_contact_audit(job,summary)
+                    measured = row['independent_variable_contact_audit']
+                    if measured.get('physical_linear_reference_passed') is False:
+                        row['scientific_findings'].append(dict(kind='physical_linear_reference_mismatch',
+                            maximum_error_mm=measured['maximum_physical_linear_reference_error_mm'],
+                            reason='OCCT saved points deviate from a physical linear diagnostic reference. Full cross-kernel law equivalence is unverified; no generic unsupported-feature or native-law-bug claim'))
                 req_sha = summary.get('request_sha256')
                 if req_sha and req_sha != sha(root/'data/jobs'/f"{job['job_id']}.json"):
                     row['integrity_findings'].append(dict(kind='request_sha_mismatch'))
             row['raw_evidence_sha256'] = hashes
+            row['effective_parameter_audit'] = parameter_audit(job, summary, run, engine)
+            if row['effective_parameter_audit']['status']=='failed':
+                row['integrity_findings'].append(dict(kind='actual_effective_parameter_mismatch',
+                    failed_checks=[key for key,value in row['effective_parameter_audit']['checks'].items() if not value]))
             if row.get('before_native_stats'):
                 source_component = read(root/job['source_fixture_json'])['components'][job['component_index']-1]
                 source_metrics = source_metric_check(source_component['source_stats'], row['before_native_stats'], engine)
@@ -572,16 +766,29 @@ def audit(root, engines):
     retained = [r['job_id'] for r in rows if r['engine']=='smlib' and r.get('native_api_status')==1000 and any(f['kind']=='original_sharp_target_retained' for f in r['scientific_findings'])]
     published = published_pairs(root, jobs, rows)
     integrity.extend(published['findings'])
+    corrections = []
+    for correction in PARAMETER_CORRECTIONS:
+        row = next((r for r in rows if r['engine']=='occt' and r['job_id']==correction['job_id']),{})
+        corrections.append(dict(**correction, issue='Superseded OCCT adapter ignored two-end request and actually called constant Add(radius,edge) while SMLib used variable API',
+            old_constant_result_is_valid_variable_comparison=False, current_summary_sha256=row.get('summary_sha256'),
+            current_call_binding_checked=row.get('effective_parameter_audit',{}).get('status')=='checked',
+            corrected_fresh_record_observed=row.get('summary_sha256')!=correction['superseded_occt_summary_sha256'] and row.get('effective_parameter_audit',{}).get('status')=='checked'))
     return dict(schema_version=1, audited_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
                 audit_tool='tools/audit_results.py', audit_tool_sha256=sha(__file__), source_records_modified=False,
-                counts=dict(model_groups=len(numbers), ordinary_requests=len(jobs), runnable_requests=sum(r['runnable'] for r in index['jobs']),blocked_requests=18),
-                oracle_controls=dict(synthetic=self_checks(), actual_saved_smooth_edge=saved_smooth_control(root)),
+                counts=dict(model_groups=len(numbers), ordinary_requests=len(jobs), runnable_requests=sum(r['runnable'] for r in index['jobs']),blocked_requests=18,
+                            constant_radius_requests=sum(j.get('variable_start_mm') is None for j in jobs),
+                            two_endpoint_radius_requests=sum(j.get('variable_start_mm') is not None for j in jobs)),
+                oracle_controls=dict(synthetic=self_checks(), actual_saved_smooth_edge=saved_smooth_control(root),
+                                     effective_parameter_regressions=parameter_regression_controls(root)),
                 outcome_counts=outcomes, integrity_findings=integrity,
+                effective_parameter_audit_counts=dict(collections.Counter(r.get('effective_parameter_audit',{}).get('status','missing') for r in rows)),
+                parameter_corrections=corrections,
                 scientific_finding_counts=dict(count_findings), smlib_api_success_retained_sharp_target_jobs=retained,
                 publication_scan=public_scan(root), published_pair_consistency=published, rows=rows,
                 limitations=['Independent post-processing of saved real runs; this tool does not rerun either kernel.',
                              'Bounded line/circle plus native lengths and actual coincident junction normals supply one-sided retained-sharp failure evidence. Negative is unverified, never success.',
                              'No cross-kernel equal parameter fraction or surface UV comparison.',
+                             'Effective parameter matching certifies nominal API settings and physical endpoint assignments, not complete output radius/contact laws or identical internal interpolation.',
                              'No exhaustive self-intersection, complete section-radius, G1/G2 or source-illustration acceptance test.',
                              '20 percent solid-volume change is an anomaly screen only. Declared protected probes cover only their points.',
                              'OCCT native BREP and SMLib exact NURBS exchange share frozen source lineage, world targets and requested radius; internal representations differ.'])
@@ -598,7 +805,7 @@ def main():
     output = args.output if args.output.is_absolute() else root/args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False)+'\n')
-    print(json.dumps({k:result[k] for k in ['counts','outcome_counts','scientific_finding_counts','smlib_api_success_retained_sharp_target_jobs']}, ensure_ascii=False, indent=2))
+    print(json.dumps({k:result[k] for k in ['counts','outcome_counts','effective_parameter_audit_counts','scientific_finding_counts','smlib_api_success_retained_sharp_target_jobs']}, ensure_ascii=False, indent=2))
     print(json.dumps(dict(integrity_findings=len(result['integrity_findings']), publication_findings=len(result['publication_scan']['findings']),output=output.relative_to(root).as_posix()),ensure_ascii=False))
     return 1 if result['integrity_findings'] or result['publication_scan']['findings'] else 0
 

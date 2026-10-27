@@ -13,7 +13,7 @@ Python 3.10+，只用标准库，无需 SDK。默认检查两个本地 fresh 目
 ## 审计范围与本次记录
 
 - 34 个模型编号：01–28、30–31、33–36；29、32 保留空位。
-- 104 个普通恒半径请求，86 个可执行、18 个受当前配对/adapter 范围阻塞。
+- 104 个普通边圆角请求：102 个恒半径、2 个两端变半径控制；86 个可执行、18 个受当前配对/adapter 范围阻塞。
 - 两个内核各有 104 份 summary。86 个可执行请求各实际启动了原生调用；18 个阻塞项不属于内核能力否定。
 - 所有普通请求均没有表达源文档中的 cliff、cap、limit、rho、softness 等专用控制。51 个历史特殊协议由网站另列，本报告不将其混入本次普通请求统计，也未重新运行它们。
 
@@ -33,6 +33,22 @@ OCCT 的 1 个 `invalid_result` 是 24 / R12，API 完成但 native-valid=false�
 审计对全部 104 个请求重算源 BREP、有限 NURBS fixture 和契约 SHA，并核对两侧 summary 中的源哈希、fixture 哈希、job ID 和半径；对 SMLib 实际保存的 job 与冻结 job 逐项比较，对 OCCT 请求哈希复核。当前没有发现请求身份错配或已声明产物哈希不符。
 
 两侧相同的是冻结源几何谱系、目标世界坐标和半径请求。OCCT 读取原解析 BREP；SMLib 从有限 NURBS 与共享拓扑 fixture 重建。**内部表示和公差处理不相同。** 不应写成“完全相同 BRep 输入，因此差异只来自算法”。
+
+### 有效调用参数与两端控制的修正
+
+只匹配 `source_sha256` 与 `radius_mm` 不足以证明相同调用请求得到执行。复核发现，33、34 的两条 `variable-control` 旧 OCCT 记录仍调用 `Add(radius,edge)`，而 SMLib 已调用变半径 API。旧 OCCT 恒 R 结果不能作为变半径成对证据；JSON 的 `parameter_corrections` 保留两份被替代 summary 的 SHA，修正后记录另有新 SHA。
+
+修正后的 OCCT 使用 `Add(R1,R2,edge)` 并重跑全体请求。审计现在逐项核对实际 API family、恒 R/两端模式、section 设置、continuity 设置，以及双端半径与物理端点绑定：
+
+- SMLib：核对 `job.tokens` 与 `execution.json` 中的 native API、半径、`xsect_type=1`、`continuity=1`、`thumbweight=1`；变量 API 的签名不使用 thumbweight，报告明确记为未传入该变量 API。
+- OCCT：核对 `api_result.effective_parameters` 的实际 `Add` 方法、半径模式、`ChFi3d_Rational` 与 internal C1 默认设置；这只是调用配置，不能代替接头 G1/G2 实测。
+- 两端半径：使用实际 before 原生边端点，独立重算物理正反向与传入半径。OCCT 另核对 contour 为单边且端点方向与原生参数端一致；SMLib 从真实 selected edge 和 `needReverse` 复核。34 的 native first 在 z=24，必须把 R12.276845 绑定到该端，把 R16.857383 绑定到 z=0。
+
+这两条最终只认证**相同物理两端半径约束**，网站配对标识为 `same_end_constraints_law_equivalence_unverified`。完整内插规律是否相同尚未验证，不能说 SMLib 是物理线性的，也不能由 OCCT 偏差推断两内核之间完整 law 一定不同。
+
+审计对 OCCT 输出的两条实际接触曲线、每条 7 个物理站位，以世界点投影独立重算接触距离：33、34 相对物理轴线性参考的最大偏差分别约 **0.232009 mm、0.245386 mm**，两端约束正确且输出确为非恒 R。该结果记为 `physical_linear_reference_mismatch`，是对诊断参考的偏差，不宣称未知 native law 约束有 bug，也不构成一般“不支持变半径”的结论。
+
+cap、limit、cliff、rho、softness 等原图高级控制继续明确为当前普通 adapter 的表达缺口，不因两端控制已执行而升级为该特殊功能通过。参数审计还有三项只在内存中进行的回归变异：将变量调用替换为旧恒 R 方法、反向边上的两端 R 错换、请求 section 被默认值替代，均必须被拒绝。
 
 独立后处理核对了 OCCT 86 个、SMLib 84 个已保存的调用前 native body 的面积、体积、包围盒及面/边/顶点数，均与各自选定的源 component 相符。SMLib 86 个请求另有 import 阶段采样等价检查的 passed 记录；该记录属于采样证据，不是全球几何或所有有限裁剪的解析证明。崩溃的 2 项没有 before 快照，因此未冒充完成该项独立 before 核对。
 

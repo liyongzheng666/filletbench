@@ -123,3 +123,7 @@ All generated binaries, native SMB files and machine build logs remain local in
 ignored output/cache folders. The public repository contains adapter source,
 fixtures, jobs and shareable evidence; it does not require or include source-PDF
 images. Keep source references browser-local when loading the optional PDF.
+
+## Platform verification update
+
+The full ordinary matrix and 51 special replays were executed on macOS arm64. GitHub Actions also built the pinned public core on Ubuntu and executed case08 R18; it did not run the full matrix on Linux. Windows has not been tested. See the linked workflow for the exact current CI scope.

@@ -29,6 +29,8 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements-occt.txt
       - run: python bench.py run --engine occt --case 8 --radius 18 --out runs/ci-occt
+      - name: Reject wrong inputs and verify both variable endpoint orientations
+        run: python adapters/occt/test_runner.py
       - name: Confirm a real native call, not a placeholder
         run: |
           python - <<'PY'
@@ -58,6 +60,20 @@ jobs:
           SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
           SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
         run: python bench.py run --engine smlib --case 8 --radius 18 --out runs/ci-smlib
+      - name: Replay a native G2 request (quality acceptance remains separate)
+        env:
+          SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
+          SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
+        run: python bench.py special --engine smlib --job 35/pilot-smlib-thumb10 --out runs/ci-smlib-g2
+      - name: Confirm the special result came from this fresh invocation
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(pathlib.Path('runs/ci-smlib-g2/summary.json').read_text())
+          assert s['freshly_executed'] is True, s
+          assert s['execution']['native_api_raw_status'] == 1000, s
+          assert s['source_feature_passed'] is False, s
+          PY
       - name: Confirm an admitted input and actual native call
         run: |
           python - <<'PY'

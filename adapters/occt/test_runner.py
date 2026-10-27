@@ -64,6 +64,45 @@ class RunnerSafetyTests(unittest.TestCase):
         self.assertTrue(any(t["candidates"][0]["curve_type"] == "GeomAbs_BSplineCurve"
                             for t in result["selection"]))
 
+    def test_partial_variable_request_is_not_silently_constant(self):
+        def incomplete(job):
+            del job["variable_physical_end"]
+        result=self.execute("33.part01.ordinary_challenge.r2p43305-variable-control",incomplete)
+        self.assertEqual(result["outcome"],"unsupported_parameters")
+        self.assertFalse(result["native_call_executed"])
+
+    def test_unhandled_variable_law_is_rejected(self):
+        def unsupported(job):
+            job["variable_custom_law"]="unhandled"
+        result=self.execute("33.part01.ordinary_challenge.r2p43305-variable-control",unsupported)
+        self.assertEqual(result["outcome"],"unsupported_parameters")
+        self.assertFalse(result["native_call_executed"])
+
+    def test_unmatched_physical_endpoint_is_rejected(self):
+        def unmatched(job):
+            job["variable_physical_end"][0]+=1
+        result=self.execute("33.part01.ordinary_challenge.r2p43305-variable-control",unmatched)
+        self.assertEqual(result["outcome"],"unsupported_parameters")
+        self.assertFalse(result["native_call_executed"])
+
+    def test_forward_variable_binding_measures_nonconstant_contact(self):
+        result=self.execute("33.part01.ordinary_challenge.r2p43305-variable-control")
+        self.assertEqual(result["outcome"],"ok")
+        self.assertFalse(result["variable_radius_binding"]["reversed_from_physical_endpoints"])
+        self.assertTrue(result["variable_radius_validation"]["endpoint_radii_verified"])
+        self.assertTrue(result["variable_radius_validation"]["nonconstant_radius_observed"])
+        self.assertFalse(result["variable_radius_validation"]["full_linear_contact_law_passed"])
+
+    def test_reversed_variable_binding_uses_opposite_native_radius_order(self):
+        result=self.execute("34.part01.ordinary_challenge.r16p8574-variable-control")
+        self.assertEqual(result["outcome"],"ok")
+        binding=result["variable_radius_binding"]
+        self.assertTrue(binding["reversed_from_physical_endpoints"])
+        self.assertEqual(binding["native_first_point_mm"],[0.,0.,24.])
+        self.assertLess(binding["native_start_radius_mm"],binding["native_end_radius_mm"])
+        self.assertTrue(result["variable_radius_validation"]["passed"])
+        self.assertFalse(result["full_variable_law_equivalence_verified"])
+
 
 if __name__ == "__main__":
     unittest.main()

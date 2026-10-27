@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Publish derived OCCT special protocols separately from matched ordinary jobs."""
 import pathlib,json,argparse
 from build_site import ROOT,WEB,read,write,sanitize,mesh,digest
