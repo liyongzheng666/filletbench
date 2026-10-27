@@ -15,12 +15,11 @@ python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements-occt.txt
 python bench.py verify
-python bench.py list --case 8
-python bench.py run --engine occt --case 8 --radius 18
+python bench.py original --case 22 --variant part01-r6
 python bench.py serve
 ```
 
-打开 `http://127.0.0.1:8740/`。不安装内核也能查看已发布的实际网格与测量摘要。[配置 SMLib](docs/smlib.md) 后，用 `--engine both` 在相同请求上运行两者。原生调用失败、超时及缺依赖均记录到本地 `runs/`，不覆盖已发布证据。
+打开 `http://127.0.0.1:8740/`。不安装内核也能查看已发布的实际网格与测量摘要。[配置 SMLib](docs/smlib.md) 后，用 `--engine both` 在相同请求上运行两者。原生调用失败、超时及缺依赖均记录到本地 `runs/`，不覆盖已发布证据。`--engine both` 属于独立对照实验入口，不能代替下面的原版处理流程。
 
 ## 按原版实际处理
 
