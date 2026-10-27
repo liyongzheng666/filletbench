@@ -5,7 +5,7 @@ import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
-const state = { catalog: null, cases: new Map(), currentCase: null, variant: null, filter: 'all', query: '', token: 0, selectionToken: 0, viewers: {}, syncing: false, pdf: null, pdfMeta: null, imageUrl: null, mapping: readStorage('filletbench-reference-maps', {}), previewPage: 1, previewCrop: null, previewToken: 0, detailTab: 'evidence', detailEngine: null, expanded: null };
+const state = { catalog: null, cases: new Map(), currentCase: null, variant: null, filter: 'all', query: '', token: 0, selectionToken: 0, viewers: {}, syncing: false, pdf: null, pdfMeta: null, imageUrl: null, mapping: readStorage('filletbench-reference-maps', {}), previewPage: 1, previewCrop: null, previewToken: 0, detailTab: 'evidence', detailEngine: null, expanded: null, refView: { scale: 1, x: 0, y: 0 } };
 const meshCache = new Map();
 const statusNames = { pass: ['通过', 'passed'], passed: ['通过', 'passed'], accepted: ['通过', 'passed'], fail: ['未通过', 'failed'], failed: ['未通过', 'failed'], invalid: ['几何无效', 'failed'], error: ['构建失败', 'failed'], self_intersect: ['存在自交', 'failed'], self_intersection: ['存在自交', 'failed'], pending: ['待验证', 'pending'], not_run: ['未运行', 'pending'], unavailable: ['未提供', 'pending'], unsupported: ['暂不支持', 'pending'], missing: ['缺少结果', 'pending'], blocked: ['受阻', 'pending'], generated: ['已生成', 'neutral'], valid: ['已生成', 'neutral'], ok: ['已生成', 'neutral'], partial: ['部分完成', 'pending'], candidate_unverified: ['候选未验证', 'neutral'], api_failed: ['调用失败', 'failed'], geometry_failed: ['几何失败', 'failed'], crash: ['异常退出', 'failed'], native_api_failed_with_candidate: ['调用失败 · 有候选', 'failed'], controlled_subchecks: ['子判据通过', 'neutral'] };
 
@@ -381,6 +381,8 @@ async function renderReference() {
   try { image = await dbAction('get', 'image:' + state.currentCase.id); } catch { /* Reference import remains optional. */ }
   if (token !== referenceRenderToken) return;
   const showImage = image && (mapping.source === 'image' || !state.pdf);
+  resetReferenceView();
+  $('#referenceZoomControls').hidden = !(showImage || state.pdf);
   $('#referenceEmpty').hidden = Boolean(showImage || state.pdf);
   $('#referenceImageWrap').hidden = !(showImage || state.pdf);
   $('#referenceBadge').hidden = !(showImage || state.pdf);
@@ -411,6 +413,33 @@ async function renderReference() {
     $('#referenceBadge').textContent = mapping.sourceMatch ? '摘要匹配 · 仅本地' : '本地 PDF · 请核对参考';
   } catch (error) { $('#referenceCaption').textContent = '参考页渲染失败'; toast(`本地 PDF：${error.message}`); }
   finally { if (token === referenceRenderToken) $('#referenceBusy').hidden = true; }
+}
+function applyReferenceView() {
+  const view = state.refView;
+  for (const element of [$('#referenceCanvas'), $('#referenceImage')]) element.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.scale})`;
+  $('#referenceZoomReset').textContent = `${Math.round(view.scale * 100)}%`;
+}
+function resetReferenceView() { state.refView = { scale: 1, x: 0, y: 0 }; applyReferenceView(); }
+function zoomReference(factor, center) {
+  const view = state.refView;
+  const next = Math.max(.5, Math.min(6, view.scale * factor));
+  const ratio = next / view.scale;
+  const stage = $('#referenceStage').getBoundingClientRect();
+  const x = center ? center[0] - stage.left - stage.width / 2 : 0;
+  const y = center ? center[1] - stage.top - stage.height / 2 : 0;
+  view.x = x - (x - view.x) * ratio; view.y = y - (y - view.y) * ratio; view.scale = next;
+  applyReferenceView();
+}
+function setupReferencePanZoom() {
+  const wrap = $('#referenceImageWrap'), stage = $('#referenceStage'); let start;
+  wrap.addEventListener('pointerdown', (event) => { if (event.button !== 0) return; start = { x: event.clientX, y: event.clientY, panX: state.refView.x, panY: state.refView.y }; wrap.setPointerCapture(event.pointerId); wrap.classList.add('is-dragging'); event.preventDefault(); });
+  wrap.addEventListener('pointermove', (event) => { if (!start) return; state.refView.x = start.panX + event.clientX - start.x; state.refView.y = start.panY + event.clientY - start.y; applyReferenceView(); });
+  const stop = () => { start = null; wrap.classList.remove('is-dragging'); };
+  wrap.addEventListener('pointerup', stop); wrap.addEventListener('pointercancel', stop);
+  stage.addEventListener('wheel', (event) => { if (wrap.hidden) return; event.preventDefault(); zoomReference(Math.exp(-event.deltaY * .002), [event.clientX, event.clientY]); }, { passive: false });
+  $('#referenceZoomOut').addEventListener('click', () => zoomReference(1 / 1.25));
+  $('#referenceZoomIn').addEventListener('click', () => zoomReference(1.25));
+  $('#referenceZoomReset').addEventListener('click', resetReferenceView);
 }
 function normalizeCrop(crop) {
   if (!Array.isArray(crop) || crop.length !== 4 || crop.some((value) => !Number.isFinite(value))) return null;
@@ -516,6 +545,7 @@ function expandCard(id) {
 }
 function stepCase(delta) { if (!state.currentCase || !state.catalog) return; const index = state.catalog.cases.findIndex((item) => item.id === state.currentCase.id); const item = state.catalog.cases[index + delta]; if (item) selectCase(item); }
 function wireUI() {
+  $('.brand').addEventListener('click', (event) => { event.preventDefault(); const home = state.catalog?.cases.find((item) => getCaseNumber(item) === '08') || state.catalog?.cases[0]; if (home) selectCase(home); });
   $('#variantSelect').addEventListener('change', (event) => { const variant = state.currentCase?.variants?.find((item) => item.id === event.target.value); if (variant) selectVariant(variant); });
   $('#caseSearch').addEventListener('input', (event) => { state.query = event.target.value.trim(); renderList(); });
   $$('.filters button').forEach((button) => button.addEventListener('click', () => { state.filter = button.dataset.filter; $$('.filters button').forEach((node) => node.classList.toggle('active', node === button)); renderList(); }));
@@ -540,6 +570,7 @@ function wireUI() {
   $('#applyReference').addEventListener('click', async () => { if ($('#referenceDialog').dataset.source === 'pdf' && state.pdf) { state.mapping[state.currentCase.id] = { source: 'pdf', pdfHash: state.pdfMeta.hash, page: state.previewPage, crop: normalizeCrop(state.previewCrop) }; saveMappings(); await renderReference(); } $('#referenceDialog').close(); });
   $('#forgetReference').addEventListener('click', async () => { try { if ($('#referenceDialog').dataset.source === 'image') { await dbAction('delete', 'image:' + state.currentCase.id); delete state.mapping[state.currentCase.id]; } else { await dbAction('delete', 'pdf'); state.pdf?.destroy(); state.pdf = null; state.pdfMeta = null; } saveMappings(); $('#referenceDialog').close(); await renderReference(); toast('本地参考文件已清除。'); } catch (error) { toast('清除失败：' + error.message); } });
   setupCrop();
+  setupReferencePanZoom();
   $('#openDetails').addEventListener('click', () => openDetails());
   $$('.inspect-button').forEach((button) => button.addEventListener('click', () => openDetails(button.dataset.engine)));
   $('#closeDetailDialog').addEventListener('click', () => $('#detailDialog').close());

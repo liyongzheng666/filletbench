@@ -1,0 +1,1 @@
+{"return_code":null,"timeout":false,"watchdog_seconds":60,"fresh_process":true,"started_at":"2026-10-27T05:05:54.275022+00:00","preflight_error":"multi-input finite surface-pair native adapter is separate from selected-edge runner; no shared topological edge is created by the planner","finished_at":"2026-10-27T05:05:54.288977+00:00"}

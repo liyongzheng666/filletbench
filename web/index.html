@@ -40,7 +40,7 @@
         <div class="reference-stage" id="referenceStage" tabindex="0" aria-label="本地参考图，可拖入 PDF 或图片">
           <div id="referenceEmpty" class="reference-empty"><div class="reference-mark"><span></span><span></span><span></span></div><h3>把原始参考带到这里</h3><p>载入你拥有的 PDF 或图片<br>与两个内核的实际输出并排查看</p><button id="importReference" class="primary-button">＋ 载入本地参考</button><small>文件只保存在本浏览器，不会上传</small></div>
           <div id="referenceImageWrap" class="reference-image-wrap" hidden><canvas id="referenceCanvas" aria-label="本地参考图"></canvas><img id="referenceImage" alt="用户在本地载入的案例参考" hidden></div>
-          <span id="referenceBadge" class="stage-corner" hidden></span>
+          <span id="referenceBadge" class="stage-corner" hidden></span><div id="referenceZoomControls" class="reference-zoom" hidden><button id="referenceZoomOut" aria-label="缩小参考图">−</button><button id="referenceZoomReset" title="重置参考图缩放与位置">100%</button><button id="referenceZoomIn" aria-label="放大参考图">＋</button></div>
           <div id="referenceBusy" class="stage-busy" hidden><span class="spinner"></span><span>正在读取本地参考…</span></div>
         </div>
         <footer class="viewer-footer"><div><span class="meta-dot reference-dot"></span><span id="referenceCaption">原始图像不包含在公开仓库中</span></div><button id="changeReference" class="text-button" hidden>更换 / 调整</button></footer>

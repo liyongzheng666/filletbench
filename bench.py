@@ -11,11 +11,22 @@ def main():
     sub=p.add_subparsers(dest='cmd',required=True)
     ls=sub.add_parser('list');ls.add_argument('--case',type=int)
     run=sub.add_parser('run');run.add_argument('--engine',choices=['occt','smlib','both'],default='both');run.add_argument('--case',type=int);run.add_argument('--job');run.add_argument('--radius',type=float);run.add_argument('--out',type=pathlib.Path);run.add_argument('--timeout',type=int,default=180)
+    special=sub.add_parser('special');special.add_argument('--engine',choices=['occt','smlib'],required=True);special.add_argument('--case',type=int);special.add_argument('--job');special.add_argument('--out',type=pathlib.Path)
     sub.add_parser('verify');sub.add_parser('build-site')
     serve=sub.add_parser('serve');serve.add_argument('--port',type=int,default=8740)
     a=p.parse_args()
     if a.cmd=='verify':return subprocess.call([sys.executable,str(ROOT/'tools/verify.py')])
     if a.cmd=='build-site':return subprocess.call([sys.executable,str(ROOT/'tools/build_site.py')])
+    if a.cmd=='special':
+        cmd=[sys.executable,str(ROOT/f'adapters/{a.engine}/special/run.py')]
+        if a.engine=='occt':
+            if not a.case:p.error('OCCT special requires --case')
+            cmd+=['--case',str(a.case)]
+        else:
+            if not a.job:p.error('SMLib special requires --job CASE/variant; see adapters/smlib/special/run.py --list')
+            cmd+=['--job',a.job]
+        if a.out:cmd+=['--output',str(a.out)]
+        return subprocess.call(cmd,cwd=ROOT)
     if a.cmd=='serve':
         handler=functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(ROOT/'web'))
         print(f'Open http://127.0.0.1:{a.port}/',flush=True)

@@ -30,7 +30,7 @@ def main():
                 for field in ['input_mesh']:
                     if v.get(field) and not (ROOT/'web'/v[field]).is_file():errors.append(f'missing {v[field]}')
                 for eng in ['occt','smlib']:
-                    for field in ['mesh','before_mesh','summary','quality_audit']:
+                    for field in ['mesh','before_mesh','summary','quality_audit','independent_audit']:
                         f=v.get(eng,{}).get(field)
                         if f and not (ROOT/'web'/f).is_file():errors.append(f'missing {f}')
                     if v.get(eng,{}).get('special_feature_passed') is True:errors.append(f'{v["id"]}: unexpected blanket source-feature pass')

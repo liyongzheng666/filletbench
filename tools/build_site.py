@@ -6,6 +6,7 @@ separate. Local absolute paths are sanitized in the derived public records.
 import json,pathlib,hashlib,re,collections,argparse
 ROOT=pathlib.Path(__file__).resolve().parents[1];WEB=ROOT/'web'
 AUDITS={}
+EXISTING={}
 def read(p):return json.loads(pathlib.Path(p).read_text())
 def digest(p):return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
 def write(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,ensure_ascii=False,separators=(',',':'),allow_nan=False)+'\n')
@@ -28,6 +29,9 @@ def mesh(path,raw=None):
 
 def result(engine,j,run):
     path=run/'summary.json';cmd=f'python bench.py run --engine {engine} --job {j["job_id"]}'
+    if not path.exists() and (engine,j['job_id']) in EXISTING:
+        old=EXISTING[(engine,j['job_id'])]
+        if old.get('source_sha256')==j['source_sha256'] and old.get('source_fixture_sha256')==j['source_fixture_sha256'] and old.get('request_sha256')==digest(ROOT/f'data/jobs/{j["job_id"]}.json'):return old
     if not path.exists():return {'status':'not_run','label':'未执行','reason':'没有此固定请求的实际执行证据。','reproduce':cmd,'method':'native_edge_fillet'}
     s=read(path);ex=s.get('execution',{});outcome=s.get('outcome');api=s.get('api_success',ex.get('native_api_success'));raw_result=read(run/'result.json') if (run/'result.json').exists() else {};stats=s.get('result_stats') or raw_result.get('native_stats',{});g=s.get('gates',{})
     mismatch=stats.get('valid') is False or (j['expected_input_kind']=='solid' and (stats.get('manifold_solid') is False or stats.get('solids')==0))
@@ -64,15 +68,19 @@ def result(engine,j,run):
     qm=run/'quality-audit.json'
     if qm.exists():write(dst/'quality-audit.json',sanitize(read(qm)))
     meshpath=mesh(run/'result.mesh.json',run/'result.json');before=mesh(run/'before.mesh.json',run/'before.json')
-    return {'status':status,'label':label,'reason':reason,'outcome':outcome,'api_success':api,'raw_status':ex.get('native_api_raw_status',s.get('api_result')),'mesh':meshpath,'before_mesh':before,'summary':(dst/'summary.json').relative_to(WEB).as_posix(),'version':s.get('engine_version'),'binding_version':s.get('binding_version'),'method':'native_edge_fillet','metrics':stats,'reproduce':cmd,'source_sha256':s.get('source_sha256'),'request_sha256':s.get('request_sha256'),'representation':'原解析 BREP' if engine=='occt' else '同源有限 NURBS / 共享拓扑','special_feature_passed':False,'evidence_kind':'fresh_run','independent_findings':findings,'independent_audit':(dst/'independent-audit.json').relative_to(WEB).as_posix() if audit else None,'quality_audit':(dst/'quality-audit.json').relative_to(WEB).as_posix() if qm.exists() else None}
+    return {'status':status,'label':label,'reason':reason,'outcome':outcome,'api_success':api,'raw_status':ex.get('native_api_raw_status',s.get('api_result')),'mesh':meshpath,'before_mesh':before,'summary':(dst/'summary.json').relative_to(WEB).as_posix(),'version':s.get('engine_version'),'binding_version':s.get('binding_version'),'method':'native_edge_fillet','metrics':stats,'reproduce':cmd,'source_sha256':s.get('source_sha256'),'request_sha256':digest(ROOT/f'data/jobs/{j["job_id"]}.json'),'source_fixture_sha256':j['source_fixture_sha256'],'representation':'原解析 BREP' if engine=='occt' else '同源有限 NURBS / 共享拓扑','special_feature_passed':False,'evidence_kind':'fresh_run','independent_findings':findings,'independent_audit':(dst/'independent-audit.json').relative_to(WEB).as_posix() if audit else None,'quality_audit':(dst/'quality-audit.json').relative_to(WEB).as_posix() if qm.exists() else None}
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--occt-runs',default='runs/fresh-occt');p.add_argument('--smlib-runs',default='runs/fresh-smlib');a=p.parse_args()
-    global AUDITS
+    global AUDITS, EXISTING
     if (ROOT/'docs/independent-audit.json').exists():AUDITS={(r['engine'],r['job_id']):r for r in read(ROOT/'docs/independent-audit.json')['rows']}
     corpus=read(ROOT/'data/corpus.json');jobs=[read(p) for p in sorted((ROOT/'data/jobs').glob('*.json'))];supp=read(WEB/'data/supplemental/index.json') if (WEB/'data/supplemental/index.json').exists() else {'cases':{}};counts=collections.Counter();cases=[]
     for row in corpus['cases']:
         n=row['number'];c=read(ROOT/f'data/cases/{n:02d}.json')
+        previous=WEB/f'data/cases/{n:02d}.json'
+        if previous.exists():
+            for v in read(previous).get('variants',[]):
+                for e in ['occt','smlib']:EXISTING[(e,v['id'])]=v.get(e,{})
         for j in jobs:
             if j['number']!=n:continue
             variant={'id':j['job_id'],'label':f'{j["part_label"]} · R{j["radius_mm"]:g}','radius_mm':j['radius_mm'],'role':j['role'],'note':j['request_note'],'targets':j['targets'],'pairing':'same_source_geometry_and_request_different_representations','input_mesh':None,'special_protocol_verified':False,'source_sha256':j['source_sha256'],'semantic_target':j['semantic_target'],'input_construction_note':'两侧使用同源冻结几何，OCCT 读原解析 BREP；SMLib 从有限 NURBS 与共享拓扑重建。当前只调用普通边圆角。'}
@@ -81,6 +89,7 @@ def main():
             variant['input_mesh']=variant['occt'].get('before_mesh') or variant['smlib'].get('before_mesh');c['variants'].append(variant)
         extra=supp.get('cases',{}).get(f'{n:02d}',supp.get('cases',{}).get(str(n),[]))
         c['variants'].extend(extra)
+        if (WEB/'data/occt-special/index.json').exists():c['variants'].extend(read(WEB/'data/occt-special/index.json')['cases'].get(str(n),[]))
         preferred=next((v['id'] for v in c['variants'] if n==8 and v.get('radius_mm')==18 and v.get('occt',{}).get('mesh')),None)
         c['default_variant']=preferred or next((v['id'] for v in c['variants'] if v.get('smlib',{}).get('mesh')),c['variants'][0]['id'] if c['variants'] else None)
         write(WEB/f'data/cases/{n:02d}.json',c)

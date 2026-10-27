@@ -25,6 +25,7 @@ The public site contains no original PDF, reference screenshots, or composites c
 - Drag: rotate. Scroll: zoom. Right-drag: pan.
 - “同步视角”: synchronize the two kernel cameras.
 - “建模前 / 目标边”: switch both kernels to their pre-operation or common input mesh; target sample curves appear in magenta.
+- Reference image/PDF: scroll to zoom, drag to pan, and use the percentage button to reset.
 - Expand button: large single view. Escape: return.
 - `/`: search cases. Left/right arrow: adjacent cases.
 - Hash links: `#case=08&variant=VARIANT_ID`.

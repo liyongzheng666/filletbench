@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 .DS_Store
-runs/
+/runs/
 build/
 node_modules/
 *.smb
