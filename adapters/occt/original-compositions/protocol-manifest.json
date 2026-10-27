@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "engine": "OCCT",
+  "engine_version": "7.9.3",
+  "binding": "cadquery-ocp",
+  "binding_version": "7.9.3.1.1",
+  "scope": "Original frozen review variants; separate from ordinary radius jobs",
+  "variant_selection_semantics": "Selects original review views and their verified result summaries. Immutable drivers retain their original batch execution granularity; all batch artifacts remain in output.",
+  "drivers": {
+    "case16_23": {
+      "script": "adapters/occt/original-compositions/case16_23.py",
+      "arguments": [
+        "--cases",
+        "{case}",
+        "--out",
+        "{output}"
+      ],
+      "execution_scope": "all recorded trials for the requested case",
+      "driver_sha256": "c855e11077e5e004ddaf77c4bbfb5b4bd3cb2ee67911bef5270b93de45b1af06"
+    },
+    "case17_19": {
+      "script": "adapters/occt/original-compositions/case17_19.py",
+      "arguments": [
+        "--case",
+        "{case}",
+        "--output",
+        "{output}"
+      ],
+      "execution_scope": "all original variants for the requested case",
+      "driver_sha256": "c14ace173cb0c0dab587c977ab8854370946d0f49ee495ee57ddf784cf24ecb4"
+    },
+    "case33_34": {
+      "script": "adapters/occt/original-compositions/case33_34.py",
+      "arguments": [
+        "--out",
+        "{output}"
+      ],
+      "execution_scope": "all seven immutable case33/case34 geometry recipes",
+      "driver_sha256": "d90d1ee6d791c47cb34b7e289e06aaa2d223f8e9c8146945befbeee7c3343007"
+    }
+  },
+  "cases": {
+    "16": {
+      "source_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+      "source_brep": "data/original-occ/fixtures/6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc.brep",
+      "driver_id": "case16_23",
+      "variants": [
+        {
+          "original_variant_id": "case1",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case16/case1/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 16 --variant case1 --output runs/replay-case16-case1"
+        },
+        {
+          "original_variant_id": "case2",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case16/case2/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 16 --variant case2 --output runs/replay-case16-case2"
+        }
+      ]
+    },
+    "17": {
+      "source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "source_brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+      "driver_id": "case17_19",
+      "variants": [
+        {
+          "original_variant_id": "cap-r8",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case17/cap-r8/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 17 --variant cap-r8 --output runs/replay-case17-cap-r8"
+        },
+        {
+          "original_variant_id": "cap-r4",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case17/cap-r4/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 17 --variant cap-r4 --output runs/replay-case17-cap-r4"
+        }
+      ]
+    },
+    "18": {
+      "source_sha256": "6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d",
+      "source_brep": "data/original-occ/fixtures/6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d.brep",
+      "driver_id": "case17_19",
+      "variants": [
+        {
+          "original_variant_id": "plane-r8",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case18/plane-r8/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 18 --variant plane-r8 --output runs/replay-case18-plane-r8"
+        },
+        {
+          "original_variant_id": "sheet-r8",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case18/sheet-r8/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 18 --variant sheet-r8 --output runs/replay-case18-sheet-r8"
+        },
+        {
+          "original_variant_id": "plane-r4",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case18/plane-r4/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 18 --variant plane-r4 --output runs/replay-case18-plane-r4"
+        },
+        {
+          "original_variant_id": "sheet-r4",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case18/sheet-r4/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 18 --variant sheet-r4 --output runs/replay-case18-sheet-r4"
+        }
+      ]
+    },
+    "19": {
+      "source_sha256": "1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2",
+      "source_brep": "data/original-occ/fixtures/1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2.brep",
+      "driver_id": "case17_19",
+      "variants": [
+        {
+          "original_variant_id": "edge-left",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case19/edge-left/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 19 --variant edge-left --output runs/replay-case19-edge-left"
+        },
+        {
+          "original_variant_id": "face-left",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case19/face-left/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 19 --variant face-left --output runs/replay-case19-face-left"
+        },
+        {
+          "original_variant_id": "direction-right",
+          "method": "explicit_occ_composition",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case19/direction-right/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 19 --variant direction-right --output runs/replay-case19-direction-right"
+        },
+        {
+          "original_variant_id": "r5-control",
+          "method": "ordinary_untrimmed_control",
+          "driver_id": "case17_19",
+          "driver": "adapters/occt/original-compositions/case17_19.py",
+          "driver_arguments": [
+            "--case",
+            "{case}",
+            "--output",
+            "{output}"
+          ],
+          "summary_files": [
+            "case19/r5-control/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 19 --variant r5-control --output runs/replay-case19-r5-control"
+        }
+      ]
+    },
+    "20": {
+      "source_sha256": "3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd",
+      "source_brep": "data/original-occ/fixtures/3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd.brep",
+      "driver_id": "case16_23",
+      "variants": [
+        {
+          "original_variant_id": "patch-no",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case20/patch-no/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 20 --variant patch-no --output runs/replay-case20-patch-no"
+        },
+        {
+          "original_variant_id": "patch-yes",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case20/patch-yes/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 20 --variant patch-yes --output runs/replay-case20-patch-yes"
+        },
+        {
+          "original_variant_id": "native-full-front-chain-r1",
+          "method": "ordinary_native_reference",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case20/native-full-front-chain-r1/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 20 --variant native-full-front-chain-r1 --output runs/replay-case20-native-full-front-chain-r1"
+        },
+        {
+          "original_variant_id": "native-full-front-chain-r2",
+          "method": "ordinary_native_reference",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case20/native-full-front-chain-r2/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 20 --variant native-full-front-chain-r2 --output runs/replay-case20-native-full-front-chain-r2"
+        }
+      ]
+    },
+    "21": {
+      "source_sha256": "cfe248e5375706097e823041f28ae9b4935597cd2966b62b42ba4a293f6748fe",
+      "source_brep": "data/original-occ/fixtures/cfe248e5375706097e823041f28ae9b4935597cd2966b62b42ba4a293f6748fe.brep",
+      "driver_id": "case16_23",
+      "variants": [
+        {
+          "original_variant_id": "both-stop-r4",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case21/both-stop-r4/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 21 --variant both-stop-r4 --output runs/replay-case21-both-stop-r4"
+        },
+        {
+          "original_variant_id": "right-stop-left-continue-r4",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case21/right-stop-left-continue-r4/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 21 --variant right-stop-left-continue-r4 --output runs/replay-case21-right-stop-left-continue-r4"
+        },
+        {
+          "original_variant_id": "native-free-r4",
+          "method": "ordinary_native_free_propagation",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case21/native-free-r4/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 21 --variant native-free-r4 --output runs/replay-case21-native-free-r4"
+        },
+        {
+          "original_variant_id": "right-stop-left-continue-r2",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case21/right-stop-left-continue-r2/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 21 --variant right-stop-left-continue-r2 --output runs/replay-case21-right-stop-left-continue-r2"
+        }
+      ]
+    },
+    "23": {
+      "source_sha256": "3f3ec1986be71db79acd9d751ea62a37f53e907e9bf4e53deea118f99db774b1",
+      "source_brep": "data/original-occ/fixtures/3f3ec1986be71db79acd9d751ea62a37f53e907e9bf4e53deea118f99db774b1.brep",
+      "driver_id": "case16_23",
+      "variants": [
+        {
+          "original_variant_id": "notch-r2",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case23/notch-r2/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 23 --variant notch-r2 --output runs/replay-case23-notch-r2"
+        },
+        {
+          "original_variant_id": "notch-r2p5",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case23/notch-r2p5/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 23 --variant notch-r2p5 --output runs/replay-case23-notch-r2p5"
+        },
+        {
+          "original_variant_id": "notch-r2-secondary-r0p5",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case23/notch-r2-secondary-r0p5/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 23 --variant notch-r2-secondary-r0p5 --output runs/replay-case23-notch-r2-secondary-r0p5"
+        },
+        {
+          "original_variant_id": "notch-r2p5-secondary-r0p25",
+          "method": "explicit_occ_composition",
+          "driver_id": "case16_23",
+          "driver": "adapters/occt/original-compositions/case16_23.py",
+          "driver_arguments": [
+            "--cases",
+            "{case}",
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case23/notch-r2p5-secondary-r0p25/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 23 --variant notch-r2p5-secondary-r0p25 --output runs/replay-case23-notch-r2p5-secondary-r0p25"
+        }
+      ]
+    },
+    "33": {
+      "source_sha256": "6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47",
+      "source_brep": "data/original-occ/fixtures/6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47.brep",
+      "driver_id": "case33_34",
+      "variants": [
+        {
+          "original_variant_id": "asymmetric-ranges",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case33-asymmetric-ranges/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 33 --variant asymmetric-ranges --output runs/replay-case33-asymmetric-ranges"
+        },
+        {
+          "original_variant_id": "asymmetric-clean",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case33-asymmetric-ranges/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 33 --variant asymmetric-clean --output runs/replay-case33-asymmetric-clean"
+        },
+        {
+          "original_variant_id": "native-symmetric-control",
+          "method": "native_variable_radius_fillet",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case33-native-symmetric-control/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 33 --variant native-symmetric-control --output runs/replay-case33-native-symmetric-control"
+        }
+      ]
+    },
+    "34": {
+      "source_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+      "source_brep": "data/original-occ/fixtures/b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50.brep",
+      "driver_id": "case33_34",
+      "variants": [
+        {
+          "original_variant_id": "rho-050-compare",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case34-absolute-050/summary.json",
+            "case34-relative-050/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 34 --variant rho-050-compare --output runs/replay-case34-rho-050-compare"
+        },
+        {
+          "original_variant_id": "absolute-025",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case34-absolute-025/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 34 --variant absolute-025 --output runs/replay-case34-absolute-025"
+        },
+        {
+          "original_variant_id": "absolute-050",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case34-absolute-050/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 34 --variant absolute-050 --output runs/replay-case34-absolute-050"
+        },
+        {
+          "original_variant_id": "absolute-075",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case34-absolute-075/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 34 --variant absolute-075 --output runs/replay-case34-absolute-075"
+        },
+        {
+          "original_variant_id": "relative-050",
+          "method": "explicit_occ_composition",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case34-relative-050/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 34 --variant relative-050 --output runs/replay-case34-relative-050"
+        },
+        {
+          "original_variant_id": "native-circle-control",
+          "method": "native_circular_fillet_control",
+          "driver_id": "case33_34",
+          "driver": "adapters/occt/original-compositions/case33_34.py",
+          "driver_arguments": [
+            "--out",
+            "{output}"
+          ],
+          "summary_files": [
+            "case34-native-circle-control/summary.json"
+          ],
+          "reproduce": "python adapters/occt/original-compositions/run.py --case 34 --variant native-circle-control --output runs/replay-case34-native-circle-control"
+        }
+      ]
+    }
+  }
+}

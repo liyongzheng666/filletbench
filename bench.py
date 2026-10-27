@@ -12,9 +12,21 @@ def main():
     ls=sub.add_parser('list');ls.add_argument('--case',type=int)
     run=sub.add_parser('run');run.add_argument('--engine',choices=['occt','smlib','both'],default='both');run.add_argument('--case',type=int);run.add_argument('--job');run.add_argument('--radius',type=float);run.add_argument('--out',type=pathlib.Path);run.add_argument('--timeout',type=int,default=180)
     special=sub.add_parser('special');special.add_argument('--engine',choices=['occt','smlib'],required=True);special.add_argument('--case',type=int);special.add_argument('--job');special.add_argument('--out',type=pathlib.Path)
-    sub.add_parser('verify');sub.add_parser('build-site')
+    original=sub.add_parser('original');original.add_argument('--case',type=int);original.add_argument('--variant');original.add_argument('--all',action='store_true');original.add_argument('--out',type=pathlib.Path)
+    sub.add_parser('verify');sub.add_parser('build-site');build_original=sub.add_parser('build-original');build_original.add_argument('--suite-run',type=pathlib.Path)
     serve=sub.add_parser('serve');serve.add_argument('--port',type=int,default=8740)
     a=p.parse_args()
+    if a.cmd=='original':
+        cmd=[sys.executable,str(ROOT/'tools/run_original_suite.py')]
+        if a.case:cmd+=['--case',str(a.case)]
+        if a.variant:cmd+=['--variant',a.variant]
+        if a.all:cmd+=['--all']
+        if a.out:cmd+=['--out',str(a.out)]
+        return subprocess.call(cmd,cwd=ROOT)
+    if a.cmd=='build-original':
+        cmd=[sys.executable,str(ROOT/'tools/build_original_site.py')]
+        if a.suite_run:cmd+=['--suite-run',str(a.suite_run)]
+        return subprocess.call(cmd,cwd=ROOT)
     if a.cmd=='verify':return subprocess.call([sys.executable,str(ROOT/'tools/verify.py')])
     if a.cmd=='build-site':return subprocess.call([sys.executable,str(ROOT/'tools/build_site.py')])
     if a.cmd=='special':

@@ -1,0 +1,3174 @@
+{
+  "schema": "filletbench.original-occ-manifest.v1",
+  "source_review_state": {
+    "path": "history:outputs/manual-review/review-state.json",
+    "sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+    "bytes": 1298356
+  },
+  "source_coverage_audit": {
+    "path": "history:work/occ-coverage-audit.json",
+    "sha256": "4a8d6e10fd97d416ff41e6c1ff10c32ac4834d0dcb5742ed9b1966033c931586",
+    "bytes": 753301
+  },
+  "selection_samples": {
+    "path": "data/original-occ/selection-samples.json",
+    "sha256": "665fb405c3ed97d31824f73cc7e326c7492ce2daefee48dc984bc8d920be347e"
+  },
+  "sanitization": {
+    "reference_artwork_copied": false,
+    "absolute_machine_paths_retained": false,
+    "sdk_binaries_copied": false,
+    "geometry_policy": "Only reconstructed historical BREP bytes; original hash names; no fillet construction; source edges may be read and sampled",
+    "history_json_policy": "Sanitized derivatives; original byte hashes retained separately"
+  },
+  "artifacts": [
+    {
+      "path": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+      "sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "bytes": 6937,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-17_cliff_edge-1281.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep",
+      "sha256": "007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759",
+      "bytes": 1207,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008.brep",
+      "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+      "bytes": 1324,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/012092a6926b27b7cdf160ce8f89fc0cdccc43bc811a606b542779e1d44f8be9.brep",
+      "sha256": "012092a6926b27b7cdf160ce8f89fc0cdccc43bc811a606b542779e1d44f8be9",
+      "bytes": 3700,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/full-single-edge-x.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/017ee3ec3d77fb44d7676c0eb9f5752c042bda5b52694199da1415ae7c52b0cc.brep",
+      "sha256": "017ee3ec3d77fb44d7676c0eb9f5752c042bda5b52694199da1415ae7c52b0cc",
+      "bytes": 21047,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case04/runs/20261018T190104.613726-96924/part03/attempt03-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/01d4eb3b2164c36cf761a4b95082c808707074a993753641bf1d2f2fbfbfc775.brep",
+      "sha256": "01d4eb3b2164c36cf761a4b95082c808707074a993753641bf1d2f2fbfbfc775",
+      "bytes": 10714,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/native-trials/runs/freecad-20261020T130417.181890/right-r2/stage1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/02583ecf53fd7d943a4aad9bcdb1f5c57e043bdde325829fa86c43e18236cc0b.brep",
+      "sha256": "02583ecf53fd7d943a4aad9bcdb1f5c57e043bdde325829fa86c43e18236cc0b",
+      "bytes": 9469,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case33-variable/native-fitted-runs/20261022T215236.322088/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0265de67dfaba21243f4be2d4afee183afb415fe029db31f60b82ef446a6c596.brep",
+      "sha256": "0265de67dfaba21243f4be2d4afee183afb415fe029db31f60b82ef446a6c596",
+      "bytes": 8440,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/sheet-ordinary-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/02cbc63a2231e34cc6ccceaf90122900ba4089eca891eb40e86a736f6ccab768.brep",
+      "sha256": "02cbc63a2231e34cc6ccceaf90122900ba4089eca891eb40e86a736f6ccab768",
+      "bytes": 20427,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/runs/20261020T063052.612688-23865/patch-no.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/05287573f14e5da61986783608e9b85971d3d4310bf4881846d50b92afb77f01.brep",
+      "sha256": "05287573f14e5da61986783608e9b85971d3d4310bf4881846d50b92afb77f01",
+      "bytes": 2287,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/065fe6ab07655a792103a0782bf5ea4553711bde45134410d8ed870ec3d91f98.brep",
+      "sha256": "065fe6ab07655a792103a0782bf5ea4553711bde45134410d8ed870ec3d91f98",
+      "bytes": 32953,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/full-front-chain-r2.brep",
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/full-front-chain-r2-raw.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/066df8889a0eec3617a76751eab787be0568f5c81dda3c27f55f1bb66790642a.brep",
+      "sha256": "066df8889a0eec3617a76751eab787be0568f5c81dda3c27f55f1bb66790642a",
+      "bytes": 16588,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/attempt01-r1-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/070c919ff30d4512b8d39e876f5d23158cec0b6784ee4599d97d4650abe711ee.brep",
+      "sha256": "070c919ff30d4512b8d39e876f5d23158cec0b6784ee4599d97d4650abe711ee",
+      "bytes": 2862,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case35-g2/composition-runs/20261022T232117.389322/proxy-s1p0.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/08e15127b21ce01bbdaf3b2f8789c06a7b0f89824b8c1c57a885d38ea4ad080f.brep",
+      "sha256": "08e15127b21ce01bbdaf3b2f8789c06a7b0f89824b8c1c57a885d38ea4ad080f",
+      "bytes": 8391,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/right-stop-left-continue-r4-independent-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+      "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712",
+      "bytes": 2266,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0a00b8317b2d8e1ca01108c1d31acf1ac4f0d31649215d5df41ca2f3aaeb37b3.brep",
+      "sha256": "0a00b8317b2d8e1ca01108c1d31acf1ac4f0d31649215d5df41ca2f3aaeb37b3",
+      "bytes": 6573,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case17/runs/20261018T190128.286026-98474/part01/before.brep",
+        "history:outputs/manual-review/diagnostics/batch/case18/runs/20261018T190342.616618-227/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0a3c8c85310db327c4d515354a997b0566a7164603aacb8d75118913a6065999.brep",
+      "sha256": "0a3c8c85310db327c4d515354a997b0566a7164603aacb8d75118913a6065999",
+      "bytes": 16830,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/attempt03-r2-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0a6206d090daf2dc7979b1f9b5ea7ae5a7fb1efa487d7f828044980d558b3d31.brep",
+      "sha256": "0a6206d090daf2dc7979b1f9b5ea7ae5a7fb1efa487d7f828044980d558b3d31",
+      "bytes": 15143,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/direction-right.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0aff5a8db556bbd8dcf0fb10b8caaecda2b1f531af69b11c8c80ea298b517663.brep",
+      "sha256": "0aff5a8db556bbd8dcf0fb10b8caaecda2b1f531af69b11c8c80ea298b517663",
+      "bytes": 8271,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case07/runs/20261018T190115.679512-97349/part01/attempt03-r16.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0b4b0dcdfe9997e90960e70db62fb149b590cebc52797fd24273f5bf0d65443d.brep",
+      "sha256": "0b4b0dcdfe9997e90960e70db62fb149b590cebc52797fd24273f5bf0d65443d",
+      "bytes": 3908,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/derived-unslotted-support.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0b7e5ba2406edad144d6b756484f991e7bf610ff3a1f619cd8a781a3af21307b.brep",
+      "sha256": "0b7e5ba2406edad144d6b756484f991e7bf610ff3a1f619cd8a781a3af21307b",
+      "bytes": 29286,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/preprocess/blade-floor-strip/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8.brep",
+      "sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "bytes": 1344,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-41_laminar-1312.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0c5c0f884a80e339e9133ef83edf51410962783736863bee742c0165fa45483b.brep",
+      "sha256": "0c5c0f884a80e339e9133ef83edf51410962783736863bee742c0165fa45483b",
+      "bytes": 9234,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0e1f314a0c6e457e55486644420307bf50bca13c905d08f5b4dad0703e23321e.brep",
+      "sha256": "0e1f314a0c6e457e55486644420307bf50bca13c905d08f5b4dad0703e23321e",
+      "bytes": 2241,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case24/runs/20261018T190057.380277-95939/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/0fc0bdeeba52d9da408c3decf2851a4b3e1bb2039bc28f576628d1c01d163b4d.brep",
+      "sha256": "0fc0bdeeba52d9da408c3decf2851a4b3e1bb2039bc28f576628d1c01d163b4d",
+      "bytes": 31131,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212100.562786-45512/convex-then-concave-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/10ebde62327675757ff9d882b90dcca0b31ebff081bedfc87a07720a2d563546.brep",
+      "sha256": "10ebde62327675757ff9d882b90dcca0b31ebff081bedfc87a07720a2d563546",
+      "bytes": 5459,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case04/runs/20261018T190104.613726-96924/part02/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/115629f0211573767aa0fe6393ac93d1b47884b5c60e7e11befa67a3b3d08571.brep",
+      "sha256": "115629f0211573767aa0fe6393ac93d1b47884b5c60e7e11befa67a3b3d08571",
+      "bytes": 5056,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case26/runs/20261018T190058.848543-96218/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1332e43fb1a9ecee116506016abb77e084b7b987902432c1d2f3ff1738823e0e.brep",
+      "sha256": "1332e43fb1a9ecee116506016abb77e084b7b987902432c1d2f3ff1738823e0e",
+      "bytes": 9504,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/plane-r8.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T124222.768980-14877/plane-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/14841b02447eca79dd81d92fcb7177cd12a40d9817b25a64d8cc37a50167fb96.brep",
+      "sha256": "14841b02447eca79dd81d92fcb7177cd12a40d9817b25a64d8cc37a50167fb96",
+      "bytes": 3124,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/sheet-retaining-region.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/151da9dfe5164d18fad6a1c0a1965064df0ca806a929631ee4b27d3cc2222c55.brep",
+      "sha256": "151da9dfe5164d18fad6a1c0a1965064df0ca806a929631ee4b27d3cc2222c55",
+      "bytes": 5200,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212054.739907-45228/convex-r12.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212100.562786-45512/convex-then-concave-r12-first.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/154b275ae0e81576016ec69774cfce203bf0a55147d156b78a602604ba584295.brep",
+      "sha256": "154b275ae0e81576016ec69774cfce203bf0a55147d156b78a602604ba584295",
+      "bytes": 9224,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case10/runs/20261018T190119.196144-97771/part01/attempt01-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/15dd96bf9a48be03cd64e9bba28b721154808ccbbaf2c8f8d57f7c3c2825206f.brep",
+      "sha256": "15dd96bf9a48be03cd64e9bba28b721154808ccbbaf2c8f8d57f7c3c2825206f",
+      "bytes": 19417,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case03/runs/20261018T190101.626068-96644/part01/attempt01-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1630589230f1e3f4bd595d9fd02ac7240679c9e7672ba664d95b33386f1e2909.brep",
+      "sha256": "1630589230f1e3f4bd595d9fd02ac7240679c9e7672ba664d95b33386f1e2909",
+      "bytes": 6578,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case34-rho/runs/20261022T222101.606847/absolute-025.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1b2028f5931c7610167ed5277b5e3f1b79fde86689196f139fe4a0948e09a801.brep",
+      "sha256": "1b2028f5931c7610167ed5277b5e3f1b79fde86689196f139fe4a0948e09a801",
+      "bytes": 26481,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T211951.532364-43909/convex-then-concave-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1c14f75d6a62b804a6f2084958967eaa5621307f76e898fe10fb9775111f5d37.brep",
+      "sha256": "1c14f75d6a62b804a6f2084958967eaa5621307f76e898fe10fb9775111f5d37",
+      "bytes": 35940,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-05_planes-1355.brep",
+        "history:outputs/manual-review/diagnostics/case31-aligned-v2/runs/20261022T211932.244504/aligned-source-packet.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139.brep",
+      "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139",
+      "bytes": 8178,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/attempt01-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1cade0e0f0cb31fe68ac94507ea7a42756f4b3ee2da4083905dfc55f862cb5e9.brep",
+      "sha256": "1cade0e0f0cb31fe68ac94507ea7a42756f4b3ee2da4083905dfc55f862cb5e9",
+      "bytes": 12074,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/native-trials/runs/freecad-20261020T130417.181890/left-r2/stage1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1d8891551483f73f85152ce4ed7cb95624d0e7ec3de07ca796da6077a3d6eaf8.brep",
+      "sha256": "1d8891551483f73f85152ce4ed7cb95624d0e7ec3de07ca796da6077a3d6eaf8",
+      "bytes": 7219,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case02/runs/20261018T190100.954607-96504/part01/attempt01-r20.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1dc196d9d39b6e9bd87c66b9dd0745b91be22f6b5133ea4ccf58fa265e07e77b.brep",
+      "sha256": "1dc196d9d39b6e9bd87c66b9dd0745b91be22f6b5133ea4ccf58fa265e07e77b",
+      "bytes": 16793,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/attempt02-r0p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1e9dc4a758094bd2aa0949e349a4580150e126df95939e513201eb5e6e742931.brep",
+      "sha256": "1e9dc4a758094bd2aa0949e349a4580150e126df95939e513201eb5e6e742931",
+      "bytes": 3966,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case26/runs/20261018T190058.848543-96218/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1edd0fcf69508bc5f83572ee54cbb19bb35b68d3dad903efc56e71821b768370.brep",
+      "sha256": "1edd0fcf69508bc5f83572ee54cbb19bb35b68d3dad903efc56e71821b768370",
+      "bytes": 49432,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case11/runs/20261018T193429.039711-7097/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2.brep",
+      "sha256": "1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2",
+      "bytes": 11562,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-38_trim_face_edge-1308.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1f0badd8e3dfb645bd0274f407c6aa4cd1dcb9b4aea6f425688329aa41f0f39f.brep",
+      "sha256": "1f0badd8e3dfb645bd0274f407c6aa4cd1dcb9b4aea6f425688329aa41f0f39f",
+      "bytes": 6508,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/preprocess/walls-2/input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/1fb76cdd29e8ae3923917b5c50ce471a1a3db7a019f5dc595fe57f2f28a79114.brep",
+      "sha256": "1fb76cdd29e8ae3923917b5c50ce471a1a3db7a019f5dc595fe57f2f28a79114",
+      "bytes": 3889,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case05/runs/20261018T190111.080226-97068/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/20acb679ebb1792ef64f4904b8efd09af80ffb29ad49d9ba006b999f9d17448e.brep",
+      "sha256": "20acb679ebb1792ef64f4904b8efd09af80ffb29ad49d9ba006b999f9d17448e",
+      "bytes": 21152,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case05/runs/20261018T190111.080226-97068/part01/attempt02-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/21896c216305c525b1ea543985f42a2b7ee03478459901a13b2b1ef21975346f.brep",
+      "sha256": "21896c216305c525b1ea543985f42a2b7ee03478459901a13b2b1ef21975346f",
+      "bytes": 6149,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case06/runs/20261018T190114.758162-97209/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/22661dc0f7bea53bb17a054ccc578545366d1f93a2bd01c34f7573760d1a87a9.brep",
+      "sha256": "22661dc0f7bea53bb17a054ccc578545366d1f93a2bd01c34f7573760d1a87a9",
+      "bytes": 1150,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case36/runs/20261018T190448.348298-3829/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/23cc14a4fb0c88c3e57bab8700543a54cc5de31afae299a3ebb2da2121a1bcfa.brep",
+      "sha256": "23cc14a4fb0c88c3e57bab8700543a54cc5de31afae299a3ebb2da2121a1bcfa",
+      "bytes": 9285,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/attempt03-r0p5-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/24dc4f185e61d0afe5622b64576b3334469a59bed0b3475f8b10393bd037e2a5.brep",
+      "sha256": "24dc4f185e61d0afe5622b64576b3334469a59bed0b3475f8b10393bd037e2a5",
+      "bytes": 42884,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part02/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/26d34a7e1bd7ea7407ed66587ed573bcdca7baea7d41db9ccb9532471e531088.brep",
+      "sha256": "26d34a7e1bd7ea7407ed66587ed573bcdca7baea7d41db9ccb9532471e531088",
+      "bytes": 3530,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/full-single-edge-y.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/2769be86cd33dd0c21abba2790c46dc54fd9cb6440755c4e04aa79bf5428944c.brep",
+      "sha256": "2769be86cd33dd0c21abba2790c46dc54fd9cb6440755c4e04aa79bf5428944c",
+      "bytes": 7549,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/ordinary-r2.brep",
+        "history:outputs/manual-review/diagnostics/batch/case17/runs/20261018T190128.286026-98474/part01/attempt03-r2.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/plane-ordinary-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/2798b9837c6e6cb8d373127fc5219b1c90a01289625d34f2583a417201c96477.brep",
+      "sha256": "2798b9837c6e6cb8d373127fc5219b1c90a01289625d34f2583a417201c96477",
+      "bytes": 9619,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/sheet-r4-independent-csg-oracle.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/sheet-r4-rewritten-default-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/27e67e9564ca207f3d492dd8763f70adc4ba1b6fae1f12afd1d42f5f6d600075.brep",
+      "sha256": "27e67e9564ca207f3d492dd8763f70adc4ba1b6fae1f12afd1d42f5f6d600075",
+      "bytes": 2505,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case08/ordinary-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/283e4aeac6c1817079e512fd9b92e0cda5cb37ad22b4b1dbaba55cf8efdaa5ba.brep",
+      "sha256": "283e4aeac6c1817079e512fd9b92e0cda5cb37ad22b4b1dbaba55cf8efdaa5ba",
+      "bytes": 18215,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case34-rho/native-runs/20261022T222352.772560/native-circle-control.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/298a952d9b36cbe493ce8aaef1cbb4cbea26230596dc6eca3db422fe23f049d0.brep",
+      "sha256": "298a952d9b36cbe493ce8aaef1cbb4cbea26230596dc6eca3db422fe23f049d0",
+      "bytes": 8201,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/2b676a81febd58605d1ba44e63f69ea7ad88440d0f17fd0d3886418235a529b7.brep",
+      "sha256": "2b676a81febd58605d1ba44e63f69ea7ad88440d0f17fd0d3886418235a529b7",
+      "bytes": 8126,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case21/runs/20261018T190054.172860-95518/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/2ed772dc6d3ec02cd00f9d62a1a14e13128a7704b132d6df1c15444575359d07.brep",
+      "sha256": "2ed772dc6d3ec02cd00f9d62a1a14e13128a7704b132d6df1c15444575359d07",
+      "bytes": 22410,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/native-trials/runs/freecad-20261020T130553.144741/right-r2p5/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/2f3b5a971b080145a695e2ce3e5a3d10e9ecbeef6360702b63adf4c44df272cc.brep",
+      "sha256": "2f3b5a971b080145a695e2ce3e5a3d10e9ecbeef6360702b63adf4c44df272cc",
+      "bytes": 2201,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case36/runs/20261018T190448.348298-3829/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/303d36ee437c6a3b9edfa716e2cab8641c3665ad8b7628091b0ddc6cfb895b8d.brep",
+      "sha256": "303d36ee437c6a3b9edfa716e2cab8641c3665ad8b7628091b0ddc6cfb895b8d",
+      "bytes": 1105,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/capping_plane-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+      "sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8",
+      "bytes": 8068,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3171c8bc31f840888bf1a14caf28c2772685008904511f355d1987ac0d36da1e.brep",
+      "sha256": "3171c8bc31f840888bf1a14caf28c2772685008904511f355d1987ac0d36da1e",
+      "bytes": 25497,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212035.166374-44938/concave-then-convex-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/33ba8e046467a7eeb9c06833bb7347011a506aceedf7ea7572011232d14e7421.brep",
+      "sha256": "33ba8e046467a7eeb9c06833bb7347011a506aceedf7ea7572011232d14e7421",
+      "bytes": 15757,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part02/attempt03-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3489ec11354b168e600258aa4eb70cc929bddf1ca65bb82e8d19f9e18b6797f0.brep",
+      "sha256": "3489ec11354b168e600258aa4eb70cc929bddf1ca65bb82e8d19f9e18b6797f0",
+      "bytes": 1186,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/original-cap-face.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3645e218b7e077f366636ab7983af8adb45900e0d5dca6cb1579d6c85e78172c.brep",
+      "sha256": "3645e218b7e077f366636ab7983af8adb45900e0d5dca6cb1579d6c85e78172c",
+      "bytes": 4830,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case03/runs/20261018T190101.626068-96644/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/36d913fc1a464de825d3122d3c1d9b0f79101b1893b29eef115efb0aa4c3e104.brep",
+      "sha256": "36d913fc1a464de825d3122d3c1d9b0f79101b1893b29eef115efb0aa4c3e104",
+      "bytes": 21022,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/runs/20261020T130721.963124-34053/notch-r2-secondary-r0p25.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd.brep",
+      "sha256": "3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd",
+      "bytes": 8249,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-39_patch-1309.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/39999a2fda1bb85644ed5388d558214f71ef1faee2baa696855f7baaaefb96ee.brep",
+      "sha256": "39999a2fda1bb85644ed5388d558214f71ef1faee2baa696855f7baaaefb96ee",
+      "bytes": 8236,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case04/runs/20261018T190104.613726-96924/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/39c9759142c2f1ea0dd2f9a241fab1ca1fc2b643b59214a2f3fa6208efc1c746.brep",
+      "sha256": "39c9759142c2f1ea0dd2f9a241fab1ca1fc2b643b59214a2f3fa6208efc1c746",
+      "bytes": 14743,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/face-left.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/39e167cf94d2255ad4bc1d2dc63a94eff5abce0677071fa0f5be99623ef1731d.brep",
+      "sha256": "39e167cf94d2255ad4bc1d2dc63a94eff5abce0677071fa0f5be99623ef1731d",
+      "bytes": 24362,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212025.853924-44790/convex-then-concave-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3c9bd03dac7c5d611f795f6309001a91d7ba2c1b63f8e9bb403d25be88bf9c53.brep",
+      "sha256": "3c9bd03dac7c5d611f795f6309001a91d7ba2c1b63f8e9bb403d25be88bf9c53",
+      "bytes": 2658,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-23_setback-1286.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3cd9146446a73091423aaa7985b5dc379acb8172c04c6f6b0164bc7962b9f336.brep",
+      "sha256": "3cd9146446a73091423aaa7985b5dc379acb8172c04c6f6b0164bc7962b9f336",
+      "bytes": 12079,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/ordinary-r5-control-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3e582ce731eee97adad263700d626a1aac0589ec1144ff1d586648aa001d57d6.brep",
+      "sha256": "3e582ce731eee97adad263700d626a1aac0589ec1144ff1d586648aa001d57d6",
+      "bytes": 15698,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part02/attempt02-r5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3e7cad5f835d6922305fd046dfba41160566555a02c2ef6dcbcfcbec9552b5a1.brep",
+      "sha256": "3e7cad5f835d6922305fd046dfba41160566555a02c2ef6dcbcfcbec9552b5a1",
+      "bytes": 2792,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3ec7ff58d95d03a8132108f9b9de95d9fc8365f334bcd545d1b64ce5e44a4014.brep",
+      "sha256": "3ec7ff58d95d03a8132108f9b9de95d9fc8365f334bcd545d1b64ce5e44a4014",
+      "bytes": 16793,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/attempt02-r0p5-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3f3ec1986be71db79acd9d751ea62a37f53e907e9bf4e53deea118f99db774b1.brep",
+      "sha256": "3f3ec1986be71db79acd9d751ea62a37f53e907e9bf4e53deea118f99db774b1",
+      "bytes": 7342,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-42_43_overlap-1316.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3f4a04cda8c2f0e9a3513200426d0ef2d70e3da872b906e523ca5fde096b5f61.brep",
+      "sha256": "3f4a04cda8c2f0e9a3513200426d0ef2d70e3da872b906e523ca5fde096b5f61",
+      "bytes": 4566,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case25/runs/20261018T190058.052991-96079/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3f649345d354fbf7078e4991cbe07ca777873196652bad1ad5b806292433d06a.brep",
+      "sha256": "3f649345d354fbf7078e4991cbe07ca777873196652bad1ad5b806292433d06a",
+      "bytes": 18976,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case03/runs/20261018T190101.626068-96644/part01/attempt02-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3fbf598259f2d14b9ebd18e80118daea19e70af2fb8ad89b6dbec88e38cd7117.brep",
+      "sha256": "3fbf598259f2d14b9ebd18e80118daea19e70af2fb8ad89b6dbec88e38cd7117",
+      "bytes": 6580,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case34-rho/runs/20261022T222101.606847/relative-050.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/3fd2de40928ca92fbe10414a2bbfca23c414ab1696f1d64050a57135a854338d.brep",
+      "sha256": "3fd2de40928ca92fbe10414a2bbfca23c414ab1696f1d64050a57135a854338d",
+      "bytes": 9976,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/native-free-r2-independent-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/43224e231cfea58e383ce087b52ee4f4f68d7e8983c53fed19d3f7db4ced643c.brep",
+      "sha256": "43224e231cfea58e383ce087b52ee4f4f68d7e8983c53fed19d3f7db4ced643c",
+      "bytes": 9425,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case26/runs/20261018T190058.848543-96218/part01/attempt01-r10.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/439058fa37f7b29a56d64f9b66aab93ca5d87ac19cb302c70c56dd3eeab198b8.brep",
+      "sha256": "439058fa37f7b29a56d64f9b66aab93ca5d87ac19cb302c70c56dd3eeab198b8",
+      "bytes": 14031,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case31-aligned-v2/native-trials/runs/freecad-20261022T211956.617660-62782/ordinary-r6/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/4455799cfc3622a546b09df8550878c6cd84c36dc6d9c84eba80541ca80b3464.brep",
+      "sha256": "4455799cfc3622a546b09df8550878c6cd84c36dc6d9c84eba80541ca80b3464",
+      "bytes": 4244,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case15/runs/20261018T190126.451743-98195/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6.brep",
+      "sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "bytes": 1234,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-03_to_05-1351.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/455f829b8801dff85de25706bc33c0aa10c0ca3e0897780589da13c3d7e5df3b.brep",
+      "sha256": "455f829b8801dff85de25706bc33c0aa10c0ca3e0897780589da13c3d7e5df3b",
+      "bytes": 2513,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case34/runs/20261018T190447.286868-3518/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/45eea149e7b144c53a7d4218ecd1df697decaa22c6fd467f793b0c4ae375d7a9.brep",
+      "sha256": "45eea149e7b144c53a7d4218ecd1df697decaa22c6fd467f793b0c4ae375d7a9",
+      "bytes": 4840,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case24/runs/20261018T190057.380277-95939/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/45f683263b65d85438771be6d9402047ffba945fd3fe2644dee813894d748fe9.brep",
+      "sha256": "45f683263b65d85438771be6d9402047ffba945fd3fe2644dee813894d748fe9",
+      "bytes": 3866,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case14/runs/20261018T190125.781265-98056/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/47f0d7acac045322eb5b60d34208103f46134b2fd92f1e502ded5f1d995c856a.brep",
+      "sha256": "47f0d7acac045322eb5b60d34208103f46134b2fd92f1e502ded5f1d995c856a",
+      "bytes": 10474,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/sheet-r8-independent-csg-oracle.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/sheet-r8-rewritten-default-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+      "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "bytes": 6593,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/4c41295ea8a6832b00d6c573f0a110f92e87cd5e4a38a2977522d6323d359ffe.brep",
+      "sha256": "4c41295ea8a6832b00d6c573f0a110f92e87cd5e4a38a2977522d6323d359ffe",
+      "bytes": 3706,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/full-single-edge-z.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/4c7f9b3380e6988c8d4a8deb9922319003c0df147d371245bec8a14c9995dddc.brep",
+      "sha256": "4c7f9b3380e6988c8d4a8deb9922319003c0df147d371245bec8a14c9995dddc",
+      "bytes": 39690,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part01/attempt02-r4-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/4d4aae70428a2fba6ecf68cc5fe21e6b5573b191fea8c70740b48fce6ca4528c.brep",
+      "sha256": "4d4aae70428a2fba6ecf68cc5fe21e6b5573b191fea8c70740b48fce6ca4528c",
+      "bytes": 2492,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case34/runs/20261018T190447.286868-3518/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/4eaf3580c329f860df13cdae19b10936e1201d4442a9fee65afa35c3c3077a04.brep",
+      "sha256": "4eaf3580c329f860df13cdae19b10936e1201d4442a9fee65afa35c3c3077a04",
+      "bytes": 26744,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212001.181922-44215/concave-then-convex-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/50f34b03c532e8c227312c38b87b7ec8dd9daaa8345c999570f570c1c6ab286e.brep",
+      "sha256": "50f34b03c532e8c227312c38b87b7ec8dd9daaa8345c999570f570c1c6ab286e",
+      "bytes": 5491,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case10/runs/20261018T190119.196144-97771/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/51e51c4d9791fa69541320419e2dc693e9a9ee6bb93eca06f59f0916bdc53ab3.brep",
+      "sha256": "51e51c4d9791fa69541320419e2dc693e9a9ee6bb93eca06f59f0916bdc53ab3",
+      "bytes": 13911,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part01/attempt02-r5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/53b17264d211ddace4037d6b9c2de7a0083a3e0ad5852c3110d9a01949c36a8b.brep",
+      "sha256": "53b17264d211ddace4037d6b9c2de7a0083a3e0ad5852c3110d9a01949c36a8b",
+      "bytes": 15890,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part02/attempt01-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/5419320748c2ce5c8cb2024edc0f9e07f8a090303be1889d3fdc3a38608661be.brep",
+      "sha256": "5419320748c2ce5c8cb2024edc0f9e07f8a090303be1889d3fdc3a38608661be",
+      "bytes": 10694,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-03_to_05-1353.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/565ce6cf4dd186b54b7c87b4af289029ede3275da6e0cff416cc27c26dc75e18.brep",
+      "sha256": "565ce6cf4dd186b54b7c87b4af289029ede3275da6e0cff416cc27c26dc75e18",
+      "bytes": 2245,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case35-g2/native-runs/20261022T231218.527041/default-circle-r13.brep",
+        "history:outputs/manual-review/diagnostics/case35-g2/native-runs/20261022T231218.527041/internal-c2-circle-r13.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9.brep",
+      "sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+      "bytes": 1655,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-25_preserve_notch-1290.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/596bcb58d70f343286335b8080bfad000e2dbed5e79b3476fa2cf1219ea118e7.brep",
+      "sha256": "596bcb58d70f343286335b8080bfad000e2dbed5e79b3476fa2cf1219ea118e7",
+      "bytes": 5223,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T211945.588221-43602/convex-r6.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T211951.532364-43909/convex-then-concave-r6-first.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/5a4b5af046766eaa47892a1efe91aa8e7fe0d71971fbec1f06daab79a12e99c3.brep",
+      "sha256": "5a4b5af046766eaa47892a1efe91aa8e7fe0d71971fbec1f06daab79a12e99c3",
+      "bytes": 7416,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/sheet_case_body-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/5c412c1b79ac10ec36189c7a5d23d0a2cee9b2d4f8317c96fdf1d5d97a638ab6.brep",
+      "sha256": "5c412c1b79ac10ec36189c7a5d23d0a2cee9b2d4f8317c96fdf1d5d97a638ab6",
+      "bytes": 8138,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/runs/20261020T071045.110964-27895/native-free-r2.brep",
+        "history:outputs/manual-review/diagnostics/case21-unders/native-trials/runs/freecad-20261020T070644.591690/ordinary-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/5fa18e4a443ea1d43e181f82e5403a1d637c61941f3c0fcd00d15ef87d3054d9.brep",
+      "sha256": "5fa18e4a443ea1d43e181f82e5403a1d637c61941f3c0fcd00d15ef87d3054d9",
+      "bytes": 58581,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/attempt01-r1.brep",
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/attempt01-r1-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb.brep",
+      "sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb",
+      "bytes": 3293,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/attempt01-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/5fe35e73f8d42c115f6ee67bb5135e93c44f3f1067a7743f08cb6a24f869d563.brep",
+      "sha256": "5fe35e73f8d42c115f6ee67bb5135e93c44f3f1067a7743f08cb6a24f869d563",
+      "bytes": 2667,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/full-removal-x.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/619fc824b9ce3818ab3aede0eeeb2a2cbc658662547c75437c7ddff691a54719.brep",
+      "sha256": "619fc824b9ce3818ab3aede0eeeb2a2cbc658662547c75437c7ddff691a54719",
+      "bytes": 32951,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/runs/20261020T063052.612688-23865/native-full-front-chain-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/62345137ea8d1708de14134d139304ae0e9a2ffdb26c0b32ba4f80c530e20059.brep",
+      "sha256": "62345137ea8d1708de14134d139304ae0e9a2ffdb26c0b32ba4f80c530e20059",
+      "bytes": 3605,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/preprocess/boss-floor-skin/input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/626682e313c53c9d9c47a92787e6ada6d4bfd8ffe23159874fe09bbd6fba620c.brep",
+      "sha256": "626682e313c53c9d9c47a92787e6ada6d4bfd8ffe23159874fe09bbd6fba620c",
+      "bytes": 22616,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/runs/20261020T130721.963124-34053/notch-r2p5-secondary-r0p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47.brep",
+      "sha256": "6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47",
+      "bytes": 1699,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-09_const_vs_variable-1360.brep",
+        "history:outputs/manual-review/diagnostics/case33-variable/runs/20261022T214432.129909/source-two-walls.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/62ac0244bce0ad15aaf2ff87d796676a1ca8d23fc809e3ad55036656dd99ab92.brep",
+      "sha256": "62ac0244bce0ad15aaf2ff87d796676a1ca8d23fc809e3ad55036656dd99ab92",
+      "bytes": 3910,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-20_y_combos-1285.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6351354627a3220fb3831d8cef88e31ed999f8dbbf9fada72be4b075d6bd5f8c.brep",
+      "sha256": "6351354627a3220fb3831d8cef88e31ed999f8dbbf9fada72be4b075d6bd5f8c",
+      "bytes": 6131,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/637ba18fef12583c1663d635fea896626b098ca66e3bf2118d93d12d366d80ef.brep",
+      "sha256": "637ba18fef12583c1663d635fea896626b098ca66e3bf2118d93d12d366d80ef",
+      "bytes": 6016,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case02/runs/20261018T190100.954607-96504/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/659dc7815571e68dc1a5cc586a0e33d60640866dedc159e390bfc353f01f7e51.brep",
+      "sha256": "659dc7815571e68dc1a5cc586a0e33d60640866dedc159e390bfc353f01f7e51",
+      "bytes": 32087,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case05/runs/20261018T190111.080226-97068/part01/attempt01-r5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/660e669205161e83962b4c743d6b7ac1037cf1d4cbb91ae33ee21eb3df3f7098.brep",
+      "sha256": "660e669205161e83962b4c743d6b7ac1037cf1d4cbb91ae33ee21eb3df3f7098",
+      "bytes": 1157,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case35-g2/composition-runs/20261022T232117.389322/fixed-operation-input.brep",
+        "history:outputs/manual-review/diagnostics/case35-g2/native-runs/20261022T231218.527041/operation-input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case35/preprocess/walls-1/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case35/runs/20261018T190447.822885-3676/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/666b6b150a2782587793ec09f92d7c7360c482ca274afe6e676af3d215e92dce.brep",
+      "sha256": "666b6b150a2782587793ec09f92d7c7360c482ca274afe6e676af3d215e92dce",
+      "bytes": 2966,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case35-g2/composition-runs/20261022T232117.389322/proxy-s10p0.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6733c1dd5dd65ec49ffe1abadbdc1ceb2404bc3f67b6a690c2c2b1ac9711a7b6.brep",
+      "sha256": "6733c1dd5dd65ec49ffe1abadbdc1ceb2404bc3f67b6a690c2c2b1ac9711a7b6",
+      "bytes": 1153,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case33/preprocess/walls-1/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case33/runs/20261018T190446.787283-3378/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/67fe7460f1b75490f444f5c4452dd1738388906d3cbf7f21c1b385d3a8d7fc04.brep",
+      "sha256": "67fe7460f1b75490f444f5c4452dd1738388906d3cbf7f21c1b385d3a8d7fc04",
+      "bytes": 5029,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212019.973356-44505/convex-r3.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212025.853924-44790/convex-then-concave-r3-first.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/686907d970746ff2dcf76de8ad957a0cabb1e089f9746bebaccc678f79c084a7.brep",
+      "sha256": "686907d970746ff2dcf76de8ad957a0cabb1e089f9746bebaccc678f79c084a7",
+      "bytes": 10886,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/68cefedc4b46216703f20fcfb9378dc803fbe92ae98341a730146a9e0ac70ae2.brep",
+      "sha256": "68cefedc4b46216703f20fcfb9378dc803fbe92ae98341a730146a9e0ac70ae2",
+      "bytes": 6456,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case34-rho/runs/20261022T222101.606847/absolute-075.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6913db9bf145275695637b65d9004e6d41859186688e26f9a5418b103ecfb5dd.brep",
+      "sha256": "6913db9bf145275695637b65d9004e6d41859186688e26f9a5418b103ecfb5dd",
+      "bytes": 2506,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/full-removal-y.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/69c4fa4dfb9dbcbf0b5dc4ea3b900c0ccc4a442264daad81c8d14f26caffae83.brep",
+      "sha256": "69c4fa4dfb9dbcbf0b5dc4ea3b900c0ccc4a442264daad81c8d14f26caffae83",
+      "bytes": 8321,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/independent-r8-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6a5c950a20fa9233f2a5814b256177b3fb0ea7acff0f1d9c795a8a1a219e315a.brep",
+      "sha256": "6a5c950a20fa9233f2a5814b256177b3fb0ea7acff0f1d9c795a8a1a219e315a",
+      "bytes": 2809,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case31-faceted/runs/20261022T124446.966292-57080/B-original-base.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6b309ea1baca6ffb766bb3875f5e7d82cb58428dcec588956ea19e0e66b093aa.brep",
+      "sha256": "6b309ea1baca6ffb766bb3875f5e7d82cb58428dcec588956ea19e0e66b093aa",
+      "bytes": 6012,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case13/runs/20261018T190125.062990-97917/part01/attempt01-r6.brep",
+        "history:outputs/manual-review/diagnostics/batch/case16/runs/20261018T190127.610804-98334/part01/attempt01-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6b61f1406f920fc3448db1a9a9179b92abf3d198f6f827c9d56845431763d738.brep",
+      "sha256": "6b61f1406f920fc3448db1a9a9179b92abf3d198f6f827c9d56845431763d738",
+      "bytes": 18056,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case03/runs/20261018T190101.626068-96644/part01/attempt03-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc.brep",
+      "sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+      "bytes": 2590,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-31_vertex_limit-1300.brep",
+        "history:outputs/parasolid-preblend/models/73-34_combine_limits-1305.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d.brep",
+      "sha256": "6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d",
+      "bytes": 18598,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1307.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6c863efd083111bff7995480271f1ed01b4c853fa0ee5a3f61c2d5bbf26ec1a6.brep",
+      "sha256": "6c863efd083111bff7995480271f1ed01b4c853fa0ee5a3f61c2d5bbf26ec1a6",
+      "bytes": 8122,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/vertex_only.brep",
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/case2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6f13d8ab0ed1cc2d78ff5f4b5fd83eef86ceaebdee77ece1b58b6d35bec2fabd.brep",
+      "sha256": "6f13d8ab0ed1cc2d78ff5f4b5fd83eef86ceaebdee77ece1b58b6d35bec2fabd",
+      "bytes": 19376,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case20/runs/20261018T190343.624084-456/part01/attempt03-r1.brep",
+        "history:outputs/manual-review/diagnostics/batch/case20/runs/20261018T190343.624084-456/part01/attempt03-r1-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6f7121accaee1c30a9c5a06fbc439cc1adea897d07a00b074a278bf5d805a821.brep",
+      "sha256": "6f7121accaee1c30a9c5a06fbc439cc1adea897d07a00b074a278bf5d805a821",
+      "bytes": 8392,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/right-stop-left-continue-r2-independent-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/6fcafa20010e4cc4ca6a72503ac631cd1ffac4061cb1187ff9ed4abe7297006d.brep",
+      "sha256": "6fcafa20010e4cc4ca6a72503ac631cd1ffac4061cb1187ff9ed4abe7297006d",
+      "bytes": 2210,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case33/runs/20261018T190446.787283-3378/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/716667c5ded40dd7173fc80336540a7d964e3bec9939342f9a95bd75aea364a6.brep",
+      "sha256": "716667c5ded40dd7173fc80336540a7d964e3bec9939342f9a95bd75aea364a6",
+      "bytes": 3628,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/preprocess/walls-1/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/7324520e42dfd4c3ea3f078740bce65d75d2158dbc7e2d38c70db8a7aab51487.brep",
+      "sha256": "7324520e42dfd4c3ea3f078740bce65d75d2158dbc7e2d38c70db8a7aab51487",
+      "bytes": 22601,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/native-trials/runs/freecad-20261020T130553.144741/left-r2p5/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/7347b71e6cb442edf0ac94c82807f8ccb8e5f084b51c73dccf1b94688e8d19c6.brep",
+      "sha256": "7347b71e6cb442edf0ac94c82807f8ccb8e5f084b51c73dccf1b94688e8d19c6",
+      "bytes": 12546,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/ordinary-r5.brep",
+        "history:outputs/manual-review/diagnostics/batch/case19/runs/20261018T190130.062863-98757/part01/attempt02-r5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/74e859665255c7da492536d24a1ba82db2942229e20ec6495b77cfa695475615.brep",
+      "sha256": "74e859665255c7da492536d24a1ba82db2942229e20ec6495b77cfa695475615",
+      "bytes": 14725,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/direction-right-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/754bace452cc4213e665fc6a373c0e9a8f62f1710bb77e29632651c2a7dd3642.brep",
+      "sha256": "754bace452cc4213e665fc6a373c0e9a8f62f1710bb77e29632651c2a7dd3642",
+      "bytes": 8305,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/independent-r4-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/75f78200320c2e4b4df92d83bba6f29af73c97b70574980353a8dcd95d8c6607.brep",
+      "sha256": "75f78200320c2e4b4df92d83bba6f29af73c97b70574980353a8dcd95d8c6607",
+      "bytes": 6744,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part02/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/76ed82ed68e805d4a3412626db8d2e21dc45e3b0b5842d496a37d5d97edb4504.brep",
+      "sha256": "76ed82ed68e805d4a3412626db8d2e21dc45e3b0b5842d496a37d5d97edb4504",
+      "bytes": 9234,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/attempt01-r1-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/78c5bc6b71fedf6146bfb79e1e202195f1169bd033bb9f16172e51aa54a51136.brep",
+      "sha256": "78c5bc6b71fedf6146bfb79e1e202195f1169bd033bb9f16172e51aa54a51136",
+      "bytes": 6268,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case25/runs/20261018T190058.052991-96079/part01/attempt02-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/79140ce30d9e8c041467daad667f99992abcb947709b4b4e7215b1c9ea107317.brep",
+      "sha256": "79140ce30d9e8c041467daad667f99992abcb947709b4b4e7215b1c9ea107317",
+      "bytes": 3917,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case25-unders/native-trials/runs/freecad-20261020T213324.122490/y-r10.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/79c91878d72a8b514fe6d3db282fb72d307bb075d6242eedc2b0a2fd028b764b.brep",
+      "sha256": "79c91878d72a8b514fe6d3db282fb72d307bb075d6242eedc2b0a2fd028b764b",
+      "bytes": 33286,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212109.443255-45658/concave-then-convex-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/7a548971e1d3d4a5654d48e9b2cb72b6bba0761a43bd64a539992b7fb86cef58.brep",
+      "sha256": "7a548971e1d3d4a5654d48e9b2cb72b6bba0761a43bd64a539992b7fb86cef58",
+      "bytes": 5604,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case15/runs/20261018T190126.451743-98195/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/7a5ce7d17a93843578db6dc171dfde772d8d39326ebc059379aa422ccab010f2.brep",
+      "sha256": "7a5ce7d17a93843578db6dc171dfde772d8d39326ebc059379aa422ccab010f2",
+      "bytes": 2673,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/full-removal-z.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8.brep",
+      "sha256": "7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8",
+      "bytes": 1391,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case33-variable/runs/20261022T214432.129909/operation-two-walls.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/7e1b2a15b286585ac1384c317f56bf324ad4d225da73d9e0e5b7dfc21071c481.brep",
+      "sha256": "7e1b2a15b286585ac1384c317f56bf324ad4d225da73d9e0e5b7dfc21071c481",
+      "bytes": 40982,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/runs/20261020T063052.612688-23865/patch-yes.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/81553f364dcf6339f6d4f4905298eeec1cd278bdfa42e86b9f90516cad6fbbce.brep",
+      "sha256": "81553f364dcf6339f6d4f4905298eeec1cd278bdfa42e86b9f90516cad6fbbce",
+      "bytes": 1157,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case35/runs/20261018T190447.822885-3676/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/85c7f41c4f0ed51b56fcdd4b89a1a1899fcb91986af2c917726323506e500ca0.brep",
+      "sha256": "85c7f41c4f0ed51b56fcdd4b89a1a1899fcb91986af2c917726323506e500ca0",
+      "bytes": 6227,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/86b23c86db956153bcd402bb6c19c4bc4b705da1411a3b53b518aa80a2ff21ae.brep",
+      "sha256": "86b23c86db956153bcd402bb6c19c4bc4b705da1411a3b53b518aa80a2ff21ae",
+      "bytes": 21783,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/runs/20261020T130721.963124-34053/notch-r2p5-secondary-r0p25.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8a593107633b300d7af1257546f3a186e0be56136d471469fecedd2337828002.brep",
+      "sha256": "8a593107633b300d7af1257546f3a186e0be56136d471469fecedd2337828002",
+      "bytes": 9939,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/plane-r8-independent-csg-oracle.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/plane-r8-rewritten-default-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8c4c273bc8be92ac8db83b72b646ae1ce42f208f92c4d95ea54eb74514412ab9.brep",
+      "sha256": "8c4c273bc8be92ac8db83b72b646ae1ce42f208f92c4d95ea54eb74514412ab9",
+      "bytes": 39690,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part01/attempt02-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8d7ece1a61d5eed09be959fd13c41f44019fc10ea7819d42f991afec50c72ef2.brep",
+      "sha256": "8d7ece1a61d5eed09be959fd13c41f44019fc10ea7819d42f991afec50c72ef2",
+      "bytes": 2813,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8ea0ad95ae18b2c464545c2a4a750e0fd921e3b5b3f0a62dcf2d34deb25eac93.brep",
+      "sha256": "8ea0ad95ae18b2c464545c2a4a750e0fd921e3b5b3f0a62dcf2d34deb25eac93",
+      "bytes": 42452,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part01/attempt01-r8-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8ea1fdfd83053f71f7895abf1b29d8d85fcc496b37e6b4fecf8b030835219e6c.brep",
+      "sha256": "8ea1fdfd83053f71f7895abf1b29d8d85fcc496b37e6b4fecf8b030835219e6c",
+      "bytes": 10109,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/sheet-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8ec94626eb6ce1dd761c1e857913653a7d77a4d170cd3b58c446b15fef5d16bc.brep",
+      "sha256": "8ec94626eb6ce1dd761c1e857913653a7d77a4d170cd3b58c446b15fef5d16bc",
+      "bytes": 8312,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/actual-slot-voids.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8ff74e9a9ad9d6f0d7905a7af57b65b4e3328868cf567e727388d84498d05213.brep",
+      "sha256": "8ff74e9a9ad9d6f0d7905a7af57b65b4e3328868cf567e727388d84498d05213",
+      "bytes": 9575,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/attempt02-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/8ffe156187d8c1c571c99c93e7dbf1dcb89ea1d8c68d8bb8984d61369912e637.brep",
+      "sha256": "8ffe156187d8c1c571c99c93e7dbf1dcb89ea1d8c68d8bb8984d61369912e637",
+      "bytes": 69577,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/attempt02-r2.brep",
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/attempt02-r2-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/906ca6c8ca383b0fa1cd9000b71645b5e96a1b7fa5b78992c3134bc681185c66.brep",
+      "sha256": "906ca6c8ca383b0fa1cd9000b71645b5e96a1b7fa5b78992c3134bc681185c66",
+      "bytes": 5550,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212022.892501-44647/concave-r3.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212035.166374-44938/concave-then-convex-r3-first.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9189c7a18ca139d89e72541ea3c1dedbd51152a749e35352823d9195e3ae99f0.brep",
+      "sha256": "9189c7a18ca139d89e72541ea3c1dedbd51152a749e35352823d9195e3ae99f0",
+      "bytes": 5309,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-02_three_axes-1349.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/91ad3eade8e6b6a8fbccf6d8dbb15edc46eee30ea170870e06fdcb28df2d4945.brep",
+      "sha256": "91ad3eade8e6b6a8fbccf6d8dbb15edc46eee30ea170870e06fdcb28df2d4945",
+      "bytes": 3605,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/91c1a820acf769dcde794f6923058886fd5793aca36094009973895d36085aef.brep",
+      "sha256": "91c1a820acf769dcde794f6923058886fd5793aca36094009973895d36085aef",
+      "bytes": 14158,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/edge-left-independent-csg-oracle.brep",
+        "history:outputs/manual-review/diagnostics/case19-trim/face-left-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/92490e13a374dcf0db913bfa7e45089efc506cef4cb9b8df501ea1882cd8c3a0.brep",
+      "sha256": "92490e13a374dcf0db913bfa7e45089efc506cef4cb9b8df501ea1882cd8c3a0",
+      "bytes": 53921,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-30_tight_corner-1298.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9378f1c0eb8bc22124fd484413b3c8d1c0c7381adff7e6264c3cf46c2c819bfc.brep",
+      "sha256": "9378f1c0eb8bc22124fd484413b3c8d1c0c7381adff7e6264c3cf46c2c819bfc",
+      "bytes": 21569,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case04/runs/20261018T190104.613726-96924/part03/attempt02-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/943a8582780870490a09e3f6ba818eec38ffaeec2bedcb59a4c854569072f247.brep",
+      "sha256": "943a8582780870490a09e3f6ba818eec38ffaeec2bedcb59a4c854569072f247",
+      "bytes": 53068,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/attempt03-r0p5.brep",
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02/attempt03-r0p5-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/96cdc2b7727cce4a30a511f3c12a4b1f89b7dce1b9b23cb8a0d141babfea07bd.brep",
+      "sha256": "96cdc2b7727cce4a30a511f3c12a4b1f89b7dce1b9b23cb8a0d141babfea07bd",
+      "bytes": 2222,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case36/runs/20261018T190448.348298-3829/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/97faf80d4b881a3aa03c128e7959ce0b0a822af396801b455cbdf697d91318a1.brep",
+      "sha256": "97faf80d4b881a3aa03c128e7959ce0b0a822af396801b455cbdf697d91318a1",
+      "bytes": 7325,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case23/runs/20261018T190055.610788-95799/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/981f0e8d962e296313dda8734b87d98a25e7fbda31913939c1c022fb5296dec3.brep",
+      "sha256": "981f0e8d962e296313dda8734b87d98a25e7fbda31913939c1c022fb5296dec3",
+      "bytes": 29286,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part02-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/98ddb76f576d876a5ef6070c58273037adcf558918433a598b14d76630f2bd64.brep",
+      "sha256": "98ddb76f576d876a5ef6070c58273037adcf558918433a598b14d76630f2bd64",
+      "bytes": 5511,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-28_ordering-1293.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/99284723423c7199ea94dff1806ee25eac8a790220aebe51de928c3573d75b04.brep",
+      "sha256": "99284723423c7199ea94dff1806ee25eac8a790220aebe51de928c3573d75b04",
+      "bytes": 26799,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T211937.417725-43345/both-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9959f6889063c0ee1107e6ac5185035cba9dd48ba5b843679888baa3258ec7a8.brep",
+      "sha256": "9959f6889063c0ee1107e6ac5185035cba9dd48ba5b843679888baa3258ec7a8",
+      "bytes": 49453,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-29_self_int_repair-1296.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9b6724769a84ae8db23755133b5a02fab4f8d08c57a8713712e25f9bbe106f2c.brep",
+      "sha256": "9b6724769a84ae8db23755133b5a02fab4f8d08c57a8713712e25f9bbe106f2c",
+      "bytes": 4586,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-44_45_unders-1318.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9bf6c449546b85f63d14d293f52e5df65a5c471b92e56acb4310dfc6cb81bf84.brep",
+      "sha256": "9bf6c449546b85f63d14d293f52e5df65a5c471b92e56acb4310dfc6cb81bf84",
+      "bytes": 3628,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9cd3ce780bb02f08b233b5ab88e09b0977c5d550e5aea6e71f16f4eb670e3f51.brep",
+      "sha256": "9cd3ce780bb02f08b233b5ab88e09b0977c5d550e5aea6e71f16f4eb670e3f51",
+      "bytes": 428617,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part02/attempt01-r8-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9d8aebfc824cde4750dee9791338be2f1309558a1486aaeb4d90f5618f5cb09a.brep",
+      "sha256": "9d8aebfc824cde4750dee9791338be2f1309558a1486aaeb4d90f5618f5cb09a",
+      "bytes": 15242,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9ed913aadda699c7136b7e1cea65060c5989b041717f06cbc45399049dcc3a76.brep",
+      "sha256": "9ed913aadda699c7136b7e1cea65060c5989b041717f06cbc45399049dcc3a76",
+      "bytes": 7297,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/9ef0651377ccc9ae6840c798d8279bbc60fa40d5a487908c21bbed05f11417ae.brep",
+      "sha256": "9ef0651377ccc9ae6840c798d8279bbc60fa40d5a487908c21bbed05f11417ae",
+      "bytes": 14743,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/edge-left.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a00d82bb637fc6b0a3a6e3795cbd48c1b4d848642b72f511ebe64a110220ab1b.brep",
+      "sha256": "a00d82bb637fc6b0a3a6e3795cbd48c1b4d848642b72f511ebe64a110220ab1b",
+      "bytes": 7416,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case18/runs/20261018T190342.616618-227/part03/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a02045053dc7a64a75c14f274e777c479b608eb1ff8a33df3979a4ad936c5358.brep",
+      "sha256": "a02045053dc7a64a75c14f274e777c479b608eb1ff8a33df3979a4ad936c5358",
+      "bytes": 6508,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/part02/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a184a68b90fcf588825596b224c466c9418d6c0d68e168100cd15d352d0564c5.brep",
+      "sha256": "a184a68b90fcf588825596b224c466c9418d6c0d68e168100cd15d352d0564c5",
+      "bytes": 7078,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-24_preserve_hole-1289.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a45b9be376cc73ce85e23a498a5bd4eda51dc24d23e1e081cf32929b838d15de.brep",
+      "sha256": "a45b9be376cc73ce85e23a498a5bd4eda51dc24d23e1e081cf32929b838d15de",
+      "bytes": 8105,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case16-limits/runs/20261018T222948.924864-10587/case1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d.brep",
+      "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+      "bytes": 6917,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a6d8832f00ad38d7d56c8a3796103a5a2d23c6137905aadc29d1d013b2337e28.brep",
+      "sha256": "a6d8832f00ad38d7d56c8a3796103a5a2d23c6137905aadc29d1d013b2337e28",
+      "bytes": 5584,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case15/runs/20261018T190126.451743-98195/part01/attempt02-r2p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a70b2df58a6071f76927e482d35e1aac906e8fcf84f46a0926ad927edc62992e.brep",
+      "sha256": "a70b2df58a6071f76927e482d35e1aac906e8fcf84f46a0926ad927edc62992e",
+      "bytes": 1732,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a88e14094a5af0af36c2d0c3ffa082a8d65e75432b150e32b63caa8aa09e920a.brep",
+      "sha256": "a88e14094a5af0af36c2d0c3ffa082a8d65e75432b150e32b63caa8aa09e920a",
+      "bytes": 9065,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/part02/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a8fa1584ea88479a6f9864a908ce3e4e571fb1f7c08ec190008ead57eba283fe.brep",
+      "sha256": "a8fa1584ea88479a6f9864a908ce3e4e571fb1f7c08ec190008ead57eba283fe",
+      "bytes": 8106,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/runs/20261020T071045.110964-27895/native-free-r4.brep",
+        "history:outputs/manual-review/diagnostics/case21-unders/native-trials/runs/freecad-20261020T070644.591690/ordinary-r4.brep",
+        "history:outputs/manual-review/diagnostics/batch/case21/runs/20261018T190054.172860-95518/part01/attempt01-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/a9537d77233db12b6a0934a1ec8e32dffeb481e19515debfc78b08c705c1675d.brep",
+      "sha256": "a9537d77233db12b6a0934a1ec8e32dffeb481e19515debfc78b08c705c1675d",
+      "bytes": 1153,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case33/runs/20261018T190446.787283-3378/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/aa3243b55aea4abb2530b9739675f623bde73cb708ed1fa5f73a534cc5da192f.brep",
+      "sha256": "aa3243b55aea4abb2530b9739675f623bde73cb708ed1fa5f73a534cc5da192f",
+      "bytes": 9244,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case10/runs/20261018T190119.196144-97771/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/aac9862140d40f277a9a3fc724ca5e5086a8a6d715707651a25411dc07a54776.brep",
+      "sha256": "aac9862140d40f277a9a3fc724ca5e5086a8a6d715707651a25411dc07a54776",
+      "bytes": 17830,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part01/attempt03-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ab5fc1451e76ab5140675466282641c0b87996cb7abc1ecdad4ce0c279a353a4.brep",
+      "sha256": "ab5fc1451e76ab5140675466282641c0b87996cb7abc1ecdad4ce0c279a353a4",
+      "bytes": 9525,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/plane-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/aba0baf3f629e04dff09675a5fd51bd3305f1c8cca99cf97a87755eb57a8c382.brep",
+      "sha256": "aba0baf3f629e04dff09675a5fd51bd3305f1c8cca99cf97a87755eb57a8c382",
+      "bytes": 7454,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/runs/20261020T071045.110964-27895/both-stop-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/acba6414b4b0b529cf774228a13f6190b3c8c6acbc63dae64bca599bc92aeeaf.brep",
+      "sha256": "acba6414b4b0b529cf774228a13f6190b3c8c6acbc63dae64bca599bc92aeeaf",
+      "bytes": 1423,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case34/preprocess/walls-1/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case34/runs/20261018T190447.286868-3518/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/acc6d441b47bb8449013f9e08241867db096d3c54fe1e2e59e758ad075bb74bf.brep",
+      "sha256": "acc6d441b47bb8449013f9e08241867db096d3c54fe1e2e59e758ad075bb74bf",
+      "bytes": 21871,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/longitudinal-r2.brep",
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/longitudinal-r2-raw.brep",
+        "history:outputs/manual-review/diagnostics/batch/case20/runs/20261018T190343.624084-456/part01/attempt02-r2.brep",
+        "history:outputs/manual-review/diagnostics/batch/case20/runs/20261018T190343.624084-456/part01/attempt02-r2-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/acefda763f7dcf0d672fbf42049d3ac8e4329f5a70aa302f7c732ebb5601c0a3.brep",
+      "sha256": "acefda763f7dcf0d672fbf42049d3ac8e4329f5a70aa302f7c732ebb5601c0a3",
+      "bytes": 157363,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part02/attempt03-r2-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ad6f3efa42c4d7a56268c911b8025f6254aaf28a0d761f2f19884940235b8968.brep",
+      "sha256": "ad6f3efa42c4d7a56268c911b8025f6254aaf28a0d761f2f19884940235b8968",
+      "bytes": 8291,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case07/runs/20261018T190115.679512-97349/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/adff5e16987b40e92b73921037876a172d354c52f8309088485e4f78d9111423.brep",
+      "sha256": "adff5e16987b40e92b73921037876a172d354c52f8309088485e4f78d9111423",
+      "bytes": 18011,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-20_y_combos-1284.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ae93c625f0521781e61436ec90482441c94248643f8030581739ae33726336c1.brep",
+      "sha256": "ae93c625f0521781e61436ec90482441c94248643f8030581739ae33726336c1",
+      "bytes": 14107,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case31-aligned-v2/native-trials/runs/freecad-20261022T211956.617660-62782/ordinary-r7/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/aeb023e96e8c3be4c41d0ed04edf5f742526a245b2c66b12c6a89a9e65833fec.brep",
+      "sha256": "aeb023e96e8c3be4c41d0ed04edf5f742526a245b2c66b12c6a89a9e65833fec",
+      "bytes": 5793,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212057.624827-45370/concave-r12.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212109.443255-45658/concave-then-convex-r12-first.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/af854e9725a99c4e24a4044cd784bb587d5bbf0c77361172ee6cd9d35d2b8ee7.brep",
+      "sha256": "af854e9725a99c4e24a4044cd784bb587d5bbf0c77361172ee6cd9d35d2b8ee7",
+      "bytes": 20647,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case18/runs/20261018T190342.616618-227/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b06dadebef51d2ec810b8e46655ed14339f05947688adf36df69a8462bfebc7c.brep",
+      "sha256": "b06dadebef51d2ec810b8e46655ed14339f05947688adf36df69a8462bfebc7c",
+      "bytes": 32489,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case04/runs/20261018T190104.613726-96924/part03/attempt01-r5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b16ab6498e3dab0344b1ee07fc7d6de08eaf6059bcaa488388ec41fcff9e4f72.brep",
+      "sha256": "b16ab6498e3dab0344b1ee07fc7d6de08eaf6059bcaa488388ec41fcff9e4f72",
+      "bytes": 12568,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case19/runs/20261018T190130.062863-98757/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b24b60476794800bb984cb170000e7194ec67819bcf3e354cd929ec59afa62dc.brep",
+      "sha256": "b24b60476794800bb984cb170000e7194ec67819bcf3e354cd929ec59afa62dc",
+      "bytes": 16588,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50.brep",
+      "sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+      "bytes": 5000,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-25_rho-1380.brep",
+        "history:outputs/manual-review/diagnostics/case34-rho/runs/20261022T222101.606847/convex-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b314dfe2fab3e1f5c47ed996a73cc0316e85d88e444fabea029d92bec1a5bbcf.brep",
+      "sha256": "b314dfe2fab3e1f5c47ed996a73cc0316e85d88e444fabea029d92bec1a5bbcf",
+      "bytes": 3405,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/runs/20261020T063052.612688-23865/demonstration-bridge-roi.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b4c3996ba1c31f3d10d371b1087580319290308377185ca21e367f4cd42fa712.brep",
+      "sha256": "b4c3996ba1c31f3d10d371b1087580319290308377185ca21e367f4cd42fa712",
+      "bytes": 2235,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case35/runs/20261018T190447.822885-3676/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b4d23655f3fa774cd1c7a6e9e7a1815effb44d496da32ce8974937a6fb65a6cd.brep",
+      "sha256": "b4d23655f3fa774cd1c7a6e9e7a1815effb44d496da32ce8974937a6fb65a6cd",
+      "bytes": 7549,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case18/runs/20261018T190342.616618-227/part01/attempt03-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b51ba50381c1d4df74d92405c4dd2881c2cd419451724ed3b08c7e28d3af2251.brep",
+      "sha256": "b51ba50381c1d4df74d92405c4dd2881c2cd419451724ed3b08c7e28d3af2251",
+      "bytes": 16830,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case31/runs/20261018T190446.630393-3266/part01/attempt03-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b63a4ac02d3220cfa107889eb3d35183d0b80c92584185777b70bd3da64f8931.brep",
+      "sha256": "b63a4ac02d3220cfa107889eb3d35183d0b80c92584185777b70bd3da64f8931",
+      "bytes": 5856,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/partition-right.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b6bda936595e0fcfa93cb6abe6cc5df7d87ecf605eeefb6c6862d8f2862e3c4c.brep",
+      "sha256": "b6bda936595e0fcfa93cb6abe6cc5df7d87ecf605eeefb6c6862d8f2862e3c4c",
+      "bytes": 2368,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/plane-retaining-region.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b7390f9b29e44d55b81401dbe8b6fa48008c8bde508310b27a9086caaa41abb9.brep",
+      "sha256": "b7390f9b29e44d55b81401dbe8b6fa48008c8bde508310b27a9086caaa41abb9",
+      "bytes": 42452,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part01/attempt01-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b8939acbfd391f142bb94d387248b05a91cde9400793c1eb9cb3606bf9d9cb79.brep",
+      "sha256": "b8939acbfd391f142bb94d387248b05a91cde9400793c1eb9cb3606bf9d9cb79",
+      "bytes": 4128,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/partition-left.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/b975dedb4e00edbc3e53ac7ebcd5b438ba8bf00e4785a6e1450c6540b3ad1974.brep",
+      "sha256": "b975dedb4e00edbc3e53ac7ebcd5b438ba8bf00e4785a6e1450c6540b3ad1974",
+      "bytes": 26821,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212011.984201-44361/both-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ba6d56f704899d95161008becc68b4f3aa42dbf38fae9fa4465a031f2043b899.brep",
+      "sha256": "ba6d56f704899d95161008becc68b4f3aa42dbf38fae9fa4465a031f2043b899",
+      "bytes": 2231,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case33/runs/20261018T190446.787283-3378/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/bb770b171c449863c59d1674c5e5167abbaee2e4c5d178684388ec76019879bf.brep",
+      "sha256": "bb770b171c449863c59d1674c5e5167abbaee2e4c5d178684388ec76019879bf",
+      "bytes": 3299,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-42_43_overlap-1317.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/runs/20261020T211313.785960-39251/corrected-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/bbaa3dbf3677a0a6b0c87af0ad539e7fc2914e76de19a9fcda1eb024ada2c266.brep",
+      "sha256": "bbaa3dbf3677a0a6b0c87af0ad539e7fc2914e76de19a9fcda1eb024ada2c266",
+      "bytes": 6508,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case30/runs/20261018T190445.928229-3084/part02-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/bde433d9690dd6c03e755ab2c969f17dacc47da8b03e15e875bc814e83e43dc6.brep",
+      "sha256": "bde433d9690dd6c03e755ab2c969f17dacc47da8b03e15e875bc814e83e43dc6",
+      "bytes": 2637,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case06/runs/20261018T190114.758162-97209/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/be315355d4b204dc0b4af7f46b4e1088acb90d04312ddaeb61a3704a706567e5.brep",
+      "sha256": "be315355d4b204dc0b4af7f46b4e1088acb90d04312ddaeb61a3704a706567e5",
+      "bytes": 40258,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/native-trials/runs/freecad-20261020T130417.181890/right-r4/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/bfb72dfb85d753a6d3a28236d378f125db711026a00af3a31a06daba9124980f.brep",
+      "sha256": "bfb72dfb85d753a6d3a28236d378f125db711026a00af3a31a06daba9124980f",
+      "bytes": 2866,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case35-g2/composition-runs/20261022T232117.389322/proxy-s0p1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c0125ac4b2d51a01f56a1db3f70cbbee230b8c7c15db5e763a3c4ebbe4552bee.brep",
+      "sha256": "c0125ac4b2d51a01f56a1db3f70cbbee230b8c7c15db5e763a3c4ebbe4552bee",
+      "bytes": 1220,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-28_softness-1384.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c01c055df1d98ed4da46bdadc85c153546040ba9423634a89e1ddcea7fffbf8f.brep",
+      "sha256": "c01c055df1d98ed4da46bdadc85c153546040ba9423634a89e1ddcea7fffbf8f",
+      "bytes": 6014,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case19-trim/runs/20261019T223401.873037-21129/derived-upward-slot-openings.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c17e818c20296fae3813cd54b5177b1a2451a074869005c229dfaaf3b669b19e.brep",
+      "sha256": "c17e818c20296fae3813cd54b5177b1a2451a074869005c229dfaaf3b669b19e",
+      "bytes": 7239,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case02/runs/20261018T190100.954607-96504/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c1bb1d4a5e71701dbe72296b51ee48cac866e00dc4ad5148bff32cea9f842a30.brep",
+      "sha256": "c1bb1d4a5e71701dbe72296b51ee48cac866e00dc4ad5148bff32cea9f842a30",
+      "bytes": 3605,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c2ae17a8ffa246580ee28c99c9b057c811757b02bbbd846671e92477f850fec7.brep",
+      "sha256": "c2ae17a8ffa246580ee28c99c9b057c811757b02bbbd846671e92477f850fec7",
+      "bytes": 6702,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/both-stop-r4-independent-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c3479097ab06c03eb9188514b66e5ee9378d1754e0ff71109b0e4396cd665263.brep",
+      "sha256": "c3479097ab06c03eb9188514b66e5ee9378d1754e0ff71109b0e4396cd665263",
+      "bytes": 10109,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T124222.768980-14877/sheet-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c44870068f7140473762189fe46236f3bc31fc1838bd57cc4f5b1c3eec5ba85b.brep",
+      "sha256": "c44870068f7140473762189fe46236f3bc31fc1838bd57cc4f5b1c3eec5ba85b",
+      "bytes": 4018,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case25-unders/native-trials/runs/freecad-20261020T213324.122490/y-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c49f4ffce5bd35841a556ee1697c604e832aa4614e0083598dc6a2f4591a8087.brep",
+      "sha256": "c49f4ffce5bd35841a556ee1697c604e832aa4614e0083598dc6a2f4591a8087",
+      "bytes": 4264,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-33_overlap_limit-1304.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c627ece694bd5bbbb7c14b92c86bf3d037fa2e274b0b656b7585d8fcacb36570.brep",
+      "sha256": "c627ece694bd5bbbb7c14b92c86bf3d037fa2e274b0b656b7585d8fcacb36570",
+      "bytes": 9374,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case31-aligned-v2/runs/20261022T211932.244504/A-aligned-body.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c6c59a18f7dfec9d7b850dc0c4c8d64a229e2d34738f1a41869a0f44a7001227.brep",
+      "sha256": "c6c59a18f7dfec9d7b850dc0c4c8d64a229e2d34738f1a41869a0f44a7001227",
+      "bytes": 5048,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case14/runs/20261018T190125.781265-98056/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c6fd1346cd5bbba16bfef3eda1134e2b3fb471424e57e0bdd3bd3fc071d575d1.brep",
+      "sha256": "c6fd1346cd5bbba16bfef3eda1134e2b3fb471424e57e0bdd3bd3fc071d575d1",
+      "bytes": 14011,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part01/attempt03-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c70b0a4f8d782c8de8f608e123a5af5a6269fd4494d2b6d26c50dac13681f422.brep",
+      "sha256": "c70b0a4f8d782c8de8f608e123a5af5a6269fd4494d2b6d26c50dac13681f422",
+      "bytes": 20705,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case05/runs/20261018T190111.080226-97068/part01/attempt03-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c796c3a5e00baa17f621ad2e8c38102d639c7f23799d2f8076ddf5fe75ab0a58.brep",
+      "sha256": "c796c3a5e00baa17f621ad2e8c38102d639c7f23799d2f8076ddf5fe75ab0a58",
+      "bytes": 21900,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/runs/20261020T130721.963124-34053/notch-r2-secondary-r0p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c7d3fe667a91eaacf01d35fb9d40872a2bb934244989bc4ec2603ea76ddb6414.brep",
+      "sha256": "c7d3fe667a91eaacf01d35fb9d40872a2bb934244989bc4ec2603ea76ddb6414",
+      "bytes": 6032,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case13/runs/20261018T190125.062990-97917/successful-parts.brep",
+        "history:outputs/manual-review/diagnostics/batch/case16/runs/20261018T190127.610804-98334/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1.brep",
+      "sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+      "bytes": 1228,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/fig75-30_trim-1389.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/c921a72331972e22d47f2ce68e5d22bb9e7f384bf26b6b4d3b4b043d13257f7c.brep",
+      "sha256": "c921a72331972e22d47f2ce68e5d22bb9e7f384bf26b6b4d3b4b043d13257f7c",
+      "bytes": 4820,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case24/runs/20261018T190057.380277-95939/part01/attempt02-r6.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/cb94739ad7593bac76ac0aa82f549d902a06020f0a1248a25c60f280e9a5be6e.brep",
+      "sha256": "cb94739ad7593bac76ac0aa82f549d902a06020f0a1248a25c60f280e9a5be6e",
+      "bytes": 9973,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/native-free-r4-independent-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ce2e6067d02aea7ad2c50acaf1d984ca41d04913101dfaab840fabb120c7eec9.brep",
+      "sha256": "ce2e6067d02aea7ad2c50acaf1d984ca41d04913101dfaab840fabb120c7eec9",
+      "bytes": 6036,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-18_explicit_cliff-1282.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/cfe248e5375706097e823041f28ae9b4935597cd2966b62b42ba4a293f6748fe.brep",
+      "sha256": "cfe248e5375706097e823041f28ae9b4935597cd2966b62b42ba4a293f6748fe",
+      "bytes": 2207,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-40_under_topol-1310.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d144c8ec8baa811736bbcc977ea2e82af4205fc5e74c50f7bb08d2a090ea8472.brep",
+      "sha256": "d144c8ec8baa811736bbcc977ea2e82af4205fc5e74c50f7bb08d2a090ea8472",
+      "bytes": 1732,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/preprocess/walls-1/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d20317c550a886803f381d8e5859a74aaa687ebe086128f1b2185c1a97740b4b.brep",
+      "sha256": "d20317c550a886803f381d8e5859a74aaa687ebe086128f1b2185c1a97740b4b",
+      "bytes": 16794,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/runs/20261020T130721.963124-34053/notch-r2p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d260f68b39a523180f2654774e0f4a3259ecdafd319d53baa50816bf15414914.brep",
+      "sha256": "d260f68b39a523180f2654774e0f4a3259ecdafd319d53baa50816bf15414914",
+      "bytes": 33654,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/runs/20261020T063052.612688-23865/proposed-bridge-removal-tool.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d32d813c438f865744c7ff03fa290b3a3881145cb4c5fb9e9066cbd5c049ef5b.brep",
+      "sha256": "d32d813c438f865744c7ff03fa290b3a3881145cb4c5fb9e9066cbd5c049ef5b",
+      "bytes": 3547,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case25-unders/native-trials/runs/freecad-20261020T213324.122490/y-r16.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d3cd57118a52d66f491bc171d6dc2acc36b5a872d2b503a3711d8fc4d3895cb7.brep",
+      "sha256": "d3cd57118a52d66f491bc171d6dc2acc36b5a872d2b503a3711d8fc4d3895cb7",
+      "bytes": 37869,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/native-trials/runs/freecad-20261020T130417.181890/left-r4/result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d45c82ee15891c5023c5b9ac81696396a65f751a325cd05b912c252a4aaf6a82.brep",
+      "sha256": "d45c82ee15891c5023c5b9ac81696396a65f751a325cd05b912c252a4aaf6a82",
+      "bytes": 5640,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T211948.537318-43745/concave-r6.brep",
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212001.181922-44215/concave-then-convex-r6-first.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d67a76b14625e9c19a556b6770f4115bf1043c948e0c9f2b5a31e09e754b965f.brep",
+      "sha256": "d67a76b14625e9c19a556b6770f4115bf1043c948e0c9f2b5a31e09e754b965f",
+      "bytes": 5028,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case14/runs/20261018T190125.781265-98056/part01/attempt01-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/d851380337a131e2c4764fac8975a7012116fccd484b420e74917d9f5394ecc1.brep",
+      "sha256": "d851380337a131e2c4764fac8975a7012116fccd484b420e74917d9f5394ecc1",
+      "bytes": 2214,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case35/runs/20261018T190447.822885-3676/part01/attempt01-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/dafaee1403a3fd3112565c42c6e93e0a508a569ceb9c3beda77f24a1aada327d.brep",
+      "sha256": "dafaee1403a3fd3112565c42c6e93e0a508a569ceb9c3beda77f24a1aada327d",
+      "bytes": 9525,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T124222.768980-14877/plane-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/db71291f46be94eb99aa0f0e1ff076d12f8545623fccb5b745ee0c0174ec7e42.brep",
+      "sha256": "db71291f46be94eb99aa0f0e1ff076d12f8545623fccb5b745ee0c0174ec7e42",
+      "bytes": 8595,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/runs/20261020T071045.110964-27895/right-stop-left-continue-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/dc3727e94326a16d21614ab456d68dbc296ba4b5531cdfdc73bac8cc34edbfb2.brep",
+      "sha256": "dc3727e94326a16d21614ab456d68dbc296ba4b5531cdfdc73bac8cc34edbfb2",
+      "bytes": 30818,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case24-oblique/native-trials/runs/20261020T212045.550410-45081/both-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/dc4b322c8a72dfdabfb450a1f2d709d32625c2d4b2ab1f39d130af25041b714b.brep",
+      "sha256": "dc4b322c8a72dfdabfb450a1f2d709d32625c2d4b2ab1f39d130af25041b714b",
+      "bytes": 9901,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/plane-r4-independent-csg-oracle.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/plane-r4-rewritten-default-independent-csg-oracle.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/dcf563aee81a56f0ee3bb09e99209f198489c536aaf5632be5e7bc3094181ec2.brep",
+      "sha256": "dcf563aee81a56f0ee3bb09e99209f198489c536aaf5632be5e7bc3094181ec2",
+      "bytes": 10736,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/sheet-r8.brep",
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T124222.768980-14877/sheet-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/de27fd83fe44fc76d33723d7636239bed94a9969cce3cf574eb0d3db587c5f4d.brep",
+      "sha256": "de27fd83fe44fc76d33723d7636239bed94a9969cce3cf574eb0d3db587c5f4d",
+      "bytes": 6573,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/plane_case_body-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/de5715d7b282da23b144fbc812f646ed49d700aca31721f9bb0d81b0f81771e0.brep",
+      "sha256": "de5715d7b282da23b144fbc812f646ed49d700aca31721f9bb0d81b0f81771e0",
+      "bytes": 9780,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case25-unders/native-trials/runs/freecad-20261020T213324.122490/ordinary-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/de84cfa549852c3b6f583703ce07c2a6a341d4c36c9b25c0429dcbabb38461b5.brep",
+      "sha256": "de84cfa549852c3b6f583703ce07c2a6a341d4c36c9b25c0429dcbabb38461b5",
+      "bytes": 19376,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/longitudinal-r1-raw.brep",
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/longitudinal-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/df4ee40d259b3f718bb5d36556e0a57cdd391141ddca45904aa3f5181e2d3602.brep",
+      "sha256": "df4ee40d259b3f718bb5d36556e0a57cdd391141ddca45904aa3f5181e2d3602",
+      "bytes": 8722,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case23/runs/20261018T190055.610788-95799/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/dfa2b77e2d12f0aee133fb1f554255e8fe8da442ce82528ea26e6d4a09b25e53.brep",
+      "sha256": "dfa2b77e2d12f0aee133fb1f554255e8fe8da442ce82528ea26e6d4a09b25e53",
+      "bytes": 167632,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/part02/attempt02-r4-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b.brep",
+      "sha256": "e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b",
+      "bytes": 3244,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/attempt02-r3.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e0a6ad33358feaa1270e73556d4a433b7827d9eff5f5cc0be7870ce1286e0d83.brep",
+      "sha256": "e0a6ad33358feaa1270e73556d4a433b7827d9eff5f5cc0be7870ce1286e0d83",
+      "bytes": 17170,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case23-overlap/runs/20261020T130721.963124-34053/notch-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e3dec607825184ad85039dda67fbad89c98f77d787804b3b062b847a0c54327e.brep",
+      "sha256": "e3dec607825184ad85039dda67fbad89c98f77d787804b3b062b847a0c54327e",
+      "bytes": 4849,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-19_yshaped-1283.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e40c77fe3d0955b12c0d6a9920b270ded5f9b090dc6b344dbf220229f7966b54.brep",
+      "sha256": "e40c77fe3d0955b12c0d6a9920b270ded5f9b090dc6b344dbf220229f7966b54",
+      "bytes": 2188,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case21/runs/20261018T190054.172860-95518/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e4276eb00c34cc8684c8115449abb5c75632c93b372bffa33cc4cee6b997fd8f.brep",
+      "sha256": "e4276eb00c34cc8684c8115449abb5c75632c93b372bffa33cc4cee6b997fd8f",
+      "bytes": 8626,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case21-unders/runs/20261020T071045.110964-27895/right-stop-left-continue-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e43a891ee8a3735b405a39cd645876427bceb354f69d3d07401e227e56b55333.brep",
+      "sha256": "e43a891ee8a3735b405a39cd645876427bceb354f69d3d07401e227e56b55333",
+      "bytes": 31184,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/runs/20261020T063052.612688-23865/native-full-front-chain-r1.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e5889b372bb027f637e02b3e748dd370404d75e3e53bace52687075172c217c1.brep",
+      "sha256": "e5889b372bb027f637e02b3e748dd370404d75e3e53bace52687075172c217c1",
+      "bytes": 7058,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case07/runs/20261018T190115.679512-97349/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e5eae8dfb2575e170c42a8cfc25cb7c59f4a6dbb4354c298e4d5ebb1098d1775.brep",
+      "sha256": "e5eae8dfb2575e170c42a8cfc25cb7c59f4a6dbb4354c298e4d5ebb1098d1775",
+      "bytes": 4312,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case04/runs/20261018T190104.613726-96924/part03/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e6ee9b631a401c3fd02b81256b38705fe585d451e9815bbe710eb14a473736ff.brep",
+      "sha256": "e6ee9b631a401c3fd02b81256b38705fe585d451e9815bbe710eb14a473736ff",
+      "bytes": 6414,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case34-rho/runs/20261022T222101.606847/absolute-050.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/e80a12e0abd195eeb6ea986ed6488dcd4303bdf0878dc26f7f12c06840813cc6.brep",
+      "sha256": "e80a12e0abd195eeb6ea986ed6488dcd4303bdf0878dc26f7f12c06840813cc6",
+      "bytes": 6129,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case06/runs/20261018T190114.758162-97209/part01/attempt01-r12.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/eb5cf4637088c3b088214133d3b5fdfa747a6e0e3318c4058b96344038be919a.brep",
+      "sha256": "eb5cf4637088c3b088214133d3b5fdfa747a6e0e3318c4058b96344038be919a",
+      "bytes": 12965,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-26_vertex_blend-1291.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ec635d8d5f8dbc1bb071edcdd8409ec35f5285e44ed66d63b5f00818adf7b093.brep",
+      "sha256": "ec635d8d5f8dbc1bb071edcdd8409ec35f5285e44ed66d63b5f00818adf7b093",
+      "bytes": 11539,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case19/runs/20261018T190130.062863-98757/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ed2a3ceba0a3a768200d64e327ab7dc9f9aa192aa56e53c93543f3313ce4970a.brep",
+      "sha256": "ed2a3ceba0a3a768200d64e327ab7dc9f9aa192aa56e53c93543f3313ce4970a",
+      "bytes": 8230,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case20/runs/20261018T190343.624084-456/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ed44e7b0d57930bc90da20b6bf0ca5a954d2448a5e82fe06b2f720824b13bcea.brep",
+      "sha256": "ed44e7b0d57930bc90da20b6bf0ca5a954d2448a5e82fe06b2f720824b13bcea",
+      "bytes": 2682,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case33-variable/runs/20261022T214432.129909/asymmetric-two-law-result.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/eeac7c9d90bdeaf62415181ed79ab1fb18e30f3e9fd53024fef5150f94a80a27.brep",
+      "sha256": "eeac7c9d90bdeaf62415181ed79ab1fb18e30f3e9fd53024fef5150f94a80a27",
+      "bytes": 2569,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case13/runs/20261018T190125.062990-97917/part01/before.brep",
+        "history:outputs/manual-review/diagnostics/batch/case16/runs/20261018T190127.610804-98334/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ef11c823fe617de1f42e71d9cea91c341cb6b2ec769714ad8c1c42e59f520132.brep",
+      "sha256": "ef11c823fe617de1f42e71d9cea91c341cb6b2ec769714ad8c1c42e59f520132",
+      "bytes": 23977,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case31-faceted/runs/20261022T124446.966292-57080/B-original-blade.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/ef29a204a693c53d7892e04dc3ceb5806b54a17fce3022091a6b7b667f935838.brep",
+      "sha256": "ef29a204a693c53d7892e04dc3ceb5806b54a17fce3022091a6b7b667f935838",
+      "bytes": 3987,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-44_45_unders-1319.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+      "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+      "bytes": 1207,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f1c2479f0c3b1251d9fcbd8c234e87a8643dd31a57b5a588ba4d8d7e99df0bcb.brep",
+      "sha256": "f1c2479f0c3b1251d9fcbd8c234e87a8643dd31a57b5a588ba4d8d7e99df0bcb",
+      "bytes": 17853,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case12/runs/20261018T190405.676511-1240/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f32aa1e0d0852bce803edd16cb5c4ae67343462f19e4e4f5df6a8b1818b67c1a.brep",
+      "sha256": "f32aa1e0d0852bce803edd16cb5c4ae67343462f19e4e4f5df6a8b1818b67c1a",
+      "bytes": 1150,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case36/preprocess/extended-overlap-band/input.brep",
+        "history:outputs/manual-review/diagnostics/batch/case36/runs/20261018T190448.348298-3829/part01/before.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4.brep",
+      "sha256": "f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4",
+      "bytes": 3332,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/attempt03-r10.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f402de9fa815c9ce759206e4a788d238a8b1eff6107831c4be73ae83ec6ad505.brep",
+      "sha256": "f402de9fa815c9ce759206e4a788d238a8b1eff6107831c4be73ae83ec6ad505",
+      "bytes": 1699,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case33-variable/native-fitted-runs/20261022T215236.322088/operation-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f458ea095ad0b9e252f163ace73d328a9dd6ee03a4a9fb1f22332e7e8245679f.brep",
+      "sha256": "f458ea095ad0b9e252f163ace73d328a9dd6ee03a4a9fb1f22332e7e8245679f",
+      "bytes": 1423,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case34/runs/20261018T190447.286868-3518/part01-preprocessed.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f533f5fa264fc9305434ac22ff6022f7a8742de8da9d669db455b5dc7365f77a.brep",
+      "sha256": "f533f5fa264fc9305434ac22ff6022f7a8742de8da9d669db455b5dc7365f77a",
+      "bytes": 5036,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case26/runs/20261018T190058.848543-96218/part01/attempt02-r4.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f54a8beeddf1cc94bc9878c87674a625f870ac38c83e89f245e6269af3f57534.brep",
+      "sha256": "f54a8beeddf1cc94bc9878c87674a625f870ac38c83e89f245e6269af3f57534",
+      "bytes": 8702,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case23/runs/20261018T190055.610788-95799/part01/attempt03-r0p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f6641f829a28f43b1fc692a5d9b99324f00270740fd07914a2cce94c83818f4c.brep",
+      "sha256": "f6641f829a28f43b1fc692a5d9b99324f00270740fd07914a2cce94c83818f4c",
+      "bytes": 6288,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case25/runs/20261018T190058.052991-96079/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f6a7ea0de2520ac1babcf5ac451c2997c105af255ac5a8592c5f2551a6cff5ae.brep",
+      "sha256": "f6a7ea0de2520ac1babcf5ac451c2997c105af255ac5a8592c5f2551a6cff5ae",
+      "bytes": 9575,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/attempt02-r2-rejected.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f7973ee55692166b4a722af8c9e1725f6a69e78e4565525ed0d3eb8d5c68a039.brep",
+      "sha256": "f7973ee55692166b4a722af8c9e1725f6a69e78e4565525ed0d3eb8d5c68a039",
+      "bytes": 8440,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case18/runs/20261018T190342.616618-227/part03/attempt03-r2.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f96cc7bb7589b59d1fd316a2badf5cad5ae4c88dbb4d39fe4788f4bbcfb95931.brep",
+      "sha256": "f96cc7bb7589b59d1fd316a2badf5cad5ae4c88dbb4d39fe4788f4bbcfb95931",
+      "bytes": 9329,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case25-unders/native-trials/runs/freecad-20261020T213324.122490/ordinary-r16.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+      "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a",
+      "bytes": 8062,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/f9c3831e1f55eaa6869e8466e30740abf7ebb97c44be052c02a38a35a74a3bdc.brep",
+      "sha256": "f9c3831e1f55eaa6869e8466e30740abf7ebb97c44be052c02a38a35a74a3bdc",
+      "bytes": 9285,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case27/runs/20261018T190445.359891-2939/part02/attempt03-r0p5.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/fac8ad0cd7ee1dec15a1ebe1b1c3a82be8d33cbf06d7c040447c9c7960da1de6.brep",
+      "sha256": "fac8ad0cd7ee1dec15a1ebe1b1c3a82be8d33cbf06d7c040447c9c7960da1de6",
+      "bytes": 7569,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case17/runs/20261018T190128.286026-98474/successful-parts.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/fb6df30c31fc7c7740e4587a087fb3ef09691a00de554c9db41b30fd7afe5a3b.brep",
+      "sha256": "fb6df30c31fc7c7740e4587a087fb3ef09691a00de554c9db41b30fd7afe5a3b",
+      "bytes": 3621,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case18-capping/runs/20261019T125124.653104-17057/capping_sheet-input.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/fb9df56d267ce53ccfa3a91313945a8ab0693e52fc86dc7f43c5c76f10217761.brep",
+      "sha256": "fb9df56d267ce53ccfa3a91313945a8ab0693e52fc86dc7f43c5c76f10217761",
+      "bytes": 14071,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/batch/case09/runs/20261018T190116.545233-97629/part01/attempt01-r8.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/fbb1db106e7fa0074b9322943bc4c5b5b7c4a1a48d69106422f6246cb08be951.brep",
+      "sha256": "fbb1db106e7fa0074b9322943bc4c5b5b7c4a1a48d69106422f6246cb08be951",
+      "bytes": 3886,
+      "original_paths": [
+        "history:outputs/parasolid-preblend/models/73-32_edge_limit-1302.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/fcd568476d801bf9f18cd50d220701c025555a86c1df67faa682c030097398a4.brep",
+      "sha256": "fcd568476d801bf9f18cd50d220701c025555a86c1df67faa682c030097398a4",
+      "bytes": 9547,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case25-unders/native-trials/runs/freecad-20261020T213324.122490/ordinary-r10.brep"
+      ]
+    },
+    {
+      "path": "data/original-occ/fixtures/fdb9591f6f4bcbb0a3168eca03be69e5ec8efa1d57d7585885d9c218d9a9c912.brep",
+      "sha256": "fdb9591f6f4bcbb0a3168eca03be69e5ec8efa1d57d7585885d9c218d9a9c912",
+      "bytes": 31188,
+      "original_paths": [
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/full-front-chain-r1-raw.brep",
+        "history:outputs/manual-review/diagnostics/case20-patch/native-trials/runs/20261019T225952.157032/full-front-chain-r1.brep"
+      ]
+    }
+  ],
+  "history_documents": [
+    {
+      "path": "data/original-occ/history/007efbf2a16a6b661aaa44058f233cabd117de9aa6716e2614766db4c3f39330.json",
+      "original_sha256": "007efbf2a16a6b661aaa44058f233cabd117de9aa6716e2614766db4c3f39330",
+      "original_path": "history:outputs/manual-review/diagnostics/case35-g2/independent-check.json",
+      "sanitized_sha256": "560f330e261651aced5f84c07ac8783eab3a04ca4e0357b472e9c622304ce985"
+    },
+    {
+      "path": "data/original-occ/history/00a7885622b603d2562bb865794fc22da4c600e587787b156763b6c353722a75.json",
+      "original_sha256": "00a7885622b603d2562bb865794fc22da4c600e587787b156763b6c353722a75",
+      "original_path": "history:outputs/manual-review/diagnostics/case25-unders/prior-baseline-spec.json",
+      "sanitized_sha256": "339de6775808839bca5cee9370e24301cdd24e2d9f5a3e55fa5b940e08bd12b6"
+    },
+    {
+      "path": "data/original-occ/history/0232308ccbfa9c4bb738fdf42ff6e431eafd3882094caad8f26c6ccd45591783.json",
+      "original_sha256": "0232308ccbfa9c4bb738fdf42ff6e431eafd3882094caad8f26c6ccd45591783",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case31/preprocess/blade-floor-strip/evidence.json",
+      "sanitized_sha256": "1d9ca4cc4086dd95cf5149074b96bc4f8be3f46ace535e14edceeb8c83ce8b08"
+    },
+    {
+      "path": "data/original-occ/history/066fd7fc685ad5b4f081ea2bf8adfc893d2acca7334927c6ffa745fc167390c3.json",
+      "original_sha256": "066fd7fc685ad5b4f081ea2bf8adfc893d2acca7334927c6ffa745fc167390c3",
+      "original_path": "history:outputs/manual-review/case-specs/73-44_45_unders-1319.json",
+      "sanitized_sha256": "67ae6ce5b5d5094252c8a1679d5cf9c6ed2ae56b3147c094a5c595a7562718f1"
+    },
+    {
+      "path": "data/original-occ/history/06a824372689068342ea36c40df6566993e5c53a186a0f8378743e7c110fcec7.json",
+      "original_sha256": "06a824372689068342ea36c40df6566993e5c53a186a0f8378743e7c110fcec7",
+      "original_path": "history:outputs/manual-review/diagnostics/case34-rho/parameters.json",
+      "sanitized_sha256": "ac7e09e901ba63a6fd3da1ba97495ce5fe193ce813732f539eef24419acdc32b"
+    },
+    {
+      "path": "data/original-occ/history/07d372430c81127d7add722eb6df19f7b348108c3e7c73d6f65cf46fd6d14b1e.json",
+      "original_sha256": "07d372430c81127d7add722eb6df19f7b348108c3e7c73d6f65cf46fd6d14b1e",
+      "original_path": "history:outputs/manual-review/diagnostics/case31-faceted/verification.json",
+      "sanitized_sha256": "cf7bdd7ef136b5e3b70c7b16b622555beafb190721df411085b3551ebe3e46d3"
+    },
+    {
+      "path": "data/original-occ/history/09484599515487213e2c3ab7298e01d2059f5008da9815fa2ff306cbe178ada2.json",
+      "original_sha256": "09484599515487213e2c3ab7298e01d2059f5008da9815fa2ff306cbe178ada2",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case33/summary.json",
+      "sanitized_sha256": "a9eb948c61b059ebb40b14a11f3772a5434bed28e295d430a82e786a6a232758"
+    },
+    {
+      "path": "data/original-occ/history/0a30e0df79b37cc5e76d9b63ece825a69c2c66faf24ed5b9795e974aea0d1c06.json",
+      "original_sha256": "0a30e0df79b37cc5e76d9b63ece825a69c2c66faf24ed5b9795e974aea0d1c06",
+      "original_path": "history:outputs/manual-review/case-specs/73-38_trim_face_edge-1308.json",
+      "sanitized_sha256": "a6beaec8e5a848c50198e3ecde03892f5951f1ddb344ff89acf7e927b95c47a7"
+    },
+    {
+      "path": "data/original-occ/history/0cbe538431e7f3d86d098a3bf3356b9d9a2d31a8907932f5a377f304bc7a35f7.json",
+      "original_sha256": "0cbe538431e7f3d86d098a3bf3356b9d9a2d31a8907932f5a377f304bc7a35f7",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-03_to_05-1351.json",
+      "sanitized_sha256": "ae98eed8614ddbe573d3d20ecc7724cbf6ee1e27f241a6bcd35180613a81accc"
+    },
+    {
+      "path": "data/original-occ/history/0ea830ee77ecc8a401a1755bda9d56c9a660bc5aa0e0d083984699679d6b54a3.json",
+      "original_sha256": "0ea830ee77ecc8a401a1755bda9d56c9a660bc5aa0e0d083984699679d6b54a3",
+      "original_path": "history:outputs/manual-review/case-specs/73-30_tight_corner-1298.json",
+      "sanitized_sha256": "98d70ddc425ee05a151f6644681ffd2d591e76edbdcd1b36a7c244350d98b96e"
+    },
+    {
+      "path": "data/original-occ/history/0ece0bf89d19c30f6e459f8637bfbad0531b2086dc4d5e407f3198de535df303.json",
+      "original_sha256": "0ece0bf89d19c30f6e459f8637bfbad0531b2086dc4d5e407f3198de535df303",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case34/summary.json",
+      "sanitized_sha256": "883031b7b6296e0230086ef3b80786ea21d40d6acbb691c496aa7e3ac249442a"
+    },
+    {
+      "path": "data/original-occ/history/0f08f22e3bc1a658459a404dbdc05138bb4687b587d03145ac468552940d6d2a.json",
+      "original_sha256": "0f08f22e3bc1a658459a404dbdc05138bb4687b587d03145ac468552940d6d2a",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case30/preprocess/walls-1/evidence.json",
+      "sanitized_sha256": "9bcb84d1bcc84f8cb3007c86ae10d397ec6e3ba66d73fddf5ed7b52322c26900"
+    },
+    {
+      "path": "data/original-occ/history/104629ab9fac1dd20077f9c10106f27ec0f182fa5a2cb13b7ff78aa2597a567a.json",
+      "original_sha256": "104629ab9fac1dd20077f9c10106f27ec0f182fa5a2cb13b7ff78aa2597a567a",
+      "original_path": "history:outputs/manual-review/diagnostics/case33-variable/parameters.json",
+      "sanitized_sha256": "4e7883a80238879c41f7402867c24336f3c7f016131ec4088823c8365221e568"
+    },
+    {
+      "path": "data/original-occ/history/1331b9381d119171511fdc2ab8c54357d5e1c02f4ff5f35971e4174a055690f7.json",
+      "original_sha256": "1331b9381d119171511fdc2ab8c54357d5e1c02f4ff5f35971e4174a055690f7",
+      "original_path": "history:outputs/manual-review/case-specs/73-31_vertex_limit-1300.json",
+      "sanitized_sha256": "d67c47d5fc3af66300d8cb4e3e47e828a9bc6afeebad65fa355bcf9113bfb89a"
+    },
+    {
+      "path": "data/original-occ/history/140de285b1720b3c51382803e6743ca00b03f194ec65084eec1b417243f51083.json",
+      "original_sha256": "140de285b1720b3c51382803e6743ca00b03f194ec65084eec1b417243f51083",
+      "original_path": "history:outputs/manual-review/local-refinement/case11/independent-check.json",
+      "sanitized_sha256": "1090b584e4a878af5a6e0a518d0b65a051bb32455e373b80c1f98e4bdcc882e2"
+    },
+    {
+      "path": "data/original-occ/history/15df9e4b77cfe2aaeb24234d54ac150ae3a0a7f86de1935489bf519a8b83d466.json",
+      "original_sha256": "15df9e4b77cfe2aaeb24234d54ac150ae3a0a7f86de1935489bf519a8b83d466",
+      "original_path": "history:outputs/manual-review/diagnostics/case23-overlap/step-export-user-mode2.json",
+      "sanitized_sha256": "6732ba43852308c905d798db3f7355d574bd81b09120b85bfca148ec0d097c76"
+    },
+    {
+      "path": "data/original-occ/history/1802bd7cfe4feb760452a084e3903c75b266889b8bddd757977bb9d40f5a82e1.json",
+      "original_sha256": "1802bd7cfe4feb760452a084e3903c75b266889b8bddd757977bb9d40f5a82e1",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case17/summary.json",
+      "sanitized_sha256": "c06879ddbce9539c1bc9c602ccbcdad6dfe0d9bf1f9c4df310d0b4d1d6e825dd"
+    },
+    {
+      "path": "data/original-occ/history/19faf41b61e1a1e1da8b087f6afa7b4fa5615a1971c43d6121d4c5a277fe2f34.json",
+      "original_sha256": "19faf41b61e1a1e1da8b087f6afa7b4fa5615a1971c43d6121d4c5a277fe2f34",
+      "original_path": "history:outputs/manual-review/diagnostics/case33-variable/independent-check.json",
+      "sanitized_sha256": "066d634fc0e492be9c16f82fb87d78e5fae25bb82936d5a7b7b596d0f9439649"
+    },
+    {
+      "path": "data/original-occ/history/1a3ec1fabb864749b9983bb592a62be57a7cd0111278858e9e08b57ef6c422c6.json",
+      "original_sha256": "1a3ec1fabb864749b9983bb592a62be57a7cd0111278858e9e08b57ef6c422c6",
+      "original_path": "history:outputs/manual-review/diagnostics/case31-aligned-v2/parameters.json",
+      "sanitized_sha256": "c3d96b33dabc1575fc064a96bc3e76b91660b6fa268e463fd93f4e5760d3ccd0"
+    },
+    {
+      "path": "data/original-occ/history/1aad30a1a830f0e9727f8408893c219c0a8968a4fb3a74206df78af5ba6c27be.json",
+      "original_sha256": "1aad30a1a830f0e9727f8408893c219c0a8968a4fb3a74206df78af5ba6c27be",
+      "original_path": "history:outputs/manual-review/diagnostics/case34-rho/independent-check.json",
+      "sanitized_sha256": "7864b62859eaf8fc968c97068db9bceaec4c6479850a256e9314811cd0f2b21f"
+    },
+    {
+      "path": "data/original-occ/history/1c2bdb959f6620293b5fd43a4f733a29be3cf89142fc8b8f8fa95ec3a138e5a0.json",
+      "original_sha256": "1c2bdb959f6620293b5fd43a4f733a29be3cf89142fc8b8f8fa95ec3a138e5a0",
+      "original_path": "history:outputs/manual-review/diagnostics/case16-limits/summary.json",
+      "sanitized_sha256": "c3f89f96ada46550e894880071a52407786779b4e22d5fa632d4723f681fd0e2"
+    },
+    {
+      "path": "data/original-occ/history/1ed15a5177926927a1c6948c97fda4c5fbd26ca8d958012f7fbd13d3d69dbccd.json",
+      "original_sha256": "1ed15a5177926927a1c6948c97fda4c5fbd26ca8d958012f7fbd13d3d69dbccd",
+      "original_path": "history:outputs/manual-review/case-specs/73-40_under_topol-1310.json",
+      "sanitized_sha256": "042cb8197f40efaac18206c0dc88d7c5fbb198acb46ab5030d38137a95c2df28"
+    },
+    {
+      "path": "data/original-occ/history/1ee176fee3744a2af60436cab53f080752f7e2c6fd2b53cf9ba238357562609d.json",
+      "original_sha256": "1ee176fee3744a2af60436cab53f080752f7e2c6fd2b53cf9ba238357562609d",
+      "original_path": "history:outputs/manual-review/diagnostics/case35-g2/summary.json",
+      "sanitized_sha256": "c05c15d3e95ad93549e0f41a0c3bcf5c43615ebe92b877632aaf8bf4e680df0b"
+    },
+    {
+      "path": "data/original-occ/history/227e316f62b344f75c9333bef2b5387dc765836d26ac0c6dac2f2db337ecfe57.json",
+      "original_sha256": "227e316f62b344f75c9333bef2b5387dc765836d26ac0c6dac2f2db337ecfe57",
+      "original_path": "history:outputs/manual-review/diagnostics/case21-unders/cap-details.json",
+      "sanitized_sha256": "cc918c1de84e51415da70ae45a1580fc9b38f8d56499ea9a983a7c94ebccdf59"
+    },
+    {
+      "path": "data/original-occ/history/231dffca1c5d09cdb80590d4b3952d12f5326d18eb4f9c2737909e8411d2e538.json",
+      "original_sha256": "231dffca1c5d09cdb80590d4b3952d12f5326d18eb4f9c2737909e8411d2e538",
+      "original_path": "history:outputs/manual-review/diagnostics/case18-capping/independent-step-default-reexport.json",
+      "sanitized_sha256": "bca2c2833199068d0d2b6d3118403235e5b0a5e178f29eefbb55c61f94dcbb67"
+    },
+    {
+      "path": "data/original-occ/history/241501daa2421e8519892bd1a5747d020f60a1351e6019c562aa8e2a09945aee.json",
+      "original_sha256": "241501daa2421e8519892bd1a5747d020f60a1351e6019c562aa8e2a09945aee",
+      "original_path": "history:outputs/manual-review/case-specs/73-29_self_int_repair-1296.json",
+      "sanitized_sha256": "76f9935082b69b649d19d3d6c4cecc16d4210fd67e3445b706c2fed273ec5ba5"
+    },
+    {
+      "path": "data/original-occ/history/2622ab7c39e84b3c9c6f1dad45731b57c591f8a3f739f99b6600637edbbfa1ad.json",
+      "original_sha256": "2622ab7c39e84b3c9c6f1dad45731b57c591f8a3f739f99b6600637edbbfa1ad",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case30/summary.json",
+      "sanitized_sha256": "493eeb487f0337a14625bc3a7b9b0624959986eadc77b1428444faf3f9d37f67"
+    },
+    {
+      "path": "data/original-occ/history/295b0bb613d7cb36b987029867076416a4dea749b58f1ee293b6128de878c88f.json",
+      "original_sha256": "295b0bb613d7cb36b987029867076416a4dea749b58f1ee293b6128de878c88f",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+      "sanitized_sha256": "289c504d9480130b9df779b9d7ba0e9c68250b6623549befffa3ecfd190ac015"
+    },
+    {
+      "path": "data/original-occ/history/2f5af624fb795af8b09f03ff2084ddfa10a5156e30eb83798a94620cfbb70f98.json",
+      "original_sha256": "2f5af624fb795af8b09f03ff2084ddfa10a5156e30eb83798a94620cfbb70f98",
+      "original_path": "history:outputs/manual-review/diagnostics/case31-aligned-v2/section-planes.json",
+      "sanitized_sha256": "26afa62fd076b405bd5822040021298cebaff99f0335071a90e18778e18b20e2"
+    },
+    {
+      "path": "data/original-occ/history/30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc.json",
+      "original_sha256": "30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case01/summary.json",
+      "sanitized_sha256": "1c8132432413cbd442473be179f2cd6dcba3fc39d91a33fad361415e5ac651fb"
+    },
+    {
+      "path": "data/original-occ/history/3c31e937d10fc9c8a89d5cbd99f56523888947a25cb690159ab75b1519be1126.json",
+      "original_sha256": "3c31e937d10fc9c8a89d5cbd99f56523888947a25cb690159ab75b1519be1126",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case13/summary.json",
+      "sanitized_sha256": "fbe6f1355151ce0ad0af6f4479795af0590bc100c50a45fdf32ef40911987540"
+    },
+    {
+      "path": "data/original-occ/history/3e2257d795d71c108611b634fe45376d4df2800dc260c430fef48aa07755e85f.json",
+      "original_sha256": "3e2257d795d71c108611b634fe45376d4df2800dc260c430fef48aa07755e85f",
+      "original_path": "history:outputs/manual-review/case-specs/73-28_ordering-1293.json",
+      "sanitized_sha256": "13e8128c9e18c3ceef10acd96b9c023a96e36633e1afa6c397622785d61dd44f"
+    },
+    {
+      "path": "data/original-occ/history/3e53faf94cefd2383db75ff00864eacdbaf4367a5b264095c95f737a3e09a1f8.json",
+      "original_sha256": "3e53faf94cefd2383db75ff00864eacdbaf4367a5b264095c95f737a3e09a1f8",
+      "original_path": "history:outputs/manual-review/case-specs/73-17_cliff_edge-1281.json",
+      "sanitized_sha256": "bad6b615b8485ae20abeade04cbbf71636b6e2bc0848dfcf03e78e821056a13a"
+    },
+    {
+      "path": "data/original-occ/history/3ee3a091b88027046bd7c6762c1312b1e1eca7a50d7cbb280a5000f251fcc3aa.json",
+      "original_sha256": "3ee3a091b88027046bd7c6762c1312b1e1eca7a50d7cbb280a5000f251fcc3aa",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-09_const_vs_variable-1360.json",
+      "sanitized_sha256": "aad48ee51e97032b88b011ef4932083f16e76e576d1896eee5814b9608541b9d"
+    },
+    {
+      "path": "data/original-occ/history/405b97ff99e14fa294b5ed6c56e510f71ef2ca86f8878d95d09d9bd59592ead6.json",
+      "original_sha256": "405b97ff99e14fa294b5ed6c56e510f71ef2ca86f8878d95d09d9bd59592ead6",
+      "original_path": "history:outputs/manual-review/case-specs/73-39_patch-1309.json",
+      "sanitized_sha256": "63df76a1c6ca296093da92f5d74627547d4fa73888b793f665982498832fba32"
+    },
+    {
+      "path": "data/original-occ/history/41f041224dbc80d5a1982694aebd2fc667d01d8d941e6a8702972b39d648a1da.json",
+      "original_sha256": "41f041224dbc80d5a1982694aebd2fc667d01d8d941e6a8702972b39d648a1da",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case33/preprocess/walls-1/evidence.json",
+      "sanitized_sha256": "43e49c7df29856a7ca93562b0329063c7a44ed421ad40a0f9b0c5256af4f4eec"
+    },
+    {
+      "path": "data/original-occ/history/4282786b958e20f27824a35f29b32d3a43dddf2dfd0e6ceaa6e4529a62671599.json",
+      "original_sha256": "4282786b958e20f27824a35f29b32d3a43dddf2dfd0e6ceaa6e4529a62671599",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case20/summary.json",
+      "sanitized_sha256": "07b232bb9807314eb913f45b73d0106a68555488f8a7d52c8bc224fe446646fc"
+    },
+    {
+      "path": "data/original-occ/history/44ee0183c8f8593793124dd6c3e9cefbc1c4b306c547e1d60d99b5d06c4b32c5.json",
+      "original_sha256": "44ee0183c8f8593793124dd6c3e9cefbc1c4b306c547e1d60d99b5d06c4b32c5",
+      "original_path": "history:outputs/manual-review/diagnostics/case21-unders/independent-check.json",
+      "sanitized_sha256": "4c9369057d0ff3325dc857d6ae096340ee45b01deedfa4c55d49a52720dd237a"
+    },
+    {
+      "path": "data/original-occ/history/49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188.json",
+      "original_sha256": "49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case28/summary.json",
+      "sanitized_sha256": "97a6950cfe24f9517035081e819ffc1ecfc25cb485297457785286bb51c3f3ee"
+    },
+    {
+      "path": "data/original-occ/history/4ae7dbda88863e1f128d71a5d9b43793aa7f499891874091217b0d3f9b47f5f4.json",
+      "original_sha256": "4ae7dbda88863e1f128d71a5d9b43793aa7f499891874091217b0d3f9b47f5f4",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case10/summary.json",
+      "sanitized_sha256": "3cde968c30e5c5ae2795c1ffaf1ab79e66f8f3c293c8c9b334861d1784515584"
+    },
+    {
+      "path": "data/original-occ/history/4e63c40f51e03df2beeffe2839d3dc544083aa4fd800b27cdfad42e527794748.json",
+      "original_sha256": "4e63c40f51e03df2beeffe2839d3dc544083aa4fd800b27cdfad42e527794748",
+      "original_path": "history:outputs/manual-review/diagnostics/case34-rho/summary.json",
+      "sanitized_sha256": "9e2439315d2448dee17300d4775617af71cd6c0883fb3b822169243ec333cc09"
+    },
+    {
+      "path": "data/original-occ/history/4f7219f2042cf655ebe7b1023fa938becc97e6c2ebd75b3fc6975a1cb6e084d6.json",
+      "original_sha256": "4f7219f2042cf655ebe7b1023fa938becc97e6c2ebd75b3fc6975a1cb6e084d6",
+      "original_path": "history:outputs/manual-review/diagnostics/case24-oblique/independent-input-check.json",
+      "sanitized_sha256": "fed8f166f2c7d3d00116d8af99d9c99d1fd80ba9e2dd7534cdeb5b7771a1d367"
+    },
+    {
+      "path": "data/original-occ/history/512ad04df5f368a8586e166afa113d82e67d5e6681a7e4c9d6dd6ee095a74048.json",
+      "original_sha256": "512ad04df5f368a8586e166afa113d82e67d5e6681a7e4c9d6dd6ee095a74048",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-05_planes-1356.json",
+      "sanitized_sha256": "f0372a2c2e540bc54520d487daa3943a73dde1abd0d352a880d7009b82d033ff"
+    },
+    {
+      "path": "data/original-occ/history/5210ab57709f6737f709a52119a55f99668ed14d7c51a4a82bdb0f51133e8f68.json",
+      "original_sha256": "5210ab57709f6737f709a52119a55f99668ed14d7c51a4a82bdb0f51133e8f68",
+      "original_path": "history:outputs/manual-review/diagnostics/case31-aligned-v2/native-summary.json",
+      "sanitized_sha256": "58a9d4881fb81c371fad15949df82b1b4efe8753f701ba12f959cb8f3a0b6ebc"
+    },
+    {
+      "path": "data/original-occ/history/5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53.json",
+      "original_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+      "sanitized_sha256": "5c10dc83e5b387d1955e229a1eb85557207547df42dfa526743f44a8d50f025f"
+    },
+    {
+      "path": "data/original-occ/history/553244a171e41be68958ed47a1bb29c5839925132a3a7b0baad1b159aedff900.json",
+      "original_sha256": "553244a171e41be68958ed47a1bb29c5839925132a3a7b0baad1b159aedff900",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case27/preprocess/walls-1/evidence.json",
+      "sanitized_sha256": "d9f3099c60aeb9bb7c502066a4ae90ca348a29c18603d28e3eb080ab2358fbf9"
+    },
+    {
+      "path": "data/original-occ/history/562e07b7430311a7605043f5ee1c84aefbfb035955f5d7f61095575e8137c6ea.json",
+      "original_sha256": "562e07b7430311a7605043f5ee1c84aefbfb035955f5d7f61095575e8137c6ea",
+      "original_path": "history:outputs/manual-review/case-specs/73-41_laminar-1312.json",
+      "sanitized_sha256": "19ad3a0a9700ebe7b89937be192bfa3a3aa797b5a3c1b295612c704a5e3da084"
+    },
+    {
+      "path": "data/original-occ/history/57953c7b7eee4c49ce1dfd7550e5079ff83967d91caf5b0d9a1af4e72fa3968d.json",
+      "original_sha256": "57953c7b7eee4c49ce1dfd7550e5079ff83967d91caf5b0d9a1af4e72fa3968d",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-30_trim-1389.json",
+      "sanitized_sha256": "fbeaa253cc7074e71a3c6a2930e2c65d971562c7a7ee3d73647c0dcb1c551e92"
+    },
+    {
+      "path": "data/original-occ/history/57e5db03256c9ade0ada838d1ac0471e670cca8922afeadd54e43626ffeb7b0b.json",
+      "original_sha256": "57e5db03256c9ade0ada838d1ac0471e670cca8922afeadd54e43626ffeb7b0b",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+      "sanitized_sha256": "b4a866cac955f19a48a4dcd4c17cd32f961ae38a1600269b8201ce7a0c52ee24"
+    },
+    {
+      "path": "data/original-occ/history/5eb5d5cb502e05348110a00c7be77b98112f1632657a5ce01fa78765129ade62.json",
+      "original_sha256": "5eb5d5cb502e05348110a00c7be77b98112f1632657a5ce01fa78765129ade62",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/independent-r4-check.json",
+      "sanitized_sha256": "5551f21fc9f858d4c2f3698054b932e8b4110cedb611df70c101b69a8aac1e48"
+    },
+    {
+      "path": "data/original-occ/history/5edbfe5c0b410e58cf8ceb5b8baf973b4ae48fc8f04f93a6e17cf59534d672eb.json",
+      "original_sha256": "5edbfe5c0b410e58cf8ceb5b8baf973b4ae48fc8f04f93a6e17cf59534d672eb",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case09/summary.json",
+      "sanitized_sha256": "b9c62c6152d78007bcdf28236b85bc990d2cd39415d083cc57680fe20db2d070"
+    },
+    {
+      "path": "data/original-occ/history/61b774dcce4aa2bb3fd06bcf2f1ce4746e50346ad30fb86f912d035c61b9c5e2.json",
+      "original_sha256": "61b774dcce4aa2bb3fd06bcf2f1ce4746e50346ad30fb86f912d035c61b9c5e2",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case14/summary.json",
+      "sanitized_sha256": "cad8f1cd9620b7854a125210fabd4474619cd125113628eaafd928029003e259"
+    },
+    {
+      "path": "data/original-occ/history/6a4bd67b33b527377e3ef04624351dee66fa0754842cc6cb49cbd9411574f4c5.json",
+      "original_sha256": "6a4bd67b33b527377e3ef04624351dee66fa0754842cc6cb49cbd9411574f4c5",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case25/summary.json",
+      "sanitized_sha256": "634801d563ce9d3d269ed462d116dc7d8b3e5234733b426620a93873c1dd7cc3"
+    },
+    {
+      "path": "data/original-occ/history/6afb4f835f8c3115633e1a828eb08f10d15f11ac1d1aebfb3344f977faceafd5.json",
+      "original_sha256": "6afb4f835f8c3115633e1a828eb08f10d15f11ac1d1aebfb3344f977faceafd5",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case23/summary.json",
+      "sanitized_sha256": "cb60664238cd78e798468b2f731029ddec9fdfedb5aaab717196ad4d006eaf53"
+    },
+    {
+      "path": "data/original-occ/history/6c0346c7f6ff80394d4cd27cb6859257ff1f5136554687df0119efbe0fc475e3.json",
+      "original_sha256": "6c0346c7f6ff80394d4cd27cb6859257ff1f5136554687df0119efbe0fc475e3",
+      "original_path": "history:outputs/manual-review/case-specs/73-24_preserve_hole-1289.json",
+      "sanitized_sha256": "73c0eb37d79b18f01f4bd4b48286e45b0eb6bfb6c52ec197ed207182b0a2567e"
+    },
+    {
+      "path": "data/original-occ/history/6cd2598947b0b65cd14bb3f4fc1726c61bb6d688d998ea55b57fc3a0a98173a6.json",
+      "original_sha256": "6cd2598947b0b65cd14bb3f4fc1726c61bb6d688d998ea55b57fc3a0a98173a6",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-05_planes-1355.json",
+      "sanitized_sha256": "0a03c0fb107bbdd6beb21d168e84fbe07b156c74975deaf82b3686da58ff3c2f"
+    },
+    {
+      "path": "data/original-occ/history/6dce575903ad3bfafebad667ed16b719d299bf9904abc0c11402b0ffd3540d05.json",
+      "original_sha256": "6dce575903ad3bfafebad667ed16b719d299bf9904abc0c11402b0ffd3540d05",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case15/summary.json",
+      "sanitized_sha256": "2e07d97daa9fa876e85e6edc2462b1795e3b5504e38650f2f7ccbce9afa316f4"
+    },
+    {
+      "path": "data/original-occ/history/6e23cc7e62c07486c7dce45681fb6d19d1785a88ec566c0f5a994d3c040ad17d.json",
+      "original_sha256": "6e23cc7e62c07486c7dce45681fb6d19d1785a88ec566c0f5a994d3c040ad17d",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case03/summary.json",
+      "sanitized_sha256": "80d9093872d294124a94c95d4274c98c3cb6912e99ac6d894bcd837c85b41146"
+    },
+    {
+      "path": "data/original-occ/history/6e817c91e210dba6b52c4167d3ec7eaaa474fba3b90283e476e5b92a6b628597.json",
+      "original_sha256": "6e817c91e210dba6b52c4167d3ec7eaaa474fba3b90283e476e5b92a6b628597",
+      "original_path": "history:outputs/manual-review/case-specs/73-26_vertex_blend-1291.json",
+      "sanitized_sha256": "de0c23b9005e9db5d3b49c82e97fa5f1484af6989ef9be2e8058d952cc14b918"
+    },
+    {
+      "path": "data/original-occ/history/6fc3176b99f8fc343ec5a68b59fe9e175f0b66b2f447cb65275f6485e7f43be0.json",
+      "original_sha256": "6fc3176b99f8fc343ec5a68b59fe9e175f0b66b2f447cb65275f6485e7f43be0",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case30/preprocess/walls-2/evidence.json",
+      "sanitized_sha256": "7924b85150194da6536654485d0a202b0e1c60bcca3ab60ab587f6831face56a"
+    },
+    {
+      "path": "data/original-occ/history/72b7c253a384c1aaf8ab23f293b2a2303b8819c0c5c25eaf827cfae7532d6f72.json",
+      "original_sha256": "72b7c253a384c1aaf8ab23f293b2a2303b8819c0c5c25eaf827cfae7532d6f72",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-28_softness-1384.json",
+      "sanitized_sha256": "186a0bfde58d6c591ce1ebf0030a32f7f2efcbf17f0be9bd1ece91703a244316"
+    },
+    {
+      "path": "data/original-occ/history/72e97954a870d9e232e006769003cf8f707fb5a1e97f34ed0799c06c7df9e962.json",
+      "original_sha256": "72e97954a870d9e232e006769003cf8f707fb5a1e97f34ed0799c06c7df9e962",
+      "original_path": "history:outputs/manual-review/diagnostics/case19-trim/independent-check.json",
+      "sanitized_sha256": "dd74d1cba7c80eb07f22ce3bcc4b68cf0d0020b03298b6e384673c221713aa6b"
+    },
+    {
+      "path": "data/original-occ/history/7563d454c2bee62fb1a2055121d70fb5beb4bcd69d3a9b4722a629d698d8a668.json",
+      "original_sha256": "7563d454c2bee62fb1a2055121d70fb5beb4bcd69d3a9b4722a629d698d8a668",
+      "original_path": "history:outputs/manual-review/diagnostics/case31-aligned-v2/independent-input-check.json",
+      "sanitized_sha256": "aa68ca5bf54a7f5d7687de0b149d2f9705dd2cee19eb2f6cce78b6a602262403"
+    },
+    {
+      "path": "data/original-occ/history/757c6f2a781b537eb923214538b9c3e36bd6f05926c1923d439310acdf93df8f.json",
+      "original_sha256": "757c6f2a781b537eb923214538b9c3e36bd6f05926c1923d439310acdf93df8f",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-03_to_05-1353.json",
+      "sanitized_sha256": "6b7af656f725b8c5d880f9f004364d787acc7ab80c68ce7b22efbe07871d467c"
+    },
+    {
+      "path": "data/original-occ/history/759d646501b10692502f31f281bb7d5b6048eb1d2dd06b70d6f7d759139e3ccf.json",
+      "original_sha256": "759d646501b10692502f31f281bb7d5b6048eb1d2dd06b70d6f7d759139e3ccf",
+      "original_path": "history:outputs/manual-review/diagnostics/case25-unders/native-trials/history-latest.json",
+      "sanitized_sha256": "7221a571929a2dfe9fa7e53ddd0dcf5dad02ae56e6065dc8e03ba9fbac50969e"
+    },
+    {
+      "path": "data/original-occ/history/77fb194eede51b8e093cd6f1afa2758d61504198cac75bba41c17a8009b60750.json",
+      "original_sha256": "77fb194eede51b8e093cd6f1afa2758d61504198cac75bba41c17a8009b60750",
+      "original_path": "history:outputs/manual-review/diagnostics/case21-unders/summary.json",
+      "sanitized_sha256": "d0256e79e79d8d27c81b9cc06c870d5a757e8879e18070e05c107c7683f8bf55"
+    },
+    {
+      "path": "data/original-occ/history/78907665762219e313e8db3a7201c7e2c80dc945b472129d529994630a4e9182.json",
+      "original_sha256": "78907665762219e313e8db3a7201c7e2c80dc945b472129d529994630a4e9182",
+      "original_path": "history:outputs/manual-review/diagnostics/case18-capping/summary.json",
+      "sanitized_sha256": "e9a801b9aa9d964beea077effa97cc3ea44ca0d92f2c400aeca1499c3d729462"
+    },
+    {
+      "path": "data/original-occ/history/7ae0081d16b8223644dab5a974a4f1665382857e8ba2d891b0a14f327c231e68.json",
+      "original_sha256": "7ae0081d16b8223644dab5a974a4f1665382857e8ba2d891b0a14f327c231e68",
+      "original_path": "history:outputs/manual-review/diagnostics/case20-patch/native-api-audit.json",
+      "sanitized_sha256": "d932671fdfb24d929ab8fef48879110c960ff95c6e4cd1fd80fa137bc4ae5d61"
+    },
+    {
+      "path": "data/original-occ/history/7aead3212fb9b075ba5ea1d4793420480ccf3e135cdbf5fb0fd0b796880a207d.json",
+      "original_sha256": "7aead3212fb9b075ba5ea1d4793420480ccf3e135cdbf5fb0fd0b796880a207d",
+      "original_path": "history:outputs/manual-review/case-specs/73-32_edge_limit-1302.json",
+      "sanitized_sha256": "c033edb9d27716554c3df7f0eace103f5d6c236887c91d897e2d1daf672a9fb5"
+    },
+    {
+      "path": "data/original-occ/history/7c57b867a26240c4d2a0cc7f5b61d802590dba9bc2b67260763deb5c11e1c46f.json",
+      "original_sha256": "7c57b867a26240c4d2a0cc7f5b61d802590dba9bc2b67260763deb5c11e1c46f",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case24/summary.json",
+      "sanitized_sha256": "ad760fb32ffd4bb257a7adebe612619fea6a6c5d8a4309f99082082a3b0abd83"
+    },
+    {
+      "path": "data/original-occ/history/8114ce4f59cfc70eaeacf01cce0ed97f76d73b8653fe83700f97731ed15175e5.json",
+      "original_sha256": "8114ce4f59cfc70eaeacf01cce0ed97f76d73b8653fe83700f97731ed15175e5",
+      "original_path": "history:outputs/manual-review/diagnostics/case25-unders/native-trials/geometry-checks.json",
+      "sanitized_sha256": "96b274755e97c9cb97aeb40b49bae1277830f2f0c8442472cbb46c3b595fe7e3"
+    },
+    {
+      "path": "data/original-occ/history/841ec70ef4c7ed0921aa6fa7ac7fb7d0e2639ab6e89f2c7bd5b920f128d69a86.json",
+      "original_sha256": "841ec70ef4c7ed0921aa6fa7ac7fb7d0e2639ab6e89f2c7bd5b920f128d69a86",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case36/preprocess/extended-overlap-band/evidence.json",
+      "sanitized_sha256": "58d9281f3fc70c63f3cd6bf91c537d8500e4e7f46cb199bfc93e6711b862512c"
+    },
+    {
+      "path": "data/original-occ/history/85690195b147d984b68335670e1588e9c0c38ca408ccf46028cb86a0cc4f7a1a.json",
+      "original_sha256": "85690195b147d984b68335670e1588e9c0c38ca408ccf46028cb86a0cc4f7a1a",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case19/summary.json",
+      "sanitized_sha256": "0ed34eab12bde607afab526eb3b6103d154ff636c8eac0863f77c425f34ad0f3"
+    },
+    {
+      "path": "data/original-occ/history/879d92091e80cfdfdd7b80066639f0508b7daa63fd72d02dad1c92d12ac78285.json",
+      "original_sha256": "879d92091e80cfdfdd7b80066639f0508b7daa63fd72d02dad1c92d12ac78285",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case02/summary.json",
+      "sanitized_sha256": "0d1b4b3bf752be67f2e8666227ebc84f0441341a012d6f8d21016c6c0425a392"
+    },
+    {
+      "path": "data/original-occ/history/88ff75484fd8c70a1961f6a51b7a0994d42a3b2d1ad064a25d64943dd7ddeede.json",
+      "original_sha256": "88ff75484fd8c70a1961f6a51b7a0994d42a3b2d1ad064a25d64943dd7ddeede",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case31/summary.json",
+      "sanitized_sha256": "cac95ccda42a972a13e5fb475d0d1478ab401da81ede342bba06745b8c25ab8f"
+    },
+    {
+      "path": "data/original-occ/history/899ed17a59f5a4a8b433c04a5bbe0a9402a110cc190917c3d646bdf458634638.json",
+      "original_sha256": "899ed17a59f5a4a8b433c04a5bbe0a9402a110cc190917c3d646bdf458634638",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case27/summary.json",
+      "sanitized_sha256": "cb8e0c657dcdc33d4cc063c70f3fac839b809e2300674f74d4803eedcdeb40e4"
+    },
+    {
+      "path": "data/original-occ/history/8b0bc1cbd79304de52c4b44a583b2bbf7a14b8bb906952a1f5db54db43a278d0.json",
+      "original_sha256": "8b0bc1cbd79304de52c4b44a583b2bbf7a14b8bb906952a1f5db54db43a278d0",
+      "original_path": "history:outputs/manual-review/case-specs/73-23_setback-1286.json",
+      "sanitized_sha256": "d11d9094412fa34691f98dd15ff0b5b68f1a7867e7b4294a06d850a08168af68"
+    },
+    {
+      "path": "data/original-occ/history/8b1640201c3829fe7c2836a3527922c4609c24cca8c2b9c3db6116abd967c103.json",
+      "original_sha256": "8b1640201c3829fe7c2836a3527922c4609c24cca8c2b9c3db6116abd967c103",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case05/summary.json",
+      "sanitized_sha256": "16c232ec6646a3373cfda87d533f9006666829d6ed64b15162086ec66b5694c7"
+    },
+    {
+      "path": "data/original-occ/history/8c4b0b59c6c2f64a4f2b263b0e150ca9e6d3c00adddb75ea5c9b8c00e06b47e9.json",
+      "original_sha256": "8c4b0b59c6c2f64a4f2b263b0e150ca9e6d3c00adddb75ea5c9b8c00e06b47e9",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case27/preprocess/boss-floor-skin/evidence.json",
+      "sanitized_sha256": "da9061f03317a892a36f4795825a60bf8b5887fcc7d10ecc7a73d27d4ee1b2e9"
+    },
+    {
+      "path": "data/original-occ/history/940f9a033ec9b20efe320c932da1467a37058053f2a606851b3626fc4a0e3d8d.json",
+      "original_sha256": "940f9a033ec9b20efe320c932da1467a37058053f2a606851b3626fc4a0e3d8d",
+      "original_path": "history:outputs/manual-review/diagnostics/case25-unders/verification.json",
+      "sanitized_sha256": "85e4ffe53ca432230b4ebc4cf146ad975bc0b555258e9ede6ea9bceffeed0b0b"
+    },
+    {
+      "path": "data/original-occ/history/96ce8d7a1530948c86538987e542cd60d88e9d036b3499008ea0eac5c3425a60.json",
+      "original_sha256": "96ce8d7a1530948c86538987e542cd60d88e9d036b3499008ea0eac5c3425a60",
+      "original_path": "history:outputs/manual-review/diagnostics/case23-overlap/independent-check.json",
+      "sanitized_sha256": "063533c74a170dda73cfa67bca25a36d5d264081dac6aba58080d3675ea53603"
+    },
+    {
+      "path": "data/original-occ/history/9c61fa51dc42779d35be80f01aab64fe6566c22ad1f0ca3e04fbe6d627784aea.json",
+      "original_sha256": "9c61fa51dc42779d35be80f01aab64fe6566c22ad1f0ca3e04fbe6d627784aea",
+      "original_path": "history:outputs/manual-review/diagnostics/case08/demo-geometry-check.json",
+      "sanitized_sha256": "66cecbcbeedfa89ad44d772ec5d65d0b29f07ba7384ca6edc2ea5ee89343a877"
+    },
+    {
+      "path": "data/original-occ/history/9cb2c9ea4f3d18138c3e70ee76daec1de03dd146380a51397f53018572a31d7c.json",
+      "original_sha256": "9cb2c9ea4f3d18138c3e70ee76daec1de03dd146380a51397f53018572a31d7c",
+      "original_path": "history:outputs/manual-review/diagnostics/case23-overlap/prior-baseline-spec.json",
+      "sanitized_sha256": "9a5a2f89ecc67c335f7ec109d8e4e759f03466288272a5563b662d5a2db55928"
+    },
+    {
+      "path": "data/original-occ/history/a01aaffc556c0ca6803d324b63a7196f8a4c9201f4bc7c453658ed6225746231.json",
+      "original_sha256": "a01aaffc556c0ca6803d324b63a7196f8a4c9201f4bc7c453658ed6225746231",
+      "original_path": "history:outputs/manual-review/diagnostics/case35-g2/parameters.json",
+      "sanitized_sha256": "f84987b4b52761dfddc032e9aaa55923c01253b8423cacdfee7898318c771c93"
+    },
+    {
+      "path": "data/original-occ/history/a087ee3d77b0871c5f0f044eebe4eea1209cecd15b41b6cd992652c6ca8b5528.json",
+      "original_sha256": "a087ee3d77b0871c5f0f044eebe4eea1209cecd15b41b6cd992652c6ca8b5528",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case04/summary.json",
+      "sanitized_sha256": "d98f1901a4f074c8683de23f98b658787edfdc533ea98515cdfd28579a0b38ae"
+    },
+    {
+      "path": "data/original-occ/history/a393e40cf784ce028455d9112f8ef68a9956e1d31be81abc8776d8ee1976d115.json",
+      "original_sha256": "a393e40cf784ce028455d9112f8ef68a9956e1d31be81abc8776d8ee1976d115",
+      "original_path": "history:outputs/manual-review/diagnostics/case19-trim/summary.json",
+      "sanitized_sha256": "788531a50c4a95d0c5827fa88ca0417b5d4b31cacca133ed2aee12c36a5c0170"
+    },
+    {
+      "path": "data/original-occ/history/a3eb4be0b3a616e4ddbb5a5060e0609c77cd7ceba71297d81501bd4a47fe7a80.json",
+      "original_sha256": "a3eb4be0b3a616e4ddbb5a5060e0609c77cd7ceba71297d81501bd4a47fe7a80",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case12/summary.json",
+      "sanitized_sha256": "2c3de75582673454fa776a36f1b6e57ddfd1da55271f8cff2507b5d9271c4ec7"
+    },
+    {
+      "path": "data/original-occ/history/a5b271e4e99109a4777785a5ff17af527816c9fcfea50f2ddc9cfa47820bc200.json",
+      "original_sha256": "a5b271e4e99109a4777785a5ff17af527816c9fcfea50f2ddc9cfa47820bc200",
+      "original_path": "history:outputs/manual-review/case-specs/73-20_y_combos-1284.json",
+      "sanitized_sha256": "e54cf636f133a21021b5897ba918e54bc05266c788ee16e8c61aba393b1fa853"
+    },
+    {
+      "path": "data/original-occ/history/a5c291ccf89af3867ee7c818015ce410f6482fd25014588b6e03386f6cb7e6a4.json",
+      "original_sha256": "a5c291ccf89af3867ee7c818015ce410f6482fd25014588b6e03386f6cb7e6a4",
+      "original_path": "history:outputs/manual-review/case-specs/73-33_overlap_limit-1304.json",
+      "sanitized_sha256": "3950b18dfe519611bf4a5b021b30f51ab5f8ac9403f71ac8573c1c7d9a78fd94"
+    },
+    {
+      "path": "data/original-occ/history/a7fd58756ef4dbb3e8bf4b87aa0977204807a1c2b01e088928010b69cff4f99c.json",
+      "original_sha256": "a7fd58756ef4dbb3e8bf4b87aa0977204807a1c2b01e088928010b69cff4f99c",
+      "original_path": "history:outputs/manual-review/case-specs/73-34_combine_limits-1305.json",
+      "sanitized_sha256": "ab4c4d496f42b19c55fb205814106f9afcb63b503e05317e290406d7601a7c35"
+    },
+    {
+      "path": "data/original-occ/history/a8abaa70db97dc36d40334fecd81f8b10591a48d9f56b33ed93e59fe0f0ef140.json",
+      "original_sha256": "a8abaa70db97dc36d40334fecd81f8b10591a48d9f56b33ed93e59fe0f0ef140",
+      "original_path": "history:outputs/manual-review/diagnostics/case34-rho/native-summary.json",
+      "sanitized_sha256": "3a18942ddfd6f01814923961856e8916dcb76aec5e4e5b9043ee8d51b32c4185"
+    },
+    {
+      "path": "data/original-occ/history/a968086f25ac0361b48532b9844f9d1fb3bbc077839205499c29de0f7a65a0a3.json",
+      "original_sha256": "a968086f25ac0361b48532b9844f9d1fb3bbc077839205499c29de0f7a65a0a3",
+      "original_path": "history:outputs/manual-review/case-specs/73-42_43_overlap-1317.json",
+      "sanitized_sha256": "6c6716f0543bec3ecc61e821c4f8423698f4b519fed9b42e22ae28255c434d2f"
+    },
+    {
+      "path": "data/original-occ/history/ab6d32a288373591666f8114455a543bf6725603a33e253a98537ef268b21ae0.json",
+      "original_sha256": "ab6d32a288373591666f8114455a543bf6725603a33e253a98537ef268b21ae0",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case21/summary.json",
+      "sanitized_sha256": "56ee089600dca7a52b753df3ca718a61e004806d46110623334847be48364ca7"
+    },
+    {
+      "path": "data/original-occ/history/abd626bbe6c3d1fe87256ca6679ae6b38e383e05c633fa15d671715daa36fc6d.json",
+      "original_sha256": "abd626bbe6c3d1fe87256ca6679ae6b38e383e05c633fa15d671715daa36fc6d",
+      "original_path": "history:outputs/manual-review/case-specs/73-42_43_overlap-1316.json",
+      "sanitized_sha256": "923d54841772d6392acab74878865031763ea5f47608c384ee56067fdcd378ab"
+    },
+    {
+      "path": "data/original-occ/history/abe2fec6c082fb0cee27639872454b9b491eca06bc4dddebd6204a9027de872a.json",
+      "original_sha256": "abe2fec6c082fb0cee27639872454b9b491eca06bc4dddebd6204a9027de872a",
+      "original_path": "history:outputs/manual-review/case-specs/73-20_y_combos-1285.json",
+      "sanitized_sha256": "ba3972286707c6dcf409a5b0b1a842ab24d323ee4822d44f59aa68dbc0ea398d"
+    },
+    {
+      "path": "data/original-occ/history/b03f004a086b2bf74457b68845eb8e2f76abf75167c8f520d89443584fd4d15b.json",
+      "original_sha256": "b03f004a086b2bf74457b68845eb8e2f76abf75167c8f520d89443584fd4d15b",
+      "original_path": "history:outputs/manual-review/diagnostics/case20-patch/summary.json",
+      "sanitized_sha256": "6dc3a62630eb1b93ece252115b4a180f2a99cfb9d895e94c061d39a7c30a3822"
+    },
+    {
+      "path": "data/original-occ/history/b3f8b9253ef9aba31d6810c5b1b704d4368916081a852e5ef80090482067d1a0.json",
+      "original_sha256": "b3f8b9253ef9aba31d6810c5b1b704d4368916081a852e5ef80090482067d1a0",
+      "original_path": "history:outputs/manual-review/diagnostics/case24-oblique/native-summary.json",
+      "sanitized_sha256": "2e68d6c376860cfbf17886fab066c8e60c8aeb31fea56f53b18cd2870ba55951"
+    },
+    {
+      "path": "data/original-occ/history/b51a78b357fbacce6e21e319fd6db131187630263378302589cefac2b0e4e437.json",
+      "original_sha256": "b51a78b357fbacce6e21e319fd6db131187630263378302589cefac2b0e4e437",
+      "original_path": "history:outputs/manual-review/diagnostics/case08/demo-run-r12.json",
+      "sanitized_sha256": "08f4f9f1c26ce5b255d8c03439dc362f61409faa16fa1d3ce72cccbbda3e7224"
+    },
+    {
+      "path": "data/original-occ/history/b621f817ecd20c1e5fdb65ee9350393ff984df4e060b6538fae50c9d20f89c25.json",
+      "original_sha256": "b621f817ecd20c1e5fdb65ee9350393ff984df4e060b6538fae50c9d20f89c25",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case35/summary.json",
+      "sanitized_sha256": "f461d913bf4be718b0d05c85fa4b00386f111c7371d737c8d71f12aeb08af013"
+    },
+    {
+      "path": "data/original-occ/history/b83d1b1bcf8ef37e1c2466b1a95146a0b3f32b441b5513739241a7709a6aafcf.json",
+      "original_sha256": "b83d1b1bcf8ef37e1c2466b1a95146a0b3f32b441b5513739241a7709a6aafcf",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-02_three_axes-1349.json",
+      "sanitized_sha256": "17646bb52b6655a9c0eef105704136b9efa8d45a8bbd3d11c0e7bd28b3618a0d"
+    },
+    {
+      "path": "data/original-occ/history/badb3730206e7bdfb399e24d5f2657f0c4170d17433a720e9abbbb498829f72c.json",
+      "original_sha256": "badb3730206e7bdfb399e24d5f2657f0c4170d17433a720e9abbbb498829f72c",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case06/summary.json",
+      "sanitized_sha256": "6175887f86818f4908ba3b20bfc0cfcea9cac4efbe842f24dff30a62b2088229"
+    },
+    {
+      "path": "data/original-occ/history/bc59f40b06b4c246260a127cd8b5041122bf16e4de7c2d9dbafa7b0a967b475a.json",
+      "original_sha256": "bc59f40b06b4c246260a127cd8b5041122bf16e4de7c2d9dbafa7b0a967b475a",
+      "original_path": "history:outputs/manual-review/diagnostics/case18-capping/native-api-audit.json",
+      "sanitized_sha256": "0b143e930c324747871dda770e421d1913beb6cbf75f8bb027c26b94cb7ec669"
+    },
+    {
+      "path": "data/original-occ/history/bc7b64d8513da79cedab8343462de68c716995d2269f403cfa89ba0260dc6366.json",
+      "original_sha256": "bc7b64d8513da79cedab8343462de68c716995d2269f403cfa89ba0260dc6366",
+      "original_path": "history:outputs/manual-review/case-specs/73-25_preserve_notch-1290.json",
+      "sanitized_sha256": "4767ad2d3e46658f8b6383f11cba94a71abe9f4095a2f6b1152a8d0cd8b991fa"
+    },
+    {
+      "path": "data/original-occ/history/bd7d39b523e72ef58c944eee66c1cffcfd47bbb5728f20ca5a69d75072ea7274.json",
+      "original_sha256": "bd7d39b523e72ef58c944eee66c1cffcfd47bbb5728f20ca5a69d75072ea7274",
+      "original_path": "history:outputs/manual-review/diagnostics/case25-unders/native-summary.json",
+      "sanitized_sha256": "b4992483534b2c115a1b9940a074b9619452124c8ea6a4c139499ceae071ddd1"
+    },
+    {
+      "path": "data/original-occ/history/bdc90ad8d38841c05cbf88ff5ecef5059634aa67f8693bd7fb869ac00dce639c.json",
+      "original_sha256": "bdc90ad8d38841c05cbf88ff5ecef5059634aa67f8693bd7fb869ac00dce639c",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case16/summary.json",
+      "sanitized_sha256": "462989c321028345a908a938053a0650f8033a085419d317ace15e84f19c96f2"
+    },
+    {
+      "path": "data/original-occ/history/bfece52cfdaba2cf41a07abbcb59017083d8dd2921cb08cc19fbc3066c856d5b.json",
+      "original_sha256": "bfece52cfdaba2cf41a07abbcb59017083d8dd2921cb08cc19fbc3066c856d5b",
+      "original_path": "history:outputs/manual-review/diagnostics/case23-overlap/summary.json",
+      "sanitized_sha256": "326fe7f56ba9497c5ccb764e709f6a96a44aaebde8f188db13466982d66779ce"
+    },
+    {
+      "path": "data/original-occ/history/c23c3f42f56f8090df34770551e6495f45ab8b6cf217d49e21854905075a4fcd.json",
+      "original_sha256": "c23c3f42f56f8090df34770551e6495f45ab8b6cf217d49e21854905075a4fcd",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case18/summary.json",
+      "sanitized_sha256": "504c023f719ca3a9c8dce1aaa6ad129d7ce8b573db7df3bcd50f2d171f6aa289"
+    },
+    {
+      "path": "data/original-occ/history/c2f55aa8d70ed8798717636a18a7892b6053311b1c9cfd7390d280797241f837.json",
+      "original_sha256": "c2f55aa8d70ed8798717636a18a7892b6053311b1c9cfd7390d280797241f837",
+      "original_path": "history:outputs/manual-review/diagnostics/case33-variable/native-fitted-summary.json",
+      "sanitized_sha256": "4a6b5c1970666caf26ef2f905a6654a5d958fa23929a25c7cf705a5363d74cf9"
+    },
+    {
+      "path": "data/original-occ/history/c31142ad2ec428771c5682b3f364c5c504168c3aa38cc17cfa11856f5edd1fa5.json",
+      "original_sha256": "c31142ad2ec428771c5682b3f364c5c504168c3aa38cc17cfa11856f5edd1fa5",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-25_rho-1380.json",
+      "sanitized_sha256": "7d988331c7a0ee177347fb50c52636fa9f9f5158350ad296e1b84f7ac7a11b10"
+    },
+    {
+      "path": "data/original-occ/history/c6c7eb3fd0d5690c85613efda2677526b66938fa38c07b0c122ffb53f88be695.json",
+      "original_sha256": "c6c7eb3fd0d5690c85613efda2677526b66938fa38c07b0c122ffb53f88be695",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case36/summary.json",
+      "sanitized_sha256": "62fd589a3a7c940b629a24c03f5e546dc46692ba8bf2f7b56f464bc2960e9c47"
+    },
+    {
+      "path": "data/original-occ/history/c8f9f7782bd02d84157115d0dd667c06957592f6202ea70c1ad3ffeb3a37ca3b.json",
+      "original_sha256": "c8f9f7782bd02d84157115d0dd667c06957592f6202ea70c1ad3ffeb3a37ca3b",
+      "original_path": "history:outputs/manual-review/diagnostics/case23-overlap/native-api-audit.json",
+      "sanitized_sha256": "4d49ce34ab6bfa451f864695227b3e4e7cd080a4a8211a31fa31e0e3fe652823"
+    },
+    {
+      "path": "data/original-occ/history/c9b2f275df369774c032c12d6fdaa511cac072595e71855092bb950bd600d752.json",
+      "original_sha256": "c9b2f275df369774c032c12d6fdaa511cac072595e71855092bb950bd600d752",
+      "original_path": "history:outputs/manual-review/case-specs/73-35_to_37_caps-1306.json",
+      "sanitized_sha256": "a2bf614759de8af36d9e7a2f62e888190a3ffac2b11c802ece5fd0f26a704dce"
+    },
+    {
+      "path": "data/original-occ/history/cbccbe10999a5f49955503f29712c3f543fcb91e8bab80c681b83d384159e189.json",
+      "original_sha256": "cbccbe10999a5f49955503f29712c3f543fcb91e8bab80c681b83d384159e189",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case11/summary.json",
+      "sanitized_sha256": "da3c6aeb53bd371cdc77d09296679f1511361b2f3c6ebb017aaf55fd4ee8330f"
+    },
+    {
+      "path": "data/original-occ/history/cc16ba99281f620e3bab29cf125e40726a113336772132a410c05c20cced4f36.json",
+      "original_sha256": "cc16ba99281f620e3bab29cf125e40726a113336772132a410c05c20cced4f36",
+      "original_path": "history:outputs/manual-review/diagnostics/case33-variable/summary.json",
+      "sanitized_sha256": "d1d18c4d94ef82bcf717761225e122fffee0b2c976264a008836a108bff63223"
+    },
+    {
+      "path": "data/original-occ/history/cef66add074ee05d87125ebfef3d6ce9215c7d0038cfc30cc6289bf3cce8f997.json",
+      "original_sha256": "cef66add074ee05d87125ebfef3d6ce9215c7d0038cfc30cc6289bf3cce8f997",
+      "original_path": "history:outputs/manual-review/case-specs/73-35_to_37_caps-1307.json",
+      "sanitized_sha256": "b49f991437e89c32383834822ff124c7ad1e8591692e6b6f4f6ee8a04559585e"
+    },
+    {
+      "path": "data/original-occ/history/cfb66aabea636755cde614731d734994c5939a614150013c8cb864cddbedea11.json",
+      "original_sha256": "cfb66aabea636755cde614731d734994c5939a614150013c8cb864cddbedea11",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case35/preprocess/walls-1/evidence.json",
+      "sanitized_sha256": "6aa600293b867150f938a65e942ee7a70164c403b1ba8b62fdc7dc333a6e1674"
+    },
+    {
+      "path": "data/original-occ/history/d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158.json",
+      "original_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+      "sanitized_sha256": "4ba95123719596890edc3f7532de5dc049b9f8c4aa95427de8d18366963228da"
+    },
+    {
+      "path": "data/original-occ/history/d1ed2ec739a236149a7061d761ee496244085040a3d880bdbc5ea716ca01e348.json",
+      "original_sha256": "d1ed2ec739a236149a7061d761ee496244085040a3d880bdbc5ea716ca01e348",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case34/preprocess/walls-1/evidence.json",
+      "sanitized_sha256": "3a37c2a14f0576f6cc7a28d1e27eed92ee0997fc9a7a53fc88cfae68cf88416c"
+    },
+    {
+      "path": "data/original-occ/history/d7e88f6ee2dd523eb4f8f588ab53dd7dd1c9344f724f822d128b72c65ce2b9bf.json",
+      "original_sha256": "d7e88f6ee2dd523eb4f8f588ab53dd7dd1c9344f724f822d128b72c65ce2b9bf",
+      "original_path": "history:outputs/manual-review/diagnostics/case24-oblique/verification.json",
+      "sanitized_sha256": "ef5f8a670fec12c7212b5d84c335f1ae920e8c473824a642151f680691ce3f5f"
+    },
+    {
+      "path": "data/original-occ/history/d8800e97425e95cc2149fe14961199a0956a55ea73fe79fb220fa886135f2ad8.json",
+      "original_sha256": "d8800e97425e95cc2149fe14961199a0956a55ea73fe79fb220fa886135f2ad8",
+      "original_path": "history:outputs/manual-review/diagnostics/case16-limits/independent-check.json",
+      "sanitized_sha256": "f6e9d22cec5237866a6ed46adcffe586114ef55cf5b7975cfe76188ed473b761"
+    },
+    {
+      "path": "data/original-occ/history/dcbfae5ef6bd1e1359bb176b11cf5427438fdb829a2032dccba32be88f175ec0.json",
+      "original_sha256": "dcbfae5ef6bd1e1359bb176b11cf5427438fdb829a2032dccba32be88f175ec0",
+      "original_path": "history:outputs/manual-review/diagnostics/case23-overlap/independent-smoothing.json",
+      "sanitized_sha256": "6c9e219eeac21affbbec2e11ab88fa675d2cc7bc824ac4b6f0310c388a56defa"
+    },
+    {
+      "path": "data/original-occ/history/e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7.json",
+      "original_sha256": "e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case22/summary.json",
+      "sanitized_sha256": "75a5591cad8f1a5bfe1a73650ff6f2c9bf7f58042cefe4e15d2d66de7aa1b5bc"
+    },
+    {
+      "path": "data/original-occ/history/e4c28b6689d6819b663f3e71f5c4a49f9a6a68ec5192ea03bcc330c2b37415e9.json",
+      "original_sha256": "e4c28b6689d6819b663f3e71f5c4a49f9a6a68ec5192ea03bcc330c2b37415e9",
+      "original_path": "history:outputs/manual-review/diagnostics/case21-unders/native-api-audit.json",
+      "sanitized_sha256": "b6fe8a012a72dffeb8f5b3d7ae6b83ba55d72ae3fb124a66c99a04f716b378f9"
+    },
+    {
+      "path": "data/original-occ/history/f0506963a4c970c33592b48660b7c15b2deceac36155c9f9c8a7ada4daa510b3.json",
+      "original_sha256": "f0506963a4c970c33592b48660b7c15b2deceac36155c9f9c8a7ada4daa510b3",
+      "original_path": "history:outputs/manual-review/case-specs/73-44_45_unders-1318.json",
+      "sanitized_sha256": "fca4931700c6e5e0944fbaf99e2f5f4ada29c4132645804cca180a774bb8baff"
+    },
+    {
+      "path": "data/original-occ/history/f22b5a6c826b663f16b6d6acbd13ad5251f92f9ade85fa00547b2446cac63865.json",
+      "original_sha256": "f22b5a6c826b663f16b6d6acbd13ad5251f92f9ade85fa00547b2446cac63865",
+      "original_path": "history:outputs/manual-review/diagnostics/case18-capping/independent-check.json",
+      "sanitized_sha256": "714a98c13d8433ca30d767e46b9387e015fa7312126d4e3d5296dc8690aa7b90"
+    },
+    {
+      "path": "data/original-occ/history/f40d5f2c7fbc3a1c2c8277c594ca6fedddc7c437a4a7d2d47bddc57a5977ba93.json",
+      "original_sha256": "f40d5f2c7fbc3a1c2c8277c594ca6fedddc7c437a4a7d2d47bddc57a5977ba93",
+      "original_path": "history:outputs/manual-review/diagnostics/case20-patch/independent-check.json",
+      "sanitized_sha256": "c95562f03ecfe922377ebbebc377197159b8280ba4725b8eca0e8e5345dd4358"
+    },
+    {
+      "path": "data/original-occ/history/f5d0afea2f4bd5c928cbea5bebd0eb4f747bb70d4794406b24c7c6cd91efedba.json",
+      "original_sha256": "f5d0afea2f4bd5c928cbea5bebd0eb4f747bb70d4794406b24c7c6cd91efedba",
+      "original_path": "history:outputs/manual-review/case-specs/73-19_yshaped-1283.json",
+      "sanitized_sha256": "2265bf49e9cb63a3e2b57dfd92cdf24aeb0b1753fc067bb2d1773fc0b394fc7e"
+    },
+    {
+      "path": "data/original-occ/history/f6d1de209e85a83e215d0859a829ab531f94f831d5af3dc5c62a6e6726d3499c.json",
+      "original_sha256": "f6d1de209e85a83e215d0859a829ab531f94f831d5af3dc5c62a6e6726d3499c",
+      "original_path": "history:outputs/manual-review/diagnostics/case35-g2/native-summary.json",
+      "sanitized_sha256": "b1171961dd7ed602d81f16288217b418ce54cdca18b930d4c3f12c46cf70f972"
+    },
+    {
+      "path": "data/original-occ/history/f9c69ae25a62b500305310ab250faa02fd7763ecf8e140caafd0f71aea1128e1.json",
+      "original_sha256": "f9c69ae25a62b500305310ab250faa02fd7763ecf8e140caafd0f71aea1128e1",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case07/summary.json",
+      "sanitized_sha256": "acd1f9fc4ac8952a76fab04ebb0cfdaa08387e41d22de4ab376e2e1cb59c8509"
+    },
+    {
+      "path": "data/original-occ/history/fbc76182dea5ebd78c84399fed574fdf255c92996c1581f52935d10170d980af.json",
+      "original_sha256": "fbc76182dea5ebd78c84399fed574fdf255c92996c1581f52935d10170d980af",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case26/summary.json",
+      "sanitized_sha256": "3e437e919319695fa56802ad47891e5fe130433a8c864eb29af275415fd70e65"
+    },
+    {
+      "path": "data/original-occ/history/fc1e861d20e20666ffe7c4a4d5fdd5287a219f729ef5d7efa33195211b8d0f41.json",
+      "original_sha256": "fc1e861d20e20666ffe7c4a4d5fdd5287a219f729ef5d7efa33195211b8d0f41",
+      "original_path": "history:outputs/manual-review/case-specs/73-18_explicit_cliff-1282.json",
+      "sanitized_sha256": "55f0306dc59118fa474426fe5a07a6f483464eac3b6ea9ccde7d9931a1c8c7ca"
+    },
+    {
+      "path": "data/original-occ/history/fd568cfd65194562d83e19cb658faae1347a202d76e113e5009198932d7b6303.json",
+      "original_sha256": "fd568cfd65194562d83e19cb658faae1347a202d76e113e5009198932d7b6303",
+      "original_path": "history:outputs/manual-review/diagnostics/case35-g2/section-profiles.json",
+      "sanitized_sha256": "3b95ff1e888b9595eaa03be3b70fb2a1fd34e12f6b8e859b4f7da080eef3d55b"
+    }
+  ]
+}

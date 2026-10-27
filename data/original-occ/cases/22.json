@@ -1,0 +1,5431 @@
+{
+  "schema": "filletbench.original-occ.v1",
+  "number": 22,
+  "id": "73-41_laminar-1312",
+  "title": "两片不等宽平面相交的薄片体",
+  "has_model": true,
+  "source_brep": "data/original-occ/fixtures/0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8.brep",
+  "source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+  "recorded_source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+  "human_status": "pending",
+  "human_note": "",
+  "reference": {
+    "page": 1312,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.19615648148148151,
+      0.3895524691358025,
+      0.8927843333333334,
+      0.876820987654321
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed whole-figure crop; converted from MediaBox to verified PDF CropBox",
+    "input_only_crop_used": false,
+    "crop_coordinate_system": "pdfjs_cropbox_normalized_top_left",
+    "source_media_box": [
+      0.0,
+      0.0,
+      595.22,
+      842.0
+    ],
+    "pdf_crop_box": [
+      28.0,
+      97.0,
+      568.0,
+      745.0
+    ],
+    "source_media_box_crop": [
+      0.225,
+      0.415,
+      0.857,
+      0.79
+    ]
+  },
+  "base_targets": [
+    {
+      "index": 1,
+      "length": 48.0,
+      "curve": "Line",
+      "endpoints": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "center": [
+        24.0,
+        0.0,
+        0.0
+      ],
+      "adjacent_faces": [
+        1,
+        2
+      ],
+      "surface_types": [
+        "Plane",
+        "Plane"
+      ],
+      "index_1based": 1,
+      "samples_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "base_annotation_groups": {},
+  "selection": {
+    "base": {
+      "sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "targets": [
+        {
+          "index": 1,
+          "length": 48.0,
+          "curve": "Line",
+          "endpoints": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "center": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "adjacent_faces": [
+            1,
+            2
+          ],
+          "surface_types": [
+            "Plane",
+            "Plane"
+          ],
+          "index_1based": 1,
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selected_faces": []
+    }
+  },
+  "variants": [
+    {
+      "id": "part01-r6",
+      "label": "L_sheet_body / R6",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 1,
+        "radius_mm": 6,
+        "plan": {
+          "label": "L_sheet_body",
+          "edge_indices": [
+            1
+          ],
+          "radii": [
+            6,
+            3,
+            10
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "selection_evidence": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 6,
+      "base_brep": "data/original-occ/fixtures/0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8.brep",
+      "base_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008.brep",
+          "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/before.brep",
+          "label": "L_sheet_body",
+          "selected_edges": [
+            {
+              "index_1based": 1,
+              "length": 48.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                48.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "recorded_hash_matches": true,
+          "selection_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb.brep",
+          "sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/attempt01-r6.brep",
+          "recorded_sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb",
+          "historical_attempt_status": "failed",
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 3732.1330787568468,
+              "volume": 0.0,
+              "bbox": [
+                -6.000000000000002,
+                -38.000000000000014,
+                -8.881784197001252e-16,
+                68.0,
+                8.881784197001252e-16,
+                32.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb"
+          },
+          "roundtrip_step": null,
+          "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n"
+        }
+      ],
+      "historical_status": "failed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+      "source_spec": {
+        "plan": {
+          "label": "L_sheet_body",
+          "edge_indices": [
+            1
+          ],
+          "radii": [
+            6,
+            3,
+            10
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "selection_evidence": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ]
+            }
+          ]
+        },
+        "attempt": {
+          "radius": 6.0,
+          "radius_mm": 6.0,
+          "units": "mm in reconstructed input, not PDF calibration",
+          "status": "failed",
+          "started_at": "2026-10-18T19:00:55.035553+08:00",
+          "selected_edges": [
+            {
+              "index_1based": 1,
+              "length": 48.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                48.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ]
+            }
+          ],
+          "input_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+          "operation_input_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "api": "FreeCAD Part.Shape.makeFillet / OCCT BRepFilletAPI_MakeFillet",
+          "runtime": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "source_feature_verified": false,
+          "output_stats": {
+            "null": false,
+            "valid": true,
+            "shape_type": "Compound",
+            "solids": 0,
+            "shells": 1,
+            "faces": 3,
+            "edges": 10,
+            "vertices": 8,
+            "area": 3732.1330787568445,
+            "volume": 0.0,
+            "bbox": [
+              -6.000000000000002,
+              -38.000000000000014,
+              -8.881784197001252e-16,
+              68.0,
+              8.881784197001252e-16,
+              32.0
+            ],
+            "closed_solids": true
+          },
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 3732.1330787568468,
+              "volume": 0.0,
+              "bbox": [
+                -6.000000000000002,
+                -38.000000000000014,
+                -8.881784197001252e-16,
+                68.0,
+                8.881784197001252e-16,
+                32.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb"
+          },
+          "error_type": "ValueError",
+          "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+          "traceback": "Traceback (most recent call last):\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 230, in run_case\n    attempt['roundtrip_brep']=roundtrip(result,brep);attempt['roundtrip_step']=roundtrip(result,step)\n                                                                               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 118, in roundtrip\n    restored=read(path); st=check_native(restored); reference=stats(result)\n                            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 44, in check_native\n    s.check(True)  # Raises on BRepCheck/BOPCheck problems.\n    ^^^^^^^^^^^^^\nValueError: BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n\n",
+          "elapsed_seconds": 0.04686641599982977,
+          "finished_at": "2026-10-18T19:00:55.083191+08:00"
+        },
+        "part_number": 1,
+        "historical_source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "scope_notice": "OCC 实际圆角 · R = 6 mm · 生成 BREP / STEP 回读未通过。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "generated_export_failed",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "index": 1,
+          "length": 48.0,
+          "curve": "Line",
+          "endpoints": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "center": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "adjacent_faces": [
+            1,
+            2
+          ],
+          "surface_types": [
+            "Plane",
+            "Plane"
+          ],
+          "index_1based": 1,
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 1,
+          "length": 48.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.5483870967741935,
+              0.0,
+              0.0
+            ],
+            [
+              3.096774193548387,
+              0.0,
+              0.0
+            ],
+            [
+              4.64516129032258,
+              0.0,
+              0.0
+            ],
+            [
+              6.193548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              7.741935483870968,
+              0.0,
+              0.0
+            ],
+            [
+              9.290322580645162,
+              0.0,
+              0.0
+            ],
+            [
+              10.838709677419356,
+              0.0,
+              0.0
+            ],
+            [
+              12.38709677419355,
+              0.0,
+              0.0
+            ],
+            [
+              13.935483870967744,
+              0.0,
+              0.0
+            ],
+            [
+              15.483870967741938,
+              0.0,
+              0.0
+            ],
+            [
+              17.03225806451613,
+              0.0,
+              0.0
+            ],
+            [
+              18.580645161290324,
+              0.0,
+              0.0
+            ],
+            [
+              20.129032258064516,
+              0.0,
+              0.0
+            ],
+            [
+              21.677419354838708,
+              0.0,
+              0.0
+            ],
+            [
+              23.2258064516129,
+              0.0,
+              0.0
+            ],
+            [
+              24.774193548387093,
+              0.0,
+              0.0
+            ],
+            [
+              26.322580645161285,
+              0.0,
+              0.0
+            ],
+            [
+              27.870967741935477,
+              0.0,
+              0.0
+            ],
+            [
+              29.41935483870967,
+              0.0,
+              0.0
+            ],
+            [
+              30.96774193548386,
+              0.0,
+              0.0
+            ],
+            [
+              32.51612903225806,
+              0.0,
+              0.0
+            ],
+            [
+              34.06451612903225,
+              0.0,
+              0.0
+            ],
+            [
+              35.61290322580644,
+              0.0,
+              0.0
+            ],
+            [
+              37.16129032258063,
+              0.0,
+              0.0
+            ],
+            [
+              38.709677419354826,
+              0.0,
+              0.0
+            ],
+            [
+              40.25806451612902,
+              0.0,
+              0.0
+            ],
+            [
+              41.80645161290321,
+              0.0,
+              0.0
+            ],
+            [
+              43.3548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              44.903225806451594,
+              0.0,
+              0.0
+            ],
+            [
+              46.45161290322579,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            1,
+            2
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.5483870967741935,
+              0.0,
+              0.0
+            ],
+            [
+              3.096774193548387,
+              0.0,
+              0.0
+            ],
+            [
+              4.64516129032258,
+              0.0,
+              0.0
+            ],
+            [
+              6.193548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              7.741935483870968,
+              0.0,
+              0.0
+            ],
+            [
+              9.290322580645162,
+              0.0,
+              0.0
+            ],
+            [
+              10.838709677419356,
+              0.0,
+              0.0
+            ],
+            [
+              12.38709677419355,
+              0.0,
+              0.0
+            ],
+            [
+              13.935483870967744,
+              0.0,
+              0.0
+            ],
+            [
+              15.483870967741938,
+              0.0,
+              0.0
+            ],
+            [
+              17.03225806451613,
+              0.0,
+              0.0
+            ],
+            [
+              18.580645161290324,
+              0.0,
+              0.0
+            ],
+            [
+              20.129032258064516,
+              0.0,
+              0.0
+            ],
+            [
+              21.677419354838708,
+              0.0,
+              0.0
+            ],
+            [
+              23.2258064516129,
+              0.0,
+              0.0
+            ],
+            [
+              24.774193548387093,
+              0.0,
+              0.0
+            ],
+            [
+              26.322580645161285,
+              0.0,
+              0.0
+            ],
+            [
+              27.870967741935477,
+              0.0,
+              0.0
+            ],
+            [
+              29.41935483870967,
+              0.0,
+              0.0
+            ],
+            [
+              30.96774193548386,
+              0.0,
+              0.0
+            ],
+            [
+              32.51612903225806,
+              0.0,
+              0.0
+            ],
+            [
+              34.06451612903225,
+              0.0,
+              0.0
+            ],
+            [
+              35.61290322580644,
+              0.0,
+              0.0
+            ],
+            [
+              37.16129032258063,
+              0.0,
+              0.0
+            ],
+            [
+              38.709677419354826,
+              0.0,
+              0.0
+            ],
+            [
+              40.25806451612902,
+              0.0,
+              0.0
+            ],
+            [
+              41.80645161290321,
+              0.0,
+              0.0
+            ],
+            [
+              43.3548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              44.903225806451594,
+              0.0,
+              0.0
+            ],
+            [
+              46.45161290322579,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+          "targets": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ],
+              "index_1based": 1,
+              "samples_mm": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+            "targets": [
+              {
+                "index_1based": 1,
+                "length": 48.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  48.0,
+                  0.0,
+                  0.0
+                ],
+                "midpoint": [
+                  24.0,
+                  0.0,
+                  0.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.5483870967741935,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.096774193548387,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.64516129032258,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.193548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.741935483870968,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.290322580645162,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.838709677419356,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    12.38709677419355,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    13.935483870967744,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    15.483870967741938,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    17.03225806451613,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    18.580645161290324,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    20.129032258064516,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    21.677419354838708,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    23.2258064516129,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    24.774193548387093,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    26.322580645161285,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    27.870967741935477,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    29.41935483870967,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    30.96774193548386,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    32.51612903225806,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    34.06451612903225,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    35.61290322580644,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    37.16129032258063,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    38.709677419354826,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    40.25806451612902,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    41.80645161290321,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    43.3548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    44.903225806451594,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    46.45161290322579,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    48.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  1,
+                  2
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.5483870967741935,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.096774193548387,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.64516129032258,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.193548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.741935483870968,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.290322580645162,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.838709677419356,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    12.38709677419355,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    13.935483870967744,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    15.483870967741938,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    17.03225806451613,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    18.580645161290324,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    20.129032258064516,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    21.677419354838708,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    23.2258064516129,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    24.774193548387093,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    26.322580645161285,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    27.870967741935477,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    29.41935483870967,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    30.96774193548386,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    32.51612903225806,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    34.06451612903225,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    35.61290322580644,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    37.16129032258063,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    38.709677419354826,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    40.25806451612902,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    41.80645161290321,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    43.3548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    44.903225806451594,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    46.45161290322579,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    48.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r3",
+      "label": "L_sheet_body / R3",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 2,
+        "radius_mm": 3,
+        "plan": {
+          "label": "L_sheet_body",
+          "edge_indices": [
+            1
+          ],
+          "radii": [
+            6,
+            3,
+            10
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "selection_evidence": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 3,
+      "base_brep": "data/original-occ/fixtures/0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8.brep",
+      "base_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008.brep",
+          "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/before.brep",
+          "label": "L_sheet_body",
+          "selected_edges": [
+            {
+              "index_1based": 1,
+              "length": 48.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                48.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "recorded_hash_matches": true,
+          "selection_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b.brep",
+          "sha256": "e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/attempt02-r3.brep",
+          "recorded_sha256": "e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b",
+          "historical_attempt_status": "failed",
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 3792.630605218428,
+              "volume": 0.0,
+              "bbox": [
+                -6.000000000000002,
+                -38.000000000000014,
+                -4.440892098500626e-16,
+                68.0,
+                4.440892098500626e-16,
+                32.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b"
+          },
+          "roundtrip_step": null,
+          "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n"
+        }
+      ],
+      "historical_status": "failed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+      "source_spec": {
+        "plan": {
+          "label": "L_sheet_body",
+          "edge_indices": [
+            1
+          ],
+          "radii": [
+            6,
+            3,
+            10
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "selection_evidence": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ]
+            }
+          ]
+        },
+        "attempt": {
+          "radius": 3.0,
+          "radius_mm": 3.0,
+          "units": "mm in reconstructed input, not PDF calibration",
+          "status": "failed",
+          "started_at": "2026-10-18T19:00:55.084077+08:00",
+          "selected_edges": [
+            {
+              "index_1based": 1,
+              "length": 48.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                48.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ]
+            }
+          ],
+          "input_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+          "operation_input_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "api": "FreeCAD Part.Shape.makeFillet / OCCT BRepFilletAPI_MakeFillet",
+          "runtime": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "source_feature_verified": false,
+          "output_stats": {
+            "null": false,
+            "valid": true,
+            "shape_type": "Compound",
+            "solids": 0,
+            "shells": 1,
+            "faces": 3,
+            "edges": 10,
+            "vertices": 8,
+            "area": 3792.6306052184264,
+            "volume": 0.0,
+            "bbox": [
+              -6.000000000000002,
+              -38.000000000000014,
+              -4.440892098500626e-16,
+              68.0,
+              4.440892098500626e-16,
+              32.0
+            ],
+            "closed_solids": true
+          },
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 3792.630605218428,
+              "volume": 0.0,
+              "bbox": [
+                -6.000000000000002,
+                -38.000000000000014,
+                -4.440892098500626e-16,
+                68.0,
+                4.440892098500626e-16,
+                32.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "e08139f651d0546a9817272fa1c66bb85c51badc3124c6c0a36dfceff6af3b7b"
+          },
+          "error_type": "ValueError",
+          "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+          "traceback": "Traceback (most recent call last):\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 230, in run_case\n    attempt['roundtrip_brep']=roundtrip(result,brep);attempt['roundtrip_step']=roundtrip(result,step)\n                                                                               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 118, in roundtrip\n    restored=read(path); st=check_native(restored); reference=stats(result)\n                            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 44, in check_native\n    s.check(True)  # Raises on BRepCheck/BOPCheck problems.\n    ^^^^^^^^^^^^^\nValueError: BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n\n",
+          "elapsed_seconds": 0.04347066700574942,
+          "finished_at": "2026-10-18T19:00:55.128232+08:00"
+        },
+        "part_number": 1,
+        "historical_source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "scope_notice": "OCC 实际圆角 · R = 6 mm · 生成 BREP / STEP 回读未通过。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "generated_export_failed",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "index": 1,
+          "length": 48.0,
+          "curve": "Line",
+          "endpoints": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "center": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "adjacent_faces": [
+            1,
+            2
+          ],
+          "surface_types": [
+            "Plane",
+            "Plane"
+          ],
+          "index_1based": 1,
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 1,
+          "length": 48.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.5483870967741935,
+              0.0,
+              0.0
+            ],
+            [
+              3.096774193548387,
+              0.0,
+              0.0
+            ],
+            [
+              4.64516129032258,
+              0.0,
+              0.0
+            ],
+            [
+              6.193548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              7.741935483870968,
+              0.0,
+              0.0
+            ],
+            [
+              9.290322580645162,
+              0.0,
+              0.0
+            ],
+            [
+              10.838709677419356,
+              0.0,
+              0.0
+            ],
+            [
+              12.38709677419355,
+              0.0,
+              0.0
+            ],
+            [
+              13.935483870967744,
+              0.0,
+              0.0
+            ],
+            [
+              15.483870967741938,
+              0.0,
+              0.0
+            ],
+            [
+              17.03225806451613,
+              0.0,
+              0.0
+            ],
+            [
+              18.580645161290324,
+              0.0,
+              0.0
+            ],
+            [
+              20.129032258064516,
+              0.0,
+              0.0
+            ],
+            [
+              21.677419354838708,
+              0.0,
+              0.0
+            ],
+            [
+              23.2258064516129,
+              0.0,
+              0.0
+            ],
+            [
+              24.774193548387093,
+              0.0,
+              0.0
+            ],
+            [
+              26.322580645161285,
+              0.0,
+              0.0
+            ],
+            [
+              27.870967741935477,
+              0.0,
+              0.0
+            ],
+            [
+              29.41935483870967,
+              0.0,
+              0.0
+            ],
+            [
+              30.96774193548386,
+              0.0,
+              0.0
+            ],
+            [
+              32.51612903225806,
+              0.0,
+              0.0
+            ],
+            [
+              34.06451612903225,
+              0.0,
+              0.0
+            ],
+            [
+              35.61290322580644,
+              0.0,
+              0.0
+            ],
+            [
+              37.16129032258063,
+              0.0,
+              0.0
+            ],
+            [
+              38.709677419354826,
+              0.0,
+              0.0
+            ],
+            [
+              40.25806451612902,
+              0.0,
+              0.0
+            ],
+            [
+              41.80645161290321,
+              0.0,
+              0.0
+            ],
+            [
+              43.3548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              44.903225806451594,
+              0.0,
+              0.0
+            ],
+            [
+              46.45161290322579,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            1,
+            2
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.5483870967741935,
+              0.0,
+              0.0
+            ],
+            [
+              3.096774193548387,
+              0.0,
+              0.0
+            ],
+            [
+              4.64516129032258,
+              0.0,
+              0.0
+            ],
+            [
+              6.193548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              7.741935483870968,
+              0.0,
+              0.0
+            ],
+            [
+              9.290322580645162,
+              0.0,
+              0.0
+            ],
+            [
+              10.838709677419356,
+              0.0,
+              0.0
+            ],
+            [
+              12.38709677419355,
+              0.0,
+              0.0
+            ],
+            [
+              13.935483870967744,
+              0.0,
+              0.0
+            ],
+            [
+              15.483870967741938,
+              0.0,
+              0.0
+            ],
+            [
+              17.03225806451613,
+              0.0,
+              0.0
+            ],
+            [
+              18.580645161290324,
+              0.0,
+              0.0
+            ],
+            [
+              20.129032258064516,
+              0.0,
+              0.0
+            ],
+            [
+              21.677419354838708,
+              0.0,
+              0.0
+            ],
+            [
+              23.2258064516129,
+              0.0,
+              0.0
+            ],
+            [
+              24.774193548387093,
+              0.0,
+              0.0
+            ],
+            [
+              26.322580645161285,
+              0.0,
+              0.0
+            ],
+            [
+              27.870967741935477,
+              0.0,
+              0.0
+            ],
+            [
+              29.41935483870967,
+              0.0,
+              0.0
+            ],
+            [
+              30.96774193548386,
+              0.0,
+              0.0
+            ],
+            [
+              32.51612903225806,
+              0.0,
+              0.0
+            ],
+            [
+              34.06451612903225,
+              0.0,
+              0.0
+            ],
+            [
+              35.61290322580644,
+              0.0,
+              0.0
+            ],
+            [
+              37.16129032258063,
+              0.0,
+              0.0
+            ],
+            [
+              38.709677419354826,
+              0.0,
+              0.0
+            ],
+            [
+              40.25806451612902,
+              0.0,
+              0.0
+            ],
+            [
+              41.80645161290321,
+              0.0,
+              0.0
+            ],
+            [
+              43.3548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              44.903225806451594,
+              0.0,
+              0.0
+            ],
+            [
+              46.45161290322579,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+          "targets": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ],
+              "index_1based": 1,
+              "samples_mm": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+            "targets": [
+              {
+                "index_1based": 1,
+                "length": 48.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  48.0,
+                  0.0,
+                  0.0
+                ],
+                "midpoint": [
+                  24.0,
+                  0.0,
+                  0.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.5483870967741935,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.096774193548387,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.64516129032258,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.193548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.741935483870968,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.290322580645162,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.838709677419356,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    12.38709677419355,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    13.935483870967744,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    15.483870967741938,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    17.03225806451613,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    18.580645161290324,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    20.129032258064516,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    21.677419354838708,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    23.2258064516129,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    24.774193548387093,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    26.322580645161285,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    27.870967741935477,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    29.41935483870967,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    30.96774193548386,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    32.51612903225806,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    34.06451612903225,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    35.61290322580644,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    37.16129032258063,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    38.709677419354826,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    40.25806451612902,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    41.80645161290321,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    43.3548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    44.903225806451594,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    46.45161290322579,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    48.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  1,
+                  2
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.5483870967741935,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.096774193548387,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.64516129032258,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.193548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.741935483870968,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.290322580645162,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.838709677419356,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    12.38709677419355,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    13.935483870967744,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    15.483870967741938,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    17.03225806451613,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    18.580645161290324,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    20.129032258064516,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    21.677419354838708,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    23.2258064516129,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    24.774193548387093,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    26.322580645161285,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    27.870967741935477,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    29.41935483870967,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    30.96774193548386,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    32.51612903225806,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    34.06451612903225,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    35.61290322580644,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    37.16129032258063,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    38.709677419354826,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    40.25806451612902,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    41.80645161290321,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    43.3548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    44.903225806451594,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    46.45161290322579,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    48.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r10",
+      "label": "L_sheet_body / R10",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 3,
+        "radius_mm": 10,
+        "plan": {
+          "label": "L_sheet_body",
+          "edge_indices": [
+            1
+          ],
+          "radii": [
+            6,
+            3,
+            10
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "selection_evidence": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 10,
+      "base_brep": "data/original-occ/fixtures/0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8.brep",
+      "base_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008.brep",
+          "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/before.brep",
+          "label": "L_sheet_body",
+          "selected_edges": [
+            {
+              "index_1based": 1,
+              "length": 48.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                48.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "recorded_hash_matches": true,
+          "selection_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4.brep",
+          "sha256": "f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case22/runs/20261018T190055.025535-95659/part01/attempt03-r10.brep",
+          "recorded_sha256": "f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4",
+          "historical_attempt_status": "failed",
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 3652.826140258385,
+              "volume": 0.0,
+              "bbox": [
+                -6.000000000000002,
+                -38.000000000000014,
+                -1.7763568394002505e-15,
+                68.0,
+                1.7763568394002505e-15,
+                32.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4"
+          },
+          "roundtrip_step": null,
+          "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n"
+        }
+      ],
+      "historical_status": "failed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+      "source_spec": {
+        "plan": {
+          "label": "L_sheet_body",
+          "edge_indices": [
+            1
+          ],
+          "radii": [
+            6,
+            3,
+            10
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "selection_evidence": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ]
+            }
+          ]
+        },
+        "attempt": {
+          "radius": 10.0,
+          "radius_mm": 10.0,
+          "units": "mm in reconstructed input, not PDF calibration",
+          "status": "failed",
+          "started_at": "2026-10-18T19:00:55.129276+08:00",
+          "selected_edges": [
+            {
+              "index_1based": 1,
+              "length": 48.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                48.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.5483870967741935,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.096774193548387,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.64516129032258,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.193548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.741935483870968,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.290322580645162,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.838709677419356,
+                  0.0,
+                  0.0
+                ],
+                [
+                  12.38709677419355,
+                  0.0,
+                  0.0
+                ],
+                [
+                  13.935483870967744,
+                  0.0,
+                  0.0
+                ],
+                [
+                  15.483870967741938,
+                  0.0,
+                  0.0
+                ],
+                [
+                  17.03225806451613,
+                  0.0,
+                  0.0
+                ],
+                [
+                  18.580645161290324,
+                  0.0,
+                  0.0
+                ],
+                [
+                  20.129032258064516,
+                  0.0,
+                  0.0
+                ],
+                [
+                  21.677419354838708,
+                  0.0,
+                  0.0
+                ],
+                [
+                  23.2258064516129,
+                  0.0,
+                  0.0
+                ],
+                [
+                  24.774193548387093,
+                  0.0,
+                  0.0
+                ],
+                [
+                  26.322580645161285,
+                  0.0,
+                  0.0
+                ],
+                [
+                  27.870967741935477,
+                  0.0,
+                  0.0
+                ],
+                [
+                  29.41935483870967,
+                  0.0,
+                  0.0
+                ],
+                [
+                  30.96774193548386,
+                  0.0,
+                  0.0
+                ],
+                [
+                  32.51612903225806,
+                  0.0,
+                  0.0
+                ],
+                [
+                  34.06451612903225,
+                  0.0,
+                  0.0
+                ],
+                [
+                  35.61290322580644,
+                  0.0,
+                  0.0
+                ],
+                [
+                  37.16129032258063,
+                  0.0,
+                  0.0
+                ],
+                [
+                  38.709677419354826,
+                  0.0,
+                  0.0
+                ],
+                [
+                  40.25806451612902,
+                  0.0,
+                  0.0
+                ],
+                [
+                  41.80645161290321,
+                  0.0,
+                  0.0
+                ],
+                [
+                  43.3548387096774,
+                  0.0,
+                  0.0
+                ],
+                [
+                  44.903225806451594,
+                  0.0,
+                  0.0
+                ],
+                [
+                  46.45161290322579,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ]
+            }
+          ],
+          "input_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+          "operation_input_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+          "api": "FreeCAD Part.Shape.makeFillet / OCCT BRepFilletAPI_MakeFillet",
+          "runtime": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "source_feature_verified": false,
+          "output_stats": {
+            "null": false,
+            "valid": true,
+            "shape_type": "Compound",
+            "solids": 0,
+            "shells": 1,
+            "faces": 3,
+            "edges": 10,
+            "vertices": 8,
+            "area": 3652.8261402583857,
+            "volume": 0.0,
+            "bbox": [
+              -6.000000000000002,
+              -38.000000000000014,
+              -1.7763568394002505e-15,
+              68.0,
+              1.7763568394002505e-15,
+              32.0
+            ],
+            "closed_solids": true
+          },
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 3652.826140258385,
+              "volume": 0.0,
+              "bbox": [
+                -6.000000000000002,
+                -38.000000000000014,
+                -1.7763568394002505e-15,
+                68.0,
+                1.7763568394002505e-15,
+                32.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "f3a0db107b432113fc734600e4eaf46351d323d8241695c96cf4846cbaaa0dc4"
+          },
+          "error_type": "ValueError",
+          "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+          "traceback": "Traceback (most recent call last):\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 230, in run_case\n    attempt['roundtrip_brep']=roundtrip(result,brep);attempt['roundtrip_step']=roundtrip(result,step)\n                                                                               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 118, in roundtrip\n    restored=read(path); st=check_native(restored); reference=stats(result)\n                            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py\", line 44, in check_native\n    s.check(True)  # Raises on BRepCheck/BOPCheck problems.\n    ^^^^^^^^^^^^^\nValueError: BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n\n",
+          "elapsed_seconds": 0.04308695800136775,
+          "finished_at": "2026-10-18T19:00:55.173170+08:00"
+        },
+        "part_number": 1,
+        "historical_source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "scope_notice": "OCC 实际圆角 · R = 6 mm · 生成 BREP / STEP 回读未通过。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "generated_export_failed",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "index": 1,
+          "length": 48.0,
+          "curve": "Line",
+          "endpoints": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "center": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "adjacent_faces": [
+            1,
+            2
+          ],
+          "surface_types": [
+            "Plane",
+            "Plane"
+          ],
+          "index_1based": 1,
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 1,
+          "length": 48.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            24.0,
+            0.0,
+            0.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.5483870967741935,
+              0.0,
+              0.0
+            ],
+            [
+              3.096774193548387,
+              0.0,
+              0.0
+            ],
+            [
+              4.64516129032258,
+              0.0,
+              0.0
+            ],
+            [
+              6.193548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              7.741935483870968,
+              0.0,
+              0.0
+            ],
+            [
+              9.290322580645162,
+              0.0,
+              0.0
+            ],
+            [
+              10.838709677419356,
+              0.0,
+              0.0
+            ],
+            [
+              12.38709677419355,
+              0.0,
+              0.0
+            ],
+            [
+              13.935483870967744,
+              0.0,
+              0.0
+            ],
+            [
+              15.483870967741938,
+              0.0,
+              0.0
+            ],
+            [
+              17.03225806451613,
+              0.0,
+              0.0
+            ],
+            [
+              18.580645161290324,
+              0.0,
+              0.0
+            ],
+            [
+              20.129032258064516,
+              0.0,
+              0.0
+            ],
+            [
+              21.677419354838708,
+              0.0,
+              0.0
+            ],
+            [
+              23.2258064516129,
+              0.0,
+              0.0
+            ],
+            [
+              24.774193548387093,
+              0.0,
+              0.0
+            ],
+            [
+              26.322580645161285,
+              0.0,
+              0.0
+            ],
+            [
+              27.870967741935477,
+              0.0,
+              0.0
+            ],
+            [
+              29.41935483870967,
+              0.0,
+              0.0
+            ],
+            [
+              30.96774193548386,
+              0.0,
+              0.0
+            ],
+            [
+              32.51612903225806,
+              0.0,
+              0.0
+            ],
+            [
+              34.06451612903225,
+              0.0,
+              0.0
+            ],
+            [
+              35.61290322580644,
+              0.0,
+              0.0
+            ],
+            [
+              37.16129032258063,
+              0.0,
+              0.0
+            ],
+            [
+              38.709677419354826,
+              0.0,
+              0.0
+            ],
+            [
+              40.25806451612902,
+              0.0,
+              0.0
+            ],
+            [
+              41.80645161290321,
+              0.0,
+              0.0
+            ],
+            [
+              43.3548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              44.903225806451594,
+              0.0,
+              0.0
+            ],
+            [
+              46.45161290322579,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            1,
+            2
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.5483870967741935,
+              0.0,
+              0.0
+            ],
+            [
+              3.096774193548387,
+              0.0,
+              0.0
+            ],
+            [
+              4.64516129032258,
+              0.0,
+              0.0
+            ],
+            [
+              6.193548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              7.741935483870968,
+              0.0,
+              0.0
+            ],
+            [
+              9.290322580645162,
+              0.0,
+              0.0
+            ],
+            [
+              10.838709677419356,
+              0.0,
+              0.0
+            ],
+            [
+              12.38709677419355,
+              0.0,
+              0.0
+            ],
+            [
+              13.935483870967744,
+              0.0,
+              0.0
+            ],
+            [
+              15.483870967741938,
+              0.0,
+              0.0
+            ],
+            [
+              17.03225806451613,
+              0.0,
+              0.0
+            ],
+            [
+              18.580645161290324,
+              0.0,
+              0.0
+            ],
+            [
+              20.129032258064516,
+              0.0,
+              0.0
+            ],
+            [
+              21.677419354838708,
+              0.0,
+              0.0
+            ],
+            [
+              23.2258064516129,
+              0.0,
+              0.0
+            ],
+            [
+              24.774193548387093,
+              0.0,
+              0.0
+            ],
+            [
+              26.322580645161285,
+              0.0,
+              0.0
+            ],
+            [
+              27.870967741935477,
+              0.0,
+              0.0
+            ],
+            [
+              29.41935483870967,
+              0.0,
+              0.0
+            ],
+            [
+              30.96774193548386,
+              0.0,
+              0.0
+            ],
+            [
+              32.51612903225806,
+              0.0,
+              0.0
+            ],
+            [
+              34.06451612903225,
+              0.0,
+              0.0
+            ],
+            [
+              35.61290322580644,
+              0.0,
+              0.0
+            ],
+            [
+              37.16129032258063,
+              0.0,
+              0.0
+            ],
+            [
+              38.709677419354826,
+              0.0,
+              0.0
+            ],
+            [
+              40.25806451612902,
+              0.0,
+              0.0
+            ],
+            [
+              41.80645161290321,
+              0.0,
+              0.0
+            ],
+            [
+              43.3548387096774,
+              0.0,
+              0.0
+            ],
+            [
+              44.903225806451594,
+              0.0,
+              0.0
+            ],
+            [
+              46.45161290322579,
+              0.0,
+              0.0
+            ],
+            [
+              48.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+          "targets": [
+            {
+              "index": 1,
+              "length": 48.0,
+              "curve": "Line",
+              "endpoints": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "center": [
+                24.0,
+                0.0,
+                0.0
+              ],
+              "adjacent_faces": [
+                1,
+                2
+              ],
+              "surface_types": [
+                "Plane",
+                "Plane"
+              ],
+              "index_1based": 1,
+              "samples_mm": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  48.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008",
+            "targets": [
+              {
+                "index_1based": 1,
+                "length": 48.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  48.0,
+                  0.0,
+                  0.0
+                ],
+                "midpoint": [
+                  24.0,
+                  0.0,
+                  0.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.5483870967741935,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.096774193548387,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.64516129032258,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.193548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.741935483870968,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.290322580645162,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.838709677419356,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    12.38709677419355,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    13.935483870967744,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    15.483870967741938,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    17.03225806451613,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    18.580645161290324,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    20.129032258064516,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    21.677419354838708,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    23.2258064516129,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    24.774193548387093,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    26.322580645161285,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    27.870967741935477,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    29.41935483870967,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    30.96774193548386,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    32.51612903225806,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    34.06451612903225,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    35.61290322580644,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    37.16129032258063,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    38.709677419354826,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    40.25806451612902,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    41.80645161290321,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    43.3548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    44.903225806451594,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    46.45161290322579,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    48.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  1,
+                  2
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.5483870967741935,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.096774193548387,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.64516129032258,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.193548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.741935483870968,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.290322580645162,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.838709677419356,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    12.38709677419355,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    13.935483870967744,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    15.483870967741938,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    17.03225806451613,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    18.580645161290324,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    20.129032258064516,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    21.677419354838708,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    23.2258064516129,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    24.774193548387093,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    26.322580645161285,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    27.870967741935477,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    29.41935483870967,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    30.96774193548386,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    32.51612903225806,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    34.06451612903225,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    35.61290322580644,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    37.16129032258063,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    38.709677419354826,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    40.25806451612902,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    41.80645161290321,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    43.3548387096774,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    44.903225806451594,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    46.45161290322579,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    48.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    }
+  ],
+  "default_variant": "part01-r6",
+  "source_spec": {
+    "number": 22,
+    "case_id": "73-41_laminar-1312",
+    "title": "两片不等宽平面相交的薄片体",
+    "status": "pending",
+    "human_note": "",
+    "has_model": true,
+    "snapshot": {
+      "reference_crop": [
+        0.38,
+        0.42,
+        0.69,
+        0.65
+      ],
+      "source_sha256": "3cf903f890efdded3fe0d9b9de7e0473cdd02c729e71945ce8e6b21c6b7e340e",
+      "brep_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8"
+    },
+    "files": {
+      "brep": "data/original-occ/fixtures/0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8.brep",
+      "step": "history:outputs/parasolid-preblend/models/73-41_laminar-1312.step",
+      "freecad": "history:outputs/parasolid-preblend/models/73-41_laminar-1312.FCStd"
+    },
+    "assumptions": "对应 Figure 73-41 上方输入。竖直矩形片面与向前加宽的梯形片面沿一条完整直棱相连，保留其开边与不等宽外边界；两片均零厚度，不把片体误建为实体。原图透视不能唯一确定外边尺寸，梯形外扩比例为推定。",
+    "annotation": null,
+    "review_results": {},
+    "test_spec": {
+      "schema_version": 1,
+      "case_id": "73-41_laminar-1312",
+      "spec_status": "ordinary_fillet_batch_executed_reference_feature_pending",
+      "input_brep_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "scope_notice": "OCC 实际圆角 · R = 6 mm · 生成 BREP / STEP 回读未通过。原图特殊模式尚未验证；选边与外形待人工核对。",
+      "local_demo": {
+        "status": "generated_export_failed",
+        "title": "OCC 实际圆角 · R = 6 mm · 生成 BREP / STEP 回读未通过",
+        "radius_text": "R = 6 mm",
+        "panel_title": "R = 6 mm · STEP 回读失败",
+        "radius": 6.0,
+        "before_caption": "红色是本次选中的边，含遮挡边投影；精确边号、各部件半径见页面。",
+        "after_caption": "橙色标出可确认新增的解析面；其他新曲面保持部件色。",
+        "caption": "PDF 原图 → 重建输入 → 实际结果。中、右模型使用同一相机与比例，选边与各半径尝试见下表。",
+        "scope_note": "右图有实际生成的 BREP，但 STEP 回读未通过，不计为校验成功。本次为 OCC 普通等半径圆角的本地实算；半径是重建模型中的示范值，非 PDF 标定尺寸。原图特殊模式和外形对应仍待人工核验。",
+        "outputs": {
+          "全部半径与异常记录": "history:outputs/manual-review/diagnostics/batch/case22/summary.json",
+          "候选 BREP 1 · STEP 未通过": "data/original-occ/fixtures/5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb.brep"
+        },
+        "input_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "result_artifacts": [
+          {
+            "brep": "data/original-occ/fixtures/5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb.brep",
+            "sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb",
+            "accepted": false
+          }
+        ],
+        "executed_at": "2026-10-18T19:00:55.025715+08:00",
+        "batch_parts": [
+          {
+            "label": "L_sheet_body",
+            "part_number": 1,
+            "status": "failed",
+            "selected_radius": null,
+            "edge_indices": [
+              1
+            ],
+            "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+            "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+            "preprocess": {
+              "type": "none"
+            },
+            "reason": "All explicitly requested radius attempts failed; see attempts",
+            "attempts": [
+              {
+                "radius": 6.0,
+                "status": "failed",
+                "stage": "STEP 导出回读未通过",
+                "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+                "native_operation_succeeded": true
+              },
+              {
+                "radius": 3.0,
+                "status": "failed",
+                "stage": "STEP 导出回读未通过",
+                "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+                "native_operation_succeeded": true
+              },
+              {
+                "radius": 10.0,
+                "status": "failed",
+                "stage": "STEP 导出回读未通过",
+                "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "source_notes": [
+          "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。"
+        ],
+        "preprocess_notes": [],
+        "summary_sha256": "e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7",
+        "audit_preview_index_sha256": "18d2e70a939f09aedff46b3d1a175a9ff260321449b953f70fa5ba4228a16c75",
+        "accepted_operation_groups": 0,
+        "export_rejected_operation_groups": 1,
+        "failed_operation_groups": 0,
+        "auxiliary_parts": 0,
+        "summary": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+      },
+      "batch_execution": {
+        "status": "generated_export_failed",
+        "parts": [
+          {
+            "label": "L_sheet_body",
+            "part_number": 1,
+            "status": "failed",
+            "selected_radius": null,
+            "edge_indices": [
+              1
+            ],
+            "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+            "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+            "preprocess": {
+              "type": "none"
+            },
+            "reason": "All explicitly requested radius attempts failed; see attempts",
+            "attempts": [
+              {
+                "radius": 6.0,
+                "status": "failed",
+                "stage": "STEP 导出回读未通过",
+                "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+                "native_operation_succeeded": true
+              },
+              {
+                "radius": 3.0,
+                "status": "failed",
+                "stage": "STEP 导出回读未通过",
+                "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+                "native_operation_succeeded": true
+              },
+              {
+                "radius": 10.0,
+                "status": "failed",
+                "stage": "STEP 导出回读未通过",
+                "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "summary_file": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+      },
+      "display_fields": [
+        {
+          "label": "选边与半径",
+          "value": "1. L_sheet_body：见尝试表；两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。"
+        },
+        {
+          "label": "原图功能与本地普通圆角的区别",
+          "value": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。"
+        },
+        {
+          "label": "验证范围",
+          "value": "分别记录 OCC 构建、原生 BREP/BOP 检查、BREP 与 STEP 导出回读。页面展示不是人工确认，也不代表原图特殊模式已经实现。"
+        }
+      ],
+      "execution": {
+        "target_operation_executed": true,
+        "ordinary_common_edge_fillet_executed": true,
+        "source_reference_feature_verified": false,
+        "scored": false,
+        "batch_status": "generated_export_failed",
+        "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+      },
+      "reference_figure_crop": [
+        0.225,
+        0.415,
+        0.857,
+        0.79
+      ],
+      "reference_figure_caption": "原 PDF 完整图形区域，包含本图参考输入、结果及相关标注；可打开整页核对。",
+      "applies_to_current_input": true
+    },
+    "variants": [],
+    "local_demo": {
+      "status": "generated_export_failed",
+      "title": "OCC 实际圆角 · R = 6 mm · 生成 BREP / STEP 回读未通过",
+      "radius_text": "R = 6 mm",
+      "panel_title": "R = 6 mm · STEP 回读失败",
+      "radius": 6.0,
+      "before_caption": "红色是本次选中的边，含遮挡边投影；精确边号、各部件半径见页面。",
+      "after_caption": "橙色标出可确认新增的解析面；其他新曲面保持部件色。",
+      "caption": "PDF 原图 → 重建输入 → 实际结果。中、右模型使用同一相机与比例，选边与各半径尝试见下表。",
+      "scope_note": "右图有实际生成的 BREP，但 STEP 回读未通过，不计为校验成功。本次为 OCC 普通等半径圆角的本地实算；半径是重建模型中的示范值，非 PDF 标定尺寸。原图特殊模式和外形对应仍待人工核验。",
+      "outputs": {
+        "全部半径与异常记录": "history:outputs/manual-review/diagnostics/batch/case22/summary.json",
+        "候选 BREP 1 · STEP 未通过": "data/original-occ/fixtures/5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb.brep"
+      },
+      "input_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+      "result_artifacts": [
+        {
+          "brep": "data/original-occ/fixtures/5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb.brep",
+          "sha256": "5fe10a736f63d7be97a840210f6045d32df51884576b7081fc30ec3cdb70dceb",
+          "accepted": false
+        }
+      ],
+      "executed_at": "2026-10-18T19:00:55.025715+08:00",
+      "batch_parts": [
+        {
+          "label": "L_sheet_body",
+          "part_number": 1,
+          "status": "failed",
+          "selected_radius": null,
+          "edge_indices": [
+            1
+          ],
+          "selection_note": "两张零厚度片面的完整公共直边：(0,0,0)→(48,0,0)，邻面 1/2。",
+          "source_feature_note": "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。",
+          "preprocess": {
+            "type": "none"
+          },
+          "reason": "All explicitly requested radius attempts failed; see attempts",
+          "attempts": [
+            {
+              "radius": 6.0,
+              "status": "failed",
+              "stage": "STEP 导出回读未通过",
+              "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+              "native_operation_succeeded": true
+            },
+            {
+              "radius": 3.0,
+              "status": "failed",
+              "stage": "STEP 导出回读未通过",
+              "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+              "native_operation_succeeded": true
+            },
+            {
+              "radius": 10.0,
+              "status": "failed",
+              "stage": "STEP 导出回读未通过",
+              "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+              "native_operation_succeeded": true
+            }
+          ]
+        }
+      ],
+      "source_notes": [
+        "PDF Figure 73-41 比较 laminar_trim 两种片体圆角侧边裁剪：trim_edges（沿所有底层面边界连续修剪，默认）与 trim_bound（修到最宽底层面边界，圆角侧边取恒参数线）。实际输入为两面共边开壳；普通 makeFillet 没有这两个显式 Parasolid 模式参数，本次只生成普通片体共边圆角，不能视为两种裁剪模式均已实现。"
+      ],
+      "preprocess_notes": [],
+      "summary_sha256": "e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7",
+      "audit_preview_index_sha256": "18d2e70a939f09aedff46b3d1a175a9ff260321449b953f70fa5ba4228a16c75",
+      "accepted_operation_groups": 0,
+      "export_rejected_operation_groups": 1,
+      "failed_operation_groups": 0,
+      "auxiliary_parts": 0,
+      "summary": "history:outputs/manual-review/diagnostics/batch/case22/summary.json"
+    },
+    "test_spec_file": "case-specs/73-41_laminar-1312.json"
+  },
+  "history_documents": [
+    {
+      "path": "data/original-occ/history/e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7.json",
+      "original_sha256": "e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case22/summary.json",
+      "sanitized_sha256": "75a5591cad8f1a5bfe1a73650ff6f2c9bf7f58042cefe4e15d2d66de7aa1b5bc"
+    },
+    {
+      "path": "data/original-occ/history/562e07b7430311a7605043f5ee1c84aefbfb035955f5d7f61095575e8137c6ea.json",
+      "original_sha256": "562e07b7430311a7605043f5ee1c84aefbfb035955f5d7f61095575e8137c6ea",
+      "original_path": "history:outputs/manual-review/case-specs/73-41_laminar-1312.json",
+      "sanitized_sha256": "19ad3a0a9700ebe7b89937be192bfa3a3aa797b5a3c1b295612c704a5e3da084"
+    }
+  ],
+  "historical_ordinary": {
+    "summary": {
+      "path": "outputs/manual-review/diagnostics/batch/case22/summary.json",
+      "exists": true,
+      "sha256": "e0a2cf8947c5026041c01e255d7484d2e05ca3f39647489b0d43028e52a71aa7",
+      "bytes": 36606
+    },
+    "status": "failed",
+    "source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+    "runtime": {
+      "FreeCAD": [
+        "1",
+        "2",
+        "0",
+        "46770 (Git)",
+        "git://github.com/liyongzheng666/FreeCAD.git",
+        "2026/05/09 21:28:57",
+        "work/local-occt-integration",
+        "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+      ],
+      "OCCT": "7.8.1"
+    },
+    "scripts": {
+      "status": "recorded_source_version_missing",
+      "recorded_hashes": [
+        {
+          "field": ".worker_sha256",
+          "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+          "exact_source_paths": [],
+          "found": false
+        }
+      ],
+      "linked_sources": [],
+      "portable_command_available": false,
+      "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+    },
+    "attempts": [
+      {
+        "part_number": 1,
+        "part_label": "L_sheet_body",
+        "attempt_number": 1,
+        "radius_mm": 6.0,
+        "status": "failed",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+        "selected_edges": [
+          {
+            "index_1based": 1,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              48.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "operation_input_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008"
+      },
+      {
+        "part_number": 1,
+        "part_label": "L_sheet_body",
+        "attempt_number": 2,
+        "radius_mm": 3.0,
+        "status": "failed",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+        "selected_edges": [
+          {
+            "index_1based": 1,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              48.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "operation_input_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008"
+      },
+      {
+        "part_number": 1,
+        "part_label": "L_sheet_body",
+        "attempt_number": 3,
+        "radius_mm": 10.0,
+        "status": "failed",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": "BOP check found the following errors:\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\nError in Edge: BOPAlgo_InvalidCurveOnSurface\nError in Face: BOPAlgo_InvalidCurveOnSurface\n",
+        "selected_edges": [
+          {
+            "index_1based": 1,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              48.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+        "operation_input_sha256": "010fca9ffe801230036788a558a6e26a1418936c824feccf988a85a074782008"
+      }
+    ],
+    "source_matches_current_review": true
+  },
+  "review_results": {},
+  "provenance": {
+    "kind": "historical_source_freeze",
+    "not_a_rerun": true,
+    "source_dimensions": "inferred reconstruction; not original vendor CAD",
+    "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+    "no_reference_artwork_distributed": true
+  }
+}

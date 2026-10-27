@@ -2,7 +2,7 @@
 
 [打开对比网站](https://liyongzheng666.github.io/filletbench/) · [评测方法](docs/methodology.md) · [贡献案例](CONTRIBUTING.md)
 
-原始参考、OCCT、SMLib，在同一页面核对。保留失败、空结果、碎片和自交；**API 成功不是功能通过**。本库目前是探索性测评集，尚未建立可用于内核排名的统一通过率。
+默认打开此前逐项人工调教的 **原版 OCC 系列**：原 PDF / 原基础模型与选边 / 实际处理结果。另保留独立的 OCC–SMLib 对照实验集合。保留失败、空结果、碎片和自交；**API 成功不是功能通过**。本库目前是探索性测评集，尚未建立可用于内核排名的统一通过率。
 
 ## 快速开始
 
@@ -22,7 +22,31 @@ python bench.py serve
 
 打开 `http://127.0.0.1:8740/`。不安装内核也能查看已发布的实际网格与测量摘要。[配置 SMLib](docs/smlib.md) 后，用 `--engine both` 在相同请求上运行两者。原生调用失败、超时及缺依赖均记录到本地 `runs/`，不覆盖已发布证据。
 
-## 收录范围
+## 按原版实际处理
+
+原版系列保留 **34 组模型、1 个说明项、129 个原有参数/视图**，其中 128 个计算变体已绑定本次真实复跑，1 个仅输入的辅助叶片保持不计算。50 个原页面变体 ID、人工备注、选边/选面及参数顺序完整保留。
+
+基础模型使用原版冻结的精确 BREP，**本轮没有从参数重新创建基础几何，也没有更改模型外形**。重新执行的是提取部件、必要的缝合/裁剪/延伸、原生圆角或显式组合流程。网页可切换“原基础模型”与“实际操作输入”；二者分别保存，不能互相冒充。
+
+```sh
+# 第22项：原共边、原 R6，保留 STEP 回读失败门
+python bench.py original --case 22 --variant part01-r6 --out runs/my-case22
+# 第18项：原片体封口组合，和原生自动封口分开
+python bench.py original --case 18 --variant sheet-r8 --out runs/my-case18
+# 完整原版当前请求与组合；输出到新的目录，不覆盖旧证据
+python bench.py original --all --out runs/my-original-suite
+# 用此次运行更新本地查看器，其他原版视图保持原记录
+python bench.py build-original --suite-run runs/my-original-suite
+python bench.py serve
+```
+
+原 native runner 144 次实际调用中，129 条是当前原版输入的 `from_base` 处理，15 条旧修订输入单独保留为历史 prepared replay。后者不进入当前默认展示。原组合 33 个视图绑定31次独特实际执行，另有第35项三档 G2 代理新执行。失败 BREP 候选仍展示，只有未返回结果时才用输入兜底并明确标注。
+
+[原版数据与身份边界](data/original-occ/README.md) · [原生复跑](docs/original-occ-native.md) · [组合复跑](docs/original-occ-compositions.md) · [独立审计](docs/original-series-audit.md)
+
+网页默认 `#series=original&case=22&variant=part01-r6`。以下普通请求及 SMLib 结果属于 **另一个实验集合**，不能替代原版人工调教协议；用 `#series=comparison` 查看。
+
+## 独立对照实验收录范围
 
 - **34 组模型**：编号 01–28、30–31、33–36；29 按人工意见移除，32 是说明项，保留编号空位。
 - **104 个普通边圆角请求**：86 个可执行请求；18 个因当前输入/操作类型不适合这条 adapter 路线而阻塞。这不是内核“不支持”的结论。

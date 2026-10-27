@@ -1,0 +1,5703 @@
+{
+  "schema": "filletbench.original-occ.v1",
+  "number": 17,
+  "id": "73-35_to_37_caps-1306",
+  "title": "以本体端面封口的带槽阶台输入",
+  "has_model": true,
+  "source_brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+  "source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+  "recorded_source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+  "human_status": "pending",
+  "human_note": "",
+  "reference": {
+    "page": 1306,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.008772407407407416,
+      0.4350308641975309,
+      0.8850685185185185,
+      0.7663734567901235
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed whole-figure crop; converted from MediaBox to verified PDF CropBox",
+    "input_only_crop_used": false,
+    "crop_coordinate_system": "pdfjs_cropbox_normalized_top_left",
+    "source_media_box": [
+      0.0,
+      0.0,
+      595.22,
+      842.0
+    ],
+    "pdf_crop_box": [
+      28.0,
+      97.0,
+      568.0,
+      745.0
+    ],
+    "source_media_box_crop": [
+      0.055,
+      0.45,
+      0.85,
+      0.705
+    ]
+  },
+  "base_targets": [
+    {
+      "index_1based": 6,
+      "length": 70.0,
+      "curve_type": "Line",
+      "start": [
+        0.0,
+        29.0,
+        12.0
+      ],
+      "end": [
+        70.0,
+        29.0,
+        12.0
+      ],
+      "midpoint": [
+        35.0,
+        29.0,
+        12.0
+      ],
+      "polyline": [
+        [
+          0.0,
+          29.0,
+          12.0
+        ],
+        [
+          2.2580645161290325,
+          29.0,
+          12.0
+        ],
+        [
+          4.516129032258065,
+          29.0,
+          12.0
+        ],
+        [
+          6.774193548387098,
+          29.0,
+          12.0
+        ],
+        [
+          9.03225806451613,
+          29.0,
+          12.0
+        ],
+        [
+          11.290322580645162,
+          29.0,
+          12.0
+        ],
+        [
+          13.548387096774194,
+          29.0,
+          12.0
+        ],
+        [
+          15.806451612903226,
+          29.0,
+          12.0
+        ],
+        [
+          18.06451612903226,
+          29.0,
+          12.0
+        ],
+        [
+          20.322580645161292,
+          29.0,
+          12.0
+        ],
+        [
+          22.580645161290324,
+          29.0,
+          12.0
+        ],
+        [
+          24.838709677419356,
+          29.0,
+          12.0
+        ],
+        [
+          27.096774193548388,
+          29.0,
+          12.0
+        ],
+        [
+          29.35483870967742,
+          29.0,
+          12.0
+        ],
+        [
+          31.612903225806452,
+          29.0,
+          12.0
+        ],
+        [
+          33.87096774193549,
+          29.0,
+          12.0
+        ],
+        [
+          36.12903225806452,
+          29.0,
+          12.0
+        ],
+        [
+          38.38709677419355,
+          29.0,
+          12.0
+        ],
+        [
+          40.645161290322584,
+          29.0,
+          12.0
+        ],
+        [
+          42.903225806451616,
+          29.0,
+          12.0
+        ],
+        [
+          45.16129032258065,
+          29.0,
+          12.0
+        ],
+        [
+          47.41935483870968,
+          29.0,
+          12.0
+        ],
+        [
+          49.67741935483871,
+          29.0,
+          12.0
+        ],
+        [
+          51.935483870967744,
+          29.0,
+          12.0
+        ],
+        [
+          54.193548387096776,
+          29.0,
+          12.0
+        ],
+        [
+          56.45161290322581,
+          29.0,
+          12.0
+        ],
+        [
+          58.70967741935484,
+          29.0,
+          12.0
+        ],
+        [
+          60.96774193548387,
+          29.0,
+          12.0
+        ],
+        [
+          63.225806451612904,
+          29.0,
+          12.0
+        ],
+        [
+          65.48387096774194,
+          29.0,
+          12.0
+        ],
+        [
+          67.74193548387098,
+          29.0,
+          12.0
+        ],
+        [
+          70.0,
+          29.0,
+          12.0
+        ]
+      ],
+      "adjacent_faces_1based": [
+        2,
+        4
+      ],
+      "samples_mm": [
+        [
+          0.0,
+          29.0,
+          12.0
+        ],
+        [
+          2.2580645161290325,
+          29.0,
+          12.0
+        ],
+        [
+          4.516129032258065,
+          29.0,
+          12.0
+        ],
+        [
+          6.774193548387098,
+          29.0,
+          12.0
+        ],
+        [
+          9.03225806451613,
+          29.0,
+          12.0
+        ],
+        [
+          11.290322580645162,
+          29.0,
+          12.0
+        ],
+        [
+          13.548387096774194,
+          29.0,
+          12.0
+        ],
+        [
+          15.806451612903226,
+          29.0,
+          12.0
+        ],
+        [
+          18.06451612903226,
+          29.0,
+          12.0
+        ],
+        [
+          20.322580645161292,
+          29.0,
+          12.0
+        ],
+        [
+          22.580645161290324,
+          29.0,
+          12.0
+        ],
+        [
+          24.838709677419356,
+          29.0,
+          12.0
+        ],
+        [
+          27.096774193548388,
+          29.0,
+          12.0
+        ],
+        [
+          29.35483870967742,
+          29.0,
+          12.0
+        ],
+        [
+          31.612903225806452,
+          29.0,
+          12.0
+        ],
+        [
+          33.87096774193549,
+          29.0,
+          12.0
+        ],
+        [
+          36.12903225806452,
+          29.0,
+          12.0
+        ],
+        [
+          38.38709677419355,
+          29.0,
+          12.0
+        ],
+        [
+          40.645161290322584,
+          29.0,
+          12.0
+        ],
+        [
+          42.903225806451616,
+          29.0,
+          12.0
+        ],
+        [
+          45.16129032258065,
+          29.0,
+          12.0
+        ],
+        [
+          47.41935483870968,
+          29.0,
+          12.0
+        ],
+        [
+          49.67741935483871,
+          29.0,
+          12.0
+        ],
+        [
+          51.935483870967744,
+          29.0,
+          12.0
+        ],
+        [
+          54.193548387096776,
+          29.0,
+          12.0
+        ],
+        [
+          56.45161290322581,
+          29.0,
+          12.0
+        ],
+        [
+          58.70967741935484,
+          29.0,
+          12.0
+        ],
+        [
+          60.96774193548387,
+          29.0,
+          12.0
+        ],
+        [
+          63.225806451612904,
+          29.0,
+          12.0
+        ],
+        [
+          65.48387096774194,
+          29.0,
+          12.0
+        ],
+        [
+          67.74193548387098,
+          29.0,
+          12.0
+        ],
+        [
+          70.0,
+          29.0,
+          12.0
+        ]
+      ]
+    }
+  ],
+  "base_annotation_groups": {},
+  "selection": {
+    "base": {
+      "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "targets": [
+        {
+          "index_1based": 6,
+          "length": 70.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            29.0,
+            12.0
+          ],
+          "end": [
+            70.0,
+            29.0,
+            12.0
+          ],
+          "midpoint": [
+            35.0,
+            29.0,
+            12.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            2,
+            4
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ]
+        }
+      ],
+      "selected_faces": []
+    }
+  },
+  "variants": [
+    {
+      "id": "cap-r8",
+      "label": "R8 封口构造",
+      "title": "蓝面 C 截住圆角",
+      "method": "explicit_occ_composition",
+      "parameters": {
+        "summary": "R=8mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+        "radius_text": "R = 8 mm",
+        "construction": null,
+        "trial": {
+          "id": "cap-r8",
+          "radius": 8.0,
+          "cap_plane_x": 29.0,
+          "fillet_interval_x": [
+            0.0,
+            29.0
+          ],
+          "sharp_interval_x": [
+            29.0,
+            70.0
+          ]
+        }
+      },
+      "radius_mm": 8.0,
+      "base_brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+      "base_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+          "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "original_path": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.brep",
+          "label": "historical base input; operation preparation recorded in source_spec",
+          "selected_edges": [
+            {
+              "index_1based": 6,
+              "length": 70.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                29.0,
+                12.0
+              ],
+              "end": [
+                70.0,
+                29.0,
+                12.0
+              ],
+              "midpoint": [
+                35.0,
+                29.0,
+                12.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                2,
+                4
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": null,
+          "recorded_hash_matches": null,
+          "selection_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+          "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a",
+          "original_path": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.brep",
+          "recorded_sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a",
+          "recorded_hash_matches": true,
+          "mesh_path_as_local_history": [
+            "outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8-mesh.json"
+          ]
+        }
+      ],
+      "historical_status": "success",
+      "historical_checks": {
+        "status": "success",
+        "native_automatic_capping_api_used": false
+      },
+      "human_status": "pending",
+      "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+      "source_spec": {
+        "variant": {
+          "id": "cap-r8",
+          "name": "R8 封口构造",
+          "title": "蓝面 C 截住圆角",
+          "parameter_summary": "R=8mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+          "human_status": "pending",
+          "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+          "demo": {
+            "status": "success",
+            "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+            "panel_title": "R8 / 显式组合封口",
+            "status_label": "封口组合几何通过 / 原生自动封口未验证",
+            "radius": 8.0,
+            "radius_text": "R = 8 mm",
+            "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+            "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+            "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+            "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+            "outputs": {
+              "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+              "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+              "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+              "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+              "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+              "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+              "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+              "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+            },
+            "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "result_artifacts": [
+              {
+                "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+                "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+              }
+            ],
+            "executed_at": "2026-10-18T22:56:25.666475+08:00",
+            "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+            "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "method_kind": "explicit_occ_composition",
+            "accepted_operation_groups": 0,
+            "constructed_limit_demo_groups": 2,
+            "export_rejected_operation_groups": 0,
+            "failed_operation_groups": 0,
+            "native_automatic_capping_api_used": false,
+            "source_notes": [
+              "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+            ],
+            "batch_parts": [],
+            "preprocess_notes": [
+              "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+            ]
+          }
+        },
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+          "explicit_capping_demo_executed": true,
+          "existing_cap_plane_applied": true,
+          "native_automatic_capping_api_used": false,
+          "native_direct_attempt_target_succeeded": false,
+          "capping_geometry_verified": true
+        },
+        "feature_assessment": {
+          "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "run_summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+          "target_feature": "trim_blend_to_existing_body_face_with_face_extension",
+          "target_status": "explicit_composition_geometry_verified_native_direct_target_not_met",
+          "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+          "demo_overrides": {
+            "status": "success",
+            "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+            "panel_title": "R8 / 显式组合封口",
+            "status_label": "封口组合几何通过 / 原生自动封口未验证",
+            "radius": 8.0,
+            "radius_text": "R = 8 mm",
+            "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+            "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+            "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+            "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+            "outputs": {
+              "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+              "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+              "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+              "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+              "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+              "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+              "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+              "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+            },
+            "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "result_artifacts": [
+              {
+                "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+                "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+              }
+            ],
+            "executed_at": "2026-10-18T22:56:25.666475+08:00",
+            "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+            "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "method_kind": "explicit_occ_composition",
+            "accepted_operation_groups": 0,
+            "constructed_limit_demo_groups": 2,
+            "export_rejected_operation_groups": 0,
+            "failed_operation_groups": 0,
+            "native_automatic_capping_api_used": false,
+            "source_notes": [
+              "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+            ],
+            "batch_parts": [],
+            "preprocess_notes": [
+              "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+            ]
+          },
+          "execution_overrides": {
+            "target_operation_executed": true,
+            "explicit_capping_demo_executed": true,
+            "ordinary_common_edge_fillet_executed": true,
+            "existing_cap_plane_applied": true,
+            "native_automatic_capping_api_used": false,
+            "native_direct_attempt_target_succeeded": false,
+            "source_reference_feature_verified": false,
+            "scored": false,
+            "capping_geometry_verified": true,
+            "actual_run_report": "history:outputs/manual-review/diagnostics/case17-capping/summary.json"
+          },
+          "display_fields": [
+            {
+              "label": "选边与半径",
+              "value": "主图R8，另有R4封口对照；原Edge6根棱的x0..29左段做圆角，Face9蓝面支撑x=29截住端部。R2仅为完整原体的普通圆角历史基线。"
+            },
+            {
+              "label": "原图功能与本地普通圆角的区别",
+              "value": "原图要求圆角裁剪到指定本体面，必要时延伸封口面。普通整条圆角没有传入此约束；本轮展示显式分体圆角与布尔合回，真实几何满足左侧封口、右侧尖棱。"
+            },
+            {
+              "label": "封口位置与保留方向",
+              "value": "原蓝色槽侧面 Face9，支撑平面x=29mm，原范围y29..38/z15..41。左侧圆角x=0..29；右侧x=29..70保持尖棱。输入root为Edge6，y29/z12。"
+            },
+            {
+              "label": "本轮实际方法",
+              "value": "同一原体在原蓝面支撑平面x=29处分割；左部对根棱做原生R8或R4圆角；与未圆角右部布尔合并。操作子体保留于run目录，原始输入三格式不变。"
+            },
+            {
+              "label": "完整原体普通圆角",
+              "value": "本轮重复R2成功，R4/R8均StdFail_NotDone。R2没有触及原有槽底，也没有提供蓝面封口参数，作为历史普通基线保留。"
+            },
+            {
+              "label": "另一条原生停止面接口",
+              "value": "BiTgte_Blend.SetStoppingFace(Face9)：R4/R8虽IsDone=true，却只返回开放Shell、0 Solid、14条非二面共用边；圆角还出现在x38..70右侧，未满足原图单侧封口。负半径没有生成圆角；均不算目标成功。"
+            },
+            {
+              "label": "独立验证",
+              "value": "R8/R4的BREP、STEP、FCStd共6文件全部有效闭合单实体；单张对应半径的解析圆柱；原蓝面保留，与共面延伸真实共享圆弧；右侧41mm尖棱保留。与独立CSG oracle双向差体积0，共6600解析占据样本0错误。"
+            },
+            {
+              "label": "能力判定",
+              "value": "封口几何通过显式OCC组合构造完成。完整原体makeFillet及BiTgte原生停止面尝试均未直接达到本例目标；不计原生自动capping能力通过，不推断所有其他OCC路线均不支持。人工尚未确认。"
+            }
+          ]
+        },
+        "summary_record_id": "cap-r8",
+        "summary_document": {
+          "path": "data/original-occ/history/5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53.json",
+          "original_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53"
+        },
+        "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json"
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_available",
+        "recorded_hashes": [
+          {
+            "field": ".script_sha256",
+            "expected_sha256": "1ae78bd458062966327859c18f0ac8f96029a000c8f5d6e923ae820cb236d0e7",
+            "exact_source_paths": [
+              "outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/case17_capping.py",
+              "history:external/scenarios/preblend_reconstruction/case17_capping.py"
+            ],
+            "found": true
+          }
+        ],
+        "linked_sources": [
+          {
+            "path": "outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+            "exists": true,
+            "sha256": "1ae78bd458062966327859c18f0ac8f96029a000c8f5d6e923ae820cb236d0e7",
+            "bytes": 7459
+          },
+          {
+            "path": "outputs/manual-review/diagnostics/case17-capping/code/independent_check.py",
+            "exists": true,
+            "sha256": "8f167b523466a1802cab3b1d722ec660f86d2913ab52a533904d283edbf14fe5",
+            "bytes": 13076
+          },
+          {
+            "path": "outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/case17_capping.py",
+            "exists": true,
+            "sha256": "1ae78bd458062966327859c18f0ac8f96029a000c8f5d6e923ae820cb236d0e7",
+            "bytes": 7459
+          }
+        ],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_page",
+      "base_targets": [
+        {
+          "index_1based": 6,
+          "length": 70.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            29.0,
+            12.0
+          ],
+          "end": [
+            70.0,
+            29.0,
+            12.0
+          ],
+          "midpoint": [
+            35.0,
+            29.0,
+            12.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            2,
+            4
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ]
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 6,
+          "length": 70.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            29.0,
+            12.0
+          ],
+          "end": [
+            70.0,
+            29.0,
+            12.0
+          ],
+          "midpoint": [
+            35.0,
+            29.0,
+            12.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            2,
+            4
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "targets": [
+            {
+              "index_1based": 6,
+              "length": 70.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                29.0,
+                12.0
+              ],
+              "end": [
+                70.0,
+                29.0,
+                12.0
+              ],
+              "midpoint": [
+                35.0,
+                29.0,
+                12.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                2,
+                4
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "targets": [
+              {
+                "index_1based": 6,
+                "length": 70.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                "end": [
+                  70.0,
+                  29.0,
+                  12.0
+                ],
+                "midpoint": [
+                  35.0,
+                  29.0,
+                  12.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    2.2580645161290325,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    4.516129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    6.774193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    9.03225806451613,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    11.290322580645162,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    13.548387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    15.806451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    18.06451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    20.322580645161292,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    22.580645161290324,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    24.838709677419356,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    27.096774193548388,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    29.35483870967742,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    31.612903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    33.87096774193549,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    36.12903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    38.38709677419355,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    40.645161290322584,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    42.903225806451616,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    45.16129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    47.41935483870968,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    49.67741935483871,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    51.935483870967744,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    54.193548387096776,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    56.45161290322581,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    58.70967741935484,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    60.96774193548387,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    63.225806451612904,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    65.48387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    67.74193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    70.0,
+                    29.0,
+                    12.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  2,
+                  4
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    2.2580645161290325,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    4.516129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    6.774193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    9.03225806451613,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    11.290322580645162,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    13.548387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    15.806451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    18.06451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    20.322580645161292,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    22.580645161290324,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    24.838709677419356,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    27.096774193548388,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    29.35483870967742,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    31.612903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    33.87096774193549,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    36.12903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    38.38709677419355,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    40.645161290322584,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    42.903225806451616,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    45.16129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    47.41935483870968,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    49.67741935483871,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    51.935483870967744,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    54.193548387096776,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    56.45161290322581,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    58.70967741935484,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    60.96774193548387,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    63.225806451612904,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    65.48387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    67.74193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    70.0,
+                    29.0,
+                    12.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "cap-r4",
+      "label": "R4 封口构造",
+      "title": "蓝面 C 截住圆角",
+      "method": "explicit_occ_composition",
+      "parameters": {
+        "summary": "R=4mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+        "radius_text": "R = 4 mm",
+        "construction": null,
+        "trial": {
+          "id": "cap-r4",
+          "radius": 4.0,
+          "cap_plane_x": 29.0,
+          "fillet_interval_x": [
+            0.0,
+            29.0
+          ],
+          "sharp_interval_x": [
+            29.0,
+            70.0
+          ]
+        }
+      },
+      "radius_mm": 4.0,
+      "base_brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+      "base_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+          "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "original_path": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.brep",
+          "label": "historical base input; operation preparation recorded in source_spec",
+          "selected_edges": [
+            {
+              "index_1based": 6,
+              "length": 70.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                29.0,
+                12.0
+              ],
+              "end": [
+                70.0,
+                29.0,
+                12.0
+              ],
+              "midpoint": [
+                35.0,
+                29.0,
+                12.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                2,
+                4
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": null,
+          "recorded_hash_matches": null,
+          "selection_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+          "sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8",
+          "original_path": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.brep",
+          "recorded_sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8",
+          "recorded_hash_matches": true,
+          "mesh_path_as_local_history": [
+            "outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4-mesh.json"
+          ]
+        }
+      ],
+      "historical_status": "success",
+      "historical_checks": {
+        "status": "success",
+        "native_automatic_capping_api_used": false
+      },
+      "human_status": "pending",
+      "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+      "source_spec": {
+        "variant": {
+          "id": "cap-r4",
+          "name": "R4 封口构造",
+          "title": "蓝面 C 截住圆角",
+          "parameter_summary": "R=4mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+          "human_status": "pending",
+          "scope_notice": "R4封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+          "demo": {
+            "status": "success",
+            "title": "R4 · 蓝色面封口 / 显式 OCC 组合",
+            "panel_title": "R4 / 显式组合封口",
+            "status_label": "封口组合几何通过 / 原生自动封口未验证",
+            "radius": 4.0,
+            "radius_text": "R = 4 mm",
+            "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+            "after_caption": "红色是 R4 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+            "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+            "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+            "outputs": {
+              "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.step",
+              "下载本例 BREP": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+              "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.FCStd",
+              "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+              "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-r4-check.json",
+              "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+              "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+              "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+            },
+            "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "result_artifacts": [
+              {
+                "brep": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+                "sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8"
+              }
+            ],
+            "executed_at": "2026-10-18T22:56:25.666475+08:00",
+            "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+            "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "method_kind": "explicit_occ_composition",
+            "accepted_operation_groups": 0,
+            "constructed_limit_demo_groups": 2,
+            "export_rejected_operation_groups": 0,
+            "failed_operation_groups": 0,
+            "native_automatic_capping_api_used": false,
+            "source_notes": [
+              "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+            ],
+            "batch_parts": [],
+            "preprocess_notes": [
+              "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+            ]
+          }
+        },
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+          "explicit_capping_demo_executed": true,
+          "existing_cap_plane_applied": true,
+          "native_automatic_capping_api_used": false,
+          "native_direct_attempt_target_succeeded": false,
+          "capping_geometry_verified": true
+        },
+        "feature_assessment": {
+          "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "run_summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+          "target_feature": "trim_blend_to_existing_body_face_with_face_extension",
+          "target_status": "explicit_composition_geometry_verified_native_direct_target_not_met",
+          "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+          "demo_overrides": {
+            "status": "success",
+            "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+            "panel_title": "R8 / 显式组合封口",
+            "status_label": "封口组合几何通过 / 原生自动封口未验证",
+            "radius": 8.0,
+            "radius_text": "R = 8 mm",
+            "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+            "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+            "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+            "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+            "outputs": {
+              "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+              "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+              "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+              "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+              "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+              "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+              "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+              "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+            },
+            "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "result_artifacts": [
+              {
+                "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+                "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+              }
+            ],
+            "executed_at": "2026-10-18T22:56:25.666475+08:00",
+            "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+            "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "method_kind": "explicit_occ_composition",
+            "accepted_operation_groups": 0,
+            "constructed_limit_demo_groups": 2,
+            "export_rejected_operation_groups": 0,
+            "failed_operation_groups": 0,
+            "native_automatic_capping_api_used": false,
+            "source_notes": [
+              "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+            ],
+            "batch_parts": [],
+            "preprocess_notes": [
+              "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+            ]
+          },
+          "execution_overrides": {
+            "target_operation_executed": true,
+            "explicit_capping_demo_executed": true,
+            "ordinary_common_edge_fillet_executed": true,
+            "existing_cap_plane_applied": true,
+            "native_automatic_capping_api_used": false,
+            "native_direct_attempt_target_succeeded": false,
+            "source_reference_feature_verified": false,
+            "scored": false,
+            "capping_geometry_verified": true,
+            "actual_run_report": "history:outputs/manual-review/diagnostics/case17-capping/summary.json"
+          },
+          "display_fields": [
+            {
+              "label": "选边与半径",
+              "value": "主图R8，另有R4封口对照；原Edge6根棱的x0..29左段做圆角，Face9蓝面支撑x=29截住端部。R2仅为完整原体的普通圆角历史基线。"
+            },
+            {
+              "label": "原图功能与本地普通圆角的区别",
+              "value": "原图要求圆角裁剪到指定本体面，必要时延伸封口面。普通整条圆角没有传入此约束；本轮展示显式分体圆角与布尔合回，真实几何满足左侧封口、右侧尖棱。"
+            },
+            {
+              "label": "封口位置与保留方向",
+              "value": "原蓝色槽侧面 Face9，支撑平面x=29mm，原范围y29..38/z15..41。左侧圆角x=0..29；右侧x=29..70保持尖棱。输入root为Edge6，y29/z12。"
+            },
+            {
+              "label": "本轮实际方法",
+              "value": "同一原体在原蓝面支撑平面x=29处分割；左部对根棱做原生R8或R4圆角；与未圆角右部布尔合并。操作子体保留于run目录，原始输入三格式不变。"
+            },
+            {
+              "label": "完整原体普通圆角",
+              "value": "本轮重复R2成功，R4/R8均StdFail_NotDone。R2没有触及原有槽底，也没有提供蓝面封口参数，作为历史普通基线保留。"
+            },
+            {
+              "label": "另一条原生停止面接口",
+              "value": "BiTgte_Blend.SetStoppingFace(Face9)：R4/R8虽IsDone=true，却只返回开放Shell、0 Solid、14条非二面共用边；圆角还出现在x38..70右侧，未满足原图单侧封口。负半径没有生成圆角；均不算目标成功。"
+            },
+            {
+              "label": "独立验证",
+              "value": "R8/R4的BREP、STEP、FCStd共6文件全部有效闭合单实体；单张对应半径的解析圆柱；原蓝面保留，与共面延伸真实共享圆弧；右侧41mm尖棱保留。与独立CSG oracle双向差体积0，共6600解析占据样本0错误。"
+            },
+            {
+              "label": "能力判定",
+              "value": "封口几何通过显式OCC组合构造完成。完整原体makeFillet及BiTgte原生停止面尝试均未直接达到本例目标；不计原生自动capping能力通过，不推断所有其他OCC路线均不支持。人工尚未确认。"
+            }
+          ]
+        },
+        "summary_record_id": "cap-r4",
+        "summary_document": {
+          "path": "data/original-occ/history/5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53.json",
+          "original_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53"
+        },
+        "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json"
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_available",
+        "recorded_hashes": [
+          {
+            "field": ".script_sha256",
+            "expected_sha256": "1ae78bd458062966327859c18f0ac8f96029a000c8f5d6e923ae820cb236d0e7",
+            "exact_source_paths": [
+              "outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/case17_capping.py",
+              "history:external/scenarios/preblend_reconstruction/case17_capping.py"
+            ],
+            "found": true
+          }
+        ],
+        "linked_sources": [
+          {
+            "path": "outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+            "exists": true,
+            "sha256": "1ae78bd458062966327859c18f0ac8f96029a000c8f5d6e923ae820cb236d0e7",
+            "bytes": 7459
+          },
+          {
+            "path": "outputs/manual-review/diagnostics/case17-capping/code/independent_check.py",
+            "exists": true,
+            "sha256": "8f167b523466a1802cab3b1d722ec660f86d2913ab52a533904d283edbf14fe5",
+            "bytes": 13076
+          },
+          {
+            "path": "outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/case17_capping.py",
+            "exists": true,
+            "sha256": "1ae78bd458062966327859c18f0ac8f96029a000c8f5d6e923ae820cb236d0e7",
+            "bytes": 7459
+          }
+        ],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_page",
+      "base_targets": [
+        {
+          "index_1based": 6,
+          "length": 70.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            29.0,
+            12.0
+          ],
+          "end": [
+            70.0,
+            29.0,
+            12.0
+          ],
+          "midpoint": [
+            35.0,
+            29.0,
+            12.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            2,
+            4
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ]
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 6,
+          "length": 70.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            29.0,
+            12.0
+          ],
+          "end": [
+            70.0,
+            29.0,
+            12.0
+          ],
+          "midpoint": [
+            35.0,
+            29.0,
+            12.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            2,
+            4
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              29.0,
+              12.0
+            ],
+            [
+              2.2580645161290325,
+              29.0,
+              12.0
+            ],
+            [
+              4.516129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              6.774193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              9.03225806451613,
+              29.0,
+              12.0
+            ],
+            [
+              11.290322580645162,
+              29.0,
+              12.0
+            ],
+            [
+              13.548387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              15.806451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              18.06451612903226,
+              29.0,
+              12.0
+            ],
+            [
+              20.322580645161292,
+              29.0,
+              12.0
+            ],
+            [
+              22.580645161290324,
+              29.0,
+              12.0
+            ],
+            [
+              24.838709677419356,
+              29.0,
+              12.0
+            ],
+            [
+              27.096774193548388,
+              29.0,
+              12.0
+            ],
+            [
+              29.35483870967742,
+              29.0,
+              12.0
+            ],
+            [
+              31.612903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              33.87096774193549,
+              29.0,
+              12.0
+            ],
+            [
+              36.12903225806452,
+              29.0,
+              12.0
+            ],
+            [
+              38.38709677419355,
+              29.0,
+              12.0
+            ],
+            [
+              40.645161290322584,
+              29.0,
+              12.0
+            ],
+            [
+              42.903225806451616,
+              29.0,
+              12.0
+            ],
+            [
+              45.16129032258065,
+              29.0,
+              12.0
+            ],
+            [
+              47.41935483870968,
+              29.0,
+              12.0
+            ],
+            [
+              49.67741935483871,
+              29.0,
+              12.0
+            ],
+            [
+              51.935483870967744,
+              29.0,
+              12.0
+            ],
+            [
+              54.193548387096776,
+              29.0,
+              12.0
+            ],
+            [
+              56.45161290322581,
+              29.0,
+              12.0
+            ],
+            [
+              58.70967741935484,
+              29.0,
+              12.0
+            ],
+            [
+              60.96774193548387,
+              29.0,
+              12.0
+            ],
+            [
+              63.225806451612904,
+              29.0,
+              12.0
+            ],
+            [
+              65.48387096774194,
+              29.0,
+              12.0
+            ],
+            [
+              67.74193548387098,
+              29.0,
+              12.0
+            ],
+            [
+              70.0,
+              29.0,
+              12.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "targets": [
+            {
+              "index_1based": 6,
+              "length": 70.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                29.0,
+                12.0
+              ],
+              "end": [
+                70.0,
+                29.0,
+                12.0
+              ],
+              "midpoint": [
+                35.0,
+                29.0,
+                12.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                2,
+                4
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                [
+                  2.2580645161290325,
+                  29.0,
+                  12.0
+                ],
+                [
+                  4.516129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  6.774193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  9.03225806451613,
+                  29.0,
+                  12.0
+                ],
+                [
+                  11.290322580645162,
+                  29.0,
+                  12.0
+                ],
+                [
+                  13.548387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  15.806451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  18.06451612903226,
+                  29.0,
+                  12.0
+                ],
+                [
+                  20.322580645161292,
+                  29.0,
+                  12.0
+                ],
+                [
+                  22.580645161290324,
+                  29.0,
+                  12.0
+                ],
+                [
+                  24.838709677419356,
+                  29.0,
+                  12.0
+                ],
+                [
+                  27.096774193548388,
+                  29.0,
+                  12.0
+                ],
+                [
+                  29.35483870967742,
+                  29.0,
+                  12.0
+                ],
+                [
+                  31.612903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  33.87096774193549,
+                  29.0,
+                  12.0
+                ],
+                [
+                  36.12903225806452,
+                  29.0,
+                  12.0
+                ],
+                [
+                  38.38709677419355,
+                  29.0,
+                  12.0
+                ],
+                [
+                  40.645161290322584,
+                  29.0,
+                  12.0
+                ],
+                [
+                  42.903225806451616,
+                  29.0,
+                  12.0
+                ],
+                [
+                  45.16129032258065,
+                  29.0,
+                  12.0
+                ],
+                [
+                  47.41935483870968,
+                  29.0,
+                  12.0
+                ],
+                [
+                  49.67741935483871,
+                  29.0,
+                  12.0
+                ],
+                [
+                  51.935483870967744,
+                  29.0,
+                  12.0
+                ],
+                [
+                  54.193548387096776,
+                  29.0,
+                  12.0
+                ],
+                [
+                  56.45161290322581,
+                  29.0,
+                  12.0
+                ],
+                [
+                  58.70967741935484,
+                  29.0,
+                  12.0
+                ],
+                [
+                  60.96774193548387,
+                  29.0,
+                  12.0
+                ],
+                [
+                  63.225806451612904,
+                  29.0,
+                  12.0
+                ],
+                [
+                  65.48387096774194,
+                  29.0,
+                  12.0
+                ],
+                [
+                  67.74193548387098,
+                  29.0,
+                  12.0
+                ],
+                [
+                  70.0,
+                  29.0,
+                  12.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "targets": [
+              {
+                "index_1based": 6,
+                "length": 70.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  29.0,
+                  12.0
+                ],
+                "end": [
+                  70.0,
+                  29.0,
+                  12.0
+                ],
+                "midpoint": [
+                  35.0,
+                  29.0,
+                  12.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    2.2580645161290325,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    4.516129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    6.774193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    9.03225806451613,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    11.290322580645162,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    13.548387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    15.806451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    18.06451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    20.322580645161292,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    22.580645161290324,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    24.838709677419356,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    27.096774193548388,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    29.35483870967742,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    31.612903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    33.87096774193549,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    36.12903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    38.38709677419355,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    40.645161290322584,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    42.903225806451616,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    45.16129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    47.41935483870968,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    49.67741935483871,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    51.935483870967744,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    54.193548387096776,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    56.45161290322581,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    58.70967741935484,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    60.96774193548387,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    63.225806451612904,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    65.48387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    67.74193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    70.0,
+                    29.0,
+                    12.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  2,
+                  4
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    2.2580645161290325,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    4.516129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    6.774193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    9.03225806451613,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    11.290322580645162,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    13.548387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    15.806451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    18.06451612903226,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    20.322580645161292,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    22.580645161290324,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    24.838709677419356,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    27.096774193548388,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    29.35483870967742,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    31.612903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    33.87096774193549,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    36.12903225806452,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    38.38709677419355,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    40.645161290322584,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    42.903225806451616,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    45.16129032258065,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    47.41935483870968,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    49.67741935483871,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    51.935483870967744,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    54.193548387096776,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    56.45161290322581,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    58.70967741935484,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    60.96774193548387,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    63.225806451612904,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    65.48387096774194,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    67.74193548387098,
+                    29.0,
+                    12.0
+                  ],
+                  [
+                    70.0,
+                    29.0,
+                    12.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    }
+  ],
+  "default_variant": "cap-r8",
+  "source_spec": {
+    "number": 17,
+    "case_id": "73-35_to_37_caps-1306",
+    "title": "以本体端面封口的带槽阶台输入",
+    "status": "pending",
+    "human_note": "",
+    "has_model": true,
+    "snapshot": {
+      "reference_crop": [
+        0.1,
+        0.47,
+        0.44,
+        0.68
+      ],
+      "source_sha256": "f02ac40c6f8be8550432282bc7f237db28cbf62670ff035fe29dbabc34a805f1",
+      "brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2"
+    },
+    "files": {
+      "brep": "data/original-occ/fixtures/49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2.brep",
+      "step": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.step",
+      "freecad": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.FCStd"
+    },
+    "assumptions": "对应 Figure 73-35 左侧输入，底台与后壁为一个实体，后壁中部有 U 形窄槽，槽左侧的既有端面用作圆角封口面。槽底相对水平台面保留小台阶；截图未给尺寸与背面细节，后壁等高及槽底高度为推定。",
+    "annotation": null,
+    "review_results": {
+      "current_capping_results": {
+        "cap-r8": {
+          "status": "pending",
+          "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "result_brep_sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a",
+          "note": "显式组合构造已独立几何核验，等待用户人工对照。"
+        },
+        "cap-r4": {
+          "status": "pending",
+          "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "result_brep_sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8",
+          "note": "显式组合构造已独立几何核验，等待用户人工对照。"
+        }
+      }
+    },
+    "test_spec": {
+      "schema_version": 1,
+      "case_id": "73-35_to_37_caps-1306",
+      "spec_status": "explicit_capping_geometry_verified_native_direct_target_failed",
+      "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+      "local_demo": {
+        "status": "success",
+        "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+        "panel_title": "R8 / 显式组合封口",
+        "status_label": "封口组合几何通过 / 原生自动封口未验证",
+        "radius": 8.0,
+        "radius_text": "R = 8 mm",
+        "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+        "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+        "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+        "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+        "outputs": {
+          "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+          "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+          "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+          "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+          "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+          "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+          "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+          "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+          "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+        },
+        "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "result_artifacts": [
+          {
+            "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+            "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+          }
+        ],
+        "executed_at": "2026-10-18T22:56:25.666475+08:00",
+        "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+        "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+        "method_kind": "explicit_occ_composition",
+        "accepted_operation_groups": 0,
+        "constructed_limit_demo_groups": 2,
+        "export_rejected_operation_groups": 0,
+        "failed_operation_groups": 0,
+        "native_automatic_capping_api_used": false,
+        "source_notes": [
+          "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+        ],
+        "batch_parts": [],
+        "preprocess_notes": [
+          "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+        ]
+      },
+      "batch_execution": {
+        "status": "explicit_composition_geometry_verified",
+        "summary_file": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+        "parts": [
+          {
+            "label": "完整原体 / 普通圆角",
+            "part_number": 1,
+            "status": "partial",
+            "edge_indices": [
+              6
+            ],
+            "edge_label": "原 Edge6（整条）",
+            "selected_radius": 2,
+            "selection_note": "y29/z12，x0..70整条根棱。",
+            "attempts": [
+              {
+                "radius": 2.0,
+                "status": "success",
+                "stage": "普通圆角与导出通过（未显式封口）",
+                "error": "未指定蓝面；小半径基线",
+                "native_operation_succeeded": true
+              },
+              {
+                "radius": 4.0,
+                "status": "failed",
+                "stage": "完整原体普通圆角构建失败",
+                "error": "15StdFail_NotDone BRep_API: command not done",
+                "native_operation_succeeded": false
+              },
+              {
+                "radius": 8.0,
+                "status": "failed",
+                "stage": "完整原体普通圆角构建失败",
+                "error": "15StdFail_NotDone BRep_API: command not done",
+                "native_operation_succeeded": false
+              }
+            ]
+          },
+          {
+            "label": "完整原体 / 原生停止面",
+            "part_number": 2,
+            "status": "failed",
+            "edge_indices": [
+              6
+            ],
+            "edge_label": "原 Edge6 / Face9",
+            "selection_note": "BiTgte_Blend：根棱及原蓝色Face9。",
+            "attempts": [
+              {
+                "radius": 4.0,
+                "status": "failed",
+                "stage": "返回开放壳体 / 封口范围未达标",
+                "error": "IsDone=true，但0 Solid、14条非二面边，且x38..70右侧也圆角。",
+                "native_operation_succeeded": true,
+                "target_operation_succeeded": false
+              },
+              {
+                "radius": 8.0,
+                "status": "failed",
+                "stage": "返回开放壳体 / 封口范围未达标",
+                "error": "IsDone=true，但0 Solid、14条非二面边，且x38..70右侧也圆角。",
+                "native_operation_succeeded": true,
+                "target_operation_succeeded": false
+              }
+            ]
+          },
+          {
+            "label": "分体圆角 / 布尔合回",
+            "part_number": 3,
+            "status": "success",
+            "edge_indices": [],
+            "edge_label": "原 Edge6 左段x0..29",
+            "selected_radius": 8,
+            "selection_note": "x=29支撑平面分体后，仅对左侧根棱圆角。",
+            "attempts": [
+              {
+                "radius": 8.0,
+                "status": "success",
+                "stage": "显式组合封口 / 原生与三格式独立校验通过",
+                "error": "分体原生圆角+布尔合并；非自动cap调用",
+                "native_operation_succeeded": true,
+                "method_kind": "explicit_occ_composition"
+              },
+              {
+                "radius": 4.0,
+                "status": "success",
+                "stage": "显式组合封口 / 原生与三格式独立校验通过",
+                "error": "分体原生圆角+布尔合并；非自动cap调用",
+                "native_operation_succeeded": true,
+                "method_kind": "explicit_occ_composition"
+              }
+            ]
+          }
+        ]
+      },
+      "display_fields": [
+        {
+          "label": "验证范围",
+          "value": "分别记录 OCC 构建、原生 BREP/BOP 检查、BREP 与 STEP 导出回读。页面展示不是人工确认，也不代表原图特殊模式已经实现。"
+        },
+        {
+          "label": "原 PDF 第73–35图的封口含义",
+          "value": "使用本体上指定的蓝色面裁剪圆角，并在需要时延伸该面以封住端部。左侧有圆角，封口右侧保持尖棱；原文未给半径。R8/R4为当前模型的示范值，均大于槽底距台面3mm。"
+        },
+        {
+          "label": "选边与半径",
+          "value": "主图R8，另有R4封口对照；原Edge6根棱的x0..29左段做圆角，Face9蓝面支撑x=29截住端部。R2仅为完整原体的普通圆角历史基线。"
+        },
+        {
+          "label": "原图功能与本地普通圆角的区别",
+          "value": "原图要求圆角裁剪到指定本体面，必要时延伸封口面。普通整条圆角没有传入此约束；本轮展示显式分体圆角与布尔合回，真实几何满足左侧封口、右侧尖棱。"
+        },
+        {
+          "label": "封口位置与保留方向",
+          "value": "原蓝色槽侧面 Face9，支撑平面x=29mm，原范围y29..38/z15..41。左侧圆角x=0..29；右侧x=29..70保持尖棱。输入root为Edge6，y29/z12。"
+        },
+        {
+          "label": "本轮实际方法",
+          "value": "同一原体在原蓝面支撑平面x=29处分割；左部对根棱做原生R8或R4圆角；与未圆角右部布尔合并。操作子体保留于run目录，原始输入三格式不变。"
+        },
+        {
+          "label": "完整原体普通圆角",
+          "value": "本轮重复R2成功，R4/R8均StdFail_NotDone。R2没有触及原有槽底，也没有提供蓝面封口参数，作为历史普通基线保留。"
+        },
+        {
+          "label": "另一条原生停止面接口",
+          "value": "BiTgte_Blend.SetStoppingFace(Face9)：R4/R8虽IsDone=true，却只返回开放Shell、0 Solid、14条非二面共用边；圆角还出现在x38..70右侧，未满足原图单侧封口。负半径没有生成圆角；均不算目标成功。"
+        },
+        {
+          "label": "独立验证",
+          "value": "R8/R4的BREP、STEP、FCStd共6文件全部有效闭合单实体；单张对应半径的解析圆柱；原蓝面保留，与共面延伸真实共享圆弧；右侧41mm尖棱保留。与独立CSG oracle双向差体积0，共6600解析占据样本0错误。"
+        },
+        {
+          "label": "能力判定",
+          "value": "封口几何通过显式OCC组合构造完成。完整原体makeFillet及BiTgte原生停止面尝试均未直接达到本例目标；不计原生自动capping能力通过，不推断所有其他OCC路线均不支持。人工尚未确认。"
+        }
+      ],
+      "execution": {
+        "target_operation_executed": true,
+        "ordinary_common_edge_fillet_executed": true,
+        "source_reference_feature_verified": false,
+        "scored": false,
+        "batch_status": "success",
+        "actual_run_report": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+        "explicit_capping_demo_executed": true,
+        "existing_cap_plane_applied": true,
+        "native_automatic_capping_api_used": false,
+        "native_direct_attempt_target_succeeded": false,
+        "capping_geometry_verified": true
+      },
+      "reference_figure_crop": [
+        0.055,
+        0.45,
+        0.85,
+        0.705
+      ],
+      "reference_figure_caption": "原 PDF 完整图形区域，包含本图参考输入、结果及相关标注；可打开整页核对。",
+      "baseline_execution": {
+        "status": "success",
+        "parts": [
+          {
+            "label": "notched_step_body",
+            "part_number": 1,
+            "status": "success",
+            "selected_radius": 2.0,
+            "edge_indices": [
+              6
+            ],
+            "selection_note": "阶台前水平台面 z=12 与后壁 y=29 的整条根棱，全长70。",
+            "source_feature_note": "图示 using capping face：本次普通整条圆角不显式选本体槽侧面封口。槽底z=15距台面仅3；R8/R4可能穿过槽，若回退R2则未触及槽。",
+            "preprocess": {
+              "type": "none"
+            },
+            "reason": "",
+            "attempts": [
+              {
+                "radius": 8.0,
+                "status": "failed",
+                "stage": "OCC 圆角构建未完成",
+                "error": "15StdFail_NotDone BRep_API: command not done",
+                "native_operation_succeeded": false
+              },
+              {
+                "radius": 4.0,
+                "status": "failed",
+                "stage": "OCC 圆角构建未完成",
+                "error": "15StdFail_NotDone BRep_API: command not done",
+                "native_operation_succeeded": false
+              },
+              {
+                "radius": 2.0,
+                "status": "success",
+                "stage": "校验通过",
+                "error": "",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "summary_file": "history:outputs/manual-review/diagnostics/batch/case17/summary.json"
+      },
+      "case_variants": [
+        {
+          "id": "cap-r8",
+          "name": "R8 封口构造",
+          "title": "蓝面 C 截住圆角",
+          "parameter_summary": "R=8mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+          "human_status": "pending",
+          "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+          "demo": {
+            "status": "success",
+            "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+            "panel_title": "R8 / 显式组合封口",
+            "status_label": "封口组合几何通过 / 原生自动封口未验证",
+            "radius": 8.0,
+            "radius_text": "R = 8 mm",
+            "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+            "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+            "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+            "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+            "outputs": {
+              "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+              "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+              "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+              "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+              "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+              "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+              "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+              "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+            },
+            "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "result_artifacts": [
+              {
+                "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+                "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+              }
+            ],
+            "executed_at": "2026-10-18T22:56:25.666475+08:00",
+            "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+            "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "method_kind": "explicit_occ_composition",
+            "accepted_operation_groups": 0,
+            "constructed_limit_demo_groups": 2,
+            "export_rejected_operation_groups": 0,
+            "failed_operation_groups": 0,
+            "native_automatic_capping_api_used": false,
+            "source_notes": [
+              "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+            ],
+            "batch_parts": [],
+            "preprocess_notes": [
+              "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+            ]
+          }
+        },
+        {
+          "id": "cap-r4",
+          "name": "R4 封口构造",
+          "title": "蓝面 C 截住圆角",
+          "parameter_summary": "R=4mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+          "human_status": "pending",
+          "scope_notice": "R4封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+          "demo": {
+            "status": "success",
+            "title": "R4 · 蓝色面封口 / 显式 OCC 组合",
+            "panel_title": "R4 / 显式组合封口",
+            "status_label": "封口组合几何通过 / 原生自动封口未验证",
+            "radius": 4.0,
+            "radius_text": "R = 4 mm",
+            "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+            "after_caption": "红色是 R4 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+            "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+            "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+            "outputs": {
+              "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.step",
+              "下载本例 BREP": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+              "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.FCStd",
+              "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+              "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-r4-check.json",
+              "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+              "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+              "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+              "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+            },
+            "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+            "result_artifacts": [
+              {
+                "brep": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+                "sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8"
+              }
+            ],
+            "executed_at": "2026-10-18T22:56:25.666475+08:00",
+            "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+            "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "method_kind": "explicit_occ_composition",
+            "accepted_operation_groups": 0,
+            "constructed_limit_demo_groups": 2,
+            "export_rejected_operation_groups": 0,
+            "failed_operation_groups": 0,
+            "native_automatic_capping_api_used": false,
+            "source_notes": [
+              "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+            ],
+            "batch_parts": [],
+            "preprocess_notes": [
+              "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+            ]
+          }
+        }
+      ],
+      "source_limit_explanation": {
+        "label": "原 PDF 第73–35图的封口含义",
+        "value": "使用本体上指定的蓝色面裁剪圆角，并在需要时延伸该面以封住端部。左侧有圆角，封口右侧保持尖棱；原文未给半径。R8/R4为当前模型的示范值，均大于槽底距台面3mm。"
+      },
+      "feature_assessment": {
+        "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "run_summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+        "target_feature": "trim_blend_to_existing_body_face_with_face_extension",
+        "target_status": "explicit_composition_geometry_verified_native_direct_target_not_met",
+        "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+        "demo_overrides": {
+          "status": "success",
+          "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+          "panel_title": "R8 / 显式组合封口",
+          "status_label": "封口组合几何通过 / 原生自动封口未验证",
+          "radius": 8.0,
+          "radius_text": "R = 8 mm",
+          "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+          "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+          "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+          "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+          "outputs": {
+            "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+            "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+            "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+            "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+            "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+            "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+            "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+            "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+          },
+          "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "result_artifacts": [
+            {
+              "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+              "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+            }
+          ],
+          "executed_at": "2026-10-18T22:56:25.666475+08:00",
+          "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+          "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+          "method_kind": "explicit_occ_composition",
+          "accepted_operation_groups": 0,
+          "constructed_limit_demo_groups": 2,
+          "export_rejected_operation_groups": 0,
+          "failed_operation_groups": 0,
+          "native_automatic_capping_api_used": false,
+          "source_notes": [
+            "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+          ],
+          "batch_parts": [],
+          "preprocess_notes": [
+            "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+          ]
+        },
+        "execution_overrides": {
+          "target_operation_executed": true,
+          "explicit_capping_demo_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "existing_cap_plane_applied": true,
+          "native_automatic_capping_api_used": false,
+          "native_direct_attempt_target_succeeded": false,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "capping_geometry_verified": true,
+          "actual_run_report": "history:outputs/manual-review/diagnostics/case17-capping/summary.json"
+        },
+        "display_fields": [
+          {
+            "label": "选边与半径",
+            "value": "主图R8，另有R4封口对照；原Edge6根棱的x0..29左段做圆角，Face9蓝面支撑x=29截住端部。R2仅为完整原体的普通圆角历史基线。"
+          },
+          {
+            "label": "原图功能与本地普通圆角的区别",
+            "value": "原图要求圆角裁剪到指定本体面，必要时延伸封口面。普通整条圆角没有传入此约束；本轮展示显式分体圆角与布尔合回，真实几何满足左侧封口、右侧尖棱。"
+          },
+          {
+            "label": "封口位置与保留方向",
+            "value": "原蓝色槽侧面 Face9，支撑平面x=29mm，原范围y29..38/z15..41。左侧圆角x=0..29；右侧x=29..70保持尖棱。输入root为Edge6，y29/z12。"
+          },
+          {
+            "label": "本轮实际方法",
+            "value": "同一原体在原蓝面支撑平面x=29处分割；左部对根棱做原生R8或R4圆角；与未圆角右部布尔合并。操作子体保留于run目录，原始输入三格式不变。"
+          },
+          {
+            "label": "完整原体普通圆角",
+            "value": "本轮重复R2成功，R4/R8均StdFail_NotDone。R2没有触及原有槽底，也没有提供蓝面封口参数，作为历史普通基线保留。"
+          },
+          {
+            "label": "另一条原生停止面接口",
+            "value": "BiTgte_Blend.SetStoppingFace(Face9)：R4/R8虽IsDone=true，却只返回开放Shell、0 Solid、14条非二面共用边；圆角还出现在x38..70右侧，未满足原图单侧封口。负半径没有生成圆角；均不算目标成功。"
+          },
+          {
+            "label": "独立验证",
+            "value": "R8/R4的BREP、STEP、FCStd共6文件全部有效闭合单实体；单张对应半径的解析圆柱；原蓝面保留，与共面延伸真实共享圆弧；右侧41mm尖棱保留。与独立CSG oracle双向差体积0，共6600解析占据样本0错误。"
+          },
+          {
+            "label": "能力判定",
+            "value": "封口几何通过显式OCC组合构造完成。完整原体makeFillet及BiTgte原生停止面尝试均未直接达到本例目标；不计原生自动capping能力通过，不推断所有其他OCC路线均不支持。人工尚未确认。"
+          }
+        ]
+      },
+      "applies_to_current_input": true
+    },
+    "variants": [
+      {
+        "id": "cap-r8",
+        "name": "R8 封口构造",
+        "title": "蓝面 C 截住圆角",
+        "parameter_summary": "R=8mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+        "human_status": "pending",
+        "scope_notice": "R8封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+        "demo": {
+          "status": "success",
+          "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+          "panel_title": "R8 / 显式组合封口",
+          "status_label": "封口组合几何通过 / 原生自动封口未验证",
+          "radius": 8.0,
+          "radius_text": "R = 8 mm",
+          "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+          "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+          "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+          "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+          "outputs": {
+            "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+            "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+            "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+            "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+            "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+            "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+            "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+            "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+          },
+          "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "result_artifacts": [
+            {
+              "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+              "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+            }
+          ],
+          "executed_at": "2026-10-18T22:56:25.666475+08:00",
+          "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+          "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+          "method_kind": "explicit_occ_composition",
+          "accepted_operation_groups": 0,
+          "constructed_limit_demo_groups": 2,
+          "export_rejected_operation_groups": 0,
+          "failed_operation_groups": 0,
+          "native_automatic_capping_api_used": false,
+          "source_notes": [
+            "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+          ],
+          "batch_parts": [],
+          "preprocess_notes": [
+            "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+          ]
+        }
+      },
+      {
+        "id": "cap-r4",
+        "name": "R4 封口构造",
+        "title": "蓝面 C 截住圆角",
+        "parameter_summary": "R=4mm；蓝面 x=29mm；槽底间隙3mm；圆角x=0..29，尖棱x=29..70。",
+        "human_status": "pending",
+        "scope_notice": "R4封口组合几何已生成并通过BREP/STEP回读；蓝色原面 C 及其延伸截住左侧圆角，右侧不圆角。非原生自动 capping 调用，待人工核对。",
+        "demo": {
+          "status": "success",
+          "title": "R4 · 蓝色面封口 / 显式 OCC 组合",
+          "panel_title": "R4 / 显式组合封口",
+          "status_label": "封口组合几何通过 / 原生自动封口未验证",
+          "radius": 4.0,
+          "radius_text": "R = 4 mm",
+          "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+          "after_caption": "红色是 R4 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+          "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+          "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+          "outputs": {
+            "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.step",
+            "下载本例 BREP": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+            "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r4.FCStd",
+            "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+            "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-r4-check.json",
+            "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+            "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+            "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+            "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+          },
+          "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+          "result_artifacts": [
+            {
+              "brep": "data/original-occ/fixtures/31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8.brep",
+              "sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8"
+            }
+          ],
+          "executed_at": "2026-10-18T22:56:25.666475+08:00",
+          "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+          "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+          "method_kind": "explicit_occ_composition",
+          "accepted_operation_groups": 0,
+          "constructed_limit_demo_groups": 2,
+          "export_rejected_operation_groups": 0,
+          "failed_operation_groups": 0,
+          "native_automatic_capping_api_used": false,
+          "source_notes": [
+            "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+          ],
+          "batch_parts": [],
+          "preprocess_notes": [
+            "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+          ]
+        }
+      }
+    ],
+    "local_demo": {
+      "status": "success",
+      "title": "R8 · 蓝色面封口 / 显式 OCC 组合",
+      "panel_title": "R8 / 显式组合封口",
+      "status_label": "封口组合几何通过 / 原生自动封口未验证",
+      "radius": 8.0,
+      "radius_text": "R = 8 mm",
+      "before_caption": "红线为原根棱；蓝色为原有槽侧面 C；没有在输入里额外添加挡板。",
+      "after_caption": "红色是 R8 解析圆柱面；蓝色为原面及同平面封口扩展。右侧根棱未圆角。",
+      "caption": "PDF 原始图、同一输入及实际 OCC 封口构造。中右同相机同尺度。",
+      "scope_note": "按原蓝面支撑平面分割原体、左侧原生圆角、合回右侧；显式组合几何通过，不计原生自动 capping 通过。尺寸为示范值，仍待人工核对。",
+      "outputs": {
+        "下载本例 STEP": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.step",
+        "下载本例 BREP": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+        "下载本例 FreeCAD": "history:outputs/manual-review/diagnostics/case17-capping/runs/20261018T225625.665771-12265/cap-r8.FCStd",
+        "本轮全部实际记录": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+        "独立几何核验": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+        "原生接口及停止面审查": "history:outputs/manual-review/diagnostics/case17-capping/native-api-audit.md",
+        "生成脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/case17_capping.py",
+        "原生停止面实际尝试": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+        "独立核验脚本": "history:outputs/manual-review/diagnostics/case17-capping/code/independent_check.py"
+      },
+      "input_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+      "result_artifacts": [
+        {
+          "brep": "data/original-occ/fixtures/f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a.brep",
+          "sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a"
+        }
+      ],
+      "executed_at": "2026-10-18T22:56:25.666475+08:00",
+      "summary_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+      "summary": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+      "method_kind": "explicit_occ_composition",
+      "accepted_operation_groups": 0,
+      "constructed_limit_demo_groups": 2,
+      "export_rejected_operation_groups": 0,
+      "failed_operation_groups": 0,
+      "native_automatic_capping_api_used": false,
+      "source_notes": [
+        "源图为本体指定面封口并延伸该面。本轮显式分割/圆角/布尔重组构造；未使用原生自动 cap_data 等价功能。完整原体普通圆角 R2成功，R4/R8失败。"
+      ],
+      "batch_parts": [],
+      "preprocess_notes": [
+        "原始输入不变；在蓝面支撑 x=29 处明确分割为两个操作子体，运行记录保留。"
+      ]
+    },
+    "test_spec_file": "case-specs/73-35_to_37_caps-1306.json"
+  },
+  "history_documents": [
+    {
+      "path": "data/original-occ/history/5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53.json",
+      "original_sha256": "5402ceb54a852666f2f2cd60290a1587e64dd9a42ae6d6117669a4834692fc53",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/summary.json",
+      "sanitized_sha256": "5c10dc83e5b387d1955e229a1eb85557207547df42dfa526743f44a8d50f025f"
+    },
+    {
+      "path": "data/original-occ/history/295b0bb613d7cb36b987029867076416a4dea749b58f1ee293b6128de878c88f.json",
+      "original_sha256": "295b0bb613d7cb36b987029867076416a4dea749b58f1ee293b6128de878c88f",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/independent-check.json",
+      "sanitized_sha256": "289c504d9480130b9df779b9d7ba0e9c68250b6623549befffa3ecfd190ac015"
+    },
+    {
+      "path": "data/original-occ/history/57e5db03256c9ade0ada838d1ac0471e670cca8922afeadd54e43626ffeb7b0b.json",
+      "original_sha256": "57e5db03256c9ade0ada838d1ac0471e670cca8922afeadd54e43626ffeb7b0b",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/native-trials/bitgte-trials.json",
+      "sanitized_sha256": "b4a866cac955f19a48a4dcd4c17cd32f961ae38a1600269b8201ce7a0c52ee24"
+    },
+    {
+      "path": "data/original-occ/history/1802bd7cfe4feb760452a084e3903c75b266889b8bddd757977bb9d40f5a82e1.json",
+      "original_sha256": "1802bd7cfe4feb760452a084e3903c75b266889b8bddd757977bb9d40f5a82e1",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case17/summary.json",
+      "sanitized_sha256": "c06879ddbce9539c1bc9c602ccbcdad6dfe0d9bf1f9c4df310d0b4d1d6e825dd"
+    },
+    {
+      "path": "data/original-occ/history/5eb5d5cb502e05348110a00c7be77b98112f1632657a5ce01fa78765129ade62.json",
+      "original_sha256": "5eb5d5cb502e05348110a00c7be77b98112f1632657a5ce01fa78765129ade62",
+      "original_path": "history:outputs/manual-review/diagnostics/case17-capping/independent-r4-check.json",
+      "sanitized_sha256": "5551f21fc9f858d4c2f3698054b932e8b4110cedb611df70c101b69a8aac1e48"
+    },
+    {
+      "path": "data/original-occ/history/c9b2f275df369774c032c12d6fdaa511cac072595e71855092bb950bd600d752.json",
+      "original_sha256": "c9b2f275df369774c032c12d6fdaa511cac072595e71855092bb950bd600d752",
+      "original_path": "history:outputs/manual-review/case-specs/73-35_to_37_caps-1306.json",
+      "sanitized_sha256": "a2bf614759de8af36d9e7a2f62e888190a3ffac2b11c802ece5fd0f26a704dce"
+    }
+  ],
+  "historical_ordinary": {
+    "summary": {
+      "path": "outputs/manual-review/diagnostics/batch/case17/summary.json",
+      "exists": true,
+      "sha256": "1802bd7cfe4feb760452a084e3903c75b266889b8bddd757977bb9d40f5a82e1",
+      "bytes": 36059
+    },
+    "status": "success",
+    "source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+    "runtime": {
+      "FreeCAD": [
+        "1",
+        "2",
+        "0",
+        "46770 (Git)",
+        "git://github.com/liyongzheng666/FreeCAD.git",
+        "2026/05/09 21:28:57",
+        "work/local-occt-integration",
+        "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+      ],
+      "OCCT": "7.8.1"
+    },
+    "scripts": {
+      "status": "recorded_source_version_missing",
+      "recorded_hashes": [
+        {
+          "field": ".worker_sha256",
+          "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+          "exact_source_paths": [],
+          "found": false
+        }
+      ],
+      "linked_sources": [],
+      "portable_command_available": false,
+      "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+    },
+    "attempts": [
+      {
+        "part_number": 1,
+        "part_label": "notched_step_body",
+        "attempt_number": 1,
+        "radius_mm": 8.0,
+        "status": "failed",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": "15StdFail_NotDone BRep_API: command not done",
+        "selected_edges": [
+          {
+            "index_1based": 6,
+            "start": [
+              0.0,
+              29.0,
+              12.0
+            ],
+            "end": [
+              70.0,
+              29.0,
+              12.0
+            ]
+          }
+        ],
+        "source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "operation_input_sha256": "0a00b8317b2d8e1ca01108c1d31acf1ac4f0d31649215d5df41ca2f3aaeb37b3"
+      },
+      {
+        "part_number": 1,
+        "part_label": "notched_step_body",
+        "attempt_number": 2,
+        "radius_mm": 4.0,
+        "status": "failed",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": "15StdFail_NotDone BRep_API: command not done",
+        "selected_edges": [
+          {
+            "index_1based": 6,
+            "start": [
+              0.0,
+              29.0,
+              12.0
+            ],
+            "end": [
+              70.0,
+              29.0,
+              12.0
+            ]
+          }
+        ],
+        "source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "operation_input_sha256": "0a00b8317b2d8e1ca01108c1d31acf1ac4f0d31649215d5df41ca2f3aaeb37b3"
+      },
+      {
+        "part_number": 1,
+        "part_label": "notched_step_body",
+        "attempt_number": 3,
+        "radius_mm": 2.0,
+        "status": "success",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": null,
+        "selected_edges": [
+          {
+            "index_1based": 6,
+            "start": [
+              0.0,
+              29.0,
+              12.0
+            ],
+            "end": [
+              70.0,
+              29.0,
+              12.0
+            ]
+          }
+        ],
+        "source_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "operation_input_sha256": "0a00b8317b2d8e1ca01108c1d31acf1ac4f0d31649215d5df41ca2f3aaeb37b3",
+        "brep": {
+          "path": "data/original-occ/fixtures/2769be86cd33dd0c21abba2790c46dc54fd9cb6440755c4e04aa79bf5428944c.brep",
+          "exists": true,
+          "sha256": "2769be86cd33dd0c21abba2790c46dc54fd9cb6440755c4e04aa79bf5428944c",
+          "bytes": 7549
+        },
+        "step": {
+          "path": "outputs/manual-review/diagnostics/batch/case17/runs/20261018T190128.286026-98474/part01/attempt03-r2.step",
+          "exists": true,
+          "sha256": "8c93b03429740c910d67ae0bf61a4385bdace5703e2ec3ddf22dd69f86d2ed4b",
+          "bytes": 15506
+        },
+        "before_mesh": {
+          "path": "outputs/manual-review/diagnostics/batch/case17/runs/20261018T190128.286026-98474/part01/before-mesh.json",
+          "exists": true,
+          "sha256": "c9ad05ad05f6985ce615da953b63eea8e61fd42682a7f6d8a2469e6e6cdf8e50",
+          "bytes": 20837,
+          "vertices": 60,
+          "triangles": 36,
+          "actual_mesh": true,
+          "schema": "parts/faces"
+        },
+        "after_mesh": {
+          "path": "outputs/manual-review/diagnostics/batch/case17/runs/20261018T190128.286026-98474/part01/attempt03-r2-mesh.json",
+          "exists": true,
+          "sha256": "b73e2ddd585651df794452de2ce679ee4cea3edb1c4ba85e5b7f5e69220adcf8",
+          "bytes": 47678,
+          "vertices": 190,
+          "triangles": 164,
+          "actual_mesh": true,
+          "schema": "parts/faces"
+        }
+      }
+    ],
+    "source_matches_current_review": true
+  },
+  "review_results": {
+    "current_capping_results": {
+      "cap-r8": {
+        "status": "pending",
+        "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "result_brep_sha256": "f97a10cc982fb06146989ccdb962b8cfb9a51c075cfaaacdc8b3bebb7421bb4a",
+        "note": "显式组合构造已独立几何核验，等待用户人工对照。"
+      },
+      "cap-r4": {
+        "status": "pending",
+        "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+        "result_brep_sha256": "31220876202ecabcc9dc5480a66ca753ec78584c97582f9d16e3d66d592888b8",
+        "note": "显式组合构造已独立几何核验，等待用户人工对照。"
+      }
+    }
+  },
+  "provenance": {
+    "kind": "historical_source_freeze",
+    "not_a_rerun": true,
+    "source_dimensions": "inferred reconstruction; not original vendor CAD",
+    "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+    "no_reference_artwork_distributed": true
+  }
+}

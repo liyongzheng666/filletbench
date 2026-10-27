@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0 — 2026-10-27
+
+- Make the original manually reviewed OCC series the default: PDF / frozen base and original selection / actual processing.
+- Preserve 34 model groups, explanation 32, 129 original views and all 50 manual variant IDs. Bind 128 computation views to fresh executions; keep one auxiliary input-only view.
+- Re-execute native and explicit-composition pipelines; retain native invalidity, STEP failures and unchanged/failed candidates.
+- Keep the full base and the selected/derived operation input distinct. Do not claim parameterized base reconstruction from a BREP reload.
+- Add portable original-series commands, downloadable BREP/STEP evidence, geometric selection/hash checks and independent review.
+- Keep the previous OCCT/SMLib comparison collection separate from the original protocol.
+
 ## 0.1.0 — 2026-10-27
 
 - Publish 34 numbered exploratory inputs, 104 ordinary requests and 174 protocol views.

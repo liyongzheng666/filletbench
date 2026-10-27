@@ -1,0 +1,6994 @@
+{
+  "schema": "filletbench.original-occ.v1",
+  "number": 1,
+  "id": "73-17_cliff_edge-1281",
+  "title": "悬崖边：齐边立块与窄后平台（PDF 复核）",
+  "has_model": true,
+  "source_brep": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+  "source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+  "recorded_source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+  "human_status": "pending",
+  "human_note": "用户已确认：A的待圆角选边对应关系没有问题。其他形状与尺寸尚未单独确认。",
+  "reference": {
+    "page": 1281,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.2898485185185185,
+      0.14266975308641977,
+      0.7968877777777779,
+      0.38565432098765434
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed whole-figure crop; converted from MediaBox to verified PDF CropBox",
+    "input_only_crop_used": false,
+    "crop_coordinate_system": "pdfjs_cropbox_normalized_top_left",
+    "source_media_box": [
+      0.0,
+      0.0,
+      595.22,
+      842.0
+    ],
+    "pdf_crop_box": [
+      28.0,
+      97.0,
+      568.0,
+      745.0
+    ],
+    "source_media_box_crop": [
+      0.31,
+      0.225,
+      0.77,
+      0.412
+    ]
+  },
+  "base_targets": [
+    {
+      "edge_index": 9,
+      "length": 100.0,
+      "points": [
+        [
+          0.0,
+          103.0,
+          26.0
+        ],
+        [
+          50.0,
+          103.0,
+          26.0
+        ],
+        [
+          100.0,
+          103.0,
+          26.0
+        ]
+      ],
+      "adjacent_faces": [
+        {
+          "face_index": 3,
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "face_index": 8,
+          "normal": [
+            0.0,
+            -1.0,
+            -0.0
+          ]
+        }
+      ],
+      "index_1based": 9,
+      "samples_mm": [
+        [
+          0.0,
+          103.0,
+          26.0
+        ],
+        [
+          50.0,
+          103.0,
+          26.0
+        ],
+        [
+          100.0,
+          103.0,
+          26.0
+        ]
+      ],
+      "group": "root"
+    }
+  ],
+  "base_annotation_groups": {
+    "root": [
+      {
+        "edge_index": 9,
+        "length": 100.0,
+        "points": [
+          [
+            0.0,
+            103.0,
+            26.0
+          ],
+          [
+            50.0,
+            103.0,
+            26.0
+          ],
+          [
+            100.0,
+            103.0,
+            26.0
+          ]
+        ],
+        "adjacent_faces": [
+          {
+            "face_index": 3,
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "face_index": 8,
+            "normal": [
+              0.0,
+              -1.0,
+              -0.0
+            ]
+          }
+        ],
+        "index_1based": 9,
+        "samples_mm": [
+          [
+            0.0,
+            103.0,
+            26.0
+          ],
+          [
+            50.0,
+            103.0,
+            26.0
+          ],
+          [
+            100.0,
+            103.0,
+            26.0
+          ]
+        ],
+        "group": "root"
+      }
+    ],
+    "cliff": [
+      {
+        "edge_index": 20,
+        "length": 36.0,
+        "points": [
+          [
+            0.0,
+            103.0,
+            42.0
+          ],
+          [
+            18.0,
+            103.0,
+            42.0
+          ],
+          [
+            36.0,
+            103.0,
+            42.0
+          ]
+        ],
+        "adjacent_faces": [
+          {
+            "face_index": 8,
+            "normal": [
+              0.0,
+              -1.0,
+              -0.0
+            ]
+          },
+          {
+            "face_index": 12,
+            "normal": [
+              0.0,
+              -1.0,
+              -0.0
+            ]
+          }
+        ],
+        "index_1based": 20,
+        "samples_mm": [
+          [
+            0.0,
+            103.0,
+            42.0
+          ],
+          [
+            18.0,
+            103.0,
+            42.0
+          ],
+          [
+            36.0,
+            103.0,
+            42.0
+          ]
+        ],
+        "group": "cliff"
+      },
+      {
+        "edge_index": 21,
+        "length": 64.0,
+        "points": [
+          [
+            36.0,
+            103.0,
+            42.0
+          ],
+          [
+            68.0,
+            103.0,
+            42.0
+          ],
+          [
+            100.0,
+            103.0,
+            42.0
+          ]
+        ],
+        "adjacent_faces": [
+          {
+            "face_index": 8,
+            "normal": [
+              0.0,
+              -1.0,
+              -0.0
+            ]
+          },
+          {
+            "face_index": 13,
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ],
+        "index_1based": 21,
+        "samples_mm": [
+          [
+            36.0,
+            103.0,
+            42.0
+          ],
+          [
+            68.0,
+            103.0,
+            42.0
+          ],
+          [
+            100.0,
+            103.0,
+            42.0
+          ]
+        ],
+        "group": "cliff"
+      }
+    ]
+  },
+  "selection": {
+    "base": {
+      "sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "targets": [
+        {
+          "edge_index": 9,
+          "length": 100.0,
+          "points": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces": [
+            {
+              "face_index": 3,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face_index": 8,
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ]
+            }
+          ],
+          "index_1based": 9,
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "group": "root"
+        }
+      ],
+      "selected_faces": []
+    }
+  },
+  "variants": [
+    {
+      "id": "part01-r8",
+      "label": "flush_boss_cliff_input / R8",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 1,
+        "radius_mm": 8,
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 8,
+      "base_brep": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+      "base_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d.brep",
+          "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before.brep",
+          "label": "flush_boss_cliff_input",
+          "selected_edges": [
+            {
+              "index_1based": 9,
+              "length": 100.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                103.0,
+                26.0
+              ],
+              "end": [
+                100.0,
+                103.0,
+                26.0
+              ],
+              "midpoint": [
+                50.0,
+                103.0,
+                26.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                3,
+                8
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "recorded_hash_matches": true,
+          "selection_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139.brep",
+          "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/attempt01-r8.brep",
+          "recorded_sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139",
+          "historical_attempt_status": "success",
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 1,
+              "shells": 1,
+              "faces": 17,
+              "edges": 39,
+              "vertices": 24,
+              "area": 44648.10609652105,
+              "volume": 402709.4517542564,
+              "bbox": [
+                0.0,
+                0.0,
+                0.0,
+                100.0,
+                129.0,
+                68.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139"
+          },
+          "roundtrip_step": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Solid",
+              "solids": 1,
+              "shells": 1,
+              "faces": 17,
+              "edges": 39,
+              "vertices": 24,
+              "area": 44648.10609652105,
+              "volume": 402709.4517542564,
+              "bbox": [
+                0.0,
+                0.0,
+                0.0,
+                100.0,
+                129.0,
+                68.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "04490cdb246dd63af30a04cbf1ac0d030b2fd019edbe68c084ac79e8d926d202"
+          },
+          "error": ""
+        }
+      ],
+      "historical_status": "success",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+      "source_spec": {
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "attempt": {
+          "radius": 8.0,
+          "radius_mm": 8.0,
+          "units": "mm in reconstructed input, not PDF calibration",
+          "status": "success",
+          "started_at": "2026-10-18T19:01:00.217873+08:00",
+          "selected_edges": [
+            {
+              "index_1based": 9,
+              "length": 100.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                103.0,
+                26.0
+              ],
+              "end": [
+                100.0,
+                103.0,
+                26.0
+              ],
+              "midpoint": [
+                50.0,
+                103.0,
+                26.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                3,
+                8
+              ]
+            }
+          ],
+          "input_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+          "operation_input_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "api": "FreeCAD Part.Shape.makeFillet / OCCT BRepFilletAPI_MakeFillet",
+          "runtime": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "source_feature_verified": false,
+          "output_stats": {
+            "null": false,
+            "valid": true,
+            "shape_type": "Compound",
+            "solids": 1,
+            "shells": 1,
+            "faces": 17,
+            "edges": 39,
+            "vertices": 24,
+            "area": 44648.10609652105,
+            "volume": 402709.4517542564,
+            "bbox": [
+              0.0,
+              0.0,
+              0.0,
+              100.0,
+              129.0,
+              68.0
+            ],
+            "closed_solids": true
+          },
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 1,
+              "shells": 1,
+              "faces": 17,
+              "edges": 39,
+              "vertices": 24,
+              "area": 44648.10609652105,
+              "volume": 402709.4517542564,
+              "bbox": [
+                0.0,
+                0.0,
+                0.0,
+                100.0,
+                129.0,
+                68.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139"
+          },
+          "roundtrip_step": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Solid",
+              "solids": 1,
+              "shells": 1,
+              "faces": 17,
+              "edges": 39,
+              "vertices": 24,
+              "area": 44648.10609652105,
+              "volume": 402709.4517542564,
+              "bbox": [
+                0.0,
+                0.0,
+                0.0,
+                100.0,
+                129.0,
+                68.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "04490cdb246dd63af30a04cbf1ac0d030b2fd019edbe68c084ac79e8d926d202"
+          },
+          "brep": "data/original-occ/fixtures/1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139.brep",
+          "step": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/attempt01-r8.step",
+          "before_mesh": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before-mesh.json",
+          "after_mesh": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/attempt01-r8-mesh.json",
+          "face_classification": [
+            {
+              "face_index_1based": 1,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 2,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 3,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 4,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 5,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 6,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 7,
+              "surface_type": "Cylinder",
+              "new_analytic_support": true,
+              "radius": 8.0
+            },
+            {
+              "face_index_1based": 8,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 9,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 10,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 11,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 12,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 13,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 14,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 15,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 16,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            },
+            {
+              "face_index_1based": 17,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "radius": null
+            }
+          ],
+          "elapsed_seconds": 0.21539291700173635,
+          "finished_at": "2026-10-18T19:01:00.433910+08:00"
+        },
+        "part_number": 1,
+        "historical_source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "scope_notice": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "edge_index": 9,
+          "length": 100.0,
+          "points": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces": [
+            {
+              "face_index": 3,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face_index": 8,
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ]
+            }
+          ],
+          "index_1based": 9,
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "group": "root"
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 9,
+          "length": 100.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            103.0,
+            26.0
+          ],
+          "end": [
+            100.0,
+            103.0,
+            26.0
+          ],
+          "midpoint": [
+            50.0,
+            103.0,
+            26.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            3,
+            8
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+          "targets": [
+            {
+              "edge_index": 9,
+              "length": 100.0,
+              "points": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces": [
+                {
+                  "face_index": 3,
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                },
+                {
+                  "face_index": 8,
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ]
+                }
+              ],
+              "index_1based": 9,
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "group": "root"
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+            "targets": [
+              {
+                "index_1based": 9,
+                "length": 100.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                "end": [
+                  100.0,
+                  103.0,
+                  26.0
+                ],
+                "midpoint": [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  3,
+                  8
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r12",
+      "label": "flush_boss_cliff_input / R12",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 2,
+        "radius_mm": 12,
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 12,
+      "base_brep": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+      "base_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d.brep",
+          "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before.brep",
+          "label": "flush_boss_cliff_input",
+          "selected_edges": [
+            {
+              "index_1based": 9,
+              "length": 100.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                103.0,
+                26.0
+              ],
+              "end": [
+                100.0,
+                103.0,
+                26.0
+              ],
+              "midpoint": [
+                50.0,
+                103.0,
+                26.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                3,
+                8
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "recorded_hash_matches": true,
+          "selection_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d"
+        }
+      ],
+      "historical_results": [],
+      "historical_status": "not_executed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+      "source_spec": {
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "attempt": null,
+        "part_number": 1,
+        "historical_source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "scope_notice": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "edge_index": 9,
+          "length": 100.0,
+          "points": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces": [
+            {
+              "face_index": 3,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face_index": 8,
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ]
+            }
+          ],
+          "index_1based": 9,
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "group": "root"
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 9,
+          "length": 100.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            103.0,
+            26.0
+          ],
+          "end": [
+            100.0,
+            103.0,
+            26.0
+          ],
+          "midpoint": [
+            50.0,
+            103.0,
+            26.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            3,
+            8
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+          "targets": [
+            {
+              "edge_index": 9,
+              "length": 100.0,
+              "points": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces": [
+                {
+                  "face_index": 3,
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                },
+                {
+                  "face_index": 8,
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ]
+                }
+              ],
+              "index_1based": 9,
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "group": "root"
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+            "targets": [
+              {
+                "index_1based": 9,
+                "length": 100.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                "end": [
+                  100.0,
+                  103.0,
+                  26.0
+                ],
+                "midpoint": [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  3,
+                  8
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r16",
+      "label": "flush_boss_cliff_input / R16",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 3,
+        "radius_mm": 16,
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 16,
+      "base_brep": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+      "base_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d.brep",
+          "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before.brep",
+          "label": "flush_boss_cliff_input",
+          "selected_edges": [
+            {
+              "index_1based": 9,
+              "length": 100.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                103.0,
+                26.0
+              ],
+              "end": [
+                100.0,
+                103.0,
+                26.0
+              ],
+              "midpoint": [
+                50.0,
+                103.0,
+                26.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                3,
+                8
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "recorded_hash_matches": true,
+          "selection_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d"
+        }
+      ],
+      "historical_results": [],
+      "historical_status": "not_executed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+      "source_spec": {
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "attempt": null,
+        "part_number": 1,
+        "historical_source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "scope_notice": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "edge_index": 9,
+          "length": 100.0,
+          "points": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces": [
+            {
+              "face_index": 3,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face_index": 8,
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ]
+            }
+          ],
+          "index_1based": 9,
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "group": "root"
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 9,
+          "length": 100.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            103.0,
+            26.0
+          ],
+          "end": [
+            100.0,
+            103.0,
+            26.0
+          ],
+          "midpoint": [
+            50.0,
+            103.0,
+            26.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            3,
+            8
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+          "targets": [
+            {
+              "edge_index": 9,
+              "length": 100.0,
+              "points": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces": [
+                {
+                  "face_index": 3,
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                },
+                {
+                  "face_index": 8,
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ]
+                }
+              ],
+              "index_1based": 9,
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "group": "root"
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+            "targets": [
+              {
+                "index_1based": 9,
+                "length": 100.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                "end": [
+                  100.0,
+                  103.0,
+                  26.0
+                ],
+                "midpoint": [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  3,
+                  8
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r48",
+      "label": "flush_boss_cliff_input / R48",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 4,
+        "radius_mm": 48,
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "preprocess": {
+          "type": "none"
+        }
+      },
+      "radius_mm": 48,
+      "base_brep": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+      "base_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d.brep",
+          "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before.brep",
+          "label": "flush_boss_cliff_input",
+          "selected_edges": [
+            {
+              "index_1based": 9,
+              "length": 100.0,
+              "curve_type": "Line",
+              "start": [
+                0.0,
+                103.0,
+                26.0
+              ],
+              "end": [
+                100.0,
+                103.0,
+                26.0
+              ],
+              "midpoint": [
+                50.0,
+                103.0,
+                26.0
+              ],
+              "polyline": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                3,
+                8
+              ],
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  3.225806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  6.451612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  9.677419354838708,
+                  103.0,
+                  26.0
+                ],
+                [
+                  12.903225806451612,
+                  103.0,
+                  26.0
+                ],
+                [
+                  16.129032258064516,
+                  103.0,
+                  26.0
+                ],
+                [
+                  19.35483870967742,
+                  103.0,
+                  26.0
+                ],
+                [
+                  22.580645161290324,
+                  103.0,
+                  26.0
+                ],
+                [
+                  25.806451612903228,
+                  103.0,
+                  26.0
+                ],
+                [
+                  29.03225806451613,
+                  103.0,
+                  26.0
+                ],
+                [
+                  32.25806451612903,
+                  103.0,
+                  26.0
+                ],
+                [
+                  35.483870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  38.70967741935484,
+                  103.0,
+                  26.0
+                ],
+                [
+                  41.935483870967744,
+                  103.0,
+                  26.0
+                ],
+                [
+                  45.16129032258065,
+                  103.0,
+                  26.0
+                ],
+                [
+                  48.38709677419355,
+                  103.0,
+                  26.0
+                ],
+                [
+                  51.612903225806456,
+                  103.0,
+                  26.0
+                ],
+                [
+                  54.83870967741936,
+                  103.0,
+                  26.0
+                ],
+                [
+                  58.06451612903226,
+                  103.0,
+                  26.0
+                ],
+                [
+                  61.29032258064517,
+                  103.0,
+                  26.0
+                ],
+                [
+                  64.51612903225806,
+                  103.0,
+                  26.0
+                ],
+                [
+                  67.74193548387096,
+                  103.0,
+                  26.0
+                ],
+                [
+                  70.96774193548386,
+                  103.0,
+                  26.0
+                ],
+                [
+                  74.19354838709675,
+                  103.0,
+                  26.0
+                ],
+                [
+                  77.41935483870965,
+                  103.0,
+                  26.0
+                ],
+                [
+                  80.64516129032255,
+                  103.0,
+                  26.0
+                ],
+                [
+                  83.87096774193544,
+                  103.0,
+                  26.0
+                ],
+                [
+                  87.09677419354834,
+                  103.0,
+                  26.0
+                ],
+                [
+                  90.32258064516124,
+                  103.0,
+                  26.0
+                ],
+                [
+                  93.54838709677414,
+                  103.0,
+                  26.0
+                ],
+                [
+                  96.77419354838703,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+          "recorded_hash_matches": true,
+          "selection_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d"
+        }
+      ],
+      "historical_results": [],
+      "historical_status": "not_executed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+      "source_spec": {
+        "plan": {
+          "label": "flush_boss_cliff_input",
+          "edge_indices": [
+            9
+          ],
+          "radii": [
+            8,
+            12,
+            16,
+            48
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "edge_evidence": [
+            {
+              "index": 9,
+              "length": 100.0,
+              "curve": "Line",
+              "vertices": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ],
+              "faces": [
+                {
+                  "index": 3,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    0.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                },
+                {
+                  "index": 8,
+                  "type": "Plane",
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "bbox": [
+                    0.0,
+                    103.0,
+                    26.0,
+                    100.0,
+                    103.0,
+                    42.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "attempt": null,
+        "part_number": 1,
+        "historical_source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "scope_notice": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_missing",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+            "exact_source_paths": [],
+            "found": false
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [
+        {
+          "edge_index": 9,
+          "length": 100.0,
+          "points": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces": [
+            {
+              "face_index": 3,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face_index": 8,
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ]
+            }
+          ],
+          "index_1based": 9,
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              50.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "group": "root"
+        }
+      ],
+      "operation_targets": [
+        {
+          "index_1based": 9,
+          "length": 100.0,
+          "curve_type": "Line",
+          "start": [
+            0.0,
+            103.0,
+            26.0
+          ],
+          "end": [
+            100.0,
+            103.0,
+            26.0
+          ],
+          "midpoint": [
+            50.0,
+            103.0,
+            26.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            3,
+            8
+          ],
+          "samples_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+          "targets": [
+            {
+              "edge_index": 9,
+              "length": 100.0,
+              "points": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "adjacent_faces": [
+                {
+                  "face_index": 3,
+                  "normal": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                },
+                {
+                  "face_index": 8,
+                  "normal": [
+                    0.0,
+                    -1.0,
+                    -0.0
+                  ]
+                }
+              ],
+              "index_1based": 9,
+              "samples_mm": [
+                [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                [
+                  100.0,
+                  103.0,
+                  26.0
+                ]
+              ],
+              "group": "root"
+            }
+          ],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+            "targets": [
+              {
+                "index_1based": 9,
+                "length": 100.0,
+                "curve_type": "Line",
+                "start": [
+                  0.0,
+                  103.0,
+                  26.0
+                ],
+                "end": [
+                  100.0,
+                  103.0,
+                  26.0
+                ],
+                "midpoint": [
+                  50.0,
+                  103.0,
+                  26.0
+                ],
+                "polyline": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  3,
+                  8
+                ],
+                "samples_mm": [
+                  [
+                    0.0,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    3.225806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    6.451612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    9.677419354838708,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    12.903225806451612,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    16.129032258064516,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    19.35483870967742,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    22.580645161290324,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    25.806451612903228,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    29.03225806451613,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    32.25806451612903,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    35.483870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    38.70967741935484,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    41.935483870967744,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    45.16129032258065,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    48.38709677419355,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    51.612903225806456,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    54.83870967741936,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    58.06451612903226,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    61.29032258064517,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    64.51612903225806,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    67.74193548387096,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    70.96774193548386,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    74.19354838709675,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    77.41935483870965,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    80.64516129032255,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    83.87096774193544,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    87.09677419354834,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    90.32258064516124,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    93.54838709677414,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    96.77419354838703,
+                    103.0,
+                    26.0
+                  ],
+                  [
+                    100.0,
+                    103.0,
+                    26.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    }
+  ],
+  "default_variant": "part01-r8",
+  "source_spec": {
+    "number": 1,
+    "case_id": "73-17_cliff_edge-1281",
+    "title": "悬崖边：齐边立块与窄后平台（PDF 复核）",
+    "status": "pending",
+    "human_note": "用户已确认：A的待圆角选边对应关系没有问题。其他形状与尺寸尚未单独确认。",
+    "has_model": true,
+    "snapshot": {
+      "reference_crop": [
+        0.425,
+        0.23,
+        0.765,
+        0.407
+      ],
+      "source_sha256": "b6686dfb9126f9029d359ece4aefaba3673ec80aa5cb8b975cb90c843f36d667",
+      "brep_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "annotation_sha256": "3a58b2ce021ba9a082d6e1d874496ebec41e012689ae180215754d92a4adcb97"
+    },
+    "files": {
+      "brep": "data/original-occ/fixtures/004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1.brep",
+      "step": "history:outputs/parasolid-preblend/models/73-17_cliff_edge-1281.step",
+      "freecad": "history:outputs/parasolid-preblend/models/73-17_cliff_edge-1281.FCStd"
+    },
+    "assumptions": "PDF 1280-1282（印刷页 1278-1280）交叉核对：图 73-17 仅画圆角后结果；按前低后高平台反推锐边输入，将左端小立块前面移至与台阶立面齐平、左侧齐外边，覆盖后平台全深；修正为长纵深基板和窄后平台。保留立块下方共面分割边，供标记连续 cliff 边链。任意单位 100×129，基厚26、台阶高16、后平台深26、立块36×26×26均为投影比例估计；半径48仅为后续测试种子，未执行目标圆角。图示不唯一，原始隐藏面、尺寸和拓扑均未被证明。",
+    "annotation": {
+      "schema_version": 1,
+      "case_id": "73-17_cliff_edge-1281",
+      "brep_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "confirmed_labels": [
+        "A"
+      ],
+      "caption": "红色 A：待圆角凹边的对应关系已由用户确认。蓝虚线 B 仍为上侧 cliff 候选边界；其他形状与尺寸待核。",
+      "meaning": {
+        "A": "Current preblend target: lower reentrant root, one edge, length 100.",
+        "B": "Upper inferred cliff boundary: two edges, lengths 36 and 64."
+      },
+      "verified_native_edges": {
+        "case_id": "73-17_cliff_edge-1281",
+        "brep_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "root": [
+          {
+            "edge_index": 9,
+            "length": 100.0,
+            "points": [
+              [
+                0.0,
+                103.0,
+                26.0
+              ],
+              [
+                50.0,
+                103.0,
+                26.0
+              ],
+              [
+                100.0,
+                103.0,
+                26.0
+              ]
+            ],
+            "adjacent_faces": [
+              {
+                "face_index": 3,
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "face_index": 8,
+                "normal": [
+                  0.0,
+                  -1.0,
+                  -0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "cliff": [
+          {
+            "edge_index": 20,
+            "length": 36.0,
+            "points": [
+              [
+                0.0,
+                103.0,
+                42.0
+              ],
+              [
+                18.0,
+                103.0,
+                42.0
+              ],
+              [
+                36.0,
+                103.0,
+                42.0
+              ]
+            ],
+            "adjacent_faces": [
+              {
+                "face_index": 8,
+                "normal": [
+                  0.0,
+                  -1.0,
+                  -0.0
+                ]
+              },
+              {
+                "face_index": 12,
+                "normal": [
+                  0.0,
+                  -1.0,
+                  -0.0
+                ]
+              }
+            ]
+          },
+          {
+            "edge_index": 21,
+            "length": 64.0,
+            "points": [
+              [
+                36.0,
+                103.0,
+                42.0
+              ],
+              [
+                68.0,
+                103.0,
+                42.0
+              ],
+              [
+                100.0,
+                103.0,
+                42.0
+              ]
+            ],
+            "adjacent_faces": [
+              {
+                "face_index": 8,
+                "normal": [
+                  0.0,
+                  -1.0,
+                  -0.0
+                ]
+              },
+              {
+                "face_index": 13,
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        ],
+        "root_material_quadrants": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "geometry_changed": false,
+        "interpretation": "Current reconstruction defines the lower reentrant root as target; source only shows post-blend geometry, so original target identity is not proven."
+      },
+      "projection": {
+        "camera": [
+          -40,
+          23
+        ],
+        "basis": [
+          [
+            0.6427876096865393,
+            -0.29931740973281556,
+            0.7051476278512911
+          ],
+          [
+            0.766044443118978,
+            0.25115712811174434,
+            -0.5916891144555523
+          ],
+          [
+            0.0,
+            0.9205048534524403,
+            0.39073112848927377
+          ]
+        ],
+        "center": [
+          81.54924706550105,
+          32.5309292939497,
+          2.1729381805419905
+        ],
+        "pixels_per_unit": 7.050954125157711,
+        "A_pixels": [
+          [
+            631.3384553051817,
+            403.22028424696225
+          ],
+          [
+            1084.5650501171385,
+            614.2676167356739
+          ]
+        ],
+        "B_pixels": [
+          [
+            631.3384553051817,
+            299.3732843481115
+          ],
+          [
+            1084.5650501171385,
+            510.4206168368231
+          ]
+        ]
+      },
+      "geometry_modified": false,
+      "human_confirmation": false
+    },
+    "review_results": {
+      "target_edge_A": {
+        "status": "confirmed",
+        "scope": "target edge correspondence only",
+        "human_text": "就是A没有问题",
+        "timestamp": "2026-10-17T20:37:22.738947+08:00"
+      }
+    },
+    "test_spec": {
+      "schema_version": 1,
+      "case_id": "73-17_cliff_edge-1281",
+      "spec_status": "ordinary_fillet_batch_executed_reference_feature_pending",
+      "input_brep_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "scope_notice": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+      "local_demo": {
+        "status": "success",
+        "title": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验",
+        "radius_text": "R = 8 mm",
+        "panel_title": "R = 8 mm · 校验通过",
+        "radius": 8.0,
+        "before_caption": "红色是本次选中的边，含遮挡边投影；精确边号、各部件半径见页面。",
+        "after_caption": "橙色标出可确认新增的解析面；其他新曲面保持部件色。",
+        "caption": "PDF 原图 → 重建输入 → 实际结果。中、右模型使用同一相机与比例，选边与各半径尝试见下表。",
+        "scope_note": "本次为 OCC 普通等半径圆角的本地实算；半径是重建模型中的示范值，非 PDF 标定尺寸。原图特殊模式和外形对应仍待人工核验。",
+        "outputs": {
+          "全部半径与异常记录": "history:outputs/manual-review/diagnostics/batch/case01/summary.json",
+          "下载通过校验部件 BREP": "data/original-occ/fixtures/298a952d9b36cbe493ce8aaef1cbb4cbea26230596dc6eca3db422fe23f049d0.brep",
+          "下载通过校验部件 STEP": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/successful-parts.step"
+        },
+        "input_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "result_artifacts": [
+          {
+            "brep": "data/original-occ/fixtures/1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139.brep",
+            "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139"
+          }
+        ],
+        "executed_at": "2026-10-18T19:01:00.173035+08:00",
+        "batch_parts": [
+          {
+            "label": "flush_boss_cliff_input",
+            "part_number": 1,
+            "status": "success",
+            "selected_radius": 8.0,
+            "edge_indices": [
+              9
+            ],
+            "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+            "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+            "preprocess": {
+              "type": "none"
+            },
+            "reason": "",
+            "attempts": [
+              {
+                "radius": 8.0,
+                "status": "success",
+                "stage": "校验通过",
+                "error": "",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "source_notes": [
+          "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。"
+        ],
+        "preprocess_notes": [],
+        "summary_sha256": "30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc",
+        "audit_preview_index_sha256": "18d2e70a939f09aedff46b3d1a175a9ff260321449b953f70fa5ba4228a16c75",
+        "accepted_operation_groups": 1,
+        "export_rejected_operation_groups": 0,
+        "failed_operation_groups": 0,
+        "auxiliary_parts": 0,
+        "summary": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+      },
+      "batch_execution": {
+        "status": "success",
+        "parts": [
+          {
+            "label": "flush_boss_cliff_input",
+            "part_number": 1,
+            "status": "success",
+            "selected_radius": 8.0,
+            "edge_indices": [
+              9
+            ],
+            "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+            "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+            "preprocess": {
+              "type": "none"
+            },
+            "reason": "",
+            "attempts": [
+              {
+                "radius": 8.0,
+                "status": "success",
+                "stage": "校验通过",
+                "error": "",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "summary_file": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+      },
+      "display_fields": [
+        {
+          "label": "选边与半径",
+          "value": "1. flush_boss_cliff_input：R8；严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。"
+        },
+        {
+          "label": "原图功能与本地普通圆角的区别",
+          "value": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。"
+        },
+        {
+          "label": "验证范围",
+          "value": "分别记录 OCC 构建、原生 BREP/BOP 检查、BREP 与 STEP 导出回读。页面展示不是人工确认，也不代表原图特殊模式已经实现。"
+        }
+      ],
+      "execution": {
+        "target_operation_executed": true,
+        "ordinary_common_edge_fillet_executed": true,
+        "source_reference_feature_verified": false,
+        "scored": false,
+        "batch_status": "success",
+        "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+      },
+      "reference_figure_crop": [
+        0.31,
+        0.225,
+        0.77,
+        0.412
+      ],
+      "reference_figure_caption": "原 PDF 完整图形区域，包含本图参考输入、结果及相关标注；可打开整页核对。",
+      "applies_to_current_input": true
+    },
+    "variants": [],
+    "local_demo": {
+      "status": "success",
+      "title": "OCC 实际圆角 · R = 8 mm · 通过几何及导出校验",
+      "radius_text": "R = 8 mm",
+      "panel_title": "R = 8 mm · 校验通过",
+      "radius": 8.0,
+      "before_caption": "红色是本次选中的边，含遮挡边投影；精确边号、各部件半径见页面。",
+      "after_caption": "橙色标出可确认新增的解析面；其他新曲面保持部件色。",
+      "caption": "PDF 原图 → 重建输入 → 实际结果。中、右模型使用同一相机与比例，选边与各半径尝试见下表。",
+      "scope_note": "本次为 OCC 普通等半径圆角的本地实算；半径是重建模型中的示范值，非 PDF 标定尺寸。原图特殊模式和外形对应仍待人工核验。",
+      "outputs": {
+        "全部半径与异常记录": "history:outputs/manual-review/diagnostics/batch/case01/summary.json",
+        "下载通过校验部件 BREP": "data/original-occ/fixtures/298a952d9b36cbe493ce8aaef1cbb4cbea26230596dc6eca3db422fe23f049d0.brep",
+        "下载通过校验部件 STEP": "history:outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/successful-parts.step"
+      },
+      "input_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "result_artifacts": [
+        {
+          "brep": "data/original-occ/fixtures/1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139.brep",
+          "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139"
+        }
+      ],
+      "executed_at": "2026-10-18T19:01:00.173035+08:00",
+      "batch_parts": [
+        {
+          "label": "flush_boss_cliff_input",
+          "part_number": 1,
+          "status": "success",
+          "selected_radius": 8.0,
+          "edge_indices": [
+            9
+          ],
+          "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+          "source_feature_note": "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。",
+          "preprocess": {
+            "type": "none"
+          },
+          "reason": "",
+          "attempts": [
+            {
+              "radius": 8.0,
+              "status": "success",
+              "stage": "校验通过",
+              "error": "",
+              "native_operation_succeeded": true
+            }
+          ]
+        }
+      ],
+      "source_notes": [
+        "普通等半径诊断；没有显式 cliff 边界约束/单侧相切控制，不能当作源cliff结果。"
+      ],
+      "preprocess_notes": [],
+      "summary_sha256": "30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc",
+      "audit_preview_index_sha256": "18d2e70a939f09aedff46b3d1a175a9ff260321449b953f70fa5ba4228a16c75",
+      "accepted_operation_groups": 1,
+      "export_rejected_operation_groups": 0,
+      "failed_operation_groups": 0,
+      "auxiliary_parts": 0,
+      "summary": "history:outputs/manual-review/diagnostics/batch/case01/summary.json"
+    },
+    "test_spec_file": "case-specs/73-17_cliff_edge-1281.json"
+  },
+  "history_documents": [
+    {
+      "path": "data/original-occ/history/30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc.json",
+      "original_sha256": "30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case01/summary.json",
+      "sanitized_sha256": "1c8132432413cbd442473be179f2cd6dcba3fc39d91a33fad361415e5ac651fb"
+    },
+    {
+      "path": "data/original-occ/history/3e53faf94cefd2383db75ff00864eacdbaf4367a5b264095c95f737a3e09a1f8.json",
+      "original_sha256": "3e53faf94cefd2383db75ff00864eacdbaf4367a5b264095c95f737a3e09a1f8",
+      "original_path": "history:outputs/manual-review/case-specs/73-17_cliff_edge-1281.json",
+      "sanitized_sha256": "bad6b615b8485ae20abeade04cbbf71636b6e2bc0848dfcf03e78e821056a13a"
+    }
+  ],
+  "historical_ordinary": {
+    "summary": {
+      "path": "outputs/manual-review/diagnostics/batch/case01/summary.json",
+      "exists": true,
+      "sha256": "30bada7d9fdf84dc86c5464ac41649b083a0fc54ce6d1f8a472a6f90694379cc",
+      "bytes": 25939
+    },
+    "status": "success",
+    "source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+    "runtime": {
+      "FreeCAD": [
+        "1",
+        "2",
+        "0",
+        "46770 (Git)",
+        "git://github.com/liyongzheng666/FreeCAD.git",
+        "2026/05/09 21:28:57",
+        "work/local-occt-integration",
+        "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+      ],
+      "OCCT": "7.8.1"
+    },
+    "scripts": {
+      "status": "recorded_source_version_missing",
+      "recorded_hashes": [
+        {
+          "field": ".worker_sha256",
+          "expected_sha256": "741087db8a350047afedddd638b1fd2d59e9da47b6e67f3499ab5e1ca06f233e",
+          "exact_source_paths": [],
+          "found": false
+        }
+      ],
+      "linked_sources": [],
+      "portable_command_available": false,
+      "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+    },
+    "attempts": [
+      {
+        "part_number": 1,
+        "part_label": "flush_boss_cliff_input",
+        "attempt_number": 1,
+        "radius_mm": 8.0,
+        "status": "success",
+        "native_operation_succeeded": null,
+        "failure_stage": null,
+        "error": null,
+        "selected_edges": [
+          {
+            "index_1based": 9,
+            "start": [
+              0.0,
+              103.0,
+              26.0
+            ],
+            "end": [
+              100.0,
+              103.0,
+              26.0
+            ]
+          }
+        ],
+        "source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+        "operation_input_sha256": "a48d4f24ea1fcc8e831588b9c071037d3e422c1185419ba882f4563ba86dbc7d",
+        "brep": {
+          "path": "data/original-occ/fixtures/1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139.brep",
+          "exists": true,
+          "sha256": "1c8df765ac121936609081901c5cc016beb93bef2ffab9128d35a703d2b84139",
+          "bytes": 8178
+        },
+        "step": {
+          "path": "outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/attempt01-r8.step",
+          "exists": true,
+          "sha256": "04490cdb246dd63af30a04cbf1ac0d030b2fd019edbe68c084ac79e8d926d202",
+          "bytes": 18285
+        },
+        "before_mesh": {
+          "path": "outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/before-mesh.json",
+          "exists": true,
+          "sha256": "17dc112c280d99da9240d5a08a51f0e23b659d8ea93f47f66184590c198cd181",
+          "bytes": 24823,
+          "vertices": 68,
+          "triangles": 36,
+          "actual_mesh": true,
+          "schema": "parts/faces"
+        },
+        "after_mesh": {
+          "path": "outputs/manual-review/diagnostics/batch/case01/runs/20261018T190100.172876-96360/part01/attempt01-r8-mesh.json",
+          "exists": true,
+          "sha256": "86fc7c5c36e9743409918e618bcadf6f69b24cefa07ac107e6aaec315a754900",
+          "bytes": 53359,
+          "vertices": 202,
+          "triangles": 168,
+          "actual_mesh": true,
+          "schema": "parts/faces"
+        }
+      }
+    ],
+    "source_matches_current_review": true
+  },
+  "review_results": {
+    "target_edge_A": {
+      "status": "confirmed",
+      "scope": "target edge correspondence only",
+      "human_text": "就是A没有问题",
+      "timestamp": "2026-10-17T20:37:22.738947+08:00"
+    }
+  },
+  "provenance": {
+    "kind": "historical_source_freeze",
+    "not_a_rerun": true,
+    "source_dimensions": "inferred reconstruction; not original vendor CAD",
+    "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+    "no_reference_artwork_distributed": true
+  }
+}

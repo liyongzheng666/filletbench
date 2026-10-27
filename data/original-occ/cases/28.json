@@ -1,0 +1,4466 @@
+{
+  "schema": "filletbench.original-occ.v1",
+  "number": 28,
+  "id": "fig75-03_to_05-1351",
+  "title": "75-3 穿越式正交墙面及四种方向",
+  "has_model": true,
+  "source_brep": "data/original-occ/fixtures/44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6.brep",
+  "source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+  "recorded_source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+  "human_status": "pending",
+  "human_note": "",
+  "reference": {
+    "page": 1351,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.17597614579836637,
+      0.4917557683514473,
+      0.8914012366192982,
+      0.8821406827054977
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole figure including colored callout borders plus margin; converted from MediaBox to verified PDF CropBox",
+    "input_only_crop_used": false,
+    "crop_coordinate_system": "pdfjs_cropbox_normalized_top_left",
+    "source_media_box": [
+      0.0,
+      0.0,
+      595.22,
+      842.0
+    ],
+    "pdf_crop_box": [
+      28.0,
+      97.0,
+      568.0,
+      745.0
+    ],
+    "source_media_box_crop": [
+      0.20669184290030213,
+      0.4936552706552706,
+      0.8557452165156093,
+      0.7940940170940172
+    ]
+  },
+  "base_targets": [],
+  "base_annotation_groups": {},
+  "selection": {
+    "base": {
+      "sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "targets": [],
+      "selected_faces": []
+    }
+  },
+  "variants": [
+    {
+      "id": "part01-r1p0",
+      "label": "crossing_vertical_wall / R1.0",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 1,
+        "radius_mm": 1.0,
+        "plan": {
+          "label": "crossing_vertical_wall",
+          "edge_indices": [
+            4
+          ],
+          "radii": [
+            1.0,
+            2.0,
+            0.5
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "operation_group": "positive-quadrant",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json"
+          }
+        },
+        "preprocess": {
+          "type": "external_brep",
+          "source_labels": [
+            "crossing_vertical_wall",
+            "crossing_horizontal_wall"
+          ],
+          "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "evidence_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+          "saved_brep": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep"
+        }
+      },
+      "radius_mm": 1.0,
+      "base_brep": "data/original-occ/fixtures/44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6.brep",
+      "base_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before.brep",
+          "label": "crossing_vertical_wall",
+          "selected_edges": [
+            {
+              "index_1based": 4,
+              "length": 24.0,
+              "curve_type": "Line",
+              "start": [
+                12.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                -12.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ],
+              "samples_mm": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "recorded_hash_matches": true,
+          "selection_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4"
+        }
+      ],
+      "historical_results": [
+        {
+          "brep": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+          "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1.brep",
+          "recorded_sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712",
+          "historical_attempt_status": "success",
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 661.6991118430775,
+              "volume": 0.0,
+              "bbox": [
+                -12.0,
+                -2.220446049250313e-16,
+                -2.220446049250313e-16,
+                12.0,
+                14.0,
+                14.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712"
+          },
+          "roundtrip_step": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Shell",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 661.6991118430775,
+              "volume": 0.0,
+              "bbox": [
+                -12.0,
+                -2.22044604925e-16,
+                -2.22044604925e-16,
+                12.0,
+                14.0,
+                14.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "86a1b8410025ddbbaf4b095fe821f392488f6cf009c3dcbe57f75a722c157b27"
+          },
+          "error": ""
+        }
+      ],
+      "historical_status": "success",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+      "source_spec": {
+        "plan": {
+          "label": "crossing_vertical_wall",
+          "edge_indices": [
+            4
+          ],
+          "radii": [
+            1.0,
+            2.0,
+            0.5
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "operation_group": "positive-quadrant",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json"
+          }
+        },
+        "attempt": {
+          "radius": 1.0,
+          "radius_mm": 1.0,
+          "units": "mm in reconstructed input, not PDF calibration",
+          "status": "success",
+          "started_at": "2026-10-18T19:04:45.379188+08:00",
+          "selected_edges": [
+            {
+              "index_1based": 4,
+              "length": 24.0,
+              "curve_type": "Line",
+              "start": [
+                12.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                -12.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ]
+            }
+          ],
+          "input_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+          "operation_input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "api": "FreeCAD Part.Shape.makeFillet / OCCT BRepFilletAPI_MakeFillet",
+          "runtime": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "source_feature_verified": false,
+          "native_operation_succeeded": true,
+          "failure_stage": null,
+          "output_stats": {
+            "null": false,
+            "valid": true,
+            "shape_type": "Compound",
+            "solids": 0,
+            "shells": 1,
+            "faces": 3,
+            "edges": 10,
+            "vertices": 8,
+            "area": 661.6991118430775,
+            "volume": 0.0,
+            "bbox": [
+              -12.0,
+              -2.220446049250313e-16,
+              -2.220446049250313e-16,
+              12.0,
+              14.0,
+              14.0
+            ],
+            "closed_solids": true
+          },
+          "checks": {
+            "native_check_passed": true,
+            "area_changed": true,
+            "geometry_signature_changed": true,
+            "solid_count_preserved": true
+          },
+          "preview_mesh": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1-candidate-mesh.json",
+          "candidate_brep": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+          "candidate_step": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1.step",
+          "roundtrip_brep": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Compound",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 661.6991118430775,
+              "volume": 0.0,
+              "bbox": [
+                -12.0,
+                -2.220446049250313e-16,
+                -2.220446049250313e-16,
+                12.0,
+                14.0,
+                14.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712"
+          },
+          "roundtrip_step": {
+            "stats": {
+              "null": false,
+              "valid": true,
+              "shape_type": "Shell",
+              "solids": 0,
+              "shells": 1,
+              "faces": 3,
+              "edges": 10,
+              "vertices": 8,
+              "area": 661.6991118430775,
+              "volume": 0.0,
+              "bbox": [
+                -12.0,
+                -2.22044604925e-16,
+                -2.22044604925e-16,
+                12.0,
+                14.0,
+                14.0
+              ],
+              "closed_solids": true
+            },
+            "checks": {
+              "area": true,
+              "volume": true,
+              "faces": true,
+              "solids": true,
+              "bbox": true
+            },
+            "sha256": "86a1b8410025ddbbaf4b095fe821f392488f6cf009c3dcbe57f75a722c157b27"
+          },
+          "brep": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+          "step": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1.step",
+          "before_mesh": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before-mesh.json",
+          "after_mesh": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1-mesh.json",
+          "face_classification": [
+            {
+              "face_index_1based": 1,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "classification_note": "Orange only when this analytic support is absent from every known input support; unclassified input surfaces suppress orange",
+              "radius": null
+            },
+            {
+              "face_index_1based": 2,
+              "surface_type": "Cylinder",
+              "new_analytic_support": true,
+              "classification_note": "Orange only when this analytic support is absent from every known input support; unclassified input surfaces suppress orange",
+              "radius": 1.0
+            },
+            {
+              "face_index_1based": 3,
+              "surface_type": "Plane",
+              "new_analytic_support": false,
+              "classification_note": "Orange only when this analytic support is absent from every known input support; unclassified input surfaces suppress orange",
+              "radius": null
+            }
+          ],
+          "elapsed_seconds": 0.03896166599588469,
+          "finished_at": "2026-10-18T19:04:45.418813+08:00"
+        },
+        "part_number": 1,
+        "historical_source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+        "scope_notice": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_available",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "e99a2db378ec49443345135b80aa0b57d68e41bb34a1cc402d5aefeadcc498b6",
+            "exact_source_paths": [
+              "outputs/manual-review/diagnostics/case18-capping/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case24-oblique/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case33-variable/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case20-patch/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case34-rho/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/batch/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case17-capping/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case19-trim/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case31-faceted/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case31-aligned-v2/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case23-overlap/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case16-limits/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case21-unders/code/fillet_batch_worker.py",
+              "history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py"
+            ],
+            "found": true
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [],
+      "operation_targets": [
+        {
+          "index_1based": 4,
+          "length": 24.0,
+          "curve_type": "Line",
+          "start": [
+            12.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "polyline": [
+            [
+              12.0,
+              0.0,
+              0.0
+            ],
+            [
+              11.225806451612904,
+              0.0,
+              0.0
+            ],
+            [
+              10.451612903225808,
+              0.0,
+              0.0
+            ],
+            [
+              9.677419354838712,
+              0.0,
+              0.0
+            ],
+            [
+              8.903225806451616,
+              0.0,
+              0.0
+            ],
+            [
+              8.12903225806452,
+              0.0,
+              0.0
+            ],
+            [
+              7.3548387096774235,
+              0.0,
+              0.0
+            ],
+            [
+              6.580645161290327,
+              0.0,
+              0.0
+            ],
+            [
+              5.806451612903231,
+              0.0,
+              0.0
+            ],
+            [
+              5.032258064516135,
+              0.0,
+              0.0
+            ],
+            [
+              4.258064516129039,
+              0.0,
+              0.0
+            ],
+            [
+              3.483870967741943,
+              0.0,
+              0.0
+            ],
+            [
+              2.709677419354847,
+              0.0,
+              0.0
+            ],
+            [
+              1.9354838709677509,
+              0.0,
+              0.0
+            ],
+            [
+              1.1612903225806548,
+              0.0,
+              0.0
+            ],
+            [
+              0.3870967741935578,
+              0.0,
+              0.0
+            ],
+            [
+              -0.38709677419353916,
+              0.0,
+              0.0
+            ],
+            [
+              -1.1612903225806361,
+              0.0,
+              0.0
+            ],
+            [
+              -1.935483870967733,
+              0.0,
+              0.0
+            ],
+            [
+              -2.70967741935483,
+              0.0,
+              0.0
+            ],
+            [
+              -3.483870967741927,
+              0.0,
+              0.0
+            ],
+            [
+              -4.258064516129024,
+              0.0,
+              0.0
+            ],
+            [
+              -5.032258064516121,
+              0.0,
+              0.0
+            ],
+            [
+              -5.806451612903218,
+              0.0,
+              0.0
+            ],
+            [
+              -6.580645161290315,
+              0.0,
+              0.0
+            ],
+            [
+              -7.354838709677411,
+              0.0,
+              0.0
+            ],
+            [
+              -8.129032258064509,
+              0.0,
+              0.0
+            ],
+            [
+              -8.903225806451605,
+              0.0,
+              0.0
+            ],
+            [
+              -9.677419354838701,
+              0.0,
+              0.0
+            ],
+            [
+              -10.451612903225797,
+              0.0,
+              0.0
+            ],
+            [
+              -11.225806451612895,
+              0.0,
+              0.0
+            ],
+            [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            1,
+            2
+          ],
+          "samples_mm": [
+            [
+              12.0,
+              0.0,
+              0.0
+            ],
+            [
+              11.225806451612904,
+              0.0,
+              0.0
+            ],
+            [
+              10.451612903225808,
+              0.0,
+              0.0
+            ],
+            [
+              9.677419354838712,
+              0.0,
+              0.0
+            ],
+            [
+              8.903225806451616,
+              0.0,
+              0.0
+            ],
+            [
+              8.12903225806452,
+              0.0,
+              0.0
+            ],
+            [
+              7.3548387096774235,
+              0.0,
+              0.0
+            ],
+            [
+              6.580645161290327,
+              0.0,
+              0.0
+            ],
+            [
+              5.806451612903231,
+              0.0,
+              0.0
+            ],
+            [
+              5.032258064516135,
+              0.0,
+              0.0
+            ],
+            [
+              4.258064516129039,
+              0.0,
+              0.0
+            ],
+            [
+              3.483870967741943,
+              0.0,
+              0.0
+            ],
+            [
+              2.709677419354847,
+              0.0,
+              0.0
+            ],
+            [
+              1.9354838709677509,
+              0.0,
+              0.0
+            ],
+            [
+              1.1612903225806548,
+              0.0,
+              0.0
+            ],
+            [
+              0.3870967741935578,
+              0.0,
+              0.0
+            ],
+            [
+              -0.38709677419353916,
+              0.0,
+              0.0
+            ],
+            [
+              -1.1612903225806361,
+              0.0,
+              0.0
+            ],
+            [
+              -1.935483870967733,
+              0.0,
+              0.0
+            ],
+            [
+              -2.70967741935483,
+              0.0,
+              0.0
+            ],
+            [
+              -3.483870967741927,
+              0.0,
+              0.0
+            ],
+            [
+              -4.258064516129024,
+              0.0,
+              0.0
+            ],
+            [
+              -5.032258064516121,
+              0.0,
+              0.0
+            ],
+            [
+              -5.806451612903218,
+              0.0,
+              0.0
+            ],
+            [
+              -6.580645161290315,
+              0.0,
+              0.0
+            ],
+            [
+              -7.354838709677411,
+              0.0,
+              0.0
+            ],
+            [
+              -8.129032258064509,
+              0.0,
+              0.0
+            ],
+            [
+              -8.903225806451605,
+              0.0,
+              0.0
+            ],
+            [
+              -9.677419354838701,
+              0.0,
+              0.0
+            ],
+            [
+              -10.451612903225797,
+              0.0,
+              0.0
+            ],
+            [
+              -11.225806451612895,
+              0.0,
+              0.0
+            ],
+            [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+          "targets": [],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+            "targets": [
+              {
+                "index_1based": 4,
+                "length": 24.0,
+                "curve_type": "Line",
+                "start": [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  -12.0,
+                  0.0,
+                  0.0
+                ],
+                "midpoint": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "polyline": [
+                  [
+                    12.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    11.225806451612904,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.451612903225808,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.677419354838712,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.903225806451616,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.12903225806452,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.3548387096774235,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.580645161290327,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.806451612903231,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.032258064516135,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.258064516129039,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.483870967741943,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.709677419354847,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.9354838709677509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.1612903225806548,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3870967741935578,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.38709677419353916,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.1612903225806361,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.935483870967733,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -2.70967741935483,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -3.483870967741927,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -4.258064516129024,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.032258064516121,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.806451612903218,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -6.580645161290315,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -7.354838709677411,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.129032258064509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.903225806451605,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -9.677419354838701,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -10.451612903225797,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -11.225806451612895,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -12.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  1,
+                  2
+                ],
+                "samples_mm": [
+                  [
+                    12.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    11.225806451612904,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.451612903225808,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.677419354838712,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.903225806451616,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.12903225806452,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.3548387096774235,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.580645161290327,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.806451612903231,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.032258064516135,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.258064516129039,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.483870967741943,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.709677419354847,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.9354838709677509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.1612903225806548,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3870967741935578,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.38709677419353916,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.1612903225806361,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.935483870967733,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -2.70967741935483,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -3.483870967741927,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -4.258064516129024,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.032258064516121,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.806451612903218,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -6.580645161290315,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -7.354838709677411,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.129032258064509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.903225806451605,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -9.677419354838701,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -10.451612903225797,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -11.225806451612895,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -12.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r2p0",
+      "label": "crossing_vertical_wall / R2.0",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 2,
+        "radius_mm": 2.0,
+        "plan": {
+          "label": "crossing_vertical_wall",
+          "edge_indices": [
+            4
+          ],
+          "radii": [
+            1.0,
+            2.0,
+            0.5
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "operation_group": "positive-quadrant",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json"
+          }
+        },
+        "preprocess": {
+          "type": "external_brep",
+          "source_labels": [
+            "crossing_vertical_wall",
+            "crossing_horizontal_wall"
+          ],
+          "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "evidence_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+          "saved_brep": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep"
+        }
+      },
+      "radius_mm": 2.0,
+      "base_brep": "data/original-occ/fixtures/44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6.brep",
+      "base_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before.brep",
+          "label": "crossing_vertical_wall",
+          "selected_edges": [
+            {
+              "index_1based": 4,
+              "length": 24.0,
+              "curve_type": "Line",
+              "start": [
+                12.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                -12.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ],
+              "samples_mm": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "recorded_hash_matches": true,
+          "selection_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4"
+        }
+      ],
+      "historical_results": [],
+      "historical_status": "not_executed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+      "source_spec": {
+        "plan": {
+          "label": "crossing_vertical_wall",
+          "edge_indices": [
+            4
+          ],
+          "radii": [
+            1.0,
+            2.0,
+            0.5
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "operation_group": "positive-quadrant",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json"
+          }
+        },
+        "attempt": null,
+        "part_number": 1,
+        "historical_source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+        "scope_notice": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_available",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "e99a2db378ec49443345135b80aa0b57d68e41bb34a1cc402d5aefeadcc498b6",
+            "exact_source_paths": [
+              "outputs/manual-review/diagnostics/case18-capping/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case24-oblique/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case33-variable/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case20-patch/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case34-rho/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/batch/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case17-capping/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case19-trim/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case31-faceted/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case31-aligned-v2/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case23-overlap/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case16-limits/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case21-unders/code/fillet_batch_worker.py",
+              "history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py"
+            ],
+            "found": true
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [],
+      "operation_targets": [
+        {
+          "index_1based": 4,
+          "length": 24.0,
+          "curve_type": "Line",
+          "start": [
+            12.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "polyline": [
+            [
+              12.0,
+              0.0,
+              0.0
+            ],
+            [
+              11.225806451612904,
+              0.0,
+              0.0
+            ],
+            [
+              10.451612903225808,
+              0.0,
+              0.0
+            ],
+            [
+              9.677419354838712,
+              0.0,
+              0.0
+            ],
+            [
+              8.903225806451616,
+              0.0,
+              0.0
+            ],
+            [
+              8.12903225806452,
+              0.0,
+              0.0
+            ],
+            [
+              7.3548387096774235,
+              0.0,
+              0.0
+            ],
+            [
+              6.580645161290327,
+              0.0,
+              0.0
+            ],
+            [
+              5.806451612903231,
+              0.0,
+              0.0
+            ],
+            [
+              5.032258064516135,
+              0.0,
+              0.0
+            ],
+            [
+              4.258064516129039,
+              0.0,
+              0.0
+            ],
+            [
+              3.483870967741943,
+              0.0,
+              0.0
+            ],
+            [
+              2.709677419354847,
+              0.0,
+              0.0
+            ],
+            [
+              1.9354838709677509,
+              0.0,
+              0.0
+            ],
+            [
+              1.1612903225806548,
+              0.0,
+              0.0
+            ],
+            [
+              0.3870967741935578,
+              0.0,
+              0.0
+            ],
+            [
+              -0.38709677419353916,
+              0.0,
+              0.0
+            ],
+            [
+              -1.1612903225806361,
+              0.0,
+              0.0
+            ],
+            [
+              -1.935483870967733,
+              0.0,
+              0.0
+            ],
+            [
+              -2.70967741935483,
+              0.0,
+              0.0
+            ],
+            [
+              -3.483870967741927,
+              0.0,
+              0.0
+            ],
+            [
+              -4.258064516129024,
+              0.0,
+              0.0
+            ],
+            [
+              -5.032258064516121,
+              0.0,
+              0.0
+            ],
+            [
+              -5.806451612903218,
+              0.0,
+              0.0
+            ],
+            [
+              -6.580645161290315,
+              0.0,
+              0.0
+            ],
+            [
+              -7.354838709677411,
+              0.0,
+              0.0
+            ],
+            [
+              -8.129032258064509,
+              0.0,
+              0.0
+            ],
+            [
+              -8.903225806451605,
+              0.0,
+              0.0
+            ],
+            [
+              -9.677419354838701,
+              0.0,
+              0.0
+            ],
+            [
+              -10.451612903225797,
+              0.0,
+              0.0
+            ],
+            [
+              -11.225806451612895,
+              0.0,
+              0.0
+            ],
+            [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            1,
+            2
+          ],
+          "samples_mm": [
+            [
+              12.0,
+              0.0,
+              0.0
+            ],
+            [
+              11.225806451612904,
+              0.0,
+              0.0
+            ],
+            [
+              10.451612903225808,
+              0.0,
+              0.0
+            ],
+            [
+              9.677419354838712,
+              0.0,
+              0.0
+            ],
+            [
+              8.903225806451616,
+              0.0,
+              0.0
+            ],
+            [
+              8.12903225806452,
+              0.0,
+              0.0
+            ],
+            [
+              7.3548387096774235,
+              0.0,
+              0.0
+            ],
+            [
+              6.580645161290327,
+              0.0,
+              0.0
+            ],
+            [
+              5.806451612903231,
+              0.0,
+              0.0
+            ],
+            [
+              5.032258064516135,
+              0.0,
+              0.0
+            ],
+            [
+              4.258064516129039,
+              0.0,
+              0.0
+            ],
+            [
+              3.483870967741943,
+              0.0,
+              0.0
+            ],
+            [
+              2.709677419354847,
+              0.0,
+              0.0
+            ],
+            [
+              1.9354838709677509,
+              0.0,
+              0.0
+            ],
+            [
+              1.1612903225806548,
+              0.0,
+              0.0
+            ],
+            [
+              0.3870967741935578,
+              0.0,
+              0.0
+            ],
+            [
+              -0.38709677419353916,
+              0.0,
+              0.0
+            ],
+            [
+              -1.1612903225806361,
+              0.0,
+              0.0
+            ],
+            [
+              -1.935483870967733,
+              0.0,
+              0.0
+            ],
+            [
+              -2.70967741935483,
+              0.0,
+              0.0
+            ],
+            [
+              -3.483870967741927,
+              0.0,
+              0.0
+            ],
+            [
+              -4.258064516129024,
+              0.0,
+              0.0
+            ],
+            [
+              -5.032258064516121,
+              0.0,
+              0.0
+            ],
+            [
+              -5.806451612903218,
+              0.0,
+              0.0
+            ],
+            [
+              -6.580645161290315,
+              0.0,
+              0.0
+            ],
+            [
+              -7.354838709677411,
+              0.0,
+              0.0
+            ],
+            [
+              -8.129032258064509,
+              0.0,
+              0.0
+            ],
+            [
+              -8.903225806451605,
+              0.0,
+              0.0
+            ],
+            [
+              -9.677419354838701,
+              0.0,
+              0.0
+            ],
+            [
+              -10.451612903225797,
+              0.0,
+              0.0
+            ],
+            [
+              -11.225806451612895,
+              0.0,
+              0.0
+            ],
+            [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+          "targets": [],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+            "targets": [
+              {
+                "index_1based": 4,
+                "length": 24.0,
+                "curve_type": "Line",
+                "start": [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  -12.0,
+                  0.0,
+                  0.0
+                ],
+                "midpoint": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "polyline": [
+                  [
+                    12.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    11.225806451612904,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.451612903225808,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.677419354838712,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.903225806451616,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.12903225806452,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.3548387096774235,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.580645161290327,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.806451612903231,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.032258064516135,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.258064516129039,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.483870967741943,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.709677419354847,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.9354838709677509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.1612903225806548,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3870967741935578,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.38709677419353916,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.1612903225806361,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.935483870967733,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -2.70967741935483,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -3.483870967741927,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -4.258064516129024,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.032258064516121,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.806451612903218,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -6.580645161290315,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -7.354838709677411,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.129032258064509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.903225806451605,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -9.677419354838701,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -10.451612903225797,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -11.225806451612895,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -12.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  1,
+                  2
+                ],
+                "samples_mm": [
+                  [
+                    12.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    11.225806451612904,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.451612903225808,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.677419354838712,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.903225806451616,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.12903225806452,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.3548387096774235,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.580645161290327,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.806451612903231,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.032258064516135,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.258064516129039,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.483870967741943,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.709677419354847,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.9354838709677509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.1612903225806548,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3870967741935578,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.38709677419353916,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.1612903225806361,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.935483870967733,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -2.70967741935483,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -3.483870967741927,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -4.258064516129024,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.032258064516121,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.806451612903218,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -6.580645161290315,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -7.354838709677411,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.129032258064509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.903225806451605,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -9.677419354838701,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -10.451612903225797,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -11.225806451612895,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -12.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "part01-r0p5",
+      "label": "crossing_vertical_wall / R0.5",
+      "title": "",
+      "method": "native_ordinary_fillet",
+      "parameters": {
+        "part_number": 1,
+        "request_order": 3,
+        "radius_mm": 0.5,
+        "plan": {
+          "label": "crossing_vertical_wall",
+          "edge_indices": [
+            4
+          ],
+          "radii": [
+            1.0,
+            2.0,
+            0.5
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "operation_group": "positive-quadrant",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json"
+          }
+        },
+        "preprocess": {
+          "type": "external_brep",
+          "source_labels": [
+            "crossing_vertical_wall",
+            "crossing_horizontal_wall"
+          ],
+          "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "evidence_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+          "saved_brep": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep"
+        }
+      },
+      "radius_mm": 0.5,
+      "base_brep": "data/original-occ/fixtures/44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6.brep",
+      "base_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "operation_inputs": [
+        {
+          "brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "original_path": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before.brep",
+          "label": "crossing_vertical_wall",
+          "selected_edges": [
+            {
+              "index_1based": 4,
+              "length": 24.0,
+              "curve_type": "Line",
+              "start": [
+                12.0,
+                0.0,
+                0.0
+              ],
+              "end": [
+                -12.0,
+                0.0,
+                0.0
+              ],
+              "midpoint": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "polyline": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "adjacent_faces_1based": [
+                1,
+                2
+              ],
+              "samples_mm": [
+                [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  11.225806451612904,
+                  0.0,
+                  0.0
+                ],
+                [
+                  10.451612903225808,
+                  0.0,
+                  0.0
+                ],
+                [
+                  9.677419354838712,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.903225806451616,
+                  0.0,
+                  0.0
+                ],
+                [
+                  8.12903225806452,
+                  0.0,
+                  0.0
+                ],
+                [
+                  7.3548387096774235,
+                  0.0,
+                  0.0
+                ],
+                [
+                  6.580645161290327,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.806451612903231,
+                  0.0,
+                  0.0
+                ],
+                [
+                  5.032258064516135,
+                  0.0,
+                  0.0
+                ],
+                [
+                  4.258064516129039,
+                  0.0,
+                  0.0
+                ],
+                [
+                  3.483870967741943,
+                  0.0,
+                  0.0
+                ],
+                [
+                  2.709677419354847,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9354838709677509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.1612903225806548,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.3870967741935578,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38709677419353916,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.1612903225806361,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -1.935483870967733,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -2.70967741935483,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -3.483870967741927,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -4.258064516129024,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.032258064516121,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -5.806451612903218,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -6.580645161290315,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -7.354838709677411,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.129032258064509,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -8.903225806451605,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -9.677419354838701,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -10.451612903225797,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -11.225806451612895,
+                  0.0,
+                  0.0
+                ],
+                [
+                  -12.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          ],
+          "selected_faces": [],
+          "recorded_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+          "recorded_hash_matches": true,
+          "selection_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4"
+        }
+      ],
+      "historical_results": [],
+      "historical_status": "not_executed",
+      "historical_checks": {},
+      "human_status": "pending",
+      "scope_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+      "source_spec": {
+        "plan": {
+          "label": "crossing_vertical_wall",
+          "edge_indices": [
+            4
+          ],
+          "radii": [
+            1.0,
+            2.0,
+            0.5
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+          "operation_group": "positive-quadrant",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json"
+          }
+        },
+        "attempt": null,
+        "part_number": 1,
+        "historical_source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+        "scope_notice": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+        "execution": {
+          "target_operation_executed": true,
+          "ordinary_common_edge_fillet_executed": true,
+          "source_reference_feature_verified": false,
+          "scored": false,
+          "batch_status": "success",
+          "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+        }
+      },
+      "script_provenance": {
+        "status": "recorded_source_version_available",
+        "recorded_hashes": [
+          {
+            "field": ".worker_sha256",
+            "expected_sha256": "e99a2db378ec49443345135b80aa0b57d68e41bb34a1cc402d5aefeadcc498b6",
+            "exact_source_paths": [
+              "outputs/manual-review/diagnostics/case18-capping/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case24-oblique/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case33-variable/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case20-patch/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case34-rho/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/batch/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case17-capping/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case19-trim/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case31-faceted/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case31-aligned-v2/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case23-overlap/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case16-limits/code/fillet_batch_worker.py",
+              "outputs/manual-review/diagnostics/case21-unders/code/fillet_batch_worker.py",
+              "history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py"
+            ],
+            "found": true
+          }
+        ],
+        "linked_sources": [],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "evidence_kind": "historical_snapshot",
+      "fresh_run": false,
+      "variant_origin": "original_batch_plan",
+      "base_targets": [],
+      "operation_targets": [
+        {
+          "index_1based": 4,
+          "length": 24.0,
+          "curve_type": "Line",
+          "start": [
+            12.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "polyline": [
+            [
+              12.0,
+              0.0,
+              0.0
+            ],
+            [
+              11.225806451612904,
+              0.0,
+              0.0
+            ],
+            [
+              10.451612903225808,
+              0.0,
+              0.0
+            ],
+            [
+              9.677419354838712,
+              0.0,
+              0.0
+            ],
+            [
+              8.903225806451616,
+              0.0,
+              0.0
+            ],
+            [
+              8.12903225806452,
+              0.0,
+              0.0
+            ],
+            [
+              7.3548387096774235,
+              0.0,
+              0.0
+            ],
+            [
+              6.580645161290327,
+              0.0,
+              0.0
+            ],
+            [
+              5.806451612903231,
+              0.0,
+              0.0
+            ],
+            [
+              5.032258064516135,
+              0.0,
+              0.0
+            ],
+            [
+              4.258064516129039,
+              0.0,
+              0.0
+            ],
+            [
+              3.483870967741943,
+              0.0,
+              0.0
+            ],
+            [
+              2.709677419354847,
+              0.0,
+              0.0
+            ],
+            [
+              1.9354838709677509,
+              0.0,
+              0.0
+            ],
+            [
+              1.1612903225806548,
+              0.0,
+              0.0
+            ],
+            [
+              0.3870967741935578,
+              0.0,
+              0.0
+            ],
+            [
+              -0.38709677419353916,
+              0.0,
+              0.0
+            ],
+            [
+              -1.1612903225806361,
+              0.0,
+              0.0
+            ],
+            [
+              -1.935483870967733,
+              0.0,
+              0.0
+            ],
+            [
+              -2.70967741935483,
+              0.0,
+              0.0
+            ],
+            [
+              -3.483870967741927,
+              0.0,
+              0.0
+            ],
+            [
+              -4.258064516129024,
+              0.0,
+              0.0
+            ],
+            [
+              -5.032258064516121,
+              0.0,
+              0.0
+            ],
+            [
+              -5.806451612903218,
+              0.0,
+              0.0
+            ],
+            [
+              -6.580645161290315,
+              0.0,
+              0.0
+            ],
+            [
+              -7.354838709677411,
+              0.0,
+              0.0
+            ],
+            [
+              -8.129032258064509,
+              0.0,
+              0.0
+            ],
+            [
+              -8.903225806451605,
+              0.0,
+              0.0
+            ],
+            [
+              -9.677419354838701,
+              0.0,
+              0.0
+            ],
+            [
+              -10.451612903225797,
+              0.0,
+              0.0
+            ],
+            [
+              -11.225806451612895,
+              0.0,
+              0.0
+            ],
+            [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "adjacent_faces_1based": [
+            1,
+            2
+          ],
+          "samples_mm": [
+            [
+              12.0,
+              0.0,
+              0.0
+            ],
+            [
+              11.225806451612904,
+              0.0,
+              0.0
+            ],
+            [
+              10.451612903225808,
+              0.0,
+              0.0
+            ],
+            [
+              9.677419354838712,
+              0.0,
+              0.0
+            ],
+            [
+              8.903225806451616,
+              0.0,
+              0.0
+            ],
+            [
+              8.12903225806452,
+              0.0,
+              0.0
+            ],
+            [
+              7.3548387096774235,
+              0.0,
+              0.0
+            ],
+            [
+              6.580645161290327,
+              0.0,
+              0.0
+            ],
+            [
+              5.806451612903231,
+              0.0,
+              0.0
+            ],
+            [
+              5.032258064516135,
+              0.0,
+              0.0
+            ],
+            [
+              4.258064516129039,
+              0.0,
+              0.0
+            ],
+            [
+              3.483870967741943,
+              0.0,
+              0.0
+            ],
+            [
+              2.709677419354847,
+              0.0,
+              0.0
+            ],
+            [
+              1.9354838709677509,
+              0.0,
+              0.0
+            ],
+            [
+              1.1612903225806548,
+              0.0,
+              0.0
+            ],
+            [
+              0.3870967741935578,
+              0.0,
+              0.0
+            ],
+            [
+              -0.38709677419353916,
+              0.0,
+              0.0
+            ],
+            [
+              -1.1612903225806361,
+              0.0,
+              0.0
+            ],
+            [
+              -1.935483870967733,
+              0.0,
+              0.0
+            ],
+            [
+              -2.70967741935483,
+              0.0,
+              0.0
+            ],
+            [
+              -3.483870967741927,
+              0.0,
+              0.0
+            ],
+            [
+              -4.258064516129024,
+              0.0,
+              0.0
+            ],
+            [
+              -5.032258064516121,
+              0.0,
+              0.0
+            ],
+            [
+              -5.806451612903218,
+              0.0,
+              0.0
+            ],
+            [
+              -6.580645161290315,
+              0.0,
+              0.0
+            ],
+            [
+              -7.354838709677411,
+              0.0,
+              0.0
+            ],
+            [
+              -8.129032258064509,
+              0.0,
+              0.0
+            ],
+            [
+              -8.903225806451605,
+              0.0,
+              0.0
+            ],
+            [
+              -9.677419354838701,
+              0.0,
+              0.0
+            ],
+            [
+              -10.451612903225797,
+              0.0,
+              0.0
+            ],
+            [
+              -11.225806451612895,
+              0.0,
+              0.0
+            ],
+            [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "selection": {
+        "base": {
+          "sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+          "targets": [],
+          "selected_faces": []
+        },
+        "operation": [
+          {
+            "sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+            "targets": [
+              {
+                "index_1based": 4,
+                "length": 24.0,
+                "curve_type": "Line",
+                "start": [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  -12.0,
+                  0.0,
+                  0.0
+                ],
+                "midpoint": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "polyline": [
+                  [
+                    12.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    11.225806451612904,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.451612903225808,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.677419354838712,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.903225806451616,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.12903225806452,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.3548387096774235,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.580645161290327,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.806451612903231,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.032258064516135,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.258064516129039,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.483870967741943,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.709677419354847,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.9354838709677509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.1612903225806548,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3870967741935578,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.38709677419353916,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.1612903225806361,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.935483870967733,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -2.70967741935483,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -3.483870967741927,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -4.258064516129024,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.032258064516121,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.806451612903218,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -6.580645161290315,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -7.354838709677411,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.129032258064509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.903225806451605,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -9.677419354838701,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -10.451612903225797,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -11.225806451612895,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -12.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                "adjacent_faces_1based": [
+                  1,
+                  2
+                ],
+                "samples_mm": [
+                  [
+                    12.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    11.225806451612904,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    10.451612903225808,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    9.677419354838712,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.903225806451616,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    8.12903225806452,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    7.3548387096774235,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    6.580645161290327,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.806451612903231,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    5.032258064516135,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    4.258064516129039,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    3.483870967741943,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    2.709677419354847,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.9354838709677509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.1612903225806548,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.3870967741935578,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -0.38709677419353916,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.1612903225806361,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -1.935483870967733,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -2.70967741935483,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -3.483870967741927,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -4.258064516129024,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.032258064516121,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -5.806451612903218,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -6.580645161290315,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -7.354838709677411,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.129032258064509,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -8.903225806451605,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -9.677419354838701,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -10.451612903225797,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -11.225806451612895,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -12.0,
+                    0.0,
+                    0.0
+                  ]
+                ]
+              }
+            ],
+            "selected_faces": []
+          }
+        ]
+      }
+    }
+  ],
+  "default_variant": "part01-r1p0",
+  "source_spec": {
+    "number": 28,
+    "case_id": "fig75-03_to_05-1351",
+    "title": "75-3 穿越式正交墙面及四种方向",
+    "status": "pending",
+    "human_note": "",
+    "has_model": true,
+    "snapshot": {
+      "reference_crop": [
+        0.39,
+        0.5,
+        0.6,
+        0.64
+      ],
+      "source_sha256": "ac9db2912c0f97a3278f674f99c7f6845ac2afda45baaaeca42b86643d21ef49",
+      "brep_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6"
+    },
+    "files": {
+      "brep": "data/original-occ/fixtures/44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6.brep",
+      "step": "history:outputs/parasolid-preblend/models/fig75-03_to_05-1351.step",
+      "freecad": "history:outputs/parasolid-preblend/models/fig75-03_to_05-1351.FCStd"
+    },
+    "assumptions": "取图75-3顶部未圆角墙面。四个红色结果只改变left/right sense，输入仅建一组；墙面在交线两侧继续延伸。截图无尺寸，按比例推定尺寸；未创建红色目标圆角面。",
+    "annotation": null,
+    "review_results": {},
+    "test_spec": {
+      "schema_version": 1,
+      "case_id": "fig75-03_to_05-1351",
+      "spec_status": "ordinary_fillet_batch_executed_reference_feature_pending",
+      "input_brep_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "scope_notice": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+      "local_demo": {
+        "status": "success",
+        "title": "OCC 实际圆角 · R = 1 mm · 通过几何及导出校验",
+        "radius_text": "R = 1 mm",
+        "panel_title": "预处理输入 · R = 1 mm · 校验通过",
+        "radius": 1.0,
+        "before_caption": "红线是预处理后目标边在原模型中的位置；实际操作输入另有图。",
+        "after_caption": "橙色标出可确认新增的解析面；其他新曲面保持部件色。",
+        "caption": "PDF 原图 → 重建输入 → 实际结果。中、右模型使用同一相机与比例，选边与各半径尝试见下表。",
+        "scope_note": "片面已显式缝合/裁剪/延伸后再做普通共边圆角；原始输入未改。本次为 OCC 普通等半径圆角的本地实算；半径是重建模型中的示范值，非 PDF 标定尺寸。原图特殊模式和外形对应仍待人工核验。",
+        "outputs": {
+          "全部半径与异常记录": "history:outputs/manual-review/diagnostics/batch/case28/summary.json",
+          "下载通过校验部件 BREP": "data/original-occ/fixtures/05287573f14e5da61986783608e9b85971d3d4310bf4881846d50b92afb77f01.brep",
+          "下载通过校验部件 STEP": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/successful-parts.step",
+          "查看预处理说明与记录": "history:outputs/manual-review/diagnostics/batch/case28/summary.json",
+          "操作输入网格 1（含预处理）": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before-mesh.json",
+          "操作输入 BREP 1（含预处理）": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep"
+        },
+        "input_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+        "result_artifacts": [
+          {
+            "brep": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+            "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712"
+          }
+        ],
+        "executed_at": "2026-10-18T19:04:45.369251+08:00",
+        "batch_parts": [
+          {
+            "label": "crossing_vertical_wall",
+            "part_number": 1,
+            "status": "success",
+            "selected_radius": 1.0,
+            "edge_indices": [
+              4
+            ],
+            "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+            "preprocess": {
+              "type": "external_brep",
+              "source_labels": [
+                "crossing_vertical_wall",
+                "crossing_horizontal_wall"
+              ],
+              "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+              "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+              "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+              "input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+              "evidence_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+              "saved_brep": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep"
+            },
+            "reason": "",
+            "attempts": [
+              {
+                "radius": 1.0,
+                "status": "success",
+                "stage": "校验通过",
+                "error": "",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "source_notes": [
+          "只验证一种基础滚动球方向；不验证left/right sense的四种组合。"
+        ],
+        "preprocess_notes": [
+          "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。"
+        ],
+        "summary_sha256": "49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188",
+        "audit_preview_index_sha256": "18d2e70a939f09aedff46b3d1a175a9ff260321449b953f70fa5ba4228a16c75",
+        "accepted_operation_groups": 1,
+        "export_rejected_operation_groups": 0,
+        "failed_operation_groups": 0,
+        "auxiliary_parts": 0,
+        "summary": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+      },
+      "batch_execution": {
+        "status": "success",
+        "parts": [
+          {
+            "label": "crossing_vertical_wall",
+            "part_number": 1,
+            "status": "success",
+            "selected_radius": 1.0,
+            "edge_indices": [
+              4
+            ],
+            "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+            "preprocess": {
+              "type": "external_brep",
+              "source_labels": [
+                "crossing_vertical_wall",
+                "crossing_horizontal_wall"
+              ],
+              "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+              "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+              "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+              "input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+              "evidence_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+              "saved_brep": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep"
+            },
+            "reason": "",
+            "attempts": [
+              {
+                "radius": 1.0,
+                "status": "success",
+                "stage": "校验通过",
+                "error": "",
+                "native_operation_succeeded": true
+              }
+            ]
+          }
+        ],
+        "summary_file": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+      },
+      "display_fields": [
+        {
+          "label": "选边与半径",
+          "value": "1. crossing_vertical_wall：R1；positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。"
+        },
+        {
+          "label": "原图功能与本地普通圆角的区别",
+          "value": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。"
+        },
+        {
+          "label": "验证范围",
+          "value": "分别记录 OCC 构建、原生 BREP/BOP 检查、BREP 与 STEP 导出回读。页面展示不是人工确认，也不代表原图特殊模式已经实现。"
+        }
+      ],
+      "execution": {
+        "target_operation_executed": true,
+        "ordinary_common_edge_fillet_executed": true,
+        "source_reference_feature_verified": false,
+        "scored": false,
+        "batch_status": "success",
+        "actual_run_report": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+      },
+      "applies_to_current_input": true
+    },
+    "variants": [],
+    "local_demo": {
+      "status": "success",
+      "title": "OCC 实际圆角 · R = 1 mm · 通过几何及导出校验",
+      "radius_text": "R = 1 mm",
+      "panel_title": "预处理输入 · R = 1 mm · 校验通过",
+      "radius": 1.0,
+      "before_caption": "红线是预处理后目标边在原模型中的位置；实际操作输入另有图。",
+      "after_caption": "橙色标出可确认新增的解析面；其他新曲面保持部件色。",
+      "caption": "PDF 原图 → 重建输入 → 实际结果。中、右模型使用同一相机与比例，选边与各半径尝试见下表。",
+      "scope_note": "片面已显式缝合/裁剪/延伸后再做普通共边圆角；原始输入未改。本次为 OCC 普通等半径圆角的本地实算；半径是重建模型中的示范值，非 PDF 标定尺寸。原图特殊模式和外形对应仍待人工核验。",
+      "outputs": {
+        "全部半径与异常记录": "history:outputs/manual-review/diagnostics/batch/case28/summary.json",
+        "下载通过校验部件 BREP": "data/original-occ/fixtures/05287573f14e5da61986783608e9b85971d3d4310bf4881846d50b92afb77f01.brep",
+        "下载通过校验部件 STEP": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/successful-parts.step",
+        "查看预处理说明与记录": "history:outputs/manual-review/diagnostics/batch/case28/summary.json",
+        "操作输入网格 1（含预处理）": "history:outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before-mesh.json",
+        "操作输入 BREP 1（含预处理）": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep"
+      },
+      "input_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+      "result_artifacts": [
+        {
+          "brep": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+          "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712"
+        }
+      ],
+      "executed_at": "2026-10-18T19:04:45.369251+08:00",
+      "batch_parts": [
+        {
+          "label": "crossing_vertical_wall",
+          "part_number": 1,
+          "status": "success",
+          "selected_radius": 1.0,
+          "edge_indices": [
+            4
+          ],
+          "selection_note": "positive-quadrant: 原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+          "source_feature_note": "只验证一种基础滚动球方向；不验证left/right sense的四种组合。",
+          "preprocess": {
+            "type": "external_brep",
+            "source_labels": [
+              "crossing_vertical_wall",
+              "crossing_horizontal_wall"
+            ],
+            "description": "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。",
+            "evidence_file": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+            "input_brep": "data/original-occ/fixtures/f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4.brep",
+            "input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+            "evidence_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+            "saved_brep": "data/original-occ/fixtures/007a0e04a48a815981e91ff36988c3b1ddfa718401e0bab235790bfdfd184759.brep"
+          },
+          "reason": "",
+          "attempts": [
+            {
+              "radius": 1.0,
+              "status": "success",
+              "stage": "校验通过",
+              "error": "",
+              "native_operation_succeeded": true
+            }
+          ]
+        }
+      ],
+      "source_notes": [
+        "只验证一种基础滚动球方向；不验证left/right sense的四种组合。"
+      ],
+      "preprocess_notes": [
+        "原交叉两面分别裁取z>=0和y>=0的一个象限，保留原支撑面；缝合交线。"
+      ],
+      "summary_sha256": "49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188",
+      "audit_preview_index_sha256": "18d2e70a939f09aedff46b3d1a175a9ff260321449b953f70fa5ba4228a16c75",
+      "accepted_operation_groups": 1,
+      "export_rejected_operation_groups": 0,
+      "failed_operation_groups": 0,
+      "auxiliary_parts": 0,
+      "summary": "history:outputs/manual-review/diagnostics/batch/case28/summary.json"
+    },
+    "test_spec_file": "case-specs/fig75-03_to_05-1351.json"
+  },
+  "history_documents": [
+    {
+      "path": "data/original-occ/history/49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188.json",
+      "original_sha256": "49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case28/summary.json",
+      "sanitized_sha256": "97a6950cfe24f9517035081e819ffc1ecfc25cb485297457785286bb51c3f3ee"
+    },
+    {
+      "path": "data/original-occ/history/d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158.json",
+      "original_sha256": "d025a6a438768fd8d8e9752d8ad6504467dec4b19732dc938d643f9f2510d158",
+      "original_path": "history:outputs/manual-review/diagnostics/batch/case28/preprocess/positive-quadrant/evidence.json",
+      "sanitized_sha256": "4ba95123719596890edc3f7532de5dc049b9f8c4aa95427de8d18366963228da"
+    },
+    {
+      "path": "data/original-occ/history/0cbe538431e7f3d86d098a3bf3356b9d9a2d31a8907932f5a377f304bc7a35f7.json",
+      "original_sha256": "0cbe538431e7f3d86d098a3bf3356b9d9a2d31a8907932f5a377f304bc7a35f7",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-03_to_05-1351.json",
+      "sanitized_sha256": "ae98eed8614ddbe573d3d20ecc7724cbf6ee1e27f241a6bcd35180613a81accc"
+    }
+  ],
+  "historical_ordinary": {
+    "summary": {
+      "path": "outputs/manual-review/diagnostics/batch/case28/summary.json",
+      "exists": true,
+      "sha256": "49590dd776f378a173cc98334e982861dd359b961199dc771b4c3307864a9188",
+      "bytes": 24075
+    },
+    "status": "success",
+    "source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+    "runtime": {
+      "FreeCAD": [
+        "1",
+        "2",
+        "0",
+        "46770 (Git)",
+        "git://github.com/liyongzheng666/FreeCAD.git",
+        "2026/05/09 21:28:57",
+        "work/local-occt-integration",
+        "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+      ],
+      "OCCT": "7.8.1"
+    },
+    "scripts": {
+      "status": "recorded_source_version_available",
+      "recorded_hashes": [
+        {
+          "field": ".worker_sha256",
+          "expected_sha256": "e99a2db378ec49443345135b80aa0b57d68e41bb34a1cc402d5aefeadcc498b6",
+          "exact_source_paths": [
+            "outputs/manual-review/diagnostics/case18-capping/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case24-oblique/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case33-variable/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case20-patch/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case34-rho/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/batch/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case17-capping/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case19-trim/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case31-faceted/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case31-aligned-v2/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case23-overlap/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case16-limits/code/fillet_batch_worker.py",
+            "outputs/manual-review/diagnostics/case21-unders/code/fillet_batch_worker.py",
+            "history:external/scenarios/preblend_reconstruction/fillet_batch_worker.py"
+          ],
+          "found": true
+        }
+      ],
+      "linked_sources": [],
+      "portable_command_available": false,
+      "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+    },
+    "attempts": [
+      {
+        "part_number": 1,
+        "part_label": "crossing_vertical_wall",
+        "attempt_number": 1,
+        "radius_mm": 1.0,
+        "status": "success",
+        "native_operation_succeeded": true,
+        "failure_stage": null,
+        "error": null,
+        "selected_edges": [
+          {
+            "index_1based": 4,
+            "start": [
+              12.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              -12.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+        "operation_input_sha256": "f01e1411181d4d748d66f4d1318503ce9a426bd1e62de6a9854b1f2bf85af1b4",
+        "brep": {
+          "path": "data/original-occ/fixtures/097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712.brep",
+          "exists": true,
+          "sha256": "097296e852c4819a253d3b3da6654a7e94cdf4edb9eee0367543fdd77fdd3712",
+          "bytes": 2266
+        },
+        "step": {
+          "path": "outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1.step",
+          "exists": true,
+          "sha256": "86a1b8410025ddbbaf4b095fe821f392488f6cf009c3dcbe57f75a722c157b27",
+          "bytes": 5426
+        },
+        "before_mesh": {
+          "path": "outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/before-mesh.json",
+          "exists": true,
+          "sha256": "3ce50aee4f84a805cf4b49ea35d751c1fc33c371c9cc7bf6f84bbb3a205317f4",
+          "bytes": 4015,
+          "vertices": 8,
+          "triangles": 4,
+          "actual_mesh": true,
+          "schema": "parts/faces"
+        },
+        "after_mesh": {
+          "path": "outputs/manual-review/diagnostics/batch/case28/runs/20261018T190445.369126-2940/part01/attempt01-r1-mesh.json",
+          "exists": true,
+          "sha256": "04345f6f8e50ec3b189fd2444df5772b5373f50e249d185d6ef19006dab5d469",
+          "bytes": 19078,
+          "vertices": 74,
+          "triangles": 68,
+          "actual_mesh": true,
+          "schema": "parts/faces"
+        }
+      }
+    ],
+    "source_matches_current_review": true
+  },
+  "review_results": {},
+  "provenance": {
+    "kind": "historical_source_freeze",
+    "not_a_rerun": true,
+    "source_dimensions": "inferred reconstruction; not original vendor CAD",
+    "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+    "no_reference_artwork_distributed": true
+  }
+}

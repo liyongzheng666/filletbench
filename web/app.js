@@ -1,11 +1,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
+import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay } from './original.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
-const state = { catalog: null, cases: new Map(), currentCase: null, variant: null, filter: 'all', query: '', token: 0, selectionToken: 0, viewers: {}, syncing: false, pdf: null, pdfMeta: null, imageUrl: null, mapping: readStorage('filletbench-reference-maps', {}), previewPage: 1, previewCrop: null, previewToken: 0, detailTab: 'evidence', detailEngine: null, expanded: null, refView: { scale: 1, x: 0, y: 0 } };
+const state = { series: 'original', collections: new Map(), collectionToken: 0, routeToken: 0, inputStage: 'base', catalog: null, cases: new Map(), currentCase: null, variant: null, filter: 'all', query: '', token: 0, selectionToken: 0, viewers: {}, syncing: false, pdf: null, pdfMeta: null, imageUrl: null, mapping: readStorage('filletbench-reference-maps', {}), previewPage: 1, previewCrop: null, previewToken: 0, detailTab: 'evidence', detailEngine: null, expanded: null, refView: { scale: 1, x: 0, y: 0 } };
 const meshCache = new Map();
 const statusNames = { pass: ['通过', 'passed'], passed: ['通过', 'passed'], accepted: ['通过', 'passed'], fail: ['未通过', 'failed'], failed: ['未通过', 'failed'], invalid: ['几何无效', 'failed'], error: ['构建失败', 'failed'], self_intersect: ['存在自交', 'failed'], self_intersection: ['存在自交', 'failed'], pending: ['待验证', 'pending'], not_run: ['未运行', 'pending'], unavailable: ['未提供', 'pending'], unsupported: ['暂不支持', 'pending'], missing: ['缺少结果', 'pending'], blocked: ['受阻', 'pending'], generated: ['已生成', 'neutral'], valid: ['已生成', 'neutral'], ok: ['已生成', 'neutral'], partial: ['部分完成', 'pending'], candidate_unverified: ['候选未验证', 'neutral'], api_failed: ['调用失败', 'failed'], geometry_failed: ['几何失败', 'failed'], crash: ['异常退出', 'failed'], native_api_failed_with_candidate: ['调用失败 · 有候选', 'failed'], controlled_subchecks: ['子判据通过', 'neutral'] };
 
@@ -17,38 +18,143 @@ function statusInfo(result) { const status = String(result?.status ?? 'pending')
 function getCaseNumber(item) { return String(item?.number ?? item?.id?.match(/\d+/)?.[0] ?? '').padStart(2, '0'); }
 function variantLabel(variant) { return variant.label || (variant.radius_mm !== undefined ? `R ${variant.radius_mm} mm` : variant.id); }
 function brief(value, max = 170) { const string = text(value, ''); return string.length > max ? string.slice(0, max) + '…' : string; }
+function originalParameterText(variant) {
+  const parameters = variant.parameters;
+  if (!parameters || typeof parameters !== 'object') return text(parameters, '原版参数详见记录。');
+  const parts = [parameters.summary, parameters.radius_text || (parameters.radius_mm !== undefined ? `R ${parameters.radius_mm} mm` : null), parameters.part_number ? `原部件 ${parameters.part_number}` : null, parameters.plan?.selection_note || parameters.preprocess?.description, parameters.construction].filter((value) => value !== undefined && value !== null && value !== '');
+  return parts.length ? parts.map((value) => text(value)).join(' · ') : brief(parameters, 280);
+}
 function newNode(tag, className, content) { const node = document.createElement(tag); if (className) node.className = className; if (content !== undefined) node.textContent = content; return node; }
 function getHash() { return new URLSearchParams(location.hash.replace(/^#/, '')); }
-function setHash(caseData, variant) { const hash = new URLSearchParams({ case: getCaseNumber(caseData), variant: variant.id }); if (location.hash.slice(1) !== hash.toString()) history.replaceState(null, '', '#' + hash); }
+function setHash(caseData, variant) { const hash = new URLSearchParams({ series: state.series, case: getCaseNumber(caseData) }); if (variant) hash.set('variant', variant.id); if (location.hash.slice(1) !== hash.toString()) history.replaceState(null, '', '#' + hash); }
 async function fetchJSON(path) { const response = await fetch(path, { cache: 'no-cache' }); if (!response.ok) throw new Error(`${response.status} · ${path}`); return response.json(); }
 function safePath(path) { if (typeof path !== 'string') return null; const url = new URL(path, location.href); return url.origin === location.origin ? url.href : null; }
 function addDetailLink(parent, label, path) { const url = safePath(path); if (!url) return; const link = newNode('a', 'detail-link', label); link.href = url; link.target = '_blank'; link.rel = 'noopener'; parent.append(link); }
+function addModelDownloads(parent) {
+  const variant = state.variant, result = variant.occt || {};
+  const files = [...(Array.isArray(result.files) ? result.files : [])];
+  if (variant.base_brep_url && !files.some((file) => file.path === variant.base_brep_url || (file.sha256 === variant.base_sha256 && /基础/.test(file.label || '')))) files.unshift({ label: '原版基础 BREP', path: variant.base_brep_url, sha256: variant.base_sha256, status: '原基础输入' });
+  const list = newNode('ul', 'model-download-list');
+  for (const file of files) {
+    if (typeof file.path !== 'string') continue;
+    let url;
+    try { url = new URL(file.path, location.href); } catch { continue; }
+    const local = url.origin === location.origin;
+    if (!local && !(url.protocol === 'https:' && url.hostname === 'raw.githubusercontent.com')) continue;
+    const row = newNode('li', 'model-download');
+    const link = newNode('a', 'detail-link', `${text(file.label, '模型文件')} ↓`); link.href = url.href; link.target = '_blank'; link.rel = 'noopener';
+    if (local) link.download = url.pathname.split('/').pop();
+    row.append(link);
+    if (file.status) {
+      const status = text(file.status), failed = /fail|invalid|error|crash|reject|未通过|无效|失败/i.test(status);
+      const statusLabel = { export_failed: 'STEP 回读未通过', geometry_failed: '无效候选 · 几何检查未通过', api_failed: 'API 失败候选', candidate_unverified: '候选 · 未完成验收', input_only: '仅输入' }[status] || status;
+      const badge = newNode('span', `model-file-status${failed ? ' failed' : ''}`, statusLabel); badge.title = status; row.append(badge);
+    }
+    if (file.sha256) { const hash = newNode('code', 'model-file-hash', `SHA-256 ${String(file.sha256).slice(0, 12)}…`); hash.title = String(file.sha256); row.append(hash); }
+    list.append(row);
+  }
+  if (!list.children.length) return;
+  const section = newNode('section', 'model-downloads'); section.append(newNode('h3', '', '下载模型'), list); parent.append(section);
+}
 
 async function boot() {
   wireUI();
-  try {
-    const catalog = await fetchJSON('data/catalog.json');
-    if (!Array.isArray(catalog.cases) || !catalog.cases.length) throw new Error('目录中没有案例。');
-    state.catalog = catalog;
-    $('#caseCount').textContent = catalog.cases.length;
-    renderList();
-    const hash = getHash();
-    const first = catalog.cases.find((item) => getCaseNumber(item) === String(hash.get('case')).padStart(2, '0')) || catalog.cases.find((item) => getCaseNumber(item) === '08') || catalog.cases[0];
-    await selectCase(first, hash.get('variant'));
-    const results = await Promise.allSettled(catalog.cases.map(async (item) => { if (!state.cases.has(item.id)) state.cases.set(item.id, await fetchJSON(item.data)); }));
-    if (results.some((result) => result.status === 'rejected')) console.warn('Some case definitions could not be loaded.');
-    renderList();
-  } catch (error) {
-    $('#bootError').hidden = false;
-    $('#bootError').textContent = `案例数据尚未就绪：${error.message}。请使用静态 HTTP 服务打开本页，并确认 data/catalog.json 已生成。`;
-    $('#caseList').replaceChildren(newNode('p', 'list-message', '暂无可读取的案例数据'));
-  }
+  await routeHash();
   restorePDF();
+}
+async function loadCollection(series) {
+  if (!state.collections.has(series)) state.collections.set(series, fetchJSON(COLLECTIONS[series].path).then((catalog) => {
+    if (!Array.isArray(catalog.cases) || !catalog.cases.length) throw new Error('目录中没有案例。');
+    return { catalog, cases: new Map() };
+  }).catch((error) => { state.collections.delete(series); throw error; }));
+  return state.collections.get(series);
+}
+async function readCase(item, collection, series) {
+  if (!collection.cases.has(item.id)) collection.cases.set(item.id, await fetchJSON(casePath(item, series)));
+  return collection.cases.get(item.id);
+}
+async function routeHash() {
+  const token = ++state.routeToken;
+  const hash = getHash();
+  let series = COLLECTIONS[hash.get('series')] ? hash.get('series') : 'original';
+  const number = hash.get('case'), requested = hash.get('variant');
+  if (!hash.has('series') && requested) {
+    const matches = await Promise.allSettled(['original', 'comparison'].map(async (candidate) => {
+      const collection = await loadCollection(candidate);
+      const item = collection.catalog.cases.find((entry) => getCaseNumber(entry) === String(number).padStart(2, '0'));
+      return item && (await readCase(item, collection, candidate)).variants?.some((variant) => variant.id === requested) ? candidate : null;
+    }));
+    if (token !== state.routeToken) return;
+    const match = matches.find((entry) => entry.status === 'fulfilled' && entry.value)?.value;
+    if (match) { series = match; if (match === 'comparison') toast('此旧链接属于 OCC–SMLib 对照实验，已保留原变体。'); }
+    else toast('旧链接中的变体未找到，将明确显示原版默认参数。');
+  }
+  await selectCollection(series, number, requested);
+}
+async function selectCollection(series, number = getCaseNumber(state.currentCase), requestedVariant = null) {
+  ++state.routeToken;
+  const token = ++state.collectionToken;
+  ++state.selectionToken; ++state.token;
+  state.series = series; state.inputStage = 'base';
+  state.catalog = null; state.currentCase = null; state.variant = null; state.cases = new Map();
+  $('#caseCount').textContent = '—'; $('#caseKicker').textContent = 'CASE —';
+  $('#caseTitle').textContent = COLLECTIONS[series].label;
+  $('#caseQuestion').textContent = '正在读取本集合的原始参数与实际处理记录…';
+  $('#variantSelect').replaceChildren(); $('#variantMeta').hidden = true; $('#familyTag').hidden = true;
+  $('#pipelineBadges').replaceChildren(); $('#findings').replaceChildren(); $('#representationNotice').hidden = true;
+  $('#caseList').replaceChildren(newNode('p', 'list-message', '正在读取案例…'));
+  $('#previousCase').disabled = true; $('#nextCase').disabled = true;
+  for (const engine of ['occt', 'smlib']) {
+    state.viewers[engine]?.clear(); const stage = $(`#${engine}Stage`);
+    $('.stage-empty', stage).hidden = false; $('h3', $('.stage-empty', stage)).textContent = '等待本集合数据'; $('p', $('.stage-empty', stage)).textContent = '保留案例、参数与实际产物的对应关系。';
+    $('.model-view-label', stage).hidden = true; $('.model-hint', stage).hidden = true; $('.stage-busy', stage).hidden = true;
+    $(`#${engine}Status`).textContent = '待载入'; $(`#${engine}Status`).className = 'status-badge neutral'; $(`#${engine}Caption`).textContent = '读取记录中';
+  }
+  ++referenceRenderToken; $('#referenceImageWrap').hidden = true; $('#referenceEmpty').hidden = false; $('#referenceBadge').hidden = true; $('#referenceZoomControls').hidden = true;
+  $('#referenceCaption').textContent = '原始图像不包含在公开仓库中'; $('#changeReference').hidden = true;
+  renderCollectionUI();
+  $('#bootError').hidden = true;
+  try {
+    const collection = await loadCollection(series);
+    if (token !== state.collectionToken) return;
+    state.catalog = collection.catalog; state.cases = collection.cases;
+    const explanationCount = isOriginal(state) ? state.catalog.cases.filter((item) => item.has_model === false || getCaseNumber(item) === '32').length : 0;
+    $('#caseCount').textContent = explanationCount ? `${state.catalog.cases.length - explanationCount} + ${explanationCount} 说明` : state.catalog.cases.length;
+    renderList();
+    const first = state.catalog.cases.find((item) => getCaseNumber(item) === String(number).padStart(2, '0')) || state.catalog.cases[0];
+    await selectCase(first, requestedVariant);
+    const results = await Promise.allSettled(collection.catalog.cases.map((item) => readCase(item, collection, series)));
+    if (results.some((result) => result.status === 'rejected')) console.warn(`${series}: some case definitions could not be loaded.`);
+    if (token === state.collectionToken) renderList();
+  } catch (error) {
+    if (token !== state.collectionToken) return;
+    state.catalog = null; state.currentCase = null; state.variant = null;
+    $('#bootError').hidden = false;
+    $('#bootError').textContent = `${COLLECTIONS[series].label}的数据尚未就绪：${error.message}。可选择另一个集合；不会用其他输入或实验替换本系列。`;
+    $('#caseList').replaceChildren(newNode('p', 'list-message', '本集合暂无可读取的案例数据'));
+    Object.values(state.viewers).forEach((viewer) => viewer.clear());
+  }
+}
+function renderCollectionUI() {
+  const original = isOriginal(state);
+  document.body.dataset.series = state.series;
+  $$('.collection-tabs button').forEach((button) => { const active = button.dataset.series === state.series; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
+  $('#collectionContext').textContent = original ? '原版 OCC 系列' : 'OCCT × SMLib';
+  $('#collectionDescription').textContent = original ? '34 组原始编号 · 原版参数 / 基础输入 · 缝合、裁剪、延伸后的操作输入单列。32 为说明项。' : '独立的 OCC–SMLib 补充对照实验。各实验输入、参数与原版系列分别记录。';
+  $('#variantControlLabel').textContent = original ? '原版参数' : '测试参数';
+  $('#beforeControl').hidden = original; $('#beforeDivider').hidden = original;
+  $('#originalPipeline').hidden = !original;
+  $('#occtHeading').textContent = original ? '基础模型' : 'OCCT';
+  $('#smlibHeading').textContent = original ? '实际 OCC 结果' : 'SMLib';
+  $('#referenceHeading').textContent = original ? 'PDF 原图' : '原始参考';
+  $('.comparison-grid').setAttribute('aria-label', original ? 'PDF 原图、基础模型与实际 OCC 结果三栏对照' : '原始参考与内核结果三栏对照');
+  $('#referenceEmpty p').textContent = original ? '载入你拥有的 PDF 或图片\n并排核对基础模型与实际 OCC 处理结果' : '载入你拥有的 PDF 或图片\n与两个内核的实际输出并排查看';
+  $('#validationFootnote').textContent = original ? '历史记录未复跑；几何、特殊语义和参考外观分别验收。' : '“已生成”仅代表有输出；几何、特殊语义和参考外观需分别验收。';
 }
 function caseTone(item) {
   const data = state.cases.get(item.id);
   if (!data) return '';
-  const statuses = (data.variants || []).flatMap((variant) => ['occt', 'smlib'].map((key) => statusInfo(variant[key])));
+  const statuses = (data.variants || []).flatMap((variant) => (isOriginal(state) ? ['occt'] : ['occt', 'smlib']).map((key) => statusInfo(variant[key])));
   if (statuses.some((status) => status.tone === 'failed')) return 'failed';
   if (statuses.some((status) => status.tone === 'passed')) return 'passed';
   return 'pending';
@@ -60,8 +166,8 @@ function renderList() {
     const haystack = `${getCaseNumber(item)} ${item.id} ${item.title} ${item.question} ${item.family}`.toLowerCase();
     if (state.query && (/^\d{1,2}$/.test(state.query) ? getCaseNumber(item) !== state.query.padStart(2, '0') : !haystack.includes(state.query.toLowerCase()))) return false;
     const data = state.cases.get(item.id);
-    if (state.filter === 'mesh') return data?.variants?.some((variant) => ['occt', 'smlib'].some((key) => Boolean(variant[key]?.mesh)));
-    if (state.filter === 'attention') return !data || data.variants?.some((variant) => ['occt', 'smlib'].some((key) => statusInfo(variant[key]).tone !== 'passed'));
+    if (state.filter === 'mesh') return data?.variants?.some((variant) => (isOriginal(state) ? ['occt'] : ['occt', 'smlib']).some((key) => Boolean(variant[key]?.mesh)));
+    if (state.filter === 'attention') return !data || data.variants?.some((variant) => (isOriginal(state) ? ['occt'] : ['occt', 'smlib']).some((key) => statusInfo(variant[key]).tone !== 'passed'));
     return true;
   });
   container.replaceChildren();
@@ -71,7 +177,8 @@ function renderList() {
     button.setAttribute('aria-current', state.currentCase?.id === item.id ? 'page' : 'false');
     button.append(newNode('span', 'case-number', getCaseNumber(item)));
     const content = newNode('span', 'case-link-content');
-    content.append(newNode('span', 'case-link-title', item.title || `案例 ${getCaseNumber(item)}`), newNode('span', 'case-link-subtitle', `${item.variant_count || '—'} 组参数 · 系列 ${(item.family || '—').toUpperCase()}`));
+    const explanation = item.has_model === false || getCaseNumber(item) === '32';
+    content.append(newNode('span', 'case-link-title', item.title || `案例 ${getCaseNumber(item)}`), newNode('span', 'case-link-subtitle', explanation ? '说明项 · 无独立模型' : `${item.variant_count || '—'} 组参数 · 系列 ${(item.family || '—').toUpperCase()}`));
     button.append(content, newNode('span', 'case-list-dot ' + caseTone(item)));
     button.addEventListener('click', () => selectCase(item));
     container.append(button);
@@ -79,14 +186,16 @@ function renderList() {
   if (!items.length) container.append(newNode('p', 'list-message', '没有匹配的案例'));
 }
 async function selectCase(item, requestedVariant) {
+  ++state.routeToken;
   const selectionToken = ++state.selectionToken;
   try {
-    const data = state.cases.get(item.id) || await fetchJSON(item.data);
+    const data = state.cases.get(item.id) || await fetchJSON(casePath(item, state.series));
     if (selectionToken !== state.selectionToken) return;
     state.cases.set(item.id, data);
     state.currentCase = { ...item, ...data };
     const variants = data.variants || [];
-    const chosen = variants.find((variant) => variant.id === requestedVariant) || (getCaseNumber(data) === '08' ? variants.find((variant) => Number(variant.radius_mm) === 18) : null) || variants.find((variant) => variant.id === data.default_variant) || variants[0];
+    const chosen = variants.find((variant) => variant.id === requestedVariant) || variants.find((variant) => variant.id === data.default_variant) || variants[0];
+    if (requestedVariant && !variants.some((variant) => variant.id === requestedVariant)) toast(`变体 ${requestedVariant} 不属于本集合；已显示本案例明确指定的默认参数。`);
     $('#caseKicker').textContent = `CASE ${getCaseNumber(data)}`;
     $('#caseTitle').textContent = data.title || item.title;
     $('#caseQuestion').textContent = data.question || item.question || '对照输入与实际内核输出，检查目标圆角能否可靠构建。';
@@ -94,24 +203,43 @@ async function selectCase(item, requestedVariant) {
     $('#familyTag').hidden = !$('#familyTag').textContent;
     document.title = `${getCaseNumber(data)} ${data.title || item.title} · FilletBench`;
     $('#variantSelect').replaceChildren();
+    $('#variantSelect').disabled = !variants.length;
+    $('#openDetails').disabled = !variants.length;
+    $$('.inspect-button').forEach((button) => { button.disabled = !variants.length; });
+    $$('.input-stage-switch button').forEach((button) => { button.disabled = !variants.length; });
     const groups = new Map();
     const multiPart = new Set(variants.map((variant) => variant.id.match(/part(\d+)/)?.[1]).filter(Boolean)).size > 1;
     for (const variant of variants) {
-      const groupName = variant.role === 'ordinary_challenge' ? '普通边圆角 · 挑战参数' : variant.role === 'ordinary_control' ? '普通边圆角 · 控制参数' : '补充证据 · 独立特殊协议';
+      const groupName = isOriginal(state) ? '原版参数 / 基础输入' : variant.role === 'ordinary_challenge' ? '普通边圆角 · 挑战参数' : variant.role === 'ordinary_control' ? '普通边圆角 · 控制参数' : '补充证据 · 独立特殊协议';
       if (!groups.has(groupName)) { const group = newNode('optgroup'); group.label = groupName; groups.set(groupName, group); $('#variantSelect').append(group); }
       const option = newNode('option'); option.value = variant.id;
       const part = multiPart ? `部件 ${Number(variant.id.match(/part(\d+)/)?.[1] || 1)} · ` : '';
-      option.textContent = variant.role?.startsWith('ordinary_') ? `${part}${variant.role === 'ordinary_control' ? '控制' : '挑战'} · ${variant.radius_label || `R${variant.radius_mm} mm`}` : (variant.label || variant.id).replace('先导原生重建 · ', '补充 · ');
+      option.textContent = isOriginal(state) ? variantLabel(variant) : variant.role?.startsWith('ordinary_') ? `${part}${variant.role === 'ordinary_control' ? '控制' : '挑战'} · ${variant.radius_label || `R${variant.radius_mm} mm`}` : (variant.label || variant.id).replace('先导原生重建 · ', '补充 · ');
       option.title = variantLabel(variant); groups.get(groupName).append(option);
     }
     $('#beforeToggle').checked = false;
+    state.inputStage = 'base';
+    window.scrollTo(0, 0);
+    $$('.input-stage-switch button').forEach((button) => { const active = button.dataset.inputStage === 'base'; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
     renderList();
     $('#caseList .active')?.scrollIntoView({ block: 'nearest' });
     const index = state.catalog.cases.findIndex((entry) => entry.id === item.id);
     $('#previousCase').disabled = index === 0;
     $('#nextCase').disabled = index === state.catalog.cases.length - 1;
     $('.sidebar').classList.remove('is-open');
-    if (chosen) await selectVariant(chosen); else { state.variant = null; $('#findings').replaceChildren(newNode('p', 'list-message', '该案例尚无测试变体。')); }
+    if (chosen) await selectVariant(chosen); else {
+      state.variant = null; ++state.token; setHash(state.currentCase);
+      $('#variantMeta').hidden = true; $('#representationNotice').hidden = true; $('#pipelineBadges').replaceChildren();
+      const explanation = data.has_model === false || getCaseNumber(data) === '32';
+      $('#findings').replaceChildren(newNode('p', 'list-message', explanation ? text(data.note || data.question, '本项仅为原文说明，不建立独立模型或执行圆角任务。') : '该案例尚无测试变体；不会显示其他案例的结果。'));
+      for (const engine of ['occt', 'smlib']) {
+        state.viewers[engine]?.clear(); const stage = $(`#${engine}Stage`), empty = $('.stage-empty', stage);
+        empty.hidden = false; $('h3', empty).textContent = explanation ? '说明项 · 无独立模型' : '没有测试变体'; $('p', empty).textContent = explanation ? '保留原编号与原文说明。' : '不会借用其他参数的结果。';
+        $('.model-view-label', stage).hidden = true; $('.model-hint', stage).hidden = true; $('.stage-busy', stage).hidden = true;
+        $(`#${engine}Status`).textContent = explanation ? '说明项' : '未提供'; $(`#${engine}Status`).className = 'status-badge neutral'; $(`#${engine}Caption`).textContent = explanation ? '原文说明 · 不计入 34 组模型' : '尚无记录';
+      }
+      renderReference();
+    }
   } catch (error) { toast(`无法读取案例：${error.message}`); }
 }
 async function selectVariant(variant) {
@@ -124,13 +252,21 @@ async function selectVariant(variant) {
   renderNotice();
   renderFindings();
   renderReference();
-  for (const engine of ['occt', 'smlib']) renderEngineMetadata(engine);
+  if (isOriginal(state)) renderOriginalMetadata(); else for (const engine of ['occt', 'smlib']) renderEngineMetadata(engine);
   await renderModels(token);
 }
 function renderNotice() {
   const variant = state.variant;
   const notice = $('#representationNotice');
   const parts = [];
+  if (isOriginal(state)) {
+    const relation = inputRelation(variant);
+    parts.push(variant.operation_relation_note || (relation === 'derived' ? '原基础与实际操作输入不同：中栏默认保留原基础，可单独查看缝合 / 裁剪 / 延伸后的输入。' : relation === 'part_selection' ? '中栏默认保留原基础总模型，实际操作输入单独显示本次选取的部件。' : relation === 'same_as_base' ? '本次直接使用原版基础几何；着色与网格记录可不同。' : relation === 'recorded_combination_input' ? '操作输入为组合流程入口；内部分割与 Boolean 步骤另见处理记录。' : '原基础与实际操作输入单列保留；具体部件与预处理步骤以操作记录为准。'));
+    const scope = variant.scope_note || variant.input_construction_note || variant.input_note || state.currentCase.scope_note;
+    if (scope) parts.push(text(scope));
+    parts.push(historicalResult(variant) ? '历史处理记录 · 本次未复跑。' : '已记录本次复跑证据。');
+    notice.textContent = 'ⓘ  ' + parts.join('  '); notice.hidden = false; return;
+  }
   if (variant.pairing === 'same_source_geometry_and_request_different_representations') {
     parts.push('同源几何与目标参数 · OCCT：原解析 BREP · SMLib：有限 NURBS / 共享拓扑。');
   } else if (variant.pairing === 'same_end_constraints_law_equivalence_unverified') {
@@ -152,10 +288,46 @@ function renderEngineMetadata(engine) {
   const methodNames = { native_edge_fillet: '原生普通边圆角', native: '原生构建', composite: '组合构造', exact_nurbs: '精确 NURBS 输入' };
   $(`#${engine}Caption`).textContent = methodNames[result?.method] || result?.method_label || result?.method || '未记录构建方法';
 }
+function renderOriginalMetadata() {
+  const variant = state.variant, result = variant.occt || {}, info = statusInfo(result);
+  const operation = state.inputStage === 'operation';
+  const relation = inputRelation(variant);
+  const relationLabel = { same_as_base: '同原基础几何', part_selection: '原基础的部件', derived: '已衍生', recorded_combination_input: '组合流程入口', recorded_input: '单列操作记录' }[relation];
+  $('#occtHeading').textContent = operation ? '实际操作输入' : '基础模型';
+  $('#occtVersion').textContent = operation ? 'OPERATION INPUT' : 'ORIGINAL BASE';
+  $('#occtStatus').textContent = operation ? relationLabel : '原版基础';
+  $('#occtStatus').className = 'status-badge neutral';
+  $('#occtCaption').textContent = operation ? text(variant.operation_relation_note || variant.operation_note || variant.preparation_note || variant.operation_input?.note, `实际操作输入 · ${relationLabel}`) : '原版参数 / 基础输入 · 原选边 / 选面';
+  $('#occtCaption').title = $('#occtCaption').textContent;
+  $('#smlibStatus').textContent = (historicalResult(variant) ? '历史 · ' : '') + info.fullLabel;
+  $('#smlibStatus').className = `status-badge ${failedResult(variant) ? 'failed' : info.tone}`;
+  $('#smlibStatus').title = `${info.fullLabel} · ${historicalResult(variant) ? '本次未复跑' : '本次运行'}`;
+  $('#smlibVersion').textContent = text(result.version, 'OPEN CASCADE');
+  $('#smlibCaption').textContent = failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${originalMethod(variant)} · ${historicalResult(variant) ? '历史输出，未复跑' : '本次实际输出'}`;
+  $('#validationFootnote').textContent = `${historicalResult(variant) ? '历史记录未复跑' : '已记录本次运行'}；几何、特殊语义和参考外观分别验收。`;
+  $$('.input-stage-switch button').forEach((button) => { const active = button.dataset.inputStage === state.inputStage; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
+  const pipeline = $('#pipelineBadges'); pipeline.replaceChildren();
+  for (const [index, label] of ['原基础', `操作输入 · ${relationLabel}`, originalMethod(variant), historicalResult(variant) ? '验证 · 历史记录 / 未复跑' : '验证 · 本次记录'].entries()) {
+    if (index) pipeline.append(newNode('span', 'pipeline-arrow', '→'));
+    pipeline.append(newNode('span', `pipeline-badge${index === (operation ? 1 : 0) ? ' active' : ''}`, label));
+  }
+}
 function renderFindings() {
   const variant = state.variant;
   const container = $('#findings');
   container.replaceChildren();
+  if (isOriginal(state)) {
+    const result = variant.occt || {};
+    const humanNote = variant.human_note || state.currentCase.human_note || variant.human_review?.note;
+    const humanStatus = variant.human_status || state.currentCase.human_status;
+    const cards = [
+      ['原版参数 / 基础输入', variantLabel(variant), [originalParameterText(variant), variant.base_note || variant.input_note].filter(Boolean).join(' · ')],
+      [originalMethod(variant), failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${historicalResult(variant) ? '历史记录 · 未复跑' : '本次实际处理'} · ${statusInfo(result).fullLabel}`, result.reason || result.summary || '没有完整处理记录。'],
+      ['人工核对与验证边界', humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
+    ];
+    cards.forEach(([label, title, content], index) => { const card = newNode('article', 'finding' + (index === 1 && failedResult(variant) ? ' warn' : '')); const heading = newNode('div', 'finding-label'); heading.append(newNode('span', 'finding-number', index + 1), newNode('span', '', label)); card.append(heading, newNode('h3', '', title), newNode('p', '', text(content))); container.append(card); });
+    return;
+  }
   const definition = newNode('article', 'finding');
   const label = newNode('div', 'finding-label');
   label.append(newNode('span', 'finding-number', '1'), newNode('span', '', '本次比较'));
@@ -182,19 +354,24 @@ function validMesh(mesh) { return mesh && Array.isArray(mesh.vertices) && mesh.v
 async function renderModels(token) {
   const variant = state.variant;
   const before = $('#beforeToggle').checked;
-  const tasks = ['occt', 'smlib'].map(async (engine) => {
+  const original = isOriginal(state);
+  const descriptors = original ? originalDisplay(variant, state.inputStage) : ['occt', 'smlib'].map((engine) => {
     const result = variant[engine];
     const source = before ? (result?.before_mesh || variant.input_mesh) : result?.mesh;
+    return { engine, source, targets: before ? variant.targets : null, faces: [], label: before ? '建模前 · 目标边' : '本次实际输出', reason: before ? '没有可用的建模前网格。' : result?.reason || result?.summary || '尚未提供此内核的实际输出。' };
+  });
+  const tasks = descriptors.map(async (entry) => {
+    const { engine, source } = entry;
     const stage = $(`#${engine}Stage`);
     $('.stage-busy', stage).hidden = !source;
-    if (!source) return { engine, mesh: null, reason: before ? '没有可用的建模前网格。' : result?.reason || result?.summary || '尚未提供此内核的实际输出。' };
-    try { const mesh = await readMesh(source); return { engine, mesh, reason: validMesh(mesh) ? null : '网格数据为空或格式无效。' }; }
-    catch (error) { return { engine, mesh: null, reason: `网格读取失败：${error.message}` }; }
+    if (!source) return { ...entry, mesh: null };
+    try { const mesh = await readMesh(source); return { ...entry, mesh, reason: validMesh(mesh) ? null : '网格数据为空或格式无效。' }; }
+    catch (error) { return { ...entry, mesh: null, reason: `网格读取失败：${error.message}` }; }
   });
   const results = await Promise.all(tasks);
   // A retained fragment must not expand to fill the frame. Keep the exact same
   // world bounds for before/after, including both inputs and both real outputs.
-  const boundSources = [...new Set([variant.input_mesh, ...['occt', 'smlib'].flatMap((engine) => [variant[engine]?.before_mesh, variant[engine]?.mesh])].filter(Boolean))];
+  const boundSources = [...new Set((original ? [baseMesh(variant), operationMesh(variant), variant.occt?.mesh] : [variant.input_mesh, ...['occt', 'smlib'].flatMap((engine) => [variant[engine]?.before_mesh, variant[engine]?.mesh])]).filter(Boolean))];
   const boundMeshes = await Promise.all(boundSources.map((source) => readMesh(source).catch(() => null)));
   if (token !== state.token) return;
   const bounds = new THREE.Box3();
@@ -206,7 +383,7 @@ async function renderModels(token) {
     if (!validMesh(entry.mesh)) {
       state.viewers[entry.engine]?.clear();
       empty.hidden = false;
-      $('h3', empty).textContent = before ? '建模前数据未提供' : '没有可展示的结果';
+      $('h3', empty).textContent = original ? entry.engine === 'occt' ? '本阶段输入未提供' : '没有可展示的实际结果' : before ? '建模前数据未提供' : '没有可展示的结果';
       $('p', empty).textContent = text(entry.reason, '暂无数据');
       $('.model-view-label', stage).hidden = true;
       $('.model-hint', stage).hidden = true;
@@ -214,10 +391,13 @@ async function renderModels(token) {
     }
     try {
       const viewer = state.viewers[entry.engine] ||= new MeshViewer(stage, entry.engine);
-      viewer.setMesh(entry.mesh, bounds, before ? variant.targets : null);
+      viewer.setMesh(entry.mesh, bounds, entry.targets, entry.faces, original ? variant.camera || state.currentCase.camera : null);
       empty.hidden = true;
       $('.model-view-label', stage).hidden = false;
-      $('.model-label-text', stage).textContent = before ? '建模前 · 目标边' : '本次实际输出';
+      const auxiliary = entry.targets?.some((target) => target.target_kind === 'auxiliary_guide');
+      const edgeCount = entry.targets?.filter((target) => target.target_kind !== 'auxiliary_guide' && target.target_kind !== 'selected_face').length || 0;
+      const selectionLabel = original && entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : auxiliary ? '虚线为理论辅助位置' : '';
+      $('.model-label-text', stage).textContent = entry.label + (selectionLabel ? ' · ' + selectionLabel : '');
       $('.model-hint', stage).hidden = false;
     } catch (error) {
       empty.hidden = false;
@@ -261,28 +441,57 @@ class MeshViewer {
     this.hasMesh = false;
     this.render();
   }
-  setMesh(mesh, bounds, targets) {
+  setMesh(mesh, bounds, targets, selectedFaces = [], camera = null) {
     this.clear();
+    this.defaultCamera = camera;
     const vertices = mesh.vertices.flat();
     const triangles = mesh.triangles.flat();
     if (vertices.some((value) => !Number.isFinite(value)) || triangles.some((index) => !Number.isInteger(index) || index < 0 || index >= mesh.vertices.length)) throw new Error('网格包含无效坐标或索引。');
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
     geometry.setIndex(triangles); geometry.computeVertexNormals();
-    const material = new THREE.MeshStandardMaterial({ color: 0xc5d2ce, metalness: .12, roughness: .5, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
-    this.group.add(new THREE.Mesh(geometry, material));
+    const faceColors = mesh.face_colors || mesh.metadata?.face_colors;
+    const partColors = mesh.part_colors || mesh.metadata?.part_colors;
+    const coloredGeometry = geometry.toNonIndexed();
+    const colors = [];
+    for (let index = 0; index < mesh.triangles.length; index++) {
+      const faceId = mesh.face_ids?.[index];
+      const faceColor = Array.isArray(faceColors) ? faceColors[faceColors.length === mesh.triangles.length ? index : faceId] : faceColors?.[faceId];
+      const partId = mesh.part_ids?.[index] ?? mesh.metadata?.face_parts?.[faceId];
+      const sourceColor = faceColor || partColors?.[partId];
+      const color = new THREE.Color();
+      if (Array.isArray(sourceColor)) color.setRGB(...sourceColor.map((value) => value > 1 ? value / 255 : value)); else color.set(sourceColor || 0xc5d2ce);
+      for (let vertex = 0; vertex < 3; vertex++) colors.push(color.r, color.g, color.b);
+    }
+    coloredGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    const material = new THREE.MeshStandardMaterial({ color: 0xffffff, vertexColors: true, metalness: .12, roughness: .5, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+    this.group.add(new THREE.Mesh(coloredGeometry, material));
     const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x49645b, transparent: true, opacity: .62 });
     if (Array.isArray(mesh.edges) && mesh.edges.length) {
       for (const edge of mesh.edges) { const points = edge.points || edge; if (!Array.isArray(points) || points.length < 2) continue; const edgeGeometry = new THREE.BufferGeometry().setFromPoints(points.map((point) => new THREE.Vector3(...point))); this.group.add(new THREE.Line(edgeGeometry, edgeMaterial)); }
     } else this.group.add(new THREE.LineSegments(new THREE.EdgesGeometry(geometry, 28), edgeMaterial));
     const center = bounds.getCenter(new THREE.Vector3());
     this.group.position.copy(center).negate();
+    this.radius = Math.max(bounds.getSize(new THREE.Vector3()).length() * .5, .1);
     if (Array.isArray(targets)) for (const target of targets) {
       const points = target.samples_mm || target.points || [];
       if (points.length < 2) continue;
       const targetGeometry = new THREE.BufferGeometry().setFromPoints(points.map((point) => new THREE.Vector3(...point)));
-      const targetMaterial = new THREE.LineBasicMaterial({ color: 0xc76891, depthTest: false, linewidth: 2 });
-      const line = new THREE.Line(targetGeometry, targetMaterial); line.renderOrder = 4; this.group.add(line);
+      const auxiliary = target.target_kind === 'auxiliary_guide';
+      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : 0xe52d45, transparent: true, opacity: 1, depthTest: false, depthWrite: false, linewidth: 2 });
+      const line = new THREE.Line(targetGeometry, targetMaterial); if (auxiliary) line.computeLineDistances(); line.renderOrder = 4; this.group.add(line);
+      if (!auxiliary) {
+        const ends = new THREE.BufferGeometry().setFromPoints([points[0], points[points.length - 1]].map((point) => new THREE.Vector3(...point)));
+        const dots = new THREE.Points(ends, new THREE.PointsMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : 0xe52d45, size: 3.5, sizeAttenuation: false, transparent: true, opacity: 1, depthTest: false, depthWrite: false })); dots.renderOrder = 5; this.group.add(dots);
+      }
+    }
+    for (const selected of Array.isArray(selectedFaces) ? selectedFaces : []) {
+      const id = typeof selected === 'object' ? selected.face_id ?? selected.id ?? selected.native_index ?? (selected.index_1based !== undefined ? Number(selected.index_1based) - 1 : selected.index) : selected;
+      const faceMesh = typeof selected === 'object' ? selected.mesh || selected : null;
+      let points = validMesh(faceMesh) ? faceMesh.triangles.flatMap((triangle) => triangle.flatMap((index) => faceMesh.vertices[index])) : [];
+      const selectedIndices = typeof selected === 'object' ? selected.triangle_indices : null;
+      if (!points.length) for (let index = 0; index < mesh.triangles.length; index++) if ((Array.isArray(selectedIndices) && selectedIndices.includes(index)) || (id !== undefined && String(mesh.face_ids?.[index]) === String(id))) points.push(...mesh.triangles[index].flatMap((vertex) => mesh.vertices[vertex]));
+      if (points.length) { const highlight = new THREE.BufferGeometry(); highlight.setAttribute('position', new THREE.Float32BufferAttribute(points, 3)); highlight.computeVertexNormals(); this.group.add(new THREE.Mesh(highlight, new THREE.MeshStandardMaterial({ color: 0xd3a04c, transparent: true, opacity: .62, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 }))); }
     }
     this.radius = Math.max(bounds.getSize(new THREE.Vector3()).length() * .5, .1);
     this.hasMesh = true; this.reset();
@@ -290,7 +499,15 @@ class MeshViewer {
   reset() {
     if (!this.hasMesh) return;
     const distance = this.radius * 4;
-    this.camera.position.set(distance * .85, -distance * 1.15, distance * .8);
+    const camera = this.defaultCamera;
+    this.camera.up.set(0, 0, 1);
+    if (camera) {
+      const azimuth = THREE.MathUtils.degToRad(Number(Array.isArray(camera) ? camera[0] : camera.azimuth_deg ?? camera.azimuth ?? -53.5));
+      const elevation = THREE.MathUtils.degToRad(Number(Array.isArray(camera) ? camera[1] : camera.elevation_deg ?? camera.elevation ?? 29.2));
+      this.camera.position.set(distance * Math.cos(elevation) * Math.cos(azimuth), distance * Math.cos(elevation) * Math.sin(azimuth), distance * Math.sin(elevation));
+      const roll = THREE.MathUtils.degToRad(Number(Array.isArray(camera) ? camera[2] || 0 : camera.roll_deg ?? camera.roll ?? 0));
+      if (roll) this.camera.up.applyAxisAngle(this.camera.position.clone().normalize(), roll);
+    } else this.camera.position.set(distance * .85, -distance * 1.15, distance * .8);
     this.camera.near = Math.max(this.radius * .001, .0001); this.camera.far = this.radius * 100;
     this.camera.zoom = 1;
     this.controls.target.set(0, 0, 0); this.controls.update(); this.resize();
@@ -505,20 +722,27 @@ function setupCrop() {
   preview.addEventListener('pointerup', () => { if (!start) return; start = null; state.previewCrop = normalizeCrop(state.previewCrop); updateCropOverlay(); });
   preview.addEventListener('pointercancel', () => { start = null; });
 }
-function openDetails(engine = null, tab = 'evidence') { state.detailEngine = engine; state.detailTab = tab; renderDetails(); $('#detailDialog').showModal(); }
+function openDetails(engine = null, tab = 'evidence') { if (!state.variant) return; state.detailEngine = isOriginal(state) && engine === 'smlib' ? 'occt' : engine; state.detailTab = tab; renderDetails(); $('#detailDialog').showModal(); }
 function renderDetails() {
   if (!state.variant) return;
   $('#detailTitle').textContent = `${getCaseNumber(state.currentCase)} · ${variantLabel(state.variant)}`;
   $$('.detail-tabs button').forEach((button) => { const active = button.dataset.tab === state.detailTab; button.classList.toggle('active', active); button.setAttribute('aria-selected', active); });
   const container = $('#detailContent'); container.replaceChildren();
   if (state.detailTab === 'raw') { container.append(newNode('pre', '', JSON.stringify({ ...state.currentCase, variants: [state.variant] }, null, 2))); return; }
-  const engines = state.detailEngine ? [state.detailEngine] : ['occt', 'smlib'];
+  if (isOriginal(state)) addModelDownloads(container);
+  const engines = isOriginal(state) ? ['occt'] : state.detailEngine ? [state.detailEngine] : ['occt', 'smlib'];
   if (state.detailTab === 'evidence') {
     container.append(newNode('h3', '', '验证边界'));
     container.append(newNode('p', '', '构建返回、网格生成、BRep 有效性、连续性与参考外观是独立判据。普通边圆角的通过不替代原始参考的特殊语义验收。'));
     const dl = newNode('dl');
     for (const [label, value] of [['案例', state.currentCase.id], ['测试变体', state.variant.id], ['半径 / mm', state.variant.radius_mm], ['输入说明', state.variant.input_construction_note || state.variant.input_note || state.variant.note], ['来源 PDF 页', state.currentCase.reference?.page], ['几何 SHA-256', state.currentCase.source_sha256], ['参考 PDF SHA-256', state.currentCase.reference?.expected_pdf_sha256]]) { dl.append(newNode('dt', '', label), newNode('dd', '', text(value))); }
     container.append(dl);
+    if (isOriginal(state)) {
+      const original = newNode('dl');
+      for (const [label, value] of [['集合', COLLECTIONS.original.label], ['原版参数', state.variant.parameters], ['基础模型', baseMesh(state.variant)], ['实际操作输入', operationMesh(state.variant)], ['操作输入说明', state.variant.operation_note || state.variant.operation_input?.note], ['原选边 / 选面', { targets: state.variant.targets, selected_faces: state.variant.selected_faces }], ['历史处理状态', state.variant.historical_status], ['原人工状态', state.variant.human_status || state.currentCase.human_status], ['用户确认 / 备注', state.variant.human_note || state.currentCase.human_note], ['本次证据', historicalResult(state.variant) ? '历史记录，本次未复跑' : '本次运行记录'], ['对应范围', state.variant.scope_note]]) original.append(newNode('dt', '', label), newNode('dd', '', text(value)));
+      container.append(original);
+      for (const [label, source] of [['打开原基础网格', baseMesh(state.variant)], ['打开实际操作输入网格', operationMesh(state.variant)]]) { const paragraph = newNode('p'); addDetailLink(paragraph, label, source); container.append(paragraph); }
+    }
   }
   for (const engine of engines) {
     const result = state.variant[engine] || {};
@@ -539,6 +763,12 @@ function renderDetails() {
       for (const [key, value] of Object.entries(result.metrics || {})) dl.append(newNode('dt', '', key), newNode('dd', '', text(value)));
       section.append(dl);
       if (result.criteria || result.validation || result.checks) section.append(newNode('pre', '', JSON.stringify(result.criteria || result.validation || result.checks, null, 2)));
+      if (isOriginal(state)) {
+        for (const [label, record] of [['输入关系与预处理', { relation: inputRelation(state.variant), note: state.variant.operation_relation_note, preprocess: result.preprocess }], ['实际处理步骤', state.variant.processing_steps || result.processing_steps]]) {
+          if (!record) continue;
+          const disclosure = newNode('details', 'processing-record'); disclosure.append(newNode('summary', '', label), newNode('pre', '', JSON.stringify(record, null, 2))); section.append(disclosure);
+        }
+      }
       for (const [label, path] of [['打开网格 JSON', result.mesh], ['打开日志', result.log || result.log_path], ['打开结果记录', result.summary || result.report]]) { if (path) { const p = newNode('p'); addDetailLink(p, label, path); section.append(p); } }
     }
     container.append(section);
@@ -551,7 +781,9 @@ function expandCard(id) {
 }
 function stepCase(delta) { if (!state.currentCase || !state.catalog) return; const index = state.catalog.cases.findIndex((item) => item.id === state.currentCase.id); const item = state.catalog.cases[index + delta]; if (item) selectCase(item); }
 function wireUI() {
-  $('.brand').addEventListener('click', (event) => { event.preventDefault(); const home = state.catalog?.cases.find((item) => getCaseNumber(item) === '08') || state.catalog?.cases[0]; if (home) selectCase(home); });
+  $('.brand').addEventListener('click', (event) => { event.preventDefault(); const home = state.catalog?.cases[0]; if (home) selectCase(home); });
+  $$('.collection-tabs button').forEach((button) => button.addEventListener('click', () => { if (button.dataset.series !== state.series || !state.catalog) selectCollection(button.dataset.series); }));
+  $$('.input-stage-switch button').forEach((button) => button.addEventListener('click', () => { if (!state.variant) return; state.inputStage = button.dataset.inputStage; renderOriginalMetadata(); renderModels(++state.token); }));
   $('#variantSelect').addEventListener('change', (event) => { const variant = state.currentCase?.variants?.find((item) => item.id === event.target.value); if (variant) selectVariant(variant); });
   $('#caseSearch').addEventListener('input', (event) => { state.query = event.target.value.trim(); renderList(); });
   $$('.filters button').forEach((button) => button.addEventListener('click', () => { state.filter = button.dataset.filter; $$('.filters button').forEach((node) => node.classList.toggle('active', node === button)); renderList(); }));
@@ -590,7 +822,7 @@ function wireUI() {
   $$('.detail-tabs button').forEach((button) => button.addEventListener('click', () => { state.detailTab = button.dataset.tab; renderDetails(); }));
   $('#aboutButton').addEventListener('click', () => $('#aboutDialog').showModal()); $('#closeAboutDialog').addEventListener('click', () => $('#aboutDialog').close());
   $$('dialog').forEach((dialog) => dialog.addEventListener('click', (event) => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } }));
-  window.addEventListener('hashchange', () => { const hash = getHash(); const item = state.catalog?.cases.find((entry) => getCaseNumber(entry) === String(hash.get('case')).padStart(2, '0')); if (item && (item.id !== state.currentCase?.id || hash.get('variant') !== state.variant?.id)) selectCase(item, hash.get('variant')); });
+  window.addEventListener('hashchange', () => routeHash());
   window.addEventListener('resize', () => { if ($('#referenceDialog').open) updateCropOverlay(); });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') { expandCard(null); $('.sidebar').classList.remove('is-open'); }

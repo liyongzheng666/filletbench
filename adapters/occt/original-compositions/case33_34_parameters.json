@@ -1,0 +1,1028 @@
+{
+  "33": {
+    "parameters": {
+      "width": 24.0,
+      "height": 11.22680325460038,
+      "depth": 13.670917044949027,
+      "a_left": 4.430011713188297,
+      "a_right": 10.011810225553527,
+      "b_left": 8.619960393556429,
+      "b_right": 2.433053336500925,
+      "camera": [
+        45.64381059448007,
+        24.30369548515476
+      ],
+      "source_size": [
+        560,
+        335
+      ],
+      "reference_crop": [
+        266,
+        109,
+        493,
+        290
+      ],
+      "projection_scale": 7.892025542644105,
+      "projection_origin": [
+        342.5714285714788,
+        224.7499999966572
+      ],
+      "dimensions_are_inferred": true
+    },
+    "original_script": "outputs/manual-review/diagnostics/case33-variable/code/build_asymmetric.py",
+    "original_script_sha256": "0b1df2823a98d706e095fc52bf2454045678cb7b1efb7696e9750e4065090fac",
+    "historical_summary": "history:outputs/manual-review/diagnostics/case33-variable/summary.json",
+    "historical_summary_sha256": "cc16ba99281f620e3bab29cf125e40726a113336772132a410c05c20cced4f36",
+    "historical_input": "data/original-occ/fixtures/7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8.brep",
+    "historical_results": {
+      "asymmetric-ranges": "data/original-occ/fixtures/ed44e7b0d57930bc90da20b6bf0ca5a954d2448a5e82fe06b2f720824b13bcea.brep"
+    },
+    "historical_result_sha256": {
+      "asymmetric-ranges": "ed44e7b0d57930bc90da20b6bf0ca5a954d2448a5e82fe06b2f720824b13bcea"
+    },
+    "historical_input_sha256": "7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8",
+    "source_brep": "data/original-occ/fixtures/6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47.brep",
+    "source_sha256": "6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47",
+    "script_provenance": {
+      "status": "source_present_without_recorded_main_hash",
+      "recorded_hashes": [],
+      "linked_sources": [
+        {
+          "path": "outputs/manual-review/diagnostics/case33-variable/code/build_asymmetric.py",
+          "exists": true,
+          "sha256": "0b1df2823a98d706e095fc52bf2454045678cb7b1efb7696e9750e4065090fac",
+          "bytes": 5108
+        }
+      ],
+      "portable_command_available": false,
+      "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+    },
+    "original_variant_mapping": {
+      "asymmetric-ranges": [
+        "asymmetric-ranges"
+      ],
+      "asymmetric-clean": [
+        "asymmetric-ranges"
+      ],
+      "native-symmetric-control": [
+        "native-symmetric-control"
+      ]
+    },
+    "native_control": {
+      "variant_id": "native-symmetric-control",
+      "operation_input": {
+        "brep": "data/original-occ/fixtures/7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8.brep",
+        "sha256": "7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8",
+        "original_path": "history:outputs/manual-review/diagnostics/case33-variable/runs/20261022T214432.129909/operation-two-walls.brep",
+        "label": "actual operation input",
+        "selected_edges": [
+          {
+            "index_1based": 1,
+            "length": 24.0,
+            "curve_type": "Line",
+            "start": [
+              -12.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              12.0,
+              0.0,
+              0.0
+            ],
+            "midpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "polyline": [
+              [
+                -12.0,
+                0.0,
+                0.0
+              ],
+              [
+                -11.225806451612904,
+                0.0,
+                0.0
+              ],
+              [
+                -10.451612903225806,
+                0.0,
+                0.0
+              ],
+              [
+                -9.67741935483871,
+                0.0,
+                0.0
+              ],
+              [
+                -8.903225806451612,
+                0.0,
+                0.0
+              ],
+              [
+                -8.129032258064516,
+                0.0,
+                0.0
+              ],
+              [
+                -7.354838709677419,
+                0.0,
+                0.0
+              ],
+              [
+                -6.580645161290322,
+                0.0,
+                0.0
+              ],
+              [
+                -5.806451612903225,
+                0.0,
+                0.0
+              ],
+              [
+                -5.032258064516128,
+                0.0,
+                0.0
+              ],
+              [
+                -4.258064516129031,
+                0.0,
+                0.0
+              ],
+              [
+                -3.483870967741934,
+                0.0,
+                0.0
+              ],
+              [
+                -2.709677419354838,
+                0.0,
+                0.0
+              ],
+              [
+                -1.935483870967742,
+                0.0,
+                0.0
+              ],
+              [
+                -1.161290322580646,
+                0.0,
+                0.0
+              ],
+              [
+                -0.3870967741935498,
+                0.0,
+                0.0
+              ],
+              [
+                0.38709677419354627,
+                0.0,
+                0.0
+              ],
+              [
+                1.1612903225806424,
+                0.0,
+                0.0
+              ],
+              [
+                1.9354838709677384,
+                0.0,
+                0.0
+              ],
+              [
+                2.7096774193548345,
+                0.0,
+                0.0
+              ],
+              [
+                3.4838709677419306,
+                0.0,
+                0.0
+              ],
+              [
+                4.2580645161290285,
+                0.0,
+                0.0
+              ],
+              [
+                5.032258064516125,
+                0.0,
+                0.0
+              ],
+              [
+                5.806451612903221,
+                0.0,
+                0.0
+              ],
+              [
+                6.580645161290317,
+                0.0,
+                0.0
+              ],
+              [
+                7.354838709677413,
+                0.0,
+                0.0
+              ],
+              [
+                8.129032258064509,
+                0.0,
+                0.0
+              ],
+              [
+                8.903225806451605,
+                0.0,
+                0.0
+              ],
+              [
+                9.677419354838701,
+                0.0,
+                0.0
+              ],
+              [
+                10.451612903225797,
+                0.0,
+                0.0
+              ],
+              [
+                11.225806451612893,
+                0.0,
+                0.0
+              ],
+              [
+                12.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "adjacent_faces_1based": [
+              1,
+              2
+            ],
+            "samples_mm": [
+              [
+                -12.0,
+                0.0,
+                0.0
+              ],
+              [
+                -11.225806451612904,
+                0.0,
+                0.0
+              ],
+              [
+                -10.451612903225806,
+                0.0,
+                0.0
+              ],
+              [
+                -9.67741935483871,
+                0.0,
+                0.0
+              ],
+              [
+                -8.903225806451612,
+                0.0,
+                0.0
+              ],
+              [
+                -8.129032258064516,
+                0.0,
+                0.0
+              ],
+              [
+                -7.354838709677419,
+                0.0,
+                0.0
+              ],
+              [
+                -6.580645161290322,
+                0.0,
+                0.0
+              ],
+              [
+                -5.806451612903225,
+                0.0,
+                0.0
+              ],
+              [
+                -5.032258064516128,
+                0.0,
+                0.0
+              ],
+              [
+                -4.258064516129031,
+                0.0,
+                0.0
+              ],
+              [
+                -3.483870967741934,
+                0.0,
+                0.0
+              ],
+              [
+                -2.709677419354838,
+                0.0,
+                0.0
+              ],
+              [
+                -1.935483870967742,
+                0.0,
+                0.0
+              ],
+              [
+                -1.161290322580646,
+                0.0,
+                0.0
+              ],
+              [
+                -0.3870967741935498,
+                0.0,
+                0.0
+              ],
+              [
+                0.38709677419354627,
+                0.0,
+                0.0
+              ],
+              [
+                1.1612903225806424,
+                0.0,
+                0.0
+              ],
+              [
+                1.9354838709677384,
+                0.0,
+                0.0
+              ],
+              [
+                2.7096774193548345,
+                0.0,
+                0.0
+              ],
+              [
+                3.4838709677419306,
+                0.0,
+                0.0
+              ],
+              [
+                4.2580645161290285,
+                0.0,
+                0.0
+              ],
+              [
+                5.032258064516125,
+                0.0,
+                0.0
+              ],
+              [
+                5.806451612903221,
+                0.0,
+                0.0
+              ],
+              [
+                6.580645161290317,
+                0.0,
+                0.0
+              ],
+              [
+                7.354838709677413,
+                0.0,
+                0.0
+              ],
+              [
+                8.129032258064509,
+                0.0,
+                0.0
+              ],
+              [
+                8.903225806451605,
+                0.0,
+                0.0
+              ],
+              [
+                9.677419354838701,
+                0.0,
+                0.0
+              ],
+              [
+                10.451612903225797,
+                0.0,
+                0.0
+              ],
+              [
+                11.225806451612893,
+                0.0,
+                0.0
+              ],
+              [
+                12.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "selected_faces": [],
+        "recorded_sha256": "7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8",
+        "recorded_hash_matches": true,
+        "selection_sha256": "7d439b42d6aac7636728913a2499bb0fbc030b57f48ff088d41f555c7395cfc8"
+      },
+      "historical_result": {
+        "brep": "data/original-occ/fixtures/02583ecf53fd7d943a4aad9bcdb1f5c57e043bdde325829fa86c43e18236cc0b.brep",
+        "sha256": "02583ecf53fd7d943a4aad9bcdb1f5c57e043bdde325829fa86c43e18236cc0b",
+        "original_path": "history:outputs/manual-review/diagnostics/case33-variable/native-fitted-runs/20261022T215236.322088/result.brep",
+        "recorded_sha256": "02583ecf53fd7d943a4aad9bcdb1f5c57e043bdde325829fa86c43e18236cc0b",
+        "recorded_hash_matches": true,
+        "mesh_path_as_local_history": [
+          "outputs/manual-review/diagnostics/case33-variable/native-fitted-runs/20261022T215236.322088/after-mesh.json"
+        ]
+      },
+      "parameters": {
+        "width": 24.0,
+        "height": 11.22680325460038,
+        "depth": 13.670917044949027,
+        "a_left": 4.430011713188297,
+        "a_right": 10.011810225553527,
+        "b_left": 8.619960393556429,
+        "b_right": 2.433053336500925,
+        "camera": [
+          45.64381059448007,
+          24.30369548515476
+        ],
+        "source_size": [
+          560,
+          335
+        ],
+        "reference_crop": [
+          266,
+          109,
+          493,
+          290
+        ],
+        "projection_scale": 7.892025542644105,
+        "projection_origin": [
+          342.5714285714788,
+          224.7499999966572
+        ],
+        "dimensions_are_inferred": true
+      },
+      "script_provenance": {
+        "status": "source_present_without_recorded_main_hash",
+        "recorded_hashes": [],
+        "linked_sources": [
+          {
+            "path": "outputs/manual-review/diagnostics/case33-variable/code/build_asymmetric.py",
+            "exists": true,
+            "sha256": "0b1df2823a98d706e095fc52bf2454045678cb7b1efb7696e9750e4065090fac",
+            "bytes": 5108
+          },
+          {
+            "path": "outputs/manual-review/diagnostics/case33-variable/native-fitted-runs/20261022T215236.322088/native-fitted.py",
+            "exists": true,
+            "sha256": "9f66fff23d89e609148c2cb04310e385a328592a96a4c2ec7dfa7eea4fa9bccc",
+            "bytes": 8495
+          }
+        ],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "original_summary_sha256": "c2f55aa8d70ed8798717636a18a7892b6053311b1c9cfd7390d280797241f837",
+      "native_record": {
+        "radii": [
+          2.433053336500925,
+          8.619960393556429
+        ],
+        "radius_assignment": {
+          "start_x": -12.0,
+          "start_radius": 2.433053336500925,
+          "end_x": 12.0,
+          "end_radius": 8.619960393556429,
+          "expected_near_x_positive_radius": 8.619960393556429,
+          "expected_far_x_negative_radius": 2.433053336500925
+        }
+      }
+    }
+  },
+  "34": {
+    "parameters": {
+      "height": 24.0,
+      "X_top": 19.155687980072315,
+      "X_bottom": 36.031828047407174,
+      "Y_width": 18.962451224311028,
+      "d_top": 12.276845200098565,
+      "d_bottom": 16.857382645040378,
+      "dihedral_angle_deg": 90.0,
+      "camera": [
+        -52.02541387345335,
+        18.68512196643596
+      ],
+      "projection_scale": 8.224577244722608,
+      "projection_origin": [
+        47.98134418659752,
+        243.23596618146803
+      ],
+      "source_crop": [
+        30,
+        8,
+        305,
+        310
+      ],
+      "source_exact_dimensions_known": false,
+      "closure_is_proxy": true,
+      "relative_only_demonstrated_at": 0.5
+    },
+    "original_script": "outputs/manual-review/diagnostics/case34-rho/code/build_rho.py",
+    "original_script_sha256": "9f8789482a6ad36f9b79604c17d71c1ab4657d1756a4ce7b2b11214188b513a8",
+    "historical_summary": "history:outputs/manual-review/diagnostics/case34-rho/summary.json",
+    "historical_summary_sha256": "4e63c40f51e03df2beeffe2839d3dc544083aa4fd800b27cdfad42e527794748",
+    "historical_input": "data/original-occ/fixtures/b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50.brep",
+    "historical_results": {
+      "absolute-025": "data/original-occ/fixtures/1630589230f1e3f4bd595d9fd02ac7240679c9e7672ba664d95b33386f1e2909.brep",
+      "absolute-050": "data/original-occ/fixtures/e6ee9b631a401c3fd02b81256b38705fe585d451e9815bbe710eb14a473736ff.brep",
+      "absolute-075": "data/original-occ/fixtures/68cefedc4b46216703f20fcfb9378dc803fbe92ae98341a730146a9e0ac70ae2.brep",
+      "relative-050": "data/original-occ/fixtures/3fbf598259f2d14b9ebd18e80118daea19e70af2fb8ad89b6dbec88e38cd7117.brep"
+    },
+    "historical_result_sha256": {
+      "absolute-025": "1630589230f1e3f4bd595d9fd02ac7240679c9e7672ba664d95b33386f1e2909",
+      "absolute-050": "e6ee9b631a401c3fd02b81256b38705fe585d451e9815bbe710eb14a473736ff",
+      "absolute-075": "68cefedc4b46216703f20fcfb9378dc803fbe92ae98341a730146a9e0ac70ae2",
+      "relative-050": "3fbf598259f2d14b9ebd18e80118daea19e70af2fb8ad89b6dbec88e38cd7117"
+    },
+    "historical_input_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+    "source_brep": "data/original-occ/fixtures/b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50.brep",
+    "source_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+    "script_provenance": {
+      "status": "source_present_without_recorded_main_hash",
+      "recorded_hashes": [],
+      "linked_sources": [
+        {
+          "path": "outputs/manual-review/diagnostics/case34-rho/code/build_rho.py",
+          "exists": true,
+          "sha256": "9f8789482a6ad36f9b79604c17d71c1ab4657d1756a4ce7b2b11214188b513a8",
+          "bytes": 5817
+        }
+      ],
+      "portable_command_available": false,
+      "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+    },
+    "original_variant_mapping": {
+      "absolute-025": [
+        "absolute-025"
+      ],
+      "absolute-050": [
+        "absolute-050"
+      ],
+      "absolute-075": [
+        "absolute-075"
+      ],
+      "relative-050": [
+        "relative-050"
+      ],
+      "rho-050-compare": [
+        "relative-050",
+        "absolute-050"
+      ],
+      "native-circle-control": [
+        "native-circle-control"
+      ]
+    },
+    "native_control": {
+      "variant_id": "native-circle-control",
+      "operation_input": {
+        "brep": "data/original-occ/fixtures/b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50.brep",
+        "sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+        "original_path": "history:outputs/manual-review/diagnostics/case34-rho/runs/20261022T222101.606847/convex-input.brep",
+        "label": "actual operation input",
+        "selected_edges": [
+          {
+            "index_1based": 4,
+            "length": 24.0,
+            "curve_type": "Line",
+            "start": [
+              0.0,
+              0.0,
+              24.0
+            ],
+            "end": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "midpoint": [
+              0.0,
+              0.0,
+              12.0
+            ],
+            "polyline": [
+              [
+                0.0,
+                0.0,
+                24.0
+              ],
+              [
+                0.0,
+                0.0,
+                23.225806451612904
+              ],
+              [
+                0.0,
+                0.0,
+                22.451612903225808
+              ],
+              [
+                0.0,
+                0.0,
+                21.67741935483871
+              ],
+              [
+                0.0,
+                0.0,
+                20.903225806451612
+              ],
+              [
+                0.0,
+                0.0,
+                20.129032258064516
+              ],
+              [
+                0.0,
+                0.0,
+                19.35483870967742
+              ],
+              [
+                0.0,
+                0.0,
+                18.58064516129032
+              ],
+              [
+                0.0,
+                0.0,
+                17.806451612903224
+              ],
+              [
+                0.0,
+                0.0,
+                17.032258064516128
+              ],
+              [
+                0.0,
+                0.0,
+                16.258064516129032
+              ],
+              [
+                0.0,
+                0.0,
+                15.483870967741934
+              ],
+              [
+                0.0,
+                0.0,
+                14.709677419354838
+              ],
+              [
+                0.0,
+                0.0,
+                13.935483870967742
+              ],
+              [
+                0.0,
+                0.0,
+                13.161290322580646
+              ],
+              [
+                0.0,
+                0.0,
+                12.38709677419355
+              ],
+              [
+                0.0,
+                0.0,
+                11.612903225806454
+              ],
+              [
+                0.0,
+                0.0,
+                10.838709677419358
+              ],
+              [
+                0.0,
+                0.0,
+                10.064516129032262
+              ],
+              [
+                0.0,
+                0.0,
+                9.290322580645165
+              ],
+              [
+                0.0,
+                0.0,
+                8.51612903225807
+              ],
+              [
+                0.0,
+                0.0,
+                7.7419354838709715
+              ],
+              [
+                0.0,
+                0.0,
+                6.967741935483875
+              ],
+              [
+                0.0,
+                0.0,
+                6.193548387096779
+              ],
+              [
+                0.0,
+                0.0,
+                5.419354838709683
+              ],
+              [
+                0.0,
+                0.0,
+                4.645161290322587
+              ],
+              [
+                0.0,
+                0.0,
+                3.870967741935491
+              ],
+              [
+                0.0,
+                0.0,
+                3.096774193548395
+              ],
+              [
+                0.0,
+                0.0,
+                2.322580645161299
+              ],
+              [
+                0.0,
+                0.0,
+                1.5483870967742028
+              ],
+              [
+                0.0,
+                0.0,
+                0.7741935483871067
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "adjacent_faces_1based": [
+              1,
+              2
+            ],
+            "samples_mm": [
+              [
+                0.0,
+                0.0,
+                24.0
+              ],
+              [
+                0.0,
+                0.0,
+                23.225806451612904
+              ],
+              [
+                0.0,
+                0.0,
+                22.451612903225808
+              ],
+              [
+                0.0,
+                0.0,
+                21.67741935483871
+              ],
+              [
+                0.0,
+                0.0,
+                20.903225806451612
+              ],
+              [
+                0.0,
+                0.0,
+                20.129032258064516
+              ],
+              [
+                0.0,
+                0.0,
+                19.35483870967742
+              ],
+              [
+                0.0,
+                0.0,
+                18.58064516129032
+              ],
+              [
+                0.0,
+                0.0,
+                17.806451612903224
+              ],
+              [
+                0.0,
+                0.0,
+                17.032258064516128
+              ],
+              [
+                0.0,
+                0.0,
+                16.258064516129032
+              ],
+              [
+                0.0,
+                0.0,
+                15.483870967741934
+              ],
+              [
+                0.0,
+                0.0,
+                14.709677419354838
+              ],
+              [
+                0.0,
+                0.0,
+                13.935483870967742
+              ],
+              [
+                0.0,
+                0.0,
+                13.161290322580646
+              ],
+              [
+                0.0,
+                0.0,
+                12.38709677419355
+              ],
+              [
+                0.0,
+                0.0,
+                11.612903225806454
+              ],
+              [
+                0.0,
+                0.0,
+                10.838709677419358
+              ],
+              [
+                0.0,
+                0.0,
+                10.064516129032262
+              ],
+              [
+                0.0,
+                0.0,
+                9.290322580645165
+              ],
+              [
+                0.0,
+                0.0,
+                8.51612903225807
+              ],
+              [
+                0.0,
+                0.0,
+                7.7419354838709715
+              ],
+              [
+                0.0,
+                0.0,
+                6.967741935483875
+              ],
+              [
+                0.0,
+                0.0,
+                6.193548387096779
+              ],
+              [
+                0.0,
+                0.0,
+                5.419354838709683
+              ],
+              [
+                0.0,
+                0.0,
+                4.645161290322587
+              ],
+              [
+                0.0,
+                0.0,
+                3.870967741935491
+              ],
+              [
+                0.0,
+                0.0,
+                3.096774193548395
+              ],
+              [
+                0.0,
+                0.0,
+                2.322580645161299
+              ],
+              [
+                0.0,
+                0.0,
+                1.5483870967742028
+              ],
+              [
+                0.0,
+                0.0,
+                0.7741935483871067
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "selected_faces": [],
+        "recorded_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+        "recorded_hash_matches": true,
+        "selection_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50"
+      },
+      "historical_result": {
+        "brep": "data/original-occ/fixtures/283e4aeac6c1817079e512fd9b92e0cda5cb37ad22b4b1dbaba55cf8efdaa5ba.brep",
+        "sha256": "283e4aeac6c1817079e512fd9b92e0cda5cb37ad22b4b1dbaba55cf8efdaa5ba",
+        "original_path": "history:outputs/manual-review/diagnostics/case34-rho/native-runs/20261022T222352.772560/native-circle-control.brep",
+        "recorded_sha256": "283e4aeac6c1817079e512fd9b92e0cda5cb37ad22b4b1dbaba55cf8efdaa5ba",
+        "recorded_hash_matches": true,
+        "mesh_path_as_local_history": [
+          "outputs/manual-review/diagnostics/case34-rho/native-runs/20261022T222352.772560/after-mesh.json"
+        ]
+      },
+      "parameters": {
+        "height": 24.0,
+        "X_top": 19.155687980072315,
+        "X_bottom": 36.031828047407174,
+        "Y_width": 18.962451224311028,
+        "d_top": 12.276845200098565,
+        "d_bottom": 16.857382645040378,
+        "dihedral_angle_deg": 90.0,
+        "camera": [
+          -52.02541387345335,
+          18.68512196643596
+        ],
+        "projection_scale": 8.224577244722608,
+        "projection_origin": [
+          47.98134418659752,
+          243.23596618146803
+        ],
+        "source_crop": [
+          30,
+          8,
+          305,
+          310
+        ],
+        "source_exact_dimensions_known": false,
+        "closure_is_proxy": true,
+        "relative_only_demonstrated_at": 0.5
+      },
+      "script_provenance": {
+        "status": "source_present_without_recorded_main_hash",
+        "recorded_hashes": [],
+        "linked_sources": [
+          {
+            "path": "outputs/manual-review/diagnostics/case34-rho/code/build_rho.py",
+            "exists": true,
+            "sha256": "9f8789482a6ad36f9b79604c17d71c1ab4657d1756a4ce7b2b11214188b513a8",
+            "bytes": 5817
+          },
+          {
+            "path": "outputs/manual-review/diagnostics/case34-rho/native-runs/20261022T222352.772560/native-control.py",
+            "exists": true,
+            "sha256": "2847e71d082c46c31cc8964e6a626ce8fa21674e23dcbaa472f6738dfeb27676",
+            "bytes": 8052
+          }
+        ],
+        "portable_command_available": false,
+        "note": "Existing scripts contain FreeCAD/local workspace paths; inspect and adapt into a separate new run before claiming portable reproduction. Exact hash availability alone is not a successful rerun."
+      },
+      "original_summary_sha256": "a8abaa70db97dc36d40334fecd81f8b10591a48d9f56b33ed93e59fe0f0ef140",
+      "native_record": {
+        "radius_first": 12.276845200098565,
+        "radius_last": 16.857382645040378,
+        "contour_first": [
+          0.0,
+          0.0,
+          24.0
+        ],
+        "contour_last": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  }
+}

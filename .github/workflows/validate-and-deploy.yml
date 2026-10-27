@@ -31,6 +31,19 @@ jobs:
       - run: python bench.py run --engine occt --case 8 --radius 18 --out runs/ci-occt
       - name: Reject wrong inputs and verify both variable endpoint orientations
         run: python adapters/occt/test_runner.py
+      - name: Replay the original reviewed R6 and capping recipe
+        run: |
+          python bench.py original --case 22 --variant part01-r6 --out runs/ci-original22
+          python bench.py original --case 18 --variant sheet-r8 --out runs/ci-original18
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(pathlib.Path('runs/ci-original22/native/22.part01-r6/summary.json').read_text())
+          assert s['native_call_executed'] is True and s['parameters']['radius_mm']==6, s
+          assert s['preprocess']['execution_mode']=='from_base', s
+          assert s['source_sha256']=='0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8', s
+          # Export failures remain observations; native success is not a source feature pass.
+          assert s['special_feature_certified'] is False, s
+          PY
       - name: Confirm a real native call, not a placeholder
         run: |
           python - <<'PY'

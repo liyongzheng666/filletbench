@@ -1,0 +1,92 @@
+{
+  "schema": "filletbench.original-occ.v1",
+  "number": 32,
+  "id": "fig75-05_planes-1356",
+  "title": "剖面与参数脊线说明页（本页无图）",
+  "has_model": false,
+  "source_brep": null,
+  "source_sha256": null,
+  "recorded_source_sha256": null,
+  "human_status": "not_applicable",
+  "human_note": "",
+  "reference": {},
+  "base_targets": [],
+  "base_annotation_groups": {},
+  "selection": {
+    "base": {
+      "sha256": null,
+      "targets": [],
+      "selected_faces": []
+    }
+  },
+  "variants": [],
+  "default_variant": null,
+  "source_spec": {
+    "number": 32,
+    "case_id": "fig75-05_planes-1356",
+    "title": "剖面与参数脊线说明页（本页无图）",
+    "status": "not_applicable",
+    "human_note": "",
+    "has_model": false,
+    "snapshot": {
+      "reference_crop": [
+        0.12,
+        0.08,
+        0.85,
+        0.69
+      ],
+      "source_sha256": "1173d57aa552068d3c04e330460f3564825b2c3607835f225a7c55e1b42f5e41",
+      "brep_sha256": null
+    },
+    "files": {},
+    "assumptions": "纯文字表格页，无独立模型图；rolling-ball、disc、iso-parameter的配套输入已在fig75-05_planes-1355的图75-5/75-6重建，本页不重复制造几何。",
+    "annotation": null,
+    "review_results": {},
+    "test_spec": {
+      "schema_version": 1,
+      "case_id": "fig75-05_planes-1356",
+      "spec_status": "not_applicable",
+      "input_brep_sha256": null,
+      "scope_notice": "纯文字来源页，无独立几何输入或圆角执行结果。",
+      "display_fields": [
+        {
+          "label": "当前完成",
+          "value": "来源说明。"
+        },
+        {
+          "label": "操作、半径与边界约束",
+          "value": "不适用。"
+        },
+        {
+          "label": "功能结果与通过判据",
+          "value": "不适用。"
+        }
+      ],
+      "execution": {
+        "target_operation_executed": false,
+        "scored": false
+      },
+      "applies_to_current_input": true
+    },
+    "variants": [],
+    "local_demo": null,
+    "test_spec_file": "case-specs/fig75-05_planes-1356.json"
+  },
+  "history_documents": [
+    {
+      "path": "data/original-occ/history/512ad04df5f368a8586e166afa113d82e67d5e6681a7e4c9d6dd6ee095a74048.json",
+      "original_sha256": "512ad04df5f368a8586e166afa113d82e67d5e6681a7e4c9d6dd6ee095a74048",
+      "original_path": "history:outputs/manual-review/case-specs/fig75-05_planes-1356.json",
+      "sanitized_sha256": "f0372a2c2e540bc54520d487daa3943a73dde1abd0d352a880d7009b82d033ff"
+    }
+  ],
+  "historical_ordinary": null,
+  "review_results": {},
+  "provenance": {
+    "kind": "historical_source_freeze",
+    "not_a_rerun": true,
+    "source_dimensions": "inferred reconstruction; not original vendor CAD",
+    "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+    "no_reference_artwork_distributed": true
+  }
+}
