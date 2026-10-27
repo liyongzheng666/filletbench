@@ -1,0 +1,255 @@
+{
+  "number": 22,
+  "case_id": "73-41_laminar-1312",
+  "title": "两片不等宽平面相交的薄片体",
+  "feature_family": "laminar_trim_edges_vs_bound",
+  "source_feature": {
+    "meaning": "On an open sheet with unequal finite supports, compare trim_edges continuing along every underlying boundary against trim_bound reaching widest support boundary with constant-parameter blend side edges.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-41_laminar-1312.png",
+    "source_sha256": "3cf903f890efdded3fe0d9b9de7e0473cdd02c729e71945ce8e6b21c6b7e340e",
+    "reference_crop": [
+      0.225,
+      0.415,
+      0.857,
+      0.79
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-41_laminar-1312.json",
+    "current_spec_sha256": "562e07b7430311a7605043f5ee1c84aefbfb035955f5d7f61095575e8137c6ea",
+    "source_parameter_status": "not_frozen"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-41_laminar-1312.brep",
+    "brep_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+    "step_path": "history:outputs/parasolid-preblend/models/73-41_laminar-1312.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-41_laminar-1312.json",
+    "bbox_world_mm": [
+      -6.0,
+      -38.0,
+      0.0,
+      68.0,
+      0.0,
+      32.0
+    ],
+    "solid_count": 0,
+    "part_labels": [
+      "L_sheet_body"
+    ],
+    "parts_geometry_immutable": [
+      "Wallx0..48/z0..32, floor trapezoid exact four vertices, one shared edge, zero thickness."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root": {
+        "start": [
+          0,
+          0,
+          0
+        ],
+        "end": [
+          48,
+          0,
+          0
+        ]
+      },
+      "wall_vertices": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          48,
+          0,
+          0
+        ],
+        [
+          48,
+          0,
+          32
+        ],
+        [
+          0,
+          0,
+          32
+        ]
+      ],
+      "floor_vertices": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          -6,
+          -38,
+          0
+        ],
+        [
+          68,
+          -38,
+          0
+        ],
+        [
+          48,
+          0,
+          0
+        ]
+      ],
+      "target": "two finite zero-thickness planar faces sewn along one edge",
+      "input_is_open_sheet": true
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "L_sheet_body",
+        "documentary_original_OCC_edge_index_1based": 1,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 48.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            48.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          0.0,
+          0.0,
+          48.0,
+          0.0,
+          0.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            48.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-sheet-r3",
+        "radius_mm": 3,
+        "mode": "no laminar mode"
+      },
+      {
+        "id": "ordinary-sheet-r6",
+        "radius_mm": 6,
+        "mode": "no laminar mode"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "trim-edges-r6",
+        "radius_mm": 6,
+        "mode": "trim_edges"
+      },
+      {
+        "id": "trim-bound-r6",
+        "radius_mm": 6,
+        "mode": "trim_bound"
+      },
+      {
+        "id": "trim-edges-r10",
+        "radius_mm": 10,
+        "mode": "trim_edges"
+      },
+      {
+        "id": "trim-bound-r10",
+        "radius_mm": 10,
+        "mode": "trim_bound"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "unequal_boundary_trigger",
+      "wall_width_mm": 48,
+      "floor_front_x_range": [
+        -6,
+        68
+      ],
+      "floor_front_width_mm": 74,
+      "condition": "Keep angled expanding floor sides; equal rectangular supports would hide intended mode difference."
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "sheet_class",
+      "assertion": "Output remains a valid open sheet, zero solid volume/0 material solids; check face adjacency/free-boundary loops, not manifold-solid predicate."
+    },
+    {
+      "id": "trim_mode_difference",
+      "assertion": "Trim_edges tracks respective actual finite support side boundaries continuously; trim_bound reaches widest-boundary extent and has constant blend parameters on its side edges. Measure side curve positions/parameters from output, not colors."
+    },
+    {
+      "id": "mode_pair_same_input",
+      "assertion": "Both modes use exact same finite faces, contact conditions and R; no thickening, rectangular replacement or independent face enlargement.",
+      "visual": "Side boundary close-ups overlay original finite wall/floor edges and actual two-mode blend boundaries."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Side boundary close-ups overlay original finite wall/floor edges and actual two-mode blend boundaries."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [
+    "Source direction/mode semantics known, but the exact scalar coordinate of every expected side trim needs implementation against actual blend parameterization; no numeric output oracle yet frozen."
+  ],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/22.brep",
+  "input_brep_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8"
+}

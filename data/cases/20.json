@@ -1,0 +1,33 @@
+{
+  "number": 20,
+  "id": "73-39_patch-1309",
+  "title": "凹弧前缘与拔模前壁的圆角前输入",
+  "question": "停止边附近分别看补片开关对应的闭合与光顺；几何有效不等于patch策略正确。",
+  "family": "b",
+  "source_sha256": "3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd",
+  "reference": {
+    "page": 1309,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.375,
+      0.42,
+      0.87,
+      0.81
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/20.brep",
+  "fixture": "data/fixtures/20.json",
+  "contract": "data/contracts/20.json",
+  "variants": []
+}

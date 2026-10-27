@@ -1,0 +1,208 @@
+{
+  "number": 35,
+  "case_id": "fig75-28_softness-1384",
+  "title": "75-28 不同softness共用的未圆角墙面",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "c0125ac4b2d51a01f56a1db3f70cbbee230b8c7c15db5e763a3c4ebbe4552bee",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-28_softness-1384.json",
+  "source_spec_sha256": "72b7c253a384c1aaf8ab23f293b2a2303b8819c0c5c25eaf827cfae7532d6f72",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-28_softness-1384.png",
+  "current_evidence_scope": "第35项固定相同两平面与A/B接触线：d=13 mm。三档显式G2代理的接头、BREP/STEP/FreeCAD共12份独立验证通过；原生R13及内部C2控制仅G0/G1通过，接头G2失败。0.1/1/10是原图形态档位，本地α=.03/.30/.49不是已认证的Parasolid数值softness law；外观待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-28"
+  ],
+  "source_pages": {
+    "physical": [
+      1383,
+      1384
+    ],
+    "printed": [
+      1381,
+      1382
+    ]
+  },
+  "target_change": [
+    "At identical contacts and end tangents, vary G2 transition shape: low softness close to rounded chamfer, high softness close to L; all actual support joins remain G2."
+  ],
+  "must_preserve": [
+    "Original two plane sheets y0/z0, width20, height18, floor17; no hidden thickness/solid substitution.",
+    "A wall contact(x,0,13), B floor contact(x,13,0), x[-10,10], same end tangents for every shape tier.",
+    "Original source labels .1/1/10 are not certified equal to SMLib thumbweight or OCC proxy alpha.",
+    "No drawn highlight/green plane is counted as new topology."
+  ],
+  "semantic_target": {
+    "original_edge": "x[-10,10],y=z=0 on sewed open two-face shell",
+    "support_contacts": [
+      "(x,0,13)",
+      "(x,13,0)"
+    ],
+    "expected_result": "open shell with complete transition; face counts may differ legally if boundary/coverage correct"
+  },
+  "required_modes": [
+    {
+      "id": "source-low",
+      "parasolid_softness": 0.1
+    },
+    {
+      "id": "source-default",
+      "parasolid_softness": 1
+    },
+    {
+      "id": "source-high",
+      "parasolid_softness": 10
+    },
+    {
+      "id": "native-SMLib-independent-shape-sweep",
+      "smlib_thumbweight": [
+        0.1,
+        1,
+        10
+      ],
+      "source_numeric_equivalence": false
+    },
+    {
+      "id": "ordinary-circle-control",
+      "R": 13,
+      "support_G2_expected": false
+    }
+  ],
+  "diagnostic_parameters": {
+    "fixed_contact_mm": 13,
+    "OCC_proxy_alpha": [
+      0.03,
+      0.3,
+      0.49
+    ],
+    "contact_conditions_comparability_required": true,
+    "source_numeric_law_verified": false
+  },
+  "feature_oracles": [
+    {
+      "id": "fixed_contacts",
+      "quantity": "actual wall/floor joins",
+      "expected": "d13 at all stations and shape tiers",
+      "method": "Evaluate real rail coordinates/endpoints at 33+ width stations; if cannot hold contacts record noncomparable_conditions, do not resize input.",
+      "scope": "feature_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "support_G2",
+      "quantity": "actual oriented shape operator / normal-section curvature at join",
+      "expected": "matches plane zero curvature after G0/G1 passes",
+      "method": "Evaluate at actual common pcurve, align normals and corresponding tangent directions. Plane joins require both principal curvatures and sampled normal curvatures→0; inspect end/near-corner separately.",
+      "scope": "feature_required",
+      "unit": "mm^-1",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "shape_tier_distribution",
+      "quantity": "interior section and curvature distribution",
+      "expected": "low near chamfer; high flat near supports and concentrated bend in middle",
+      "method": "Use actual constant-x iso sections, arc-length-normalized curvature and midpoint depth; report quantitative differences independently of qualitative image score.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "regularity",
+      "quantity": "derivative speed, monotonicity, self-intersection",
+      "expected": "regular nonselfintersecting transition at all tiers",
+      "method": "Check actual sampled derivatives/intersections, especially high shape parameters; a valid shell flag alone is insufficient.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "numeric_parameter_equivalence",
+      "quantity": "Parasolid softness vs SMLib thumbweight",
+      "expected": "not assumed",
+      "method": "Only certify mapping from actual native Parasolid trials or authoritative numeric law; otherwise score G2/controlled shape only, mark source-numeric gap.",
+      "scope": "feature_required"
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmApiFilletEdges xsect_type2, continuity2, thumbweight",
+      "evidence": "Inspected local wrapper calls SmFilletExecutive::SetFilletParameters -> SmBlendCurveCrossSectionFSG; actual pilot outputs exist",
+      "expresses": "Native G2/shape-control candidate with real same-input and join tests",
+      "boundary": "Requested continuity2 does not prove actual G2. Three-edge corner patches only G1; check independently. thumbweight values are independent SMLib parameters."
+    },
+    {
+      "entry": "SmApiFilletEdges xsect_type1 R13",
+      "evidence": "Native ordinary circle control",
+      "expresses": "Same d13 contact and G1 circular profile",
+      "boundary": "Expected curvature jump1/13 to plane, therefore intentionally fails support G2; do not use C2 internal or native-valid flag to overturn this."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "Native Parasolid softness .1/1/10 mapping to SMLib thumbweight has not been certified; geometry-control sweep is runnable but source numeric equivalence remains open.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "PDF gives qualitative shape behavior, not exact numerical softness law or original dimensions.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "existing_smlib_evidence": "history:outputs/manual-review/smlib-pilot/case35/summary.json",
+  "inconsistent_if": [
+    "R13 circle or internal C2 is called G2 at plane join.",
+    "Shapes use different contact locations/support sizes.",
+    "Only isDone/isValid checked.",
+    "Same numeric thumbweight and softness are treated as equivalent without actual comparison."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/35.brep",
+  "input_brep_sha256": "c0125ac4b2d51a01f56a1db3f70cbbee230b8c7c15db5e763a3c4ebbe4552bee"
+}

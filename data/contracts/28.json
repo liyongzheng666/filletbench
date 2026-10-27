@@ -1,0 +1,174 @@
+{
+  "number": 28,
+  "case_id": "fig75-03_to_05-1351",
+  "title": "75-3 穿越式正交墙面及四种方向",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-03_to_05-1351.json",
+  "source_spec_sha256": "0cbe538431e7f3d86d098a3bf3356b9d9a2d31a8907932f5a377f304bc7a35f7",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-03_to_05-1351.png",
+  "current_evidence_scope": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-3"
+  ],
+  "source_pages": {
+    "physical": [
+      1351
+    ],
+    "printed": [
+      1349
+    ]
+  },
+  "target_change": [
+    "Generate all four orientation solutions from the same two intersecting sheet walls by changing left/right sense only."
+  ],
+  "must_preserve": [
+    "Vertical wall extends z[-14,14], floor extends y[-14,14], x[-12,12].",
+    "Original normal directions, sheet identity and full finite boundaries stay fixed for all four modes.",
+    "Do not trim to a positive quadrant before the operation, thicken to a block, or flip input normals silently."
+  ],
+  "semantic_target": {
+    "left": "vertical sheet y=0 crossing z=0",
+    "right": "horizontal sheet z=0 crossing y=0",
+    "normal_reference": "Actual native face normals must be measured and saved; Parasolid true means behind the wall relative to its normal."
+  },
+  "required_modes": [
+    {
+      "id": "sense-False-False",
+      "left_sense": false,
+      "right_sense": false
+    },
+    {
+      "id": "sense-True-False",
+      "left_sense": true,
+      "right_sense": false
+    },
+    {
+      "id": "sense-True-True",
+      "left_sense": true,
+      "right_sense": true
+    },
+    {
+      "id": "sense-False-True",
+      "left_sense": false,
+      "right_sense": true
+    }
+  ],
+  "diagnostic_parameters": {
+    "radius_mm": [
+      4
+    ],
+    "fixed_for_four_modes": true,
+    "sign_mapping": "Map actual face normals to signed offsets; do not equate SMLib sign to Parasolid boolean without measuring."
+  },
+  "feature_oracles": [
+    {
+      "id": "quadrant_identity",
+      "quantity": "signed side of blend samples relative to both walls",
+      "expected": "four expected sign pairs",
+      "method": "For actual blend interior points classify dot(p-wall_origin,normal) on each wall; derive expected signs from stored logical sense.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "four_solutions_differ",
+      "quantity": "four actual output cross sections",
+      "expected": "four distinct quadrant placements with same size",
+      "method": "Compare representative longitudinal sections at x=-10,0,10; require nonempty arc contact on both support planes.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "circular_contact",
+      "quantity": "radius and tangent contacts",
+      "expected": "same R for all four orientations",
+      "method": "Fit sampled sections independently to circle and test rail-plane incidence/G1.",
+      "scope": "feature_required"
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmFilletExecutive::SurfaceSurfaceFillet signed dFilletRadius1/2",
+      "evidence": "SMLib/src/SmFilletExecutive.cpp:1306-1505 explicitly creates two signed SmOffsetSurface objects and converts radius signs into solver orientation",
+      "expresses": "Candidate four signed-offset combinations from unchanged supports",
+      "boundary": "Need run all four and check actual geometric sides; no mapping by function name alone."
+    },
+    {
+      "entry": "SmApiSurfaceSurfaceFillet",
+      "evidence": "SM_API/inc/SmApiBrep.h and src/SmApiBrep.cpp",
+      "expresses": "Convenience native two-surface entry with two signed radius arguments",
+      "boundary": "May introduce finite domain/trim behavior; rejected or empty solution is recorded per sign combination."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "Current common-edge bridge only chooses one manifold edge in a prepared quadrant; not a four-sense face-face adapter.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "Original diagram has no calibrated R; fixed R4 is a proposed demonstration, not recovered CAD.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "inconsistent_if": [
+    "Only positive-quadrant derivative input is used.",
+    "A common-edge R1 is marked four-sense success.",
+    "Different inputs/normals/sizes are used to manufacture four shapes.",
+    "Return status is success but no actual blend surface exists."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/28.brep",
+  "input_brep_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6"
+}

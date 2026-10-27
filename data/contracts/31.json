@@ -1,0 +1,198 @@
+{
+  "number": 31,
+  "case_id": "fig75-05_planes-1355",
+  "title": "75-5 平面与曲面组成的多面片实体 / 75-6独立叶片",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "1c14f75d6a62b804a6f2084958967eaa5621307f76e898fe10fb9775111f5d37",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-05_planes-1355.json",
+  "source_spec_sha256": "6cd2598947b0b65cd14bb3f4fc1726c61bb6d688d998ea55b57fc3a0a98173a6",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-05_planes-1355.png",
+  "current_evidence_scope": "第31项本轮调整图75–5主体外形与比例：底座加厚、板柱同宽、中央转弯加宽并对齐原图位置；绿色截面仅辅助。新A输入三格式通过；R7/R6原生候选端部精度与STEP回读未通过。推定曲率与外观仍待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-5",
+    "75-6"
+  ],
+  "source_pages": {
+    "physical": [
+      1354,
+      1355,
+      1356,
+      1357
+    ],
+    "printed": [
+      1352,
+      1353,
+      1354,
+      1355
+    ]
+  },
+  "target_change": [
+    "A: preserve the multi-face curved-front column/base shape and compare rolling-ball sections with disc sections driven by an explicit parameter spine.",
+    "B: test iso-parameter sections on the separately supplied blade support with a parameter spine lying on the left wall."
+  ],
+  "must_preserve": [
+    "A front is two large planes plus one narrow truly curved tangent face; retain central turn and true face boundaries.",
+    "A body/slab is one connected solid; B blade sheet and its solid plate are separate examples, not one unquestioned Boolean compound.",
+    "Green section planes and dense schematic section arcs are auxiliary only; do not create many fragmented material faces to copy the drawing.",
+    "Root fillet radius is distinct from pre-existing vertical turn radius."
+  ],
+  "semantic_target": {
+    "A": "Three-edge concave root chain at actual slab top under the two front planes and central rounded face. Geometrically match line/arc/line after native input adaptation; no fixed Edge4/5/6 reuse.",
+    "B": "Blade support surface + intended top support of base plate, with separate left-wall parameterization and on-wall parameter spine."
+  },
+  "required_modes": [
+    {
+      "id": "A-rolling",
+      "section_plane": "orthogonal to the two walls",
+      "parameter_spine": "optional for this fixed-R baseline"
+    },
+    {
+      "id": "A-disc",
+      "section_plane": "orthogonal to explicit 3D parameter-spine tangent",
+      "parameter_spine": "required, frozen and saved"
+    },
+    {
+      "id": "B-isoparameter",
+      "section_plane": "derived from chosen iso curves of left wall",
+      "parameter_spine": "required, must lie on left wall"
+    }
+  ],
+  "diagnostic_parameters": {
+    "root_radii_mm": [
+      6,
+      7
+    ],
+    "A_existing_turn_radius_mm": 6.769223423161796,
+    "A_base_height_mm": 9.6978164895003,
+    "A_column_height_mm": 23.57216267635061,
+    "spine_status": "actual disc/iso parameter-spine curves not yet frozen; do not reconstruct them from display planes alone"
+  },
+  "feature_oracles": [
+    {
+      "id": "input_front_turn",
+      "quantity": "support face types, turn location/proportion and tangency",
+      "expected": "matches frozen current A input",
+      "method": "Analytic dimensions and boundary/curvature sampling of two planes/central cylindrical proxy; retain source-fit uncertainty.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "rolling_plane",
+      "quantity": "actual normal section plane",
+      "expected": "orthogonal to both supports",
+      "method": "Evaluate actual wall normals/contact positions to reconstruct each requested section plane; test its relation to measured output cross section.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "disc_plane",
+      "quantity": "section plane normal vs prescribed spine tangent",
+      "expected": "parallel within angle tolerance",
+      "method": "At matched spine stations evaluate plane normal and derivative; do not substitute tangent to resulting blend spine.",
+      "scope": "feature_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    },
+    {
+      "id": "iso_plane",
+      "quantity": "iso family and on-wall parameter spine",
+      "expected": "spine lies on left wall; selected iso family meets documented orientation rule",
+      "method": "Evaluate spine support-distance and UV iso geometry on the declared left wall; retain parameterization because geometric reparameterization can change this mode.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "terminal_G0",
+      "quantity": "end truncation pcurve/edge mismatch",
+      "expected": "<=1e-6 even if cap intentionally C0",
+      "method": "Check real side cap seams; previously valid body candidates can fail here and at STEP export.",
+      "scope": "feature_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmApiFilletEdges / SmFilletExecutive ordinary rolling-ball root chain",
+      "evidence": "SM_API/src/SmApiBrep.cpp actual factory selects SM_FS_CONST_RADIUS / CIRCULAR",
+      "expresses": "Expresses A ordinary native rolling-ball baseline on imported/adapted topology",
+      "boundary": "Must verify full chain, terminal seams and true radius; does not implement disc or iso semantics."
+    },
+    {
+      "entry": "SmCurveBasedFS / SmVariableRadiusFS / custom solver infrastructure",
+      "evidence": "SMLib/inc/SmFilletStandardSolver.h:263-393; SMLib/inc/SmFilletSolver.h PointOnPlaneSolve",
+      "expresses": "Low-level curve-based sampling/solver extension candidates",
+      "boundary": "A curve pointer or PointOnPlaneSolve method is not proof of a native user-supplied disc-spine/left-iso mode. An explicit port and test is required."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "Current bridge exposes ordinary edges only; disc/iso-plane mode and parameter-spine inputs not wired or equivalence-verified.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "Original exact spine, UV parameterization and hidden surface shape unavailable; freeze a controlled reproduction before scoring disc/iso.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "inconsistent_if": [
+    "Input is a simple box or fragmented fan instead of current curved-front multi-face body.",
+    "Only R1/R6/R7 ordinary root fillet is labelled disc or iso success.",
+    "Green helper planes/curves are presented as implemented controls.",
+    "Two end seams fail positional tolerance but result is marked fully passed."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/31.brep",
+  "input_brep_sha256": "1c14f75d6a62b804a6f2084958967eaa5621307f76e898fe10fb9775111f5d37"
+}

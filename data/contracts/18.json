@@ -1,0 +1,339 @@
+{
+  "number": 18,
+  "case_id": "73-35_to_37_caps-1307",
+  "title": "平面与多面片体封口的两套阶台输入",
+  "feature_family": "cap_to_independent_plane_or_sheet",
+  "source_feature": {
+    "meaning": "Use an independent given plane or five-face zero-thickness sheet to truncate a large blend, retaining the smaller-x side; both tool types must actually participate in limiting.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-35_to_37_caps-1307.png",
+    "source_sha256": "e46330c9ac80204e5e85577aa625ff0cc4b13ffdd9093728ace460034ae3be4c",
+    "reference_crop": [
+      0.15,
+      0.21,
+      0.865,
+      0.72
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-35_to_37_caps-1307.json",
+    "current_spec_sha256": "cef66add074ee05d87125ebfef3d6ce9215c7d0038cfc30cc6289bf3cce8f997",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1307.brep",
+    "brep_sha256": "6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d",
+    "step_path": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1307.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-35_to_37_caps-1307.json",
+    "bbox_world_mm": [
+      0.0,
+      -3.0,
+      -3.0,
+      168.0,
+      43.0,
+      47.0
+    ],
+    "solid_count": 2,
+    "part_labels": [
+      "plane_case_body",
+      "capping_plane",
+      "sheet_case_body",
+      "capping_sheet"
+    ],
+    "parts_geometry_immutable": [
+      "Same notched-body recipe as17 for both bodies; second whole case offset98; no thickening/fusing the auxiliary sheet into body."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root_per_body": {
+        "local_start": [
+          0,
+          29,
+          12
+        ],
+        "local_end": [
+          70,
+          29,
+          12
+        ]
+      },
+      "bodies": [
+        {
+          "label": "plane_case_body",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "label": "sheet_case_body",
+          "offset": [
+            98,
+            0,
+            0
+          ]
+        }
+      ],
+      "plane": {
+        "vertices": [
+          [
+            9,
+            17,
+            12
+          ],
+          [
+            16,
+            37,
+            12
+          ],
+          [
+            40,
+            37,
+            28
+          ],
+          [
+            33,
+            17,
+            28
+          ]
+        ],
+        "equation": "x=-14.95+0.35y+1.5z"
+      },
+      "sheet": {
+        "local_xy_polyline": [
+          [
+            24,
+            -3
+          ],
+          [
+            24,
+            8
+          ],
+          [
+            27,
+            15
+          ],
+          [
+            27,
+            24
+          ],
+          [
+            24,
+            31
+          ],
+          [
+            24,
+            43
+          ]
+        ],
+        "z_range": [
+          -3,
+          47
+        ],
+        "offset": [
+          98,
+          0,
+          0
+        ],
+        "face_count": 5,
+        "solid_count": 0
+      },
+      "retained_side": "x<tool_x(y,z)"
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "plane_case_body",
+        "documentary_original_OCC_edge_index_1based": 6,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 70.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            29.0,
+            12.0
+          ],
+          [
+            70.0,
+            29.0,
+            12.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          29.0,
+          12.0,
+          70.0,
+          29.0,
+          12.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            29.0,
+            12.0
+          ],
+          [
+            70.0,
+            29.0,
+            12.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "sheet_case_body",
+        "documentary_original_OCC_edge_index_1based": 6,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 70.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            98.0,
+            29.0,
+            12.0
+          ],
+          [
+            168.0,
+            29.0,
+            12.0
+          ]
+        ],
+        "aabb_world_mm": [
+          98.0,
+          29.0,
+          12.0,
+          168.0,
+          29.0,
+          12.0
+        ],
+        "sample_points_world_mm": [
+          [
+            98.0,
+            29.0,
+            12.0
+          ],
+          [
+            168.0,
+            29.0,
+            12.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-r2",
+        "radius_mm": 2,
+        "mode": "no cap"
+      },
+      {
+        "id": "ordinary-r8",
+        "radius_mm": 8,
+        "mode": "no cap"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "plane-r4",
+        "radius_mm": 4,
+        "mode": "independent plane cap"
+      },
+      {
+        "id": "plane-r8",
+        "radius_mm": 8,
+        "mode": "independent plane cap"
+      },
+      {
+        "id": "sheet-r4",
+        "radius_mm": 4,
+        "mode": "five-face sheet cap"
+      },
+      {
+        "id": "sheet-r8",
+        "radius_mm": 8,
+        "mode": "five-face sheet cap"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "large_radius_vs_web",
+      "condition": "R>3",
+      "R4": true,
+      "R8": true
+    },
+    {
+      "id": "sheet_fold_engagement",
+      "R8_must_cross_fold_y": 24,
+      "R4_need_not_cross_fold": true
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "finite_tool_contact",
+      "assertion": "Each final cap face/end curve lies inside the supplied finite plane/sheet, not merely an unrelated infinite parallel plane. Cap surface shares true curve with R band."
+    },
+    {
+      "id": "tool_sidedness",
+      "assertion": "R band exists on smaller-x side and original right root stays sharp; no material addition from band on excluded side. Do not count visible helper plane as an actual limit.",
+      "visual": "Large red/orange overrun on excluded side; tool line with native before/after probes, cap was/was not supplied explicitly."
+    },
+    {
+      "id": "sheet_fold",
+      "assertion": "R8 must use at least the two original tool faces meeting at y24; do not replace five-fold sheet by one averaged plane or change its coordinates."
+    },
+    {
+      "id": "unmodified_body",
+      "assertion": "Only permitted R fillet addition occurs on retained side; original material not removed, both body placements and open independent helpers preserved."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Large red/orange overrun on excluded side; tool line with native before/after probes, cap was/was not supplied explicitly."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/18.brep",
+  "input_brep_sha256": "6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d"
+}

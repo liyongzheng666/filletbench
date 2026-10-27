@@ -1,0 +1,1 @@
+{"name":"r12-main","radius_mm":12,"exit_code":0,"stdout":"INIT\nSTITCHED 1 gaps 0 0\nCALL SmApiFilletEdges R=12 selected=1\nRETURN 1000 milliseconds 2.39571\nREADBACK_BEGIN\nREADBACK_RETURN 1000\n","stderr":"","run_dir":"history:r12-main","source_sha256":"e516253b1182c0e2e8681a80120eb760448fb22c489f67b9af1bebe7c8a5bb08"}

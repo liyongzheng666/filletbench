@@ -1,0 +1,33 @@
+{
+  "number": 14,
+  "id": "73-32_edge_limit-1302",
+  "title": "双限制平面的圆角前直角支架",
+  "question": "按指定点与方向投影到圆角脊线形成限位，只在要求区间生成；双限制与普通整边圆角分开。",
+  "family": "b",
+  "source_sha256": "fbb1db106e7fa0074b9322943bc4c5b5b7c4a1a48d69106422f6246cb08be951",
+  "reference": {
+    "page": 1302,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.15,
+      0.22,
+      0.835,
+      0.76
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/14.brep",
+  "fixture": "data/fixtures/14.json",
+  "contract": "data/contracts/14.json",
+  "variants": []
+}

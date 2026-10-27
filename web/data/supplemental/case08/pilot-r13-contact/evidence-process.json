@@ -1,0 +1,1 @@
+{"name":"r13-contact","radius_mm":13,"run_dir":"history:r13-contact","exit_code":0,"stdout":"INIT\nSTITCHED 1 gaps 0 0\nCALL SmApiFilletEdges R=13 selected=1\nRETURN 1001 milliseconds 0.488167\nREADBACK_BEGIN\nREADBACK_RETURN 1000\n","stderr":""}

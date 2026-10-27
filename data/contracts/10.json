@@ -1,0 +1,920 @@
+{
+  "schema_version": 1,
+  "case_number": 10,
+  "case_id": "73-28_ordering-1293",
+  "title": "圆角顺序：底座上的矩形立柱",
+  "contract_status": "feature_contract_defined_with_explicit_admission_gates",
+  "source_fixture_tier": "exploratory_reconstruction",
+  "source_pdf_dimensions_known": false,
+  "units": "mm in frozen reconstructed fixture",
+  "input_brep": "data/models/10.brep",
+  "input_brep_sha256": "98ddb76f576d876a5ef6070c58273037adcf558918433a598b14d76630f2bd64",
+  "current_test_spec": "history:outputs/manual-review/case-specs/73-28_ordering-1293.json",
+  "current_test_spec_sha256": "3e2257d795d71c108611b634fe45376d4df2800dc260c430fef48aa07755e85f",
+  "source_recipe": "history:outputs/parasolid-preblend/code/groups/group_a.py",
+  "refinement_recipe": null,
+  "parts": [
+    {
+      "part_label": "three_edge_vertex_input",
+      "source_part_bbox": [
+        -50.0,
+        -37.5,
+        0.0,
+        50.0,
+        37.5,
+        70.0
+      ],
+      "world_target_fingerprints": [
+        {
+          "occ_reference_edge_index_hint": 11,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              19.0,
+              -17.0,
+              28.0
+            ],
+            [
+              -19.0,
+              -17.0,
+              28.0
+            ]
+          ],
+          "length_mm": 38.0,
+          "sampled_curve_points_mm": [
+            [
+              19.0,
+              -17.0,
+              28.0
+            ],
+            [
+              17.774193548387096,
+              -17.0,
+              28.0
+            ],
+            [
+              16.548387096774192,
+              -17.0,
+              28.0
+            ],
+            [
+              15.32258064516129,
+              -17.0,
+              28.0
+            ],
+            [
+              14.096774193548388,
+              -17.0,
+              28.0
+            ],
+            [
+              12.870967741935484,
+              -17.0,
+              28.0
+            ],
+            [
+              11.64516129032258,
+              -17.0,
+              28.0
+            ],
+            [
+              10.419354838709678,
+              -17.0,
+              28.0
+            ],
+            [
+              9.193548387096774,
+              -17.0,
+              28.0
+            ],
+            [
+              7.96774193548387,
+              -17.0,
+              28.0
+            ],
+            [
+              6.741935483870966,
+              -17.0,
+              28.0
+            ],
+            [
+              5.516129032258062,
+              -17.0,
+              28.0
+            ],
+            [
+              4.290322580645158,
+              -17.0,
+              28.0
+            ],
+            [
+              3.0645161290322545,
+              -17.0,
+              28.0
+            ],
+            [
+              1.8387096774193523,
+              -17.0,
+              28.0
+            ],
+            [
+              0.6129032258064484,
+              -17.0,
+              28.0
+            ],
+            [
+              -0.6129032258064555,
+              -17.0,
+              28.0
+            ],
+            [
+              -1.8387096774193594,
+              -17.0,
+              28.0
+            ],
+            [
+              -3.0645161290322633,
+              -17.0,
+              28.0
+            ],
+            [
+              -4.290322580645167,
+              -17.0,
+              28.0
+            ],
+            [
+              -5.516129032258071,
+              -17.0,
+              28.0
+            ],
+            [
+              -6.741935483870975,
+              -17.0,
+              28.0
+            ],
+            [
+              -7.967741935483879,
+              -17.0,
+              28.0
+            ],
+            [
+              -9.193548387096783,
+              -17.0,
+              28.0
+            ],
+            [
+              -10.419354838709687,
+              -17.0,
+              28.0
+            ],
+            [
+              -11.64516129032259,
+              -17.0,
+              28.0
+            ],
+            [
+              -12.870967741935495,
+              -17.0,
+              28.0
+            ],
+            [
+              -14.096774193548399,
+              -17.0,
+              28.0
+            ],
+            [
+              -15.322580645161302,
+              -17.0,
+              28.0
+            ],
+            [
+              -16.548387096774206,
+              -17.0,
+              28.0
+            ],
+            [
+              -17.77419354838711,
+              -17.0,
+              28.0
+            ],
+            [
+              -19.0,
+              -17.0,
+              28.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -50.0,
+                -37.5,
+                28.0,
+                50.0,
+                37.5,
+                28.0
+              ]
+            },
+            {
+              "index": 8,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "bbox": [
+                -19.0,
+                -17.0,
+                28.0,
+                19.0,
+                -17.0,
+                70.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "occ_reference_edge_index_hint": 12,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              19.0,
+              17.0,
+              28.0
+            ],
+            [
+              19.0,
+              -17.0,
+              28.0
+            ]
+          ],
+          "length_mm": 34.0,
+          "sampled_curve_points_mm": [
+            [
+              19.0,
+              17.0,
+              28.0
+            ],
+            [
+              19.0,
+              15.903225806451612,
+              28.0
+            ],
+            [
+              19.0,
+              14.806451612903226,
+              28.0
+            ],
+            [
+              19.0,
+              13.70967741935484,
+              28.0
+            ],
+            [
+              19.0,
+              12.612903225806452,
+              28.0
+            ],
+            [
+              19.0,
+              11.516129032258064,
+              28.0
+            ],
+            [
+              19.0,
+              10.419354838709678,
+              28.0
+            ],
+            [
+              19.0,
+              9.322580645161292,
+              28.0
+            ],
+            [
+              19.0,
+              8.225806451612904,
+              28.0
+            ],
+            [
+              19.0,
+              7.129032258064516,
+              28.0
+            ],
+            [
+              19.0,
+              6.032258064516128,
+              28.0
+            ],
+            [
+              19.0,
+              4.93548387096774,
+              28.0
+            ],
+            [
+              19.0,
+              3.8387096774193523,
+              28.0
+            ],
+            [
+              19.0,
+              2.7419354838709644,
+              28.0
+            ],
+            [
+              19.0,
+              1.6451612903225765,
+              28.0
+            ],
+            [
+              19.0,
+              0.5483870967741886,
+              28.0
+            ],
+            [
+              19.0,
+              -0.5483870967741993,
+              28.0
+            ],
+            [
+              19.0,
+              -1.6451612903225872,
+              28.0
+            ],
+            [
+              19.0,
+              -2.741935483870975,
+              28.0
+            ],
+            [
+              19.0,
+              -3.838709677419363,
+              28.0
+            ],
+            [
+              19.0,
+              -4.935483870967751,
+              28.0
+            ],
+            [
+              19.0,
+              -6.032258064516139,
+              28.0
+            ],
+            [
+              19.0,
+              -7.129032258064527,
+              28.0
+            ],
+            [
+              19.0,
+              -8.225806451612915,
+              28.0
+            ],
+            [
+              19.0,
+              -9.322580645161302,
+              28.0
+            ],
+            [
+              19.0,
+              -10.41935483870969,
+              28.0
+            ],
+            [
+              19.0,
+              -11.516129032258078,
+              28.0
+            ],
+            [
+              19.0,
+              -12.612903225806466,
+              28.0
+            ],
+            [
+              19.0,
+              -13.709677419354854,
+              28.0
+            ],
+            [
+              19.0,
+              -14.806451612903242,
+              28.0
+            ],
+            [
+              19.0,
+              -15.90322580645163,
+              28.0
+            ],
+            [
+              19.0,
+              -17.0,
+              28.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -50.0,
+                -37.5,
+                28.0,
+                50.0,
+                37.5,
+                28.0
+              ]
+            },
+            {
+              "index": 9,
+              "type": "Plane",
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "bbox": [
+                19.0,
+                -17.0,
+                28.0,
+                19.0,
+                17.0,
+                70.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "occ_reference_edge_index_hint": 20,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              19.0,
+              -17.0,
+              28.0
+            ],
+            [
+              19.0,
+              -17.0,
+              70.0
+            ]
+          ],
+          "length_mm": 42.0,
+          "sampled_curve_points_mm": [
+            [
+              19.0,
+              -17.0,
+              28.0
+            ],
+            [
+              19.0,
+              -17.0,
+              29.35483870967742
+            ],
+            [
+              19.0,
+              -17.0,
+              30.70967741935484
+            ],
+            [
+              19.0,
+              -17.0,
+              32.064516129032256
+            ],
+            [
+              19.0,
+              -17.0,
+              33.41935483870968
+            ],
+            [
+              19.0,
+              -17.0,
+              34.774193548387096
+            ],
+            [
+              19.0,
+              -17.0,
+              36.12903225806451
+            ],
+            [
+              19.0,
+              -17.0,
+              37.483870967741936
+            ],
+            [
+              19.0,
+              -17.0,
+              38.83870967741936
+            ],
+            [
+              19.0,
+              -17.0,
+              40.193548387096776
+            ],
+            [
+              19.0,
+              -17.0,
+              41.54838709677419
+            ],
+            [
+              19.0,
+              -17.0,
+              42.903225806451616
+            ],
+            [
+              19.0,
+              -17.0,
+              44.25806451612904
+            ],
+            [
+              19.0,
+              -17.0,
+              45.612903225806456
+            ],
+            [
+              19.0,
+              -17.0,
+              46.96774193548387
+            ],
+            [
+              19.0,
+              -17.0,
+              48.322580645161295
+            ],
+            [
+              19.0,
+              -17.0,
+              49.67741935483872
+            ],
+            [
+              19.0,
+              -17.0,
+              51.032258064516135
+            ],
+            [
+              19.0,
+              -17.0,
+              52.38709677419355
+            ],
+            [
+              19.0,
+              -17.0,
+              53.741935483870975
+            ],
+            [
+              19.0,
+              -17.0,
+              55.0967741935484
+            ],
+            [
+              19.0,
+              -17.0,
+              56.451612903225815
+            ],
+            [
+              19.0,
+              -17.0,
+              57.80645161290323
+            ],
+            [
+              19.0,
+              -17.0,
+              59.161290322580655
+            ],
+            [
+              19.0,
+              -17.0,
+              60.51612903225807
+            ],
+            [
+              19.0,
+              -17.0,
+              61.87096774193549
+            ],
+            [
+              19.0,
+              -17.0,
+              63.225806451612904
+            ],
+            [
+              19.0,
+              -17.0,
+              64.58064516129032
+            ],
+            [
+              19.0,
+              -17.0,
+              65.93548387096774
+            ],
+            [
+              19.0,
+              -17.0,
+              67.29032258064515
+            ],
+            [
+              19.0,
+              -17.0,
+              68.64516129032256
+            ],
+            [
+              19.0,
+              -17.0,
+              70.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 8,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "bbox": [
+                -19.0,
+                -17.0,
+                28.0,
+                19.0,
+                -17.0,
+                70.0
+              ]
+            },
+            {
+              "index": 9,
+              "type": "Plane",
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "bbox": [
+                19.0,
+                -17.0,
+                28.0,
+                19.0,
+                17.0,
+                70.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "ordinary_probe_radii_mm": [
+        6,
+        3,
+        1
+      ],
+      "probe_radius_policy": "run each requested radius independently, do not stop at first small-radius success",
+      "selection_note": "图73-28前右柱脚顶点(19,-17,28)：两条柱脚凹边11/12与竖直凸边20。一次同半径共同圆角。",
+      "input_source_SHA_matches_record": true
+    }
+  ],
+  "family": "mixed_vertex_ordering",
+  "target_semantics": "同一三边异凸性顶点，原生凹先凸后/凸先凹后产生可测的不同角部几何；同时同批fillet不是顺序控制。",
+  "trigger": {
+    "vertex_world": [
+      19,
+      -17,
+      28
+    ],
+    "concave_branches_world": [
+      [
+        [
+          19,
+          -17,
+          28
+        ],
+        [
+          -19,
+          -17,
+          28
+        ]
+      ],
+      [
+        [
+          19,
+          -17,
+          28
+        ],
+        [
+          19,
+          17,
+          28
+        ]
+      ]
+    ],
+    "convex_branch_world": [
+      [
+        19,
+        -17,
+        28
+      ],
+      [
+        19,
+        -17,
+        70
+      ]
+    ],
+    "all_three_selected": true,
+    "radius_mm": 6
+  },
+  "named_constraints": [],
+  "trials": [
+    {
+      "id": "ordinary-all-r6",
+      "radius_mm": 6,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "ordering": "unspecified"
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "concave-convex-r6",
+      "radius_mm": 6,
+      "role": "target",
+      "requested_feature_parameters": {
+        "ordering": "concave_then_convex",
+        "native_order_control": true
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "convex-concave-r6",
+      "radius_mm": 6,
+      "role": "target",
+      "requested_feature_parameters": {
+        "ordering": "convex_then_concave",
+        "native_order_control": true
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "sequential-concave-convex-r6",
+      "radius_mm": 6,
+      "role": "explicit_composition",
+      "requested_feature_parameters": {
+        "sequence": [
+          "concave pair",
+          "mapped convex descendant"
+        ]
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "sequential-convex-concave-r6",
+      "radius_mm": 6,
+      "role": "explicit_composition",
+      "requested_feature_parameters": {
+        "sequence": [
+          "convex edge",
+          "mapped concave descendants"
+        ]
+      },
+      "status": "planned_not_run_by_contract_generation"
+    }
+  ],
+  "protected": [
+    {
+      "role": "unchanged_outside_vertex_zone",
+      "roi_center": [
+        19,
+        -17,
+        28
+      ],
+      "roi_radius_mm": 18,
+      "maximum_surface_distance_mm": 1e-06
+    }
+  ],
+  "oracles": [
+    {
+      "id": "order-admission",
+      "operator": "three_incident_selected_edges_include_both_convexities",
+      "expected": true,
+      "parameters": {
+        "vertex": [
+          19,
+          -17,
+          28
+        ]
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "order-native",
+      "operator": "actual_native_order_request_recorded_in_call",
+      "expected": true,
+      "parameters": {
+        "not_only_reordering_edge_list": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "order-distinct",
+      "operator": "local_bidirectional_boundary_distance_between_two_mode_results",
+      "expected": {
+        "min_mm": 1e-05
+      },
+      "parameters": {
+        "ROI_center": [
+          19,
+          -17,
+          28
+        ],
+        "ROI_radius_mm": 18
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "both-modes-valid",
+      "operator": "native_valid_closed_solid_with_G1_generated_joins",
+      "expected": true,
+      "parameters": {
+        "max_angle_deg": 0.1
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "unselected-unchanged",
+      "operator": "outside_roi_bidirectional_distance",
+      "expected": {
+        "max_mm": 1e-06
+      },
+      "parameters": {
+        "ROI_radius_mm": 18
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    }
+  ],
+  "insufficiency": "现一次同半径共同fillet没有凹先/凸先两个分支；两次独立调用顺序属于组合轨道，不能冒充单次原生vx_order开关。",
+  "gaps": [
+    "第二步必须通过几何语义匹配第一步输出的后继边，禁止复用已失效原edge index/handle。",
+    "同样设置得到同形可记mode_effect_not_observed，不能在没有触发差异时认证顺序能力。"
+  ],
+  "native_capability_requirements": {
+    "existing_generic_entry": "SmApiFilletEdges",
+    "special_mode_mapping": "requires_version_specific_native_or_low_level_API_mapping",
+    "missing_adapter_is_not_kernel_unsupported": true,
+    "ordinary_success_is_not_special_target_pass": true
+  },
+  "universal_result_requirements": {
+    "input_native_valid_before_operation": true,
+    "actual_operation_changed_target_geometry": true,
+    "input_solid_or_sheet_type_preserved": true,
+    "native_valid_after_operation": true,
+    "no_unintended_self_intersection": true,
+    "independent_measurements_required": true,
+    "native_persistence_roundtrip_separate_from_exchange": true,
+    "STEP_missing_is_exchange_not_operation_failure": true,
+    "appearance_acceptance": "pending_unless_human_confirmed"
+  },
+  "functional_pass_rule": "All case-specific admission gates AND all applicable geometry/feature oracles must pass. If required source mapping or mode meaning is not frozen, classify case_spec_incomplete; ordinary probes may still report their independent outcomes.",
+  "source_semantics_evidence": [
+    "history:parasolid-73.3-scenarios.md",
+    "history:outputs/manual-review/case-specs/73-28_ordering-1293.json",
+    "history:outputs/parasolid-preblend/manifest.json"
+  ],
+  "new_native_run_performed_by_this_contract_task": false
+}

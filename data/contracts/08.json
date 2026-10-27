@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "case_number": 8,
+  "case_id": "73-25_preserve_notch-1290",
+  "title": "缺口保形：带矩形缺口的零厚度折板",
+  "contract_status": "feature_contract_defined_with_explicit_admission_gates",
+  "source_fixture_tier": "exploratory_reconstruction",
+  "source_pdf_dimensions_known": false,
+  "units": "mm in frozen reconstructed fixture",
+  "input_brep": "data/models/08.brep",
+  "input_brep_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+  "current_test_spec": "history:outputs/manual-review/case-specs/73-25_preserve_notch-1290.json",
+  "current_test_spec_sha256": "bc7b64d8513da79cedab8343462de68c716995d2269f403cfa89ba0260dc6366",
+  "source_recipe": "history:outputs/parasolid-preblend/code/groups/group_a.py",
+  "refinement_recipe": null,
+  "parts": [
+    {
+      "part_label": "notched_folded_sheets",
+      "source_part_bbox": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        34.0,
+        40.0
+      ],
+      "world_target_fingerprints": [
+        {
+          "occ_reference_edge_index_hint": 1,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              0,
+              0,
+              40
+            ],
+            [
+              100,
+              0,
+              40
+            ]
+          ],
+          "length_mm": 100,
+          "sampled_curve_points_mm": [
+            [
+              100,
+              0,
+              40
+            ],
+            [
+              96.875,
+              0,
+              40
+            ],
+            [
+              93.75,
+              0,
+              40
+            ],
+            [
+              90.625,
+              0,
+              40
+            ],
+            [
+              87.5,
+              0,
+              40
+            ],
+            [
+              84.375,
+              0,
+              40
+            ],
+            [
+              81.25,
+              0,
+              40
+            ],
+            [
+              78.125,
+              0,
+              40
+            ],
+            [
+              75,
+              0,
+              40
+            ],
+            [
+              71.875,
+              0,
+              40
+            ],
+            [
+              68.75,
+              0,
+              40
+            ],
+            [
+              65.625,
+              0,
+              40
+            ],
+            [
+              62.5,
+              0,
+              40
+            ],
+            [
+              59.375,
+              0,
+              40
+            ],
+            [
+              56.25,
+              0,
+              40
+            ],
+            [
+              53.125,
+              0,
+              40
+            ],
+            [
+              50,
+              0,
+              40
+            ],
+            [
+              46.875,
+              0,
+              40
+            ],
+            [
+              43.75,
+              0,
+              40
+            ],
+            [
+              40.625,
+              0,
+              40
+            ],
+            [
+              37.5,
+              0,
+              40
+            ],
+            [
+              34.375,
+              0,
+              40
+            ],
+            [
+              31.25,
+              0,
+              40
+            ],
+            [
+              28.125,
+              0,
+              40
+            ],
+            [
+              25,
+              0,
+              40
+            ],
+            [
+              21.875,
+              0,
+              40
+            ],
+            [
+              18.75,
+              0,
+              40
+            ],
+            [
+              15.625,
+              0,
+              40
+            ],
+            [
+              12.5,
+              0,
+              40
+            ],
+            [
+              9.375,
+              0,
+              40
+            ],
+            [
+              6.25,
+              0,
+              40
+            ],
+            [
+              3.125,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": null,
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "curve_sample_evidence": "history:outputs/manual-review/smlib-pilot/case08/runs/20261026T215949.382220/r12-main/input.json",
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "ordinary_probe_radii_mm": [
+        12,
+        13,
+        14,
+        18
+      ],
+      "probe_radius_policy": "run each requested radius independently, do not stop at first small-radius success",
+      "selection_note": "unique shared sheet edge y0/z40, length100",
+      "input_source_SHA_matches_record": true
+    }
+  ],
+  "family": "preserve_notch_sheet",
+  "target_semantics": "仅片体：圆角实际穿过原缺口后，比较正常投影保形与默认裁边；必须实际触及缺口，不得用R12未遇缺口的成功替代。",
+  "trigger": {
+    "input_sheet": true,
+    "source_solids": 0,
+    "shared_edge": [
+      [
+        0,
+        0,
+        40
+      ],
+      [
+        100,
+        0,
+        40
+      ]
+    ],
+    "notch_x_mm": [
+      35,
+      65
+    ],
+    "notch_top_z_mm": 27,
+    "critical_touch_R_mm": 13,
+    "challenge_R_mm": [
+      14,
+      18
+    ]
+  },
+  "named_constraints": [
+    {
+      "role": "original_notch_edges",
+      "points": [
+        [
+          35,
+          0,
+          0
+        ],
+        [
+          35,
+          0,
+          27
+        ],
+        [
+          65,
+          0,
+          27
+        ],
+        [
+          65,
+          0,
+          0
+        ]
+      ],
+      "edge_count": 3,
+      "length_mm": 84
+    }
+  ],
+  "trials": [
+    {
+      "id": "ordinary-r12",
+      "radius_mm": 12,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "preserve_notch_option_supplied": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "touch-r13",
+      "radius_mm": 13,
+      "role": "boundary_control",
+      "requested_feature_parameters": {
+        "preserve_notch_option_supplied": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "cross-r14-default",
+      "radius_mm": 14,
+      "role": "target",
+      "requested_feature_parameters": {
+        "preserve_notch_option_supplied": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "cross-r18-default",
+      "radius_mm": 18,
+      "role": "target",
+      "requested_feature_parameters": {
+        "preserve_notch_option_supplied": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "preserve-notch-true-r14",
+      "radius_mm": 14,
+      "role": "target",
+      "requested_feature_parameters": {
+        "preserve_notch": true
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "preserve-notch-false-r14",
+      "radius_mm": 14,
+      "role": "target",
+      "requested_feature_parameters": {
+        "preserve_notch": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    }
+  ],
+  "protected": [
+    {
+      "role": "zero-thickness",
+      "solid_count": 0,
+      "thickening_forbidden": true
+    }
+  ],
+  "oracles": [
+    {
+      "id": "crossing-admission",
+      "operator": "actual_wall_contact_below_original_notch_top",
+      "expected": true,
+      "parameters": {
+        "max_z_mm": 26.999999,
+        "not_theoretical_40_minus_R_only": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "default-boundary",
+      "operator": "measure_actual_opening_free_edge_and_notch_projection_change",
+      "expected": true,
+      "parameters": {
+        "native_edge_samples": true,
+        "zero_solid_volume_interpretation": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "preserve-true-projection",
+      "operator": "notch_boundary_is_normal_projection_of_original_notch_onto_actual_blend",
+      "expected": true,
+      "parameters": {
+        "original_wall_normal": [
+          0,
+          -1,
+          0
+        ],
+        "bidirectional_boundary_distance_mm": 1e-06
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "no-hidden-fill",
+      "operator": "preserved_notch_stays_open_in_sheet_projection_and_boundary_topology",
+      "expected": true,
+      "parameters": {
+        "distinct_true_false_outcomes_required_if_triggered": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "sheet-validity",
+      "operator": "native_valid_zero_solid_sheet_and_readback",
+      "expected": true,
+      "parameters": {},
+      "implementation_status": "contract_defined_runner_binding_required"
+    }
+  ],
+  "insufficiency": "R12接头z28距原z27仍1mm。当前已真实补跑：R13失败；R14/R18接头/自由边为z26/z22，原轮廓上部1/5mm不保持；这仅证明默认普通行为，未传preserve_notch开关。",
+  "gaps": [
+    "要验证true分支需原生投影保缺口参数/算法入口；外部裁剪显式组合只能单列。"
+  ],
+  "actual_native_evidence": {
+    "summary": "history:outputs/manual-review/smlib-pilot/case08/notch-crossing/summary.json",
+    "default_R14_crossing_passed": true,
+    "R14_repeated_consistently": true,
+    "R18_default_opening_z_mm": 22,
+    "source_special_modes_verified": false
+  },
+  "native_capability_requirements": {
+    "existing_generic_entry": "SmApiFilletEdges",
+    "special_mode_mapping": "requires_version_specific_native_or_low_level_API_mapping",
+    "missing_adapter_is_not_kernel_unsupported": true,
+    "ordinary_success_is_not_special_target_pass": true
+  },
+  "universal_result_requirements": {
+    "input_native_valid_before_operation": true,
+    "actual_operation_changed_target_geometry": true,
+    "input_solid_or_sheet_type_preserved": true,
+    "native_valid_after_operation": true,
+    "no_unintended_self_intersection": true,
+    "independent_measurements_required": true,
+    "native_persistence_roundtrip_separate_from_exchange": true,
+    "STEP_missing_is_exchange_not_operation_failure": true,
+    "appearance_acceptance": "pending_unless_human_confirmed"
+  },
+  "functional_pass_rule": "All case-specific admission gates AND all applicable geometry/feature oracles must pass. If required source mapping or mode meaning is not frozen, classify case_spec_incomplete; ordinary probes may still report their independent outcomes.",
+  "source_semantics_evidence": [
+    "history:parasolid-73.3-scenarios.md",
+    "history:outputs/manual-review/case-specs/73-25_preserve_notch-1290.json",
+    "history:outputs/parasolid-preblend/manifest.json"
+  ],
+  "new_native_run_performed_by_this_contract_task": false
+}

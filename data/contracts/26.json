@@ -1,0 +1,248 @@
+{
+  "number": 26,
+  "case_id": "73-44_45_unders-1319",
+  "title": "非唯一底层面关联的双分区方块输入",
+  "feature_family": "underlying_tracking_nonunique_support_set",
+  "source_feature": {
+    "meaning": "The same original underlying support set may correspond to more than one distinct generated blend face; such sets are not unique persistent identifiers. Preserve two top regions and verify many-to-one tracking without inventing unders encoding.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-44_45_unders-1319.png",
+    "source_sha256": "e533a1780eecb11038064409938f96b7d406100f24c1265dfc88d3609bdb88ed",
+    "reference_crop": [
+      0.13,
+      0.205,
+      0.87,
+      0.475
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-44_45_unders-1319.json",
+    "current_spec_sha256": "066fd7fc685ad5b4f081ea2bf8adfc893d2acca7334927c6ffa745fc167390c3",
+    "source_parameter_status": "not_frozen"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-44_45_unders-1319.brep",
+    "brep_sha256": "ef29a204a693c53d7892e04dc3ceb5806b54a17fce3022091a6b7b667f935838",
+    "step_path": "history:outputs/parasolid-preblend/models/73-44_45_unders-1319.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-44_45_unders-1319.json",
+    "bbox_world_mm": [
+      -1.5335385385619037e-15,
+      0.0,
+      0.0,
+      32.0,
+      32.0,
+      32.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "TwoTopRegions"
+    ],
+    "parts_geometry_immutable": [
+      "TwoTopRegions cube32, concave wraparound top region1 and inset triangle2; no merging finite partitions or converting to the three-region case25."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": false
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "front_top_root": {
+        "start": [
+          0,
+          0,
+          32
+        ],
+        "end": [
+          32,
+          0,
+          32
+        ]
+      },
+      "partition_q": [
+        16,
+        6.7,
+        32
+      ],
+      "finite_top_regions": {
+        "1": [
+          [
+            0,
+            0,
+            32
+          ],
+          [
+            32,
+            0,
+            32
+          ],
+          [
+            32,
+            32,
+            32
+          ],
+          [
+            16,
+            6.7,
+            32
+          ],
+          [
+            0,
+            32,
+            32
+          ]
+        ],
+        "2": [
+          [
+            0,
+            32,
+            32
+          ],
+          [
+            16,
+            6.7,
+            32
+          ],
+          [
+            32,
+            32,
+            32
+          ]
+        ]
+      },
+      "front_source_label": 3,
+      "expected_nonunique_pair": [
+        1,
+        3
+      ],
+      "target_semantics": "two separated outer bands can share pair[1,3]"
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "TwoTopRegions",
+        "documentary_original_OCC_edge_index_1based": 3,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 32.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            32.0,
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            0.0,
+            32.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          0.0,
+          32.0,
+          32.0,
+          0.0,
+          32.0
+        ],
+        "sample_points_world_mm": [
+          [
+            32.0,
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            0.0,
+            32.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "small-r4",
+        "radius_mm": 4,
+        "mode": "does not hit inset top2"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "large-r10",
+        "radius_mm": 10,
+        "mode": "engage both source top regions"
+      },
+      {
+        "id": "large-r12",
+        "radius_mm": 12,
+        "mode": "tracking stability control"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "inset_region_engagement",
+      "strict_radius_R_gt_mm": 6.7,
+      "small_R4_is_insufficient": true
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "nonunique_mapping",
+      "assertion": "Retain distinct generated face identities even when associated finite source set equals[1,3]; do not collapse face IDs by support-set key. A central distinct region2 contribution must be evidenced at R>6.7."
+    },
+    {
+      "id": "geometry_vs_history",
+      "assertion": "Verify real geometric contacts and native provenance separately. Same smooth surface support does not imply same finite source region or same generated topology."
+    },
+    {
+      "id": "tracking_encoding",
+      "assertion": "Freeze exact expected source-label-to-result records and deletion policy before grading native unders-equivalence; return source_contract_not_frozen until this mapping is audited.",
+      "status": "source_contract_not_frozen",
+      "visual": "Display each real output band with a separate native ID and its finite source set; explicitly show duplicate source set assigned to distinct IDs."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Display each real output band with a separate native ID and its finite source set; explicitly show duplicate source set assigned to distinct IDs."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [
+    "Exact PDF result face labels and native returned association array for Fig73-45 have not yet been independently recovered. Current pair[1,3] is the local reconstructed semantic convention, not known Parasolid entity tags.",
+    "Existing R4 success is ordinary baseline only; R10 historical STEP failure cannot be hidden by R4 fallback."
+  ],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/26.brep",
+  "input_brep_sha256": "ef29a204a693c53d7892e04dc3ceb5806b54a17fce3022091a6b7b667f935838"
+}

@@ -1,0 +1,33 @@
+{
+  "number": 3,
+  "id": "73-19_yshaped-1283",
+  "title": "Y 形圆角：保留既有凹曲过渡",
+  "question": "在已有R40凹曲支撑的Y顶点，两条相邻异凸性边的圆角连成Y过渡；保留既有圆柱，不能把普通corner patch叫成Y模式。",
+  "family": "a",
+  "source_sha256": "e3dec607825184ad85039dda67fbad89c98f77d787804b3b062b847a0c54327e",
+  "reference": {
+    "page": 1283,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.18,
+      0.39,
+      0.82,
+      0.575
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/03.brep",
+  "fixture": "data/fixtures/03.json",
+  "contract": "data/contracts/03.json",
+  "variants": []
+}

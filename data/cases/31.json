@@ -1,0 +1,33 @@
+{
+  "number": 31,
+  "id": "fig75-05_planes-1355",
+  "title": "75-5 平面与曲面组成的多面片实体 / 75-6独立叶片",
+  "question": "多面片主体、中央弯折与独立曲面片分别核对；disc/iso需要冻结parameter spine，绿色截面仅作辅助。",
+  "family": "c",
+  "source_sha256": "1c14f75d6a62b804a6f2084958967eaa5621307f76e898fe10fb9775111f5d37",
+  "reference": {
+    "page": 1355,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.2179103726082578,
+      0.2698433048433049,
+      0.8243856998992951,
+      0.7287321937321938
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/31.brep",
+  "fixture": "data/fixtures/31.json",
+  "contract": "data/contracts/31.json",
+  "variants": []
+}

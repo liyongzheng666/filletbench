@@ -1,0 +1,484 @@
+{
+  "number": 15,
+  "case_id": "73-33_overlap_limit-1304",
+  "title": "底板上相邻双圆柱凸台",
+  "feature_family": "automatic_overlap_limit",
+  "source_feature": {
+    "meaning": "When two same-time root blends would intersect, use overlap-limit hints to stop short at suitable constant parameters. This is automatic overlap stopping, distinct from case23 notch/smooth fusion.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-33_overlap_limit-1304.png",
+    "source_sha256": "d682ff23b956eec6f7d53eabf04c0a248a43fd398b677547a80fea5306d80d3a",
+    "reference_crop": [
+      0.325,
+      0.205,
+      0.77,
+      0.68
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-33_overlap_limit-1304.json",
+    "current_spec_sha256": "a5c291ccf89af3867ee7c818015ce410f6482fd25014588b6e03386f6cb7e6a4",
+    "source_parameter_status": "not_frozen"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-33_overlap_limit-1304.brep",
+    "brep_sha256": "c49f4ffce5bd35841a556ee1697c604e832aa4614e0083598dc6a2f4591a8087",
+    "step_path": "history:outputs/parasolid-preblend/models/73-33_overlap_limit-1304.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-33_overlap_limit-1304.json",
+    "bbox_world_mm": [
+      0.0,
+      0.0,
+      0.0,
+      70.0,
+      54.0,
+      19.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "twin_boss_plate"
+    ],
+    "parts_geometry_immutable": [
+      "Plate70x54x6; boss centers24mm apart, radius9, height13; keep gap6 and same two circles."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root_circles": [
+        {
+          "center": [
+            23,
+            29,
+            6
+          ],
+          "radius": 9
+        },
+        {
+          "center": [
+            47,
+            29,
+            6
+          ],
+          "radius": 9
+        }
+      ],
+      "selected_edge_count": 2,
+      "base_top_z": 6,
+      "finite_supports": [
+        "base",
+        "two cylinder sidewalls"
+      ]
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "twin_boss_plate",
+        "documentary_original_OCC_edge_index_1based": 10,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 56.387315039062265,
+        "polyline_is_approximation": true,
+        "closed": true,
+        "endpoints_world_mm": [
+          [
+            32.0,
+            29.0,
+            6.0
+          ],
+          [
+            32.0,
+            28.999999999999982,
+            6.0
+          ]
+        ],
+        "aabb_world_mm": [
+          14.0,
+          20.0,
+          6.0,
+          32.0,
+          38.0,
+          6.0
+        ],
+        "sample_points_world_mm": [
+          [
+            32.0,
+            29.0,
+            6.0
+          ],
+          [
+            31.693332436601615,
+            31.329371405922686,
+            6.0
+          ],
+          [
+            30.794228634059948,
+            33.5,
+            6.0
+          ],
+          [
+            29.36396103067893,
+            35.36396103067893,
+            6.0
+          ],
+          [
+            27.5,
+            36.79422863405995,
+            6.0
+          ],
+          [
+            25.32937140592269,
+            37.693332436601615,
+            6.0
+          ],
+          [
+            23.000000000000004,
+            38.0,
+            6.0
+          ],
+          [
+            20.670628594077318,
+            37.693332436601615,
+            6.0
+          ],
+          [
+            18.5,
+            36.79422863405995,
+            6.0
+          ],
+          [
+            16.63603896932107,
+            35.36396103067893,
+            6.0
+          ],
+          [
+            15.205771365940052,
+            33.5,
+            6.0
+          ],
+          [
+            14.306667563398385,
+            31.329371405922686,
+            6.0
+          ],
+          [
+            14.0,
+            28.999999999999996,
+            6.0
+          ],
+          [
+            14.306667563398387,
+            26.67062859407731,
+            6.0
+          ],
+          [
+            15.205771365940056,
+            24.499999999999993,
+            6.0
+          ],
+          [
+            16.636038969321078,
+            22.636038969321067,
+            6.0
+          ],
+          [
+            18.500000000000004,
+            21.205771365940052,
+            6.0
+          ],
+          [
+            20.670628594077314,
+            20.306667563398385,
+            6.0
+          ],
+          [
+            23.0,
+            20.0,
+            6.0
+          ],
+          [
+            25.329371405922682,
+            20.306667563398385,
+            6.0
+          ],
+          [
+            27.499999999999993,
+            21.20577136594005,
+            6.0
+          ],
+          [
+            29.363961030678922,
+            22.636038969321064,
+            6.0
+          ],
+          [
+            30.79422863405994,
+            24.49999999999999,
+            6.0
+          ],
+          [
+            31.69333243660161,
+            26.6706285940773,
+            6.0
+          ],
+          [
+            32.0,
+            28.999999999999982,
+            6.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "twin_boss_plate",
+        "documentary_original_OCC_edge_index_1based": 11,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 56.38731503906227,
+        "polyline_is_approximation": true,
+        "closed": true,
+        "endpoints_world_mm": [
+          [
+            56.0,
+            29.0,
+            6.0
+          ],
+          [
+            56.0,
+            28.999999999999982,
+            6.0
+          ]
+        ],
+        "aabb_world_mm": [
+          38.0,
+          20.0,
+          6.0,
+          56.0,
+          38.0,
+          6.0
+        ],
+        "sample_points_world_mm": [
+          [
+            56.0,
+            29.0,
+            6.0
+          ],
+          [
+            55.693332436601615,
+            31.329371405922686,
+            6.0
+          ],
+          [
+            54.79422863405995,
+            33.5,
+            6.0
+          ],
+          [
+            53.36396103067893,
+            35.36396103067893,
+            6.0
+          ],
+          [
+            51.5,
+            36.79422863405995,
+            6.0
+          ],
+          [
+            49.329371405922686,
+            37.693332436601615,
+            6.0
+          ],
+          [
+            47.0,
+            38.0,
+            6.0
+          ],
+          [
+            44.670628594077314,
+            37.693332436601615,
+            6.0
+          ],
+          [
+            42.5,
+            36.79422863405995,
+            6.0
+          ],
+          [
+            40.63603896932107,
+            35.36396103067893,
+            6.0
+          ],
+          [
+            39.20577136594005,
+            33.5,
+            6.0
+          ],
+          [
+            38.306667563398385,
+            31.329371405922686,
+            6.0
+          ],
+          [
+            38.0,
+            28.999999999999996,
+            6.0
+          ],
+          [
+            38.306667563398385,
+            26.67062859407731,
+            6.0
+          ],
+          [
+            39.20577136594005,
+            24.499999999999993,
+            6.0
+          ],
+          [
+            40.63603896932108,
+            22.636038969321067,
+            6.0
+          ],
+          [
+            42.5,
+            21.205771365940052,
+            6.0
+          ],
+          [
+            44.670628594077314,
+            20.306667563398385,
+            6.0
+          ],
+          [
+            47.0,
+            20.0,
+            6.0
+          ],
+          [
+            49.329371405922686,
+            20.306667563398385,
+            6.0
+          ],
+          [
+            51.49999999999999,
+            21.20577136594005,
+            6.0
+          ],
+          [
+            53.36396103067892,
+            22.636038969321064,
+            6.0
+          ],
+          [
+            54.79422863405994,
+            24.49999999999999,
+            6.0
+          ],
+          [
+            55.69333243660161,
+            26.6706285940773,
+            6.0
+          ],
+          [
+            56.0,
+            28.999999999999982,
+            6.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "nonoverlap-r2p5",
+        "radius_mm": 2.5,
+        "mode": "ordinary pair"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "tangent-threshold-r3",
+        "radius_mm": 3,
+        "mode": "critical contact"
+      },
+      {
+        "id": "overlap-r5-no-limit",
+        "radius_mm": 5,
+        "mode": "ordinary pair"
+      },
+      {
+        "id": "overlap-r5-auto-stop",
+        "radius_mm": 5,
+        "mode": "overlap limit",
+        "hint_points": null,
+        "parameter_status": "not_frozen"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "geometric_overlap",
+      "expression": "2*(boss_radius+R)-center_distance",
+      "center_distance_mm": 24,
+      "boss_radius_mm": 9,
+      "gap_mm": 6,
+      "strict_overlap_requires_R_gt": 3,
+      "at_R5_overlap_width_mm": 4
+    },
+    {
+      "id": "must_not_fallback",
+      "expression": "R2.5 has no overlap and cannot satisfy overlap-limit target"
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "automatic_short_stop",
+      "assertion": "Both requested R5 chains retain useful nonoverlap portions and terminate before mutual surface overlap, by actual isoparametric boundaries; volume remains legal/closed and terminal geometry exists.",
+      "visual": "Show would-overlap footprint, actual terminal curves and untouched area between blends."
+    },
+    {
+      "id": "hint_semantics",
+      "assertion": "The overlap hint/side must be explicitly supplied and recorded; derive stop candidates from actual generated/intersecting bands rather than arbitrary pre-cut.",
+      "status": "source_contract_not_frozen"
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Show would-overlap footprint, actual terminal curves and untouched area between blends."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [
+    "Source overlap hint point(s) not numerically recovered. Automatic stop is not demonstrated by smaller R, generic fillet, or a manually picked Boolean cut plane."
+  ],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/15.brep",
+  "input_brep_sha256": "c49f4ffce5bd35841a556ee1697c604e832aa4614e0083598dc6a2f4591a8087"
+}

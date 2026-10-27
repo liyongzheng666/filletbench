@@ -1,0 +1,177 @@
+{
+  "number": 30,
+  "case_id": "fig75-03_to_05-1353",
+  "title": "75-4 单排及多排主面墙面组",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "5419320748c2ce5c8cb2024edc0f9e07f8a090303be1889d3fdc3a38608661be",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-03_to_05-1353.json",
+  "source_spec_sha256": "757c6f2a781b537eb923214538b9c3e36bd6f05926c1923d439310acdf93df8f",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-03_to_05-1353.png",
+  "current_evidence_scope": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-4"
+  ],
+  "source_pages": {
+    "physical": [
+      1352,
+      1353
+    ],
+    "printed": [
+      1350,
+      1351
+    ]
+  },
+  "target_change": [
+    "Keep identical partitioned wall geometry while changing master face selection; reproduce the pass-through-both, pass-through-one, pass-through-neither conditions.",
+    "Where explicitly requested and supported, disable master-face requirement and show formerly excluded solution separately."
+  ],
+  "must_preserve": [
+    "Input partition edges and multiple rows are real topology and cannot be removed by same-domain unification before selector testing.",
+    "Master blue color is selection metadata, not a new piece or a material face.",
+    "Do not infer every supplied face must be touched by the blend; PDF says at least one master, not all wall faces."
+  ],
+  "semantic_target": {
+    "A": "three columns along local x intervals [-12,-7],[-7,7],[7,12]; one row of wall z[0,18] and floor y[0,16], placed x=-20",
+    "B": "same columns; wall rows z[0,7],[7,18] and floor rows y[0,7],[7,16], placed x=+20",
+    "masters": "Face identified by original local column/row bounds. Do not identify by post-import numeric face index."
+  },
+  "required_modes": [
+    {
+      "id": "single-row-both-hit",
+      "master_requirement": true,
+      "expected": "success with actual rails touching both nominated masters"
+    },
+    {
+      "id": "multi-row-one-hit",
+      "master_requirement": true,
+      "expected": "success touching at least one nominated master"
+    },
+    {
+      "id": "multi-row-neither-hit",
+      "master_requirement": true,
+      "expected": "policy rejection"
+    },
+    {
+      "id": "multi-row-master-off",
+      "master_requirement": false,
+      "expected": "same geometric blend may be allowed"
+    }
+  ],
+  "diagnostic_parameters": {
+    "radius_mm": [
+      4
+    ],
+    "radius_is_proposed": true,
+    "hit_rows": "For a controlled R4 plane pair contacts lie in near row0..7; select far-row masters for neither-hit. Freeze exact columns and mode requests before execution."
+  },
+  "feature_oracles": [
+    {
+      "id": "partition_preserved",
+      "quantity": "original finite face atlas",
+      "expected": "all source partitions and IDs available before operation",
+      "method": "Check input support/face-domain adjacency graph; no simplify/removeSplitter before resolving master selectors.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "master_intersection",
+      "quantity": "actual rail/transition footprint on nominated finite master faces",
+      "expected": "at least one master hit for master-on modes",
+      "method": "Project actual rail samples onto original face domains; additionally intersect actual rail with master interiors to handle boundary ambiguities.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "master_negative_control",
+      "quantity": "operation policy for neither-hit",
+      "expected": "reject or explicitly report unavailable policy mapping",
+      "method": "Report geometry correctness separately from vendor policy semantics; a valid blend that ignores masters is not proof that requested master option was honored.",
+      "scope": "feature_required"
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmFilletExecutive native topology filleting with face adjacency",
+      "evidence": "SMLib/inc/SmFilletExecutive.h; src/SmFilletExecutive.cpp uses target BRep and per-edge solvers",
+      "expresses": "Can traverse partitioned topology and produce baseline fillet",
+      "boundary": "No inspected master-face-first-array policy equivalent demonstrated. Do not call native geometry wrong solely because SMLib lacks Parasolid-specific policy."
+    },
+    {
+      "entry": "SmSurfaceSurfaceFS native surface pair seed selection",
+      "evidence": "SMLib/inc/SmFilletStandardSolver.h:142-184",
+      "expresses": "Provides UV seed guesses on two surfaces",
+      "boundary": "Seed is not a verified master-face eligibility switch for two arbitrary face sets."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "No current bridge mapping of left/right face sets, master eligibility and master-off behavior. Must state policy unimplemented instead of reporting universal unsupported.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "Original blue-face coordinates are schematic; controlled row/column master IDs and R must be frozen before exact positive/negative verdict.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "inconsistent_if": [
+    "Input partitions are collapsed to two planes.",
+    "One ordinary R1 result is reused for all master choices.",
+    "Needlessly requires both masters or every wall face to be touched.",
+    "Master-on neither-hit is reported source-mode success without acknowledging ignored policy."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/30.brep",
+  "input_brep_sha256": "5419320748c2ce5c8cb2024edc0f9e07f8a090303be1889d3fdc3a38608661be"
+}

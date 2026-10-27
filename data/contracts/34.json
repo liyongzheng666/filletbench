@@ -1,0 +1,213 @@
+{
+  "number": 34,
+  "case_id": "fig75-25_rho-1380",
+  "title": "75-25 凸圆角的absolute/relative rho截面对照",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-25_rho-1380.json",
+  "source_spec_sha256": "c31142ad2ec428771c5682b3f364c5c504168c3aa38cc17cfa11856f5edd1fa5",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-25_rho-1380.png",
+  "current_evidence_scope": "第34项修正为凸外缘并明确材料侧。四个rho组合使用相同接触law，15份文件及截面/连续性/删料检查通过；同输入原生圆弧仅作不传rho的基线。90度、尺寸、rho0.5示范值与隐藏闭合并非原图精确参数，外观待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-25"
+  ],
+  "source_pages": {
+    "physical": [
+      1379,
+      1380
+    ],
+    "printed": [
+      1377,
+      1378
+    ]
+  },
+  "target_change": [
+    "Produce convex conic fillet sections at fixed contacts; compare absolute rho .25/.5/.75 and relative rho .5 circle anchor."
+  ],
+  "must_preserve": [
+    "Convex material in x>=0,y>=0; remove near original x=y=0 edge, not concave material addition.",
+    "H24, Xtop19.1556879801/Xbottom36.0318280474, Y18.9624512243 and same d(z) across all rho variants.",
+    "Upper/lower cut edges are a taper of exterior closure, not evidence of changing support dihedral; both supports stay orthogonal.",
+    "Back closure remains a reconstruction proxy; source has no exact rho value."
+  ],
+  "semantic_target": {
+    "original_edge": "x=y=0,z[0,24]",
+    "supports": [
+      "x=0",
+      "y=0"
+    ],
+    "material": "x>=0,y>=0",
+    "contact_law": "d(z)=16.857382645040378+(12.276845200098565-16.857382645040378)*z/24",
+    "contacts": [
+      "(0,d(z),z)",
+      "(d(z),0,z)"
+    ]
+  },
+  "required_modes": [
+    {
+      "id": "absolute-025",
+      "rho_type": "absolute",
+      "rho": 0.25,
+      "conic": "ellipse"
+    },
+    {
+      "id": "absolute-050",
+      "rho_type": "absolute",
+      "rho": 0.5,
+      "conic": "parabola"
+    },
+    {
+      "id": "absolute-075",
+      "rho_type": "absolute",
+      "rho": 0.75,
+      "conic": "hyperbola"
+    },
+    {
+      "id": "relative-050",
+      "rho_type": "relative",
+      "rho": 0.5,
+      "conic": "least-tension ellipse, symmetric90deg circle special case"
+    }
+  ],
+  "diagnostic_parameters": {
+    "rho_dimensionless": true,
+    "absolute_definition": "|MC|/|MV|; M is contact chord midpoint, V intersection of end tangents, C conic intersection with MV",
+    "relative_half_circle_absolute_depth": 0.41421356237309515,
+    "not_equivalent": [
+      "radius",
+      "rational parameterization mode",
+      "thumbweight",
+      "center-rho curvature radius"
+    ]
+  },
+  "feature_oracles": [
+    {
+      "id": "fixed_contact_law",
+      "quantity": "actual two contact rails",
+      "expected": "same d(z) for all variants",
+      "method": "Read actual constant-z section contacts over 11+ stations.",
+      "scope": "feature_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "rho_depth",
+      "quantity": "measured |MC|/|MV|",
+      "expected": "absolute requested rho or measured circle anchor sqrt(2)-1",
+      "method": "Construct M,V from actual contacts/tangents, intersect section with line MV. Do not read rho back from input weight.",
+      "scope": "feature_required",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "conic_class",
+      "quantity": "normalized fitted implicit conic discriminant",
+      "expected": "ellipse / parabola / hyperbola per absolute tier",
+      "method": "Use independent SVD fit and geometric residual on actual BRep sections; normalize coords, scale, and conic coefficient sign; classify with a declared uncertainty band.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "convex_deletion",
+      "quantity": "material occupancy/volume change",
+      "expected": "original minus fillet corner, no material added outside proxy",
+      "method": "Sample retained/removed regions against analytic wedge and conic section; volume integration independent of native default integrator.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "relative_anchor",
+      "quantity": "circle equation at relative .5 symmetric case",
+      "expected": "circular cross section at same contacts",
+      "method": "Measure center(d,d) and R=d; do not extrapolate general relative-to-absolute mapping.",
+      "scope": "feature_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmApiVariableRadiusFillet circular baseline",
+      "evidence": "Actual local SMLib pilot case34 native C++ and summary; two end radii source values",
+      "expresses": "Same exact trapezoid input, measured d(z) rails to ~7.42e-10mm; native valid closed result/readback",
+      "boundary": "No rho passed. End sections deviate from exact circle by ~8.19e-4mm under current settings; full rho and strict exact-circle gate not passed."
+    },
+    {
+      "entry": "SmFilletSurfaceGenerator subclass / explicit rational conic construction",
+      "evidence": "SMLib/inc/SmFilletSolver.h virtual generator; local inspected enum has LINEAR/CIRCULAR/BLEND_CURVE",
+      "expresses": "Extension route could create exact rational conics at fixed rails",
+      "boundary": "No ready verified absolute/relative-rho entry; must implement/test and label extension, not call thumbweight rho."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "Absolute/relative rho contract not implemented in current consumer or verified native wrapper; no whole-kernel unsupported claim.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "Source shows modes but no numeric rho/dimensions/hidden closure; current .25/.5/.75 are controlled demonstration parameters.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "existing_smlib_evidence": "history:outputs/manual-review/smlib-pilot/case34/summary.json",
+  "inconsistent_if": [
+    "Rounded concave sheets replace convex material.",
+    "One ordinary circular radius is labelled absolute rho .5 parabola.",
+    "Different contacts or support dihedral are used per rho.",
+    "Only isValid/closed passes while conic class/depth or material side is wrong."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/34.brep",
+  "input_brep_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50"
+}

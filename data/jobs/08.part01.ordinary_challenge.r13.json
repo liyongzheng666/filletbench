@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "job_id": "08.part01.ordinary_challenge.r13",
+  "number": 8,
+  "case_number": 8,
+  "case_id": "73-25_preserve_notch-1290",
+  "part_label": "notched_folded_sheets",
+  "source_part_indices": [
+    0
+  ],
+  "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+  "source_brep": "data/models/08.brep",
+  "source_fixture_json": "data/fixtures/08.json",
+  "source_fixture_sha256": "3bfecd1eee4908901d8c10c11a34d9870b42c796cfcf16b088cbd2c1c28e1326",
+  "source_fixture_export_sha256": "3bfecd1eee4908901d8c10c11a34d9870b42c796cfcf16b088cbd2c1c28e1326",
+  "source_contract_file": "data/contracts/08.json",
+  "source_contract_sha256": "253b7c4b402fa41ddd91c74f8e4eb2b7111d57729bfb975db025f5c5cd6a5c8a",
+  "semantic_target": "仅片体：圆角实际穿过原缺口后，比较正常投影保形与默认裁边；必须实际触及缺口，不得用R12未遇缺口的成功替代。",
+  "operation": "native_edge_fillet",
+  "role": "ordinary_challenge",
+  "radius_mm": 13,
+  "request_note": "critical notch contact",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "sheet",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          100.0,
+          0.0,
+          40.0
+        ],
+        [
+          96.875,
+          0.0,
+          40.0
+        ],
+        [
+          93.75,
+          0.0,
+          40.0
+        ],
+        [
+          90.625,
+          0.0,
+          40.0
+        ],
+        [
+          87.5,
+          0.0,
+          40.0
+        ],
+        [
+          84.375,
+          0.0,
+          40.0
+        ],
+        [
+          81.25,
+          0.0,
+          40.0
+        ],
+        [
+          78.125,
+          0.0,
+          40.0
+        ],
+        [
+          75.0,
+          0.0,
+          40.0
+        ],
+        [
+          71.875,
+          0.0,
+          40.0
+        ],
+        [
+          68.75,
+          0.0,
+          40.0
+        ],
+        [
+          65.625,
+          0.0,
+          40.0
+        ],
+        [
+          62.5,
+          0.0,
+          40.0
+        ],
+        [
+          59.375,
+          0.0,
+          40.0
+        ],
+        [
+          56.25,
+          0.0,
+          40.0
+        ],
+        [
+          53.125,
+          0.0,
+          40.0
+        ],
+        [
+          50.0,
+          0.0,
+          40.0
+        ],
+        [
+          46.875,
+          0.0,
+          40.0
+        ],
+        [
+          43.75,
+          0.0,
+          40.0
+        ],
+        [
+          40.625,
+          0.0,
+          40.0
+        ],
+        [
+          37.5,
+          0.0,
+          40.0
+        ],
+        [
+          34.375,
+          0.0,
+          40.0
+        ],
+        [
+          31.25,
+          0.0,
+          40.0
+        ],
+        [
+          28.125,
+          0.0,
+          40.0
+        ],
+        [
+          25.0,
+          0.0,
+          40.0
+        ],
+        [
+          21.875,
+          0.0,
+          40.0
+        ],
+        [
+          18.75,
+          0.0,
+          40.0
+        ],
+        [
+          15.625,
+          0.0,
+          40.0
+        ],
+        [
+          12.5,
+          0.0,
+          40.0
+        ],
+        [
+          9.375,
+          0.0,
+          40.0
+        ],
+        [
+          6.25,
+          0.0,
+          40.0
+        ],
+        [
+          3.125,
+          0.0,
+          40.0
+        ],
+        [
+          0.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "samples": [
+        [
+          100.0,
+          0.0,
+          40.0
+        ],
+        [
+          96.875,
+          0.0,
+          40.0
+        ],
+        [
+          93.75,
+          0.0,
+          40.0
+        ],
+        [
+          90.625,
+          0.0,
+          40.0
+        ],
+        [
+          87.5,
+          0.0,
+          40.0
+        ],
+        [
+          84.375,
+          0.0,
+          40.0
+        ],
+        [
+          81.25,
+          0.0,
+          40.0
+        ],
+        [
+          78.125,
+          0.0,
+          40.0
+        ],
+        [
+          75.0,
+          0.0,
+          40.0
+        ],
+        [
+          71.875,
+          0.0,
+          40.0
+        ],
+        [
+          68.75,
+          0.0,
+          40.0
+        ],
+        [
+          65.625,
+          0.0,
+          40.0
+        ],
+        [
+          62.5,
+          0.0,
+          40.0
+        ],
+        [
+          59.375,
+          0.0,
+          40.0
+        ],
+        [
+          56.25,
+          0.0,
+          40.0
+        ],
+        [
+          53.125,
+          0.0,
+          40.0
+        ],
+        [
+          50.0,
+          0.0,
+          40.0
+        ],
+        [
+          46.875,
+          0.0,
+          40.0
+        ],
+        [
+          43.75,
+          0.0,
+          40.0
+        ],
+        [
+          40.625,
+          0.0,
+          40.0
+        ],
+        [
+          37.5,
+          0.0,
+          40.0
+        ],
+        [
+          34.375,
+          0.0,
+          40.0
+        ],
+        [
+          31.25,
+          0.0,
+          40.0
+        ],
+        [
+          28.125,
+          0.0,
+          40.0
+        ],
+        [
+          25.0,
+          0.0,
+          40.0
+        ],
+        [
+          21.875,
+          0.0,
+          40.0
+        ],
+        [
+          18.75,
+          0.0,
+          40.0
+        ],
+        [
+          15.625,
+          0.0,
+          40.0
+        ],
+        [
+          12.5,
+          0.0,
+          40.0
+        ],
+        [
+          9.375,
+          0.0,
+          40.0
+        ],
+        [
+          6.25,
+          0.0,
+          40.0
+        ],
+        [
+          3.125,
+          0.0,
+          40.0
+        ],
+        [
+          0.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "endpoints": [
+        [
+          0,
+          0,
+          40
+        ],
+        [
+          100,
+          0,
+          40
+        ]
+      ],
+      "expected_length_mm": 100,
+      "length_is_approximation": false,
+      "documentary_approx_length_mm": null,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": "line",
+      "documentary_source_edge_alias": 1,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          100.0,
+          0.0,
+          40.0
+        ],
+        [
+          96.875,
+          0.0,
+          40.0
+        ],
+        [
+          93.75,
+          0.0,
+          40.0
+        ],
+        [
+          90.625,
+          0.0,
+          40.0
+        ],
+        [
+          87.5,
+          0.0,
+          40.0
+        ],
+        [
+          84.375,
+          0.0,
+          40.0
+        ],
+        [
+          81.25,
+          0.0,
+          40.0
+        ],
+        [
+          78.125,
+          0.0,
+          40.0
+        ],
+        [
+          75.0,
+          0.0,
+          40.0
+        ],
+        [
+          71.875,
+          0.0,
+          40.0
+        ],
+        [
+          68.75,
+          0.0,
+          40.0
+        ],
+        [
+          65.625,
+          0.0,
+          40.0
+        ],
+        [
+          62.5,
+          0.0,
+          40.0
+        ],
+        [
+          59.375,
+          0.0,
+          40.0
+        ],
+        [
+          56.25,
+          0.0,
+          40.0
+        ],
+        [
+          53.125,
+          0.0,
+          40.0
+        ],
+        [
+          50.0,
+          0.0,
+          40.0
+        ],
+        [
+          46.875,
+          0.0,
+          40.0
+        ],
+        [
+          43.75,
+          0.0,
+          40.0
+        ],
+        [
+          40.625,
+          0.0,
+          40.0
+        ],
+        [
+          37.5,
+          0.0,
+          40.0
+        ],
+        [
+          34.375,
+          0.0,
+          40.0
+        ],
+        [
+          31.25,
+          0.0,
+          40.0
+        ],
+        [
+          28.125,
+          0.0,
+          40.0
+        ],
+        [
+          25.0,
+          0.0,
+          40.0
+        ],
+        [
+          21.875,
+          0.0,
+          40.0
+        ],
+        [
+          18.75,
+          0.0,
+          40.0
+        ],
+        [
+          15.625,
+          0.0,
+          40.0
+        ],
+        [
+          12.5,
+          0.0,
+          40.0
+        ],
+        [
+          9.375,
+          0.0,
+          40.0
+        ],
+        [
+          6.25,
+          0.0,
+          40.0
+        ],
+        [
+          3.125,
+          0.0,
+          40.0
+        ],
+        [
+          0.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/08.part01.ordinary_challenge.r13.json",
+  "component_index": 1,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

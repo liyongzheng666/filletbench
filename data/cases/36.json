@@ -1,0 +1,33 @@
+{
+  "number": 36,
+  "id": "fig75-30_trim-1389",
+  "title": "75-30 不等宽墙面及四种裁剪策略",
+  "question": "同一对无共边有限面上，分别验证未裁、短、长、斜端裁剪的实际端点、支持域及保留范围。",
+  "family": "c",
+  "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "reference": {
+    "page": 1389,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.20985397784491439,
+      0.2392165242165242,
+      0.8566112789526688,
+      0.6311538461538462
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/36.brep",
+  "fixture": "data/fixtures/36.json",
+  "contract": "data/contracts/36.json",
+  "variants": []
+}

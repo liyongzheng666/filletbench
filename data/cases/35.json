@@ -1,0 +1,33 @@
+{
+  "number": 35,
+  "id": "fig75-28_softness-1384",
+  "title": "75-28 不同softness共用的未圆角墙面",
+  "question": "相同两支持与d13接触下检查实际G2曲率和整片形状；SMLib thumbweight不与Parasolid softness数值直接映射。",
+  "family": "c",
+  "source_sha256": "c0125ac4b2d51a01f56a1db3f70cbbee230b8c7c15db5e763a3c4ebbe4552bee",
+  "reference": {
+    "page": 1384,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.09404330312185297,
+      0.20574074074074072,
+      0.8586253776435046,
+      0.6738888888888889
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/35.brep",
+  "fixture": "data/fixtures/35.json",
+  "contract": "data/contracts/35.json",
+  "variants": []
+}

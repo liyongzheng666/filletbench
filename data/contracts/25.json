@@ -1,0 +1,328 @@
+{
+  "number": 25,
+  "case_id": "73-44_45_unders-1318",
+  "title": "四底层面关联的三分区方块输入",
+  "feature_family": "underlying_face_tracking_three_bands",
+  "source_feature": {
+    "meaning": "Large fillet crosses the three finite coplanar top regions and produces distinct X/Y/Z bands with correct original underlying support associations. Test actual geometry and provenance separately.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-44_45_unders-1318.png",
+    "source_sha256": "f936dcd7bb24a17cb9bddca2aee95492b7a909f5d69d36290439b8f881277d86",
+    "reference_crop": [
+      0.105,
+      0.312,
+      0.845,
+      0.582
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-44_45_unders-1318.json",
+    "current_spec_sha256": "f0506963a4c970c33592b48660b7c15b2deceac36155c9f9c8a7ada4daa510b3",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-44_45_unders-1318.brep",
+    "brep_sha256": "9b6724769a84ae8db23755133b5a02fab4f8d08c57a8713712e25f9bbe106f2c",
+    "step_path": "history:outputs/parasolid-preblend/models/73-44_45_unders-1318.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-44_45_unders-1318.json",
+    "bbox_world_mm": [
+      -1.5335385385619037e-15,
+      0.0,
+      0.0,
+      32.0,
+      32.0,
+      32.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "ThreeTopRegions"
+    ],
+    "parts_geometry_immutable": [
+      "Cube32, exact coplanar partition q6.7 and front collinear vertex. Importer must not merge top1/2/3, delete imprints, or add duplicate coincident sheets."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": false
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "front_top_root": {
+        "start": [
+          0,
+          0,
+          32
+        ],
+        "end": [
+          32,
+          0,
+          32
+        ],
+        "source_has_two_collinear_segments": true
+      },
+      "partition_q": [
+        16,
+        6.7,
+        32
+      ],
+      "finite_top_regions": {
+        "1": [
+          [
+            0,
+            0,
+            32
+          ],
+          [
+            16,
+            0,
+            32
+          ],
+          [
+            16,
+            6.7,
+            32
+          ],
+          [
+            0,
+            32,
+            32
+          ]
+        ],
+        "2": [
+          [
+            0,
+            32,
+            32
+          ],
+          [
+            16,
+            6.7,
+            32
+          ],
+          [
+            32,
+            32,
+            32
+          ]
+        ],
+        "3": [
+          [
+            16,
+            0,
+            32
+          ],
+          [
+            32,
+            0,
+            32
+          ],
+          [
+            32,
+            32,
+            32
+          ],
+          [
+            16,
+            6.7,
+            32
+          ]
+        ]
+      },
+      "front_source_label": 4,
+      "expected_pairs": {
+        "X": [
+          1,
+          4
+        ],
+        "Y": [
+          2,
+          4
+        ],
+        "Z": [
+          3,
+          4
+        ]
+      }
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "ThreeTopRegions",
+        "documentary_original_OCC_edge_index_1based": 3,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 16.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            32.0,
+            0.0,
+            32.0
+          ],
+          [
+            16.0,
+            0.0,
+            32.0
+          ]
+        ],
+        "aabb_world_mm": [
+          16.0,
+          0.0,
+          32.0,
+          32.0,
+          0.0,
+          32.0
+        ],
+        "sample_points_world_mm": [
+          [
+            32.0,
+            0.0,
+            32.0
+          ],
+          [
+            16.0,
+            0.0,
+            32.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "ThreeTopRegions",
+        "documentary_original_OCC_edge_index_1based": 4,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 16.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            16.0,
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            0.0,
+            32.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          0.0,
+          32.0,
+          16.0,
+          0.0,
+          32.0
+        ],
+        "sample_points_world_mm": [
+          [
+            16.0,
+            0.0,
+            32.0
+          ],
+          [
+            0.0,
+            0.0,
+            32.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "small-r4",
+        "radius_mm": 4,
+        "mode": "does not hit top2"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "native-r10",
+        "radius_mm": 10,
+        "mode": "three-band tracking"
+      },
+      {
+        "id": "native-r12",
+        "radius_mm": 12,
+        "mode": "three-band tracking"
+      },
+      {
+        "id": "native-r16",
+        "radius_mm": 16,
+        "mode": "three-band tracking"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "top2_engagement",
+      "strict_radius_R_gt_mm": 6.7,
+      "Y_width_formula": "32*(R-6.7)/25.3",
+      "Y_width_at_R10_mm": 4.173913043478261,
+      "Y_width_at_R12_mm": 6.703557312252965,
+      "Y_width_at_R16_mm": 11.762845849802373
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "three_real_faces",
+      "assertion": "X/Y/Z must be three distinct native faces or explicitly report topology normalization mismatch. Blue Y is a full band with matching end-section widths, not a triangular paint patch."
+    },
+    {
+      "id": "Y_geometry",
+      "assertion": "Evaluate actual Y points against the same R cylindrical support; NURBS surface class is permitted. Measure two true boundary arcs, width formula and positive area; preserve all intended tangent joins.",
+      "visual": "Large-radius Y face zoom, real edges and measured widths at both ends."
+    },
+    {
+      "id": "finite_source_pairing",
+      "assertion": "Contact samples must lie on the correct finite original region1/2/3 and front4, not merely their common infinite plane; verify all X→[1,4],Y→[2,4],Z→[3,4]."
+    },
+    {
+      "id": "native_tracking_provenance",
+      "assertion": "Record which underlying/native history API returned each pairing, including deleted original faces. External contact reconstruction is a valid separate audit, not proof native unders[] was returned."
+    },
+    {
+      "id": "material_occupancy",
+      "assertion": "For convex cube front-top fillet, independent box-(cornerBox-cylinder) occupancy/volume; no added material outside original cube."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Large-radius Y face zoom, real edges and measured widths at both ends."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/25.brep",
+  "input_brep_sha256": "9b6724769a84ae8db23755133b5a02fab4f8d08c57a8713712e25f9bbe106f2c"
+}

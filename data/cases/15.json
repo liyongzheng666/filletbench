@@ -1,0 +1,33 @@
+{
+  "number": 15,
+  "id": "73-33_overlap_limit-1304",
+  "title": "底板上相邻双圆柱凸台",
+  "question": "相邻大圆角实际重叠时，在要求的重叠限制处停止；小半径未重叠不算此功能通过。",
+  "family": "b",
+  "source_sha256": "c49f4ffce5bd35841a556ee1697c604e832aa4614e0083598dc6a2f4591a8087",
+  "reference": {
+    "page": 1304,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.325,
+      0.205,
+      0.77,
+      0.68
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/15.brep",
+  "fixture": "data/fixtures/15.json",
+  "contract": "data/contracts/15.json",
+  "variants": []
+}

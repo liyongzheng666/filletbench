@@ -1,0 +1,33 @@
+{
+  "number": 27,
+  "id": "fig75-02_three_axes-1349",
+  "title": "75-2 面面圆角的两张正交支撑面",
+  "question": "截面平面、接触位置和截面形状是三项独立属性；普通面pair控制不替代三属性与传播策略。",
+  "family": "c",
+  "source_sha256": "9189c7a18ca139d89e72541ea3c1dedbd51152a749e35352823d9195e3ae99f0",
+  "reference": {
+    "page": 1349,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.10814199395770394,
+      0.20787749287749288,
+      0.8737311178247734,
+      0.8263105413105414
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/27.brep",
+  "fixture": "data/fixtures/27.json",
+  "contract": "data/contracts/27.json",
+  "variants": []
+}

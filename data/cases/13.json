@@ -1,0 +1,33 @@
+{
+  "number": 13,
+  "id": "73-31_vertex_limit-1300",
+  "title": "三边相交顶点的圆角前立方体",
+  "question": "三边交汇顶点圆角中验证默认处理与指定顶点限制；限制位置未冻结时不得以普通圆角有效替代。",
+  "family": "b",
+  "source_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+  "reference": {
+    "page": 1300,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.17,
+      0.325,
+      0.835,
+      0.775
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/13.brep",
+  "fixture": "data/fixtures/13.json",
+  "contract": "data/contracts/13.json",
+  "variants": []
+}

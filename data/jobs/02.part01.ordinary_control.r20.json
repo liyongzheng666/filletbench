@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "job_id": "02.part01.ordinary_control.r20",
+  "number": 2,
+  "case_number": 2,
+  "case_id": "73-18_explicit_cliff-1282",
+  "part_label": "L_section_input",
+  "source_part_indices": [
+    0
+  ],
+  "source_sha256": "ce2e6067d02aea7ad2c50acaf1d984ca41d04913101dfaab840fabb120c7eec9",
+  "source_brep": "data/models/02.brep",
+  "source_fixture_json": "data/fixtures/02.json",
+  "source_fixture_sha256": "a0be2764b6d50dc26db705ddb215b1bd061065641ba513151765a5f71d48c559",
+  "source_fixture_export_sha256": "a0be2764b6d50dc26db705ddb215b1bd061065641ba513151765a5f71d48c559",
+  "source_contract_file": "data/contracts/02.json",
+  "source_contract_sha256": "e6b6c11b08f768e59790262a60ee1830d6be11a7cbcc13873cf609b21cc25996",
+  "semantic_target": "同一L体、同一前上沿和半径，明确指定操作前cliff边；大R不得改为小R或把事后交线当指定边。",
+  "operation": "native_edge_fillet",
+  "role": "ordinary_control",
+  "radius_mm": 20,
+  "request_note": "before wall root",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "solid",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          31.0,
+          0.0,
+          29.0
+        ],
+        [
+          31.0,
+          2.32258064516129,
+          29.0
+        ],
+        [
+          31.0,
+          4.64516129032258,
+          29.0
+        ],
+        [
+          31.0,
+          6.96774193548387,
+          29.0
+        ],
+        [
+          31.0,
+          9.29032258064516,
+          29.0
+        ],
+        [
+          31.0,
+          11.61290322580645,
+          29.0
+        ],
+        [
+          31.0,
+          13.93548387096774,
+          29.0
+        ],
+        [
+          31.0,
+          16.258064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          18.58064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          20.90322580645161,
+          29.0
+        ],
+        [
+          31.0,
+          23.225806451612897,
+          29.0
+        ],
+        [
+          31.0,
+          25.548387096774185,
+          29.0
+        ],
+        [
+          31.0,
+          27.870967741935473,
+          29.0
+        ],
+        [
+          31.0,
+          30.19354838709676,
+          29.0
+        ],
+        [
+          31.0,
+          32.51612903225805,
+          29.0
+        ],
+        [
+          31.0,
+          34.83870967741934,
+          29.0
+        ],
+        [
+          31.0,
+          37.161290322580626,
+          29.0
+        ],
+        [
+          31.0,
+          39.483870967741915,
+          29.0
+        ],
+        [
+          31.0,
+          41.8064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          44.12903225806449,
+          29.0
+        ],
+        [
+          31.0,
+          46.45161290322578,
+          29.0
+        ],
+        [
+          31.0,
+          48.77419354838707,
+          29.0
+        ],
+        [
+          31.0,
+          51.096774193548356,
+          29.0
+        ],
+        [
+          31.0,
+          53.419354838709644,
+          29.0
+        ],
+        [
+          31.0,
+          55.74193548387093,
+          29.0
+        ],
+        [
+          31.0,
+          58.06451612903222,
+          29.0
+        ],
+        [
+          31.0,
+          60.38709677419351,
+          29.0
+        ],
+        [
+          31.0,
+          62.7096774193548,
+          29.0
+        ],
+        [
+          31.0,
+          65.03225806451609,
+          29.0
+        ],
+        [
+          31.0,
+          67.35483870967738,
+          29.0
+        ],
+        [
+          31.0,
+          69.67741935483868,
+          29.0
+        ],
+        [
+          31.0,
+          72.0,
+          29.0
+        ]
+      ],
+      "samples": [
+        [
+          31.0,
+          0.0,
+          29.0
+        ],
+        [
+          31.0,
+          2.32258064516129,
+          29.0
+        ],
+        [
+          31.0,
+          4.64516129032258,
+          29.0
+        ],
+        [
+          31.0,
+          6.96774193548387,
+          29.0
+        ],
+        [
+          31.0,
+          9.29032258064516,
+          29.0
+        ],
+        [
+          31.0,
+          11.61290322580645,
+          29.0
+        ],
+        [
+          31.0,
+          13.93548387096774,
+          29.0
+        ],
+        [
+          31.0,
+          16.258064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          18.58064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          20.90322580645161,
+          29.0
+        ],
+        [
+          31.0,
+          23.225806451612897,
+          29.0
+        ],
+        [
+          31.0,
+          25.548387096774185,
+          29.0
+        ],
+        [
+          31.0,
+          27.870967741935473,
+          29.0
+        ],
+        [
+          31.0,
+          30.19354838709676,
+          29.0
+        ],
+        [
+          31.0,
+          32.51612903225805,
+          29.0
+        ],
+        [
+          31.0,
+          34.83870967741934,
+          29.0
+        ],
+        [
+          31.0,
+          37.161290322580626,
+          29.0
+        ],
+        [
+          31.0,
+          39.483870967741915,
+          29.0
+        ],
+        [
+          31.0,
+          41.8064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          44.12903225806449,
+          29.0
+        ],
+        [
+          31.0,
+          46.45161290322578,
+          29.0
+        ],
+        [
+          31.0,
+          48.77419354838707,
+          29.0
+        ],
+        [
+          31.0,
+          51.096774193548356,
+          29.0
+        ],
+        [
+          31.0,
+          53.419354838709644,
+          29.0
+        ],
+        [
+          31.0,
+          55.74193548387093,
+          29.0
+        ],
+        [
+          31.0,
+          58.06451612903222,
+          29.0
+        ],
+        [
+          31.0,
+          60.38709677419351,
+          29.0
+        ],
+        [
+          31.0,
+          62.7096774193548,
+          29.0
+        ],
+        [
+          31.0,
+          65.03225806451609,
+          29.0
+        ],
+        [
+          31.0,
+          67.35483870967738,
+          29.0
+        ],
+        [
+          31.0,
+          69.67741935483868,
+          29.0
+        ],
+        [
+          31.0,
+          72.0,
+          29.0
+        ]
+      ],
+      "endpoints": [
+        [
+          31.0,
+          72.0,
+          29.0
+        ],
+        [
+          31.0,
+          0.0,
+          29.0
+        ]
+      ],
+      "expected_length_mm": 72.0,
+      "length_is_approximation": false,
+      "documentary_approx_length_mm": null,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": "line",
+      "documentary_source_edge_alias": 20,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [
+    {
+      "id": "standing_wall_upper_region",
+      "point": [
+        3,
+        36,
+        55
+      ],
+      "expected_before_state": true,
+      "expected_after_state": true
+    },
+    {
+      "id": "unoccupied_above_top",
+      "point": [
+        20,
+        36,
+        55
+      ],
+      "expected_before_state": false,
+      "expected_after_state": false
+    }
+  ],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          31.0,
+          0.0,
+          29.0
+        ],
+        [
+          31.0,
+          2.32258064516129,
+          29.0
+        ],
+        [
+          31.0,
+          4.64516129032258,
+          29.0
+        ],
+        [
+          31.0,
+          6.96774193548387,
+          29.0
+        ],
+        [
+          31.0,
+          9.29032258064516,
+          29.0
+        ],
+        [
+          31.0,
+          11.61290322580645,
+          29.0
+        ],
+        [
+          31.0,
+          13.93548387096774,
+          29.0
+        ],
+        [
+          31.0,
+          16.258064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          18.58064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          20.90322580645161,
+          29.0
+        ],
+        [
+          31.0,
+          23.225806451612897,
+          29.0
+        ],
+        [
+          31.0,
+          25.548387096774185,
+          29.0
+        ],
+        [
+          31.0,
+          27.870967741935473,
+          29.0
+        ],
+        [
+          31.0,
+          30.19354838709676,
+          29.0
+        ],
+        [
+          31.0,
+          32.51612903225805,
+          29.0
+        ],
+        [
+          31.0,
+          34.83870967741934,
+          29.0
+        ],
+        [
+          31.0,
+          37.161290322580626,
+          29.0
+        ],
+        [
+          31.0,
+          39.483870967741915,
+          29.0
+        ],
+        [
+          31.0,
+          41.8064516129032,
+          29.0
+        ],
+        [
+          31.0,
+          44.12903225806449,
+          29.0
+        ],
+        [
+          31.0,
+          46.45161290322578,
+          29.0
+        ],
+        [
+          31.0,
+          48.77419354838707,
+          29.0
+        ],
+        [
+          31.0,
+          51.096774193548356,
+          29.0
+        ],
+        [
+          31.0,
+          53.419354838709644,
+          29.0
+        ],
+        [
+          31.0,
+          55.74193548387093,
+          29.0
+        ],
+        [
+          31.0,
+          58.06451612903222,
+          29.0
+        ],
+        [
+          31.0,
+          60.38709677419351,
+          29.0
+        ],
+        [
+          31.0,
+          62.7096774193548,
+          29.0
+        ],
+        [
+          31.0,
+          65.03225806451609,
+          29.0
+        ],
+        [
+          31.0,
+          67.35483870967738,
+          29.0
+        ],
+        [
+          31.0,
+          69.67741935483868,
+          29.0
+        ],
+        [
+          31.0,
+          72.0,
+          29.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/02.part01.ordinary_control.r20.json",
+  "component_index": 1,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

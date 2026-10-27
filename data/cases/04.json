@@ -1,0 +1,33 @@
+{
+  "number": 4,
+  "id": "73-20_y_combos-1284",
+  "title": "Y 形组合：横梁与端部 D 形立柱",
+  "question": "分别验证有中间光滑分割缝/无缝的双Y，以及端部D柱Y过渡；中间光滑缝不能误选为锐边圆角。",
+  "family": "a",
+  "source_sha256": "adff5e16987b40e92b73921037876a172d354c52f8309088485e4f78d9111423",
+  "reference": {
+    "page": 1284,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.145,
+      0.22,
+      0.825,
+      0.83
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/04.brep",
+  "fixture": "data/fixtures/04.json",
+  "contract": "data/contracts/04.json",
+  "variants": []
+}

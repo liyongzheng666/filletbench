@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "job_id": "20.part01.ordinary_challenge.r2",
+  "number": 20,
+  "case_number": 20,
+  "case_id": "73-39_patch-1309",
+  "part_label": "drafted_front_patch_seed",
+  "source_part_indices": [
+    0
+  ],
+  "source_sha256": "3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd",
+  "source_brep": "data/models/20.brep",
+  "source_fixture_json": "data/fixtures/20.json",
+  "source_fixture_sha256": "43fee3e179fb83f2df1e61a1cd4210c362955b5403474572d7fb8d7cf765cb43",
+  "source_fixture_export_sha256": "43fee3e179fb83f2df1e61a1cd4210c362955b5403474572d7fb8d7cf765cb43",
+  "source_contract_file": "data/contracts/20.json",
+  "source_contract_sha256": "6faab5cb6af5835c7ba4624e34d6eba7dbd0c397824dcfd1ab8736b011b08b89",
+  "semantic_target": "Compare no attempt to bridge between given limits versus attempting a blend-like bridge using limits and underlying associations. patch_no remains a closed solid; patch_yes is an attempt, not a guaranteed smooth pass.",
+  "operation": "native_edge_fillet",
+  "role": "ordinary_challenge",
+  "radius_mm": 2,
+  "request_note": "larger side-roots, no patch flag",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "solid",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          -35.0,
+          6.0,
+          24.0
+        ],
+        [
+          -35.0,
+          43.0,
+          24.0
+        ]
+      ],
+      "samples": [
+        [
+          -35.0,
+          6.0,
+          24.0
+        ],
+        [
+          -35.0,
+          43.0,
+          24.0
+        ]
+      ],
+      "endpoints": [
+        [
+          -35.0,
+          6.0,
+          24.0
+        ],
+        [
+          -35.0,
+          43.0,
+          24.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 37.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 7,
+      "source_alias_is_not_native_index": true
+    },
+    {
+      "id": "target-2",
+      "target_id": "target-2",
+      "samples_mm": [
+        [
+          35.0,
+          43.0,
+          24.0
+        ],
+        [
+          35.0,
+          6.0,
+          24.0
+        ]
+      ],
+      "samples": [
+        [
+          35.0,
+          43.0,
+          24.0
+        ],
+        [
+          35.0,
+          6.0,
+          24.0
+        ]
+      ],
+      "endpoints": [
+        [
+          35.0,
+          43.0,
+          24.0
+        ],
+        [
+          35.0,
+          6.0,
+          24.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 37.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 10,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          -35.0,
+          6.0,
+          24.0
+        ],
+        [
+          -35.0,
+          43.0,
+          24.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    },
+    {
+      "target_id": "target-2",
+      "samples_mm": [
+        [
+          35.0,
+          43.0,
+          24.0
+        ],
+        [
+          35.0,
+          6.0,
+          24.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/20.part01.ordinary_challenge.r2.json",
+  "component_index": 1,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

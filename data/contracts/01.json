@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "case_number": 1,
+  "case_id": "73-17_cliff_edge-1281",
+  "title": "悬崖边：齐边立块与窄后平台（PDF 复核）",
+  "contract_status": "feature_contract_defined_with_explicit_admission_gates",
+  "source_fixture_tier": "exploratory_reconstruction",
+  "source_pdf_dimensions_known": false,
+  "units": "mm in frozen reconstructed fixture",
+  "input_brep": "data/models/01.brep",
+  "input_brep_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+  "current_test_spec": "history:outputs/manual-review/case-specs/73-17_cliff_edge-1281.json",
+  "current_test_spec_sha256": "3e53faf94cefd2383db75ff00864eacdbaf4367a5b264095c95f737a3e09a1f8",
+  "source_recipe": "history:outputs/parasolid-preblend/code/groups/group_a.py",
+  "refinement_recipe": "history:outputs/parasolid-preblend/code/refinements/case_73_17.py",
+  "parts": [
+    {
+      "part_label": "flush_boss_cliff_input",
+      "source_part_bbox": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        129.0,
+        68.0
+      ],
+      "world_target_fingerprints": [
+        {
+          "occ_reference_edge_index_hint": 9,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "length_mm": 100.0,
+          "sampled_curve_points_mm": [
+            [
+              0.0,
+              103.0,
+              26.0
+            ],
+            [
+              3.225806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              6.451612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              9.677419354838708,
+              103.0,
+              26.0
+            ],
+            [
+              12.903225806451612,
+              103.0,
+              26.0
+            ],
+            [
+              16.129032258064516,
+              103.0,
+              26.0
+            ],
+            [
+              19.35483870967742,
+              103.0,
+              26.0
+            ],
+            [
+              22.580645161290324,
+              103.0,
+              26.0
+            ],
+            [
+              25.806451612903228,
+              103.0,
+              26.0
+            ],
+            [
+              29.03225806451613,
+              103.0,
+              26.0
+            ],
+            [
+              32.25806451612903,
+              103.0,
+              26.0
+            ],
+            [
+              35.483870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              38.70967741935484,
+              103.0,
+              26.0
+            ],
+            [
+              41.935483870967744,
+              103.0,
+              26.0
+            ],
+            [
+              45.16129032258065,
+              103.0,
+              26.0
+            ],
+            [
+              48.38709677419355,
+              103.0,
+              26.0
+            ],
+            [
+              51.612903225806456,
+              103.0,
+              26.0
+            ],
+            [
+              54.83870967741936,
+              103.0,
+              26.0
+            ],
+            [
+              58.06451612903226,
+              103.0,
+              26.0
+            ],
+            [
+              61.29032258064517,
+              103.0,
+              26.0
+            ],
+            [
+              64.51612903225806,
+              103.0,
+              26.0
+            ],
+            [
+              67.74193548387096,
+              103.0,
+              26.0
+            ],
+            [
+              70.96774193548386,
+              103.0,
+              26.0
+            ],
+            [
+              74.19354838709675,
+              103.0,
+              26.0
+            ],
+            [
+              77.41935483870965,
+              103.0,
+              26.0
+            ],
+            [
+              80.64516129032255,
+              103.0,
+              26.0
+            ],
+            [
+              83.87096774193544,
+              103.0,
+              26.0
+            ],
+            [
+              87.09677419354834,
+              103.0,
+              26.0
+            ],
+            [
+              90.32258064516124,
+              103.0,
+              26.0
+            ],
+            [
+              93.54838709677414,
+              103.0,
+              26.0
+            ],
+            [
+              96.77419354838703,
+              103.0,
+              26.0
+            ],
+            [
+              100.0,
+              103.0,
+              26.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                0.0,
+                0.0,
+                26.0,
+                100.0,
+                103.0,
+                26.0
+              ]
+            },
+            {
+              "index": 8,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "bbox": [
+                0.0,
+                103.0,
+                26.0,
+                100.0,
+                103.0,
+                42.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "ordinary_probe_radii_mm": [
+        8,
+        12,
+        16,
+        48
+      ],
+      "probe_radius_policy": "run each requested radius independently, do not stop at first small-radius success",
+      "selection_note": "严格沿用人工确认 annotation 01 红A：低平台与台阶立面长凹根，Y103/Z26，100长。蓝B不作为圆角目标。",
+      "input_source_SHA_matches_record": true
+    }
+  ],
+  "family": "cliff_edge",
+  "target_semantics": "在R大于台阶高的情况下，圆角面保留平滑侧G1，并在操作前指定的已有cliff边链终止；cliff侧允许有意非相切，不是普通双相切小圆角。",
+  "trigger": {
+    "measurement": "riser_height_mm",
+    "threshold_mm": 16,
+    "challenge_radius_mm": 48,
+    "required_condition": "R48>16; fitted lower-plane tangent run 35.77708764 is inside 103mm lower platform"
+  },
+  "named_constraints": [
+    {
+      "role": "existing_cliff_chain",
+      "geometric_kind": "line_chain",
+      "points": [
+        [
+          0,
+          103,
+          42
+        ],
+        [
+          36,
+          103,
+          42
+        ],
+        [
+          100,
+          103,
+          42
+        ]
+      ],
+      "length_mm": 100,
+      "coplanar_split_segment_x_mm": [
+        0,
+        36
+      ],
+      "exposed_step_segment_x_mm": [
+        36,
+        100
+      ],
+      "mapping_status": "reconstructed_source_candidate"
+    }
+  ],
+  "trials": [
+    {
+      "id": "ordinary-r8",
+      "radius_mm": 8,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "cliff_requested": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "ordinary-r48",
+      "radius_mm": 48,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "cliff_requested": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "cliff-r48",
+      "radius_mm": 48,
+      "role": "target",
+      "requested_feature_parameters": {
+        "cliff_requested": true,
+        "cliff_chain": "existing_cliff_chain",
+        "smooth_support": "lower_z26_plane"
+      },
+      "status": "planned_not_run_by_contract_generation"
+    }
+  ],
+  "protected": [
+    {
+      "role": "boss_material",
+      "point": [
+        18,
+        120,
+        60
+      ],
+      "inside": true
+    },
+    {
+      "role": "outside_right_boss",
+      "point": [
+        80,
+        120,
+        60
+      ],
+      "inside": false
+    },
+    {
+      "role": "unaffected_lower_platform",
+      "point": [
+        50,
+        30,
+        20
+      ],
+      "inside": true
+    }
+  ],
+  "oracles": [
+    {
+      "id": "cliff-admission",
+      "operator": "radius_greater_than_support_height",
+      "expected": true,
+      "parameters": {
+        "radius_mm": 48,
+        "height_mm": 16
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "existing-edge-coverage",
+      "operator": "new_blend_boundary_covers_original_chain",
+      "expected": true,
+      "parameters": {
+        "chain": "existing_cliff_chain",
+        "total_length_mm": 100,
+        "max_gap_mm": 1e-06,
+        "required_fraction": 1.0
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "smooth-side-G1",
+      "operator": "actual_join_oriented_normal_angle_max",
+      "expected": {
+        "max_degrees": 0.1
+      },
+      "parameters": {
+        "support": "z=26"
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "cliff-side-not-tangent",
+      "operator": "actual_join_normal_angle",
+      "expected": {
+        "min_degrees": 1
+      },
+      "parameters": {
+        "support": "nominated_cliff_side",
+        "exclude_terminal_vertices_mm": 0.0001
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "fixture-circle",
+      "operator": "cross_section_circle_tangent_to_lower_plane_and_through_cliff",
+      "expected": true,
+      "parameters": {
+        "radius_mm": 48,
+        "expected_yz_center": [
+          67.22291236000336,
+          74
+        ],
+        "cliff_yz": [
+          103,
+          42
+        ],
+        "smooth_contact_yz": [
+          67.22291236000336,
+          26
+        ]
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    }
+  ],
+  "insufficiency": "现R8<16，不触发cliff；valid及普通双相切不构成功能通过。蓝B不是新增圆角目标。",
+  "gaps": [
+    "需要原生自动cliff或已记录的原生cliff约束映射；普通SmApiFilletEdges没有显式cliff链参数。",
+    "cliff候选链与原图仍属无尺寸逆推；几何fixture通过不认证原CAD精确恢复。"
+  ],
+  "native_capability_requirements": {
+    "existing_generic_entry": "SmApiFilletEdges",
+    "special_mode_mapping": "requires_version_specific_native_or_low_level_API_mapping",
+    "missing_adapter_is_not_kernel_unsupported": true,
+    "ordinary_success_is_not_special_target_pass": true
+  },
+  "universal_result_requirements": {
+    "input_native_valid_before_operation": true,
+    "actual_operation_changed_target_geometry": true,
+    "input_solid_or_sheet_type_preserved": true,
+    "native_valid_after_operation": true,
+    "no_unintended_self_intersection": true,
+    "independent_measurements_required": true,
+    "native_persistence_roundtrip_separate_from_exchange": true,
+    "STEP_missing_is_exchange_not_operation_failure": true,
+    "appearance_acceptance": "pending_unless_human_confirmed"
+  },
+  "functional_pass_rule": "All case-specific admission gates AND all applicable geometry/feature oracles must pass. If required source mapping or mode meaning is not frozen, classify case_spec_incomplete; ordinary probes may still report their independent outcomes.",
+  "source_semantics_evidence": [
+    "history:parasolid-73.3-scenarios.md",
+    "history:outputs/manual-review/case-specs/73-17_cliff_edge-1281.json",
+    "history:outputs/parasolid-preblend/manifest.json"
+  ],
+  "new_native_run_performed_by_this_contract_task": false
+}

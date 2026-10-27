@@ -1,0 +1,28 @@
+{
+  "number": 21,
+  "id": "73-40_under_topol-1310",
+  "title": "既有四分之一圆柱鼻端的圆角前块体",
+  "question": "按底层拓扑关联筛选限位：双侧停止与仅右停左续分开验证，不能用自由传播成功替代。",
+  "family": "b",
+  "source_sha256": "cfe248e5375706097e823041f28ae9b4935597cd2966b62b42ba4a293f6748fe",
+  "reference": {
+    "page": 1310,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": null,
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/21.brep",
+  "fixture": "data/fixtures/21.json",
+  "contract": "data/contracts/21.json",
+  "variants": []
+}

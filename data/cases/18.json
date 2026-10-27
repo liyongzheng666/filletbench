@@ -1,0 +1,33 @@
+{
+  "number": 18,
+  "id": "73-35_to_37_caps-1307",
+  "title": "平面与多面片体封口的两套阶台输入",
+  "question": "分别由独立平面和五折片体截住大圆角，有限对象、支撑延伸与实际终止范围需分开。",
+  "family": "b",
+  "source_sha256": "6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d",
+  "reference": {
+    "page": 1307,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.15,
+      0.21,
+      0.865,
+      0.72
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/18.brep",
+  "fixture": "data/fixtures/18.json",
+  "contract": "data/contracts/18.json",
+  "variants": []
+}

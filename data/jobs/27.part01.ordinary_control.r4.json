@@ -1,0 +1,593 @@
+{
+  "schema_version": 1,
+  "job_id": "27.part01.ordinary_control.r4",
+  "number": 27,
+  "case_number": 27,
+  "case_id": "fig75-02_three_axes-1349",
+  "part_label": "A_vertical_wall+A_horizontal_wall",
+  "source_part_indices": [
+    0,
+    1
+  ],
+  "source_sha256": "9189c7a18ca139d89e72541ea3c1dedbd51152a749e35352823d9195e3ae99f0",
+  "source_brep": "data/models/27.brep",
+  "source_fixture_json": "data/fixtures/27.json",
+  "source_fixture_sha256": "c63800afc5051c4d978430f6f4dd91bebbf4850a973b8e7cddd8629dc4579f4c",
+  "source_fixture_export_sha256": "c63800afc5051c4d978430f6f4dd91bebbf4850a973b8e7cddd8629dc4579f4c",
+  "source_contract_file": "data/contracts/27.json",
+  "source_contract_sha256": "85ccf3cd4e847343f410349b0d5a98c4931e66b0be03d5d10bca1d3a78f9e96e",
+  "semantic_target": {
+    "A": "vertical plane y=0 and horizontal z=0, local x[-12,12], walls height18/floor16, group placement x=-20",
+    "B": "boss footprint x[-6,6], y[-5,5], z[0,14] with floor x[-13,13],y[-12,12],z0, group placement x=+20; choose the declared boss-wall/floor pair and adjacent propagation faces, not all four roots by default"
+  },
+  "operation": "native_surface_surface_fillet",
+  "role": "ordinary_control",
+  "radius_mm": 4,
+  "request_note": "face-pair baseline",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "sheet",
+  "targets": [],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": false,
+  "planner_status": "admission_or_adapter_blocked",
+  "blocked_reason": "multi-input finite surface-pair native adapter is separate from selected-edge runner; no shared topological edge is created by the planner",
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "component_id": "27-fig75-02_three_axes-1349.1",
+      "part_label": "A_vertical_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -30.32,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -24.8,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -20.0,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -9.68,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -30.32,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -24.8,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -20.0,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -9.68,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -30.32,
+          0.0,
+          9.0
+        ],
+        [
+          -24.8,
+          0.0,
+          9.0
+        ],
+        [
+          -20.0,
+          0.0,
+          9.0
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          9.0
+        ],
+        [
+          -9.68,
+          0.0,
+          9.0
+        ],
+        [
+          -30.32,
+          0.0,
+          5.4
+        ],
+        [
+          -24.8,
+          0.0,
+          5.4
+        ],
+        [
+          -20.0,
+          0.0,
+          5.4
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          5.4
+        ],
+        [
+          -9.68,
+          0.0,
+          5.4
+        ],
+        [
+          -30.32,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -24.8,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -20.0,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -9.68,
+          0.0,
+          1.259999999999998
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "27-fig75-02_three_axes-1349.2",
+      "part_label": "A_horizontal_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -30.32,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -30.32,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -30.32,
+          8.0,
+          0.0
+        ],
+        [
+          -30.32,
+          11.2,
+          0.0
+        ],
+        [
+          -30.32,
+          14.88,
+          0.0
+        ],
+        [
+          -24.8,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -24.8,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -24.8,
+          8.0,
+          0.0
+        ],
+        [
+          -24.8,
+          11.2,
+          0.0
+        ],
+        [
+          -24.8,
+          14.88,
+          0.0
+        ],
+        [
+          -20.0,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -20.0,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -20.0,
+          8.0,
+          0.0
+        ],
+        [
+          -20.0,
+          11.2,
+          0.0
+        ],
+        [
+          -20.0,
+          14.88,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          8.0,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          11.2,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          14.88,
+          0.0
+        ],
+        [
+          -9.68,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -9.68,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -9.68,
+          8.0,
+          0.0
+        ],
+        [
+          -9.68,
+          11.2,
+          0.0
+        ],
+        [
+          -9.68,
+          14.88,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "surface_target_candidates": [
+    {
+      "component_id": "27-fig75-02_three_axes-1349.1",
+      "part_label": "A_vertical_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -30.32,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -24.8,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -20.0,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -9.68,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -30.32,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -24.8,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -20.0,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -9.68,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -30.32,
+          0.0,
+          9.0
+        ],
+        [
+          -24.8,
+          0.0,
+          9.0
+        ],
+        [
+          -20.0,
+          0.0,
+          9.0
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          9.0
+        ],
+        [
+          -9.68,
+          0.0,
+          9.0
+        ],
+        [
+          -30.32,
+          0.0,
+          5.4
+        ],
+        [
+          -24.8,
+          0.0,
+          5.4
+        ],
+        [
+          -20.0,
+          0.0,
+          5.4
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          5.4
+        ],
+        [
+          -9.68,
+          0.0,
+          5.4
+        ],
+        [
+          -30.32,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -24.8,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -20.0,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -15.200000000000003,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -9.68,
+          0.0,
+          1.259999999999998
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "27-fig75-02_three_axes-1349.2",
+      "part_label": "A_horizontal_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -30.32,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -30.32,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -30.32,
+          8.0,
+          0.0
+        ],
+        [
+          -30.32,
+          11.2,
+          0.0
+        ],
+        [
+          -30.32,
+          14.88,
+          0.0
+        ],
+        [
+          -24.8,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -24.8,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -24.8,
+          8.0,
+          0.0
+        ],
+        [
+          -24.8,
+          11.2,
+          0.0
+        ],
+        [
+          -24.8,
+          14.88,
+          0.0
+        ],
+        [
+          -20.0,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -20.0,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -20.0,
+          8.0,
+          0.0
+        ],
+        [
+          -20.0,
+          11.2,
+          0.0
+        ],
+        [
+          -20.0,
+          14.88,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          8.0,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          11.2,
+          0.0
+        ],
+        [
+          -15.200000000000003,
+          14.88,
+          0.0
+        ],
+        [
+          -9.68,
+          1.120000000000001,
+          0.0
+        ],
+        [
+          -9.68,
+          4.800000000000001,
+          0.0
+        ],
+        [
+          -9.68,
+          8.0,
+          0.0
+        ],
+        [
+          -9.68,
+          11.2,
+          0.0
+        ],
+        [
+          -9.68,
+          14.88,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/27.part01.ordinary_control.r4.json",
+  "component_index": null,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "number": 33,
+  "case_id": "fig75-09_const_vs_variable-1360",
+  "title": "75-9 两独立偏距反向渐变的非对称圆角",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-09_const_vs_variable-1360.json",
+  "source_spec_sha256": "3ee3a091b88027046bd7c6762c1312b1e1eca7a50d7cbb280a5000f251fcc3aa",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-09_const_vs_variable-1360.png",
+  "current_evidence_scope": "第33项按原图(b)改为两独立偏距反向变化：近端高窄、远端低宽，两接触缘不平行。实际OCC组合椭圆渐变三格式与连续性通过；同输入原生双端R仅作对称控制，不符合该a-law。原图精确最小张力策略和人工外观仍未确认。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-9(a)",
+    "75-9(b)"
+  ],
+  "source_pages": {
+    "physical": [
+      1360,
+      1377
+    ],
+    "printed": [
+      1358,
+      1375
+    ]
+  },
+  "target_change": [
+    "Create asymmetric transition with two independently changing ranges: near end high/narrow, far end low/wide, as in source(b).",
+    "Keep source(a) constant-size symmetric case as a separate control."
+  ],
+  "must_preserve": [
+    "Same y=0 wall and z=0 floor, zero-thickness open shell, x[-12,12], height11.2268032546, depth13.6709170449.",
+    "Same actual contact laws and support dimensions across engines; no symmetric scalar-radius substitute.",
+    "Red drawn arrow is blend spine, not a supplied parameter spine; do not silently use it as one."
+  ],
+  "semantic_target": {
+    "left": "vertical wall y=0",
+    "right": "horizontal wall z=0",
+    "original_common_edge": "x[-12,12],y=z=0",
+    "wall_contact": "(x,0,b(t))",
+    "floor_contact": "(x,a(t),0)",
+    "t": "(12-x)/24"
+  },
+  "required_modes": [
+    {
+      "id": "constant-control",
+      "a": "one frozen constant",
+      "b": "same frozen constant",
+      "source": "75-9(a)"
+    },
+    {
+      "id": "asymmetric-opposed-laws",
+      "a": "4.430011713188297 + 5.581798512365230*t",
+      "b": "8.619960393556429 - 6.186907057055504*t",
+      "source": "75-9(b)"
+    }
+  ],
+  "diagnostic_parameters": {
+    "a_near_mm": 4.430011713188297,
+    "a_far_mm": 10.011810225553527,
+    "b_near_mm": 8.619960393556429,
+    "b_far_mm": 2.433053336500925,
+    "law_type": "independent scalar distance-to-support laws",
+    "standard_quarter_ellipse_proxy": "(y/a(t)-1)^2+(z/b(t)-1)^2=1 on first-quadrant arc",
+    "source_least_tension_exact": false
+  },
+  "feature_oracles": [
+    {
+      "id": "two_contact_laws",
+      "quantity": "actual wall and floor rail coordinates",
+      "expected": "a increases while b decreases from near to far",
+      "method": "Intersect/read actual BRep at 11+ constant-x stations; wall rail height b(t), floor rail y=a(t), match world station and endpoints.",
+      "scope": "feature_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "asymmetry",
+      "quantity": "a(t)/b(t) and end aspect ratios",
+      "expected": "near<1, far>1, with actual values matching law",
+      "method": "Recover two contacts independently; equal end offsets fail target even if native variable-R succeeds.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "section_type",
+      "quantity": "source-defined asymmetric least-tension ellipse or explicit proxy",
+      "expected": "type and algorithm provenance declared",
+      "method": "Fit sampled actual sections to normalized conic; if using quarter-ellipse proxy check its equation separately and do not claim exact Parasolid least-tension strategy.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "rail_monotonicity",
+      "quantity": "opposed rail trends",
+      "expected": "positive da/dt and negative db/dt",
+      "method": "Compute rail derivatives or monotone station differences; do not judge from camera perspective.",
+      "scope": "feature_required"
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmApiVariableRadiusFillet",
+      "evidence": "SM_API/src/SmApiBrep.cpp creates one SmLinearFilletLaw and SM_FS_VARIABLE_RADIUS",
+      "expresses": "One shared start/end radius law, useful symmetric control",
+      "boundary": "Inspected convenience entry cannot independently specify opposite left/right distance laws. It is not the target."
+    },
+    {
+      "entry": "SmSurfaceSurfaceFS signed two offsets / SmConstantRadiusAssistedFS",
+      "evidence": "SMLib/inc/SmFilletStandardSolver.h:96-184; actual SurfaceSurfaceFillet implementation",
+      "expresses": "Constant two-offset surface-pair candidate can explore asymmetric section",
+      "boundary": "No two independent variable laws and no verified Parasolid least-tension conic contract in current path."
+    },
+    {
+      "entry": "Custom SmFilletSolver/FSG or explicit BSpline support/contact construction",
+      "evidence": "SMLib/inc/SmFilletSolver.h virtual interfaces",
+      "expresses": "Potential extension/explicit composition honoring fixed rails",
+      "boundary": "Record as extension/composition; not native automatic equivalent without actual verified solver."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "Two independent opposite range laws are not exposed in current bridge; custom low-level solver/explicit construction required.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "Exact Parasolid least-tension curve law, parameter spine and original calibrated dimensions are unknown; distinguish proxy-geometry from source-algorithm score.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "inconsistent_if": [
+    "A single scalar R law makes both offsets equal.",
+    "Only one end appears oblique because of camera.",
+    "a/b are called one radius.",
+    "Actual contacts change because supports were resized to force image similarity."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/33.brep",
+  "input_brep_sha256": "6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47"
+}

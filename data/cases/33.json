@@ -1,0 +1,33 @@
+{
+  "number": 33,
+  "id": "fig75-09_const_vs_variable-1360",
+  "title": "75-9 两独立偏距反向渐变的非对称圆角",
+  "question": "两条接触偏距law反向变化，a(x)与b(x)独立；普通单一变半径不能替代斜向非对称过渡。",
+  "family": "c",
+  "source_sha256": "6286c7255a4d294becb860ab95afedcf03e49b88b13026003b198c9385affb47",
+  "reference": {
+    "page": 1360,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.11217019133937564,
+      0.4543162393162393,
+      0.7770543806646526,
+      0.7985327635327636
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/33.brep",
+  "fixture": "data/fixtures/33.json",
+  "contract": "data/contracts/33.json",
+  "variants": []
+}

@@ -1,0 +1,1 @@
+{"name":"r14-cross","radius_mm":14,"run_dir":"history:r14-cross","exit_code":0,"stdout":"INIT\nSTITCHED 1 gaps 0 0\nCALL SmApiFilletEdges R=14 selected=1\nRETURN 1000 milliseconds 1.8985\nREADBACK_BEGIN\nREADBACK_RETURN 1000\n","stderr":""}

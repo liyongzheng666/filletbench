@@ -1,0 +1,98 @@
+{
+  "schema": "filletbench.special-driver-source.v1",
+  "files": [
+    {
+      "file": "case07.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-full/family-a-native/case07/code/runner.cpp",
+      "historical_source_sha256": "a4680dbebf4e75a0c6d20333e6ee2b55d93e6fd43f33e65908aecba026dba067",
+      "portable_source_sha256": "a4680dbebf4e75a0c6d20333e6ee2b55d93e6fd43f33e65908aecba026dba067",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "case08.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case08/code/run.cpp",
+      "historical_source_sha256": "e516253b1182c0e2e8681a80120eb760448fb22c489f67b9af1bebe7c8a5bb08",
+      "portable_source_sha256": "e516253b1182c0e2e8681a80120eb760448fb22c489f67b9af1bebe7c8a5bb08",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "case23.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case23/code/case23.cpp",
+      "historical_source_sha256": "3201abc84aaae14ce81338664b48922af6b530ee740f781159bd4d304353b54d",
+      "portable_source_sha256": "3201abc84aaae14ce81338664b48922af6b530ee740f781159bd4d304353b54d",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "base-helpers.hpp",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case23/code/base-helpers.hpp",
+      "historical_source_sha256": "78906ba72f2c4d93481970c013bd491297883ef8bcf670fba27771ecbf99ecea",
+      "portable_source_sha256": "78906ba72f2c4d93481970c013bd491297883ef8bcf670fba27771ecbf99ecea",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "case34.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case34/code/case34.cpp",
+      "historical_source_sha256": "819103e53912ab8936d9e73793c2657ecf128ef3eb88e73b45e0ea11b5ca24f3",
+      "portable_source_sha256": "819103e53912ab8936d9e73793c2657ecf128ef3eb88e73b45e0ea11b5ca24f3",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "case35.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case35/code/runner.cpp",
+      "historical_source_sha256": "64635770e36c63a1543b7dd1995b9f41704934078390898f3a47c2324dcf1c43",
+      "portable_source_sha256": "64635770e36c63a1543b7dd1995b9f41704934078390898f3a47c2324dcf1c43",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "surface_pair.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-full/family-c-native/case27/code/runner.cpp",
+      "historical_source_sha256": "ef3da4361ef854e80ecc83ca1887392c94044023907dad7a105bdd4357b64168",
+      "portable_source_sha256": "ef3da4361ef854e80ecc83ca1887392c94044023907dad7a105bdd4357b64168",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "surface_controls.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-full/family-c-native/case28/code/runner.cpp",
+      "historical_source_sha256": "d7ff993590d257390640276ab6f987c0e377ad0029c2cfe0383cceeeff9dd641",
+      "portable_source_sha256": "d7ff993590d257390640276ab6f987c0e377ad0029c2cfe0383cceeeff9dd641",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "cap_bridge.cpp",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case17/runs/20261026T215639.291387-body/bridge.cpp",
+      "historical_source_sha256": "2880a9248e41a0cfac2a99de7a6a2201a631ca17d0774d8d99a068095f917a2c",
+      "portable_source_sha256": "2880a9248e41a0cfac2a99de7a6a2201a631ca17d0774d8d99a068095f917a2c",
+      "changes": [],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "cap_adapter.py",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case17/runs/20261026T215639.291387-body/adapter.py",
+      "historical_source_sha256": "a1f5f044a8d910153b3a74c895eb59ce2ac2657c73e476bbff17d4b7b3498cb1",
+      "portable_source_sha256": "fc5b570137cf93a62a2d44cfb4e92c00e533bc629685d64ed615dc35f5304faf",
+      "changes": [
+        "load bridge path and source commit from fresh runtime environment; remove historical architecture assertion"
+      ],
+      "sdk_code_vendored": false
+    },
+    {
+      "file": "cap_trial.py",
+      "historical_source": "history:outputs/manual-review/smlib-pilot/case17/runs/20261026T215639.291387-body/run_trial.py",
+      "historical_source_sha256": "8188b8e2282d085168f72f8a035e0be059d51772f5e3dc0bfa67e6eb47d75a0d",
+      "portable_source_sha256": "8ee6deaf471c04257485be1d9762fe3481e635f07622ae533a197b2d637500e5",
+      "changes": [
+        "import portable cap bridge wrapper; source hashes refer to bundled consumer sources; omit copying historical build files"
+      ],
+      "sdk_code_vendored": false
+    }
+  ],
+  "scope": "These are benchmark consumer drivers; SDK headers and core library are external."
+}

@@ -1,0 +1,1 @@
+{"name":"r18-cross","radius_mm":18,"run_dir":"history:r18-cross","exit_code":0,"stdout":"INIT\nSTITCHED 1 gaps 0 0\nCALL SmApiFilletEdges R=18 selected=1\nRETURN 1000 milliseconds 1.33721\nREADBACK_BEGIN\nREADBACK_RETURN 1000\n","stderr":""}

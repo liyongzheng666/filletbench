@@ -1,0 +1,87 @@
+name: Verify, reproduce and publish
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: filletbench-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python bench.py verify
+      - run: python -m unittest discover -s tests
+  occt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements-occt.txt
+      - run: python bench.py run --engine occt --case 8 --radius 18 --out runs/ci-occt
+      - name: Confirm a real native call, not a placeholder
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(next(pathlib.Path('runs/ci-occt').rglob('summary.json')).read_text())
+          assert s['native_call_executed'] is True, s
+          assert s['source_sha256'], s
+          PY
+  smlib:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch pinned open-source kernel
+        run: |
+          git clone --filter=blob:none --no-checkout https://github.com/NVIDIA-Omniverse/usd-brep.git .cache/usd-brep
+          git -C .cache/usd-brep checkout c9c5979f04cea8c38213004d4f04df0dcfb40d05
+      - name: Build kernel from upstream sources
+        run: |
+          cmake -S adapters/smlib/core -B .cache/smlib-core -DSMLIB_ROOT="$PWD/.cache/usd-brep" -DCMAKE_BUILD_TYPE=Release
+          cmake --build .cache/smlib-core --parallel 4
+      - name: Run exact fixture import and native fillet
+        env:
+          SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
+          SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
+        run: python bench.py run --engine smlib --case 8 --radius 18 --out runs/ci-smlib
+      - name: Confirm an admitted input and actual native call
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(next(pathlib.Path('runs/ci-smlib').rglob('summary.json')).read_text())
+          assert s['input_import']['passed'] is True, s
+          assert s['execution']['native_call_started'] is True, s
+          PY
+  pages:
+    if: github.event_name != 'pull_request'
+    needs: [validate, occt, smlib]
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: web
+      - name: Publish viewer
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,653 @@
+{
+  "schema_version": 1,
+  "case_number": 5,
+  "case_id": "73-20_y_combos-1285",
+  "title": "Y 形补片末端：短底座 D 形立柱",
+  "contract_status": "feature_contract_defined_with_explicit_admission_gates",
+  "source_fixture_tier": "exploratory_reconstruction",
+  "source_pdf_dimensions_known": false,
+  "units": "mm in frozen reconstructed fixture",
+  "input_brep": "data/models/05.brep",
+  "input_brep_sha256": "62ac0244bce0ad15aaf2ff87d796676a1ca8d23fc809e3ad55036656dd99ab92",
+  "current_test_spec": "history:outputs/manual-review/case-specs/73-20_y_combos-1285.json",
+  "current_test_spec_sha256": "abe2fec6c082fb0cee27639872454b9b491eca06bc4dddebd6204a9027de872a",
+  "source_recipe": "history:outputs/parasolid-preblend/code/groups/group_a.py",
+  "refinement_recipe": null,
+  "parts": [
+    {
+      "part_label": "fig22_left_input",
+      "source_part_bbox": [
+        -17.0,
+        -48.0,
+        0.0,
+        17.0,
+        17.0,
+        72.0
+      ],
+      "world_target_fingerprints": [
+        {
+          "occ_reference_edge_index_hint": 8,
+          "source_curve_representation": "Circle",
+          "geometric_kind": "circle_arc",
+          "world_endpoints_mm": [
+            [
+              -17.0,
+              17.0,
+              28.0
+            ],
+            [
+              17.0,
+              17.0,
+              28.0
+            ]
+          ],
+          "length_mm": 53.40707511102643,
+          "sampled_curve_points_mm": [
+            [
+              -17.0,
+              17.0,
+              28.0
+            ],
+            [
+              -16.912778497662217,
+              15.280138526213655,
+              28.0
+            ],
+            [
+              -16.652009001292406,
+              13.577925158492782,
+              28.0
+            ],
+            [
+              -16.220367358800832,
+              11.910826909452918,
+              28.0
+            ],
+            [
+              -15.622282797543924,
+              10.295950463073591,
+              28.0
+            ],
+            [
+              -14.8638924744579,
+              8.74986663697163,
+              28.0
+            ],
+            [
+              -13.952978500523704,
+              7.28844034338854,
+              28.0
+            ],
+            [
+              -12.898888085777454,
+              5.926667793722233,
+              28.0
+            ],
+            [
+              -11.712437624286682,
+              4.678522617104971,
+              28.0
+            ],
+            [
+              -10.405801703310283,
+              3.556812472059134,
+              28.0
+            ],
+            [
+              -8.992388175558377,
+              2.573047622589243,
+              28.0
+            ],
+            [
+              -7.4867005764798,
+              1.737322827297401,
+              28.0
+            ],
+            [
+              -5.904189298361962,
+              1.058213753499638,
+              28.0
+            ],
+            [
+              -4.261093048398267,
+              0.54268897927453,
+              28.0
+            ],
+            [
+              -2.574272217577822,
+              0.19603848642210764,
+              28.0
+            ],
+            [
+              -0.8610358702581358,
+              0.021819378092104103,
+              28.0
+            ],
+            [
+              0.861035870258096,
+              0.02181937809210055,
+              28.0
+            ],
+            [
+              2.574272217577783,
+              0.19603848642210409,
+              28.0
+            ],
+            [
+              4.261093048398229,
+              0.5426889792745229,
+              28.0
+            ],
+            [
+              5.904189298361925,
+              1.0582137534996257,
+              28.0
+            ],
+            [
+              7.486700576479764,
+              1.7373228272973815,
+              28.0
+            ],
+            [
+              8.992388175558343,
+              2.5730476225892236,
+              28.0
+            ],
+            [
+              10.405801703310251,
+              3.556812472059109,
+              28.0
+            ],
+            [
+              11.712437624286656,
+              4.678522617104946,
+              28.0
+            ],
+            [
+              12.89888808577743,
+              5.9266677937222045,
+              28.0
+            ],
+            [
+              13.952978500523685,
+              7.288440343388512,
+              28.0
+            ],
+            [
+              14.863892474457884,
+              8.749866636971602,
+              28.0
+            ],
+            [
+              15.62228279754391,
+              10.295950463073563,
+              28.0
+            ],
+            [
+              16.220367358800825,
+              11.910826909452894,
+              28.0
+            ],
+            [
+              16.652009001292402,
+              13.577925158492755,
+              28.0
+            ],
+            [
+              16.912778497662217,
+              15.280138526213628,
+              28.0
+            ],
+            [
+              17.0,
+              16.999999999999947,
+              28.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -17.0,
+                -48.0,
+                28.0,
+                17.0,
+                17.0,
+                28.0
+              ]
+            },
+            {
+              "index": 6,
+              "type": "Cylinder",
+              "normal": [
+                -6.123233995736766e-17,
+                -1.0,
+                0.0
+              ],
+              "bbox": [
+                -17.0,
+                0.0,
+                28.0,
+                17.0,
+                17.0,
+                72.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 16.97818062190787,
+          "source_sample_planarity_error_mm": 0.0,
+          "geometric_circle": {
+            "center_world_mm": [
+              3.0573779056264403e-15,
+              17.0,
+              28.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius_mm": 17.0,
+            "max_sample_radial_error_mm": 7.105427357601002e-15
+          }
+        },
+        {
+          "occ_reference_edge_index_hint": 9,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              17.0,
+              -48.0,
+              28.0
+            ],
+            [
+              17.0,
+              17.0,
+              28.0
+            ]
+          ],
+          "length_mm": 65.0,
+          "sampled_curve_points_mm": [
+            [
+              17.0,
+              -48.0,
+              28.0
+            ],
+            [
+              17.0,
+              -45.903225806451616,
+              28.0
+            ],
+            [
+              17.0,
+              -43.806451612903224,
+              28.0
+            ],
+            [
+              17.0,
+              -41.70967741935484,
+              28.0
+            ],
+            [
+              17.0,
+              -39.61290322580645,
+              28.0
+            ],
+            [
+              17.0,
+              -37.516129032258064,
+              28.0
+            ],
+            [
+              17.0,
+              -35.41935483870968,
+              28.0
+            ],
+            [
+              17.0,
+              -33.32258064516129,
+              28.0
+            ],
+            [
+              17.0,
+              -31.2258064516129,
+              28.0
+            ],
+            [
+              17.0,
+              -29.129032258064512,
+              28.0
+            ],
+            [
+              17.0,
+              -27.032258064516125,
+              28.0
+            ],
+            [
+              17.0,
+              -24.935483870967737,
+              28.0
+            ],
+            [
+              17.0,
+              -22.83870967741935,
+              28.0
+            ],
+            [
+              17.0,
+              -20.74193548387096,
+              28.0
+            ],
+            [
+              17.0,
+              -18.645161290322573,
+              28.0
+            ],
+            [
+              17.0,
+              -16.548387096774185,
+              28.0
+            ],
+            [
+              17.0,
+              -14.4516129032258,
+              28.0
+            ],
+            [
+              17.0,
+              -12.354838709677416,
+              28.0
+            ],
+            [
+              17.0,
+              -10.258064516129032,
+              28.0
+            ],
+            [
+              17.0,
+              -8.161290322580648,
+              28.0
+            ],
+            [
+              17.0,
+              -6.064516129032263,
+              28.0
+            ],
+            [
+              17.0,
+              -3.967741935483879,
+              28.0
+            ],
+            [
+              17.0,
+              -1.8709677419354946,
+              28.0
+            ],
+            [
+              17.0,
+              0.2258064516128897,
+              28.0
+            ],
+            [
+              17.0,
+              2.322580645161274,
+              28.0
+            ],
+            [
+              17.0,
+              4.419354838709658,
+              28.0
+            ],
+            [
+              17.0,
+              6.516129032258043,
+              28.0
+            ],
+            [
+              17.0,
+              8.612903225806427,
+              28.0
+            ],
+            [
+              17.0,
+              10.709677419354811,
+              28.0
+            ],
+            [
+              17.0,
+              12.806451612903196,
+              28.0
+            ],
+            [
+              17.0,
+              14.90322580645158,
+              28.0
+            ],
+            [
+              17.0,
+              17.0,
+              28.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -17.0,
+                -48.0,
+                28.0,
+                17.0,
+                17.0,
+                28.0
+              ]
+            },
+            {
+              "index": 5,
+              "type": "Plane",
+              "normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "bbox": [
+                17.0,
+                -48.0,
+                0.0,
+                17.0,
+                17.0,
+                28.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      ],
+      "ordinary_probe_radii_mm": [
+        5,
+        3,
+        1
+      ],
+      "probe_radius_policy": "run each requested radius independently, do not stop at first small-radius success",
+      "selection_note": "图73-22左输入：半圆柱脚Edge8与底座右上沿Edge9，在(17,17,28)相交。",
+      "input_source_SHA_matches_record": true
+    }
+  ],
+  "family": "y_terminal_patch",
+  "target_semantics": "短底座D形立柱在指定Y角形成终端过渡补片；圆柱脚与底座外沿相交，不能把任意小圆角或尾端裁剪当Y补片完成。",
+  "trigger": {
+    "Y_vertex_world": [
+      17,
+      17,
+      28
+    ],
+    "selected_branches": 2,
+    "all_incident_edge_valence_min": 3,
+    "required_mixed_convexity": true
+  },
+  "named_constraints": [
+    {
+      "role": "unblended_terminal_geometry",
+      "part": "fig22_left_input",
+      "D_pillar_center_xy": [
+        0,
+        17
+      ],
+      "radius_mm": 17,
+      "height_mm": 44,
+      "base_bbox": [
+        -17,
+        -48,
+        0,
+        17,
+        17,
+        28
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "id": "ordinary-r5",
+      "radius_mm": 5,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "y_mode": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "terminal-Y-r5",
+      "radius_mm": 5,
+      "role": "target",
+      "requested_feature_parameters": {
+        "y_mode": true,
+        "vertex": [
+          17,
+          17,
+          28
+        ]
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "terminal-Y-r3",
+      "radius_mm": 3,
+      "role": "secondary_target",
+      "requested_feature_parameters": {
+        "y_mode": true,
+        "vertex": [
+          17,
+          17,
+          28
+        ]
+      },
+      "status": "planned_not_run_by_contract_generation"
+    }
+  ],
+  "protected": [
+    {
+      "role": "pillar_back_plane",
+      "plane": "y=17",
+      "exclude_target_neighborhood_mm": 15
+    },
+    {
+      "role": "remaining_vertical_edges",
+      "preserve_outside_roi": true
+    }
+  ],
+  "oracles": [
+    {
+      "id": "Y-terminal-admission",
+      "operator": "incident_face_material_convexity_and_tangency",
+      "expected": true,
+      "parameters": {
+        "vertex": [
+          17,
+          17,
+          28
+        ]
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "terminal-patch",
+      "operator": "generated_surface_group_replaces_Y_junction_without_open_holes",
+      "expected": true,
+      "parameters": {
+        "retain_one_valid_solid": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "terminal-G1",
+      "operator": "actual_join_oriented_normal_angle_max",
+      "expected": {
+        "max_degrees": 0.1
+      },
+      "parameters": {
+        "scope": "generated patch and incoming blend boundaries"
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "no-unrequested-edges",
+      "operator": "target_coverage_and_outside_roi_geometry_preserved",
+      "expected": true,
+      "parameters": {
+        "max_boundary_distance_mm": 1e-06
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    }
+  ],
+  "insufficiency": "原普通R5/R3/R1未传Y模式；保留solid/新面并不能认证终端Y补片。",
+  "gaps": [
+    "源图终端平滑边延拓/封口的具体映射需从新face tracking确定，未冻结时只判普通圆角可构造。"
+  ],
+  "native_capability_requirements": {
+    "existing_generic_entry": "SmApiFilletEdges",
+    "special_mode_mapping": "requires_version_specific_native_or_low_level_API_mapping",
+    "missing_adapter_is_not_kernel_unsupported": true,
+    "ordinary_success_is_not_special_target_pass": true
+  },
+  "universal_result_requirements": {
+    "input_native_valid_before_operation": true,
+    "actual_operation_changed_target_geometry": true,
+    "input_solid_or_sheet_type_preserved": true,
+    "native_valid_after_operation": true,
+    "no_unintended_self_intersection": true,
+    "independent_measurements_required": true,
+    "native_persistence_roundtrip_separate_from_exchange": true,
+    "STEP_missing_is_exchange_not_operation_failure": true,
+    "appearance_acceptance": "pending_unless_human_confirmed"
+  },
+  "functional_pass_rule": "All case-specific admission gates AND all applicable geometry/feature oracles must pass. If required source mapping or mode meaning is not frozen, classify case_spec_incomplete; ordinary probes may still report their independent outcomes.",
+  "source_semantics_evidence": [
+    "history:parasolid-73.3-scenarios.md",
+    "history:outputs/manual-review/case-specs/73-20_y_combos-1285.json",
+    "history:outputs/parasolid-preblend/manifest.json"
+  ],
+  "new_native_run_performed_by_this_contract_task": false
+}

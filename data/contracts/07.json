@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "case_number": 7,
+  "case_id": "73-24_preserve_hole-1289",
+  "title": "拓扑保留：双孔与凸台块体",
+  "contract_status": "feature_contract_defined_with_explicit_admission_gates",
+  "source_fixture_tier": "exploratory_reconstruction",
+  "source_pdf_dimensions_known": false,
+  "units": "mm in frozen reconstructed fixture",
+  "input_brep": "data/models/07.brep",
+  "input_brep_sha256": "a184a68b90fcf588825596b224c466c9418d6c0d68e168100cd15d352d0564c5",
+  "current_test_spec": "history:outputs/manual-review/case-specs/73-24_preserve_hole-1289.json",
+  "current_test_spec_sha256": "6c0346c7f6ff80394d4cd27cb6859257ff1f5136554687df0119efbe0fc475e3",
+  "source_recipe": "history:outputs/parasolid-preblend/code/groups/group_a.py",
+  "refinement_recipe": null,
+  "parts": [
+    {
+      "part_label": "two_holes_raised_pad",
+      "source_part_bbox": [
+        -55.0,
+        -26.0,
+        0.0,
+        55.0,
+        26.0,
+        40.0
+      ],
+      "world_target_fingerprints": [
+        {
+          "occ_reference_edge_index_hint": 7,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              55.0,
+              -26.0,
+              32.0
+            ],
+            [
+              -55.0,
+              -26.0,
+              32.0
+            ]
+          ],
+          "length_mm": 110.0,
+          "sampled_curve_points_mm": [
+            [
+              -55.0,
+              -26.0,
+              32.0
+            ],
+            [
+              -51.45161290322581,
+              -26.0,
+              32.0
+            ],
+            [
+              -47.903225806451616,
+              -26.0,
+              32.0
+            ],
+            [
+              -44.35483870967742,
+              -26.0,
+              32.0
+            ],
+            [
+              -40.806451612903224,
+              -26.0,
+              32.0
+            ],
+            [
+              -37.25806451612903,
+              -26.0,
+              32.0
+            ],
+            [
+              -33.70967741935484,
+              -26.0,
+              32.0
+            ],
+            [
+              -30.161290322580648,
+              -26.0,
+              32.0
+            ],
+            [
+              -26.612903225806456,
+              -26.0,
+              32.0
+            ],
+            [
+              -23.064516129032263,
+              -26.0,
+              32.0
+            ],
+            [
+              -19.51612903225807,
+              -26.0,
+              32.0
+            ],
+            [
+              -15.967741935483879,
+              -26.0,
+              32.0
+            ],
+            [
+              -12.419354838709687,
+              -26.0,
+              32.0
+            ],
+            [
+              -8.870967741935495,
+              -26.0,
+              32.0
+            ],
+            [
+              -5.3225806451613025,
+              -26.0,
+              32.0
+            ],
+            [
+              -1.7741935483871103,
+              -26.0,
+              32.0
+            ],
+            [
+              1.7741935483870819,
+              -26.0,
+              32.0
+            ],
+            [
+              5.322580645161274,
+              -26.0,
+              32.0
+            ],
+            [
+              8.870967741935466,
+              -26.0,
+              32.0
+            ],
+            [
+              12.419354838709666,
+              -26.0,
+              32.0
+            ],
+            [
+              15.967741935483858,
+              -26.0,
+              32.0
+            ],
+            [
+              19.51612903225805,
+              -26.0,
+              32.0
+            ],
+            [
+              23.064516129032242,
+              -26.0,
+              32.0
+            ],
+            [
+              26.612903225806434,
+              -26.0,
+              32.0
+            ],
+            [
+              30.161290322580626,
+              -26.0,
+              32.0
+            ],
+            [
+              33.70967741935482,
+              -26.0,
+              32.0
+            ],
+            [
+              37.25806451612901,
+              -26.0,
+              32.0
+            ],
+            [
+              40.8064516129032,
+              -26.0,
+              32.0
+            ],
+            [
+              44.354838709677395,
+              -26.0,
+              32.0
+            ],
+            [
+              47.90322580645159,
+              -26.0,
+              32.0
+            ],
+            [
+              51.45161290322578,
+              -26.0,
+              32.0
+            ],
+            [
+              55.0,
+              -26.0,
+              32.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 2,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "bbox": [
+                -55.0,
+                -26.0,
+                0.0,
+                55.0,
+                -26.0,
+                32.0
+              ]
+            },
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -55.0,
+                -26.0,
+                32.0,
+                55.0,
+                26.0,
+                32.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "ordinary_probe_radii_mm": [
+        30,
+        24,
+        16
+      ],
+      "probe_radius_policy": "run each requested radius independently, do not stop at first small-radius success",
+      "selection_note": "图73-24大圆角所在基块前上沿Edge7：Y=-26/Z32，平行X，长110；不选凸台边或孔口。",
+      "input_source_SHA_matches_record": true
+    }
+  ],
+  "family": "preserve_overlapped_topology",
+  "target_semantics": "大R圆角覆盖原孔口与raised pad时，transfer=no允许删除这些重叠拓扑，transfer=yes将孔和凸台保留到新blend；只保留孔数而忽略凸台不完整。",
+  "trigger": {
+    "base_bbox": [
+      -55,
+      -26,
+      0,
+      55,
+      26,
+      32
+    ],
+    "hole_centers_xy": [
+      [
+        -34,
+        0
+      ],
+      [
+        34,
+        0
+      ]
+    ],
+    "hole_radius_mm": 3.6,
+    "pad_bbox": [
+      -17.5,
+      -6.5,
+      32,
+      17.5,
+      6.5,
+      40
+    ],
+    "first_pad_encounter_R_mm": 19.5,
+    "first_hole_encounter_R_mm": 22.4,
+    "full_original_hole_mouth_covered_R_mm": 29.6,
+    "strong_challenge_R_mm": 30
+  },
+  "named_constraints": [],
+  "trials": [
+    {
+      "id": "ordinary-r16",
+      "radius_mm": 16,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "transfer_requested": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "partial-encounter-r24",
+      "radius_mm": 24,
+      "role": "boundary_control",
+      "requested_feature_parameters": {
+        "transfer_requested": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "transfer-no-r30",
+      "radius_mm": 30,
+      "role": "target",
+      "requested_feature_parameters": {
+        "transfer": "no"
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "transfer-yes-r30",
+      "radius_mm": 30,
+      "role": "target",
+      "requested_feature_parameters": {
+        "transfer": "yes"
+      },
+      "status": "planned_not_run_by_contract_generation"
+    }
+  ],
+  "protected": [
+    {
+      "role": "base_back_and_bottom",
+      "preserve_outside_rounding_and_feature_regions": true
+    }
+  ],
+  "oracles": [
+    {
+      "id": "topology-overlap-admission",
+      "operator": "requested_fillet_footprint_covers_input_feature_mouths",
+      "expected": true,
+      "parameters": {
+        "required_for_target": true,
+        "R_mm": 30,
+        "hole_mouth_y_interval_mm": [
+          -3.6,
+          3.6
+        ],
+        "pad_front_y_mm": -6.5,
+        "fillet_top_contact_y_mm": 4
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "transfer-yes-holes",
+      "operator": "new_blend_boundary_has_two_through_hole_cycles",
+      "expected": 2,
+      "parameters": {
+        "centers_xy": [
+          [
+            -34,
+            0
+          ],
+          [
+            34,
+            0
+          ]
+        ],
+        "radius_mm": 3.6,
+        "allow_face_partition_changes": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "transfer-yes-pad",
+      "operator": "raised_pad_stays_attached_and_top_feature_preserved",
+      "expected": true,
+      "parameters": {
+        "top_z_mm": 40,
+        "top_footprint_xy": [
+          -17.5,
+          -6.5,
+          17.5,
+          6.5
+        ],
+        "material_probe": [
+          0,
+          0,
+          36
+        ],
+        "no_floating_pad": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "transfer-no",
+      "operator": "overlapped_hole_and_pad_topology_absent_on_carrier_blend",
+      "expected": true,
+      "parameters": {
+        "material_probe_pad": [
+          0,
+          0,
+          36
+        ],
+        "expected_pad_probe_inside": false,
+        "no_hole_entry_cycles": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "controlled-fixture-occupancy",
+      "operator": "analytic_rounded_carrier_plus_transferred_features",
+      "expected": true,
+      "parameters": {
+        "R_mm": 30,
+        "circle_yz_center": [
+          4,
+          2
+        ],
+        "circle_radius_mm": 30,
+        "no_mode": "carrier only",
+        "yes_mode": "carrier minus through cylinders plus pad extended to curved carrier",
+        "status": "explicit_fixture_oracle_not_original_Parasolid_CAD"
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    }
+  ],
+  "insufficiency": "R16<19.5/22.4，既不遇凸台也不遇孔，普通成功不验证transfer。R24只触部分孔口，R30才完整覆盖两孔口并触及pad。",
+  "gaps": [
+    "需确认原生重叠拓扑transfer控制或可证明的自动默认行为；普通keep-hole boolean/composition不计原生transfer。",
+    "YES/NO参考中的pad如何附着应有真实拓扑追踪；不得保留悬空pad伪造通过。"
+  ],
+  "native_capability_requirements": {
+    "existing_generic_entry": "SmApiFilletEdges",
+    "special_mode_mapping": "requires_version_specific_native_or_low_level_API_mapping",
+    "missing_adapter_is_not_kernel_unsupported": true,
+    "ordinary_success_is_not_special_target_pass": true
+  },
+  "universal_result_requirements": {
+    "input_native_valid_before_operation": true,
+    "actual_operation_changed_target_geometry": true,
+    "input_solid_or_sheet_type_preserved": true,
+    "native_valid_after_operation": true,
+    "no_unintended_self_intersection": true,
+    "independent_measurements_required": true,
+    "native_persistence_roundtrip_separate_from_exchange": true,
+    "STEP_missing_is_exchange_not_operation_failure": true,
+    "appearance_acceptance": "pending_unless_human_confirmed"
+  },
+  "functional_pass_rule": "All case-specific admission gates AND all applicable geometry/feature oracles must pass. If required source mapping or mode meaning is not frozen, classify case_spec_incomplete; ordinary probes may still report their independent outcomes.",
+  "source_semantics_evidence": [
+    "history:parasolid-73.3-scenarios.md",
+    "history:outputs/manual-review/case-specs/73-24_preserve_hole-1289.json",
+    "history:outputs/parasolid-preblend/manifest.json"
+  ],
+  "new_native_run_performed_by_this_contract_task": false
+}

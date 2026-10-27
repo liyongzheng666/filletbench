@@ -1,0 +1,254 @@
+{
+  "number": 20,
+  "case_id": "73-39_patch-1309",
+  "title": "凹弧前缘与拔模前壁的圆角前输入",
+  "feature_family": "limit_topols_patch_no_vs_yes",
+  "source_feature": {
+    "meaning": "Compare no attempt to bridge between given limits versus attempting a blend-like bridge using limits and underlying associations. patch_no remains a closed solid; patch_yes is an attempt, not a guaranteed smooth pass.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-39_patch-1309.png",
+    "source_sha256": "10659fc0435b986f5232b38cce9d99b9fb530aa26fa877206c1147c64c392e44",
+    "reference_crop": [
+      0.375,
+      0.42,
+      0.87,
+      0.81
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-39_patch-1309.json",
+    "current_spec_sha256": "405b97ff99e14fa294b5ed6c56e510f71ef2ca86f8878d95d09d9bd59592ead6",
+    "source_parameter_status": "not_frozen"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-39_patch-1309.brep",
+    "brep_sha256": "3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd",
+    "step_path": "history:outputs/parasolid-preblend/models/73-39_patch-1309.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-39_patch-1309.json",
+    "bbox_world_mm": [
+      -35.0,
+      -1.7763568394002505e-15,
+      -7.105427357601002e-15,
+      35.0,
+      43.0,
+      24.00000000000002
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "drafted_front_patch_seed"
+    ],
+    "parts_geometry_immutable": [
+      "Frozen low-confidence drafted_front_patch_seed input and pre-existing concave/rounded front walls; use current BRep hash, not older non-drafted group_b outline."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "candidate_side_roots": "current two side-longitudinal upper edges in frozen world fingerprints",
+      "candidate_full_front_chain": "side roots plus the five-segment front upper chain; documentary OCC7/10/16..20",
+      "source_limits": null,
+      "source_unders": null,
+      "illustrative_bridge_ROI": {
+        "x": [
+          -35,
+          35
+        ],
+        "y": [
+          3.8,
+          18.1
+        ],
+        "z": [
+          22.9,
+          24.1
+        ]
+      }
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "drafted_front_patch_seed",
+        "documentary_original_OCC_edge_index_1based": 7,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 37.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            -35.0,
+            6.0,
+            24.0
+          ],
+          [
+            -35.0,
+            43.0,
+            24.0
+          ]
+        ],
+        "aabb_world_mm": [
+          -35.0,
+          6.0,
+          24.0,
+          -35.0,
+          43.0,
+          24.0
+        ],
+        "sample_points_world_mm": [
+          [
+            -35.0,
+            6.0,
+            24.0
+          ],
+          [
+            -35.0,
+            43.0,
+            24.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "drafted_front_patch_seed",
+        "documentary_original_OCC_edge_index_1based": 10,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 37.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            35.0,
+            43.0,
+            24.0
+          ],
+          [
+            35.0,
+            6.0,
+            24.0
+          ]
+        ],
+        "aabb_world_mm": [
+          35.0,
+          6.0,
+          24.0,
+          35.0,
+          43.0,
+          24.0
+        ],
+        "sample_points_world_mm": [
+          [
+            35.0,
+            43.0,
+            24.0
+          ],
+          [
+            35.0,
+            6.0,
+            24.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-sides-r1",
+        "radius_mm": 1,
+        "mode": "side-only"
+      },
+      {
+        "id": "ordinary-full-chain-r1",
+        "radius_mm": 1,
+        "mode": "full-chain control"
+      },
+      {
+        "id": "ordinary-sides-r2",
+        "radius_mm": 2,
+        "mode": "side-only"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "patch-no",
+        "radius_mm": 1,
+        "mode": "no bridge between limits",
+        "parameter_status": "not_frozen"
+      },
+      {
+        "id": "patch-yes",
+        "radius_mm": 1,
+        "mode": "attempt blend-like bridge",
+        "parameter_status": "not_frozen"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "same_no_baseline",
+      "condition": "No/Yes start from identical side result; same radius, limits, support pairing; no replacing entire result by another fillet."
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "outside_ROI",
+      "assertion": "No/Yes material and geometry identical outside frozen comparison ROI; changes limited to declared bridge region."
+    },
+    {
+      "id": "no_is_closed",
+      "assertion": "No mode has no new central transition but still has original closed front wall; do not label no as an open hole."
+    },
+    {
+      "id": "bridge_quality",
+      "assertion": "Yes geometry must join actual L/R limits with G0; publish quantitative join G1/G2 separately. If a G1 target is selected, all intended tangent interfaces <=0.1deg, with explicit exceptions for deliberate terminal C0.",
+      "illustrative_smoothness_target": "G1 demonstration, not specified by original PDF"
+    },
+    {
+      "id": "source_equivalence",
+      "assertion": "Without exact source limits/unders and selected topology, only illustrative No/Yes geometry can be checked; strict source-feature score remains source_contract_not_frozen.",
+      "status": "source_contract_not_frozen",
+      "visual": "Zoom two real bridge joints and show per-joint normal/curvature mismatch; build success alone is insufficient."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Zoom two real bridge joints and show per-joint normal/curvature mismatch; build success alone is insufficient."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [
+    "Source only shows two operated results; initial edges, exact limit_topols, unders pairings, radius and requested continuity are not uniquely recovered.",
+    "Current L/R are demonstration boundaries from prior composition, not original PDF entity IDs."
+  ],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/20.brep",
+  "input_brep_sha256": "3905f4d7c2bc1e1fa05b54088fee54d1e9be55a999dab71eb488773950a2b7bd"
+}

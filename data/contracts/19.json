@@ -1,0 +1,241 @@
+{
+  "number": 19,
+  "case_id": "73-38_trim_face_edge-1308",
+  "title": "三槽台面与竖壁的限制拓扑输入",
+  "feature_family": "limit_topology_intersection_and_fin_direction",
+  "source_feature": {
+    "meaning": "Use actual intersection of finite specified fin/edge or face with the generated blend boundary to derive an isoparametric stop; fin-associated face direction decides retained side. This differs from direct cap geometry.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-38_trim_face_edge-1308.png",
+    "source_sha256": "c6076d70f5cd323aba98425c825893dcc8e38ea3d716c7492a2496e114ea958b",
+    "reference_crop": [
+      0.255,
+      0.4,
+      0.855,
+      0.785
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-38_trim_face_edge-1308.json",
+    "current_spec_sha256": "0a30e0df79b37cc5e76d9b63ece825a69c2c66faf24ed5b9795e974aea0d1c06",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-38_trim_face_edge-1308.brep",
+    "brep_sha256": "1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2",
+    "step_path": "history:outputs/parasolid-preblend/models/73-38_trim_face_edge-1308.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-38_trim_face_edge-1308.json",
+    "bbox_world_mm": [
+      0.0,
+      0.0,
+      0.0,
+      62.0,
+      42.0,
+      45.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "three_slot_bracket"
+    ],
+    "parts_geometry_immutable": [
+      "Base62x42x20; wall62x10x25@(0,32,20); slots4x26x17 atx10/29/47,y−1,z5; root clearance7mm to slot tails."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root": {
+        "start": [
+          0,
+          32,
+          20
+        ],
+        "end": [
+          62,
+          32,
+          20
+        ]
+      },
+      "limit_edge": {
+        "start": [
+          29,
+          0,
+          20
+        ],
+        "end": [
+          29,
+          25,
+          20
+        ]
+      },
+      "limit_face": {
+        "plane": "x=29",
+        "y_range": [
+          0,
+          25
+        ],
+        "z_range": [
+          5,
+          20
+        ]
+      },
+      "fin_direction": "source retains x<29; oriented edge+owning face association required, plain edge alone is insufficient"
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "three_slot_bracket",
+        "documentary_original_OCC_edge_index_1based": 18,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 62.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            32.0,
+            20.0
+          ],
+          [
+            62.0,
+            32.0,
+            20.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          32.0,
+          20.0,
+          62.0,
+          32.0,
+          20.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            32.0,
+            20.0
+          ],
+          [
+            62.0,
+            32.0,
+            20.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-r5",
+        "radius_mm": 5,
+        "mode": "no contact"
+      },
+      {
+        "id": "ordinary-r10",
+        "radius_mm": 10,
+        "mode": "no limit"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "edge-left-r10",
+        "radius_mm": 10,
+        "mode": "directed fin limit",
+        "retained_side": "x<29"
+      },
+      {
+        "id": "face-left-r10",
+        "radius_mm": 10,
+        "mode": "finite face limit",
+        "retained_side": "x<29"
+      },
+      {
+        "id": "direction-right-r10",
+        "radius_mm": 10,
+        "mode": "reverse-side control",
+        "retained_side": "x>29"
+      },
+      {
+        "id": "no-intersection-r5",
+        "radius_mm": 5,
+        "mode": "negative control"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "real_finite_intersection",
+      "R10_boundary": "y22,z20",
+      "finite_limit_y_max": 25,
+      "expected_point": [
+        29,
+        22,
+        20
+      ],
+      "R5_boundary": "y27,z20",
+      "R5_expected_distance_mm": 2,
+      "R5_expected_intersection_count": 0
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "intersection_drives_stop",
+      "assertion": "R10 unique finite intersection P29/22/20, projected to actual spine/axis gives constant-x29 section. R5 no hit must not invent this intersection-triggered stop."
+    },
+    {
+      "id": "fin_vs_face",
+      "assertion": "Edge-left and face-left should agree for this explicit geometry, but direction-right is a distinct negative-direction comparison, not source correct output."
+    },
+    {
+      "id": "slots_preserved",
+      "assertion": "All3 original forward-open slots remain open, their absent material is not filled by the added blend/tool extension; preserve unrounded side unchanged."
+    },
+    {
+      "id": "finite_limit_status",
+      "assertion": "Record actual binding to finite input fin/face and supplied direction. Passing a generic stopping face or treating SetEdge as stop-edge does not establish source limit_topols.",
+      "visual": "Show F finite extent, actual P intersection, isoparametric section and preserved side."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Show F finite extent, actual P intersection, isoparametric section and preserved side."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/19.brep",
+  "input_brep_sha256": "1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2"
+}

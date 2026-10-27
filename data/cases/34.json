@@ -1,0 +1,33 @@
+{
+  "number": 34,
+  "id": "fig75-25_rho-1380",
+  "title": "75-25 凸圆角的absolute/relative rho截面对照",
+  "question": "同一凸角、相同接触位置下量测absolute/relative rho的conic截面形状；普通圆弧不替代rho控制。",
+  "family": "c",
+  "source_sha256": "b2de61c4321f0fd14052b5c2b1d31b4d9e98dcf978c54a55c12d29a745a51d50",
+  "reference": {
+    "page": 1380,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.14137462235649548,
+      0.24776353276353277,
+      0.664264853977845,
+      0.5706125356125357
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/34.brep",
+  "fixture": "data/fixtures/34.json",
+  "contract": "data/contracts/34.json",
+  "variants": []
+}

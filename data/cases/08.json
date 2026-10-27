@@ -1,0 +1,33 @@
+{
+  "number": 8,
+  "id": "73-25_preserve_notch-1290",
+  "title": "缺口保形：带矩形缺口的零厚度折板",
+  "question": "仅片体：圆角实际穿过原缺口后，比较正常投影保形与默认裁边；必须实际触及缺口，不得用R12未遇缺口的成功替代。",
+  "family": "a",
+  "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+  "reference": {
+    "page": 1290,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.15384615384615385,
+      0.21367521367521367,
+      0.8791208791208791,
+      0.5042735042735043
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/08.brep",
+  "fixture": "data/fixtures/08.json",
+  "contract": "data/contracts/08.json",
+  "variants": []
+}

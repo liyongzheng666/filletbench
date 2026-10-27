@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "job_id": "19.part01.ordinary_control.r5",
+  "number": 19,
+  "case_number": 19,
+  "case_id": "73-38_trim_face_edge-1308",
+  "part_label": "three_slot_bracket",
+  "source_part_indices": [
+    0
+  ],
+  "source_sha256": "1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2",
+  "source_brep": "data/models/19.brep",
+  "source_fixture_json": "data/fixtures/19.json",
+  "source_fixture_sha256": "88f9da0934c48701f3a8c0938158ea7fcafd1d2d4da258a506f9dcbcb7b40f3f",
+  "source_fixture_export_sha256": "88f9da0934c48701f3a8c0938158ea7fcafd1d2d4da258a506f9dcbcb7b40f3f",
+  "source_contract_file": "data/contracts/19.json",
+  "source_contract_sha256": "dd4f65a69792038de14c8614e9be8faedec97a2f9ef1af56bcd94b55b15b6226",
+  "semantic_target": "Use actual intersection of finite specified fin/edge or face with the generated blend boundary to derive an isoparametric stop; fin-associated face direction decides retained side. This differs from direct cap geometry.",
+  "operation": "native_edge_fillet",
+  "role": "ordinary_control",
+  "radius_mm": 5,
+  "request_note": "negative intersection control",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "solid",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          0.0,
+          32.0,
+          20.0
+        ],
+        [
+          62.0,
+          32.0,
+          20.0
+        ]
+      ],
+      "samples": [
+        [
+          0.0,
+          32.0,
+          20.0
+        ],
+        [
+          62.0,
+          32.0,
+          20.0
+        ]
+      ],
+      "endpoints": [
+        [
+          0.0,
+          32.0,
+          20.0
+        ],
+        [
+          62.0,
+          32.0,
+          20.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 62.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 18,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          0.0,
+          32.0,
+          20.0
+        ],
+        [
+          62.0,
+          32.0,
+          20.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/19.part01.ordinary_control.r5.json",
+  "component_index": 1,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

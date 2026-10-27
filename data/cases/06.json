@@ -1,0 +1,33 @@
+{
+  "number": 6,
+  "id": "73-23_setback-1286",
+  "title": "顶点退距：三锐边交汇长方体",
+  "question": "三条正交凸棱在同一顶点全部被blend，按指定距离退让，并区分有collar/无collar的角部连接；普通球角不是setback。",
+  "family": "a",
+  "source_sha256": "3c9bd03dac7c5d611f795f6309001a91d7ba2c1b63f8e9bb403d25be88bf9c53",
+  "reference": {
+    "page": 1286,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.22192307692307695,
+      0.24938228438228435,
+      0.8462087912087912,
+      0.6154195804195804
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/06.brep",
+  "fixture": "data/fixtures/06.json",
+  "contract": "data/contracts/06.json",
+  "variants": []
+}

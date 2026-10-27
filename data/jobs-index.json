@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "count": 104,
+  "runnable_count": 86,
+  "jobs": [
+    {
+      "id": "01.part01.ordinary_control.r8",
+      "number": 1,
+      "path": "data/jobs/01.part01.ordinary_control.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "01.part01.ordinary_challenge.r16",
+      "number": 1,
+      "path": "data/jobs/01.part01.ordinary_challenge.r16.json",
+      "runnable": true
+    },
+    {
+      "id": "01.part01.ordinary_challenge.r48",
+      "number": 1,
+      "path": "data/jobs/01.part01.ordinary_challenge.r48.json",
+      "runnable": true
+    },
+    {
+      "id": "02.part01.ordinary_control.r20",
+      "number": 2,
+      "path": "data/jobs/02.part01.ordinary_control.r20.json",
+      "runnable": true
+    },
+    {
+      "id": "02.part01.ordinary_challenge.r23p9",
+      "number": 2,
+      "path": "data/jobs/02.part01.ordinary_challenge.r23p9.json",
+      "runnable": true
+    },
+    {
+      "id": "02.part01.ordinary_challenge.r24",
+      "number": 2,
+      "path": "data/jobs/02.part01.ordinary_challenge.r24.json",
+      "runnable": true
+    },
+    {
+      "id": "02.part01.ordinary_challenge.r28",
+      "number": 2,
+      "path": "data/jobs/02.part01.ordinary_challenge.r28.json",
+      "runnable": true
+    },
+    {
+      "id": "03.part01.ordinary_control.r3",
+      "number": 3,
+      "path": "data/jobs/03.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "03.part01.ordinary_challenge.r6",
+      "number": 3,
+      "path": "data/jobs/03.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "04.part01.ordinary_control.r2",
+      "number": 4,
+      "path": "data/jobs/04.part01.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "04.part01.ordinary_challenge.r4",
+      "number": 4,
+      "path": "data/jobs/04.part01.ordinary_challenge.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "04.part02.ordinary_control.r2",
+      "number": 4,
+      "path": "data/jobs/04.part02.ordinary_control.r2.json",
+      "runnable": false
+    },
+    {
+      "id": "04.part02.ordinary_challenge.r4",
+      "number": 4,
+      "path": "data/jobs/04.part02.ordinary_challenge.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "04.part03.ordinary_control.r3",
+      "number": 4,
+      "path": "data/jobs/04.part03.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "04.part03.ordinary_challenge.r5",
+      "number": 4,
+      "path": "data/jobs/04.part03.ordinary_challenge.r5.json",
+      "runnable": true
+    },
+    {
+      "id": "05.part01.ordinary_control.r3",
+      "number": 5,
+      "path": "data/jobs/05.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "05.part01.ordinary_challenge.r5",
+      "number": 5,
+      "path": "data/jobs/05.part01.ordinary_challenge.r5.json",
+      "runnable": true
+    },
+    {
+      "id": "06.part01.ordinary_control.r4",
+      "number": 6,
+      "path": "data/jobs/06.part01.ordinary_control.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "06.part01.ordinary_challenge.r12",
+      "number": 6,
+      "path": "data/jobs/06.part01.ordinary_challenge.r12.json",
+      "runnable": true
+    },
+    {
+      "id": "07.part01.ordinary_control.r16",
+      "number": 7,
+      "path": "data/jobs/07.part01.ordinary_control.r16.json",
+      "runnable": true
+    },
+    {
+      "id": "07.part01.ordinary_challenge.r24",
+      "number": 7,
+      "path": "data/jobs/07.part01.ordinary_challenge.r24.json",
+      "runnable": true
+    },
+    {
+      "id": "07.part01.ordinary_challenge.r30",
+      "number": 7,
+      "path": "data/jobs/07.part01.ordinary_challenge.r30.json",
+      "runnable": true
+    },
+    {
+      "id": "08.part01.ordinary_control.r12",
+      "number": 8,
+      "path": "data/jobs/08.part01.ordinary_control.r12.json",
+      "runnable": true
+    },
+    {
+      "id": "08.part01.ordinary_challenge.r13",
+      "number": 8,
+      "path": "data/jobs/08.part01.ordinary_challenge.r13.json",
+      "runnable": true
+    },
+    {
+      "id": "08.part01.ordinary_challenge.r14",
+      "number": 8,
+      "path": "data/jobs/08.part01.ordinary_challenge.r14.json",
+      "runnable": true
+    },
+    {
+      "id": "08.part01.ordinary_challenge.r18",
+      "number": 8,
+      "path": "data/jobs/08.part01.ordinary_challenge.r18.json",
+      "runnable": true
+    },
+    {
+      "id": "09.part01.ordinary_control.r3",
+      "number": 9,
+      "path": "data/jobs/09.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "09.part01.ordinary_challenge.r8",
+      "number": 9,
+      "path": "data/jobs/09.part01.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "09.part02.ordinary_control.r3",
+      "number": 9,
+      "path": "data/jobs/09.part02.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "09.part02.ordinary_challenge.r8",
+      "number": 9,
+      "path": "data/jobs/09.part02.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "10.part01.ordinary_control.r3",
+      "number": 10,
+      "path": "data/jobs/10.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "10.part01.ordinary_challenge.r6",
+      "number": 10,
+      "path": "data/jobs/10.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "11.part01.ordinary_control.r1",
+      "number": 11,
+      "path": "data/jobs/11.part01.ordinary_control.r1.json",
+      "runnable": true
+    },
+    {
+      "id": "11.part01.ordinary_challenge.r6",
+      "number": 11,
+      "path": "data/jobs/11.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "11.part01.ordinary_challenge.r14",
+      "number": 11,
+      "path": "data/jobs/11.part01.ordinary_challenge.r14.json",
+      "runnable": true
+    },
+    {
+      "id": "12.part01.ordinary_control.r2",
+      "number": 12,
+      "path": "data/jobs/12.part01.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "12.part01.ordinary_challenge.r4",
+      "number": 12,
+      "path": "data/jobs/12.part01.ordinary_challenge.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "12.part01.ordinary_challenge.r8",
+      "number": 12,
+      "path": "data/jobs/12.part01.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "12.part02.ordinary_control.r2",
+      "number": 12,
+      "path": "data/jobs/12.part02.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "12.part02.ordinary_challenge.r4",
+      "number": 12,
+      "path": "data/jobs/12.part02.ordinary_challenge.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "12.part02.ordinary_challenge.r8",
+      "number": 12,
+      "path": "data/jobs/12.part02.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "13.part01.ordinary_control.r3",
+      "number": 13,
+      "path": "data/jobs/13.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "13.part01.ordinary_challenge.r6",
+      "number": 13,
+      "path": "data/jobs/13.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "14.part01.ordinary_control.r6",
+      "number": 14,
+      "path": "data/jobs/14.part01.ordinary_control.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "14.part01.ordinary_challenge.r12",
+      "number": 14,
+      "path": "data/jobs/14.part01.ordinary_challenge.r12.json",
+      "runnable": true
+    },
+    {
+      "id": "15.part01.ordinary_control.r2p5",
+      "number": 15,
+      "path": "data/jobs/15.part01.ordinary_control.r2p5.json",
+      "runnable": true
+    },
+    {
+      "id": "15.part01.ordinary_challenge.r3",
+      "number": 15,
+      "path": "data/jobs/15.part01.ordinary_challenge.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "15.part01.ordinary_challenge.r5",
+      "number": 15,
+      "path": "data/jobs/15.part01.ordinary_challenge.r5.json",
+      "runnable": true
+    },
+    {
+      "id": "16.part01.ordinary_control.r3",
+      "number": 16,
+      "path": "data/jobs/16.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "16.part01.ordinary_challenge.r6",
+      "number": 16,
+      "path": "data/jobs/16.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "17.part01.ordinary_control.r2",
+      "number": 17,
+      "path": "data/jobs/17.part01.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "17.part01.ordinary_challenge.r8",
+      "number": 17,
+      "path": "data/jobs/17.part01.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "18.part01.ordinary_control.r2",
+      "number": 18,
+      "path": "data/jobs/18.part01.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "18.part01.ordinary_challenge.r8",
+      "number": 18,
+      "path": "data/jobs/18.part01.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "18.part02.ordinary_control.r2",
+      "number": 18,
+      "path": "data/jobs/18.part02.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "18.part02.ordinary_challenge.r8",
+      "number": 18,
+      "path": "data/jobs/18.part02.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "19.part01.ordinary_control.r5",
+      "number": 19,
+      "path": "data/jobs/19.part01.ordinary_control.r5.json",
+      "runnable": true
+    },
+    {
+      "id": "19.part01.ordinary_challenge.r10",
+      "number": 19,
+      "path": "data/jobs/19.part01.ordinary_challenge.r10.json",
+      "runnable": true
+    },
+    {
+      "id": "20.part01.ordinary_control.r1",
+      "number": 20,
+      "path": "data/jobs/20.part01.ordinary_control.r1.json",
+      "runnable": true
+    },
+    {
+      "id": "20.part01.ordinary_challenge.r2",
+      "number": 20,
+      "path": "data/jobs/20.part01.ordinary_challenge.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "21.part01.ordinary_control.r2",
+      "number": 21,
+      "path": "data/jobs/21.part01.ordinary_control.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "21.part01.ordinary_challenge.r4",
+      "number": 21,
+      "path": "data/jobs/21.part01.ordinary_challenge.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "22.part01.ordinary_control.r3",
+      "number": 22,
+      "path": "data/jobs/22.part01.ordinary_control.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "22.part01.ordinary_challenge.r6",
+      "number": 22,
+      "path": "data/jobs/22.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "22.part01.ordinary_challenge.r10",
+      "number": 22,
+      "path": "data/jobs/22.part01.ordinary_challenge.r10.json",
+      "runnable": true
+    },
+    {
+      "id": "23.part01.ordinary_control.r0p5",
+      "number": 23,
+      "path": "data/jobs/23.part01.ordinary_control.r0p5.json",
+      "runnable": true
+    },
+    {
+      "id": "23.part01.ordinary_challenge.r1",
+      "number": 23,
+      "path": "data/jobs/23.part01.ordinary_challenge.r1.json",
+      "runnable": true
+    },
+    {
+      "id": "23.part01.ordinary_challenge.r2",
+      "number": 23,
+      "path": "data/jobs/23.part01.ordinary_challenge.r2.json",
+      "runnable": true
+    },
+    {
+      "id": "23.part01.ordinary_challenge.r2p5",
+      "number": 23,
+      "path": "data/jobs/23.part01.ordinary_challenge.r2p5.json",
+      "runnable": true
+    },
+    {
+      "id": "24.part01.ordinary_control.r3-convex",
+      "number": 24,
+      "path": "data/jobs/24.part01.ordinary_control.r3-convex.json",
+      "runnable": true
+    },
+    {
+      "id": "24.part01.ordinary_control.r3-concave",
+      "number": 24,
+      "path": "data/jobs/24.part01.ordinary_control.r3-concave.json",
+      "runnable": true
+    },
+    {
+      "id": "24.part01.ordinary_challenge.r3",
+      "number": 24,
+      "path": "data/jobs/24.part01.ordinary_challenge.r3.json",
+      "runnable": true
+    },
+    {
+      "id": "24.part01.ordinary_challenge.r6",
+      "number": 24,
+      "path": "data/jobs/24.part01.ordinary_challenge.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "24.part01.ordinary_challenge.r12",
+      "number": 24,
+      "path": "data/jobs/24.part01.ordinary_challenge.r12.json",
+      "runnable": true
+    },
+    {
+      "id": "25.part01.ordinary_control.r4",
+      "number": 25,
+      "path": "data/jobs/25.part01.ordinary_control.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "25.part01.ordinary_challenge.r10",
+      "number": 25,
+      "path": "data/jobs/25.part01.ordinary_challenge.r10.json",
+      "runnable": true
+    },
+    {
+      "id": "25.part01.ordinary_challenge.r16",
+      "number": 25,
+      "path": "data/jobs/25.part01.ordinary_challenge.r16.json",
+      "runnable": true
+    },
+    {
+      "id": "26.part01.ordinary_control.r4",
+      "number": 26,
+      "path": "data/jobs/26.part01.ordinary_control.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "26.part01.ordinary_challenge.r10",
+      "number": 26,
+      "path": "data/jobs/26.part01.ordinary_challenge.r10.json",
+      "runnable": true
+    },
+    {
+      "id": "26.part01.ordinary_challenge.r12",
+      "number": 26,
+      "path": "data/jobs/26.part01.ordinary_challenge.r12.json",
+      "runnable": true
+    },
+    {
+      "id": "27.part01.ordinary_control.r4",
+      "number": 27,
+      "path": "data/jobs/27.part01.ordinary_control.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "27.part01.ordinary_challenge.r8",
+      "number": 27,
+      "path": "data/jobs/27.part01.ordinary_challenge.r8.json",
+      "runnable": false
+    },
+    {
+      "id": "27.part02.ordinary_control.r2",
+      "number": 27,
+      "path": "data/jobs/27.part02.ordinary_control.r2.json",
+      "runnable": false
+    },
+    {
+      "id": "27.part02.ordinary_challenge.r4",
+      "number": 27,
+      "path": "data/jobs/27.part02.ordinary_challenge.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "28.part01.ordinary_control.r4",
+      "number": 28,
+      "path": "data/jobs/28.part01.ordinary_control.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "28.part01.ordinary_challenge.r8",
+      "number": 28,
+      "path": "data/jobs/28.part01.ordinary_challenge.r8.json",
+      "runnable": false
+    },
+    {
+      "id": "30.part01.ordinary_control.r4",
+      "number": 30,
+      "path": "data/jobs/30.part01.ordinary_control.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "30.part01.ordinary_challenge.r8",
+      "number": 30,
+      "path": "data/jobs/30.part01.ordinary_challenge.r8.json",
+      "runnable": false
+    },
+    {
+      "id": "30.part02.ordinary_control.r4",
+      "number": 30,
+      "path": "data/jobs/30.part02.ordinary_control.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "30.part02.ordinary_challenge.r8",
+      "number": 30,
+      "path": "data/jobs/30.part02.ordinary_challenge.r8.json",
+      "runnable": false
+    },
+    {
+      "id": "31.part01.ordinary_control.r6",
+      "number": 31,
+      "path": "data/jobs/31.part01.ordinary_control.r6.json",
+      "runnable": true
+    },
+    {
+      "id": "31.part01.ordinary_challenge.r7",
+      "number": 31,
+      "path": "data/jobs/31.part01.ordinary_challenge.r7.json",
+      "runnable": true
+    },
+    {
+      "id": "31.part02.ordinary_control.r6",
+      "number": 31,
+      "path": "data/jobs/31.part02.ordinary_control.r6.json",
+      "runnable": false
+    },
+    {
+      "id": "31.part02.ordinary_challenge.r7",
+      "number": 31,
+      "path": "data/jobs/31.part02.ordinary_challenge.r7.json",
+      "runnable": false
+    },
+    {
+      "id": "33.part01.ordinary_control.r4",
+      "number": 33,
+      "path": "data/jobs/33.part01.ordinary_control.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "33.part01.ordinary_challenge.r8",
+      "number": 33,
+      "path": "data/jobs/33.part01.ordinary_challenge.r8.json",
+      "runnable": true
+    },
+    {
+      "id": "33.part01.ordinary_challenge.r2p43305-variable-control",
+      "number": 33,
+      "path": "data/jobs/33.part01.ordinary_challenge.r2p43305-variable-control.json",
+      "runnable": true
+    },
+    {
+      "id": "34.part01.ordinary_control.r4",
+      "number": 34,
+      "path": "data/jobs/34.part01.ordinary_control.r4.json",
+      "runnable": true
+    },
+    {
+      "id": "34.part01.ordinary_challenge.r12",
+      "number": 34,
+      "path": "data/jobs/34.part01.ordinary_challenge.r12.json",
+      "runnable": true
+    },
+    {
+      "id": "34.part01.ordinary_challenge.r16p8574-variable-control",
+      "number": 34,
+      "path": "data/jobs/34.part01.ordinary_challenge.r16p8574-variable-control.json",
+      "runnable": true
+    },
+    {
+      "id": "35.part01.ordinary_control.r8",
+      "number": 35,
+      "path": "data/jobs/35.part01.ordinary_control.r8.json",
+      "runnable": false
+    },
+    {
+      "id": "35.part01.ordinary_challenge.r13",
+      "number": 35,
+      "path": "data/jobs/35.part01.ordinary_challenge.r13.json",
+      "runnable": false
+    },
+    {
+      "id": "36.part01.ordinary_control.r4",
+      "number": 36,
+      "path": "data/jobs/36.part01.ordinary_control.r4.json",
+      "runnable": false
+    },
+    {
+      "id": "36.part01.ordinary_challenge.r8",
+      "number": 36,
+      "path": "data/jobs/36.part01.ordinary_challenge.r8.json",
+      "runnable": false
+    }
+  ]
+}

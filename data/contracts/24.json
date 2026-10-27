@@ -1,0 +1,622 @@
+{
+  "number": 24,
+  "case_id": "73-42_43_overlap-1317",
+  "title": "斜向会聚凸凹圆角边的三角平台输入",
+  "feature_family": "oblique_convex_concave_overlap_order",
+  "source_feature": {
+    "meaning": "Two convex/concave chains converge obliquely at C, bounding a triangular ledge. Compare convex-first, concave-first and simultaneous behavior; a source smooth-overflow option is distinct from ordinary sequential fillet.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-42_43_overlap-1317.png",
+    "source_sha256": "af7a33ca05bcb18c89639d0ad18790fc464b09352855275d29a2c9e012e89017",
+    "reference_crop": [
+      0.19,
+      0.23,
+      0.825,
+      0.62
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-42_43_overlap-1317.json",
+    "current_spec_sha256": "a968086f25ac0361b48532b9844f9d1fb3bbc077839205499c29de0f7a65a0a3",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-42_43_overlap-1317.brep",
+    "brep_sha256": "bb770b171c449863c59d1674c5e5167abbaee2e4c5d178684388ec76019879bf",
+    "step_path": "history:outputs/parasolid-preblend/models/73-42_43_overlap-1317.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-42_43_overlap-1317.json",
+    "bbox_world_mm": [
+      -8.754757025937231e-16,
+      0.0,
+      0.0,
+      40.0,
+      24.0,
+      34.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "ObliqueSteppedBlock"
+    ],
+    "parts_geometry_immutable": [
+      "Current corrected SHA/input, volume20160mm³, triangle ledge area240, walltop480. Prior parallel-input successful fillets are inapplicable."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "A": [
+        0,
+        24,
+        16
+      ],
+      "B": [
+        20,
+        24,
+        16
+      ],
+      "C": [
+        0,
+        0,
+        16
+      ],
+      "convex_AC": {
+        "start": [
+          0,
+          24,
+          16
+        ],
+        "end": [
+          0,
+          0,
+          16
+        ]
+      },
+      "concave_BC": {
+        "start": [
+          0,
+          0,
+          16
+        ],
+        "end": [
+          20,
+          24,
+          16
+        ]
+      },
+      "angle_degrees": 39.80557109226519,
+      "ledge_area_mm2": 240,
+      "plane_z": 16,
+      "selected_edges_are_nonparallel": true
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "ObliqueSteppedBlock",
+        "documentary_original_OCC_edge_index_1based": 8,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 24.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            24.0,
+            16.0
+          ],
+          [
+            0.0,
+            0.0,
+            16.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          0.0,
+          16.0,
+          0.0,
+          24.0,
+          16.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            24.0,
+            16.0
+          ],
+          [
+            0.0,
+            23.384615384615383,
+            16.0
+          ],
+          [
+            0.0,
+            22.76923076923077,
+            16.0
+          ],
+          [
+            0.0,
+            21.53846153846154,
+            16.0
+          ],
+          [
+            0.0,
+            20.923076923076923,
+            16.0
+          ],
+          [
+            0.0,
+            20.307692307692307,
+            16.0
+          ],
+          [
+            0.0,
+            19.692307692307693,
+            16.0
+          ],
+          [
+            0.0,
+            18.46153846153846,
+            16.0
+          ],
+          [
+            0.0,
+            17.846153846153847,
+            16.0
+          ],
+          [
+            0.0,
+            17.230769230769234,
+            16.0
+          ],
+          [
+            0.0,
+            16.615384615384617,
+            16.0
+          ],
+          [
+            0.0,
+            16.0,
+            16.0
+          ],
+          [
+            0.0,
+            14.769230769230772,
+            16.0
+          ],
+          [
+            0.0,
+            14.153846153846157,
+            16.0
+          ],
+          [
+            0.0,
+            13.538461538461542,
+            16.0
+          ],
+          [
+            0.0,
+            12.923076923076927,
+            16.0
+          ],
+          [
+            0.0,
+            11.692307692307697,
+            16.0
+          ],
+          [
+            0.0,
+            11.076923076923082,
+            16.0
+          ],
+          [
+            0.0,
+            10.461538461538467,
+            16.0
+          ],
+          [
+            0.0,
+            9.846153846153852,
+            16.0
+          ],
+          [
+            0.0,
+            9.230769230769237,
+            16.0
+          ],
+          [
+            0.0,
+            8.000000000000007,
+            16.0
+          ],
+          [
+            0.0,
+            7.38461538461539,
+            16.0
+          ],
+          [
+            0.0,
+            6.769230769230774,
+            16.0
+          ],
+          [
+            0.0,
+            6.153846153846157,
+            16.0
+          ],
+          [
+            0.0,
+            5.53846153846154,
+            16.0
+          ],
+          [
+            0.0,
+            4.307692307692307,
+            16.0
+          ],
+          [
+            0.0,
+            3.69230769230769,
+            16.0
+          ],
+          [
+            0.0,
+            3.076923076923073,
+            16.0
+          ],
+          [
+            0.0,
+            2.4615384615384563,
+            16.0
+          ],
+          [
+            0.0,
+            1.2307692307692228,
+            16.0
+          ],
+          [
+            0.0,
+            0.6153846153846061,
+            16.0
+          ],
+          [
+            0.0,
+            0.0,
+            16.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "ObliqueSteppedBlock",
+        "documentary_original_OCC_edge_index_1based": 9,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 31.24099870362662,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            0.0,
+            16.0
+          ],
+          [
+            20.0,
+            24.0,
+            16.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          0.0,
+          16.0,
+          20.0,
+          24.0,
+          16.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            0.0,
+            16.0
+          ],
+          [
+            0.5128205128205129,
+            0.6153846153846154,
+            16.0
+          ],
+          [
+            1.0256410256410258,
+            1.2307692307692308,
+            16.0
+          ],
+          [
+            2.0512820512820515,
+            2.4615384615384617,
+            16.0
+          ],
+          [
+            2.5641025641025643,
+            3.076923076923077,
+            16.0
+          ],
+          [
+            3.0769230769230775,
+            3.6923076923076925,
+            16.0
+          ],
+          [
+            3.5897435897435908,
+            4.307692307692308,
+            16.0
+          ],
+          [
+            4.615384615384617,
+            5.538461538461539,
+            16.0
+          ],
+          [
+            5.128205128205129,
+            6.153846153846154,
+            16.0
+          ],
+          [
+            5.641025641025642,
+            6.76923076923077,
+            16.0
+          ],
+          [
+            6.153846153846155,
+            7.384615384615385,
+            16.0
+          ],
+          [
+            6.666666666666668,
+            8.000000000000002,
+            16.0
+          ],
+          [
+            7.692307692307694,
+            9.230769230769232,
+            16.0
+          ],
+          [
+            8.205128205128208,
+            9.846153846153848,
+            16.0
+          ],
+          [
+            8.71794871794872,
+            10.461538461538463,
+            16.0
+          ],
+          [
+            9.230769230769234,
+            11.076923076923078,
+            16.0
+          ],
+          [
+            10.256410256410257,
+            12.307692307692308,
+            16.0
+          ],
+          [
+            10.769230769230772,
+            12.923076923076923,
+            16.0
+          ],
+          [
+            11.282051282051285,
+            13.53846153846154,
+            16.0
+          ],
+          [
+            11.794871794871797,
+            14.153846153846155,
+            16.0
+          ],
+          [
+            12.30769230769231,
+            14.76923076923077,
+            16.0
+          ],
+          [
+            13.333333333333336,
+            16.000000000000004,
+            16.0
+          ],
+          [
+            13.846153846153848,
+            16.615384615384617,
+            16.0
+          ],
+          [
+            14.358974358974363,
+            17.230769230769234,
+            16.0
+          ],
+          [
+            14.871794871794876,
+            17.84615384615385,
+            16.0
+          ],
+          [
+            15.384615384615389,
+            18.461538461538463,
+            16.0
+          ],
+          [
+            16.410256410256416,
+            19.692307692307697,
+            16.0
+          ],
+          [
+            16.923076923076927,
+            20.30769230769231,
+            16.0
+          ],
+          [
+            17.43589743589744,
+            20.923076923076927,
+            16.0
+          ],
+          [
+            17.948717948717952,
+            21.538461538461544,
+            16.0
+          ],
+          [
+            18.974358974358978,
+            22.769230769230774,
+            16.0
+          ],
+          [
+            19.487179487179493,
+            23.38461538461539,
+            16.0
+          ],
+          [
+            20.0,
+            24.0,
+            16.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "convex-only-r3",
+        "radius_mm": 3,
+        "mode": "single convex"
+      },
+      {
+        "id": "concave-only-r3",
+        "radius_mm": 3,
+        "mode": "single concave"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "both-r3",
+        "radius_mm": 3,
+        "mode": "simultaneous"
+      },
+      {
+        "id": "convex-first-r3",
+        "radius_mm": 3,
+        "mode": "convex then concave"
+      },
+      {
+        "id": "concave-first-r3",
+        "radius_mm": 3,
+        "mode": "concave then convex"
+      },
+      {
+        "id": "both-r6",
+        "radius_mm": 6,
+        "mode": "simultaneous"
+      },
+      {
+        "id": "convex-first-r6",
+        "radius_mm": 6,
+        "mode": "convex then concave"
+      },
+      {
+        "id": "concave-first-r6",
+        "radius_mm": 6,
+        "mode": "concave then convex"
+      },
+      {
+        "id": "both-r12-stress",
+        "radius_mm": 12,
+        "mode": "whole-ledge overlap stress"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "oblique_identity",
+      "angle_degrees": 39.80557109226519,
+      "common_endpoint": [
+        0,
+        0,
+        16
+      ],
+      "reject_old_parallel_input": true
+    },
+    {
+      "id": "R6_footprint",
+      "expected_contact_line_intersection": [
+        6,
+        16.572299611,
+        16
+      ]
+    },
+    {
+      "id": "R12_global_overlap",
+      "predicted_intersection_y": 33.144599222,
+      "ledge_y_max": 24,
+      "confounder": "entire ledge in overlap influence"
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "strict_oblique_input",
+      "assertion": "Input must retain real AC/BC directions, sharedC, constant wall thickness20 and parallelogram top; rotating camera does not correct parallel geometry."
+    },
+    {
+      "id": "sequential_reselection",
+      "assertion": "After first fillet, find surviving second root from geometric support/lineage, not reuse stale input edge index. Both requested chains must be present in final result."
+    },
+    {
+      "id": "order_difference",
+      "assertion": "Compare exact same R/input with order variants; classify native propagation and corner configuration changes at C. Do not force outputs equal, and do not infer Parasolid ov_order API semantics from two separate operations."
+    },
+    {
+      "id": "contact_quality",
+      "assertion": "Check actual root support pcurves/normal joins independently; freezeG0 1e-6mm/G1 .1deg. Exempt true y0/y24 end caps from G1, but not x0 or oblique-wall contact seams. Native validity with inflated tolerances does not pass.",
+      "visual": "Plan-view vectors/angle plus C overlap zoom and per-interface G0/G1 values."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Plan-view vectors/angle plus C overlap zoom and per-interface G0/G1 values."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/24.brep",
+  "input_brep_sha256": "bb770b171c449863c59d1674c5e5167abbaee2e4c5d178684388ec76019879bf"
+}

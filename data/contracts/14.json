@@ -1,0 +1,194 @@
+{
+  "number": 14,
+  "case_id": "73-32_edge_limit-1302",
+  "title": "双限制平面的圆角前直角支架",
+  "feature_family": "projected_edge_limits",
+  "source_feature": {
+    "meaning": "Project two limit points onto the blend spine, construct their limiting section planes, and retain the direction-selected two outer blend portions; middle interval remains original sharp edge.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-32_edge_limit-1302.png",
+    "source_sha256": "e53a742b4674cb383ff0edd7bd24944ce3693ad75424b68b032b2fec106beb72",
+    "reference_crop": [
+      0.15,
+      0.22,
+      0.835,
+      0.76
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-32_edge_limit-1302.json",
+    "current_spec_sha256": "7aead3212fb9b075ba5ea1d4793420480ccf3e135cdbf5fb0fd0b796880a207d",
+    "source_parameter_status": "not_frozen"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-32_edge_limit-1302.brep",
+    "brep_sha256": "fbb1db106e7fa0074b9322943bc4c5b5b7c4a1a48d69106422f6246cb08be951",
+    "step_path": "history:outputs/parasolid-preblend/models/73-32_edge_limit-1302.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-32_edge_limit-1302.json",
+    "bbox_world_mm": [
+      0.0,
+      0.0,
+      0.0,
+      72.0,
+      42.0,
+      44.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "L_bracket"
+    ],
+    "parts_geometry_immutable": [
+      "L bracket72x42 base thickness5, wall thickness5, total height44; preserve no added physical ribs."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root": {
+        "start": [
+          0,
+          37,
+          5
+        ],
+        "end": [
+          72,
+          37,
+          5
+        ],
+        "length_mm": 72
+      },
+      "support_faces": [
+        "z=5 horizontal finite face",
+        "y=37 vertical finite face"
+      ],
+      "limit_points_world_mm": null,
+      "limit_directions": [
+        "toward -x exterior",
+        "toward +x exterior"
+      ],
+      "blue_sections_are_auxiliary_not_ribs": true
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "L_bracket",
+        "documentary_original_OCC_edge_index_1based": 6,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 72.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            37.0,
+            5.0
+          ],
+          [
+            72.0,
+            37.0,
+            5.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          37.0,
+          5.0,
+          72.0,
+          37.0,
+          5.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            37.0,
+            5.0
+          ],
+          [
+            72.0,
+            37.0,
+            5.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-entire-r12",
+        "radius_mm": 12,
+        "mode": "no edge limits"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "two-outer-limits-r12",
+        "radius_mm": 12,
+        "mode": "two projected limits",
+        "limit_points": null,
+        "parameter_status": "not_frozen"
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "two_distinct_projected_stations",
+      "expression": "0<s1<s2<72 on actual spine; direction1 retains x<s1, direction2 retains x>s2",
+      "must_hold": true
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "interval_retention",
+      "assertion": "No material change belonging to fillet in (s1,s2); left/right bands exist outside, terminate at actual constant spine parameters, and make closed caps if target is solid.",
+      "visual": "Show both blue limiting sections, actual end boundaries, and untouched middle sharp edge."
+    },
+    {
+      "id": "projection_and_direction",
+      "assertion": "Compute projected stations from supplied points and actual blend spine; verify directed halfspaces independently, not fixed planes unrelated to points.",
+      "status": "source_contract_not_frozen"
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Show both blue limiting sections, actual end boundaries, and untouched middle sharp edge."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [
+    "PDF point1/point2/dir1/dir2 have no calibrated coordinates. Proposed positions must be explicitly frozen before numeric source scoring; do not invent them as existing source data."
+  ],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/14.brep",
+  "input_brep_sha256": "fbb1db106e7fa0074b9322943bc4c5b5b7c4a1a48d69106422f6246cb08be951"
+}

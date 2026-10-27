@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "job_id": "18.part02.ordinary_challenge.r8",
+  "number": 18,
+  "case_number": 18,
+  "case_id": "73-35_to_37_caps-1307",
+  "part_label": "sheet_case_body",
+  "source_part_indices": [
+    2
+  ],
+  "source_sha256": "6c5821a4f88f6e16a5cbfdf943524b3fdbce38ba959798fd8f4e848e8f87910d",
+  "source_brep": "data/models/18.brep",
+  "source_fixture_json": "data/fixtures/18.json",
+  "source_fixture_sha256": "ce22bf826baec2ec954b2eaf33024c355413107a12409a88e98d7372226febcf",
+  "source_fixture_export_sha256": "ce22bf826baec2ec954b2eaf33024c355413107a12409a88e98d7372226febcf",
+  "source_contract_file": "data/contracts/18.json",
+  "source_contract_sha256": "f16299aa48ec926c20b498b2f05307c4f64a6dda684c85a414c75a0ccbe59055",
+  "semantic_target": "Use an independent given plane or five-face zero-thickness sheet to truncate a large blend, retaining the smaller-x side; both tool types must actually participate in limiting.",
+  "operation": "native_edge_fillet",
+  "role": "ordinary_challenge",
+  "radius_mm": 8,
+  "request_note": "large cap-encounter size, no cap request",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "solid",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          98.0,
+          29.0,
+          12.0
+        ],
+        [
+          168.0,
+          29.0,
+          12.0
+        ]
+      ],
+      "samples": [
+        [
+          98.0,
+          29.0,
+          12.0
+        ],
+        [
+          168.0,
+          29.0,
+          12.0
+        ]
+      ],
+      "endpoints": [
+        [
+          98.0,
+          29.0,
+          12.0
+        ],
+        [
+          168.0,
+          29.0,
+          12.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 70.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 6,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          98.0,
+          29.0,
+          12.0
+        ],
+        [
+          168.0,
+          29.0,
+          12.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/18.part02.ordinary_challenge.r8.json",
+  "component_index": 3,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

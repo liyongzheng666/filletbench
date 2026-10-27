@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "job_id": "28.part01.ordinary_challenge.r8",
+  "number": 28,
+  "case_number": 28,
+  "case_id": "fig75-03_to_05-1351",
+  "part_label": "crossing_vertical_wall+crossing_horizontal_wall",
+  "source_part_indices": [
+    0,
+    1
+  ],
+  "source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+  "source_brep": "data/models/28.brep",
+  "source_fixture_json": "data/fixtures/28.json",
+  "source_fixture_sha256": "b295341bd0662b3e27b976ecb4f807f691ba525ad06ca05182ee8375abaea481",
+  "source_fixture_export_sha256": "b295341bd0662b3e27b976ecb4f807f691ba525ad06ca05182ee8375abaea481",
+  "source_contract_file": "data/contracts/28.json",
+  "source_contract_sha256": "5a1ee1d3b60c2b2de4d2dc8f21ce32171c6edf7aeefcdf020d48c864aa3035e9",
+  "semantic_target": {
+    "left": "vertical sheet y=0 crossing z=0",
+    "right": "horizontal sheet z=0 crossing y=0",
+    "normal_reference": "Actual native face normals must be measured and saved; Parasolid true means behind the wall relative to its normal."
+  },
+  "operation": "native_surface_surface_fillet",
+  "role": "ordinary_challenge",
+  "radius_mm": 8,
+  "request_note": "larger signed face-pair control",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "sheet",
+  "targets": [],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": false,
+  "planner_status": "admission_or_adapter_blocked",
+  "blocked_reason": "multi-input finite surface-pair native adapter is separate from selected-edge runner; no shared topological edge is created by the planner",
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "component_id": "28-fig75-03_to_05-1351.1",
+      "part_label": "crossing_vertical_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -10.32,
+          0.0,
+          12.04
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          12.04
+        ],
+        [
+          0.0,
+          0.0,
+          12.04
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          12.04
+        ],
+        [
+          10.32,
+          0.0,
+          12.04
+        ],
+        [
+          -10.32,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          10.32,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          -10.32,
+          0.0,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          10.32,
+          0.0,
+          0.0
+        ],
+        [
+          -10.32,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          0.0,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          10.32,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          -10.32,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          0.0,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          10.32,
+          0.0,
+          -12.040000000000003
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "28-fig75-03_to_05-1351.2",
+      "part_label": "crossing_horizontal_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -10.32,
+          -12.04,
+          0.0
+        ],
+        [
+          -10.32,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          -10.32,
+          0.0,
+          0.0
+        ],
+        [
+          -10.32,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          -10.32,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          -12.04,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          0.0,
+          -12.04,
+          0.0
+        ],
+        [
+          0.0,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          -12.04,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          10.32,
+          -12.04,
+          0.0
+        ],
+        [
+          10.32,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          10.32,
+          0.0,
+          0.0
+        ],
+        [
+          10.32,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          10.32,
+          12.040000000000003,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "surface_target_candidates": [
+    {
+      "component_id": "28-fig75-03_to_05-1351.1",
+      "part_label": "crossing_vertical_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -10.32,
+          0.0,
+          12.04
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          12.04
+        ],
+        [
+          0.0,
+          0.0,
+          12.04
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          12.04
+        ],
+        [
+          10.32,
+          0.0,
+          12.04
+        ],
+        [
+          -10.32,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          10.32,
+          0.0,
+          5.600000000000001
+        ],
+        [
+          -10.32,
+          0.0,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          10.32,
+          0.0,
+          0.0
+        ],
+        [
+          -10.32,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          0.0,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          10.32,
+          0.0,
+          -5.599999999999998
+        ],
+        [
+          -10.32,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          0.0,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          -12.040000000000003
+        ],
+        [
+          10.32,
+          0.0,
+          -12.040000000000003
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "28-fig75-03_to_05-1351.2",
+      "part_label": "crossing_horizontal_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -10.32,
+          -12.04,
+          0.0
+        ],
+        [
+          -10.32,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          -10.32,
+          0.0,
+          0.0
+        ],
+        [
+          -10.32,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          -10.32,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          -12.04,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          0.0,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          -4.800000000000001,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          0.0,
+          -12.04,
+          0.0
+        ],
+        [
+          0.0,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          -12.04,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          0.0,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          4.799999999999998,
+          12.040000000000003,
+          0.0
+        ],
+        [
+          10.32,
+          -12.04,
+          0.0
+        ],
+        [
+          10.32,
+          -5.600000000000001,
+          0.0
+        ],
+        [
+          10.32,
+          0.0,
+          0.0
+        ],
+        [
+          10.32,
+          5.599999999999998,
+          0.0
+        ],
+        [
+          10.32,
+          12.040000000000003,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/28.part01.ordinary_challenge.r8.json",
+  "component_index": null,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

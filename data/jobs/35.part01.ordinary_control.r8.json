@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "job_id": "35.part01.ordinary_control.r8",
+  "number": 35,
+  "case_number": 35,
+  "case_id": "fig75-28_softness-1384",
+  "part_label": "unblended_vertical_face+unblended_horizontal_face",
+  "source_part_indices": [
+    0,
+    1
+  ],
+  "source_sha256": "c0125ac4b2d51a01f56a1db3f70cbbee230b8c7c15db5e763a3c4ebbe4552bee",
+  "source_brep": "data/models/35.brep",
+  "source_fixture_json": "data/fixtures/35.json",
+  "source_fixture_sha256": "b8b07e27507beae6ba16ce4db9a8bf4e342c59ea48df9ebace6456133672602e",
+  "source_fixture_export_sha256": "b8b07e27507beae6ba16ce4db9a8bf4e342c59ea48df9ebace6456133672602e",
+  "source_contract_file": "data/contracts/35.json",
+  "source_contract_sha256": "a98726a50275dd833045a7fb566f3148a11a986af9014c70991bd38110cfc612",
+  "semantic_target": {
+    "original_edge": "x[-10,10],y=z=0 on sewed open two-face shell",
+    "support_contacts": [
+      "(x,0,13)",
+      "(x,13,0)"
+    ],
+    "expected_result": "open shell with complete transition; face counts may differ legally if boundary/coverage correct"
+  },
+  "operation": "native_surface_surface_fillet",
+  "role": "ordinary_control",
+  "radius_mm": 8,
+  "request_note": "face-pair ordinary control",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "sheet",
+  "targets": [],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": false,
+  "planner_status": "admission_or_adapter_blocked",
+  "blocked_reason": "multi-input finite surface-pair native adapter is separate from selected-edge runner; no shared topological edge is created by the planner",
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "component_id": "35-fig75-28_softness-1384.1",
+      "part_label": "unblended_vertical_face",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -8.600000000000001,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          9.0
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.0
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          9.0
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          9.0
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          5.4
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          5.4
+        ],
+        [
+          0.0,
+          0.0,
+          5.4
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          5.4
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          5.4
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          0.0,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          1.259999999999998
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "35-fig75-28_softness-1384.2",
+      "part_label": "unblended_horizontal_face",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -8.600000000000001,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          8.5,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          15.81,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          8.5,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          15.81,
+          0.0
+        ],
+        [
+          0.0,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          8.5,
+          0.0
+        ],
+        [
+          0.0,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          15.81,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          8.5,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          15.81,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          8.5,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          15.81,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "surface_target_candidates": [
+    {
+      "component_id": "35-fig75-28_softness-1384.1",
+      "part_label": "unblended_vertical_face",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -8.600000000000001,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          16.740000000000002
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          0.0,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          12.600000000000001
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          9.0
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.0
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          9.0
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          9.0
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          5.4
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          5.4
+        ],
+        [
+          0.0,
+          0.0,
+          5.4
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          5.4
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          5.4
+        ],
+        [
+          -8.600000000000001,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          -3.9999999999999996,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          0.0,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          3.9999999999999996,
+          0.0,
+          1.259999999999998
+        ],
+        [
+          8.600000000000001,
+          0.0,
+          1.259999999999998
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "35-fig75-28_softness-1384.2",
+      "part_label": "unblended_horizontal_face",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -8.600000000000001,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          8.5,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          -8.600000000000001,
+          15.81,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          8.5,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          -3.9999999999999996,
+          15.81,
+          0.0
+        ],
+        [
+          0.0,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          8.5,
+          0.0
+        ],
+        [
+          0.0,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          15.81,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          8.5,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          3.9999999999999996,
+          15.81,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          1.190000000000001,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          5.099999999999999,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          8.5,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          11.899999999999999,
+          0.0
+        ],
+        [
+          8.600000000000001,
+          15.81,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/35.part01.ordinary_control.r8.json",
+  "component_index": null,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

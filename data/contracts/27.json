@@ -1,0 +1,182 @@
+{
+  "number": 27,
+  "case_id": "fig75-02_three_axes-1349",
+  "title": "75-2 面面圆角的两张正交支撑面",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "9189c7a18ca139d89e72541ea3c1dedbd51152a749e35352823d9195e3ae99f0",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-02_three_axes-1349.json",
+  "source_spec_sha256": "b83d1b1bcf8ef37e1c2466b1a95146a0b3f32b441b5513739241a7709a6aafcf",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-02_three_axes-1349.png",
+  "current_evidence_scope": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 部分未通过。原图特殊模式尚未验证；选边与外形待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-2 and Trimming/Propagation thumbnails"
+  ],
+  "source_pages": {
+    "physical": [
+      1348,
+      1349
+    ],
+    "printed": [
+      1346,
+      1347
+    ]
+  },
+  "target_change": [
+    "A: generate a real face-face transition between the supplied orthogonal walls; expose independent choice of section-plane/contact/shape properties.",
+    "B: compare explicit-wall-only propagation against continuation onto adjacent boss faces; retain both source input components."
+  ],
+  "must_preserve": [
+    "A walls remain zero-thickness sheets; green cross-sectional plane is auxiliary only.",
+    "B boss remains a solid and floor remains a sheet unless a separately frozen preparation recipe is declared; do not quietly remove boss bottom and score that as original input.",
+    "Same base supports/dimensions across mode comparisons; do not collapse the whole concept to ordinary R1."
+  ],
+  "semantic_target": {
+    "A": "vertical plane y=0 and horizontal z=0, local x[-12,12], walls height18/floor16, group placement x=-20",
+    "B": "boss footprint x[-6,6], y[-5,5], z[0,14] with floor x[-13,13],y[-12,12],z0, group placement x=+20; choose the declared boss-wall/floor pair and adjacent propagation faces, not all four roots by default"
+  },
+  "required_modes": [
+    {
+      "id": "A-basic",
+      "operation": "face_face",
+      "section_plane": "rolling_ball",
+      "contact": "single fixed R baseline",
+      "shape": "circular"
+    },
+    {
+      "id": "B-explicit-only",
+      "operation": "propagation",
+      "expected": "blend rail stays on explicitly selected walls"
+    },
+    {
+      "id": "B-propagate",
+      "operation": "propagation",
+      "expected": "blend continues onto declared adjacent faces"
+    }
+  ],
+  "diagnostic_parameters": {
+    "A": {
+      "radius_mm": [
+        4,
+        8
+      ],
+      "radius_is_proposed": true
+    },
+    "B": {
+      "radius_mm": [
+        2,
+        4
+      ],
+      "selected_wall_must_be_frozen": true
+    }
+  },
+  "feature_oracles": [
+    {
+      "id": "cross_section_bundle",
+      "quantity": "section planes, two contacts, section type",
+      "expected": "all three properties recorded independently",
+      "method": "Take actual plane sections at 11 longitudinal stations, verify support tangency and radius/conic/G2 as requested; never count a drawn green plane as a result.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "propagation_pair_difference",
+      "quantity": "set of faces traversed by actual rail curves",
+      "expected": "explicit-only excludes adjacent walls; propagate mode reaches the expected neighboring walls",
+      "method": "Classify actual contact-rail samples against original finite face IDs; compare path station coverage and terminal locations.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "unselected_features",
+      "quantity": "boss/floor outside declared transition",
+      "expected": "unchanged",
+      "method": "Compare boundary/occupancy away from blend neighborhoods.",
+      "scope": "feature_required"
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmApiSurfaceSurfaceFillet / SmFilletExecutive::SurfaceSurfaceFillet",
+      "evidence": "SM_API/src/SmApiBrep.cpp surface wrapper; SMLib/src/SmFilletExecutive.cpp:1306-1561",
+      "expresses": "Two possibly disconnected surfaces, signed per-surface offsets, surface blend and low-level trim controls",
+      "boundary": "High-level wrapper forces MAXIMAL and base trim0; requires finite-domain and orientation adaptation."
+    },
+    {
+      "entry": "SmApiFilletEdges / SmFilletExecutive + topology handlers",
+      "evidence": "SM_API/src/SmApiBrep.cpp; SMLib/inc/SmFilletCorner.h",
+      "expresses": "Ordinary topological root edge fillets with default adjacent-feature handling",
+      "boundary": "Default rollover is not demonstrated equivalent to Parasolid imprint_complete/propagation policy."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "source_ambiguity",
+      "description": "Figure is conceptual and propagation thumbnail has no exact dimensions/selected face IDs; freeze a specific B wall/route before a binary mode verdict.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "adapter_gap",
+      "description": "No verified explicit-only/propagate switch mapping has been established in the current SMLib bridge. A correct ordinary root fillet is only a baseline.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "inconsistent_if": [
+    "Green plane appears as material geometry.",
+    "Only one R1 root fillet is shown for the whole concept.",
+    "Boss is replaced by an unannounced open skin.",
+    "Propagation targets were not frozen, yet reported as source-feature passed."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/27.brep",
+  "input_brep_sha256": "9189c7a18ca139d89e72541ea3c1dedbd51152a749e35352823d9195e3ae99f0"
+}

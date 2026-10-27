@@ -1,0 +1,465 @@
+{
+  "number": 23,
+  "case_id": "73-42_43_overlap-1316",
+  "title": "相邻双凸台的圆角链重叠输入",
+  "feature_family": "same_convexity_notch_vs_smooth_overlap",
+  "source_feature": {
+    "meaning": "Compare true overlap of two same-concavity root chains using default notch versus smooth overlap. Same-convexity Fig73-42 ignores overlap order; smooth requires notch disabled.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-42_43_overlap-1316.png",
+    "source_sha256": "2f376df71f49e1fb3437650b095f4774a9c95a9b29f4bbd9cf71083bc5fc8cb3",
+    "reference_crop": [
+      0.2,
+      0.23,
+      0.83,
+      0.54
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-42_43_overlap-1316.json",
+    "current_spec_sha256": "abd626bbe6c3d1fe87256ca6679ae6b38e383e05c633fa15d671715daa36fc6d",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-42_43_overlap-1316.brep",
+    "brep_sha256": "3f3ec1986be71db79acd9d751ea62a37f53e907e9bf4e53deea118f99db774b1",
+    "step_path": "history:outputs/parasolid-preblend/models/73-42_43_overlap-1316.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-42_43_overlap-1316.json",
+    "bbox_world_mm": [
+      -11.999999999999998,
+      -12.000000000000002,
+      0.0,
+      36.0,
+      12.000000000000002,
+      24.300000100000002
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "TwinBossCapsule"
+    ],
+    "parts_geometry_immutable": [
+      "Exact capsule pad and both bosses including original shoulder geometry. Do not remove shoulder, change spacing, shrink R or replace bosses to make problem easier."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root_circles": [
+        {
+          "center": [
+            3,
+            0,
+            18
+          ],
+          "radius": 5.5
+        },
+        {
+          "center": [
+            16,
+            0,
+            18
+          ],
+          "radius": 5.5
+        }
+      ],
+      "selected_edge_count": 2,
+      "pre_existing_upper_shoulder_radius": 3.3,
+      "root_z": 18
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "TwinBossCapsule",
+        "documentary_original_OCC_edge_index_1based": 17,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 34.40026936867338,
+        "polyline_is_approximation": true,
+        "closed": true,
+        "endpoints_world_mm": [
+          [
+            8.5,
+            0.0,
+            18.0
+          ],
+          [
+            8.5,
+            -1.3471114790620886e-15,
+            18.0
+          ]
+        ],
+        "aabb_world_mm": [
+          -2.4249871687149733,
+          -5.481214711536684,
+          18.0,
+          8.5,
+          5.481214711536684,
+          18.0
+        ],
+        "sample_points_world_mm": [
+          [
+            8.5,
+            0.0,
+            18.0
+          ],
+          [
+            8.201994829353492,
+            1.785847080625759,
+            18.0
+          ],
+          [
+            7.340272801680165,
+            3.378169919793173,
+            18.0
+          ],
+          [
+            6.008214869673348,
+            4.604415630443907,
+            18.0
+          ],
+          [
+            4.350170179274396,
+            5.331701462666317,
+            18.0
+          ],
+          [
+            2.5458135999021727,
+            5.481214711536684,
+            18.0
+          ],
+          [
+            0.7906751644086683,
+            5.036753296602816,
+            18.0
+          ],
+          [
+            -0.7250486439415753,
+            4.046481508702225,
+            18.0
+          ],
+          [
+            -1.8371056316356889,
+            2.617710661703905,
+            18.0
+          ],
+          [
+            -2.4249871687149724,
+            0.9052702465440372,
+            18.0
+          ],
+          [
+            -2.4249871687149733,
+            -0.9052702465440358,
+            18.0
+          ],
+          [
+            -1.8371056316356897,
+            -2.6177106617039043,
+            18.0
+          ],
+          [
+            -0.7250486439415762,
+            -4.0464815087022235,
+            18.0
+          ],
+          [
+            0.7906751644086656,
+            -5.036753296602815,
+            18.0
+          ],
+          [
+            2.54581359990217,
+            -5.481214711536684,
+            18.0
+          ],
+          [
+            4.350170179274393,
+            -5.3317014626663175,
+            18.0
+          ],
+          [
+            6.008214869673346,
+            -4.604415630443908,
+            18.0
+          ],
+          [
+            7.340272801680164,
+            -3.3781699197931743,
+            18.0
+          ],
+          [
+            8.201994829353492,
+            -1.7858470806257605,
+            18.0
+          ],
+          [
+            8.5,
+            -1.3471114790620886e-15,
+            18.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "TwinBossCapsule",
+        "documentary_original_OCC_edge_index_1based": 18,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 34.40026936867338,
+        "polyline_is_approximation": true,
+        "closed": true,
+        "endpoints_world_mm": [
+          [
+            21.5,
+            0.0,
+            18.0
+          ],
+          [
+            21.5,
+            -1.3471114790620886e-15,
+            18.0
+          ]
+        ],
+        "aabb_world_mm": [
+          10.575012831285026,
+          -5.481214711536684,
+          18.0,
+          21.5,
+          5.481214711536684,
+          18.0
+        ],
+        "sample_points_world_mm": [
+          [
+            21.5,
+            0.0,
+            18.0
+          ],
+          [
+            21.20199482935349,
+            1.785847080625759,
+            18.0
+          ],
+          [
+            20.340272801680165,
+            3.378169919793173,
+            18.0
+          ],
+          [
+            19.00821486967335,
+            4.604415630443907,
+            18.0
+          ],
+          [
+            17.350170179274397,
+            5.331701462666317,
+            18.0
+          ],
+          [
+            15.545813599902173,
+            5.481214711536684,
+            18.0
+          ],
+          [
+            13.790675164408668,
+            5.036753296602816,
+            18.0
+          ],
+          [
+            12.274951356058425,
+            4.046481508702225,
+            18.0
+          ],
+          [
+            11.162894368364311,
+            2.617710661703905,
+            18.0
+          ],
+          [
+            10.575012831285028,
+            0.9052702465440372,
+            18.0
+          ],
+          [
+            10.575012831285026,
+            -0.9052702465440358,
+            18.0
+          ],
+          [
+            11.16289436836431,
+            -2.6177106617039043,
+            18.0
+          ],
+          [
+            12.274951356058423,
+            -4.0464815087022235,
+            18.0
+          ],
+          [
+            13.790675164408665,
+            -5.036753296602815,
+            18.0
+          ],
+          [
+            15.54581359990217,
+            -5.481214711536684,
+            18.0
+          ],
+          [
+            17.350170179274393,
+            -5.3317014626663175,
+            18.0
+          ],
+          [
+            19.008214869673346,
+            -4.604415630443908,
+            18.0
+          ],
+          [
+            20.340272801680165,
+            -3.3781699197931743,
+            18.0
+          ],
+          [
+            21.20199482935349,
+            -1.7858470806257605,
+            18.0
+          ],
+          [
+            21.5,
+            -1.3471114790620886e-15,
+            18.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "nonoverlap-r0p5",
+        "radius_mm": 0.5,
+        "mode": "ordinary pair"
+      },
+      {
+        "id": "threshold-r1",
+        "radius_mm": 1,
+        "mode": "zero-width tangency"
+      },
+      {
+        "id": "single-left-r2",
+        "radius_mm": 2,
+        "mode": "single side"
+      },
+      {
+        "id": "single-right-r2",
+        "radius_mm": 2,
+        "mode": "single side"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "notch-r2",
+        "radius_mm": 2,
+        "mode": "notch overlap",
+        "ov_notch": true,
+        "ov_smooth": false
+      },
+      {
+        "id": "notch-r2p5",
+        "radius_mm": 2.5,
+        "mode": "notch overlap",
+        "ov_notch": true,
+        "ov_smooth": false
+      },
+      {
+        "id": "smooth-r2",
+        "radius_mm": 2,
+        "mode": "smooth overlap",
+        "ov_notch": false,
+        "ov_smooth": true
+      },
+      {
+        "id": "smooth-r2p5",
+        "radius_mm": 2.5,
+        "mode": "smooth overlap",
+        "ov_notch": false,
+        "ov_smooth": true
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "true_footprint_overlap",
+      "expression": "2*(5.5+R)-13 > 0",
+      "gap_mm": 2,
+      "strict_overlap_requires_R_gt": 1,
+      "overlap_width_at_R2_mm": 2,
+      "overlap_width_at_R2p5_mm": 3
+    },
+    {
+      "id": "exclude_shoulder_confound",
+      "condition": "R2/R2.5 primary; R3/R4 additionally touch pre-existing upper shoulder and are separate stress tests."
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "two_chains_not_one",
+      "assertion": "Both requested roots must actually have generated R bands. Single-chain success or second-chain failure is not target pass."
+    },
+    {
+      "id": "notch_C0_expected",
+      "assertion": "Notch result should have a legal C0 valley edge where bands meet; expected midplane valley z18.267949192 atR2 and z18.5 atR2.5; normal jump60deg/73.7397953deg is expected there, while normal base/boss contacts remain G1.",
+      "visual": "Zoom actual overlap band. Label notch C0 separately from base/support tangent joins."
+    },
+    {
+      "id": "smooth_requires_G1",
+      "assertion": "Smooth mode must remove the valley crease and meet actual neighboring bands G0<=1e-6mm/G1<=.1deg across all requested smooth junctions; also pass native/roundtrip quality. A valid closed union with notch is not smooth."
+    },
+    {
+      "id": "overlap_geometry",
+      "assertion": "Use independent horizontal slices/occupancy of two exact root-filleting rings. Helpful overlapping-addition volumes~.584024712mm³ R2 /1.961320701mm³ R2.5 are derived demo checks, not source dimensions; do not use a failing auxiliary boolean common as sole oracle."
+    },
+    {
+      "id": "native_vs_secondary",
+      "assertion": "A separate secondary notch-edge R.5/.25 is explicit composition, not native ov_smooth. STEP/export failures remain failures even if local G1 passes."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Zoom actual overlap band. Label notch C0 separately from base/support tangent joins."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/23.brep",
+  "input_brep_sha256": "3f3ec1986be71db79acd9d751ea62a37f53e907e9bf4e53deea118f99db774b1"
+}

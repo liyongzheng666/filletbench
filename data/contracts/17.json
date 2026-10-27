@@ -1,0 +1,210 @@
+{
+  "number": 17,
+  "case_id": "73-35_to_37_caps-1306",
+  "title": "以本体端面封口的带槽阶台输入",
+  "feature_family": "cap_to_existing_body_face",
+  "source_feature": {
+    "meaning": "Trim a large blend to a specified existing finite body face, extending that face when needed, keeping the left blend and unrounded right side.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-35_to_37_caps-1306.png",
+    "source_sha256": "f02ac40c6f8be8550432282bc7f237db28cbf62670ff035fe29dbabc34a805f1",
+    "reference_crop": [
+      0.055,
+      0.45,
+      0.85,
+      0.705
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-35_to_37_caps-1306.json",
+    "current_spec_sha256": "c9b2f275df369774c032c12d6fdaa511cac072595e71855092bb950bd600d752",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.brep",
+    "brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2",
+    "step_path": "history:outputs/parasolid-preblend/models/73-35_to_37_caps-1306.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-35_to_37_caps-1306.json",
+    "bbox_world_mm": [
+      0.0,
+      0.0,
+      0.0,
+      70.0,
+      38.0,
+      41.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "notched_step_body"
+    ],
+    "parts_geometry_immutable": [
+      "Base70x38x12; wall70x9x29@(0,29,12); slot9x11x28@(29,28,15); finite cap stays fixed, no arbitrary blocker added."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "root": {
+        "start": [
+          0,
+          29,
+          12
+        ],
+        "end": [
+          70,
+          29,
+          12
+        ]
+      },
+      "cap_face": {
+        "plane": "x=29",
+        "finite_y": [
+          29,
+          38
+        ],
+        "finite_z": [
+          15,
+          41
+        ],
+        "belongs_to_target_body": true
+      },
+      "retained_side": "x<29",
+      "extension_of_cap_support_required": true
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "notched_step_body",
+        "documentary_original_OCC_edge_index_1based": 6,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 70.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            29.0,
+            12.0
+          ],
+          [
+            70.0,
+            29.0,
+            12.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          29.0,
+          12.0,
+          70.0,
+          29.0,
+          12.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            29.0,
+            12.0
+          ],
+          [
+            70.0,
+            29.0,
+            12.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-r2",
+        "radius_mm": 2,
+        "mode": "no cap"
+      },
+      {
+        "id": "ordinary-r8",
+        "radius_mm": 8,
+        "mode": "no cap"
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "cap-r4",
+        "radius_mm": 4,
+        "mode": "existing-face cap",
+        "cap_plane_x": 29
+      },
+      {
+        "id": "cap-r8",
+        "radius_mm": 8,
+        "mode": "existing-face cap",
+        "cap_plane_x": 29
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "cap_extension_trigger",
+      "slot_bottom_above_shelf_mm": 3,
+      "strict_condition": "R>3",
+      "R4_triggers": true,
+      "R8_triggers": true
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "cap_stop",
+      "assertion": "Actual blend terminates on x29; preserve original finite blue face and add only the needed coplanar cap continuation, with genuine shared end curve. Original right root x29..70 remains sharp.",
+      "visual": "Blue solid original face edges vs blue dashed support extension; red crossing refers to extension if belowz15."
+    },
+    {
+      "id": "single_left_band",
+      "assertion": "One radius-R cylindrical/numerically circular band only x0..29, no right-side band; expected added volume 29*R^2*(1-pi/4)."
+    },
+    {
+      "id": "cap_occupancy",
+      "assertion": "Compare actual added material at matched points on both sides of x29; left exists, right absent; native ordinary pilot right-side INSIDE is a target mismatch, not a cap success."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Blue solid original face edges vs blue dashed support extension; red crossing refers to extension if belowz15."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/17.brep",
+  "input_brep_sha256": "49193e6a715814a24a5b6388eee77ff734a4f9502f9cc1e28a4626bc00e149f2"
+}

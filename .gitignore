@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+runs/
+build/
+node_modules/
+*.smb
+*.dylib
+*.so
+*.dll
+*.pdf
+*.FCStd
+*.log
+
+.cache/

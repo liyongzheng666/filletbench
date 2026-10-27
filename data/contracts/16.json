@@ -1,0 +1,282 @@
+{
+  "number": 16,
+  "case_id": "73-34_combine_limits-1305",
+  "title": "顶点与边限制共用的立方体输入",
+  "feature_family": "vertex_edge_limit_priority",
+  "source_feature": {
+    "meaning": "Combine a vertex exclusion with an edge limit; vertex restriction applies first. Outside-edge limit extends unrounded portion, inside-edge limit is dominated by vertex-only behavior.",
+    "not_proved_by": "ordinary equal-radius fillet build/validity alone",
+    "reference_dimensions_are_inferred": true
+  },
+  "reference": {
+    "image_path": "history:outputs/parasolid-preblend/references/73-34_combine_limits-1305.png",
+    "source_sha256": "87f4482651a59e1f319de0a13d4e1a7f8908f0335a924086489aecafe4850ba1",
+    "reference_crop": [
+      0.225,
+      0.305,
+      0.84,
+      0.67
+    ],
+    "current_spec_path": "history:outputs/manual-review/case-specs/73-34_combine_limits-1305.json",
+    "current_spec_sha256": "a7fd58756ef4dbb3e8bf4b87aa0977204807a1c2b01e088928010b69cff4f99c",
+    "source_parameter_status": "reconstructed_demo_contract_frozen_not_original_CAD"
+  },
+  "input": {
+    "brep_path": "history:outputs/parasolid-preblend/models/73-34_combine_limits-1305.brep",
+    "brep_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+    "step_path": "history:outputs/parasolid-preblend/models/73-34_combine_limits-1305.step",
+    "mesh_path": "history:outputs/parasolid-preblend/mesh/73-34_combine_limits-1305.json",
+    "bbox_world_mm": [
+      0.0,
+      0.0,
+      0.0,
+      35.0,
+      35.0,
+      35.0
+    ],
+    "solid_count": 1,
+    "part_labels": [
+      "cube"
+    ],
+    "parts_geometry_immutable": [
+      "Same35 cube and V; A6/B14/C3 are declared reconstruction demonstration parameters, not PDF calibration."
+    ],
+    "original_reference_geometry_must_remain_unchanged": true,
+    "coincident_coplanar_face_merge_allowed": "only if no contract topology is lost"
+  },
+  "selection": {
+    "native_index_reuse_forbidden": true,
+    "selector_distance_mm_max": 1e-06,
+    "selector_shape_distance_mm_max": 1e-05,
+    "selector_match_must_be_unique": true,
+    "semantic": {
+      "target_vertex": [
+        35,
+        0,
+        35
+      ],
+      "root_edges": "three cube edges incident to V",
+      "vertical_edge_parameter": "t=35-z from V downward",
+      "keep_vertex_extent_A_mm": 6
+    },
+    "world_edge_fingerprints": [
+      {
+        "part_label": "cube",
+        "documentary_original_OCC_edge_index_1based": 5,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 35.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            35.0,
+            0.0,
+            0.0
+          ],
+          [
+            35.0,
+            0.0,
+            35.0
+          ]
+        ],
+        "aabb_world_mm": [
+          35.0,
+          0.0,
+          0.0,
+          35.0,
+          0.0,
+          35.0
+        ],
+        "sample_points_world_mm": [
+          [
+            35.0,
+            0.0,
+            0.0
+          ],
+          [
+            35.0,
+            0.0,
+            35.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "cube",
+        "documentary_original_OCC_edge_index_1based": 6,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 35.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            35.0,
+            0.0,
+            35.0
+          ],
+          [
+            35.0,
+            35.0,
+            35.0
+          ]
+        ],
+        "aabb_world_mm": [
+          35.0,
+          0.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0
+        ],
+        "sample_points_world_mm": [
+          [
+            35.0,
+            0.0,
+            35.0
+          ],
+          [
+            35.0,
+            35.0,
+            35.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      },
+      {
+        "part_label": "cube",
+        "documentary_original_OCC_edge_index_1based": 10,
+        "do_not_use_index_for_SMLib_selection": true,
+        "source_mesh_polyline_length_mm": 35.0,
+        "polyline_is_approximation": true,
+        "closed": false,
+        "endpoints_world_mm": [
+          [
+            0.0,
+            0.0,
+            35.0
+          ],
+          [
+            35.0,
+            0.0,
+            35.0
+          ]
+        ],
+        "aabb_world_mm": [
+          0.0,
+          0.0,
+          35.0,
+          35.0,
+          0.0,
+          35.0
+        ],
+        "sample_points_world_mm": [
+          [
+            0.0,
+            0.0,
+            35.0
+          ],
+          [
+            35.0,
+            0.0,
+            35.0
+          ]
+        ],
+        "curve_matching": "world position/shape and finite adjacency; analytic fit can be recovered from NURBS, never require same curve class or same topology index"
+      }
+    ],
+    "allow_chain_of_split_native_edges": true,
+    "expected_count_applies_to": "geometric root chains/support intersections, not arbitrary backend edge segmentation",
+    "source_imprint_contacts_must_be_preserved": true
+  },
+  "parameter_suite": {
+    "baselines": [
+      {
+        "id": "ordinary-r6",
+        "radius_mm": 6,
+        "mode": "no limits"
+      },
+      {
+        "id": "vertex-only",
+        "radius_mm": 6,
+        "mode": "vertex limit",
+        "A_mm": 6
+      }
+    ],
+    "target_variants": [
+      {
+        "id": "case1-outside",
+        "radius_mm": 6,
+        "mode": "vertex+edge",
+        "A_mm": 6,
+        "B_mm": 14,
+        "effective_vertical_stop_t_mm": 14
+      },
+      {
+        "id": "case2-inside",
+        "radius_mm": 6,
+        "mode": "vertex+edge",
+        "A_mm": 6,
+        "C_mm": 3,
+        "effective_vertical_stop_t_mm": 6
+      }
+    ],
+    "implicit_radius_fallback_allowed": false
+  },
+  "trigger_preconditions": [
+    {
+      "id": "priority_cases",
+      "expression": "Case1 B14>A6; Case2 C3<A6"
+    }
+  ],
+  "independent_oracles": [
+    {
+      "id": "case1_stop",
+      "assertion": "Original vertex cube retained; vertical R6 band starts only at z21 and below; no blend from z21..35 on protected vertical edge.",
+      "world_stop_plane": {
+        "z": 21
+      },
+      "visual": "Label A atz29, B atz21; original vertical interval A..B remains sharp."
+    },
+    {
+      "id": "case2_vertex_dominates",
+      "assertion": "Case2 result equals independently constructed vertex-only result within fixed geometry tolerances; requested C atz32 does not shorten into protected region.",
+      "world_stop_plane": {
+        "z": 29
+      }
+    },
+    {
+      "id": "cube_analytic_material",
+      "assertion": "Use independent clipped box/cylinder CSG or material occupancy, not the construction result itself as oracle; verify 3 cylinder bands and no spherical vertex blend."
+    }
+  ],
+  "visual_difference_requirements": [
+    "Keep stable number and original/input/actual-result three columns.",
+    "Show trigger region before/after, intended stop or overlap boundary, and true output edges; helper geometry is labeled.",
+    "Label A atz29, B atz21; original vertical interval A..B remains sharp."
+  ],
+  "native_API_mapping": {
+    "engine": "SMLib",
+    "version_scope": "local10.0.0 source commit c9c5979f04cea8c38213004d4f04df0dcfb40d05",
+    "ordinary_fillet_entry": "SmApiFilletEdges(pBrep,edges,radius,xsect=1,continuity=1,thumbweight=1.0)",
+    "ordinary_fillet_declared": true,
+    "special_feature_adapter_status": "adapter_not_ready",
+    "unsupported_kernel_claim_permitted": false,
+    "reason": "The existing ordinary fillet entry does not itself encode this source option. Capability requires explicit native mapping or a separately labeled composition; missing adapter is not proof of kernel unsupported.",
+    "native_ordinary_result_and_source_feature_result_must_be_separate": true
+  },
+  "source_clarifications_required": [],
+  "execution": {
+    "this_contract_generation_runs_CAD": false,
+    "full_suite_result_status": "not_executed_by_contract_writer",
+    "must_not_fill_results_from_historical_OCC_or_pilot_other_cases": true
+  },
+  "scoring": {
+    "ordinary_baseline_is_source_feature_pass": false,
+    "source_feature_score_requires": "trigger satisfied AND correct mode/selection supplied AND target-specific oracles passed AND common quality gates passed",
+    "adapter_gap_status": "adapter_not_ready",
+    "unfrozen_target_status": "source_contract_not_frozen",
+    "composition_score_separate_from_native": true
+  },
+  "input_brep": "data/models/16.brep",
+  "input_brep_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc"
+}

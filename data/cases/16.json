@@ -1,0 +1,33 @@
+{
+  "number": 16,
+  "id": "73-34_combine_limits-1305",
+  "title": "顶点与边限制共用的立方体输入",
+  "question": "边限制分别位于顶点保留区外和区内，核对两种组合限制的实际终止位置。",
+  "family": "b",
+  "source_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+  "reference": {
+    "page": 1305,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.225,
+      0.305,
+      0.84,
+      0.67
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/16.brep",
+  "fixture": "data/fixtures/16.json",
+  "contract": "data/contracts/16.json",
+  "variants": []
+}

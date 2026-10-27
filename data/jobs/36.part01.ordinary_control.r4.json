@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "job_id": "36.part01.ordinary_control.r4",
+  "number": 36,
+  "case_number": 36,
+  "case_id": "fig75-30_trim-1389",
+  "part_label": "narrow_vertical_wall+wide_horizontal_wall",
+  "source_part_indices": [
+    0,
+    1
+  ],
+  "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "source_brep": "data/models/36.brep",
+  "source_fixture_json": "data/fixtures/36.json",
+  "source_fixture_sha256": "08cfd7149e43cdbb2f43d14013f55d8363b1c9305408f11cdcca581fccc7904c",
+  "source_fixture_export_sha256": "08cfd7149e43cdbb2f43d14013f55d8363b1c9305408f11cdcca581fccc7904c",
+  "source_contract_file": "data/contracts/36.json",
+  "source_contract_sha256": "04d1f0ddff2d0eb5881f717f3743a0a0df1100cdea6077872696ec6f2c761a8e",
+  "semantic_target": {
+    "left": "narrow vertical finite wall",
+    "right": "wide horizontal finite wall",
+    "theoretical_intersection": "infinite y=z=0 line; not an original topological edge",
+    "geometry": "finite separation sqrt(5²+5²), width mismatch14 vs25"
+  },
+  "operation": "native_surface_surface_fillet",
+  "role": "ordinary_control",
+  "radius_mm": 4,
+  "request_note": "finite contact below z5/y5 negative control",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "sheet",
+  "targets": [],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": false,
+  "planner_status": "admission_or_adapter_blocked",
+  "blocked_reason": "multi-input finite surface-pair native adapter is separate from selected-edge runner; no shared topological edge is created by the planner",
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "component_id": "36-fig75-30_trim-1389.1",
+      "part_label": "narrow_vertical_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -6.02,
+          0.0,
+          23.6
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          23.6
+        ],
+        [
+          0.0,
+          0.0,
+          23.6
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          23.6
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          23.6
+        ],
+        [
+          -6.02,
+          0.0,
+          19.0
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          19.0
+        ],
+        [
+          0.0,
+          0.0,
+          19.0
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          19.0
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          19.0
+        ],
+        [
+          -6.02,
+          0.0,
+          15.0
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          15.0
+        ],
+        [
+          0.0,
+          0.0,
+          15.0
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          15.000000000000002
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          15.0
+        ],
+        [
+          -6.02,
+          0.0,
+          11.0
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          11.0
+        ],
+        [
+          0.0,
+          0.0,
+          11.0
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          11.0
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          11.0
+        ],
+        [
+          -6.02,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          0.0,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          6.399999999999999
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "36-fig75-30_trim-1389.2",
+      "part_label": "wide_horizontal_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -10.75,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          -10.75,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          -10.75,
+          14.0,
+          0.0
+        ],
+        [
+          -10.75,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          -10.75,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          14.0,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          0.0,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          0.0,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          14.0,
+          0.0
+        ],
+        [
+          0.0,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          14.0,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          10.75,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          10.75,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          10.75,
+          14.0,
+          0.0
+        ],
+        [
+          10.75,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          10.75,
+          21.740000000000002,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "surface_target_candidates": [
+    {
+      "component_id": "36-fig75-30_trim-1389.1",
+      "part_label": "narrow_vertical_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -6.02,
+          0.0,
+          23.6
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          23.6
+        ],
+        [
+          0.0,
+          0.0,
+          23.6
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          23.6
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          23.6
+        ],
+        [
+          -6.02,
+          0.0,
+          19.0
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          19.0
+        ],
+        [
+          0.0,
+          0.0,
+          19.0
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          19.0
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          19.0
+        ],
+        [
+          -6.02,
+          0.0,
+          15.0
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          15.0
+        ],
+        [
+          0.0,
+          0.0,
+          15.0
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          15.000000000000002
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          15.0
+        ],
+        [
+          -6.02,
+          0.0,
+          11.0
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          11.0
+        ],
+        [
+          0.0,
+          0.0,
+          11.0
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          11.0
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          11.0
+        ],
+        [
+          -6.02,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          -2.8000000000000007,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          0.0,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          2.799999999999999,
+          0.0,
+          6.399999999999999
+        ],
+        [
+          6.020000000000001,
+          0.0,
+          6.399999999999999
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    },
+    {
+      "component_id": "36-fig75-30_trim-1389.2",
+      "part_label": "wide_horizontal_wall",
+      "documentary_source_face_id": 1,
+      "native_face_index_supplied": false,
+      "samples_mm": [
+        [
+          -10.75,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          -10.75,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          -10.75,
+          14.0,
+          0.0
+        ],
+        [
+          -10.75,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          -10.75,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          14.0,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          -4.999999999999999,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          0.0,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          0.0,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          0.0,
+          14.0,
+          0.0
+        ],
+        [
+          0.0,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          0.0,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          14.0,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          4.999999999999999,
+          21.740000000000002,
+          0.0
+        ],
+        [
+          10.75,
+          6.259999999999996,
+          0.0
+        ],
+        [
+          10.75,
+          10.399999999999999,
+          0.0
+        ],
+        [
+          10.75,
+          14.0,
+          0.0
+        ],
+        [
+          10.75,
+          17.599999999999998,
+          0.0
+        ],
+        [
+          10.75,
+          21.740000000000002,
+          0.0
+        ]
+      ],
+      "selection_state": "finite_support_candidate_requires_explicit_face_pair_mapping"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/36.part01.ordinary_control.r4.json",
+  "component_index": null,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  }
+}

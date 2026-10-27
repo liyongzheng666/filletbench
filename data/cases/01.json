@@ -1,0 +1,33 @@
+{
+  "number": 1,
+  "id": "73-17_cliff_edge-1281",
+  "title": "悬崖边：齐边立块与窄后平台（PDF 复核）",
+  "question": "在R大于台阶高的情况下，圆角面保留平滑侧G1，并在操作前指定的已有cliff边链终止；cliff侧允许有意非相切，不是普通双相切小圆角。",
+  "family": "a",
+  "source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+  "reference": {
+    "page": 1281,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.31,
+      0.225,
+      0.77,
+      0.412
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/01.brep",
+  "fixture": "data/fixtures/01.json",
+  "contract": "data/contracts/01.json",
+  "variants": []
+}

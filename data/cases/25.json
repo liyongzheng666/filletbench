@@ -1,0 +1,33 @@
+{
+  "number": 25,
+  "id": "73-44_45_unders-1318",
+  "title": "四底层面关联的三分区方块输入",
+  "question": "大半径跨过三块有限共面顶面，生成X/Y/Z不同区域；实际几何与原支持面来源配对分别验证。",
+  "family": "b",
+  "source_sha256": "9b6724769a84ae8db23755133b5a02fab4f8d08c57a8713712e25f9bbe106f2c",
+  "reference": {
+    "page": 1318,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.105,
+      0.312,
+      0.845,
+      0.582
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/25.brep",
+  "fixture": "data/fixtures/25.json",
+  "contract": "data/contracts/25.json",
+  "variants": []
+}

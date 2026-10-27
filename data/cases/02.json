@@ -1,0 +1,33 @@
+{
+  "number": 2,
+  "id": "73-18_explicit_cliff-1282",
+  "title": "显式悬崖边：L 形长槽截面",
+  "question": "同一L体、同一前上沿和半径，明确指定操作前cliff边；大R不得改为小R或把事后交线当指定边。",
+  "family": "a",
+  "source_sha256": "ce2e6067d02aea7ad2c50acaf1d984ca41d04913101dfaab840fabb120c7eec9",
+  "reference": {
+    "page": 1282,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.15,
+      0.265,
+      0.835,
+      0.66
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/02.brep",
+  "fixture": "data/fixtures/02.json",
+  "contract": "data/contracts/02.json",
+  "variants": []
+}

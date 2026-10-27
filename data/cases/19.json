@@ -1,0 +1,33 @@
+{
+  "number": 19,
+  "id": "73-38_trim_face_edge-1308",
+  "title": "三槽台面与竖壁的限制拓扑输入",
+  "question": "按指定有限面或边的真实交点截停，不将无限延伸交点冒充有限拓扑命中。",
+  "family": "b",
+  "source_sha256": "1efd818fdfa4c07d56e8c8b742cfc0249535e5a358bd700b0ff4c5ee527ab9f2",
+  "reference": {
+    "page": 1308,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.255,
+      0.4,
+      0.855,
+      0.785
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/19.brep",
+  "fixture": "data/fixtures/19.json",
+  "contract": "data/contracts/19.json",
+  "variants": []
+}

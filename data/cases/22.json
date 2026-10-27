@@ -1,0 +1,33 @@
+{
+  "number": 22,
+  "id": "73-41_laminar-1312",
+  "title": "两片不等宽平面相交的薄片体",
+  "question": "零厚度薄片共边与laminar边界处理；保持真实片体类别、有限自由边及接头条件。",
+  "family": "b",
+  "source_sha256": "0c46b9e44c22739e8c2821988bb33a08d45ceab9a5f40b498ef7df47d27bdfe8",
+  "reference": {
+    "page": 1312,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.225,
+      0.415,
+      0.857,
+      0.79
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/22.brep",
+  "fixture": "data/fixtures/22.json",
+  "contract": "data/contracts/22.json",
+  "variants": []
+}

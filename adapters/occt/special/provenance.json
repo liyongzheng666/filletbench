@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "adapted_at": "2026-10-27T05:13:31.862788+00:00",
+  "implementation": "Portable pure OCP adaptation; requires only published data/models and pinned cadquery-ocp. Historical absolute paths and FreeCAD dependencies removed. No prior output geometry reused.",
+  "sources": [
+    {
+      "legacy_project_relative_path": "work/fillet-batch/prepare-d.py",
+      "sha256": "d8bd1d939fed306ac52f7c1668adb56071f7285734e3b5e9f790b9208c44ed0b",
+      "method_used": "Sewed walls, boss surface skin, quadrant clipping, partition retention, and extended common band."
+    },
+    {
+      "legacy_project_relative_path": "work/case35-g2/build_compositions.py",
+      "sha256": "038bb249784fb6c5a2bcc2367eb4d131a80f7282453322a5f38962f33ed16505",
+      "method_used": "Fixed-contact d13 degree9 profile and alpha proxy mapping."
+    },
+    {
+      "legacy_project_relative_path": "work/case35-g2/independent-check.py",
+      "sha256": "fb68cf4f3ff61985dc8b5144abd63541636009546e72819bedb1d737056f0593",
+      "method_used": "Actual seam G0/G1/principal curvature and actual profile readback checks."
+    },
+    {
+      "legacy_project_relative_path": "work/case35-g2/g2-audit-helpers.py",
+      "sha256": "fad1a910ea653c9889006deecaaf676d2f10a1ed43ebcf032b1fb1e2dfa97638",
+      "method_used": "Separate Bernstein profile evaluation and curvature boundaries."
+    }
+  ],
+  "numeric_parasolid_softness_law_verified": false,
+  "original_feature_protocols_implemented": false
+}

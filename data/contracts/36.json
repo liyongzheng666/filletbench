@@ -1,0 +1,205 @@
+{
+  "number": 36,
+  "case_id": "fig75-30_trim-1389",
+  "title": "75-30 不等宽墙面及四种裁剪策略",
+  "units": "mm",
+  "contract_status": "draft_requires_parameter_freeze_and_oracle_implementation",
+  "source_input_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "source_spec": "history:outputs/manual-review/case-specs/fig75-30_trim-1389.json",
+  "source_spec_sha256": "57953c7b7eee4c49ce1dfd7550e5079ff83967d91caf5b0d9a1af4e72fa3968d",
+  "source_image": "history:outputs/parasolid-preblend/references/fig75-30_trim-1389.png",
+  "current_evidence_scope": "注意：这里先对重建面片做了缝合/裁剪/延伸，再执行普通圆角；原始重建模型保留在中栏。OCC 实际圆角 · R = 1 mm · 通过几何及导出校验。原图特殊模式尚未验证；选边与外形待人工核对。",
+  "generic_oracles": [
+    {
+      "id": "input_identity",
+      "quantity": "support geometry + finite domains + topology class",
+      "expected": "same frozen current input",
+      "method": "Compare independently sampled supports/boundaries, dimensions, placements and material-side occupancy; account for allowed face subdivision. No widening, thickening or pruning source faces.",
+      "scope": "input_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "target_identity",
+      "quantity": "semantic target coverage",
+      "expected": "exactly requested faces/edges, no silent reselection",
+      "method": "Resolve geometric/topological selectors after import; record candidates and expected match count; ambiguous target stops score.",
+      "scope": "selection_required"
+    },
+    {
+      "id": "native_quality",
+      "quantity": "native validity and topology",
+      "expected": "valid nonempty requested solid/sheet class",
+      "method": "Native checks plus independent seam and occupancy/orientation tests. Save raw BRep even on failure.",
+      "scope": "geometry_required"
+    },
+    {
+      "id": "actual_join_G0",
+      "quantity": "surface/pcurve/3D edge position mismatch",
+      "expected": "<= threshold at actual common seams",
+      "method": "Evaluate shared edge and both support surfaces using actual pcurves; sample endpoints/interior and adaptive extrema.",
+      "scope": "geometry_required",
+      "unit": "mm",
+      "maximum_error": 1e-06
+    },
+    {
+      "id": "actual_join_G1",
+      "quantity": "oriented normal angle",
+      "expected": "<= threshold on smooth-required seams",
+      "method": "Use consistent material/sheet orientation and evaluate normals at actual seam; end caps only exempt from G1 if declared, never from G0.",
+      "scope": "geometry_required",
+      "unit": "deg",
+      "maximum_error": 0.1
+    }
+  ],
+  "appearance_status": "pending_human_review",
+  "parameter_values_are_reconstruction_not_original_CAD": true,
+  "new_family_c_runs_executed": false,
+  "source_figures": [
+    "75-30"
+  ],
+  "source_pages": {
+    "physical": [
+      1387,
+      1388,
+      1389
+    ],
+    "printed": [
+      1385,
+      1386,
+      1387
+    ]
+  },
+  "target_change": [
+    "Generate a face-face transition from the same separated finite wall inputs and compare to_walls, no, short and long trim policies."
+  ],
+  "must_preserve": [
+    "Narrow wall y0,x[-7,7],z[5,25]; wide floor z0,x[-12.5,12.5],y[5,23].",
+    "Original finite face gap is real (no shared edge); do not extend/crop into a new common-edge L input and call it source trim success.",
+    "Both walls stay sheets; preserve their original finite-domain masks for attachment/end policy tests.",
+    "Same radius/contact and underlying supports across the four trims."
+  ],
+  "semantic_target": {
+    "left": "narrow vertical finite wall",
+    "right": "wide horizontal finite wall",
+    "theoretical_intersection": "infinite y=z=0 line; not an original topological edge",
+    "geometry": "finite separation sqrt(5²+5²), width mismatch14 vs25"
+  },
+  "required_modes": [
+    {
+      "id": "trim-to-walls",
+      "parasolid": "PK_blend_trim_to_walls_c",
+      "expected": "both side boundaries chosen to attach to actual two finite wall boundaries"
+    },
+    {
+      "id": "trim-no",
+      "parasolid": "PK_blend_trim_no_c",
+      "expected": "blend extends beyond underlying wall boundaries; do not require attachments at every end"
+    },
+    {
+      "id": "trim-short",
+      "parasolid": "PK_blend_trim_short_c",
+      "expected": "constant-parameter end lines at shortest admissible wall-boundary intersections"
+    },
+    {
+      "id": "trim-long",
+      "parasolid": "PK_blend_trim_long_c",
+      "expected": "constant-parameter end lines at longest admissible wall-boundary intersections"
+    }
+  ],
+  "diagnostic_parameters": {
+    "radius_mm": [
+      8
+    ],
+    "radius_is_proposed": true,
+    "radius_trigger": "R8 contacts at z8/y8 lie on supplied finite supports; R1 does not, so R1 after domain modification is not this task",
+    "original_widths_mm": [
+      14,
+      25
+    ]
+  },
+  "feature_oracles": [
+    {
+      "id": "finite_input_mask",
+      "quantity": "two original wall extents/gap",
+      "expected": "unchanged before operation",
+      "method": "Sample original polygons/UV domains and minimum separation; do not count support-plane coincidence as actual finite adjacency.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "common_contact_law",
+      "quantity": "interior blend contacts",
+      "expected": "same two support contact rails where finite wall exists",
+      "method": "At longitudinal stations recover actual y/z contacts and classify against original wall masks.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "short_long_extent",
+      "quantity": "constant-parameter blend endpoint positions",
+      "expected": "short uses near/intersection endpoint, long farther; nested output extents",
+      "method": "Measure end boundaries in common physical blend coordinates; on this aligned rectangular model expect short centerline x extent[-7,7] and long[-12.5,12.5] if implementation follows these source-defined rules; do not compare arbitrary native UV parameter numbers.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "to_walls_attachment",
+      "quantity": "blend side endpoints on each finite wall",
+      "expected": "ends attach to both wall boundaries with potentially oblique end curves",
+      "method": "Independently intersect actual contacts with each wall x-end and verify complete attachment lengths; report unmatched side or inappropriate iso end.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "no_trim_extension",
+      "quantity": "transition end domain vs wall domains",
+      "expected": "extends beyond walls; bound is declared finite working extension",
+      "method": "No-trim on infinite planes has no unique finite export extent: record working domain and do not fail solely because exact tail length differs.",
+      "scope": "feature_required"
+    },
+    {
+      "id": "trim_modes_distinct",
+      "quantity": "physical output differences among four trim modes",
+      "expected": "mode-specific end behavior, not identical reused mesh",
+      "method": "Compare actual end polylines/footprints and corresponding attachment obligations.",
+      "scope": "feature_required"
+    }
+  ],
+  "native_paths": [
+    {
+      "entry": "SmFilletExecutive::SurfaceSurfaceFillet with eFilTrimType and lBaseTrimType",
+      "evidence": "SMLib/inc/SmFilletExecutive.h:349+; src/SmFilletExecutive.cpp:1306-1561 creates offsets, assigns trim type to SmSurfaceSurfaceFS, then DoSurfaceFilleting",
+      "expresses": "Actual native candidates NONE/MINIMAL/MAXIMAL/BEVEL/BLEND and base trim0/1/2; supports disconnected surfaces",
+      "boundary": "Candidate mapping NONE→no, MINIMAL→short, MAXIMAL→long, BEVEL→to_walls must be measured; BEVEL linear UV trim is not automatically exact Parasolid to_walls behavior."
+    },
+    {
+      "entry": "SmApiSurfaceSurfaceFillet high-level wrapper",
+      "evidence": "SM_API/src/SmApiBrep.cpp explicitly passes SM_BT_MAXIMAL, base trim0",
+      "expresses": "Single MAXIMAL surface-surface baseline",
+      "boundary": "Current wrapper cannot switch four trims; low-level consumer needed. It does not establish correct modification/attachment of original walls."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "adapter_gap",
+      "description": "Finite wall-domain ownership and all low-level trim options must be wired, independently measured and returned with original wall masks. No common-edge bridge fallback allowed.",
+      "whole_kernel_unsupported_claimed": false
+    },
+    {
+      "kind": "source_ambiguity",
+      "description": "Original radius and no-trim finite working extent are unspecified; freeze R8 and a declared working envelope for controlled comparison.",
+      "whole_kernel_unsupported_claimed": false
+    }
+  ],
+  "inconsistent_if": [
+    "Original walls are extended to y=z=0 and cropped to common14mm width.",
+    "A tiny R1 arc does not touch original finite faces.",
+    "Four labels show same reused output.",
+    "BEVEL enum is declared equivalent without verifying actual two-boundary attachments."
+  ],
+  "classification_policy": {
+    "ordinary_baseline_does_not_pass_special_feature": true,
+    "unsupported_requires_confirmed_specific_API_contract": true,
+    "adapter_gap_not_kernel_unsupported": true,
+    "original_source_unknowns_not_silent_defaults": true
+  },
+  "input_brep": "data/models/36.brep",
+  "input_brep_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1"
+}

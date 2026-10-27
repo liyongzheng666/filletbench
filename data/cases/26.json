@@ -1,0 +1,33 @@
+{
+  "number": 26,
+  "id": "73-44_45_unders-1319",
+  "title": "非唯一底层面关联的双分区方块输入",
+  "question": "有限接触与多对多底层面关联分判，不能把一个底层集合当作生成面的唯一ID。",
+  "family": "b",
+  "source_sha256": "ef29a204a693c53d7892e04dc3ceb5806b54a17fce3022091a6b7b667f935838",
+  "reference": {
+    "page": 1319,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.13,
+      0.205,
+      0.87,
+      0.475
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/26.brep",
+  "fixture": "data/fixtures/26.json",
+  "contract": "data/contracts/26.json",
+  "variants": []
+}

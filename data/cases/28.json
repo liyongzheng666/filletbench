@@ -1,0 +1,33 @@
+{
+  "number": 28,
+  "id": "fig75-03_to_05-1351",
+  "title": "75-3 穿越式正交墙面及四种方向",
+  "question": "同一穿越两墙上切换左右sense，实际圆角象限和接触位置必须符合选定侧。",
+  "family": "c",
+  "source_sha256": "44e5e7e82a80c8b7c81c67da7cb4e39212f150a743b7bc3b9caa6a77c9f48bd6",
+  "reference": {
+    "page": 1351,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.18769889224572003,
+      0.48636752136752137,
+      0.7428147029204432,
+      0.8013817663817664
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/28.brep",
+  "fixture": "data/fixtures/28.json",
+  "contract": "data/contracts/28.json",
+  "variants": []
+}

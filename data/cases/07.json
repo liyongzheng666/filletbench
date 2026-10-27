@@ -1,0 +1,33 @@
+{
+  "number": 7,
+  "id": "73-24_preserve_hole-1289",
+  "title": "拓扑保留：双孔与凸台块体",
+  "question": "大R圆角覆盖原孔口与raised pad时，transfer=no允许删除这些重叠拓扑，transfer=yes将孔和凸台保留到新blend；只保留孔数而忽略凸台不完整。",
+  "family": "a",
+  "source_sha256": "a184a68b90fcf588825596b224c466c9418d6c0d68e168100cd15d352d0564c5",
+  "reference": {
+    "page": 1289,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.18,
+      0.225,
+      0.81,
+      0.515
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/07.brep",
+  "fixture": "data/fixtures/07.json",
+  "contract": "data/contracts/07.json",
+  "variants": []
+}

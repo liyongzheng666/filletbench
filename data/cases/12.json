@@ -1,0 +1,33 @@
+{
+  "number": 12,
+  "id": "73-30_tight_corner-1298",
+  "title": "紧曲率：全高紧角与内部紧角槽体",
+  "question": "目标blend必须穿过支撑面内曲率半径小于blend半径的区域；分别验证完全紧角和仅壁面内部紧角，不能用R2小于R3.5的通过代替。",
+  "family": "a",
+  "source_sha256": "92490e13a374dcf0db913bfa7e45089efc506cef4cb9b8df501ea1882cd8c3a0",
+  "reference": {
+    "page": 1298,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.11972527472527472,
+      0.21364024864024864,
+      0.844010989010989,
+      0.7164296814296814
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/12.brep",
+  "fixture": "data/fixtures/12.json",
+  "contract": "data/contracts/12.json",
+  "variants": []
+}

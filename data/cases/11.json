@@ -1,0 +1,33 @@
+{
+  "number": 11,
+  "id": "73-29_self_int_repair-1296",
+  "title": "自交修复输入：短横舌与弯曲窄过渡带",
+  "question": "在已确认出现face/surface自交的圆角中，原生repair关闭/开启改变修复结果并报告被修复面；当前绿框已有窄弯带是输入，不是本次新主圆角。",
+  "family": "a",
+  "source_sha256": "9959f6889063c0ee1107e6ac5185035cba9dd48ba5b843679888baa3258ec7a8",
+  "reference": {
+    "page": 1296,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.15,
+      0.43,
+      0.86,
+      0.67
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/11.brep",
+  "fixture": "data/fixtures/11.json",
+  "contract": "data/contracts/11.json",
+  "variants": []
+}

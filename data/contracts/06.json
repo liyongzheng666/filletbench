@@ -1,0 +1,891 @@
+{
+  "schema_version": 1,
+  "case_number": 6,
+  "case_id": "73-23_setback-1286",
+  "title": "顶点退距：三锐边交汇长方体",
+  "contract_status": "feature_contract_defined_with_explicit_admission_gates",
+  "source_fixture_tier": "exploratory_reconstruction",
+  "source_pdf_dimensions_known": false,
+  "units": "mm in frozen reconstructed fixture",
+  "input_brep": "data/models/06.brep",
+  "input_brep_sha256": "3c9bd03dac7c5d611f795f6309001a91d7ba2c1b63f8e9bb403d25be88bf9c53",
+  "current_test_spec": "history:outputs/manual-review/case-specs/73-23_setback-1286.json",
+  "current_test_spec_sha256": "8b0bc1cbd79304de52c4b44a583b2bbf7a14b8bb906952a1f5db54db43a278d0",
+  "source_recipe": "history:outputs/parasolid-preblend/code/groups/group_a.py",
+  "refinement_recipe": null,
+  "parts": [
+    {
+      "part_label": "unblended_corner_block",
+      "source_part_bbox": [
+        -35.0,
+        -35.0,
+        0.0,
+        35.0,
+        35.0,
+        65.0
+      ],
+      "world_target_fingerprints": [
+        {
+          "occ_reference_edge_index_hint": 5,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              35.0,
+              -35.0,
+              65.0
+            ],
+            [
+              35.0,
+              -35.0,
+              0.0
+            ]
+          ],
+          "length_mm": 65.0,
+          "sampled_curve_points_mm": [
+            [
+              35.0,
+              -35.0,
+              0.0
+            ],
+            [
+              35.0,
+              -35.0,
+              2.096774193548387
+            ],
+            [
+              35.0,
+              -35.0,
+              4.193548387096774
+            ],
+            [
+              35.0,
+              -35.0,
+              6.290322580645161
+            ],
+            [
+              35.0,
+              -35.0,
+              8.387096774193548
+            ],
+            [
+              35.0,
+              -35.0,
+              10.483870967741936
+            ],
+            [
+              35.0,
+              -35.0,
+              12.580645161290324
+            ],
+            [
+              35.0,
+              -35.0,
+              14.677419354838712
+            ],
+            [
+              35.0,
+              -35.0,
+              16.7741935483871
+            ],
+            [
+              35.0,
+              -35.0,
+              18.870967741935488
+            ],
+            [
+              35.0,
+              -35.0,
+              20.967741935483875
+            ],
+            [
+              35.0,
+              -35.0,
+              23.064516129032263
+            ],
+            [
+              35.0,
+              -35.0,
+              25.16129032258065
+            ],
+            [
+              35.0,
+              -35.0,
+              27.25806451612904
+            ],
+            [
+              35.0,
+              -35.0,
+              29.354838709677427
+            ],
+            [
+              35.0,
+              -35.0,
+              31.451612903225815
+            ],
+            [
+              35.0,
+              -35.0,
+              33.5483870967742
+            ],
+            [
+              35.0,
+              -35.0,
+              35.645161290322584
+            ],
+            [
+              35.0,
+              -35.0,
+              37.74193548387097
+            ],
+            [
+              35.0,
+              -35.0,
+              39.83870967741935
+            ],
+            [
+              35.0,
+              -35.0,
+              41.93548387096774
+            ],
+            [
+              35.0,
+              -35.0,
+              44.03225806451612
+            ],
+            [
+              35.0,
+              -35.0,
+              46.129032258064505
+            ],
+            [
+              35.0,
+              -35.0,
+              48.22580645161289
+            ],
+            [
+              35.0,
+              -35.0,
+              50.322580645161274
+            ],
+            [
+              35.0,
+              -35.0,
+              52.41935483870966
+            ],
+            [
+              35.0,
+              -35.0,
+              54.51612903225804
+            ],
+            [
+              35.0,
+              -35.0,
+              56.61290322580643
+            ],
+            [
+              35.0,
+              -35.0,
+              58.70967741935481
+            ],
+            [
+              35.0,
+              -35.0,
+              60.806451612903196
+            ],
+            [
+              35.0,
+              -35.0,
+              62.90322580645158
+            ],
+            [
+              35.0,
+              -35.0,
+              65.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 2,
+              "type": "Plane",
+              "normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "bbox": [
+                35.0,
+                -35.0,
+                0.0,
+                35.0,
+                35.0,
+                65.0
+              ]
+            },
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "bbox": [
+                -35.0,
+                -35.0,
+                0.0,
+                35.0,
+                -35.0,
+                65.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "occ_reference_edge_index_hint": 6,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              35.0,
+              35.0,
+              65.0
+            ],
+            [
+              35.0,
+              -35.0,
+              65.0
+            ]
+          ],
+          "length_mm": 70.0,
+          "sampled_curve_points_mm": [
+            [
+              35.0,
+              -35.0,
+              65.0
+            ],
+            [
+              35.0,
+              -32.74193548387097,
+              65.0
+            ],
+            [
+              35.0,
+              -30.483870967741936,
+              65.0
+            ],
+            [
+              35.0,
+              -28.225806451612904,
+              65.0
+            ],
+            [
+              35.0,
+              -25.967741935483872,
+              65.0
+            ],
+            [
+              35.0,
+              -23.70967741935484,
+              65.0
+            ],
+            [
+              35.0,
+              -21.451612903225808,
+              65.0
+            ],
+            [
+              35.0,
+              -19.193548387096776,
+              65.0
+            ],
+            [
+              35.0,
+              -16.93548387096774,
+              65.0
+            ],
+            [
+              35.0,
+              -14.677419354838708,
+              65.0
+            ],
+            [
+              35.0,
+              -12.419354838709676,
+              65.0
+            ],
+            [
+              35.0,
+              -10.161290322580644,
+              65.0
+            ],
+            [
+              35.0,
+              -7.903225806451612,
+              65.0
+            ],
+            [
+              35.0,
+              -5.64516129032258,
+              65.0
+            ],
+            [
+              35.0,
+              -3.387096774193548,
+              65.0
+            ],
+            [
+              35.0,
+              -1.1290322580645125,
+              65.0
+            ],
+            [
+              35.0,
+              1.1290322580645196,
+              65.0
+            ],
+            [
+              35.0,
+              3.3870967741935516,
+              65.0
+            ],
+            [
+              35.0,
+              5.645161290322584,
+              65.0
+            ],
+            [
+              35.0,
+              7.903225806451616,
+              65.0
+            ],
+            [
+              35.0,
+              10.161290322580648,
+              65.0
+            ],
+            [
+              35.0,
+              12.41935483870968,
+              65.0
+            ],
+            [
+              35.0,
+              14.677419354838712,
+              65.0
+            ],
+            [
+              35.0,
+              16.935483870967744,
+              65.0
+            ],
+            [
+              35.0,
+              19.193548387096776,
+              65.0
+            ],
+            [
+              35.0,
+              21.451612903225808,
+              65.0
+            ],
+            [
+              35.0,
+              23.70967741935484,
+              65.0
+            ],
+            [
+              35.0,
+              25.967741935483872,
+              65.0
+            ],
+            [
+              35.0,
+              28.225806451612904,
+              65.0
+            ],
+            [
+              35.0,
+              30.483870967741936,
+              65.0
+            ],
+            [
+              35.0,
+              32.741935483870975,
+              65.0
+            ],
+            [
+              35.0,
+              35.0,
+              65.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 2,
+              "type": "Plane",
+              "normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "bbox": [
+                35.0,
+                -35.0,
+                0.0,
+                35.0,
+                35.0,
+                65.0
+              ]
+            },
+            {
+              "index": 6,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -35.0,
+                -35.0,
+                65.0,
+                35.0,
+                35.0,
+                65.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "occ_reference_edge_index_hint": 10,
+          "source_curve_representation": "Line",
+          "geometric_kind": "line",
+          "world_endpoints_mm": [
+            [
+              35.0,
+              -35.0,
+              65.0
+            ],
+            [
+              -35.0,
+              -35.0,
+              65.0
+            ]
+          ],
+          "length_mm": 70.0,
+          "sampled_curve_points_mm": [
+            [
+              -35.0,
+              -35.0,
+              65.0
+            ],
+            [
+              -32.74193548387097,
+              -35.0,
+              65.0
+            ],
+            [
+              -30.483870967741936,
+              -35.0,
+              65.0
+            ],
+            [
+              -28.225806451612904,
+              -35.0,
+              65.0
+            ],
+            [
+              -25.967741935483872,
+              -35.0,
+              65.0
+            ],
+            [
+              -23.70967741935484,
+              -35.0,
+              65.0
+            ],
+            [
+              -21.451612903225808,
+              -35.0,
+              65.0
+            ],
+            [
+              -19.193548387096776,
+              -35.0,
+              65.0
+            ],
+            [
+              -16.93548387096774,
+              -35.0,
+              65.0
+            ],
+            [
+              -14.677419354838708,
+              -35.0,
+              65.0
+            ],
+            [
+              -12.419354838709676,
+              -35.0,
+              65.0
+            ],
+            [
+              -10.161290322580644,
+              -35.0,
+              65.0
+            ],
+            [
+              -7.903225806451612,
+              -35.0,
+              65.0
+            ],
+            [
+              -5.64516129032258,
+              -35.0,
+              65.0
+            ],
+            [
+              -3.387096774193548,
+              -35.0,
+              65.0
+            ],
+            [
+              -1.1290322580645125,
+              -35.0,
+              65.0
+            ],
+            [
+              1.1290322580645196,
+              -35.0,
+              65.0
+            ],
+            [
+              3.3870967741935516,
+              -35.0,
+              65.0
+            ],
+            [
+              5.645161290322584,
+              -35.0,
+              65.0
+            ],
+            [
+              7.903225806451616,
+              -35.0,
+              65.0
+            ],
+            [
+              10.161290322580648,
+              -35.0,
+              65.0
+            ],
+            [
+              12.41935483870968,
+              -35.0,
+              65.0
+            ],
+            [
+              14.677419354838712,
+              -35.0,
+              65.0
+            ],
+            [
+              16.935483870967744,
+              -35.0,
+              65.0
+            ],
+            [
+              19.193548387096776,
+              -35.0,
+              65.0
+            ],
+            [
+              21.451612903225808,
+              -35.0,
+              65.0
+            ],
+            [
+              23.70967741935484,
+              -35.0,
+              65.0
+            ],
+            [
+              25.967741935483872,
+              -35.0,
+              65.0
+            ],
+            [
+              28.225806451612904,
+              -35.0,
+              65.0
+            ],
+            [
+              30.483870967741936,
+              -35.0,
+              65.0
+            ],
+            [
+              32.741935483870975,
+              -35.0,
+              65.0
+            ],
+            [
+              35.0,
+              -35.0,
+              65.0
+            ]
+          ],
+          "support_adjacency_count": 2,
+          "source_neighbor_faces_diagnostic": [
+            {
+              "index": 3,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "bbox": [
+                -35.0,
+                -35.0,
+                0.0,
+                35.0,
+                -35.0,
+                65.0
+              ]
+            },
+            {
+              "index": 6,
+              "type": "Plane",
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "bbox": [
+                -35.0,
+                -35.0,
+                65.0,
+                35.0,
+                35.0,
+                65.0
+              ]
+            }
+          ],
+          "match_rule": "unordered endpoints and point-to-curve coverage; allow a geometrically continuous chain when import splits representation; never use OCC index in SMLib",
+          "match_position_tolerance_mm": 1e-06,
+          "source_sample_max_linearity_error_mm": 0.0,
+          "geometric_line_direction": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "ordinary_probe_radii_mm": [
+        12,
+        8,
+        4
+      ],
+      "probe_radius_policy": "run each requested radius independently, do not stop at first small-radius success",
+      "selection_note": "图73-23前右上角(35,-35,65)的3条凸边：竖边5、右上沿6、前上沿10。",
+      "input_source_SHA_matches_record": true
+    }
+  ],
+  "family": "setback",
+  "target_semantics": "三条正交凸棱在同一顶点全部被blend，按指定距离退让，并区分有collar/无collar的角部连接；普通球角不是setback。",
+  "trigger": {
+    "vertex_world": [
+      35,
+      -35,
+      65
+    ],
+    "all_incident_edges_selected": true,
+    "edge_lengths_mm": [
+      65,
+      70,
+      70
+    ],
+    "radius_mm": 12,
+    "declared_fixture_setback_mm": [
+      18,
+      18,
+      18
+    ],
+    "asymmetric_setback_mm": [
+      18,
+      24,
+      30
+    ]
+  },
+  "named_constraints": [],
+  "trials": [
+    {
+      "id": "ordinary-r12",
+      "radius_mm": 12,
+      "role": "baseline",
+      "requested_feature_parameters": {
+        "setback_mm": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "setback18-collar-r12",
+      "radius_mm": 12,
+      "role": "target",
+      "requested_feature_parameters": {
+        "setback_mm": [
+          18,
+          18,
+          18
+        ],
+        "which_end": "selected_vertex_world",
+        "collar": true
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "setback18-smooth-r12",
+      "radius_mm": 12,
+      "role": "target",
+      "requested_feature_parameters": {
+        "setback_mm": [
+          18,
+          18,
+          18
+        ],
+        "which_end": "selected_vertex_world",
+        "collar": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    },
+    {
+      "id": "setback-asymmetric-r12",
+      "radius_mm": 12,
+      "role": "target",
+      "requested_feature_parameters": {
+        "setback_mm": [
+          18,
+          24,
+          30
+        ],
+        "which_end": "selected_vertex_world",
+        "collar": false
+      },
+      "status": "planned_not_run_by_contract_generation"
+    }
+  ],
+  "protected": [
+    {
+      "role": "opposite_edge_ends",
+      "exclude_vertex_roi_radius_mm": 35,
+      "preserve_geometry": true
+    }
+  ],
+  "oracles": [
+    {
+      "id": "all-incident-selected",
+      "operator": "incident_selected_edge_coverage",
+      "expected": 3,
+      "parameters": {
+        "vertex": [
+          35,
+          -35,
+          65
+        ]
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "setback-distances",
+      "operator": "measured_edge_blend_terminal_stations_from_input_vertex",
+      "expected": true,
+      "parameters": {
+        "expected_per_edge_mm": "requested setback_mm",
+        "station_tolerance_mm": 1e-06,
+        "trace_original_edge_direction": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "corner-closed",
+      "operator": "closed_valid_solid_and_no_patch_boundary_gaps",
+      "expected": true,
+      "parameters": {},
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "corner-G1",
+      "operator": "actual_join_oriented_normal_angle_max",
+      "expected": {
+        "max_degrees": 0.1
+      },
+      "parameters": {
+        "scope": "all generated edge-blend to corner/collar patch seams"
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    },
+    {
+      "id": "collar-semantic",
+      "operator": "native_collar_role_or_equivalent_geometric_ring_documented",
+      "expected": true,
+      "parameters": {
+        "collar_on_off_distinct": true,
+        "not_face_count_only": true
+      },
+      "implementation_status": "contract_defined_runner_binding_required"
+    }
+  ],
+  "insufficiency": "现R12普通三边角未提供退距值或collar切换；是否出现额外面数不是setback through。",
+  "gaps": [
+    "需原生每条边端退距与collar映射；bevel/chamfer corner不是collar setback。",
+    "18/24/30为冻结fixture挑战值，不是PDF给定尺寸；必须按输入边方向配对，而非外观任意切块。"
+  ],
+  "native_capability_requirements": {
+    "existing_generic_entry": "SmApiFilletEdges",
+    "special_mode_mapping": "requires_version_specific_native_or_low_level_API_mapping",
+    "missing_adapter_is_not_kernel_unsupported": true,
+    "ordinary_success_is_not_special_target_pass": true
+  },
+  "universal_result_requirements": {
+    "input_native_valid_before_operation": true,
+    "actual_operation_changed_target_geometry": true,
+    "input_solid_or_sheet_type_preserved": true,
+    "native_valid_after_operation": true,
+    "no_unintended_self_intersection": true,
+    "independent_measurements_required": true,
+    "native_persistence_roundtrip_separate_from_exchange": true,
+    "STEP_missing_is_exchange_not_operation_failure": true,
+    "appearance_acceptance": "pending_unless_human_confirmed"
+  },
+  "functional_pass_rule": "All case-specific admission gates AND all applicable geometry/feature oracles must pass. If required source mapping or mode meaning is not frozen, classify case_spec_incomplete; ordinary probes may still report their independent outcomes.",
+  "source_semantics_evidence": [
+    "history:parasolid-73.3-scenarios.md",
+    "history:outputs/manual-review/case-specs/73-23_setback-1286.json",
+    "history:outputs/parasolid-preblend/manifest.json"
+  ],
+  "new_native_run_performed_by_this_contract_task": false
+}

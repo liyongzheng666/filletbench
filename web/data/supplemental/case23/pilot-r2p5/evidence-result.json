@@ -1,0 +1,1 @@
+{"status":"returned_result","radius":2.5,"mode":"both","native_fillet_seconds_including_sequential_checkpoints":0.006040666,"stats":{"valid":true,"manifold":false,"solids":0,"voids":0,"faces":8,"edges":20,"vertices":12,"volume":0,"area":0,"bbox":[[-5,-8.000000000000004,17.999999999999975],[24.000000000000004,8.000000000000004,24.300000000000004]]}}

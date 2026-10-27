@@ -1,0 +1,55 @@
+# FilletBench · 圆角观察与复现库
+
+[打开对比网站](https://liyongzheng666.github.io/filletbench/) · [评测方法](docs/methodology.md) · [贡献案例](CONTRIBUTING.md)
+
+原始参考、OCCT、SMLib，在同一页面核对。保留失败、空结果、碎片和自交；**API 成功不是功能通过**。本库目前是探索性测评集，尚未建立可用于内核排名的统一通过率。
+
+## 快速开始
+
+Python 3.10+，推荐独立虚拟环境。OCCT 通过固定版本的 [CadQuery/OCP](https://github.com/CadQuery/OCP) 绑定运行；SMLib 使用 [NVIDIA USD BRep](https://github.com/NVIDIA-Omniverse/usd-brep) 中的开源内核源码，需另行构建，库内不分发 SDK 或二进制。
+
+```sh
+git clone https://github.com/liyongzheng666/filletbench.git
+cd filletbench
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements-occt.txt
+python bench.py verify
+python bench.py list --case 8
+python bench.py run --engine occt --case 8 --radius 18
+python bench.py serve
+```
+
+打开 `http://127.0.0.1:8740/`。不安装内核也能查看已发布的实际网格与测量摘要。[配置 SMLib](docs/smlib.md) 后，用 `--engine both` 在相同请求上运行两者。原生调用失败、超时及缺依赖均记录到本地 `runs/`，不覆盖已发布证据。
+
+## 收录范围
+
+- **34 组模型**：编号 01–28、30–31、33–36；29 按人工意见移除，32 是说明项，保留编号空位。
+- **104 个普通边圆角请求**：86 个可执行请求；18 个因当前输入/操作类型不适合这条 adapter 路线而阻塞。这不是内核“不支持”的结论。
+- 特殊协议与先导结果单独显示：封口、截断、重叠、不同截面参数、G2 等。历史快照和本次可复现运行有明显标记。
+- 每个模型提供冻结 BREP、显式有限 NURBS/共享拓扑 JSON、目标边世界坐标、半径与任务契约。模型是从文档示意图推定的重建，**不是厂商原始 CAD**。
+
+### 阅读结果
+
+先选编号，再选半径/协议。主区并排显示参考图、OCCT、SMLib；拖动/缩放模型时相机同步。切换“圆角前”查看实际选边；打开详情查看输入哈希、表示差异、原始状态与复现命令。失败后仍返回的候选也会显示。
+
+公开库不包含原始 PDF 或参考图。参考栏支持在浏览器本地载入自有 PDF/图片，仅在本机显示，不上传、不存入 Git。原 PDF 物理页号从 1 起；载入其他版次时请手动选择对应页。
+
+## 可复现的含义
+
+同一请求锁定源几何哈希、目标世界几何和参数；adapter 在独立进程内调用内核，保存返回值、原生文件读回、实际网格与测量。OCCT 的原解析 BREP 与 SMLib 的显式 NURBS 表示仍有差异，不能宣称二者内部表示完全一致。
+
+普通圆角没有传入源文档的 cliff、cap、limit、rho、softness 等特殊控制。生成了模型只能说明这次具体调用的行为，不能代替该特殊功能的认证。历史特殊结果尚不能由统一普通边入口完整复现；各项会说明实际脚本、依赖和缺口。
+
+## 仓库结构
+
+| 目录 | 内容 |
+|---|---|
+| `data/models` / `data/fixtures` | 固定源 BREP / 有限 NURBS 及共享拓扑 |
+| `data/jobs` / `data/contracts` | 104 个普通调用请求 / 34 项原图语义契约 |
+| `adapters/occt` / `adapters/smlib` | 可执行内核调用、选边和结果记录 |
+| `web/data` | 可公开的实际网格与结果摘要，不含原 PDF |
+| `tools` | 完整性检查和网站数据构建 |
+| `runs`（忽略） | 本地复现实验，保留完整失败日志 |
+
+代码及本项目生成的数据采用 MIT；第三方代码/浏览器依赖按各自许可证，见 [THIRD_PARTY.md](THIRD_PARTY.md)。参考文档、商标及未分发 SDK 不受本项目许可证授权。

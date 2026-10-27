@@ -1,0 +1,33 @@
+{
+  "number": 5,
+  "id": "73-20_y_combos-1285",
+  "title": "Y 形补片末端：短底座 D 形立柱",
+  "question": "短底座D形立柱在指定Y角形成终端过渡补片；圆柱脚与底座外沿相交，不能把任意小圆角或尾端裁剪当Y补片完成。",
+  "family": "a",
+  "source_sha256": "62ac0244bce0ad15aaf2ff87d796676a1ca8d23fc809e3ad55036656dd99ab92",
+  "reference": {
+    "page": 1285,
+    "page_numbering": "one-based physical PDF page",
+    "suggested_crop": [
+      0.215,
+      0.305,
+      0.835,
+      0.48
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed full-figure crop from frozen case spec",
+    "input_only_crop_used": false
+  },
+  "human_status": "pending",
+  "provenance": {
+    "tier": "exploratory_reconstruction",
+    "dimensions": "inferred; fixture dimensions do not recover vendor CAD",
+    "hidden_topology": "unproven",
+    "reference_artwork": "not distributed; optional client-local import"
+  },
+  "source_model": "data/models/05.brep",
+  "fixture": "data/fixtures/05.json",
+  "contract": "data/contracts/05.json",
+  "variants": []
+}
