@@ -573,6 +573,13 @@ function wireUI() {
   $('#replaceReference').addEventListener('click', () => { $('#referenceDialog').close(); $('#referenceFile').click(); });
   $('#pdfPrevious').addEventListener('click', () => changePreviewPage(-1)); $('#pdfNext').addEventListener('click', () => changePreviewPage(1)); $('#pdfPageNumber').addEventListener('change', () => changePreviewPage(0));
   $('#resetCrop').addEventListener('click', () => { state.previewCrop = null; updateCropOverlay(); });
+  $('#suggestedCrop').addEventListener('click', async () => {
+    const reference = state.currentCase?.reference || {};
+    if (!state.pdf || state.pdfMeta?.hash !== reference.expected_pdf_sha256) { toast('当前 PDF 摘要未匹配，请手动选择区域。'); return; }
+    state.previewPage = Math.min(state.pdf.numPages, Math.max(1, Number(reference.page) || 1));
+    state.previewCrop = normalizeCrop(reference.suggested_crop);
+    await renderPDFPreview();
+  });
   $('#applyReference').addEventListener('click', async () => { if ($('#referenceDialog').dataset.source === 'pdf' && state.pdf) { state.mapping[state.currentCase.id] = { source: 'pdf', pdfHash: state.pdfMeta.hash, page: state.previewPage, crop: normalizeCrop(state.previewCrop) }; saveMappings(); await renderReference(); } $('#referenceDialog').close(); });
   $('#forgetReference').addEventListener('click', async () => { try { if ($('#referenceDialog').dataset.source === 'image') { await dbAction('delete', 'image:' + state.currentCase.id); delete state.mapping[state.currentCase.id]; } else { await dbAction('delete', 'pdf'); state.pdf?.destroy(); state.pdf = null; state.pdfMeta = null; } saveMappings(); $('#referenceDialog').close(); await renderReference(); toast('本地参考文件已清除。'); } catch (error) { toast('清除失败：' + error.message); } });
   setupCrop();

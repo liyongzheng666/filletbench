@@ -29,6 +29,24 @@ class CorpusTests(unittest.TestCase):
                     self.assertEqual(s['radius_mm'],job['radius_mm'])
                     self.assertEqual(s['source_sha256'],job['source_sha256'])
                     self.assertFalse(a.get('special_feature_passed'))
+    def test_reference_coordinates_use_the_pdf_cropbox(self):
+        for p in (ROOT/'data/cases').glob('*.json'):
+            ref=json.loads(p.read_text())['reference']
+            self.assertEqual(ref['crop_coordinate_system'],'pdfjs_cropbox_normalized_top_left')
+            m,c=ref['source_media_box'],ref['pdf_crop_box']
+            x0,y0,x1,y1=ref['source_media_box_crop']
+            expected=[(m[0]+x0*(m[2]-m[0])-c[0])/(c[2]-c[0]),
+                      (y0*(m[3]-m[1])-(m[3]-c[3]))/(c[3]-c[1]),
+                      (m[0]+x1*(m[2]-m[0])-c[0])/(c[2]-c[0]),
+                      (y1*(m[3]-m[1])-(m[3]-c[3]))/(c[3]-c[1])]
+            for actual,want in zip(ref['suggested_crop'],expected):
+                self.assertAlmostEqual(actual,min(1,max(0,want)),places=12)
+        # The actual source-page title at y=300/1287 must be inside case12,
+        # rather than cropped by applying MediaBox coordinates to CropBox.
+        ref=json.loads((ROOT/'data/cases/12.json').read_text())['reference']
+        title_y=((300/1287)*842-97)/648
+        self.assertLess(ref['suggested_crop'][1],title_y)
+        self.assertGreater(ref['suggested_crop'][3],title_y)
     def test_repository_keeps_failure_candidates(self):
         c=json.loads((ROOT/'web/data/cases/23.json').read_text())
         v=next(v for v in c['variants'] if v['id']=='23.part01.ordinary_challenge.r2p5')

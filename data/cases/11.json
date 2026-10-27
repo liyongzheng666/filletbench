@@ -9,15 +9,34 @@
     "page": 1296,
     "page_numbering": "one-based physical PDF page",
     "suggested_crop": [
+      0.11348703703703704,
+      0.4090432098765432,
+      0.8960911111111112,
+      0.720895061728395
+    ],
+    "local_only": true,
+    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
+    "crop_scope": "reviewed whole-figure crop; converted from MediaBox to verified PDF CropBox",
+    "input_only_crop_used": false,
+    "crop_coordinate_system": "pdfjs_cropbox_normalized_top_left",
+    "source_media_box": [
+      0.0,
+      0.0,
+      595.22,
+      842.0
+    ],
+    "pdf_crop_box": [
+      28.0,
+      97.0,
+      568.0,
+      745.0
+    ],
+    "source_media_box_crop": [
       0.15,
       0.43,
       0.86,
       0.67
-    ],
-    "local_only": true,
-    "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
-    "crop_scope": "reviewed full-figure crop from frozen case spec",
-    "input_only_crop_used": false
+    ]
   },
   "human_status": "pending",
   "provenance": {

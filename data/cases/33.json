@@ -9,15 +9,34 @@
     "page": 1360,
     "page_numbering": "one-based physical PDF page",
     "suggested_crop": [
-      0.11217019133937564,
-      0.4543162393162393,
-      0.7770543806646526,
-      0.7985327635327636
+      0.0938339653500429,
+      0.45103437269178004,
+      0.8958413544813696,
+      0.8775132513805355
     ],
     "local_only": true,
     "expected_pdf_sha256": "4f01858f600e10bb096e69e6f79ad04c383a3bc6d3db8ffc5ad4dca74d7f4460",
-    "crop_scope": "suggested whole colored figure extent plus margin; manually adjustable",
-    "input_only_crop_used": false
+    "crop_scope": "suggested whole figure including colored callout borders plus margin; converted from MediaBox to verified PDF CropBox",
+    "input_only_crop_used": false,
+    "crop_coordinate_system": "pdfjs_cropbox_normalized_top_left",
+    "source_media_box": [
+      0.0,
+      0.0,
+      595.22,
+      842.0
+    ],
+    "pdf_crop_box": [
+      28.0,
+      97.0,
+      568.0,
+      745.0
+    ],
+    "source_media_box_crop": [
+      0.13217019133937563,
+      0.4623162393162393,
+      0.859773413897281,
+      0.7905327635327636
+    ]
   },
   "human_status": "pending",
   "provenance": {
