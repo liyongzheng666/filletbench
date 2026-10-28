@@ -87,6 +87,20 @@ jobs:
           assert s['execution']['native_api_raw_status'] == 1000, s
           assert s['source_feature_passed'] is False, s
           PY
+      - name: Replay an audited original-view SMLib radius completion
+        env:
+          SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
+          SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
+        run: |
+          python adapters/smlib/run.py data/original-smlib/jobs/original.01.part01-r12.smlib.json --output runs/ci-original-smlib-r12 || true
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(pathlib.Path('runs/ci-original-smlib-r12/summary.json').read_text())
+          assert s['input_import']['passed'] is True, s
+          assert s['execution']['native_call_started'] is True, s
+          assert s['execution']['radius_mm'] == 12, s
+          assert s['source_sha256'] == '004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1', s
+          PY
       - name: Confirm an admitted input and actual native call
         run: |
           python - <<'PY'

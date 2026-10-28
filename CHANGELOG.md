@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0
+
+- Show PDF, original base/selection, OCC and SMLib in four horizontal columns. Synchronize all three 3D views and keep narrow screens scrollable.
+- Bind55 existing original-view SMLib requests and execute15 radius-only completions; preserve3 failed candidates and1 native-phase crash.
+- Keep58 unmatched protocols and1 input-only view explicit. Never borrow an OCC mesh or another radius for the fourth column.
+- Add request/fixture/parameter identity tests and a separate SMLib detail drawer.
+
 ## 0.2.0 — 2026-10-27
 
 - Make the original manually reviewed OCC series the default: PDF / frozen base and original selection / actual processing.

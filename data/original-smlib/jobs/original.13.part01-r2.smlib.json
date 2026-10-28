@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "job_id": "original.13.part01-r2.smlib",
+  "number": 13,
+  "case_number": 13,
+  "case_id": "73-31_vertex_limit-1300",
+  "part_label": "cube",
+  "source_part_indices": [
+    0
+  ],
+  "source_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+  "source_brep": "data/models/13.brep",
+  "source_fixture_json": "data/fixtures/13.json",
+  "source_fixture_sha256": "72dc7a9c3fcf920d268461c70a2cef4f514e2f30ec4c2a896ae3461b53d461e0",
+  "source_fixture_export_sha256": "72dc7a9c3fcf920d268461c70a2cef4f514e2f30ec4c2a896ae3461b53d461e0",
+  "source_contract_file": "data/contracts/13.json",
+  "source_contract_sha256": "7560eb3720a639993c8002dd63aae2f930daa145fb86aca803e958307e46679e",
+  "semantic_target": "At a >=3-edge vertex, stop selected blend chains before creating the normal vertex-blend patch when the chosen vertex limit requests this. Compare default corner vs short-stop; do not merely round the three whole cube edges.",
+  "operation": "native_edge_fillet",
+  "role": "original_radius_completion",
+  "radius_mm": 2.0,
+  "request_note": "Audited original-view radius-only completion; no source/target/SDK-option alteration",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "solid",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          35.0,
+          0.0,
+          0.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "samples": [
+        [
+          35.0,
+          0.0,
+          0.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "endpoints": [
+        [
+          35.0,
+          0.0,
+          0.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 35.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 5,
+      "source_alias_is_not_native_index": true
+    },
+    {
+      "id": "target-2",
+      "target_id": "target-2",
+      "samples_mm": [
+        [
+          35.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          35.0,
+          35.0
+        ]
+      ],
+      "samples": [
+        [
+          35.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          35.0,
+          35.0
+        ]
+      ],
+      "endpoints": [
+        [
+          35.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          35.0,
+          35.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 35.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 6,
+      "source_alias_is_not_native_index": true
+    },
+    {
+      "id": "target-3",
+      "target_id": "target-3",
+      "samples_mm": [
+        [
+          0.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "samples": [
+        [
+          0.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "endpoints": [
+        [
+          0.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "expected_length_mm": null,
+      "length_is_approximation": true,
+      "documentary_approx_length_mm": 35.0,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": null,
+      "documentary_source_edge_alias": 10,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          35.0,
+          0.0,
+          0.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    },
+    {
+      "target_id": "target-2",
+      "samples_mm": [
+        [
+          35.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          35.0,
+          35.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    },
+    {
+      "target_id": "target-3",
+      "samples_mm": [
+        [
+          0.0,
+          0.0,
+          35.0
+        ],
+        [
+          35.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/13.part01.ordinary_challenge.r6.json",
+  "component_index": 1,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  },
+  "original_variant_id": "part01-r2",
+  "original_case_file_sha256": "ef4ef2d7f82076f93de737339c56253b65b568bdab3aeb346c26f2326d97b1ee",
+  "source_template_job_id": "13.part01.ordinary_challenge.r6",
+  "source_template_job_sha256": "7f0ce090dc77df04ee835749fa824d4b33037492a05e9f2b1cd4eeb22746c999"
+}

@@ -174,4 +174,7 @@ def main():
   write(DEST/f'cases/{n:02d}.json',out);cases.append({'number':n,'id':c['id'],'title':c['title'],'question':out['question'],'family':'原版人工核对','has_model':has,'data':f'data/original-occ/cases/{n:02d}.json','variant_count':len(out['variants']),'default_variant':out['default_variant']})
  catalog={'schema_version':1,'series':'original','title':'原版 OCC 人工核对系列','model_groups':34,'explanation_only':[32],'excluded':[29],'source_review_state_sha256':ip['source_review_state_sha256'],'cases':cases,'counts':{'cases':len(cases),'models':34,'variants':sum(c['variant_count'] for c in cases),**dict(counts)},'scope':'Frozen original base inputs; fresh processing is distinguished from historical snapshots. No parametric base regeneration or full source-feature acceptance is claimed.'}
  write(DEST/'catalog.json',catalog);print(json.dumps(catalog['counts'],ensure_ascii=False))
+ if (ROOT/'docs/original-smlib-pairing-audit.json').exists():
+  import attach_original_smlib
+  attach_original_smlib.main()
 if __name__=='__main__':main()

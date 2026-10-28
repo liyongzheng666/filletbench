@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "job_id": "original.01.part01-r12.smlib",
+  "number": 1,
+  "case_number": 1,
+  "case_id": "73-17_cliff_edge-1281",
+  "part_label": "flush_boss_cliff_input",
+  "source_part_indices": [
+    0
+  ],
+  "source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+  "source_brep": "data/models/01.brep",
+  "source_fixture_json": "data/fixtures/01.json",
+  "source_fixture_sha256": "8db07cea571395d0fc112d91b1c20353f96b58de0dfa5990348baf5cb38afd20",
+  "source_fixture_export_sha256": "8db07cea571395d0fc112d91b1c20353f96b58de0dfa5990348baf5cb38afd20",
+  "source_contract_file": "data/contracts/01.json",
+  "source_contract_sha256": "0be669f2eb446a9766f63de23aebaa4a3cdbc8be6ddbc07e3407b8ba9ba23ec8",
+  "semantic_target": "在R大于台阶高的情况下，圆角面保留平滑侧G1，并在操作前指定的已有cliff边链终止；cliff侧允许有意非相切，不是普通双相切小圆角。",
+  "operation": "native_edge_fillet",
+  "role": "original_radius_completion",
+  "radius_mm": 12.0,
+  "request_note": "Audited original-view radius-only completion; no source/target/SDK-option alteration",
+  "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+  "input_construction_track": "source_BREP_exact_NURBS_exchange_not_native_parametric_rebuild",
+  "expected_input_kind": "solid",
+  "targets": [
+    {
+      "id": "target-1",
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          0.0,
+          103.0,
+          26.0
+        ],
+        [
+          3.225806451612903,
+          103.0,
+          26.0
+        ],
+        [
+          6.451612903225806,
+          103.0,
+          26.0
+        ],
+        [
+          9.677419354838708,
+          103.0,
+          26.0
+        ],
+        [
+          12.903225806451612,
+          103.0,
+          26.0
+        ],
+        [
+          16.129032258064516,
+          103.0,
+          26.0
+        ],
+        [
+          19.35483870967742,
+          103.0,
+          26.0
+        ],
+        [
+          22.580645161290324,
+          103.0,
+          26.0
+        ],
+        [
+          25.806451612903228,
+          103.0,
+          26.0
+        ],
+        [
+          29.03225806451613,
+          103.0,
+          26.0
+        ],
+        [
+          32.25806451612903,
+          103.0,
+          26.0
+        ],
+        [
+          35.483870967741936,
+          103.0,
+          26.0
+        ],
+        [
+          38.70967741935484,
+          103.0,
+          26.0
+        ],
+        [
+          41.935483870967744,
+          103.0,
+          26.0
+        ],
+        [
+          45.16129032258065,
+          103.0,
+          26.0
+        ],
+        [
+          48.38709677419355,
+          103.0,
+          26.0
+        ],
+        [
+          51.612903225806456,
+          103.0,
+          26.0
+        ],
+        [
+          54.83870967741936,
+          103.0,
+          26.0
+        ],
+        [
+          58.06451612903226,
+          103.0,
+          26.0
+        ],
+        [
+          61.29032258064517,
+          103.0,
+          26.0
+        ],
+        [
+          64.51612903225806,
+          103.0,
+          26.0
+        ],
+        [
+          67.74193548387096,
+          103.0,
+          26.0
+        ],
+        [
+          70.96774193548386,
+          103.0,
+          26.0
+        ],
+        [
+          74.19354838709675,
+          103.0,
+          26.0
+        ],
+        [
+          77.41935483870965,
+          103.0,
+          26.0
+        ],
+        [
+          80.64516129032255,
+          103.0,
+          26.0
+        ],
+        [
+          83.87096774193544,
+          103.0,
+          26.0
+        ],
+        [
+          87.09677419354834,
+          103.0,
+          26.0
+        ],
+        [
+          90.32258064516124,
+          103.0,
+          26.0
+        ],
+        [
+          93.54838709677414,
+          103.0,
+          26.0
+        ],
+        [
+          96.77419354838703,
+          103.0,
+          26.0
+        ],
+        [
+          100.0,
+          103.0,
+          26.0
+        ]
+      ],
+      "samples": [
+        [
+          0.0,
+          103.0,
+          26.0
+        ],
+        [
+          3.225806451612903,
+          103.0,
+          26.0
+        ],
+        [
+          6.451612903225806,
+          103.0,
+          26.0
+        ],
+        [
+          9.677419354838708,
+          103.0,
+          26.0
+        ],
+        [
+          12.903225806451612,
+          103.0,
+          26.0
+        ],
+        [
+          16.129032258064516,
+          103.0,
+          26.0
+        ],
+        [
+          19.35483870967742,
+          103.0,
+          26.0
+        ],
+        [
+          22.580645161290324,
+          103.0,
+          26.0
+        ],
+        [
+          25.806451612903228,
+          103.0,
+          26.0
+        ],
+        [
+          29.03225806451613,
+          103.0,
+          26.0
+        ],
+        [
+          32.25806451612903,
+          103.0,
+          26.0
+        ],
+        [
+          35.483870967741936,
+          103.0,
+          26.0
+        ],
+        [
+          38.70967741935484,
+          103.0,
+          26.0
+        ],
+        [
+          41.935483870967744,
+          103.0,
+          26.0
+        ],
+        [
+          45.16129032258065,
+          103.0,
+          26.0
+        ],
+        [
+          48.38709677419355,
+          103.0,
+          26.0
+        ],
+        [
+          51.612903225806456,
+          103.0,
+          26.0
+        ],
+        [
+          54.83870967741936,
+          103.0,
+          26.0
+        ],
+        [
+          58.06451612903226,
+          103.0,
+          26.0
+        ],
+        [
+          61.29032258064517,
+          103.0,
+          26.0
+        ],
+        [
+          64.51612903225806,
+          103.0,
+          26.0
+        ],
+        [
+          67.74193548387096,
+          103.0,
+          26.0
+        ],
+        [
+          70.96774193548386,
+          103.0,
+          26.0
+        ],
+        [
+          74.19354838709675,
+          103.0,
+          26.0
+        ],
+        [
+          77.41935483870965,
+          103.0,
+          26.0
+        ],
+        [
+          80.64516129032255,
+          103.0,
+          26.0
+        ],
+        [
+          83.87096774193544,
+          103.0,
+          26.0
+        ],
+        [
+          87.09677419354834,
+          103.0,
+          26.0
+        ],
+        [
+          90.32258064516124,
+          103.0,
+          26.0
+        ],
+        [
+          93.54838709677414,
+          103.0,
+          26.0
+        ],
+        [
+          96.77419354838703,
+          103.0,
+          26.0
+        ],
+        [
+          100.0,
+          103.0,
+          26.0
+        ]
+      ],
+      "endpoints": [
+        [
+          0.0,
+          103.0,
+          26.0
+        ],
+        [
+          100.0,
+          103.0,
+          26.0
+        ]
+      ],
+      "expected_length_mm": 100.0,
+      "length_is_approximation": false,
+      "documentary_approx_length_mm": null,
+      "expected_count": 1,
+      "allow_split_chain": true,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05,
+      "required_support_adjacency_count": 2,
+      "geometric_kind": "line",
+      "documentary_source_edge_alias": 9,
+      "source_alias_is_not_native_index": true
+    }
+  ],
+  "target_samples_are_world_coordinates": true,
+  "source_indices_are_documentary_only": true,
+  "native_edge_indices_supplied": false,
+  "protected_probes": [
+    {
+      "id": "boss_material",
+      "point": [
+        18,
+        120,
+        60
+      ],
+      "expected_before_state": true,
+      "expected_after_state": true
+    },
+    {
+      "id": "outside_right_boss",
+      "point": [
+        80,
+        120,
+        60
+      ],
+      "expected_before_state": false,
+      "expected_after_state": false
+    },
+    {
+      "id": "unaffected_lower_platform",
+      "point": [
+        50,
+        30,
+        20
+      ],
+      "expected_before_state": true,
+      "expected_after_state": true
+    }
+  ],
+  "runnable_by_selected_edge_runner": true,
+  "planner_status": "ready_for_native_geometry_selection",
+  "blocked_reason": null,
+  "native_call_executed": false,
+  "native_call_executed_for_target": false,
+  "source_special_flags_expressed": false,
+  "source_feature_must_not_be_scored_from_generic_validity_only": true,
+  "source_feature_oracles_required": true,
+  "native_automatic_feature_geometry_may_be_observed_only_after_feature_oracles": true,
+  "source_feature_adapter_gap": "Requested source-specific controls are not encoded in this ordinary selected-edge job. See feature_task_records.",
+  "world_target_samples": [
+    {
+      "target_id": "target-1",
+      "samples_mm": [
+        [
+          0.0,
+          103.0,
+          26.0
+        ],
+        [
+          3.225806451612903,
+          103.0,
+          26.0
+        ],
+        [
+          6.451612903225806,
+          103.0,
+          26.0
+        ],
+        [
+          9.677419354838708,
+          103.0,
+          26.0
+        ],
+        [
+          12.903225806451612,
+          103.0,
+          26.0
+        ],
+        [
+          16.129032258064516,
+          103.0,
+          26.0
+        ],
+        [
+          19.35483870967742,
+          103.0,
+          26.0
+        ],
+        [
+          22.580645161290324,
+          103.0,
+          26.0
+        ],
+        [
+          25.806451612903228,
+          103.0,
+          26.0
+        ],
+        [
+          29.03225806451613,
+          103.0,
+          26.0
+        ],
+        [
+          32.25806451612903,
+          103.0,
+          26.0
+        ],
+        [
+          35.483870967741936,
+          103.0,
+          26.0
+        ],
+        [
+          38.70967741935484,
+          103.0,
+          26.0
+        ],
+        [
+          41.935483870967744,
+          103.0,
+          26.0
+        ],
+        [
+          45.16129032258065,
+          103.0,
+          26.0
+        ],
+        [
+          48.38709677419355,
+          103.0,
+          26.0
+        ],
+        [
+          51.612903225806456,
+          103.0,
+          26.0
+        ],
+        [
+          54.83870967741936,
+          103.0,
+          26.0
+        ],
+        [
+          58.06451612903226,
+          103.0,
+          26.0
+        ],
+        [
+          61.29032258064517,
+          103.0,
+          26.0
+        ],
+        [
+          64.51612903225806,
+          103.0,
+          26.0
+        ],
+        [
+          67.74193548387096,
+          103.0,
+          26.0
+        ],
+        [
+          70.96774193548386,
+          103.0,
+          26.0
+        ],
+        [
+          74.19354838709675,
+          103.0,
+          26.0
+        ],
+        [
+          77.41935483870965,
+          103.0,
+          26.0
+        ],
+        [
+          80.64516129032255,
+          103.0,
+          26.0
+        ],
+        [
+          83.87096774193544,
+          103.0,
+          26.0
+        ],
+        [
+          87.09677419354834,
+          103.0,
+          26.0
+        ],
+        [
+          90.32258064516124,
+          103.0,
+          26.0
+        ],
+        [
+          93.54838709677414,
+          103.0,
+          26.0
+        ],
+        [
+          96.77419354838703,
+          103.0,
+          26.0
+        ],
+        [
+          100.0,
+          103.0,
+          26.0
+        ]
+      ],
+      "kind": "edge_geometry"
+    }
+  ],
+  "job_file": "history:outputs/manual-review/smlib-full/jobs/01.part01.ordinary_challenge.r16.json",
+  "component_index": 1,
+  "publication": {
+    "canonical_inputs": "published BREP and explicit finite NURBS topology JSON",
+    "source_tier": "exploratory_reconstruction",
+    "special_feature_semantics_verified": false,
+    "vendor_parameters_not_encoded": true
+  },
+  "original_variant_id": "part01-r12",
+  "original_case_file_sha256": "0c8f34e0203f02661b74cd1e82121be2210ba6e4a9bf4b0fea8bf48a8c8486a6",
+  "source_template_job_id": "01.part01.ordinary_challenge.r16",
+  "source_template_job_sha256": "2ee6b23f20afc82fe245ad3ec72452a0168e001d5d1ec1a2d2e8e2650336fabd"
+}

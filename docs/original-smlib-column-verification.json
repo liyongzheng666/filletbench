@@ -1,0 +1,1917 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "scope": "Actual requested constraints and evidence identity. Finite NURBS vs analytic BREP representation and global quality remain separate; no full source-feature score.",
+  "counts": {
+    "matched_constraints_different_representation": 70,
+    "protocol_not_encoded": 58,
+    "not_applicable_input_only": 1
+  },
+  "baseline_pairing_audit_sha256": "a0104530b67e264cb6d3254fdfc178e3c5c4d5658371b6fb68d9bca5df75a758",
+  "rows": [
+    {
+      "number": 1,
+      "variant_id": "part01-r8",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "01.part01.ordinary_control.r8",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 1,
+      "variant_id": "part01-r12",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.01.part01-r12.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 1,
+      "variant_id": "part01-r16",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "01.part01.ordinary_challenge.r16",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 1,
+      "variant_id": "part01-r48",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "01.part01.ordinary_challenge.r48",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 2,
+      "variant_id": "part01-r20",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "02.part01.ordinary_control.r20",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 2,
+      "variant_id": "part01-r24",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "02.part01.ordinary_challenge.r24",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 2,
+      "variant_id": "part01-r28",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "02.part01.ordinary_challenge.r28",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 3,
+      "variant_id": "part01-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "03.part01.ordinary_challenge.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 3,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "03.part01.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 3,
+      "variant_id": "part01-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.03.part01-r1.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "SMLib API 返回 1001；实际失败候选已保留，内核未给出更细原因。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part01-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "04.part01.ordinary_challenge.r4",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 在 fillet 阶段终止；没有成功结果。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part01-r2",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "04.part01.ordinary_control.r2",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 在 fillet 阶段终止；没有成功结果。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part01-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.04.part01-r1.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "输入和选边门已通过；原生进程在 fillet 阶段终止（返回码 -11），未获得圆角结果。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part02-r4",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part02-r2",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part02-r1",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part03-r5",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "04.part03.ordinary_challenge.r5",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part03-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "04.part03.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 4,
+      "variant_id": "part03-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.04.part03-r1.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "SMLib API 返回 1001；实际失败候选已保留，内核未给出更细原因。"
+    },
+    {
+      "number": 5,
+      "variant_id": "part01-r5",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "05.part01.ordinary_challenge.r5",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 5,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "05.part01.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 5,
+      "variant_id": "part01-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.05.part01-r1.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "SMLib API 返回 1001；实际失败候选已保留，内核未给出更细原因。"
+    },
+    {
+      "number": 6,
+      "variant_id": "part01-r12",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "06.part01.ordinary_challenge.r12",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 6,
+      "variant_id": "part01-r8",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.06.part01-r8.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 6,
+      "variant_id": "part01-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "06.part01.ordinary_control.r4",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 7,
+      "variant_id": "part01-r30",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "07.part01.ordinary_challenge.r30",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 结果未保持预期闭合实体类型；独立匹配表明原待圆角边仍完整保留为锐边。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 7,
+      "variant_id": "part01-r24",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "07.part01.ordinary_challenge.r24",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 结果未保持预期闭合实体类型；独立匹配表明原待圆角边仍完整保留为锐边。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 7,
+      "variant_id": "part01-r16",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "07.part01.ordinary_control.r16",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 8,
+      "variant_id": "local-demo",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "08.part01.ordinary_control.r12",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 9,
+      "variant_id": "part01-r8",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "09.part01.ordinary_challenge.r8",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 9,
+      "variant_id": "part01-r5",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.09.part01-r5.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 9,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "09.part01.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 9,
+      "variant_id": "part02-r8",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "09.part02.ordinary_challenge.r8",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 9,
+      "variant_id": "part02-r5",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.09.part02-r5.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 9,
+      "variant_id": "part02-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "09.part02.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 10,
+      "variant_id": "part01-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "10.part01.ordinary_challenge.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 10,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "10.part01.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 10,
+      "variant_id": "part01-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.10.part01-r1.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 11,
+      "variant_id": "part01-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "11.part01.ordinary_challenge.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 11,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.11.part01-r3.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 11,
+      "variant_id": "part01-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "11.part01.ordinary_control.r1",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 12,
+      "variant_id": "part01-r8",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "12.part01.ordinary_challenge.r8",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 实际 BREP 有效性检查失败。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 12,
+      "variant_id": "part01-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "12.part01.ordinary_challenge.r4",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 实际 BREP 有效性检查失败。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 12,
+      "variant_id": "part01-r2",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "12.part01.ordinary_control.r2",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 12,
+      "variant_id": "part02-r8",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "12.part02.ordinary_challenge.r8",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 12,
+      "variant_id": "part02-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "12.part02.ordinary_challenge.r4",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 12,
+      "variant_id": "part02-r2",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "12.part02.ordinary_control.r2",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 13,
+      "variant_id": "part01-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "13.part01.ordinary_challenge.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 13,
+      "variant_id": "part01-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.13.part01-r4.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 13,
+      "variant_id": "part01-r2",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.13.part01-r2.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 14,
+      "variant_id": "part01-r12",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "14.part01.ordinary_challenge.r12",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 14,
+      "variant_id": "part01-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "14.part01.ordinary_control.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 14,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.14.part01-r3.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 15,
+      "variant_id": "part01-r5",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "15.part01.ordinary_challenge.r5",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 结果未保持预期闭合实体类型。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 15,
+      "variant_id": "part01-r2p5",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "15.part01.ordinary_control.r2p5",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 15,
+      "variant_id": "part01-r1",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.15.part01-r1.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "按原版相同输入／目标补跑此半径；不代表源图特殊功能或人工外观通过。"
+    },
+    {
+      "number": 16,
+      "variant_id": "case1",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 16,
+      "variant_id": "case2",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 17,
+      "variant_id": "cap-r8",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 17,
+      "variant_id": "cap-r4",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 18,
+      "variant_id": "plane-r8",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 18,
+      "variant_id": "sheet-r8",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 18,
+      "variant_id": "plane-r4",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 18,
+      "variant_id": "sheet-r4",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 19,
+      "variant_id": "edge-left",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 19,
+      "variant_id": "face-left",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 19,
+      "variant_id": "direction-right",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 19,
+      "variant_id": "r5-control",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 20,
+      "variant_id": "patch-no",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 20,
+      "variant_id": "patch-yes",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 20,
+      "variant_id": "native-full-front-chain-r1",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 20,
+      "variant_id": "native-full-front-chain-r2",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 21,
+      "variant_id": "both-stop-r4",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 21,
+      "variant_id": "right-stop-left-continue-r4",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 21,
+      "variant_id": "native-free-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "21.part01.ordinary_challenge.r4",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 21,
+      "variant_id": "right-stop-left-continue-r2",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 22,
+      "variant_id": "part01-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "22.part01.ordinary_challenge.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 22,
+      "variant_id": "part01-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "22.part01.ordinary_control.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 22,
+      "variant_id": "part01-r10",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "22.part01.ordinary_challenge.r10",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 23,
+      "variant_id": "notch-r2",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 23,
+      "variant_id": "notch-r2p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 23,
+      "variant_id": "notch-r2-secondary-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 23,
+      "variant_id": "notch-r2p5-secondary-r0p25",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 24,
+      "variant_id": "both-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "24.part01.ordinary_challenge.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 24,
+      "variant_id": "convex-then-concave-r6",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 24,
+      "variant_id": "concave-then-convex-r6",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 24,
+      "variant_id": "both-r3",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "24.part01.ordinary_challenge.r3",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 25,
+      "variant_id": "native-r16",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "25.part01.ordinary_challenge.r16",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原始返回值 1001；保留实际候选供核对。"
+    },
+    {
+      "number": 25,
+      "variant_id": "native-r12",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "original.25.native-r12.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "API 有返回，但有效性或预期体／片类型检查未通过；这里保留实际候选。"
+    },
+    {
+      "number": 25,
+      "variant_id": "native-r10",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "25.part01.ordinary_challenge.r10",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 结果未保持预期闭合实体类型；独立匹配表明原待圆角边仍完整保留为锐边。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 26,
+      "variant_id": "part01-r10",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "26.part01.ordinary_challenge.r10",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 结果未保持预期闭合实体类型；独立匹配表明原待圆角边仍完整保留为锐边。API 成功不代表目标已完成。"
+    },
+    {
+      "number": 26,
+      "variant_id": "part01-r4",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "26.part01.ordinary_control.r4",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 27,
+      "variant_id": "part01-r1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 27,
+      "variant_id": "part01-r2p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 27,
+      "variant_id": "part01-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 27,
+      "variant_id": "part02-r1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 27,
+      "variant_id": "part02-r2p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 27,
+      "variant_id": "part02-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 28,
+      "variant_id": "part01-r1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 28,
+      "variant_id": "part01-r2p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 28,
+      "variant_id": "part01-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 30,
+      "variant_id": "part01-r1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 30,
+      "variant_id": "part01-r2p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 30,
+      "variant_id": "part01-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 30,
+      "variant_id": "part02-r1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 30,
+      "variant_id": "part02-r2p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 30,
+      "variant_id": "part02-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 31,
+      "variant_id": "body-r7",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "31.part01.ordinary_challenge.r7",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 31,
+      "variant_id": "body-r7-clean",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "31.part01.ordinary_challenge.r7",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 31,
+      "variant_id": "body-r6",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "31.part01.ordinary_control.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 31,
+      "variant_id": "body-r6-clean",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "31.part01.ordinary_control.r6",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 31,
+      "variant_id": "blade-input",
+      "pairing_status": "not_applicable_input_only",
+      "evidence_kind": "input_only",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版此视图只保留辅助输入，没有圆角处理请求。"
+    },
+    {
+      "number": 33,
+      "variant_id": "asymmetric-ranges",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 33,
+      "variant_id": "asymmetric-clean",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 33,
+      "variant_id": "native-symmetric-control",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "33.part01.ordinary_challenge.r2p43305-variable-control",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 只匹配两端物理半径；完整沿程规律等价仍未验证。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 34,
+      "variant_id": "rho-050-compare",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 34,
+      "variant_id": "absolute-025",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 34,
+      "variant_id": "absolute-050",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 34,
+      "variant_id": "absolute-075",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 34,
+      "variant_id": "relative-050",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 34,
+      "variant_id": "native-circle-control",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "matched_existing_run",
+      "source_job_id": "34.part01.ordinary_challenge.r16p8574-variable-control",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "audited_match": true
+      },
+      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 只匹配两端物理半径；完整沿程规律等价仍未验证。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+    },
+    {
+      "number": 35,
+      "variant_id": "proxy-s1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 35,
+      "variant_id": "proxy-s0p1",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 35,
+      "variant_id": "proxy-s10p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 35,
+      "variant_id": "default-circle-r13",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 35,
+      "variant_id": "internal-c2-circle-r13",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 36,
+      "variant_id": "part01-r1p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 36,
+      "variant_id": "part01-r2p0",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    },
+    {
+      "number": 36,
+      "variant_id": "part01-r0p5",
+      "pairing_status": "protocol_not_encoded",
+      "evidence_kind": "not_run",
+      "source_job_id": null,
+      "checks": {},
+      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+    }
+  ],
+  "issues": []
+}

@@ -1,20 +1,23 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
-import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay } from './original.js';
+import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
 const state = { series: 'original', collections: new Map(), collectionToken: 0, routeToken: 0, inputStage: 'base', catalog: null, cases: new Map(), currentCase: null, variant: null, filter: 'all', query: '', token: 0, selectionToken: 0, viewers: {}, syncing: false, pdf: null, pdfMeta: null, imageUrl: null, mapping: readStorage('filletbench-reference-maps', {}), previewPage: 1, previewCrop: null, previewToken: 0, detailTab: 'evidence', detailEngine: null, expanded: null, refView: { scale: 1, x: 0, y: 0 } };
 const meshCache = new Map();
+// Stable DOM slots: input, OCC output, SMLib output. Data uses the actual engine names.
+const modelSlots = ['occt', 'smlib', 'smlibFourth'];
+const resultSlots = { occt: 'smlib', smlib: 'smlibFourth' };
 const statusNames = { pass: ['通过', 'passed'], passed: ['通过', 'passed'], accepted: ['通过', 'passed'], fail: ['未通过', 'failed'], failed: ['未通过', 'failed'], invalid: ['几何无效', 'failed'], error: ['构建失败', 'failed'], self_intersect: ['存在自交', 'failed'], self_intersection: ['存在自交', 'failed'], pending: ['待验证', 'pending'], not_run: ['未运行', 'pending'], unavailable: ['未提供', 'pending'], unsupported: ['暂不支持', 'pending'], missing: ['缺少结果', 'pending'], blocked: ['受阻', 'pending'], generated: ['已生成', 'neutral'], valid: ['已生成', 'neutral'], ok: ['已生成', 'neutral'], partial: ['部分完成', 'pending'], candidate_unverified: ['候选未验证', 'neutral'], api_failed: ['调用失败', 'failed'], geometry_failed: ['几何失败', 'failed'], crash: ['异常退出', 'failed'], native_api_failed_with_candidate: ['调用失败 · 有候选', 'failed'], controlled_subchecks: ['子判据通过', 'neutral'] };
 
 function readStorage(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function saveMappings() { try { localStorage.setItem('filletbench-reference-maps', JSON.stringify(state.mapping)); } catch { toast('浏览器无法保存参考映射；当前会话仍可使用。'); } }
 function toast(message) { const node = $('#toast'); node.textContent = message; node.hidden = false; clearTimeout(toast.timer); toast.timer = setTimeout(() => { node.hidden = true; }, 4000); }
 function text(value, fallback = '未记录') { if (value === undefined || value === null || value === '') return fallback; return typeof value === 'object' ? JSON.stringify(value) : String(value); }
-function statusInfo(result) { const status = String(result?.status ?? 'pending').toLowerCase(); const [label, tone] = statusNames[status] ?? ['待验证', 'pending']; return { label: statusNames[status] ? label : (result?.label || label), fullLabel: result?.label || label, tone, raw: status }; }
+function statusInfo(result) { const status = String(result?.status ?? 'pending').toLowerCase(); const failure = /fail|invalid|error|crash|reject|self_intersect/.test(status) || result?.api_success === false; const [label, tone] = statusNames[status] ?? (failure ? ['未通过', 'failed'] : ['待验证', 'pending']); return { label: statusNames[status] ? label : (result?.label || label), fullLabel: result?.label || label, tone: failure ? 'failed' : tone, raw: status }; }
 function getCaseNumber(item) { return String(item?.number ?? item?.id?.match(/\d+/)?.[0] ?? '').padStart(2, '0'); }
 function variantLabel(variant) { return variant.label || (variant.radius_mm !== undefined ? `R ${variant.radius_mm} mm` : variant.id); }
 function brief(value, max = 170) { const string = text(value, ''); return string.length > max ? string.slice(0, max) + '…' : string; }
@@ -30,10 +33,10 @@ function setHash(caseData, variant) { const hash = new URLSearchParams({ series:
 async function fetchJSON(path) { const response = await fetch(path, { cache: 'no-cache' }); if (!response.ok) throw new Error(`${response.status} · ${path}`); return response.json(); }
 function safePath(path) { if (typeof path !== 'string') return null; const url = new URL(path, location.href); return url.origin === location.origin ? url.href : null; }
 function addDetailLink(parent, label, path) { const url = safePath(path); if (!url) return; const link = newNode('a', 'detail-link', label); link.href = url; link.target = '_blank'; link.rel = 'noopener'; parent.append(link); }
-function addModelDownloads(parent) {
-  const variant = state.variant, result = variant.occt || {};
+function addModelDownloads(parent, engine = 'occt') {
+  const variant = state.variant, result = engine === 'input' ? {} : variant[engine] || {};
   const files = [...(Array.isArray(result.files) ? result.files : [])];
-  if (variant.base_brep_url && !files.some((file) => file.path === variant.base_brep_url || (file.sha256 === variant.base_sha256 && /基础/.test(file.label || '')))) files.unshift({ label: '原版基础 BREP', path: variant.base_brep_url, sha256: variant.base_sha256, status: '原基础输入' });
+  if (engine === 'input' && variant.base_brep_url && !files.some((file) => file.path === variant.base_brep_url || (file.sha256 === variant.base_sha256 && /基础/.test(file.label || '')))) files.unshift({ label: '原版基础 BREP', path: variant.base_brep_url, sha256: variant.base_sha256, status: '原基础输入' });
   const list = newNode('ul', 'model-download-list');
   for (const file of files) {
     if (typeof file.path !== 'string') continue;
@@ -95,6 +98,7 @@ async function selectCollection(series, number = getCaseNumber(state.currentCase
   ++state.routeToken;
   const token = ++state.collectionToken;
   ++state.selectionToken; ++state.token;
+  if ($('#detailDialog').open) $('#detailDialog').close();
   state.series = series; state.inputStage = 'base';
   state.catalog = null; state.currentCase = null; state.variant = null; state.cases = new Map();
   $('#caseCount').textContent = '—'; $('#caseKicker').textContent = 'CASE —';
@@ -104,7 +108,7 @@ async function selectCollection(series, number = getCaseNumber(state.currentCase
   $('#pipelineBadges').replaceChildren(); $('#findings').replaceChildren(); $('#representationNotice').hidden = true;
   $('#caseList').replaceChildren(newNode('p', 'list-message', '正在读取案例…'));
   $('#previousCase').disabled = true; $('#nextCase').disabled = true;
-  for (const engine of ['occt', 'smlib']) {
+  for (const engine of modelSlots) {
     state.viewers[engine]?.clear(); const stage = $(`#${engine}Stage`);
     $('.stage-empty', stage).hidden = false; $('h3', $('.stage-empty', stage)).textContent = '等待本集合数据'; $('p', $('.stage-empty', stage)).textContent = '保留案例、参数与实际产物的对应关系。';
     $('.model-view-label', stage).hidden = true; $('.model-hint', stage).hidden = true; $('.stage-busy', stage).hidden = true;
@@ -144,11 +148,12 @@ function renderCollectionUI() {
   $('#variantControlLabel').textContent = original ? '原版参数' : '测试参数';
   $('#beforeControl').hidden = original; $('#beforeDivider').hidden = original;
   $('#originalPipeline').hidden = !original;
-  $('#occtHeading').textContent = original ? '基础模型' : 'OCCT';
-  $('#smlibHeading').textContent = original ? '实际 OCC 结果' : 'SMLib';
+  $('#occtHeading').textContent = '基础模型与选边';
+  $('#smlibHeading').textContent = '实际 OCC 结果';
+  $('#smlibFourthHeading').textContent = '实际 SMLib 结果';
   $('#referenceHeading').textContent = original ? 'PDF 原图' : '原始参考';
-  $('.comparison-grid').setAttribute('aria-label', original ? 'PDF 原图、基础模型与实际 OCC 结果三栏对照' : '原始参考与内核结果三栏对照');
-  $('#referenceEmpty p').textContent = original ? '载入你拥有的 PDF 或图片\n并排核对基础模型与实际 OCC 处理结果' : '载入你拥有的 PDF 或图片\n与两个内核的实际输出并排查看';
+  $('.comparison-grid').setAttribute('aria-label', 'PDF 原图、基础模型与选边、OCC 和 SMLib 实际结果横向四栏对照');
+  $('#referenceEmpty p').textContent = '载入你拥有的 PDF 或图片\n并排核对基础模型、OCC 与 SMLib 实际产物';
   $('#validationFootnote').textContent = original ? '历史记录未复跑；几何、特殊语义和参考外观分别验收。' : '“已生成”仅代表有输出；几何、特殊语义和参考外观需分别验收。';
 }
 function caseTone(item) {
@@ -232,7 +237,7 @@ async function selectCase(item, requestedVariant) {
       $('#variantMeta').hidden = true; $('#representationNotice').hidden = true; $('#pipelineBadges').replaceChildren();
       const explanation = data.has_model === false || getCaseNumber(data) === '32';
       $('#findings').replaceChildren(newNode('p', 'list-message', explanation ? text(data.note || data.question, '本项仅为原文说明，不建立独立模型或执行圆角任务。') : '该案例尚无测试变体；不会显示其他案例的结果。'));
-      for (const engine of ['occt', 'smlib']) {
+      for (const engine of modelSlots) {
         state.viewers[engine]?.clear(); const stage = $(`#${engine}Stage`), empty = $('.stage-empty', stage);
         empty.hidden = false; $('h3', empty).textContent = explanation ? '说明项 · 无独立模型' : '没有测试变体'; $('p', empty).textContent = explanation ? '保留原编号与原文说明。' : '不会借用其他参数的结果。';
         $('.model-view-label', stage).hidden = true; $('.model-hint', stage).hidden = true; $('.stage-busy', stage).hidden = true;
@@ -243,6 +248,7 @@ async function selectCase(item, requestedVariant) {
   } catch (error) { toast(`无法读取案例：${error.message}`); }
 }
 async function selectVariant(variant) {
+  if ($('#detailDialog').open) $('#detailDialog').close();
   state.variant = variant;
   const token = ++state.token;
   $('#variantSelect').value = variant.id;
@@ -252,7 +258,7 @@ async function selectVariant(variant) {
   renderNotice();
   renderFindings();
   renderReference();
-  if (isOriginal(state)) renderOriginalMetadata(); else for (const engine of ['occt', 'smlib']) renderEngineMetadata(engine);
+  if (isOriginal(state)) renderOriginalMetadata(); else { renderComparisonInputMetadata(); for (const engine of ['occt', 'smlib']) renderEngineMetadata(engine); }
   await renderModels(token);
 }
 function renderNotice() {
@@ -278,22 +284,32 @@ function renderNotice() {
   notice.textContent = 'ⓘ  ' + parts.join('  ');
   notice.hidden = false;
 }
+function renderComparisonInputMetadata() {
+  $('#occtHeading').textContent = '基础模型与选边';
+  $('#occtVersion').textContent = 'COMPARISON INPUT';
+  $('#occtStatus').textContent = '实验输入';
+  $('#occtStatus').className = 'status-badge neutral';
+  $('#occtCaption').textContent = '本实验基础输入与目标边 · 内核表示见记录';
+}
 function renderEngineMetadata(engine) {
-  const result = state.variant[engine];
+  const result = engine === 'smlib' ? smlibResult(state.variant) : state.variant[engine];
+  const slot = resultSlots[engine];
   const info = statusInfo(result);
-  const badge = $(`#${engine}Status`);
+  const badge = $(`#${slot}Status`);
   badge.textContent = info.label; badge.title = info.fullLabel;
   badge.className = `status-badge ${info.tone}`;
-  $(`#${engine}Version`).textContent = result?.version ? text(result.version) : (engine === 'occt' ? 'OPEN CASCADE' : 'SOLID MODELING');
+  $(`#${slot}Version`).textContent = result?.version ? text(result.version) : (engine === 'occt' ? 'OPEN CASCADE' : 'SMLIB SDK');
   const methodNames = { native_edge_fillet: '原生普通边圆角', native: '原生构建', composite: '组合构造', exact_nurbs: '精确 NURBS 输入' };
-  $(`#${engine}Caption`).textContent = methodNames[result?.method] || result?.method_label || result?.method || '未记录构建方法';
+  $(`#${slot}Caption`).textContent = engine === 'smlib' ? smlibResultLabel(state.variant) : methodNames[result?.method] || result?.method_label || result?.method || '未记录构建方法';
+  if (engine === 'smlib') { badge.textContent = info.fullLabel; badge.title = `${info.fullLabel} · ${smlibPairingLabel(state.variant)}`; }
 }
+
 function renderOriginalMetadata() {
   const variant = state.variant, result = variant.occt || {}, info = statusInfo(result);
   const operation = state.inputStage === 'operation';
   const relation = inputRelation(variant);
   const relationLabel = { same_as_base: '同原基础几何', part_selection: '原基础的部件', derived: '已衍生', recorded_combination_input: '组合流程入口', recorded_input: '单列操作记录' }[relation];
-  $('#occtHeading').textContent = operation ? '实际操作输入' : '基础模型';
+  $('#occtHeading').textContent = operation ? '实际操作输入' : '基础模型与选边';
   $('#occtVersion').textContent = operation ? 'OPERATION INPUT' : 'ORIGINAL BASE';
   $('#occtStatus').textContent = operation ? relationLabel : '原版基础';
   $('#occtStatus').className = 'status-badge neutral';
@@ -304,6 +320,7 @@ function renderOriginalMetadata() {
   $('#smlibStatus').title = `${info.fullLabel} · ${historicalResult(variant) ? '本次未复跑' : '本次运行'}`;
   $('#smlibVersion').textContent = text(result.version, 'OPEN CASCADE');
   $('#smlibCaption').textContent = failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${originalMethod(variant)} · ${historicalResult(variant) ? '历史输出，未复跑' : '本次实际输出'}`;
+  renderEngineMetadata('smlib');
   $('#validationFootnote').textContent = `${historicalResult(variant) ? '历史记录未复跑' : '已记录本次运行'}；几何、特殊语义和参考外观分别验收。`;
   $$('.input-stage-switch button').forEach((button) => { const active = button.dataset.inputStage === state.inputStage; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
   const pipeline = $('#pipelineBadges'); pipeline.replaceChildren();
@@ -323,6 +340,7 @@ function renderFindings() {
     const cards = [
       ['原版参数 / 基础输入', variantLabel(variant), [originalParameterText(variant), variant.base_note || variant.input_note].filter(Boolean).join(' · ')],
       [originalMethod(variant), failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${historicalResult(variant) ? '历史记录 · 未复跑' : '本次实际处理'} · ${statusInfo(result).fullLabel}`, result.reason || result.summary || '没有完整处理记录。'],
+      ['SMLib 对应证据', smlibResultLabel(variant), smlibResult(variant).reason || smlibResult(variant).summary || '对应关系尚未确认；第四栏只显示独立记录的 SMLib 实际产物。'],
       ['人工核对与验证边界', humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
     ];
     cards.forEach(([label, title, content], index) => { const card = newNode('article', 'finding' + (index === 1 && failedResult(variant) ? ' warn' : '')); const heading = newNode('div', 'finding-label'); heading.append(newNode('span', 'finding-number', index + 1), newNode('span', '', label)); card.append(heading, newNode('h3', '', title), newNode('p', '', text(content))); container.append(card); });
@@ -355,11 +373,14 @@ async function renderModels(token) {
   const variant = state.variant;
   const before = $('#beforeToggle').checked;
   const original = isOriginal(state);
-  const descriptors = original ? originalDisplay(variant, state.inputStage) : ['occt', 'smlib'].map((engine) => {
-    const result = variant[engine];
-    const source = before ? (result?.before_mesh || variant.input_mesh) : result?.mesh;
-    return { engine, source, targets: before ? variant.targets : null, faces: [], label: before ? '建模前 · 目标边' : '本次实际输出', reason: before ? '没有可用的建模前网格。' : result?.reason || result?.summary || '尚未提供此内核的实际输出。' };
-  });
+  const descriptors = original ? originalDisplay(variant, state.inputStage) : [
+    { engine: 'occt', source: variant.input_mesh || variant.occt?.before_mesh || variant.smlib?.before_mesh, targets: variant.targets, faces: variant.selected_faces || [], label: '本实验基础输入 · 目标边', reason: '本实验未提供基础输入网格。' },
+    ...['occt', 'smlib'].map((engine) => {
+      const result = engine === 'smlib' ? smlibResult(variant) : variant[engine];
+      const source = before ? result?.before_mesh : result?.mesh;
+      return { engine: resultSlots[engine], source, targets: before ? variant.targets : [], faces: [], label: before ? `${engine.toUpperCase()} 实际建模前输入` : engine === 'smlib' ? smlibResultLabel(variant) : 'OCC 实际输出', reason: before ? '未提供此内核实际使用的建模前网格。' : result?.reason || result?.summary || '尚未提供此内核的实际输出。' };
+    }),
+  ];
   const tasks = descriptors.map(async (entry) => {
     const { engine, source } = entry;
     const stage = $(`#${engine}Stage`);
@@ -371,7 +392,7 @@ async function renderModels(token) {
   const results = await Promise.all(tasks);
   // A retained fragment must not expand to fill the frame. Keep the exact same
   // world bounds for before/after, including both inputs and both real outputs.
-  const boundSources = [...new Set((original ? [baseMesh(variant), operationMesh(variant), variant.occt?.mesh] : [variant.input_mesh, ...['occt', 'smlib'].flatMap((engine) => [variant[engine]?.before_mesh, variant[engine]?.mesh])]).filter(Boolean))];
+  const boundSources = [...new Set((original ? [baseMesh(variant), operationMesh(variant), variant.occt?.mesh, variant.smlib?.before_mesh, variant.smlib?.mesh] : [variant.input_mesh, ...['occt', 'smlib'].flatMap((engine) => [variant[engine]?.before_mesh, variant[engine]?.mesh])]).filter(Boolean))];
   const boundMeshes = await Promise.all(boundSources.map((source) => readMesh(source).catch(() => null)));
   if (token !== state.token) return;
   const bounds = new THREE.Box3();
@@ -383,7 +404,7 @@ async function renderModels(token) {
     if (!validMesh(entry.mesh)) {
       state.viewers[entry.engine]?.clear();
       empty.hidden = false;
-      $('h3', empty).textContent = original ? entry.engine === 'occt' ? '本阶段输入未提供' : '没有可展示的实际结果' : before ? '建模前数据未提供' : '没有可展示的结果';
+      $('h3', empty).textContent = entry.engine === 'smlibFourth' ? '尚无对应 SMLib 实际产物' : entry.engine === 'occt' ? '本阶段输入未提供' : before && !original ? '建模前数据未提供' : '没有可展示的实际结果';
       $('p', empty).textContent = text(entry.reason, '暂无数据');
       $('.model-view-label', stage).hidden = true;
       $('.model-hint', stage).hidden = true;
@@ -396,7 +417,7 @@ async function renderModels(token) {
       $('.model-view-label', stage).hidden = false;
       const auxiliary = entry.targets?.some((target) => target.target_kind === 'auxiliary_guide');
       const edgeCount = entry.targets?.filter((target) => target.target_kind !== 'auxiliary_guide' && target.target_kind !== 'selected_face').length || 0;
-      const selectionLabel = original && entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : auxiliary ? '虚线为理论辅助位置' : '';
+      const selectionLabel = entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : auxiliary ? '虚线为理论辅助位置' : '';
       $('.model-label-text', stage).textContent = entry.label + (selectionLabel ? ' · ' + selectionLabel : '');
       $('.model-hint', stage).hidden = false;
     } catch (error) {
@@ -521,7 +542,7 @@ class MeshViewer {
     else { this.camera.left = -radius; this.camera.right = radius; this.camera.top = radius / aspect; this.camera.bottom = -radius / aspect; }
     this.camera.updateProjectionMatrix(); this.render();
   }
-  copyCamera(source) { this.camera.position.copy(source.camera.position); this.camera.quaternion.copy(source.camera.quaternion); this.camera.zoom = source.camera.zoom; this.controls.target.copy(source.controls.target); this.camera.updateProjectionMatrix(); this.controls.update(); this.render(); }
+  copyCamera(source) { this.camera.position.copy(source.camera.position); this.camera.quaternion.copy(source.camera.quaternion); this.camera.up.copy(source.camera.up); this.camera.zoom = source.camera.zoom; this.controls.target.copy(source.controls.target); this.camera.updateProjectionMatrix(); this.controls.update(); this.render(); }
   render() { this.renderer.render(this.scene, this.camera); }
 }
 
@@ -722,54 +743,66 @@ function setupCrop() {
   preview.addEventListener('pointerup', () => { if (!start) return; start = null; state.previewCrop = normalizeCrop(state.previewCrop); updateCropOverlay(); });
   preview.addEventListener('pointercancel', () => { start = null; });
 }
-function openDetails(engine = null, tab = 'evidence') { if (!state.variant) return; state.detailEngine = isOriginal(state) && engine === 'smlib' ? 'occt' : engine; state.detailTab = tab; renderDetails(); $('#detailDialog').showModal(); }
+function openDetails(engine = null, tab = 'evidence') { if (!state.variant) return; state.detailEngine = engine; state.detailTab = tab; renderDetails(); $('#detailDialog').showModal(); }
 function renderDetails() {
   if (!state.variant) return;
-  $('#detailTitle').textContent = `${getCaseNumber(state.currentCase)} · ${variantLabel(state.variant)}`;
+  const variant = state.variant;
+  const detailName = { input: '基础模型与选边', occt: 'OCC 实际结果', smlib: 'SMLib 实际结果' }[state.detailEngine] || '判据与复现';
+  $('#detailTitle').textContent = `${getCaseNumber(state.currentCase)} · ${detailName} · ${variantLabel(variant)}`;
   $$('.detail-tabs button').forEach((button) => { const active = button.dataset.tab === state.detailTab; button.classList.toggle('active', active); button.setAttribute('aria-selected', active); });
   const container = $('#detailContent'); container.replaceChildren();
-  if (state.detailTab === 'raw') { container.append(newNode('pre', '', JSON.stringify({ ...state.currentCase, variants: [state.variant] }, null, 2))); return; }
-  if (isOriginal(state)) addModelDownloads(container);
-  const engines = isOriginal(state) ? ['occt'] : state.detailEngine ? [state.detailEngine] : ['occt', 'smlib'];
+  const engines = state.detailEngine === 'input' ? [] : state.detailEngine ? [state.detailEngine] : ['occt', 'smlib'];
+  if (state.detailTab === 'raw') {
+    const record = state.detailEngine && state.detailEngine !== 'input' ? { case: state.currentCase.id, variant: variant.id, radius_mm: variant.radius_mm, [state.detailEngine]: state.detailEngine === 'smlib' ? smlibResult(variant) : variant[state.detailEngine] } : { ...state.currentCase, variants: [variant] };
+    container.append(newNode('pre', '', JSON.stringify(record, null, 2))); return;
+  }
   if (state.detailTab === 'evidence') {
     container.append(newNode('h3', '', '验证边界'));
     container.append(newNode('p', '', '构建返回、网格生成、BRep 有效性、连续性与参考外观是独立判据。普通边圆角的通过不替代原始参考的特殊语义验收。'));
     const dl = newNode('dl');
-    for (const [label, value] of [['案例', state.currentCase.id], ['测试变体', state.variant.id], ['半径 / mm', state.variant.radius_mm], ['输入说明', state.variant.input_construction_note || state.variant.input_note || state.variant.note], ['来源 PDF 页', state.currentCase.reference?.page], ['几何 SHA-256', state.currentCase.source_sha256], ['参考 PDF SHA-256', state.currentCase.reference?.expected_pdf_sha256]]) { dl.append(newNode('dt', '', label), newNode('dd', '', text(value))); }
+    for (const [label, value] of [['案例', state.currentCase.id], ['测试变体', variant.id], ['半径 / mm', variant.radius_mm], ['输入说明', variant.input_construction_note || variant.input_note || variant.note], ['来源 PDF 页', state.currentCase.reference?.page], ['几何 SHA-256', state.currentCase.source_sha256], ['参考 PDF SHA-256', state.currentCase.reference?.expected_pdf_sha256]]) { dl.append(newNode('dt', '', label), newNode('dd', '', text(value))); }
     container.append(dl);
-    if (isOriginal(state)) {
-      const original = newNode('dl');
-      for (const [label, value] of [['集合', COLLECTIONS.original.label], ['原版参数', state.variant.parameters], ['基础模型', baseMesh(state.variant)], ['实际操作输入', operationMesh(state.variant)], ['操作输入说明', state.variant.operation_note || state.variant.operation_input?.note], ['原选边 / 选面', { targets: state.variant.targets, selected_faces: state.variant.selected_faces }], ['历史处理状态', state.variant.historical_status], ['原人工状态', state.variant.human_status || state.currentCase.human_status], ['用户确认 / 备注', state.variant.human_note || state.currentCase.human_note], ['本次证据', historicalResult(state.variant) ? '历史记录，本次未复跑' : '本次运行记录'], ['对应范围', state.variant.scope_note]]) original.append(newNode('dt', '', label), newNode('dd', '', text(value)));
-      container.append(original);
-      for (const [label, source] of [['打开原基础网格', baseMesh(state.variant)], ['打开实际操作输入网格', operationMesh(state.variant)]]) { const paragraph = newNode('p'); addDetailLink(paragraph, label, source); container.append(paragraph); }
+    if (!state.detailEngine || state.detailEngine === 'input') {
+      if (isOriginal(state)) {
+        const original = newNode('dl');
+        for (const [label, value] of [['集合', COLLECTIONS.original.label], ['原版参数', variant.parameters], ['基础模型', baseMesh(variant)], ['实际操作输入', operationMesh(variant)], ['操作输入说明', variant.operation_note || variant.operation_input?.note], ['原选边 / 选面', { targets: variant.targets, selected_faces: variant.selected_faces }], ['历史处理状态', variant.historical_status], ['原人工状态', variant.human_status || state.currentCase.human_status], ['用户确认 / 备注', variant.human_note || state.currentCase.human_note], ['本次 OCC 证据', historicalResult(variant) ? '历史记录，本次未复跑' : '本次运行记录'], ['对应范围', variant.scope_note]]) original.append(newNode('dt', '', label), newNode('dd', '', text(value)));
+        container.append(original);
+        addModelDownloads(container, 'input');
+        for (const [label, source] of [['打开原基础网格', baseMesh(variant)], ['打开实际操作输入网格', operationMesh(variant)]]) { const paragraph = newNode('p'); addDetailLink(paragraph, label, source); container.append(paragraph); }
+      } else {
+        const input = newNode('p'); addDetailLink(input, '打开实验基础输入网格', variant.input_mesh || variant.occt?.before_mesh || variant.smlib?.before_mesh); container.append(input);
+        container.append(newNode('pre', '', JSON.stringify({ targets: variant.targets, selected_faces: variant.selected_faces }, null, 2)));
+      }
     }
   }
+  if (state.detailTab === 'reproduce' && state.detailEngine === 'input') container.append(newNode('p', '', '基础输入与选边记录见“判据与结果”。各内核的复现命令分别保留在对应的实际结果记录中。'));
   for (const engine of engines) {
-    const result = state.variant[engine] || {};
+    const result = engine === 'smlib' ? smlibResult(variant) : variant[engine] || {};
     const section = newNode('section', 'detail-engine');
-    section.append(newNode('h3', '', engine.toUpperCase() + ' · ' + statusInfo(result).label));
+    section.append(newNode('h3', '', engine.toUpperCase() + ' · ' + statusInfo(result).fullLabel));
     if (state.detailTab === 'reproduce') {
       const record = typeof result.reproduce === 'object' ? result.reproduce : null;
       const command = record?.command || (typeof result.reproduce === 'string' ? result.reproduce : null);
       section.append(newNode('p', '', record?.reason || '在仓库根目录运行。所需内核、许可证与环境见仓库说明。'));
       if (record?.exact_reproducible === false) section.append(newNode('p', '', '历史快照与新运行的产物分开记录；该命令不承诺逐字节重现历史产物。'));
       if (record?.dependencies?.length) section.append(newNode('p', '', '所需环境：' + record.dependencies.join(' · ')));
-      section.append(newNode('pre', '', command || '此变体尚未记录复现命令。'));
+      section.append(newNode('pre', '', command || `此变体尚未记录 ${engine.toUpperCase()} 复现命令。`));
       if (command) { const copy = newNode('button', 'outline-button copy-command', '复制命令'); copy.addEventListener('click', async () => { try { await navigator.clipboard.writeText(command); toast('复现命令已复制。'); } catch { toast('无法访问剪贴板，请选择命令文本复制。'); } }); section.append(copy); }
     } else {
       section.append(newNode('p', '', text(result.reason || result.summary, '暂无完整验证说明。')));
       const dl = newNode('dl');
-      for (const [label, value] of [['内核版本', result.version], ['构建方法', result.method], ['输入表示', result.input_representation || result.representation], ['网格', result.mesh ? '有实际网格输出' : '未提供'], ['结果类别', result.outcome], ['证据来源', result.evidence_kind]]) dl.append(newNode('dt', '', label), newNode('dd', '', text(value)));
+      for (const [label, value] of [['内核版本', result.version], ['构建方法', result.method_label || result.method], ['输入表示', result.input_representation || result.representation], ['网格', result.mesh ? '有实际网格产物；验收状态另列' : '未提供实际产物'], ['结果类别', result.outcome], ['证据来源', result.evidence_kind], ...(engine === 'smlib' ? [['对应状态', `${smlibPairingLabel(variant)} (${text(result.pairing_status)})`], ['SMLib 输入网格', result.before_mesh]] : [])]) dl.append(newNode('dt', '', label), newNode('dd', '', text(value)));
       for (const [key, value] of Object.entries(result.metrics || {})) dl.append(newNode('dt', '', key), newNode('dd', '', text(value)));
       section.append(dl);
+      addModelDownloads(section, engine);
       if (result.criteria || result.validation || result.checks) section.append(newNode('pre', '', JSON.stringify(result.criteria || result.validation || result.checks, null, 2)));
-      if (isOriginal(state)) {
-        for (const [label, record] of [['输入关系与预处理', { relation: inputRelation(state.variant), note: state.variant.operation_relation_note, preprocess: result.preprocess }], ['实际处理步骤', state.variant.processing_steps || result.processing_steps]]) {
+      if (isOriginal(state) && engine === 'occt') {
+        for (const [label, record] of [['输入关系与预处理', { relation: inputRelation(variant), note: variant.operation_relation_note, preprocess: result.preprocess }], ['实际处理步骤', variant.processing_steps || result.processing_steps]]) {
           if (!record) continue;
           const disclosure = newNode('details', 'processing-record'); disclosure.append(newNode('summary', '', label), newNode('pre', '', JSON.stringify(record, null, 2))); section.append(disclosure);
         }
       }
-      for (const [label, path] of [['打开网格 JSON', result.mesh], ['打开日志', result.log || result.log_path], ['打开结果记录', result.summary || result.report]]) { if (path) { const p = newNode('p'); addDetailLink(p, label, path); section.append(p); } }
+      for (const [label, path] of [['打开网格 JSON', result.mesh], ['打开日志', result.log || result.log_path], ['打开结果记录', result.report || result.summary_path]]) { if (path) { const paragraph = newNode('p'); addDetailLink(paragraph, label, path); section.append(paragraph); } }
     }
     container.append(section);
   }
@@ -791,7 +824,7 @@ function wireUI() {
   $('#mobileMenu').addEventListener('click', () => $('.sidebar').classList.toggle('is-open')); $('#mobileClose').addEventListener('click', () => $('.sidebar').classList.remove('is-open'));
   $('#beforeToggle').addEventListener('change', () => { if (state.variant) renderModels(++state.token); });
   $('#resetView').addEventListener('click', () => Object.values(state.viewers).forEach((viewer) => viewer.reset()));
-  $('#syncToggle').addEventListener('change', () => { const viewers = Object.values(state.viewers).filter((viewer) => viewer.hasMesh); if ($('#syncToggle').checked && viewers.length === 2) viewers[1].copyCamera(viewers[0]); });
+  $('#syncToggle').addEventListener('change', () => { const viewers = Object.values(state.viewers).filter((viewer) => viewer.hasMesh); if ($('#syncToggle').checked && viewers.length > 1) for (const viewer of viewers.slice(1)) viewer.copyCamera(viewers[0]); });
   $$('.expand-button').forEach((button) => button.addEventListener('click', () => expandCard(button.dataset.expand))); $('#expandBackdrop').addEventListener('click', () => expandCard(null));
   $('#referenceStage').addEventListener('dblclick', () => { if (!$('#referenceImageWrap').hidden) expandCard('referenceCard'); });
   $('#importReference').addEventListener('click', () => $('#referenceFile').click());

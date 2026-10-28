@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "audit_sha256": "a0104530b67e264cb6d3254fdfc178e3c5c4d5658371b6fb68d9bca5df75a758",
+  "count": 15,
+  "rows": [
+    {
+      "number": 1,
+      "variant_id": "part01-r12",
+      "job_id": "original.01.part01-r12.smlib",
+      "source_template_job_id": "01.part01.ordinary_challenge.r16",
+      "request_path": "data/original-smlib/jobs/original.01.part01-r12.smlib.json",
+      "source_sha256": "004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1",
+      "radius_mm": 12.0,
+      "template_radius_mm": 16,
+      "original_case_file_sha256": "0c8f34e0203f02661b74cd1e82121be2210ba6e4a9bf4b0fea8bf48a8c8486a6",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 3,
+      "variant_id": "part01-r1",
+      "job_id": "original.03.part01-r1.smlib",
+      "source_template_job_id": "03.part01.ordinary_challenge.r6",
+      "request_path": "data/original-smlib/jobs/original.03.part01-r1.smlib.json",
+      "source_sha256": "e3dec607825184ad85039dda67fbad89c98f77d787804b3b062b847a0c54327e",
+      "radius_mm": 1.0,
+      "template_radius_mm": 6,
+      "original_case_file_sha256": "441c4a984705faf3994e614e8094ce238196a19d0a47b9a2777f0047d7e982c5",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 4,
+      "variant_id": "part01-r1",
+      "job_id": "original.04.part01-r1.smlib",
+      "source_template_job_id": "04.part01.ordinary_challenge.r4",
+      "request_path": "data/original-smlib/jobs/original.04.part01-r1.smlib.json",
+      "source_sha256": "adff5e16987b40e92b73921037876a172d354c52f8309088485e4f78d9111423",
+      "radius_mm": 1.0,
+      "template_radius_mm": 4,
+      "original_case_file_sha256": "40f44eb7468ca8cdf25fb472bc5f981c58773cbd062354cce9e57a05286010ec",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 4,
+      "variant_id": "part03-r1",
+      "job_id": "original.04.part03-r1.smlib",
+      "source_template_job_id": "04.part03.ordinary_challenge.r5",
+      "request_path": "data/original-smlib/jobs/original.04.part03-r1.smlib.json",
+      "source_sha256": "adff5e16987b40e92b73921037876a172d354c52f8309088485e4f78d9111423",
+      "radius_mm": 1.0,
+      "template_radius_mm": 5,
+      "original_case_file_sha256": "40f44eb7468ca8cdf25fb472bc5f981c58773cbd062354cce9e57a05286010ec",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 5,
+      "variant_id": "part01-r1",
+      "job_id": "original.05.part01-r1.smlib",
+      "source_template_job_id": "05.part01.ordinary_challenge.r5",
+      "request_path": "data/original-smlib/jobs/original.05.part01-r1.smlib.json",
+      "source_sha256": "62ac0244bce0ad15aaf2ff87d796676a1ca8d23fc809e3ad55036656dd99ab92",
+      "radius_mm": 1.0,
+      "template_radius_mm": 5,
+      "original_case_file_sha256": "feca45d3c8f67cebce50bfe70775bdd05b7f0e094841b0aed426682aef9abc39",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 6,
+      "variant_id": "part01-r8",
+      "job_id": "original.06.part01-r8.smlib",
+      "source_template_job_id": "06.part01.ordinary_challenge.r12",
+      "request_path": "data/original-smlib/jobs/original.06.part01-r8.smlib.json",
+      "source_sha256": "3c9bd03dac7c5d611f795f6309001a91d7ba2c1b63f8e9bb403d25be88bf9c53",
+      "radius_mm": 8.0,
+      "template_radius_mm": 12,
+      "original_case_file_sha256": "a6a3c408982f5fd6f1659f36aa9140e3cbd0ba7a0dc1a024795a40ccf8ef2a29",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 9,
+      "variant_id": "part01-r5",
+      "job_id": "original.09.part01-r5.smlib",
+      "source_template_job_id": "09.part01.ordinary_challenge.r8",
+      "request_path": "data/original-smlib/jobs/original.09.part01-r5.smlib.json",
+      "source_sha256": "eb5cf4637088c3b088214133d3b5fdfa747a6e0e3318c4058b96344038be919a",
+      "radius_mm": 5.0,
+      "template_radius_mm": 8,
+      "original_case_file_sha256": "d17a8987b19a2c7f7b09d6344127358a094dd5eb4b8012ff32f09f319e30563d",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 9,
+      "variant_id": "part02-r5",
+      "job_id": "original.09.part02-r5.smlib",
+      "source_template_job_id": "09.part02.ordinary_challenge.r8",
+      "request_path": "data/original-smlib/jobs/original.09.part02-r5.smlib.json",
+      "source_sha256": "eb5cf4637088c3b088214133d3b5fdfa747a6e0e3318c4058b96344038be919a",
+      "radius_mm": 5.0,
+      "template_radius_mm": 8,
+      "original_case_file_sha256": "d17a8987b19a2c7f7b09d6344127358a094dd5eb4b8012ff32f09f319e30563d",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 10,
+      "variant_id": "part01-r1",
+      "job_id": "original.10.part01-r1.smlib",
+      "source_template_job_id": "10.part01.ordinary_challenge.r6",
+      "request_path": "data/original-smlib/jobs/original.10.part01-r1.smlib.json",
+      "source_sha256": "98ddb76f576d876a5ef6070c58273037adcf558918433a598b14d76630f2bd64",
+      "radius_mm": 1.0,
+      "template_radius_mm": 6,
+      "original_case_file_sha256": "15738fddda36bc34479be9045785e6accd1bd332a82e8a9525e3a209b3501dc8",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 11,
+      "variant_id": "part01-r3",
+      "job_id": "original.11.part01-r3.smlib",
+      "source_template_job_id": "11.part01.ordinary_challenge.r14",
+      "request_path": "data/original-smlib/jobs/original.11.part01-r3.smlib.json",
+      "source_sha256": "9959f6889063c0ee1107e6ac5185035cba9dd48ba5b843679888baa3258ec7a8",
+      "radius_mm": 3.0,
+      "template_radius_mm": 14,
+      "original_case_file_sha256": "dbef53dd0b50e1b6dbfa9bb1151566e63e6705418932a849b77af1628ce5b1cd",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 13,
+      "variant_id": "part01-r4",
+      "job_id": "original.13.part01-r4.smlib",
+      "source_template_job_id": "13.part01.ordinary_challenge.r6",
+      "request_path": "data/original-smlib/jobs/original.13.part01-r4.smlib.json",
+      "source_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+      "radius_mm": 4.0,
+      "template_radius_mm": 6,
+      "original_case_file_sha256": "ef4ef2d7f82076f93de737339c56253b65b568bdab3aeb346c26f2326d97b1ee",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 13,
+      "variant_id": "part01-r2",
+      "job_id": "original.13.part01-r2.smlib",
+      "source_template_job_id": "13.part01.ordinary_challenge.r6",
+      "request_path": "data/original-smlib/jobs/original.13.part01-r2.smlib.json",
+      "source_sha256": "6bc86bc6493cac781d0ecba194e4de4a1eda367e1bfee96fc0ad513fc33e3fdc",
+      "radius_mm": 2.0,
+      "template_radius_mm": 6,
+      "original_case_file_sha256": "ef4ef2d7f82076f93de737339c56253b65b568bdab3aeb346c26f2326d97b1ee",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 14,
+      "variant_id": "part01-r3",
+      "job_id": "original.14.part01-r3.smlib",
+      "source_template_job_id": "14.part01.ordinary_challenge.r12",
+      "request_path": "data/original-smlib/jobs/original.14.part01-r3.smlib.json",
+      "source_sha256": "fbb1db106e7fa0074b9322943bc4c5b5b7c4a1a48d69106422f6246cb08be951",
+      "radius_mm": 3.0,
+      "template_radius_mm": 12,
+      "original_case_file_sha256": "45e0b68f0ffaaa1fe8f5744d165cd42799af8ad5349e495916001debfb78a632",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 15,
+      "variant_id": "part01-r1",
+      "job_id": "original.15.part01-r1.smlib",
+      "source_template_job_id": "15.part01.ordinary_challenge.r3",
+      "request_path": "data/original-smlib/jobs/original.15.part01-r1.smlib.json",
+      "source_sha256": "c49f4ffce5bd35841a556ee1697c604e832aa4614e0083598dc6a2f4591a8087",
+      "radius_mm": 1.0,
+      "template_radius_mm": 3,
+      "original_case_file_sha256": "17b55ba993139d3500b801336a24287c0219c37c97db78b1915363ec3ccd8786",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    },
+    {
+      "number": 25,
+      "variant_id": "native-r12",
+      "job_id": "original.25.native-r12.smlib",
+      "source_template_job_id": "25.part01.ordinary_challenge.r10",
+      "request_path": "data/original-smlib/jobs/original.25.native-r12.smlib.json",
+      "source_sha256": "9b6724769a84ae8db23755133b5a02fab4f8d08c57a8713712e25f9bbe106f2c",
+      "radius_mm": 12.0,
+      "template_radius_mm": 10,
+      "original_case_file_sha256": "25e70b01db5509514990e154ae6be2cdf3077c95d5f65bb5f2c531d0a0830f2e",
+      "checks": {
+        "template_sha256": true,
+        "same_input_part_targets_and_options": true,
+        "radius_is_only_operation_parameter_change": true
+      },
+      "pairing_status": "matched_constraints_different_representation"
+    }
+  ]
+}

@@ -66,5 +66,23 @@ export function originalDisplay(variant, stage = 'base') {
   return [
     { engine: 'occt', source: stage === 'operation' ? input : baseMesh(variant), ...selectionFor(variant, stage), label: stage === 'operation' ? '实际操作输入' : '原版基础模型', reason: stage === 'operation' ? '未提供实际操作输入网格。' : '未提供原版基础模型网格；不会使用衍生输入代替。' },
     { engine: 'smlib', source: output, ...(!result.mesh ? selectionFor(variant, 'operation') : { targets: [], faces: [] }), label: originalResultLabel(variant), reason: result.reason || result.summary || '没有实际 OCC 输出；原目标与参数保持不变。' },
+    { engine: 'smlibFourth', source: smlibResult(variant).mesh, targets: [], faces: [], label: smlibResultLabel(variant), reason: smlibResult(variant).reason || smlibResult(variant).summary || '尚无对应 SMLib 实际产物。' },
   ];
+}
+
+// The SDK column never falls back to an OCC result or to an input mesh.
+export function smlibResult(variant) {
+  return variant.smlib || { status: 'missing', label: '尚无对应 SMLib 结果', reason: '尚未记录与本案例输入、选边、半径和处理方法对应的 SMLib 实际产物。', pairing_status: 'unmatched' };
+}
+export function smlibPairingLabel(variant) {
+  const pairing = smlibResult(variant).pairing_status;
+  return pairing === 'matched' ? '输入、选边、半径与方法已匹配' : pairing === 'matched_constraints_different_representation' ? '同源输入与目标参数 · 内核表示不同' : '对应关系未完整确认';
+}
+export function smlibResultLabel(variant) {
+  const result = smlibResult(variant);
+  if (!result.mesh) return result.label || '尚无对应 SMLib 实际产物';
+  const failed = /fail|invalid|error|crash|reject|self_intersect/.test(String(result.status || '').toLowerCase()) || result.api_success === false;
+  const pairing = result.pairing_status === 'matched' ? '同输入与参数' : result.pairing_status === 'matched_constraints_different_representation' ? '同参 · 表示不同' : '匹配未确认';
+  const provenance = result.evidence_kind === 'matched_existing_run' ? '已实跑记录' : '实际产物';
+  return failed ? `SMLib ${provenance} · 失败候选 · ${pairing}` : `SMLib ${provenance} · ${pairing}`;
 }
