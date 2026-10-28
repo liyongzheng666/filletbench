@@ -19,4 +19,7 @@ class Case08LargeRadiusTests(unittest.TestCase):
         self.assertEqual(v['processing_steps'][0]['parameters']['radius_mm'],15)
         self.assertFalse(v['processing_steps'][0]['api_success'])
         self.assertEqual(v['historical_status'],'new_requested_radius_validation')
+        frozen=json.loads((ROOT/'data/original-occ/cases/08.json').read_text())
+        self.assertEqual(v['human_note'],frozen['human_note'])
+        self.assertNotEqual(v['human_status'],'confirmed')
 if __name__=='__main__':unittest.main()
