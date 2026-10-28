@@ -416,8 +416,9 @@ async function renderModels(token) {
       empty.hidden = true;
       $('.model-view-label', stage).hidden = false;
       const auxiliary = entry.targets?.some((target) => target.target_kind === 'auxiliary_guide');
-      const edgeCount = entry.targets?.filter((target) => target.target_kind !== 'auxiliary_guide' && target.target_kind !== 'selected_face').length || 0;
-      const selectionLabel = entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : auxiliary ? '虚线为理论辅助位置' : '';
+      const witnessCount = entry.targets?.filter((target) => target.target_kind === 'result_witness').length || 0;
+      const edgeCount = entry.targets?.filter((target) => !['auxiliary_guide','selected_face','result_witness'].includes(target.target_kind)).length || 0;
+      const selectionLabel = entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : [witnessCount ? '绿色为实际自由边' : '', auxiliary ? '虚线为原位置辅助' : ''].filter(Boolean).join(' · ');
       $('.model-label-text', stage).textContent = entry.label + (selectionLabel ? ' · ' + selectionLabel : '');
       $('.model-hint', stage).hidden = false;
     } catch (error) {
@@ -499,11 +500,11 @@ class MeshViewer {
       if (points.length < 2) continue;
       const targetGeometry = new THREE.BufferGeometry().setFromPoints(points.map((point) => new THREE.Vector3(...point)));
       const auxiliary = target.target_kind === 'auxiliary_guide';
-      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : 0xe52d45, transparent: true, opacity: 1, depthTest: false, depthWrite: false, linewidth: 2 });
+      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, transparent: true, opacity: 1, depthTest: false, depthWrite: false, linewidth: 2 });
       const line = new THREE.Line(targetGeometry, targetMaterial); if (auxiliary) line.computeLineDistances(); line.renderOrder = 4; this.group.add(line);
       if (!auxiliary) {
         const ends = new THREE.BufferGeometry().setFromPoints([points[0], points[points.length - 1]].map((point) => new THREE.Vector3(...point)));
-        const dots = new THREE.Points(ends, new THREE.PointsMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : 0xe52d45, size: 3.5, sizeAttenuation: false, transparent: true, opacity: 1, depthTest: false, depthWrite: false })); dots.renderOrder = 5; this.group.add(dots);
+        const dots = new THREE.Points(ends, new THREE.PointsMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, size: 3.5, sizeAttenuation: false, transparent: true, opacity: 1, depthTest: false, depthWrite: false })); dots.renderOrder = 5; this.group.add(dots);
       }
     }
     for (const selected of Array.isArray(selectedFaces) ? selectedFaces : []) {

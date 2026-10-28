@@ -66,7 +66,7 @@ export function originalDisplay(variant, stage = 'base') {
   return [
     { engine: 'occt', source: stage === 'operation' ? input : baseMesh(variant), ...selectionFor(variant, stage), label: stage === 'operation' ? '实际操作输入' : '原版基础模型', reason: stage === 'operation' ? '未提供实际操作输入网格。' : '未提供原版基础模型网格；不会使用衍生输入代替。' },
     { engine: 'smlib', source: output, ...(!result.mesh ? selectionFor(variant, 'operation') : { targets: [], faces: [] }), label: originalResultLabel(variant), reason: result.reason || result.summary || '没有实际 OCC 输出；原目标与参数保持不变。' },
-    { engine: 'smlibFourth', source: smlibResult(variant).mesh, targets: [], faces: [], label: smlibResultLabel(variant), reason: smlibResult(variant).reason || smlibResult(variant).summary || '尚无对应 SMLib 实际产物。' },
+    { engine: 'smlibFourth', source: smlibResult(variant).mesh, targets: smlibResult(variant).result_witnesses || [], faces: [], label: smlibResultLabel(variant), reason: smlibResult(variant).reason || smlibResult(variant).summary || '尚无对应 SMLib 实际产物。' },
   ];
 }
 

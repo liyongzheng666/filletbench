@@ -44,6 +44,15 @@ jobs:
           # Export failures remain observations; native success is not a source feature pass.
           assert s['special_feature_certified'] is False, s
           PY
+      - name: Exercise the requested original case08 R15
+        run: |
+          python bench.py original --case 8 --variant r15-crossing --out runs/ci-case08-r15
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(pathlib.Path('runs/ci-case08-r15/native/08.r15-crossing/summary.json').read_text())
+          assert s['native_call_executed'] is True and s['parameters']['radius_mm']==15, s
+          assert s['source_sha256']=='57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9', s
+          PY
       - name: Confirm a real native call, not a placeholder
         run: |
           python - <<'PY'
@@ -100,6 +109,18 @@ jobs:
           assert s['execution']['native_call_started'] is True, s
           assert s['execution']['radius_mm'] == 12, s
           assert s['source_sha256'] == '004668eef19715982beb4f435dbbedcef5fe02815331f94980e9861142392ea1', s
+          PY
+      - name: Exercise the same-source case08 R15 SMLib request
+        env:
+          SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
+          SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
+        run: |
+          python adapters/smlib/run.py data/case08-radius/smlib-jobs/case08.original.r15.smlib.json --output runs/ci-case08-smlib-r15 || true
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(pathlib.Path('runs/ci-case08-smlib-r15/summary.json').read_text())
+          assert s['input_import']['passed'] is True and s['execution']['native_call_started'] is True, s
+          assert s['execution']['radius_mm']==15, s
           PY
       - name: Confirm an admitted input and actual native call
         run: |

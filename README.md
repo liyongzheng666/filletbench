@@ -27,6 +27,19 @@ python bench.py serve
 
 目前70个原版视图有同约束SMLib证据（55个既有实跑+15个新补半径）；58个协议尚未对齐、1个仅输入辅助项单独标明。原生调用失败、崩溃、无效或未验候选都不伪装成成功。[匹配与复现说明](docs/original-smlib-pairing-audit.md)
 
+## 第08项大半径缺口验证
+
+原版第08项现默认打开 R15，并列出 R12、R13、R14、R15、R18。基础片体与共边A保持不变。R12未触及缺口，R13是临界接触；R15的两库真实结果分开记录：OCC Build失败，无可接受的after；SMLib实测R≈15，缺口自由边从z27移到z25（下移2mm），原生回读一致。绿色线是实际返回的自由边，虚线是原位置辅助。
+
+这是普通圆角的默认裁边结果，未传入preserve_notch专用参数。有效片体、局部接头检查与原图特殊保形/全局质量/人工外观分别验收。原129条冻结记录未改；新增4个半径视图单独登记为用户要求的扩展。
+
+```sh
+python bench.py original --case 8 --variant r15-crossing --out runs/my-case08-r15
+python adapters/smlib/run.py data/case08-radius/smlib-jobs/case08.original.r15.smlib.json --output runs/my-smlib-r15
+```
+
+[独立几何审计](docs/case08-radius-audit.md) · [半径边界协议](data/case08-radius/protocol.json)
+
 ## 按原版实际处理
 
 原版系列保留 **34 组模型、1 个说明项、129 个原有参数/视图**，其中 128 个计算变体已绑定本次真实复跑，1 个仅输入的辅助叶片保持不计算。50 个原页面变体 ID、人工备注、选边/选面及参数顺序完整保留。

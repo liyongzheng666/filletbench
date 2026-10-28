@@ -1,0 +1,1308 @@
+{
+  "schema_version": 1,
+  "suite": "case08_radius_sweep_original_occ_native",
+  "source_review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
+  "source_manifest_sha256": "ac192741467efeb2b7083385ddd1ff29b6ec9317072a0c29c77566593a8896cf",
+  "source_request_file": "adapters/occt/original/requests.json",
+  "source_request_sha256": "e4635fdcbee0753a67313b9183db3180a2ae53ea70b808dc1ca0849d398c82b9",
+  "source_job_id": "08.local-demo",
+  "changed_fields": [
+    "job_id",
+    "original_variant_id",
+    "original_variant_ids",
+    "parameters.radius_mm"
+  ],
+  "case_count": 1,
+  "jobs": [
+    {
+      "job_id": "08.local-demo",
+      "case_number": 8,
+      "case_id": "73-25_preserve_notch-1290",
+      "original_variant_id": "local-demo",
+      "original_variant_ids": [
+        "local-demo"
+      ],
+      "track": "current_original_native",
+      "source_revision": "current_original",
+      "source_brep": "data/original-occ/fixtures/57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9.brep",
+      "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+      "source_labels": [
+        "notched_folded_sheets"
+      ],
+      "part_label": null,
+      "preprocess": {
+        "type": "shell"
+      },
+      "targets": [
+        {
+          "start": [
+            0.0,
+            0.0,
+            40.0
+          ],
+          "end": [
+            100.0,
+            0.0,
+            40.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              40.0
+            ],
+            [
+              3.225806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              6.451612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              9.67741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              12.903225806451612,
+              0.0,
+              40.0
+            ],
+            [
+              16.129032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              19.35483870967742,
+              0.0,
+              40.0
+            ],
+            [
+              22.580645161290324,
+              0.0,
+              40.0
+            ],
+            [
+              25.806451612903224,
+              0.0,
+              40.0
+            ],
+            [
+              29.032258064516128,
+              0.0,
+              40.0
+            ],
+            [
+              32.25806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              35.483870967741936,
+              0.0,
+              40.0
+            ],
+            [
+              38.70967741935484,
+              0.0,
+              40.0
+            ],
+            [
+              41.935483870967744,
+              0.0,
+              40.0
+            ],
+            [
+              45.16129032258065,
+              0.0,
+              40.0
+            ],
+            [
+              48.38709677419355,
+              0.0,
+              40.0
+            ],
+            [
+              51.61290322580645,
+              0.0,
+              40.0
+            ],
+            [
+              54.83870967741935,
+              0.0,
+              40.0
+            ],
+            [
+              58.064516129032256,
+              0.0,
+              40.0
+            ],
+            [
+              61.29032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              64.51612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              67.74193548387096,
+              0.0,
+              40.0
+            ],
+            [
+              70.96774193548387,
+              0.0,
+              40.0
+            ],
+            [
+              74.19354838709677,
+              0.0,
+              40.0
+            ],
+            [
+              77.41935483870968,
+              0.0,
+              40.0
+            ],
+            [
+              80.64516129032258,
+              0.0,
+              40.0
+            ],
+            [
+              83.87096774193549,
+              0.0,
+              40.0
+            ],
+            [
+              87.09677419354838,
+              0.0,
+              40.0
+            ],
+            [
+              90.3225806451613,
+              0.0,
+              40.0
+            ],
+            [
+              93.54838709677419,
+              0.0,
+              40.0
+            ],
+            [
+              96.7741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              100.0,
+              0.0,
+              40.0
+            ]
+          ],
+          "length": 100.0,
+          "curve_type": "GeomAbs_Line",
+          "adjacent_faces_1based": [
+            1,
+            2
+          ]
+        }
+      ],
+      "parameters": {
+        "radius_mode": "constant",
+        "radius_mm": 12.0
+      },
+      "operation_input_brep": null,
+      "operation_input_sha256": null,
+      "historical": {
+        "summary_sha256": "dbebcd047fd47b4c8d29f7e99285beb86bf00ee53a6d0745b53d71a09732c1af",
+        "record": {
+          "radius_mm": 12.0,
+          "operation": "ordinary_3D_edge_fillet_on_sheet_shell",
+          "api": "FreeCAD Part.Shape.makeFillet -> BRepFilletAPI_MakeFillet",
+          "backend": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "input_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+          "input_shape_type": "Shell",
+          "input_faces": 2,
+          "input_solids": 0,
+          "target_edge_length": 100.0,
+          "preserve_notch_option_supplied": false,
+          "preserve_notch_two_modes_verified": false,
+          "status": "returned_result",
+          "valid": true,
+          "output_shape_type": "Compound",
+          "output_shells": 1,
+          "output_faces": 3,
+          "output_solids": 0,
+          "matching_radius_cylinder_faces": 1,
+          "area": 6074.955592153876,
+          "area_changed": true,
+          "plane_blend_join_normal_angles_degrees": [
+            0.0,
+            0.0
+          ],
+          "primitive_success": true,
+          "step_roundtrip": {
+            "valid": true,
+            "solids": 0,
+            "faces": 3,
+            "area_difference": 0.0
+          },
+          "elapsed_seconds_diagnostic": 0.025943250002455898
+        }
+      },
+      "scope_note": "Original manual-review native control; source special semantics and appearance remain unverified."
+    },
+    {
+      "job_id": "08.r13-contact",
+      "case_number": 8,
+      "case_id": "73-25_preserve_notch-1290",
+      "original_variant_id": "r13-contact",
+      "original_variant_ids": [
+        "r13-contact"
+      ],
+      "track": "current_original_native",
+      "source_revision": "current_original",
+      "source_brep": "data/original-occ/fixtures/57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9.brep",
+      "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+      "source_labels": [
+        "notched_folded_sheets"
+      ],
+      "part_label": null,
+      "preprocess": {
+        "type": "shell"
+      },
+      "targets": [
+        {
+          "start": [
+            0.0,
+            0.0,
+            40.0
+          ],
+          "end": [
+            100.0,
+            0.0,
+            40.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              40.0
+            ],
+            [
+              3.225806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              6.451612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              9.67741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              12.903225806451612,
+              0.0,
+              40.0
+            ],
+            [
+              16.129032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              19.35483870967742,
+              0.0,
+              40.0
+            ],
+            [
+              22.580645161290324,
+              0.0,
+              40.0
+            ],
+            [
+              25.806451612903224,
+              0.0,
+              40.0
+            ],
+            [
+              29.032258064516128,
+              0.0,
+              40.0
+            ],
+            [
+              32.25806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              35.483870967741936,
+              0.0,
+              40.0
+            ],
+            [
+              38.70967741935484,
+              0.0,
+              40.0
+            ],
+            [
+              41.935483870967744,
+              0.0,
+              40.0
+            ],
+            [
+              45.16129032258065,
+              0.0,
+              40.0
+            ],
+            [
+              48.38709677419355,
+              0.0,
+              40.0
+            ],
+            [
+              51.61290322580645,
+              0.0,
+              40.0
+            ],
+            [
+              54.83870967741935,
+              0.0,
+              40.0
+            ],
+            [
+              58.064516129032256,
+              0.0,
+              40.0
+            ],
+            [
+              61.29032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              64.51612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              67.74193548387096,
+              0.0,
+              40.0
+            ],
+            [
+              70.96774193548387,
+              0.0,
+              40.0
+            ],
+            [
+              74.19354838709677,
+              0.0,
+              40.0
+            ],
+            [
+              77.41935483870968,
+              0.0,
+              40.0
+            ],
+            [
+              80.64516129032258,
+              0.0,
+              40.0
+            ],
+            [
+              83.87096774193549,
+              0.0,
+              40.0
+            ],
+            [
+              87.09677419354838,
+              0.0,
+              40.0
+            ],
+            [
+              90.3225806451613,
+              0.0,
+              40.0
+            ],
+            [
+              93.54838709677419,
+              0.0,
+              40.0
+            ],
+            [
+              96.7741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              100.0,
+              0.0,
+              40.0
+            ]
+          ],
+          "length": 100.0,
+          "curve_type": "GeomAbs_Line",
+          "adjacent_faces_1based": [
+            1,
+            2
+          ]
+        }
+      ],
+      "parameters": {
+        "radius_mode": "constant",
+        "radius_mm": 13.0
+      },
+      "operation_input_brep": null,
+      "operation_input_sha256": null,
+      "historical": {
+        "summary_sha256": "dbebcd047fd47b4c8d29f7e99285beb86bf00ee53a6d0745b53d71a09732c1af",
+        "record": {
+          "radius_mm": 12.0,
+          "operation": "ordinary_3D_edge_fillet_on_sheet_shell",
+          "api": "FreeCAD Part.Shape.makeFillet -> BRepFilletAPI_MakeFillet",
+          "backend": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "input_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+          "input_shape_type": "Shell",
+          "input_faces": 2,
+          "input_solids": 0,
+          "target_edge_length": 100.0,
+          "preserve_notch_option_supplied": false,
+          "preserve_notch_two_modes_verified": false,
+          "status": "returned_result",
+          "valid": true,
+          "output_shape_type": "Compound",
+          "output_shells": 1,
+          "output_faces": 3,
+          "output_solids": 0,
+          "matching_radius_cylinder_faces": 1,
+          "area": 6074.955592153876,
+          "area_changed": true,
+          "plane_blend_join_normal_angles_degrees": [
+            0.0,
+            0.0
+          ],
+          "primitive_success": true,
+          "step_roundtrip": {
+            "valid": true,
+            "solids": 0,
+            "faces": 3,
+            "area_difference": 0.0
+          },
+          "elapsed_seconds_diagnostic": 0.025943250002455898
+        }
+      },
+      "scope_note": "Original manual-review native control; source special semantics and appearance remain unverified."
+    },
+    {
+      "job_id": "08.r14-crossing",
+      "case_number": 8,
+      "case_id": "73-25_preserve_notch-1290",
+      "original_variant_id": "r14-crossing",
+      "original_variant_ids": [
+        "r14-crossing"
+      ],
+      "track": "current_original_native",
+      "source_revision": "current_original",
+      "source_brep": "data/original-occ/fixtures/57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9.brep",
+      "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+      "source_labels": [
+        "notched_folded_sheets"
+      ],
+      "part_label": null,
+      "preprocess": {
+        "type": "shell"
+      },
+      "targets": [
+        {
+          "start": [
+            0.0,
+            0.0,
+            40.0
+          ],
+          "end": [
+            100.0,
+            0.0,
+            40.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              40.0
+            ],
+            [
+              3.225806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              6.451612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              9.67741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              12.903225806451612,
+              0.0,
+              40.0
+            ],
+            [
+              16.129032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              19.35483870967742,
+              0.0,
+              40.0
+            ],
+            [
+              22.580645161290324,
+              0.0,
+              40.0
+            ],
+            [
+              25.806451612903224,
+              0.0,
+              40.0
+            ],
+            [
+              29.032258064516128,
+              0.0,
+              40.0
+            ],
+            [
+              32.25806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              35.483870967741936,
+              0.0,
+              40.0
+            ],
+            [
+              38.70967741935484,
+              0.0,
+              40.0
+            ],
+            [
+              41.935483870967744,
+              0.0,
+              40.0
+            ],
+            [
+              45.16129032258065,
+              0.0,
+              40.0
+            ],
+            [
+              48.38709677419355,
+              0.0,
+              40.0
+            ],
+            [
+              51.61290322580645,
+              0.0,
+              40.0
+            ],
+            [
+              54.83870967741935,
+              0.0,
+              40.0
+            ],
+            [
+              58.064516129032256,
+              0.0,
+              40.0
+            ],
+            [
+              61.29032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              64.51612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              67.74193548387096,
+              0.0,
+              40.0
+            ],
+            [
+              70.96774193548387,
+              0.0,
+              40.0
+            ],
+            [
+              74.19354838709677,
+              0.0,
+              40.0
+            ],
+            [
+              77.41935483870968,
+              0.0,
+              40.0
+            ],
+            [
+              80.64516129032258,
+              0.0,
+              40.0
+            ],
+            [
+              83.87096774193549,
+              0.0,
+              40.0
+            ],
+            [
+              87.09677419354838,
+              0.0,
+              40.0
+            ],
+            [
+              90.3225806451613,
+              0.0,
+              40.0
+            ],
+            [
+              93.54838709677419,
+              0.0,
+              40.0
+            ],
+            [
+              96.7741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              100.0,
+              0.0,
+              40.0
+            ]
+          ],
+          "length": 100.0,
+          "curve_type": "GeomAbs_Line",
+          "adjacent_faces_1based": [
+            1,
+            2
+          ]
+        }
+      ],
+      "parameters": {
+        "radius_mode": "constant",
+        "radius_mm": 14.0
+      },
+      "operation_input_brep": null,
+      "operation_input_sha256": null,
+      "historical": {
+        "summary_sha256": "dbebcd047fd47b4c8d29f7e99285beb86bf00ee53a6d0745b53d71a09732c1af",
+        "record": {
+          "radius_mm": 12.0,
+          "operation": "ordinary_3D_edge_fillet_on_sheet_shell",
+          "api": "FreeCAD Part.Shape.makeFillet -> BRepFilletAPI_MakeFillet",
+          "backend": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "input_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+          "input_shape_type": "Shell",
+          "input_faces": 2,
+          "input_solids": 0,
+          "target_edge_length": 100.0,
+          "preserve_notch_option_supplied": false,
+          "preserve_notch_two_modes_verified": false,
+          "status": "returned_result",
+          "valid": true,
+          "output_shape_type": "Compound",
+          "output_shells": 1,
+          "output_faces": 3,
+          "output_solids": 0,
+          "matching_radius_cylinder_faces": 1,
+          "area": 6074.955592153876,
+          "area_changed": true,
+          "plane_blend_join_normal_angles_degrees": [
+            0.0,
+            0.0
+          ],
+          "primitive_success": true,
+          "step_roundtrip": {
+            "valid": true,
+            "solids": 0,
+            "faces": 3,
+            "area_difference": 0.0
+          },
+          "elapsed_seconds_diagnostic": 0.025943250002455898
+        }
+      },
+      "scope_note": "Original manual-review native control; source special semantics and appearance remain unverified."
+    },
+    {
+      "job_id": "08.r15-crossing",
+      "case_number": 8,
+      "case_id": "73-25_preserve_notch-1290",
+      "original_variant_id": "r15-crossing",
+      "original_variant_ids": [
+        "r15-crossing"
+      ],
+      "track": "current_original_native",
+      "source_revision": "current_original",
+      "source_brep": "data/original-occ/fixtures/57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9.brep",
+      "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+      "source_labels": [
+        "notched_folded_sheets"
+      ],
+      "part_label": null,
+      "preprocess": {
+        "type": "shell"
+      },
+      "targets": [
+        {
+          "start": [
+            0.0,
+            0.0,
+            40.0
+          ],
+          "end": [
+            100.0,
+            0.0,
+            40.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              40.0
+            ],
+            [
+              3.225806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              6.451612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              9.67741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              12.903225806451612,
+              0.0,
+              40.0
+            ],
+            [
+              16.129032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              19.35483870967742,
+              0.0,
+              40.0
+            ],
+            [
+              22.580645161290324,
+              0.0,
+              40.0
+            ],
+            [
+              25.806451612903224,
+              0.0,
+              40.0
+            ],
+            [
+              29.032258064516128,
+              0.0,
+              40.0
+            ],
+            [
+              32.25806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              35.483870967741936,
+              0.0,
+              40.0
+            ],
+            [
+              38.70967741935484,
+              0.0,
+              40.0
+            ],
+            [
+              41.935483870967744,
+              0.0,
+              40.0
+            ],
+            [
+              45.16129032258065,
+              0.0,
+              40.0
+            ],
+            [
+              48.38709677419355,
+              0.0,
+              40.0
+            ],
+            [
+              51.61290322580645,
+              0.0,
+              40.0
+            ],
+            [
+              54.83870967741935,
+              0.0,
+              40.0
+            ],
+            [
+              58.064516129032256,
+              0.0,
+              40.0
+            ],
+            [
+              61.29032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              64.51612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              67.74193548387096,
+              0.0,
+              40.0
+            ],
+            [
+              70.96774193548387,
+              0.0,
+              40.0
+            ],
+            [
+              74.19354838709677,
+              0.0,
+              40.0
+            ],
+            [
+              77.41935483870968,
+              0.0,
+              40.0
+            ],
+            [
+              80.64516129032258,
+              0.0,
+              40.0
+            ],
+            [
+              83.87096774193549,
+              0.0,
+              40.0
+            ],
+            [
+              87.09677419354838,
+              0.0,
+              40.0
+            ],
+            [
+              90.3225806451613,
+              0.0,
+              40.0
+            ],
+            [
+              93.54838709677419,
+              0.0,
+              40.0
+            ],
+            [
+              96.7741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              100.0,
+              0.0,
+              40.0
+            ]
+          ],
+          "length": 100.0,
+          "curve_type": "GeomAbs_Line",
+          "adjacent_faces_1based": [
+            1,
+            2
+          ]
+        }
+      ],
+      "parameters": {
+        "radius_mode": "constant",
+        "radius_mm": 15.0
+      },
+      "operation_input_brep": null,
+      "operation_input_sha256": null,
+      "historical": {
+        "summary_sha256": "dbebcd047fd47b4c8d29f7e99285beb86bf00ee53a6d0745b53d71a09732c1af",
+        "record": {
+          "radius_mm": 12.0,
+          "operation": "ordinary_3D_edge_fillet_on_sheet_shell",
+          "api": "FreeCAD Part.Shape.makeFillet -> BRepFilletAPI_MakeFillet",
+          "backend": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "input_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+          "input_shape_type": "Shell",
+          "input_faces": 2,
+          "input_solids": 0,
+          "target_edge_length": 100.0,
+          "preserve_notch_option_supplied": false,
+          "preserve_notch_two_modes_verified": false,
+          "status": "returned_result",
+          "valid": true,
+          "output_shape_type": "Compound",
+          "output_shells": 1,
+          "output_faces": 3,
+          "output_solids": 0,
+          "matching_radius_cylinder_faces": 1,
+          "area": 6074.955592153876,
+          "area_changed": true,
+          "plane_blend_join_normal_angles_degrees": [
+            0.0,
+            0.0
+          ],
+          "primitive_success": true,
+          "step_roundtrip": {
+            "valid": true,
+            "solids": 0,
+            "faces": 3,
+            "area_difference": 0.0
+          },
+          "elapsed_seconds_diagnostic": 0.025943250002455898
+        }
+      },
+      "scope_note": "Original manual-review native control; source special semantics and appearance remain unverified."
+    },
+    {
+      "job_id": "08.r18-crossing",
+      "case_number": 8,
+      "case_id": "73-25_preserve_notch-1290",
+      "original_variant_id": "r18-crossing",
+      "original_variant_ids": [
+        "r18-crossing"
+      ],
+      "track": "current_original_native",
+      "source_revision": "current_original",
+      "source_brep": "data/original-occ/fixtures/57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9.brep",
+      "source_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+      "source_labels": [
+        "notched_folded_sheets"
+      ],
+      "part_label": null,
+      "preprocess": {
+        "type": "shell"
+      },
+      "targets": [
+        {
+          "start": [
+            0.0,
+            0.0,
+            40.0
+          ],
+          "end": [
+            100.0,
+            0.0,
+            40.0
+          ],
+          "polyline": [
+            [
+              0.0,
+              0.0,
+              40.0
+            ],
+            [
+              3.225806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              6.451612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              9.67741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              12.903225806451612,
+              0.0,
+              40.0
+            ],
+            [
+              16.129032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              19.35483870967742,
+              0.0,
+              40.0
+            ],
+            [
+              22.580645161290324,
+              0.0,
+              40.0
+            ],
+            [
+              25.806451612903224,
+              0.0,
+              40.0
+            ],
+            [
+              29.032258064516128,
+              0.0,
+              40.0
+            ],
+            [
+              32.25806451612903,
+              0.0,
+              40.0
+            ],
+            [
+              35.483870967741936,
+              0.0,
+              40.0
+            ],
+            [
+              38.70967741935484,
+              0.0,
+              40.0
+            ],
+            [
+              41.935483870967744,
+              0.0,
+              40.0
+            ],
+            [
+              45.16129032258065,
+              0.0,
+              40.0
+            ],
+            [
+              48.38709677419355,
+              0.0,
+              40.0
+            ],
+            [
+              51.61290322580645,
+              0.0,
+              40.0
+            ],
+            [
+              54.83870967741935,
+              0.0,
+              40.0
+            ],
+            [
+              58.064516129032256,
+              0.0,
+              40.0
+            ],
+            [
+              61.29032258064516,
+              0.0,
+              40.0
+            ],
+            [
+              64.51612903225806,
+              0.0,
+              40.0
+            ],
+            [
+              67.74193548387096,
+              0.0,
+              40.0
+            ],
+            [
+              70.96774193548387,
+              0.0,
+              40.0
+            ],
+            [
+              74.19354838709677,
+              0.0,
+              40.0
+            ],
+            [
+              77.41935483870968,
+              0.0,
+              40.0
+            ],
+            [
+              80.64516129032258,
+              0.0,
+              40.0
+            ],
+            [
+              83.87096774193549,
+              0.0,
+              40.0
+            ],
+            [
+              87.09677419354838,
+              0.0,
+              40.0
+            ],
+            [
+              90.3225806451613,
+              0.0,
+              40.0
+            ],
+            [
+              93.54838709677419,
+              0.0,
+              40.0
+            ],
+            [
+              96.7741935483871,
+              0.0,
+              40.0
+            ],
+            [
+              100.0,
+              0.0,
+              40.0
+            ]
+          ],
+          "length": 100.0,
+          "curve_type": "GeomAbs_Line",
+          "adjacent_faces_1based": [
+            1,
+            2
+          ]
+        }
+      ],
+      "parameters": {
+        "radius_mode": "constant",
+        "radius_mm": 18.0
+      },
+      "operation_input_brep": null,
+      "operation_input_sha256": null,
+      "historical": {
+        "summary_sha256": "dbebcd047fd47b4c8d29f7e99285beb86bf00ee53a6d0745b53d71a09732c1af",
+        "record": {
+          "radius_mm": 12.0,
+          "operation": "ordinary_3D_edge_fillet_on_sheet_shell",
+          "api": "FreeCAD Part.Shape.makeFillet -> BRepFilletAPI_MakeFillet",
+          "backend": {
+            "FreeCAD": [
+              "1",
+              "2",
+              "0",
+              "46770 (Git)",
+              "git://github.com/liyongzheng666/FreeCAD.git",
+              "2026/05/09 21:28:57",
+              "work/local-occt-integration",
+              "2b7e9a6896bc9b5dc4555c2f6faa9adc0a7caf47"
+            ],
+            "OCCT": "7.8.1"
+          },
+          "input_sha256": "57ea045f7da3735141b7f21f2fbc3e3a51c39933d08a5d7c6e3374e01ab064f9",
+          "input_shape_type": "Shell",
+          "input_faces": 2,
+          "input_solids": 0,
+          "target_edge_length": 100.0,
+          "preserve_notch_option_supplied": false,
+          "preserve_notch_two_modes_verified": false,
+          "status": "returned_result",
+          "valid": true,
+          "output_shape_type": "Compound",
+          "output_shells": 1,
+          "output_faces": 3,
+          "output_solids": 0,
+          "matching_radius_cylinder_faces": 1,
+          "area": 6074.955592153876,
+          "area_changed": true,
+          "plane_blend_join_normal_angles_degrees": [
+            0.0,
+            0.0
+          ],
+          "primitive_success": true,
+          "step_roundtrip": {
+            "valid": true,
+            "solids": 0,
+            "faces": 3,
+            "area_difference": 0.0
+          },
+          "elapsed_seconds_diagnostic": 0.025943250002455898
+        }
+      },
+      "scope_note": "Original manual-review native control; source special semantics and appearance remain unverified."
+    }
+  ]
+}

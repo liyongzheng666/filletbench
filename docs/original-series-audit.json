@@ -1,9 +1,9 @@
 {
   "schema": "filletbench.original-series-independent-audit.v1",
-  "created_at": "2026-10-27T15:06:23.451921+00:00",
+  "created_at": "2026-10-28T15:20:48.977312+00:00",
   "passed": true,
   "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
-  "auditor_sha256": "981fe1e098712402df37be208222c3d87a266cf8b9e56fd9df4917194bd2ea34",
+  "auditor_sha256": "aae330144e42e5c0ee2eebc940d7b060eb3c86ea3b81fe51ba23b08ce214328d",
   "audited_indexes": {
     "data/original-occ/index.json": "5ea5d0a360db9d7f5eadb20cf35a46ef9ede983158c55091c273163a6c85610f",
     "data/original-occ/manifest.json": "4c756674c80956cb59c42257b3bff99e7f8ef4b3e342d25ea3c61fc24139b390",
@@ -123,8 +123,8 @@
     }
   },
   "published": {
-    "computation_variants_with_fresh_summary": 128,
-    "catalog_sha256": "0ba7e82f767c58e0e71e28045f6ec4aba1242b367a7bfeeb81c38e09c195c84e"
+    "computation_variants_with_fresh_summary": 132,
+    "catalog_sha256": "a9ecd82be7639314e38635262e470020e623b43cae259817ebbd33ad6ab79974"
   },
   "public_scan": {
     "scope": "git tracked and nonignored files only; private ignored attempt history remains local",

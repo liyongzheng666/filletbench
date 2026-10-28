@@ -3,7 +3,7 @@
   "passed": true,
   "scope": "Actual requested constraints and evidence identity. Finite NURBS vs analytic BREP representation and global quality remain separate; no full source-feature score.",
   "counts": {
-    "matched_constraints_different_representation": 70,
+    "matched_constraints_different_representation": 74,
     "protocol_not_encoded": 58,
     "not_applicable_input_only": 1
   },
@@ -530,8 +530,8 @@
       "number": 8,
       "variant_id": "local-demo",
       "pairing_status": "matched_constraints_different_representation",
-      "evidence_kind": "matched_existing_run",
-      "source_job_id": "08.part01.ordinary_control.r12",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "case08.original.r12.smlib",
       "checks": {
         "source_case": true,
         "fixture_identity": true,
@@ -541,9 +541,100 @@
         "input_admission": true,
         "no_source_feature_pass": true,
         "mesh_exists": true,
-        "audited_match": true
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
       },
-      "reason": "同源基础几何、同一部件和有限目标、相同所给半径约束；OCCT 解析 BREP 与 SMLib 有限 NURBS 表示不同。 原生普通圆角已有候选；尚未证明原图特殊参数、全局质量和人工外观通过。"
+      "reason": "R12实际圆角距缺口仍有1mm，原缺口z27自由边保留；此对照不验证大半径遭遇缺口。"
+    },
+    {
+      "number": 8,
+      "variant_id": "r13-contact",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "case08.original.r13.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "R13恰在原缺口上缘临界接触；API返回1001，保留的候选与原输入相同，不是成功圆角。"
+    },
+    {
+      "number": 8,
+      "variant_id": "r14-crossing",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "case08.original.r14.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "实际返回4面、0实体的片体；实测R≈14，缺口自由边z=26（原为27），实际下移1mm。原z27缺口顶边已消失；原生回读一致。未验证preserve_notch专用模式。"
+    },
+    {
+      "number": 8,
+      "variant_id": "r15-crossing",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "case08.original.r15.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "实际返回4面、0实体的片体；实测R≈15，缺口自由边z=25（原为27），实际下移2mm。原z27缺口顶边已消失；原生回读一致。未验证preserve_notch专用模式。"
+    },
+    {
+      "number": 8,
+      "variant_id": "r18-crossing",
+      "pairing_status": "matched_constraints_different_representation",
+      "evidence_kind": "fresh_run",
+      "source_job_id": "case08.original.r18.smlib",
+      "checks": {
+        "source_case": true,
+        "fixture_identity": true,
+        "radius": true,
+        "native_call": true,
+        "selection": true,
+        "input_admission": true,
+        "no_source_feature_pass": true,
+        "mesh_exists": true,
+        "template_immutable": true,
+        "radius_only_change": true,
+        "original_radius": true,
+        "case_definition": true
+      },
+      "reason": "实际返回4面、0实体的片体；实测R≈18，缺口自由边z=22（原为27），实际下移5mm。原z27缺口顶边已消失；原生回读一致。未验证preserve_notch专用模式。"
     },
     {
       "number": 9,

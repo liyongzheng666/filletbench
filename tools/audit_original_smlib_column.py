@@ -10,7 +10,7 @@ def main():
   for v in case['variants']:
    sm=v['smlib'];key=(case['number'],v['id']);checks={};kind=sm['pairing_status'];counts[kind]+=1
    if kind.startswith('matched_'):
-    jobid=sm['source_job_id'];jp=ROOT/f'data/original-smlib/jobs/{jobid}.json';new=jp.exists()
+    jobid=sm['source_job_id'];jp=ROOT/sm['request_file'] if sm.get('request_file') else ROOT/f'data/original-smlib/jobs/{jobid}.json';new=jp.exists()
     if not new:jp=ROOT/f'data/jobs/{jobid}.json'
     job=read(jp);summary=read(WEB/sm['summary']);ex=summary.get('execution',{});checks['source_case']=job['source_sha256']==case['source_sha256']==sm['source_sha256']==summary['source_sha256'];checks['fixture_identity']=sha(ROOT/job['source_fixture_json'])==job['source_fixture_sha256']==summary['source_fixture_sha256'];checks['radius']=abs(float(sm['radius_mm'])-float(job['radius_mm']))<1e-12 and abs(float(summary['radius_mm'])-float(job['radius_mm']))<1e-12;checks['native_call']=ex.get('native_call_started') is True;checks['selection']=summary.get('selection_passed') is True;checks['input_admission']=summary.get('input_import',{}).get('passed') is True;checks['no_source_feature_pass']=not sm.get('source_feature_passed')
     if sm.get('mesh'):checks['mesh_exists']=(WEB/sm['mesh']).is_file()

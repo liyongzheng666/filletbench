@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1
+
+- Add original case08 radius-boundary controls R12/13/14/15/18 and default to R15. Keep the frozen original case untouched.
+- Execute both kernels for all five radii. OCC rejects R13 and above; SMLib R15 returns a measured-radius15 sheet with the notch free edge moved down2mm.
+- Keep nominal predictions separate from accepted native results and mark preserve_notch mode unverified.
+- Highlight actual returned free boundaries and preserve public replay artifacts and standalone requests.
+
 ## 0.3.0
 
 - Show PDF, original base/selection, OCC and SMLib in four horizontal columns. Synchronize all three 3D views and keep narrow screens scrollable.

@@ -76,4 +76,7 @@ def main():
   write(cp,case)
  if saved_records:write(saved_file,{'schema_version':1,'bindings':[{'number':n,'variant_id':vid,'record':r} for (n,vid),r in sorted(saved_records.items())]})
  catalog['smlib_pairing']={'counts':dict(counts),'audit_sha256':digest(AUDIT),'policy':'Never substitute another radius, part, finite target or special construction protocol.'};write(WEB/'data/original-occ/catalog.json',catalog);print(json.dumps(dict(counts),ensure_ascii=False))
+ if (ROOT/'data/case08-radius/protocol.json').exists():
+  import publish_case08_radius
+  publish_case08_radius.main()
 if __name__=='__main__':main()

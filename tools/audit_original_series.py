@@ -472,6 +472,14 @@ class Audit:
             bindings.setdefault((row['number'], row['variant_id']), set()).update(e['summary_sha256'] for e in row['executions'])
         for row in self.g2_rows:
             bindings.setdefault((row['number'], row['variant_id']), set()).add(row['summary_sha256'])
+        extension_file=self.repo/'data/case08-radius/protocol.json'
+        if extension_file.exists() and (self.repo/'runs/case08-radius/occt/index.json').exists():
+            extension=read(extension_file)
+            self.require(extension['base_sha256']==self.cases[8]['source_sha256'],'case08_extension_source_changed')
+            for row in read(self.repo/'runs/case08-radius/occt/index.json')['rows']:
+                self.require(row['variant_id'] in extension['variant_ids'] and row['radius_mm'] in extension['radii_mm'],'case08_extension_undeclared_radius')
+                self.require(sha(self.repo/row['summary'])==row['summary_sha256'],'case08_extension_raw_summary_stale')
+                bindings.setdefault((8,row['variant_id']),set()).add(row['summary_sha256'])
         self.require(catalog['source_review_state_sha256'] == self.initial_review_hash, 'published_original_review_source_changed')
         for entry in catalog['cases']:
             n = entry['number']; case = read(self.repo / 'web' / entry['data'])
