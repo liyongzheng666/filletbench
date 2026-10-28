@@ -1,0 +1,58 @@
+{
+  "job_id": "case11-convexity-candidate-v6-r1",
+  "number": 11,
+  "part_label": "new convex shoulder",
+  "role": "isolated_convex_reconstruction_candidate",
+  "source_brep": "data/case11-convexity/candidate-v6.brep",
+  "source_sha256": "db6c6a783a9e19b1a705a6be8677db296592a0d4a72471a2044261e369b51301",
+  "source_fixture_json": "data/case11-convexity/smlib-candidate-v6.fixture.json",
+  "source_fixture_sha256": "2100532a4864f19e1c5405ae1f91000213c4d562f42e1ceddff50f4a2dff3de8",
+  "source_stats": {
+    "valid": true,
+    "shape_type": "Solid",
+    "faces": 28,
+    "edges": 78,
+    "vertices": 52,
+    "solids": 1,
+    "shells": 1,
+    "area": 53152.92687637882,
+    "volume": 91741.28749999996,
+    "bbox": [
+      -21.5,
+      -100.0,
+      -58.0,
+      103.0,
+      0.0,
+      8.881784197001252e-16
+    ]
+  },
+  "component_index": 1,
+  "expected_input_kind": "solid",
+  "radius_mm": 1,
+  "xsect_type": 1,
+  "continuity": 1,
+  "thumbweight": 1,
+  "targets": [
+    {
+      "id": "new-convex-shoulder",
+      "endpoints_world_mm": [
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          50,
+          -60.6,
+          0
+        ]
+      ],
+      "expected_length_mm": 60.6,
+      "expected_count": 1,
+      "selector_tolerance_mm": 1e-06,
+      "coverage_tolerance_mm": 1e-05
+    }
+  ],
+  "source_repair_fa_X_verified": false,
+  "shape_acceptance": false
+}

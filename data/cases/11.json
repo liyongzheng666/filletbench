@@ -48,5 +48,7 @@
   "source_model": "data/models/11.brep",
   "fixture": "data/fixtures/11.json",
   "contract": "data/contracts/11.json",
-  "variants": []
+  "variants": [],
+  "source_quality_warning": "旧版第11项输入凹凸性与原图不符；此处仅保留历史实验。请切换“原版OCC人工核对系列”查看凸性修正版。",
+  "superseded_by": "case11-convex-v6"
 }

@@ -84,5 +84,6 @@ export function smlibResultLabel(variant) {
   const failed = /fail|invalid|error|crash|reject|self_intersect/.test(String(result.status || '').toLowerCase()) || result.api_success === false;
   const pairing = result.pairing_status === 'matched' ? '同输入与参数' : result.pairing_status === 'matched_constraints_different_representation' ? '同参 · 表示不同' : '匹配未确认';
   const provenance = result.evidence_kind === 'matched_existing_run' ? '已实跑记录' : '实际产物';
+  if (failed && result.unchanged_input === true) return 'SMLib 调用失败 · 保留的输入未改变';
   return failed ? `SMLib ${provenance} · 失败候选 · ${pairing}` : `SMLib ${provenance} · ${pairing}`;
 }

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0
+
+- Replace the active case11 concave reconstruction with a versioned Cartesian convex-shoulder solid; keep the frozen original and all old results as superseded history.
+- Verify physical material sectors, outward curvature, manifold topology and STEP readback independently; keep inferred dimensions and human appearance pending.
+- Rerun R1/R3/R6 on both kernels. OCC R1 passes geometric gates; R3/R6 retain invalid self-intersecting candidates. SMLib rejects all three and retains byte-identical inputs.
+- Publish parametric reconstruction, exact exchange fixtures and replay requests; preserve four columns and finite target selection.
+- Respect CAD face boundaries when smoothing mesh normals so planar SDK faces do not appear rounded by viewer shading.
+
 ## 0.3.1
 
 - Add original case08 radius-boundary controls R12/13/14/15/18 and default to R15. Keep the frozen original case untouched.

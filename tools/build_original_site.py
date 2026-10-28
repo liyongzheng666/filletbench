@@ -119,8 +119,22 @@ def historical(v,n):
 def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--suite-run',type=pathlib.Path,help='Output of bench.py original; preserve unrelated published views');args=parser.parse_args()
  suite=args.suite_run.resolve() if args.suite_run else None
+ suite_case11=None
+ suite_metadata={}
+ if suite and (suite/'suite-index.json').exists():
+  suite_metadata=read(suite/'suite-index.json');current=suite_metadata.get('current_case11')
+  if current:
+   import publish_case11_revision
+   suite_case11=(suite/current.get('run_dir','case11-convexity')).resolve()
+   publish_case11_revision.validate_occ_run(suite_case11)
+ if suite and (suite/'case11-convexity/report.json').exists() and suite_case11 is None:
+  raise ValueError('Case11 suite output has no current_case11 manifest binding; refusing to publish an unrelated cached run')
+ if suite_case11 is not None and suite_metadata.get('case')==11 and not suite_metadata.get('all'):
+  publish_case11_revision.main(occ_run=suite_case11);return
  ip=read(SOURCE/'index.json');runs,_=load_runs(suite);cases=[];counts=collections.Counter()
  if not runs and (DEST/'catalog.json').exists():
+  if suite_case11 is not None:
+   publish_case11_revision.main(occ_run=suite_case11);return
   print('No fresh local runs; retaining the published original-series snapshot.');return
  legacy=ROOT.parent/'outputs/parasolid-preblend/manifest.json'
  # Original recipe metadata is optional; each mesh is still made from the
@@ -176,5 +190,8 @@ def main():
  write(DEST/'catalog.json',catalog);print(json.dumps(catalog['counts'],ensure_ascii=False))
  if (ROOT/'docs/original-smlib-pairing-audit.json').exists():
   import attach_original_smlib
-  attach_original_smlib.main()
+  if suite_case11 is not None:
+   with publish_case11_revision.using_occ_run(suite_case11):attach_original_smlib.main()
+  else:attach_original_smlib.main()
+ elif suite_case11 is not None:publish_case11_revision.main(occ_run=suite_case11)
 if __name__=='__main__':main()

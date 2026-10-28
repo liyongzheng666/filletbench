@@ -20,7 +20,9 @@ def from_existing(row,case,view):
  jobid=ids[0];jobpath=ROOT/f'data/jobs/{jobid}.json'
  if not jobpath.is_file():return None
  job=read(jobpath)
- if job['source_sha256']!=case['source_sha256']:raise ValueError('SMLib source does not match the original case')
+ if job['source_sha256']!=case['source_sha256']:
+  if case['number']==11 and case.get('revision',{}).get('contract')=='data/case11-convexity/revision.json':return None
+  raise ValueError('SMLib source does not match the original case')
  original=read(WEB/f'data/cases/{case["number"]:02d}.json')
  source=next((v for v in original['variants'] if v['id']==jobid),None)
  if not source or not source.get('smlib',{}).get('summary'):return None
@@ -64,7 +66,7 @@ def main():
   cp=WEB/c['data'];case=read(cp)
   for v in case['variants']:
    key=(case['number'],v['id']);row=rows.get(key);record=None
-   if key in completed:
+   if key in completed and (not case.get('revision') or completed[key].get('source_sha256')==case['source_sha256']):
     record=from_completion(completed[key],case,v);saved_records[key]=record
    elif key in saved_records:
     candidate=saved_records[key];sp=WEB/candidate['summary']
@@ -79,4 +81,7 @@ def main():
  if (ROOT/'data/case08-radius/protocol.json').exists():
   import publish_case08_radius
   publish_case08_radius.main()
+ if (ROOT/'data/case11-convexity/revision.json').exists():
+  import publish_case11_revision
+  publish_case11_revision.main()
 if __name__=='__main__':main()

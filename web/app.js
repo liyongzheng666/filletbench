@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
-import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js';
+import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.4.0';
+import { faceLocalMesh } from './mesh.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const $ = (selector, parent = document) => parent.querySelector(selector);
@@ -265,6 +266,10 @@ function renderNotice() {
   const variant = state.variant;
   const notice = $('#representationNotice');
   const parts = [];
+  if (state.currentCase.source_quality_warning) parts.push(text(state.currentCase.source_quality_warning));
+  if (isOriginal(state) && state.currentCase.revision) {
+    notice.textContent = 'ⓘ  ' + parts.join('  '); notice.hidden = false; return;
+  }
   if (isOriginal(state)) {
     const relation = inputRelation(variant);
     parts.push(variant.operation_relation_note || (relation === 'derived' ? '原基础与实际操作输入不同：中栏默认保留原基础，可单独查看缝合 / 裁剪 / 延伸后的输入。' : relation === 'part_selection' ? '中栏默认保留原基础总模型，实际操作输入单独显示本次选取的部件。' : relation === 'same_as_base' ? '本次直接使用原版基础几何；着色与网格记录可不同。' : relation === 'recorded_combination_input' ? '操作输入为组合流程入口；内部分割与 Boolean 步骤另见处理记录。' : '原基础与实际操作输入单列保留；具体部件与预处理步骤以操作记录为准。'));
@@ -341,7 +346,7 @@ function renderFindings() {
       ['原版参数 / 基础输入', variantLabel(variant), [originalParameterText(variant), variant.base_note || variant.input_note].filter(Boolean).join(' · ')],
       [originalMethod(variant), failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${historicalResult(variant) ? '历史记录 · 未复跑' : '本次实际处理'} · ${statusInfo(result).fullLabel}`, result.reason || result.summary || '没有完整处理记录。'],
       ['SMLib 对应证据', smlibResultLabel(variant), smlibResult(variant).reason || smlibResult(variant).summary || '对应关系尚未确认；第四栏只显示独立记录的 SMLib 实际产物。'],
-      ['人工核对与验证边界', humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
+      ['人工核对与验证边界', state.currentCase.revision ? '修正版 · 等待人工核对' : humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus && !state.currentCase.revision ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
     ];
     cards.forEach(([label, title, content], index) => { const card = newNode('article', 'finding' + (index === 1 && failedResult(variant) ? ' warn' : '')); const heading = newNode('div', 'finding-label'); heading.append(newNode('span', 'finding-number', index + 1), newNode('span', '', label)); card.append(heading, newNode('h3', '', title), newNode('p', '', text(content))); container.append(card); });
     return;
@@ -419,7 +424,8 @@ async function renderModels(token) {
       const witnessCount = entry.targets?.filter((target) => target.target_kind === 'result_witness').length || 0;
       const edgeCount = entry.targets?.filter((target) => !['auxiliary_guide','selected_face','result_witness'].includes(target.target_kind)).length || 0;
       const selectionLabel = entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : [witnessCount ? '绿色为实际自由边' : '', auxiliary ? '虚线为原位置辅助' : ''].filter(Boolean).join(' · ');
-      $('.model-label-text', stage).textContent = entry.label + (selectionLabel ? ' · ' + selectionLabel : '');
+      const targetLabel = entry.engine === 'occt' && entry.targets?.length === 1 ? entry.targets[0].label : null;
+      $('.model-label-text', stage).textContent = entry.label + (targetLabel ? ' · ' + targetLabel : selectionLabel ? ' · ' + selectionLabel : '');
       $('.model-hint', stage).hidden = false;
     } catch (error) {
       empty.hidden = false;
@@ -466,9 +472,10 @@ class MeshViewer {
   setMesh(mesh, bounds, targets, selectedFaces = [], camera = null) {
     this.clear();
     this.defaultCamera = camera;
-    const vertices = mesh.vertices.flat();
-    const triangles = mesh.triangles.flat();
-    if (vertices.some((value) => !Number.isFinite(value)) || triangles.some((index) => !Number.isInteger(index) || index < 0 || index >= mesh.vertices.length)) throw new Error('网格包含无效坐标或索引。');
+    const faceMesh = faceLocalMesh(mesh);
+    const vertices = faceMesh.vertices.flat();
+    const triangles = faceMesh.triangles.flat();
+    if (vertices.some((value) => !Number.isFinite(value)) || triangles.some((index) => !Number.isInteger(index) || index < 0 || index >= faceMesh.vertices.length)) throw new Error('网格包含无效坐标或索引。');
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
     geometry.setIndex(triangles); geometry.computeVertexNormals();
@@ -523,7 +530,13 @@ class MeshViewer {
     const distance = this.radius * 4;
     const camera = this.defaultCamera;
     this.camera.up.set(0, 0, 1);
-    if (camera) {
+    if (camera?.toward_viewer && camera?.screen_up) {
+      const direction = new THREE.Vector3(...camera.toward_viewer).normalize();
+      const up = new THREE.Vector3(...camera.screen_up).normalize();
+      if (Math.abs(direction.dot(up)) > 1e-6) throw new Error('Camera basis must be orthogonal');
+      this.camera.position.copy(direction.multiplyScalar(distance));
+      this.camera.up.copy(up);
+    } else if (camera) {
       const azimuth = THREE.MathUtils.degToRad(Number(Array.isArray(camera) ? camera[0] : camera.azimuth_deg ?? camera.azimuth ?? -53.5));
       const elevation = THREE.MathUtils.degToRad(Number(Array.isArray(camera) ? camera[1] : camera.elevation_deg ?? camera.elevation ?? 29.2));
       this.camera.position.set(distance * Math.cos(elevation) * Math.cos(azimuth), distance * Math.cos(elevation) * Math.sin(azimuth), distance * Math.sin(elevation));

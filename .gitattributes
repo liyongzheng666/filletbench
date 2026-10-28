@@ -1,0 +1,3 @@
+# Preserve kernel serialization bytes and hash identities across platforms.
+*.brep -text -diff
+*.step -text -diff

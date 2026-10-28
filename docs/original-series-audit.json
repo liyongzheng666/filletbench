@@ -1,9 +1,9 @@
 {
   "schema": "filletbench.original-series-independent-audit.v1",
-  "created_at": "2026-10-28T15:20:48.977312+00:00",
+  "created_at": "2026-10-28T16:57:57.335111+00:00",
   "passed": true,
   "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
-  "auditor_sha256": "aae330144e42e5c0ee2eebc940d7b060eb3c86ea3b81fe51ba23b08ce214328d",
+  "auditor_sha256": "b11175b3457378993b2d04d6c9219eb2220c9f248fd4446f3920274912a6cba6",
   "audited_indexes": {
     "data/original-occ/index.json": "5ea5d0a360db9d7f5eadb20cf35a46ef9ede983158c55091c273163a6c85610f",
     "data/original-occ/manifest.json": "4c756674c80956cb59c42257b3bff99e7f8ef4b3e342d25ea3c61fc24139b390",
@@ -124,7 +124,43 @@
   },
   "published": {
     "computation_variants_with_fresh_summary": 132,
-    "catalog_sha256": "a9ecd82be7639314e38635262e470020e623b43cae259817ebbd33ad6ab79974"
+    "catalog_sha256": "7c86fccafc9645a7363383bdfeefc11b9d7ee83f7c07cc9618cd382d9cbcecdb",
+    "registered_public_revisions": [
+      {
+        "number": 11,
+        "id": "case11-convex-v6",
+        "source_sha256": "db6c6a783a9e19b1a705a6be8677db296592a0d4a72471a2044261e369b51301",
+        "previous_source_sha256": "9959f6889063c0ee1107e6ac5185035cba9dd48ba5b843679888baa3258ec7a8",
+        "geometry_audit": {
+          "path": "data/case11-convexity/geometry-audit.json",
+          "sha256": "e5ba9a2c48eb531f1da3df9b7d44c71a8bcb1479118c176441cf871a10b39c14"
+        },
+        "target_checks": [
+          {
+            "status": "matched",
+            "sample_count": 2,
+            "matching_edge_indices": [
+              6
+            ],
+            "matches": [
+              {
+                "index_1based": 6,
+                "adjacent_faces_1based": [
+                  2,
+                  3
+                ],
+                "length_mm": 60.6,
+                "endpoint_residual_mm": 0.0,
+                "max_finite_sample_residual_mm": 3.94745964311167e-16
+              }
+            ],
+            "claimed_index_1based": null,
+            "claimed_index_matches": null
+          }
+        ]
+      }
+    ],
+    "frozen_originals_independently_preserved": true
   },
   "public_scan": {
     "scope": "git tracked and nonignored files only; private ignored attempt history remains local",

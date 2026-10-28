@@ -25,7 +25,7 @@ python bench.py serve
 
 网页保持 PDF、基础模型与选边、OCC、SMLib 横向四栏；三个3D视图同步旋转与缩放，窄屏横向滚动，各栏可放大。第四栏只显示经过对应关系核对的实际SMLib记录。
 
-目前70个原版视图有同约束SMLib证据（55个既有实跑+15个新补半径）；58个协议尚未对齐、1个仅输入辅助项单独标明。原生调用失败、崩溃、无效或未验候选都不伪装成成功。[匹配与复现说明](docs/original-smlib-pairing-audit.md)
+目前74个原版视图有同约束SMLib证据（包含第08项4个新增半径视图，第11项3档已用修正版重新实跑）；58个协议尚未对齐、1个仅输入辅助项单独标明。原生调用失败、崩溃、无效或未验候选都不伪装成成功。[匹配与复现说明](docs/original-smlib-pairing-audit.md)
 
 ## 第08项大半径缺口验证
 
@@ -40,11 +40,30 @@ python adapters/smlib/run.py data/case08-radius/smlib-jobs/case08.original.r15.s
 
 [独立几何审计](docs/case08-radius-audit.md) · [半径边界协议](data/case08-radius/protocol.json)
 
+## 第11项凹凸性修正
+
+[查看修正版四栏](https://www.goudanx.top/filletbench/#series=original&case=11&variant=part01-r3)。旧输入将目标建成约231.59°的凹根，已有窄带也是凹谷。本轮重新构建真实实体：A为90°凸肩，窄带为外凸曲面；投影视角独立设置，未剪切或镜像几何。短横舌、下台面和外折边同步调整。隐藏连接、厚度和尺寸仍属推定，整体外观等待人工核对。
+
+| 半径 | OCC原生实际结果 | SMLib原生实际结果 |
+|---|---|---|
+| R1 | BREP、流形、自交及STEP回读门通过；待人工核对 | API1001失败，保留的SMB与输入相同 |
+| R3 | Build返回无效自交候选，STEP门失败 | API1001失败，保留的SMB与输入相同 |
+| R6 | Build返回无效自交候选，STEP门失败 | API1001失败，保留的SMB与输入相同 |
+
+普通圆角不等同于原文的repair_fa_X专用自交修复。无组合结果冒充原生能力。[修订与复现说明](adapters/occt/case11-convexity/README.md) · [版本契约](data/case11-convexity/revision.json)。
+
+```sh
+python bench.py original --case 11 --out runs/my-case11
+python adapters/occt/case11-convexity/audit_material.py --output runs/my-case11-audit
+# 配好SMLib后，直接执行已注册的新输入请求
+python adapters/smlib/run.py data/case11-convexity/smlib-candidate-v6-r3.job.json --output runs/my-case11-smlib-r3
+```
+
 ## 按原版实际处理
 
 原版系列保留 **34 组模型、1 个说明项、129 个原有参数/视图**，其中 128 个计算变体已绑定本次真实复跑，1 个仅输入的辅助叶片保持不计算。50 个原页面变体 ID、人工备注、选边/选面及参数顺序完整保留。
 
-基础模型使用原版冻结的精确 BREP，**本轮没有从参数重新创建基础几何，也没有更改模型外形**。重新执行的是提取部件、必要的缝合/裁剪/延伸、原生圆角或显式组合流程。网页可切换“原基础模型”与“实际操作输入”；二者分别保存，不能互相冒充。
+除第11项已登记的凸性修正版外，基础模型使用原版冻结的精确 BREP。第11项重新参数化建模，新旧输入及结果按SHA隔离；原始冻结文件保持不变。重新执行的是提取部件、必要的缝合/裁剪/延伸、原生圆角或显式组合流程。网页可切换“原基础模型”与“实际操作输入”；二者分别保存，不能互相冒充。
 
 ```sh
 # 第22项：原共边、原 R6，保留 STEP 回读失败门

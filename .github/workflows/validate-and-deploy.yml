@@ -61,6 +61,17 @@ jobs:
           assert s['native_call_executed'] is True, s
           assert s['source_sha256'], s
           PY
+      - name: Rebuild the convex case11 input and audit physical material sides
+        run: |
+          python bench.py original --case 11 --out runs/ci-case11
+          python adapters/occt/case11-convexity/audit_material.py --source runs/ci-case11/case11-convexity/before.brep --step runs/ci-case11/case11-convexity/before.step --output runs/ci-case11-material
+          python - <<'PY'
+          import json,pathlib
+          a=json.loads(pathlib.Path('runs/ci-case11-material/new-geometry-audit.json').read_text())
+          assert a['automated_gates_passed'] and all(a['gates'].values()), a['gates']
+          assert a['target_A']['exact_interior_material_angle_deg']==90
+          assert a['human_appearance_status']=='pending'
+          PY
   smlib:
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -121,6 +132,22 @@ jobs:
           s=json.loads(pathlib.Path('runs/ci-case08-smlib-r15/summary.json').read_text())
           assert s['input_import']['passed'] is True and s['execution']['native_call_started'] is True, s
           assert s['execution']['radius_mm']==15, s
+          PY
+      - name: Replay all three convex case11 SMLib requests
+        env:
+          SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
+          SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
+        run: |
+          for radius in 1 3 6; do
+            python adapters/smlib/run.py data/case11-convexity/smlib-candidate-v6-r${radius}.job.json --output runs/ci-case11-smlib-r${radius} || true
+          done
+          python - <<'PY'
+          import json,pathlib
+          for r in (1,3,6):
+              s=json.loads(pathlib.Path(f'runs/ci-case11-smlib-r{r}/summary.json').read_text())
+              assert s['input_import']['passed'] and s['selection_passed'], s
+              assert s['execution']['native_call_started'] and s['radius_mm']==r, s
+              assert s['source_sha256']=='db6c6a783a9e19b1a705a6be8677db296592a0d4a72471a2044261e369b51301', s
           PY
       - name: Confirm an admitted input and actual native call
         run: |

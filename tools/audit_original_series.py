@@ -34,6 +34,8 @@ from OCP.TopTools import TopTools_IndexedMapOfShape
 from OCP.TopoDS import TopoDS, TopoDS_Shape
 from OCP.gp import gp_Pnt
 
+from audit_original_smlib_column import case11_revision_checks, repository_file
+
 REPO = Path(__file__).resolve().parents[1]
 TOL = 1e-5
 MACHINE = re.compile(r'/(?:Users|home|private|tmp|opt|Applications|Volumes)/')
@@ -481,24 +483,63 @@ class Audit:
                 self.require(sha(self.repo/row['summary'])==row['summary_sha256'],'case08_extension_raw_summary_stale')
                 bindings.setdefault((8,row['variant_id']),set()).add(row['summary_sha256'])
         self.require(catalog['source_review_state_sha256'] == self.initial_review_hash, 'published_original_review_source_changed')
+        revisions = []
         for entry in catalog['cases']:
             n = entry['number']; case = read(self.repo / 'web' / entry['data'])
-            self.require(case['source_sha256'] == self.cases[n]['source_sha256'], 'published_base_not_original', number=n)
+            contract = None
+            if case.get('revision'):
+                checks, registered = case11_revision_checks(case, self.repo)
+                checks['revision_catalog_case_number'] = n == 11 and case.get('number') == n
+                for name, passed in checks.items():
+                    self.require(passed, 'published_' + name, number=n)
+                if all(checks.values()):
+                    contract = registered
+                    base = self.repo / contract['source_brep']
+                    finite_targets = [self.target(base, target, True) for target in contract['target_world']]
+                    self.require(all(len(check['matching_edge_indices']) == 1 for check in finite_targets),
+                                 'published_revision_target_not_unique_on_registered_source', number=n)
+                    declared = contract.get('occt_runs', [])
+                    self.require(len(declared) == len({r.get('variant_id') for r in declared}) and
+                                 {r.get('variant_id') for r in declared} == {v['id'] for v in case['variants']},
+                                 'published_revision_execution_registry_incomplete', number=n)
+                    for row in declared:
+                        raw = repository_file(self.repo, row.get('summary'))
+                        if not self.require(raw is not None and sha(raw) == row.get('summary_sha256'),
+                                            'published_revision_raw_summary_hash_mismatch', number=n, variant=row.get('variant_id')):
+                            continue
+                        summary = read(raw)
+                        variant = next((v for v in case['variants'] if v['id'] == row['variant_id']), {})
+                        self.require(summary.get('target_before_sha256') == contract['source_sha256'],
+                                     'published_revision_actual_input_source_mismatch', number=n, variant=row['variant_id'])
+                        self.require(summary.get('radius_mm') == variant.get('radius_mm') and
+                                     summary.get('source_repair_fa_X_verified') is False,
+                                     'published_revision_actual_parameters_or_feature_claim_changed', number=n, variant=row['variant_id'])
+                        bindings[(n, row['variant_id'])] = {row['summary_sha256']}
+                    revisions.append(dict(number=n, id=contract['id'], source_sha256=contract['source_sha256'],
+                                          previous_source_sha256=contract['previous_source_sha256'],
+                                          geometry_audit=contract['geometry_audit'], target_checks=finite_targets))
+            if contract is None:
+                self.require(case['source_sha256'] == self.cases[n]['source_sha256'], 'published_base_not_original', number=n)
             if not case['has_model']: continue
-            self.require(case['source_case_sha256'] == sha(self.repo / f'data/original-occ/cases/{n:02d}.json'), 'published_frozen_case_stale', number=n)
+            if contract is None:
+                self.require(case['source_case_sha256'] == sha(self.repo / f'data/original-occ/cases/{n:02d}.json'), 'published_frozen_case_stale', number=n)
             for variant in case['variants']:
                 occt = variant.get('occt', {})
                 self.require(variant['base_sha256'] == case['source_sha256'] and variant['base_mesh'] == case['base_mesh'], 'published_variant_base_replaced', number=n, variant=variant['id'])
                 if variant['id'] == 'blade-input' and n == 31: continue
                 self.require(occt.get('evidence_kind') == 'fresh_run' and occt.get('summary'), 'published_computation_variant_without_fresh_summary', number=n, variant=variant['id'])
                 self.require(occt.get('source_feature_passed') is False, 'published_special_acceptance_promoted', number=n, variant=variant['id'])
+                if contract:
+                    self.require(occt.get('source_sha256') == occt.get('operation_input_sha256') == contract['source_sha256'],
+                                 'published_revision_execution_source_mismatch', number=n, variant=variant['id'])
                 self.require(occt.get('raw_summary_sha256') in bindings.get((n, variant['id']), set()), 'published_summary_not_bound_to_actual_original_execution', number=n, variant=variant['id'])
                 if occt.get('evidence_kind') == 'fresh_run': fresh += 1
                 for key in ('base_mesh', 'operation_mesh'):
                     if variant.get(key): self.require((self.repo / 'web' / variant[key]).is_file(), 'published_mesh_missing', number=n, variant=variant['id'], kind=key)
             if n == 36:
                 self.require(all(v['base_mesh'] != v['operation_mesh'] for v in case['variants']), 'published_case36_extended_input_is_base')
-        return dict(computation_variants_with_fresh_summary=fresh, catalog_sha256=sha(path))
+        return dict(computation_variants_with_fresh_summary=fresh, catalog_sha256=sha(path), registered_public_revisions=revisions,
+                    frozen_originals_independently_preserved=True)
 
     def public_scan(self):
         inventory = subprocess.run(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=self.repo,
