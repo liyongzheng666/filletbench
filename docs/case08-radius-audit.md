@@ -26,9 +26,3 @@ Shared-rail checks use actual world curves. SMLib pcurve fractions can evaluate 
 These runs supply no preserve_notch option. Default trimming, unchanged-input failures, native validity, native persistence, STEP exchange and human appearance acceptance stay separate. No source special-mode equivalence or human acceptance is certified.
 
 SMLib status: audited. Audit consistency passed: True. See `case08-radius-audit.json` for individual gates, measured edge ownership, fit residuals and artifact hashes.
-
-## Published binding audit
-
-The local original-case viewer has five radius views and defaults to R15. Source BREP, actual before meshes, raw and sanitized published summaries, OCCT canonical job hashes, SMLib request-file hashes, after meshes, and measured radius-validation values were cross-checked against the independent audit. R15 binds no OCCT after mesh, and its SMLib result witness exactly matches native free edge 14 at z25 with one owner. The z27 line is an auxiliary guide, and the green witness is separate from original input selection. No kernel was invoked for this publication check.
-
-Publication binding passed: True.
