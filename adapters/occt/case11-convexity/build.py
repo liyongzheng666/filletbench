@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import math
+import shutil
 from pathlib import Path
 import sys
 import time
@@ -200,17 +201,38 @@ def camera():
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument('--revision',choices=['candidate-v1','candidate-v2','candidate-v3','candidate-v4','candidate-v5','candidate-v6'],default='candidate-v6')
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--source-brep',type=Path,help='Replay a registered exact input instead of reconstructing it')
+    parser.add_argument('--expected-source-sha256',help='Required hash for exact-input replay')
     args=parser.parse_args()
+    if bool(args.source_brep) != bool(args.expected_source_sha256):parser.error('Exact replay requires both --source-brep and --expected-source-sha256')
+    if args.source_brep and args.revision!='candidate-v6':parser.error('Exact revision replay is defined only for candidate-v6')
     if args.revision=='candidate-v2':PARAMETERS.update(slot_end_x=47.,slot_back_y=-34.)
     if args.revision=='candidate-v3':PARAMETERS.update(slot_end_x=47.,slot_back_y=-34.,tongue_depth=33.35,outer_fold_depth=58.)
     if args.revision=='candidate-v4':PARAMETERS.update(slot_end_x=47.,slot_back_y=-34.,tongue_depth=33.35,outer_fold_depth=58.,face_connected_wall=True,exact_tangent_arc=True)
     if args.revision=='candidate-v5':PARAMETERS.update(slot_end_x=47.,slot_back_y=-34.,slot_front_y=-55.,tongue_depth=33.35,outer_fold_depth=58.,face_connected_wall=True,exact_tangent_arc=True,transition_start_y=-48.5,split_coplanar_tongue=True)
     if args.revision=='candidate-v6':PARAMETERS.update(slot_end_x=47.,slot_back_y=-34.,slot_front_y=-55.,tongue_depth=33.35,outer_fold_depth=58.,face_connected_wall=True,exact_tangent_arc=True,transition_start_y=-48.5,split_coplanar_tongue=True,close_tongue_back_wedge=True)
     out=(args.output or REPO/'runs/case11-convexity'/args.revision).resolve();out.mkdir(parents=True,exist_ok=True)
-    shape, transition=build()
+    if args.source_brep:
+        source=args.source_brep.resolve()
+        if source==out/'before.brep':raise ValueError('Exact source must remain outside the output artifacts')
+        source_hash=hashlib.sha256(source.read_bytes()).hexdigest()
+        if source_hash!=args.expected_source_sha256:raise ValueError('Exact replay source hash mismatch')
+        shape=g.read(source)
+        transition={'method':'pre-existing geometry read from registered exact BREP; no reconstruction or repair'}
+        input_creation={'method':'frozen_exact_revision_input','parametric_reconstruction_executed':False,
+                        'source_brep':source.relative_to(REPO).as_posix() if source.is_relative_to(REPO) else 'external-exact-input',
+                        'source_sha256':source_hash}
+    else:
+        shape, transition=build()
+        input_creation={'method':'parametric_convex_reconstruction','parametric_reconstruction_executed':True}
     targets,selection=g.select(shape,[dict(samples_mm=[[50,0,0],[50,-60.6,0]],length_mm=60.6,required_support_adjacency_count=2)])
     if len(targets)!=1:raise RuntimeError(json.dumps(selection))
     before=sg.save(shape,out,'before',targets)
+    if args.source_brep:
+        before['kernel_reserialized_brep_sha256']=before['brep_sha256']
+        shutil.copyfile(source,out/'before.brep')
+        before['brep_sha256']=source_hash
+        before['readback_stats']=sg.stats(g.read(out/'before.brep'))
     before['inspection']=g.inspect(shape);before['step']=step(shape,out/'before.step')
     before['manifold_audit']=manifold_audit(shape)
     if args.revision in ['candidate-v4','candidate-v5','candidate-v6'] and not before['manifold_audit']['passed']:
@@ -252,7 +274,7 @@ def main():
     report=dict(schema='case11.convexity-candidate.v1', revision=args.revision,
         geometry_status='candidate pending independent shape review',
         shape_acceptance=False, reference_pdf_page=1296, reference_figure='73-29',
-        parameters_mm=PARAMETERS, transition=transition, camera=camera(), before=before,
+        parameters_mm=PARAMETERS, transition=transition, camera=camera(), before=before,input_creation=input_creation,
         target_selection=selection,target_adjacent_faces=owners,material_audit=material,attempts=attempts,
         assumptions=['All dimensions inferred; PDF gives no dimensional calibration.',
           'A and C are high at z=0; B is lower at z=-40. The red shoulder is a convex outer edge.',

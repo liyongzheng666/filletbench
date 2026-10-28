@@ -857,7 +857,7 @@
         "revision_request_summary_binding": true,
         "revision_execution_input_binding": true
       },
-      "reason": "新凸性输入上实际 R6：native_api_failed_unchanged_input；API返回1001。保留的SMB与输入字节相同，不能视为圆角。"
+      "reason": "新凸性输入上实际 R6：native_api_failed_unchanged_input；API返回1001。保留的SMB与输入字节相同，不能视为圆角。内核未提供更细失败原因。"
     },
     {
       "number": 11,
@@ -900,7 +900,7 @@
         "revision_request_summary_binding": true,
         "revision_execution_input_binding": true
       },
-      "reason": "新凸性输入上实际 R3：native_api_failed_unchanged_input；API返回1001。保留的SMB与输入字节相同，不能视为圆角。"
+      "reason": "新凸性输入上实际 R3：native_api_failed_unchanged_input；API返回1001。保留的SMB与输入字节相同，不能视为圆角。内核未提供更细失败原因。"
     },
     {
       "number": 11,
@@ -943,7 +943,7 @@
         "revision_request_summary_binding": true,
         "revision_execution_input_binding": true
       },
-      "reason": "新凸性输入上实际 R1：native_api_failed_unchanged_input；API返回1001。保留的SMB与输入字节相同，不能视为圆角。"
+      "reason": "新凸性输入上实际 R1：native_api_failed_unchanged_input；API返回1001。保留的SMB与输入字节相同，不能视为圆角。内核未提供更细失败原因。"
     },
     {
       "number": 12,

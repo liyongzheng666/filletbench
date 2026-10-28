@@ -64,14 +64,32 @@ jobs:
       - name: Rebuild the convex case11 input and audit physical material sides
         run: |
           python bench.py original --case 11 --out runs/ci-case11
-          python adapters/occt/case11-convexity/audit_material.py --source runs/ci-case11/case11-convexity/before.brep --step runs/ci-case11/case11-convexity/before.step --output runs/ci-case11-material
+          python adapters/occt/case11-convexity/build.py --revision candidate-v6 --output runs/ci-case11-reconstructed
+          python adapters/occt/case11-convexity/audit_material.py --source runs/ci-case11-reconstructed/before.brep --step runs/ci-case11-reconstructed/before.step --output runs/ci-case11-material
           python - <<'PY'
           import json,pathlib
           a=json.loads(pathlib.Path('runs/ci-case11-material/new-geometry-audit.json').read_text())
           assert a['automated_gates_passed'] and all(a['gates'].values()), a['gates']
           assert a['target_A']['exact_interior_material_angle_deg']==90
           assert a['human_appearance_status']=='pending'
+          contract=json.loads(pathlib.Path('data/case11-convexity/revision.json').read_text())
+          replay=json.loads(pathlib.Path('runs/ci-case11/case11-convexity/report.json').read_text())
+          assert replay['before']['brep_sha256']==contract['source_sha256']
+          assert replay['input_creation']['parametric_reconstruction_executed'] is False
+          rebuilt=json.loads(pathlib.Path('runs/ci-case11-reconstructed/report.json').read_text())['before']['stats']
+          canonical=json.loads(pathlib.Path('data/case11-convexity/geometry-report.json').read_text())['before']['stats']
+          for key in ('faces','edges','solids','shells'): assert rebuilt[key]==canonical[key], (key,rebuilt,canonical)
+          for key in ('volume_mm3','area_mm2'): assert abs(rebuilt[key]-canonical[key])/abs(canonical[key])<1e-8, (key,rebuilt,canonical)
           PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: case11-occt-replay-and-reconstruction
+          path: |
+            runs/ci-case11/suite-index.json
+            runs/ci-case11/case11-convexity/report.json
+            runs/ci-case11-reconstructed/report.json
+            runs/ci-case11-material/new-geometry-audit.json
   smlib:
     runs-on: ubuntu-latest
     timeout-minutes: 25

@@ -52,8 +52,12 @@ python adapters/smlib/run.py data/case08-radius/smlib-jobs/case08.original.r15.s
 
 普通圆角不等同于原文的repair_fa_X专用自交修复。无组合结果冒充原生能力。[修订与复现说明](adapters/occt/case11-convexity/README.md) · [版本契约](data/case11-convexity/revision.json)。
 
+两库对照复跑固定读取同一份修正版BREP；参数化重建单独运行和审计。平台间重新序列化的BREP字节可能不同，不把新生成的输入自动当成原冻结输入，也不放宽SHA身份检查。
+
 ```sh
 python bench.py original --case 11 --out runs/my-case11
+# 独立参数化重建，与同输入的圆角复跑分开
+python adapters/occt/case11-convexity/build.py --revision candidate-v6 --output runs/my-case11-reconstructed
 python adapters/occt/case11-convexity/audit_material.py --output runs/my-case11-audit
 # 配好SMLib后，直接执行已注册的新输入请求
 python adapters/smlib/run.py data/case11-convexity/smlib-candidate-v6-r3.job.json --output runs/my-case11-smlib-r3

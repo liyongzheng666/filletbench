@@ -112,7 +112,7 @@ def build_case(old, contract, occ_run=None):
                 human_status='pending',human_note='',shape_acceptance=False,source_quality_warning=warning,
                 question='先核对凸肩A、外凸窄带和短横舌的整体对应，再检查普通圆角与自交；原图 repair_fa_X 专用修复仍未验证。',
                 revision=dict(contract,contract='data/case11-convexity/revision.json',contract_sha256=digest(CONTRACT)),
-                base_creation={'method':'parametric_convex_reconstruction','parametric_reconstruction_executed':True,'generator':'adapters/occt/case11-convexity/build.py','generator_revision':'candidate-v6'},
+                base_creation=dict(report.get('input_creation') or {'method':'parametric_convex_reconstruction','parametric_reconstruction_executed':True},generator='adapters/occt/case11-convexity/build.py',generator_revision='candidate-v6'),
                 source_review_state_sha256=read(ROOT/'data/original-occ/index.json')['source_review_state_sha256'],
                 section_provenance={'source_sha256':contract['source_sha256'],'origin':section_origin,'processing_result':False},
                 default_variant='part01-r3',variants=[])
@@ -156,10 +156,11 @@ def build_case(old, contract, occ_run=None):
             sm.update(request_file=job_path.relative_to(ROOT).as_posix(),source_revision_contract={'path':'data/case11-convexity/revision.json','sha256':digest(CONTRACT)},
                       review_status=status,api_success=read(ROOT/row['summary']).get('execution',{}).get('native_api_success'),
                       unchanged_input=row['retained_native_file_identical_to_before'],
+                      label=f'R{r:g} · 调用失败 · 输入未变' if row['retained_native_file_identical_to_before'] else sm['label'],
                       checks={'input_import':row['import_passed'],'native_readback':row['native_readback_passed'],'full_quality_passed':False,'human_appearance_passed':False},
                       status='candidate_unverified' if good_sdk else 'api_failed' if 'api_failed' in status else 'geometry_failed',
                       reason=(f'新凸性输入上实际 R{r:g}：输入导入、原生结果类型与SMB回读门通过，完整独立几何和人工外观仍待核对。' if good_sdk else
-                              f'新凸性输入上实际 R{r:g}：{status}；API返回{row["native_api_raw_status"]}。'+('保留的SMB与输入字节相同，不能视为圆角。' if row['retained_native_file_identical_to_before'] else '保留实际失败候选；类型或回读门未通过，不能视为有效圆角。')))
+                              f'新凸性输入上实际 R{r:g}：{status}；API返回{row["native_api_raw_status"]}。'+('保留的SMB与输入字节相同，不能视为圆角。内核未提供更细失败原因。' if row['retained_native_file_identical_to_before'] else '保留实际失败候选；类型或回读门未通过，不能视为有效圆角。')))
             v['smlib']=sm
         else:
             v['smlib']=cached_sdk(old,contract,vid,r) or {'status':'not_run','label':'新版输入尚无SDK结果','reason':'旧SDK输入凹凸错误，不能复用；等待本轮新输入实跑。','mesh':None,'before_mesh':None,'source_feature_passed':False,'pairing_status':'no_comparable_run','evidence_kind':'not_run'}

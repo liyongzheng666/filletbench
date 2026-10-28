@@ -9,8 +9,15 @@ def current_case11(parser):
  if not isinstance(source,str) or len(source)!=64 or any(c not in '0123456789abcdef' for c in source):parser.error('Current case 11 revision requires a valid source_sha256')
  generator_revision=revision.get('generator_revision') or revision.get('revision','candidate-v6')
  if generator_revision!='candidate-v6':parser.error('Unsupported current case 11 generator revision: '+str(generator_revision))
+ source_brep=revision.get('source_brep')
+ if not isinstance(source_brep,str) or pathlib.Path(source_brep).is_absolute():parser.error('Current case 11 requires a repository-relative canonical source_brep')
+ canonical=(ROOT/source_brep).resolve()
+ if not canonical.is_relative_to(ROOT) or not canonical.is_file():parser.error('Current case 11 canonical BREP is missing or outside the repository')
+ if hashlib.sha256(canonical.read_bytes()).hexdigest()!=source:parser.error('Current case 11 canonical BREP does not match the registered source_sha256')
  return {'manifest':str(path.relative_to(ROOT)),'revision_id':revision.get('id'),'generator_revision':generator_revision,'expected_source_sha256':source,
-  'source_brep':revision.get('source_brep'),'run_dir':'case11-convexity','report':'case11-convexity/report.json',
+  'source_brep':source_brep,'input_mode':'frozen_exact_revision_input',
+  'input_creation':{'method':'frozen_exact_revision_input','parametric_reconstruction_executed':False,'source_brep':source_brep,'source_sha256':source},
+  'run_dir':'case11-convexity','report':'case11-convexity/report.json',
   'radii_mm':[1,3,6],'shape_acceptance':revision.get('shape_acceptance',False),'human_status':revision.get('human_status','pending'),'source_feature_pass_claimed':False}
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--case',type=int);p.add_argument('--case11',dest='case',action='store_const',const=11,help='Shortcut for --case 11');p.add_argument('--variant');p.add_argument('--all',action='store_true');p.add_argument('--out',type=pathlib.Path);a=p.parse_args()
@@ -24,7 +31,7 @@ def main():
  if c and not c.get('has_model'):p.error('This is an explanation page, not a modeling request')
  case11=current_case11(p) if a.all or a.case==11 else None
  if a.case==11 and a.variant:
-  print('Case 11 uses current candidate-v6 and runs R1/R3/R6 together; --variant is selection metadata only. Use adapters/occt/original/run.py --requests to replay frozen historical jobs.',file=sys.stderr)
+  print('Case 11 uses the exact frozen candidate-v6 BREP and runs R1/R3/R6 together; --variant is selection metadata only. Use adapters/occt/original/run.py --requests to replay frozen historical jobs.',file=sys.stderr)
  extension=read(ROOT/'data/case08-radius/protocol.json') if (ROOT/'data/case08-radius/protocol.json').exists() else None
  extension_ids=extension['variant_ids'] if extension and a.case==8 else []
  if a.variant and a.case!=11 and a.variant not in [v['id'] for v in c['variants']]+extension_ids:p.error('Unknown original or explicitly requested variant ID')
@@ -45,7 +52,7 @@ def main():
   if a.all or a.case==35:commands.append([sys.executable,str(ROOT/'adapters/occt/special/run.py'),'--case','35','--output',str(out/'g2')])
  case11_command=None
  if case11:
-  case11_command=[sys.executable,str(ROOT/'adapters/occt/case11-convexity/build.py'),'--revision',case11['generator_revision'],'--output',str(out/'case11-convexity')]
+  case11_command=[sys.executable,str(ROOT/'adapters/occt/case11-convexity/build.py'),'--revision',case11['generator_revision'],'--source-brep',case11['source_brep'],'--expected-source-sha256',case11['expected_source_sha256'],'--output',str(out/'case11-convexity')]
   commands.append(case11_command)
  out.mkdir(parents=True,exist_ok=True)
  if native['jobs']:
@@ -62,8 +69,8 @@ def main():
    case11['source_verification']=verification;record['case11_source_verification']=verification
    if not verification['matched']:
     record['returncode']=1 if rc==0 else rc
-    print('Current case 11 source hash mismatch or missing generated BREP; see suite-index.json',file=sys.stderr)
+    print('Current case 11 source hash mismatch or missing exact operation-input BREP; see suite-index.json',file=sys.stderr)
   records.append(record);print('original workflow',i+1,'returncode',record['returncode'],flush=True)
- result={'schema_version':1,'case':a.case,'variant':a.variant,'all':a.all,'base_geometry':'frozen original BREP inputs plus current case 11 reconstruction selected by revision metadata' if case11 else 'frozen original BREP inputs; not parametrically reconstructed','current_case11':case11,'source_feature_pass_claimed':False,'execution_groups':records,'input_only':not commands,'scope':'Native and explicit-composition recipes are separate; current case 11 always executes R1/R3/R6 on candidate-v6. Kernel rejections/invalid BREP/STEP failures remain in their summaries.'};(out/'suite-index.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('Evidence:',out)
+ result={'schema_version':1,'case':a.case,'variant':a.variant,'all':a.all,'base_geometry':'frozen original BREP inputs; current case 11 uses the exact registered revision BREP without parametric reconstruction' if case11 else 'frozen original BREP inputs; not parametrically reconstructed','current_case11':case11,'source_feature_pass_claimed':False,'execution_groups':records,'input_only':not commands,'scope':'Native and explicit-composition recipes are separate; current case 11 executes R1/R3/R6 on the same frozen canonical candidate-v6 input. Kernel rejections/invalid BREP/STEP failures remain in their summaries.'};(out/'suite-index.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('Evidence:',out)
  return 1 if any(x['returncode']!=0 for x in records) else 0
 if __name__=='__main__':sys.exit(main())
