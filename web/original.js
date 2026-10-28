@@ -47,6 +47,7 @@ export function originalMethod(variant) {
 }
 export function originalResultLabel(variant) {
   const result = variant.occt || {};
+  if (result.method === 'input_admission_check' && result.native_call_executed === false) return '原输入检查完成 · 未调用圆角';
   if (!result.mesh) return failedResult(variant) ? '处理失败，仅显示输入' : '未执行处理，仅显示输入';
   const prefix = historicalResult(variant) ? '历史' : '本次';
   if (failedResult(variant)) {
@@ -62,7 +63,7 @@ export function originalResultLabel(variant) {
 export function originalDisplay(variant, stage = 'base') {
   const result = variant.occt || {};
   const input = operationMesh(variant);
-  const output = result.mesh || input;
+  const output = result.mesh || (result.display_input_on_missing_result === false ? null : input);
   return [
     { engine: 'occt', source: stage === 'operation' ? input : baseMesh(variant), ...selectionFor(variant, stage), label: stage === 'operation' ? '实际操作输入' : '原版基础模型', reason: stage === 'operation' ? '未提供实际操作输入网格。' : '未提供原版基础模型网格；不会使用衍生输入代替。' },
     { engine: 'smlib', source: output, ...(!result.mesh ? selectionFor(variant, 'operation') : { targets: [], faces: [] }), label: originalResultLabel(variant), reason: result.reason || result.summary || '没有实际 OCC 输出；原目标与参数保持不变。' },

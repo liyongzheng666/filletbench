@@ -2052,7 +2052,7 @@
       "evidence_kind": "not_run",
       "source_job_id": null,
       "checks": {},
-      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+      "reason": "原始不等宽两有限面上的对应面面／裁剪协议尚未接入SMLib当前系列；没有用普通等宽共边控制替代。"
     },
     {
       "number": 36,
@@ -2061,7 +2061,7 @@
       "evidence_kind": "not_run",
       "source_job_id": null,
       "checks": {},
-      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+      "reason": "原始不等宽两有限面上的对应面面／裁剪协议尚未接入SMLib当前系列；没有用普通等宽共边控制替代。"
     },
     {
       "number": 36,
@@ -2070,7 +2070,7 @@
       "evidence_kind": "not_run",
       "source_job_id": null,
       "checks": {},
-      "reason": "原版的组合、前处理或特殊约束尚未在 SMLib 中表达为同一协议；不拿其他工况替代。"
+      "reason": "原始不等宽两有限面上的对应面面／裁剪协议尚未接入SMLib当前系列；没有用普通等宽共边控制替代。"
     }
   ],
   "issues": []

@@ -84,4 +84,7 @@ def main():
  if (ROOT/'data/case11-convexity/revision.json').exists():
   import publish_case11_revision
   publish_case11_revision.main()
+ if (ROOT/'data/case36-input/protocol.json').exists():
+  import publish_case36_input
+  publish_case36_input.main()
 if __name__=='__main__':main()

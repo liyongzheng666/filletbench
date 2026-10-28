@@ -63,9 +63,24 @@ python adapters/occt/case11-convexity/audit_material.py --output runs/my-case11-
 python adapters/smlib/run.py data/case11-convexity/smlib-candidate-v6-r3.job.json --output runs/my-case11-smlib-r3
 ```
 
+## 第36项原有限输入与前置检查
+
+第36项保持原基础的两张不等宽、无共边有限面：竖面宽14，横面宽25，有限面间距约7.071mm。当前三个原编号与半径 `part01-r1p0` / R1、`part01-r2p0` / R2、`part01-r0p5` / R0.5 都直接使用这份原始BREP作为实际操作输入，不扩面、不把横面裁窄、不缝合成L壳。
+
+本轮只执行输入身份和普通共边调用器的前置检查。原输入不存在共边，故该调用路线被阻止，`native_call_executed=false`；没有生成圆角结果，也不能记为内核圆角调用失败。原图的面面圆角与 `to_walls` / `no` / `short` / `long` 四种端部裁剪均未在此流程中实现。
+
+旧的 `extended-overlap-band` 把两面扩到理论交线，并将25宽横面裁成14宽；它的普通圆角结果作为历史衍生控制隔离保留，不能代表当前原输入的能力。
+
+```sh
+python bench.py original --case 36 --out runs/my-case36-input
+python bench.py original --case 36 --variant part01-r1p0 --out runs/my-case36-r1-input
+# 显式重放旧衍生请求，仅用于历史调试
+python adapters/occt/original/run.py --requests adapters/occt/original/requests.json --case 36 --output runs/my-case36-derived-history
+```
+
 ## 按原版实际处理
 
-原版系列保留 **34 组模型、1 个说明项、129 个原有参数/视图**，其中 128 个计算变体已绑定本次真实复跑，1 个仅输入的辅助叶片保持不计算。50 个原页面变体 ID、人工备注、选边/选面及参数顺序完整保留。
+原版系列保留 **34 组模型、1 个说明项、129 个原有参数/视图**。旧版本的128个计算条目曾绑定执行记录，其中第36项3条使用的是改变有限域后的L形衍生输入，现已移至历史；当前这3条只记录原有限输入前置检查，不宣称执行了圆角。1个仅输入的辅助叶片保持不计算。50个原页面变体ID及参数顺序保留；人工备注和选边/选面按对应输入区分。视图数不等于成功构造数。
 
 除第11项已登记的凸性修正版外，基础模型使用原版冻结的精确 BREP。第11项重新参数化建模，新旧输入及结果按SHA隔离；原始冻结文件保持不变。重新执行的是提取部件、必要的缝合/裁剪/延伸、原生圆角或显式组合流程。网页可切换“原基础模型”与“实际操作输入”；二者分别保存，不能互相冒充。
 
@@ -81,7 +96,7 @@ python bench.py build-original --suite-run runs/my-original-suite
 python bench.py serve
 ```
 
-原 native runner 144 次实际调用中，129 条是当前原版输入的 `from_base` 处理，15 条旧修订输入单独保留为历史 prepared replay。后者不进入当前默认展示。原组合 33 个视图绑定31次独特实际执行，另有第35项三档 G2 代理新执行。失败 BREP 候选仍展示，只有未返回结果时才用输入兜底并明确标注。
+历史 native runner 的144次实际调用中，129条记录为 `from_base` 流程（可包含显式前处理），15条为旧修订输入的 prepared replay。该历史调用数不能作为当前同原输入的覆盖率；第11项已改为修正版固定输入复跑，第36项旧L形衍生调用已从当前展示隔离。原组合33个视图绑定31次独特实际执行，另有第35项三档G2代理执行。失败BREP候选仍展示，未调用、前置阻止与未返回结果分别标明。
 
 [原版数据与身份边界](data/original-occ/README.md) · [原生复跑](docs/original-occ-native.md) · [组合复跑](docs/original-occ-compositions.md) · [独立审计](docs/original-series-audit.md)
 

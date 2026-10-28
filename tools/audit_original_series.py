@@ -484,9 +484,20 @@ class Audit:
                 bindings.setdefault((8,row['variant_id']),set()).add(row['summary_sha256'])
         self.require(catalog['source_review_state_sha256'] == self.initial_review_hash, 'published_original_review_source_changed')
         revisions = []
+        input_admission_protocols = []
         for entry in catalog['cases']:
             n = entry['number']; case = read(self.repo / 'web' / entry['data'])
             contract = None
+            admission = None
+            if case.get('input_protocol'):
+                from audit_case36_input import case36_input_checks
+                checks, admission = case36_input_checks(case, self.repo)
+                for name, passed in checks.items():
+                    self.require(passed, 'published_' + name, number=n)
+                if all(checks.values()):
+                    for row in admission['variants']:
+                        bindings[(n, row['id'])] = {row['summary_sha256']}
+                    input_admission_protocols.append(dict(number=n, protocol=case['input_protocol'], source_sha256=case['source_sha256'], native_call_executed=False, variants=len(admission['variants'])))
             if case.get('revision'):
                 checks, registered = case11_revision_checks(case, self.repo)
                 checks['revision_catalog_case_number'] = n == 11 and case.get('number') == n
@@ -537,8 +548,12 @@ class Audit:
                 for key in ('base_mesh', 'operation_mesh'):
                     if variant.get(key): self.require((self.repo / 'web' / variant[key]).is_file(), 'published_mesh_missing', number=n, variant=variant['id'], kind=key)
             if n == 36:
-                self.require(all(v['base_mesh'] != v['operation_mesh'] for v in case['variants']), 'published_case36_extended_input_is_base')
+                if admission:
+                    self.require(all(v['base_mesh'] == v['operation_mesh'] for v in case['variants']), 'published_case36_original_input_changed')
+                else:
+                    self.require(all(v['base_mesh'] != v['operation_mesh'] for v in case['variants']), 'published_case36_extended_input_is_base')
         return dict(computation_variants_with_fresh_summary=fresh, catalog_sha256=sha(path), registered_public_revisions=revisions,
+                    registered_input_admission_protocols=input_admission_protocols,
                     frozen_originals_independently_preserved=True)
 
     def public_scan(self):

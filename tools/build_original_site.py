@@ -5,6 +5,7 @@ No PDF/artwork is copied. Frozen base, operation input and actual result remain
 separate geometries. A BREP read/retessellation is never a parametric base rebuild.
 """
 import argparse,collections,hashlib,importlib.util,json,pathlib,sys,shutil
+from contextlib import ExitStack
 from build_site import ROOT,WEB,read,write,sanitize,digest,mesh as publish_mesh
 MODULE=ROOT/'adapters/occt/special/geometry.py'
 spec=importlib.util.spec_from_file_location('original_display_geometry',MODULE);G=importlib.util.module_from_spec(spec);spec.loader.exec_module(G)
@@ -120,6 +121,7 @@ def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--suite-run',type=pathlib.Path,help='Output of bench.py original; preserve unrelated published views');args=parser.parse_args()
  suite=args.suite_run.resolve() if args.suite_run else None
  suite_case11=None
+ suite_case36=None
  suite_metadata={}
  if suite and (suite/'suite-index.json').exists():
   suite_metadata=read(suite/'suite-index.json');current=suite_metadata.get('current_case11')
@@ -127,14 +129,26 @@ def main():
    import publish_case11_revision
    suite_case11=(suite/current.get('run_dir','case11-convexity')).resolve()
    publish_case11_revision.validate_occ_run(suite_case11)
+  current36=suite_metadata.get('current_case36')
+  if current36:
+   import publish_case36_input
+   suite_case36=(suite/current36.get('run_dir','case36-input')).resolve()
+   publish_case36_input.validate_run36(suite_case36)
  if suite and (suite/'case11-convexity/report.json').exists() and suite_case11 is None:
   raise ValueError('Case11 suite output has no current_case11 manifest binding; refusing to publish an unrelated cached run')
+ if suite and (suite/'case36-input/index.json').exists() and suite_case36 is None:
+  raise ValueError('Case36 suite output has no current_case36 manifest binding; refusing to publish an unrelated cached run')
  if suite_case11 is not None and suite_metadata.get('case')==11 and not suite_metadata.get('all'):
   publish_case11_revision.main(occ_run=suite_case11);return
+ if suite_case36 is not None and suite_metadata.get('case')==36 and not suite_metadata.get('all'):
+  publish_case36_input.main(run_dir=suite_case36);return
  ip=read(SOURCE/'index.json');runs,_=load_runs(suite);cases=[];counts=collections.Counter()
  if not runs and (DEST/'catalog.json').exists():
   if suite_case11 is not None:
-   publish_case11_revision.main(occ_run=suite_case11);return
+   publish_case11_revision.main(occ_run=suite_case11)
+  if suite_case36 is not None:
+   publish_case36_input.main(run_dir=suite_case36)
+  if suite_case11 is not None or suite_case36 is not None:return
   print('No fresh local runs; retaining the published original-series snapshot.');return
  legacy=ROOT.parent/'outputs/parasolid-preblend/manifest.json'
  # Original recipe metadata is optional; each mesh is still made from the
@@ -190,8 +204,11 @@ def main():
  write(DEST/'catalog.json',catalog);print(json.dumps(catalog['counts'],ensure_ascii=False))
  if (ROOT/'docs/original-smlib-pairing-audit.json').exists():
   import attach_original_smlib
-  if suite_case11 is not None:
-   with publish_case11_revision.using_occ_run(suite_case11):attach_original_smlib.main()
-  else:attach_original_smlib.main()
- elif suite_case11 is not None:publish_case11_revision.main(occ_run=suite_case11)
+  with ExitStack() as contexts:
+   if suite_case11 is not None:contexts.enter_context(publish_case11_revision.using_occ_run(suite_case11))
+   if suite_case36 is not None:contexts.enter_context(publish_case36_input.using_run36(suite_case36))
+   attach_original_smlib.main()
+ else:
+  if suite_case11 is not None:publish_case11_revision.main(occ_run=suite_case11)
+  if suite_case36 is not None:publish_case36_input.main(run_dir=suite_case36)
 if __name__=='__main__':main()

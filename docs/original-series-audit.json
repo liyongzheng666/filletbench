@@ -1,9 +1,9 @@
 {
   "schema": "filletbench.original-series-independent-audit.v1",
-  "created_at": "2026-10-28T16:57:57.335111+00:00",
+  "created_at": "2026-10-28T17:31:05.360623+00:00",
   "passed": true,
   "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
-  "auditor_sha256": "b11175b3457378993b2d04d6c9219eb2220c9f248fd4446f3920274912a6cba6",
+  "auditor_sha256": "183284cac40a249f038cfb4f4293ca44344d43a0755b3d71fb47e168a0b8bcbc",
   "audited_indexes": {
     "data/original-occ/index.json": "5ea5d0a360db9d7f5eadb20cf35a46ef9ede983158c55091c273163a6c85610f",
     "data/original-occ/manifest.json": "4c756674c80956cb59c42257b3bff99e7f8ef4b3e342d25ea3c61fc24139b390",
@@ -124,7 +124,7 @@
   },
   "published": {
     "computation_variants_with_fresh_summary": 132,
-    "catalog_sha256": "7c86fccafc9645a7363383bdfeefc11b9d7ee83f7c07cc9618cd382d9cbcecdb",
+    "catalog_sha256": "f14a86167f37cbb21736457b961a2205eff9c91ba6dfa1448e17c3139a14daa4",
     "registered_public_revisions": [
       {
         "number": 11,
@@ -158,6 +158,18 @@
             "claimed_index_matches": null
           }
         ]
+      }
+    ],
+    "registered_input_admission_protocols": [
+      {
+        "number": 36,
+        "protocol": {
+          "path": "data/case36-input/protocol.json",
+          "sha256": "a6d6b1c4c66a62395df217bb3803943bfec8ed3689276e5b56e7f95a59dbe11d"
+        },
+        "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+        "native_call_executed": false,
+        "variants": 3
       }
     ],
     "frozen_originals_independently_preserved": true

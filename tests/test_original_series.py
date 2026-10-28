@@ -44,7 +44,12 @@ class OriginalSeriesTests(unittest.TestCase):
     def test_case36_keeps_the_original_two_disjoint_faces_before_preparation(self):
         d=json.loads((ROOT/'web/data/original-occ/cases/36.json').read_text())
         v=next(v for v in d['variants'] if v['id']==d['default_variant'])
-        self.assertNotEqual(v['base_mesh'],v['operation_mesh'])
+        self.assertEqual(v['base_mesh'],v['operation_mesh'])
+        self.assertEqual(v['input_relation'],'same_as_base')
+        self.assertFalse(v['occt']['native_call_executed'])
+        self.assertEqual(v['occt']['status'],'blocked')
+        self.assertIsNone(v['occt']['mesh'])
+        self.assertEqual(v['occt']['source_sha256'],v['occt']['operation_input_sha256'])
         self.assertTrue(v.get('preparation_note'))
     def test_case22_keeps_the_original_radius_and_step_failure_record(self):
         d=json.loads((ROOT/'web/data/original-occ/cases/22.json').read_text())

@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
-import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.4.0';
+import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.4.1';
 import { faceLocalMesh } from './mesh.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
@@ -267,7 +267,7 @@ function renderNotice() {
   const notice = $('#representationNotice');
   const parts = [];
   if (state.currentCase.source_quality_warning) parts.push(text(state.currentCase.source_quality_warning));
-  if (isOriginal(state) && state.currentCase.revision) {
+  if (isOriginal(state) && (state.currentCase.revision || state.currentCase.input_correction)) {
     notice.textContent = 'ⓘ  ' + parts.join('  '); notice.hidden = false; return;
   }
   if (isOriginal(state)) {
@@ -326,7 +326,7 @@ function renderOriginalMetadata() {
   $('#smlibVersion').textContent = text(result.version, 'OPEN CASCADE');
   $('#smlibCaption').textContent = failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${originalMethod(variant)} · ${historicalResult(variant) ? '历史输出，未复跑' : '本次实际输出'}`;
   renderEngineMetadata('smlib');
-  $('#validationFootnote').textContent = `${historicalResult(variant) ? '历史记录未复跑' : '已记录本次运行'}；几何、特殊语义和参考外观分别验收。`;
+  $('#validationFootnote').textContent = result.method === 'input_admission_check' && result.native_call_executed === false ? '原输入检查已完成；本次未调用圆角。面面圆角及四种裁剪协议待接入。' : `${historicalResult(variant) ? '历史记录未复跑' : '已记录本次运行'}；几何、特殊语义和参考外观分别验收。`;
   $$('.input-stage-switch button').forEach((button) => { const active = button.dataset.inputStage === state.inputStage; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
   const pipeline = $('#pipelineBadges'); pipeline.replaceChildren();
   for (const [index, label] of ['原基础', `操作输入 · ${relationLabel}`, originalMethod(variant), historicalResult(variant) ? '验证 · 历史记录 / 未复跑' : '验证 · 本次记录'].entries()) {

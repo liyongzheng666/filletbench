@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.1
+
+- Restore the exact unequal, separated finite faces as both base and operation input for case36; archive the old equal-width, extended L-shell results.
+- Recheck R0.5/R1/R2 on the unchanged input. No shared edge exists, so the ordinary-edge adapter stops before the fillet call; record this as admission blocked, not a kernel failure or a successful face-face/trim result.
+- Route current case36 suite commands to the portable exact-input preflight; keep the old derived requests available for explicit historical replay.
+- Keep the PDF/base/OCC/SMLib four columns and show an empty actual-result pane when no fillet was called.
+
 ## 0.4.0
 
 - Replace the active case11 concave reconstruction with a versioned Cartesian convex-shoulder solid; keep the frozen original and all old results as superseded history.
