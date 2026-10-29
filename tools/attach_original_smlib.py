@@ -87,4 +87,7 @@ def main():
  if (ROOT/'data/case36-input/protocol.json').exists():
   import publish_case36_input
   publish_case36_input.main()
+ if (ROOT/'data/case36-faceface/protocol.json').exists():
+  import publish_case36_faceface
+  publish_case36_faceface.main()
 if __name__=='__main__':main()

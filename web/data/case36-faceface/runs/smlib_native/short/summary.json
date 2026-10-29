@@ -1,0 +1,807 @@
+{
+  "schema": "case36.smlib-faceface-summary.v1",
+  "case_number": 36,
+  "mode": "minimal",
+  "source_mode_candidate": "short",
+  "trim_enum": 1,
+  "base_trim": 0,
+  "radius_mm": 8,
+  "source_brep": "data/models/36.brep",
+  "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "source_fixture_json": "data/fixtures/36.json",
+  "source_fixture_sha256": "08cfd7149e43cdbb2f43d14013f55d8363b1c9305408f11cdcca581fccc7904c",
+  "operation_input_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "run_dir": "runs/case36-faceface/smlib/minimal-base0",
+  "process": {
+    "return_code": 0,
+    "timeout": false,
+    "watchdog_seconds": 60,
+    "fresh_process": true
+  },
+  "operation_input_sha256_scope": "canonical_source_brep_fingerprint; SDK reads admitted native SMB components, not this BREP",
+  "native_input_files": [
+    {
+      "side": "left",
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left.smb",
+      "sha256": "13489afe574ecade076a0c9d55cd2133aea58e9a1ccd6f322b0a3edaaa6febea",
+      "role": "Serialized actual finite NURBS call component before native operation; SDK native SMB"
+    },
+    {
+      "side": "right",
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right.smb",
+      "sha256": "1984e3d54181a07c8c8308237bacd3800bbfe9330c1fcb4ed18b767166e41984",
+      "role": "Serialized actual finite NURBS call component before native operation; SDK native SMB"
+    }
+  ],
+  "native_input_pair_sha256": "334ac7c2d2930a243b15161538143fe094ec042de5d024676acad3180cd9c483",
+  "native_input_pair_sha256_scope": "SHA256 of ordered side-and-file-SHA256 list; not a single file hash",
+  "canonical_before_brep_role": "Byte-identical source lineage copy; not the native SDK operation representation",
+  "fresh_native_process": true,
+  "native_call_started": true,
+  "native_api_raw_status": 1000,
+  "operation": {
+    "native_api_raw_status": 1000,
+    "native_api_success": true,
+    "native_call_started": true,
+    "nonnull_result": true,
+    "operation_ms": 0.664917
+  },
+  "outcome": "native_candidate_pending_trim_function_and_visual_acceptance",
+  "candidate_validity_passed": true,
+  "result_kind": "independent_blend_sheet",
+  "native_stats": {
+    "area": 175.92918859526372,
+    "area_measurement": "sum native trimmed-face ComputePreciseProperties relative1e-9, no public wrapper clamp",
+    "area_statuses": [
+      1000
+    ],
+    "bbox": [
+      -7,
+      0,
+      0,
+      7,
+      8,
+      8.000000000000004
+    ],
+    "bbox_status": 1000,
+    "components": 1,
+    "edges": 4,
+    "faces": 1,
+    "manifold_solid": false,
+    "material_census_status": 1000,
+    "material_regions": 0,
+    "max_edge_tol": 1e-06,
+    "max_vertex_tol": 1e-06,
+    "shells": 1,
+    "valid": true,
+    "vertices": 4,
+    "voids": 0,
+    "volume": 0,
+    "volume_status": "not_applicable_open_sheet"
+  },
+  "native_readback_stats": {
+    "area": 175.92918859526347,
+    "area_measurement": "sum native trimmed-face ComputePreciseProperties relative1e-9, no public wrapper clamp",
+    "area_statuses": [
+      1000
+    ],
+    "bbox": [
+      -7,
+      0,
+      0,
+      7,
+      8,
+      8.000000000000004
+    ],
+    "bbox_status": 1000,
+    "components": 1,
+    "edges": 4,
+    "faces": 1,
+    "manifold_solid": false,
+    "material_census_status": 1000,
+    "material_regions": 0,
+    "max_edge_tol": 1e-06,
+    "max_vertex_tol": 1e-06,
+    "shells": 1,
+    "valid": true,
+    "vertices": 4,
+    "voids": 0,
+    "volume": 0,
+    "volume_status": "not_applicable_open_sheet"
+  },
+  "native_readback_passed": true,
+  "input_imports": [
+    {
+      "side": "left",
+      "import_dir": ".cache/smlib-inputs/cb08248874ee2c7521fe194d7c521ec89571662be82ad029d7077aa0c4d36cd3",
+      "source_fixture_sha256": "08cfd7149e43cdbb2f43d14013f55d8363b1c9305408f11cdcca581fccc7904c",
+      "component_index": 1,
+      "core_library_sha256": "892bb437cf7819ae1c15a6129555207eadaab17f0ef9961d8c1f6ee9a0dc27ee",
+      "importer_binary_sha256": "4c2f1a13fa48b1e39fb14327bed0bce4fa31a0f8561e1d134bf2b8a4f021c307",
+      "verifier_source_sha256": "9a893d01f03ca70887f3c1d6edc18ce3d8f8548db685c77ab4f20d4cc39a9df8",
+      "encoder_source_sha256": "d8d66a8222bcfd5f9b87f6ac2d4355dc727103950dbae3bb499cb172d7fb824a",
+      "constructed_at": "2026-10-28T23:23:47.596468+00:00",
+      "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+      "automatic_heal": false,
+      "stitch": false,
+      "thickening": false,
+      "passed": true,
+      "exchange_tokens_sha256": "e6af82d8ca13886c1b395dc547c6e697ab46ac36ff3bb749cee34432a1dac34e",
+      "process": {
+        "return_code": 0,
+        "timeout": false,
+        "watchdog_seconds": 60,
+        "fresh_process": true
+      },
+      "native_gates": {
+        "native_valid": true,
+        "native_readback_valid": true,
+        "topology_counts": true,
+        "material_type": true,
+        "process_exit": true
+      },
+      "equivalence": {
+        "method": "Independent Cox-de Boor rational basis; native sample points and source metrics",
+        "geometry_is_sampled_not_global_analytic_proof": true,
+        "checks": {
+          "area": true,
+          "volume": true,
+          "bbox": true,
+          "curve_samples": true,
+          "surface_samples": true,
+          "upstream_conversion": true
+        },
+        "passed": true,
+        "native_edge_samples": 84,
+        "native_surface_samples": 25,
+        "curve_residual_mm": 3.66205343881779e-15,
+        "surface_residual_mm": 0.0,
+        "upstream_conversion_residual_mm": 0.0,
+        "area_error_mm2": 5.684341886080802e-14,
+        "volume_error_mm3": 0.0,
+        "bbox_error_mm": 0.0
+      },
+      "native_smb_sha256": "51b03a4ef098de74766855b6ad3bffb512d1461698063a8bf51da1b422a6b6d5",
+      "artifacts": {
+        "component-1-volume.json": "d4f820d06cd5e7abfb0bef9f26315a004824f5bb65fd08b26c74ccdd8ae07df5",
+        "import.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "component-1-topology-map.json": "0ef14d9faa934b9d5a8c13ad578cb3028f14e53ed778d628e42340cc470f0924",
+        "exchange.tokens": "e6af82d8ca13886c1b395dc547c6e697ab46ac36ff3bb749cee34432a1dac34e",
+        "component-1-validity-details.json": "f41e8f706fca07f38800047975fc1c8b7ca536d698eb092b953d86978e39a01c",
+        "component-1-readback-stats.json": "ed2ba40f303f161bf826ed5a441b660e059b18a8a45a170d9d57ab87d4c11bca",
+        "stage.txt": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1",
+        "component-1-stats.json": "ed2ba40f303f161bf826ed5a441b660e059b18a8a45a170d9d57ab87d4c11bca",
+        "import.stdout.log": "69e2737c1c9355e42d5e0a3a296cf2db364013308b27277ec8fd1499d1702d60",
+        "component-1-mesh.json": "180fcde201a75042d8a276f25c48d69845c59c3d4b112e65f7b5f9f49b3e0e56",
+        "component-1.smb": "51b03a4ef098de74766855b6ad3bffb512d1461698063a8bf51da1b422a6b6d5",
+        "component-1-samples.json": "25618dac71ac2753ef7059c455593cc928e49df6583cb6239a863ede92f029c2"
+      }
+    },
+    {
+      "side": "right",
+      "import_dir": ".cache/smlib-inputs/a77c99427a193f33726e7d8c62a397955830d96d0a83c985dc54b655e33a49ea",
+      "source_fixture_sha256": "08cfd7149e43cdbb2f43d14013f55d8363b1c9305408f11cdcca581fccc7904c",
+      "component_index": 2,
+      "core_library_sha256": "892bb437cf7819ae1c15a6129555207eadaab17f0ef9961d8c1f6ee9a0dc27ee",
+      "importer_binary_sha256": "4c2f1a13fa48b1e39fb14327bed0bce4fa31a0f8561e1d134bf2b8a4f021c307",
+      "verifier_source_sha256": "9a893d01f03ca70887f3c1d6edc18ce3d8f8548db685c77ab4f20d4cc39a9df8",
+      "encoder_source_sha256": "d8d66a8222bcfd5f9b87f6ac2d4355dc727103950dbae3bb499cb172d7fb824a",
+      "constructed_at": "2026-10-28T23:23:47.608711+00:00",
+      "input_track": "explicit_exact_NURBS_exchange_no_stitch_heal",
+      "automatic_heal": false,
+      "stitch": false,
+      "thickening": false,
+      "passed": true,
+      "exchange_tokens_sha256": "0307dd30cb6aa54a05b11cf89afd93233a2f3689dd1560d4317e603ba169e355",
+      "process": {
+        "return_code": 0,
+        "timeout": false,
+        "watchdog_seconds": 60,
+        "fresh_process": true
+      },
+      "native_gates": {
+        "native_valid": true,
+        "native_readback_valid": true,
+        "topology_counts": true,
+        "material_type": true,
+        "process_exit": true
+      },
+      "equivalence": {
+        "method": "Independent Cox-de Boor rational basis; native sample points and source metrics",
+        "geometry_is_sampled_not_global_analytic_proof": true,
+        "checks": {
+          "area": true,
+          "volume": true,
+          "bbox": true,
+          "curve_samples": true,
+          "surface_samples": true,
+          "upstream_conversion": true
+        },
+        "passed": true,
+        "native_edge_samples": 84,
+        "native_surface_samples": 25,
+        "curve_residual_mm": 3.66205343881779e-15,
+        "surface_residual_mm": 0.0,
+        "upstream_conversion_residual_mm": 0.0,
+        "area_error_mm2": 0.0,
+        "volume_error_mm3": 0.0,
+        "bbox_error_mm": 0.0
+      },
+      "native_smb_sha256": "b84e5225cf25fdd2a7fa6841f72bfa43fdad6ebc349e48feb05b445d251d3dc0",
+      "artifacts": {
+        "component-1-volume.json": "d4f820d06cd5e7abfb0bef9f26315a004824f5bb65fd08b26c74ccdd8ae07df5",
+        "import.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "component-1-topology-map.json": "0ef14d9faa934b9d5a8c13ad578cb3028f14e53ed778d628e42340cc470f0924",
+        "exchange.tokens": "0307dd30cb6aa54a05b11cf89afd93233a2f3689dd1560d4317e603ba169e355",
+        "component-1-validity-details.json": "f41e8f706fca07f38800047975fc1c8b7ca536d698eb092b953d86978e39a01c",
+        "component-1-readback-stats.json": "dce3087f6d2f7b7f4a255b405053ac90d607ab06d5b223d78f2710c13be74c5f",
+        "stage.txt": "37a40f08d8548dba289b9b0bb35bcf63b359f6d37ee86044ebc6b6da080b9ec1",
+        "component-1-stats.json": "88cfb1562091c9abcb4b7251daaa0f7a0fb84627d1e9349800461de55a99cbb0",
+        "import.stdout.log": "69e2737c1c9355e42d5e0a3a296cf2db364013308b27277ec8fd1499d1702d60",
+        "component-1-mesh.json": "9fa35190e846757755c88a6d9b2797fc32ade16a00936dca9b5dcffb2b94de20",
+        "component-1.smb": "b84e5225cf25fdd2a7fa6841f72bfa43fdad6ebc349e48feb05b445d251d3dc0",
+        "component-1-samples.json": "b0a04724e98853becc7fed41623303e09dcad8b8b4d412dc33858491d7e70f87"
+      }
+    }
+  ],
+  "finite_input_gate": {
+    "finite_face_gap_mm": 7.0710678118654755,
+    "gap_status": 1000,
+    "left": {
+      "area_mm2": 280,
+      "bbox_mm": [
+        -7,
+        0,
+        5,
+        7,
+        0,
+        25
+      ],
+      "corner_set_error_mm": 0,
+      "face_uv_domain": [
+        -10,
+        10,
+        -7,
+        7
+      ],
+      "finite_face_vertices_mm": [
+        [
+          -7,
+          0,
+          25
+        ],
+        [
+          -7,
+          0,
+          5
+        ],
+        [
+          7,
+          0,
+          5
+        ],
+        [
+          7,
+          0,
+          25
+        ]
+      ],
+      "natural_uv_domain": [
+        -10,
+        10,
+        -7,
+        7
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "passed": true,
+      "support_corners_mm": [
+        [
+          -7,
+          0,
+          25
+        ],
+        [
+          7,
+          0,
+          25
+        ],
+        [
+          -7,
+          0,
+          5
+        ],
+        [
+          7,
+          0,
+          5
+        ]
+      ]
+    },
+    "passed": true,
+    "right": {
+      "area_mm2": 449.9999999999999,
+      "bbox_mm": [
+        -12.5,
+        5,
+        0,
+        12.5,
+        23,
+        0
+      ],
+      "corner_set_error_mm": 0,
+      "face_uv_domain": [
+        -12.5,
+        12.5,
+        -9,
+        9
+      ],
+      "finite_face_vertices_mm": [
+        [
+          -12.5,
+          23,
+          0
+        ],
+        [
+          -12.5,
+          5,
+          0
+        ],
+        [
+          12.5,
+          5,
+          0
+        ],
+        [
+          12.5,
+          23,
+          0
+        ]
+      ],
+      "natural_uv_domain": [
+        -12.5,
+        12.5,
+        -9,
+        9
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "passed": true,
+      "support_corners_mm": [
+        [
+          -12.5,
+          5,
+          0
+        ],
+        [
+          -12.5,
+          22.999999999999996,
+          0
+        ],
+        [
+          12.5,
+          5,
+          0
+        ],
+        [
+          12.5,
+          22.999999999999996,
+          0
+        ]
+      ]
+    }
+  },
+  "input_post_hash_checks": {
+    "left": {
+      "call_input_unchanged": false,
+      "raw_source_unchanged": true,
+      "input_smb_sha256": "13489afe574ecade076a0c9d55cd2133aea58e9a1ccd6f322b0a3edaaa6febea",
+      "post_smb_sha256": "48fcb28e6bb971fafe5fa88012dff10b1a0578f55bc79bf2894d1e13a5efa224"
+    },
+    "right": {
+      "call_input_unchanged": false,
+      "raw_source_unchanged": true,
+      "input_smb_sha256": "1984e3d54181a07c8c8308237bacd3800bbfe9330c1fcb4ed18b767166e41984",
+      "post_smb_sha256": "72792e0cf70f13988db1ce86006a1ab1cd5239b6bfc32bb3d0d01c8b39bebad7"
+    }
+  },
+  "input_post_finite_domain_metrics": {
+    "left": {
+      "before": {
+        "area": 280,
+        "area_measurement": "sum native trimmed-face ComputePreciseProperties relative1e-9, no public wrapper clamp",
+        "area_statuses": [
+          1000
+        ],
+        "bbox": [
+          -7,
+          0,
+          5,
+          7,
+          0,
+          25
+        ],
+        "bbox_status": 1000,
+        "components": 1,
+        "edges": 4,
+        "faces": 1,
+        "manifold_solid": false,
+        "material_census_status": 1000,
+        "material_regions": 0,
+        "max_edge_tol": 1e-07,
+        "max_vertex_tol": 1e-07,
+        "shells": 1,
+        "valid": true,
+        "vertices": 4,
+        "voids": 0,
+        "volume": 0,
+        "volume_status": "not_applicable_open_sheet"
+      },
+      "after": {
+        "area": 280,
+        "area_measurement": "sum native trimmed-face ComputePreciseProperties relative1e-9, no public wrapper clamp",
+        "area_statuses": [
+          1000,
+          1000
+        ],
+        "bbox": [
+          -7,
+          0,
+          5,
+          7,
+          0,
+          25
+        ],
+        "bbox_status": 1000,
+        "components": 1,
+        "edges": 7,
+        "faces": 2,
+        "manifold_solid": false,
+        "material_census_status": 1000,
+        "material_regions": 0,
+        "max_edge_tol": 1e-06,
+        "max_vertex_tol": 1e-06,
+        "shells": 1,
+        "valid": true,
+        "vertices": 6,
+        "voids": 0,
+        "volume": 0,
+        "volume_status": "not_applicable_open_sheet"
+      },
+      "area_preserved": true,
+      "bbox_preserved": true,
+      "topology_counts_unchanged": false,
+      "finite_domain_preservation_scope": "Area and bounding box only; full finite masks require independent oracle"
+    },
+    "right": {
+      "before": {
+        "area": 449.9999999999999,
+        "area_measurement": "sum native trimmed-face ComputePreciseProperties relative1e-9, no public wrapper clamp",
+        "area_statuses": [
+          1000
+        ],
+        "bbox": [
+          -12.5,
+          5,
+          0,
+          12.5,
+          23,
+          0
+        ],
+        "bbox_status": 1000,
+        "components": 1,
+        "edges": 4,
+        "faces": 1,
+        "manifold_solid": false,
+        "material_census_status": 1000,
+        "material_regions": 0,
+        "max_edge_tol": 1e-07,
+        "max_vertex_tol": 1e-07,
+        "shells": 1,
+        "valid": true,
+        "vertices": 4,
+        "voids": 0,
+        "volume": 0,
+        "volume_status": "not_applicable_open_sheet"
+      },
+      "after": {
+        "area": 449.9999999999999,
+        "area_measurement": "sum native trimmed-face ComputePreciseProperties relative1e-9, no public wrapper clamp",
+        "area_statuses": [
+          1000
+        ],
+        "bbox": [
+          -12.5,
+          5,
+          0,
+          12.5,
+          23,
+          0
+        ],
+        "bbox_status": 1000,
+        "components": 1,
+        "edges": 5,
+        "faces": 1,
+        "manifold_solid": false,
+        "material_census_status": 1000,
+        "material_regions": 0,
+        "max_edge_tol": 1e-06,
+        "max_vertex_tol": 1e-06,
+        "shells": 1,
+        "valid": true,
+        "vertices": 6,
+        "voids": 0,
+        "volume": 0,
+        "volume_status": "not_applicable_open_sheet"
+      },
+      "area_preserved": true,
+      "bbox_preserved": true,
+      "topology_counts_unchanged": false,
+      "finite_domain_preservation_scope": "Area and bounding box only; full finite masks require independent oracle"
+    }
+  },
+  "immutable_source_file_unchanged": true,
+  "precall_finite_domains_match_source": true,
+  "post_input_geometry_domain_preserved": true,
+  "post_input_geometry_domain_preservation_scope": "Native area/bbox plus 17x17 original-mask coverage and 129 samples per actual post-boundary edge; sampled domain proof",
+  "post_input_topology_preserved": false,
+  "post_input_domain_evidence": {
+    "path": "runs/case36-faceface/smlib/minimal-base0/post-domain-audit.json",
+    "sha256": "fc346bb3d8318491002e340a939b8e32656e9382beb45b2f13d64ed70ac3aa6d"
+  },
+  "original_finite_input_admitted": true,
+  "result_mesh": "runs/case36-faceface/smlib/minimal-base0/result.mesh.json",
+  "before_mesh": "runs/case36-faceface/smlib/minimal-base0/before.mesh.json",
+  "solver_contact_tolerance_mm": 1e-06,
+  "approximation_accuracy_parameter": 0.001,
+  "cross_section": "exact rational circular",
+  "approximation_enabled": false,
+  "explicit_post_crop": false,
+  "diagnostic_working_envelope_mm": [
+    -25,
+    0,
+    0,
+    25,
+    23,
+    25
+  ],
+  "outside_diagnostic_working_envelope": false,
+  "actual_native_bbox_mm": [
+    -7,
+    0,
+    0,
+    7,
+    8,
+    8.000000000000004
+  ],
+  "base_trim_behavior": "Requested base_trim0. Return is measured independently; call copies may split wall topology. Raw source objects remain separate.",
+  "trim_function_passed": false,
+  "trim_function_status": "requires independent end/rail oracle; enum name is a candidate mapping",
+  "source_special_feature_passed": false,
+  "full_quality_passed": false,
+  "human_appearance_status": "pending",
+  "artifacts": {
+    "request.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/request.json",
+      "sha256": "4791337c08cb01eb42c0a6ff0779c8d0d02d9b89de52ffc40c5e01680ece08a1"
+    },
+    "input-left.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left.smb.write.json",
+      "sha256": "636ccf5b06252fac2f3e06fe9a6acfab96fdd745e145cc769f7d5dc3a12127c5"
+    },
+    "contact-check.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/contact-check.json",
+      "sha256": "bb92f5681fda9b58af9dc3b522f5a0655933fe1c818dbb4a1f61f3a43e0584c2"
+    },
+    "native.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native.smb.write.json",
+      "sha256": "393c395c925c3dc00a77f4e972d86e6f0a3254e60a8597a96abe6d2a36b5ebed"
+    },
+    "post-domain-audit.stdout.log": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-domain-audit.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "input-right.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right.smb",
+      "sha256": "1984e3d54181a07c8c8308237bacd3800bbfe9330c1fcb4ed18b767166e41984"
+    },
+    "source-right-before.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-right-before.smb",
+      "sha256": "1984e3d54181a07c8c8308237bacd3800bbfe9330c1fcb4ed18b767166e41984"
+    },
+    "post-left.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-left.smb.write.json",
+      "sha256": "798e860a5dfb3eb71d08fb76bab3771cf87873bb2ed985c92bca90cd4eafa016"
+    },
+    "input-left.mesh.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left.mesh.json",
+      "sha256": "b2e65b8da2c2463976bb71dbfd25eeed40c16d5733f3c31ebdbed4a38a3a19a8"
+    },
+    "input-right-support.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right-support.json",
+      "sha256": "639489d113330ae57dbfb85bb5c4eda5eeb1a79a26fa0456765c0b828f34ad3e"
+    },
+    "native.stdout.log": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native.stdout.log",
+      "sha256": "8a88f3876070562d494e8b5a1dec3e57c82acaeafa33662cde5afb0100ed525a"
+    },
+    "post-right.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-right.smb",
+      "sha256": "72792e0cf70f13988db1ce86006a1ab1cd5239b6bfc32bb3d0d01c8b39bebad7"
+    },
+    "source-left-after.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-left-after.smb.write.json",
+      "sha256": "024f3ea1b9a863ef607dae8986bf353dcac717947006d454195d1c35c753aa49"
+    },
+    "result.mesh.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/result.mesh.json",
+      "sha256": "c38505feade5bf85ffe1faa80b23addba7df3817883763cfae09cc77e23e08c0"
+    },
+    "source-right-after.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-right-after.smb.write.json",
+      "sha256": "caf6e42237b46592beab3e93e1d6b297a1188da251bcce994770b5dad8019241"
+    },
+    "source-left-before.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-left-before.smb",
+      "sha256": "13489afe574ecade076a0c9d55cd2133aea58e9a1ccd6f322b0a3edaaa6febea"
+    },
+    "post-left-edges.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-left-edges.json",
+      "sha256": "95fa800846273cb542a334992a2e22b4e2b23466ce4dea447bf8b7e7f20d3ae1"
+    },
+    "post-left.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-left.json",
+      "sha256": "d3a1a89ddd89640c71128844fe5fafc9d3b39457a9fa893f8219366fc579fb49"
+    },
+    "readback-validity.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/readback-validity.json",
+      "sha256": "e6170878cc792aea4e3fe5621f1025c186bf32cd6518398f999a91bbb400a401"
+    },
+    "native-edges.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native-edges.json",
+      "sha256": "f8e90f37abc61e63f37aa297a0993f560ebbbf9a41c9766c83bb3b314f76be00"
+    },
+    "input-right-edges.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right-edges.json",
+      "sha256": "8383b1202e303e8aef24a632b20fa64aba2f70c0db33e375c0e8c94768c3162f"
+    },
+    "input-gates.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-gates.json",
+      "sha256": "705f8383a209ca3500e2fba3ddc1ded01bb86846d69182a26232e0f130da0b98"
+    },
+    "input-right.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right.json",
+      "sha256": "38e62efc068d5597fd1ac0b6195ef8f6f964856721ce91d4d9f3f450187e2e65"
+    },
+    "before.mesh.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/before.mesh.json",
+      "sha256": "1b1e68a8bcecf4606042f45f37b7a4353244521d593a0a03db5447fcfb9f8530"
+    },
+    "source-right-before.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-right-before.smb.write.json",
+      "sha256": "b04d45d5bfb0adb593e093151382a392ddbba8f8df14e99c91dbf956c3eb331b"
+    },
+    "source-right-after.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-right-after.smb",
+      "sha256": "1984e3d54181a07c8c8308237bacd3800bbfe9330c1fcb4ed18b767166e41984"
+    },
+    "input-right.mesh.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right.mesh.json",
+      "sha256": "b98da340a83a5717b2560e540e8a917afd473b5c3e4ed0f34e83a2e7042eaba7"
+    },
+    "post-domain-audit.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-domain-audit.json",
+      "sha256": "fc346bb3d8318491002e340a939b8e32656e9382beb45b2f13d64ed70ac3aa6d"
+    },
+    "source-left-after.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-left-after.smb",
+      "sha256": "13489afe574ecade076a0c9d55cd2133aea58e9a1ccd6f322b0a3edaaa6febea"
+    },
+    "native.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native.json",
+      "sha256": "1a04901e08865272bdc053664aba4fa0e3cbd9af889fbe7f5e5074774efb58bd"
+    },
+    "input-left.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left.json",
+      "sha256": "d814d500a863bb77c3a77c46de2269c047b4c5501fc5c2c507015a1f422f8fe3"
+    },
+    "readback.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/readback.smb.write.json",
+      "sha256": "713fc3ef202a71289cf9eeb5ffe095574c42e955089ab0f068f8dc9c520d22c1"
+    },
+    "post-domain-audit.stderr.log": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-domain-audit.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "post-right-edges.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-right-edges.json",
+      "sha256": "9f8d82daccdb5331582fee97a09fb031d201b44710677b08509eaf8e1a79a589"
+    },
+    "readback.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/readback.smb",
+      "sha256": "90a422d1cc7f94d4e98d5969fe6b2abff28ea3118ee80e8354d79b9c1889653c"
+    },
+    "readback-operation.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/readback-operation.json",
+      "sha256": "93fb3507a03876db8c4341151642a7ff435ec63f8e4be82e07c8911280fadb9c"
+    },
+    "native.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native.smb",
+      "sha256": "ef06283256ae0e17845259fbb88762068408c4341b3e76c37f0791fbded44dde"
+    },
+    "readback.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/readback.json",
+      "sha256": "9f2de21f50a3b7cbd051b958c5040c63664feea399440adf8c9f479cd5e18b8d"
+    },
+    "job.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/job.json",
+      "sha256": "3851d43ac294fbc4a2de51c2cfbb2c4d1b8029b019cd6c76fd1d5273f64acdc2"
+    },
+    "readback-edges.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/readback-edges.json",
+      "sha256": "1e2cec8fac9f71e80d152c21d6ba110dfb4b08fe2b6efbf2b2eec84b31c683b1"
+    },
+    "post-left.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-left.smb",
+      "sha256": "48fcb28e6bb971fafe5fa88012dff10b1a0578f55bc79bf2894d1e13a5efa224"
+    },
+    "operation.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/operation.json",
+      "sha256": "0643ab4d8d094b9c544ea7395f96e972571cc21e034d168b7b847ec869009843"
+    },
+    "native.stderr.log": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "surface-D2.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/surface-D2.json",
+      "sha256": "af749853b51edb383de26ef9a0ef19c345abe98d454090e550ebbd6bb43393bc"
+    },
+    "input-left-support.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left-support.json",
+      "sha256": "11512769937806f2786862dd100edf704a121807d6650b4facdfdcb2f9a5467a"
+    },
+    "input-left-edges.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left-edges.json",
+      "sha256": "558bc76b36fe3372d168ca17a570f42f6aebe25882bed1c38fdaeccb76127fd6"
+    },
+    "source-left-before.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/source-left-before.smb.write.json",
+      "sha256": "904455fcbcd122c83e9b7097a793212c6a445ff636f668e3c6d05c1495efbe31"
+    },
+    "before.brep": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/before.brep",
+      "sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1"
+    },
+    "input-right.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-right.smb.write.json",
+      "sha256": "0e9dab55202e3a68eae2a93a374894bb1c1225ee4f13a1170148bda4bc14de05"
+    },
+    "post-right.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-right.json",
+      "sha256": "8d14aa3510e560baa040798a075613e901e4ee1d3089795d2a3ea0c4385b4f17"
+    },
+    "input-left.smb": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/input-left.smb",
+      "sha256": "13489afe574ecade076a0c9d55cd2133aea58e9a1ccd6f322b0a3edaaa6febea"
+    },
+    "post-right.smb.write.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/post-right.smb.write.json",
+      "sha256": "3ea910f2be46bec7e3bddc7cc5d22e3b44f4ed7ddbdcda0045f7c5f84dae9282"
+    },
+    "native-validity.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/native-validity.json",
+      "sha256": "e6170878cc792aea4e3fe5621f1025c186bf32cd6518398f999a91bbb400a401"
+    },
+    "phase.json": {
+      "path": "runs/case36-faceface/smlib/minimal-base0/phase.json",
+      "sha256": "8fdf95671177efc7938405450bf70f77a77a9fb7a56005efc9e5fce6ba5f23f9"
+    }
+  }
+}

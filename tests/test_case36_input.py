@@ -5,7 +5,10 @@ sys.path.insert(0,str(ROOT/'tools'))
 from audit_case36_input import case36_input_checks
 
 class Case36InputTests(unittest.TestCase):
-    def setUp(self):self.case=json.loads((ROOT/'web/data/original-occ/cases/36.json').read_text())
+    def setUp(self):
+        # The small-radius admission baseline remains reproducible after the
+        # current viewer moves on to actual R8 face-face experiments.
+        self.case=json.loads((ROOT/'web/data/case36-input/published-case.json').read_text())['case']
     def test_exact_original_input_and_admission_only_evidence(self):
         checks,_=case36_input_checks(self.case,ROOT)
         self.assertTrue(all(checks.values()),[key for key,ok in checks.items() if not ok])

@@ -23,6 +23,8 @@ class OriginalSmlibColumnTests(unittest.TestCase):
     def test_different_special_protocols_are_not_paired(self):
         for case,variant in [(35,'proxy-s1p0'),(36,'part01-r1p0')]:
             c=json.loads((ROOT/f'web/data/original-occ/cases/{case:02d}.json').read_text())
+            if case==36 and c.get('faceface_protocol'):
+                c=json.loads((ROOT/'web/data/case36-input/published-case.json').read_text())['case']
             sm=next(v for v in c['variants'] if v['id']==variant)['smlib']
             self.assertIsNone(sm.get('mesh'))
             self.assertIn(sm['pairing_status'],['protocol_not_encoded','no_comparable_run'])

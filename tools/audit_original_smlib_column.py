@@ -73,12 +73,23 @@ def main():
  baseline=read(ROOT/'docs/original-smlib-pairing-audit.json');proof={(r['number'],r['original_variant_id']):r for r in baseline['rows']};issues=[];rows=[];counts=collections.Counter()
  for cp in sorted((WEB/'data/original-occ/cases').glob('*.json')):
   case=read(cp)
+  faceface_checks=None
+  if case.get('faceface_protocol'):
+   from verify_case36_faceface import case36_faceface_checks
+   faceface_checks,_=case36_faceface_checks(case,ROOT)
+   faceface_checks['faceface_public_case_file']=cp.name=='36.json' and case.get('number')==36
+   issues.extend({'number':case['number'],'gate':name} for name,ok in faceface_checks.items() if not ok)
   if case.get('revision'):
    revision_checks,_=case11_revision_checks(case)
    revision_checks['revision_public_case_file']=cp.name=='11.json' and case.get('number')==11
    issues.extend({'number':case['number'],'gate':name} for name,ok in revision_checks.items() if not ok)
   for v in case['variants']:
    sm=v['smlib'];key=(case['number'],v['id']);checks={};kind=sm['pairing_status'];counts[kind]+=1
+   if faceface_checks is not None:
+    prefix=v['id']+':smlib:'
+    checks={name:ok for name,ok in faceface_checks.items() if name.startswith(prefix) or name==v['id']+':sdk_pairing_scope' or name==v['id']+':no_reused_sdk_control'}
+    rows.append({'number':case['number'],'variant_id':v['id'],'pairing_status':kind,'evidence_kind':sm['evidence_kind'],'source_job_id':sm.get('source_job_id'),'checks':checks,'reason':sm.get('reason')})
+    continue
    if kind.startswith('matched_'):
     jobid=sm['source_job_id'];jp=ROOT/sm['request_file'] if sm.get('request_file') else ROOT/f'data/original-smlib/jobs/{jobid}.json';new=jp.exists()
     if case.get('revision') and (not sm.get('request_file') or repository_file(ROOT,sm['request_file']) is None):

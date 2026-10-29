@@ -121,7 +121,8 @@ def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--suite-run',type=pathlib.Path,help='Output of bench.py original; preserve unrelated published views');args=parser.parse_args()
  suite=args.suite_run.resolve() if args.suite_run else None
  suite_case11=None
- suite_case36=None
+ suite_case36_faceface=None
+ suite_case36_native=None
  suite_metadata={}
  if suite and (suite/'suite-index.json').exists():
   suite_metadata=read(suite/'suite-index.json');current=suite_metadata.get('current_case11')
@@ -129,26 +130,36 @@ def main():
    import publish_case11_revision
    suite_case11=(suite/current.get('run_dir','case11-convexity')).resolve()
    publish_case11_revision.validate_occ_run(suite_case11)
-  current36=suite_metadata.get('current_case36')
+  if suite_metadata.get('current_case36'):
+   raise ValueError('This suite contains the legacy case36 admission-only workflow; it cannot replace the current face-face results. Re-run case36 or inspect its archived input-admission evidence directly.')
+  current36=suite_metadata.get('current_case36_faceface')
+  native36=suite_metadata.get('current_case36_native')
+  if current36 or native36:import publish_case36_faceface
   if current36:
-   import publish_case36_input
-   suite_case36=(suite/current36.get('run_dir','case36-input')).resolve()
-   publish_case36_input.validate_run36(suite_case36)
+   suite_case36_faceface=(suite/current36.get('run_dir','case36-faceface/occt-composite')).resolve()
+   publish_case36_faceface.validate_case36_faceface_run(suite_case36_faceface)
+  if native36:
+   suite_case36_native=(suite/native36.get('run_dir','case36-faceface/occt-native')).resolve()
+   publish_case36_faceface.validate_case36_native_run(suite_case36_native)
  if suite and (suite/'case11-convexity/report.json').exists() and suite_case11 is None:
   raise ValueError('Case11 suite output has no current_case11 manifest binding; refusing to publish an unrelated cached run')
- if suite and (suite/'case36-input/index.json').exists() and suite_case36 is None:
-  raise ValueError('Case36 suite output has no current_case36 manifest binding; refusing to publish an unrelated cached run')
+ if suite and (suite/'case36-input/index.json').exists():
+  raise ValueError('Legacy case36 common-edge admission output is separate from the current face-face collection')
+ if suite and (suite/'case36-faceface/occt-composite/index.json').exists() and suite_case36_faceface is None:
+  raise ValueError('Case36 composite output has no current_case36_faceface manifest binding; refusing a cached substitution')
+ if suite and (suite/'case36-faceface/occt-native/index.json').exists() and suite_case36_native is None:
+  raise ValueError('Case36 native output has no current_case36_native manifest binding; refusing a composite substitution')
  if suite_case11 is not None and suite_metadata.get('case')==11 and not suite_metadata.get('all'):
   publish_case11_revision.main(occ_run=suite_case11);return
- if suite_case36 is not None and suite_metadata.get('case')==36 and not suite_metadata.get('all'):
-  publish_case36_input.main(run_dir=suite_case36);return
+ if (suite_case36_faceface is not None or suite_case36_native is not None) and suite_metadata.get('case')==36 and not suite_metadata.get('all'):
+  publish_case36_faceface.main(occt_run=suite_case36_faceface,native_run=suite_case36_native);return
  ip=read(SOURCE/'index.json');runs,_=load_runs(suite);cases=[];counts=collections.Counter()
  if not runs and (DEST/'catalog.json').exists():
   if suite_case11 is not None:
    publish_case11_revision.main(occ_run=suite_case11)
-  if suite_case36 is not None:
-   publish_case36_input.main(run_dir=suite_case36)
-  if suite_case11 is not None or suite_case36 is not None:return
+  if suite_case36_faceface is not None or suite_case36_native is not None:
+   publish_case36_faceface.main(occt_run=suite_case36_faceface,native_run=suite_case36_native)
+  if suite_case11 is not None or suite_case36_faceface is not None or suite_case36_native is not None:return
   print('No fresh local runs; retaining the published original-series snapshot.');return
  legacy=ROOT.parent/'outputs/parasolid-preblend/manifest.json'
  # Original recipe metadata is optional; each mesh is still made from the
@@ -206,9 +217,10 @@ def main():
   import attach_original_smlib
   with ExitStack() as contexts:
    if suite_case11 is not None:contexts.enter_context(publish_case11_revision.using_occ_run(suite_case11))
-   if suite_case36 is not None:contexts.enter_context(publish_case36_input.using_run36(suite_case36))
+   if suite_case36_faceface is not None:contexts.enter_context(publish_case36_faceface.using_case36_faceface_run(suite_case36_faceface))
+   if suite_case36_native is not None:contexts.enter_context(publish_case36_faceface.using_case36_native_run(suite_case36_native))
    attach_original_smlib.main()
  else:
   if suite_case11 is not None:publish_case11_revision.main(occ_run=suite_case11)
-  if suite_case36 is not None:publish_case36_input.main(run_dir=suite_case36)
+  if suite_case36_faceface is not None or suite_case36_native is not None:publish_case36_faceface.main(occt_run=suite_case36_faceface,native_run=suite_case36_native)
 if __name__=='__main__':main()

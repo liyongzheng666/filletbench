@@ -1,5 +1,10 @@
 # Case 36 exact-input admission correction
 
+This is the retained small-radius admission baseline. Since v0.5 the current
+viewer uses the separately executed R8 face-face results in
+`data/case36-faceface`. This admission audit is not a claim that those newer
+face-face calls were blocked or never executed.
+
 The active original-series input is the exact frozen BREP `c88672...fbc5a1`.
 Its two finite faces remain separate: the vertical face is 14 mm wide and starts
 at z=5; the horizontal face is 25 mm wide and starts at y=5. Their shortest gap

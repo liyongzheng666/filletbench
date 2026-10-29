@@ -46,9 +46,17 @@ class OriginalSeriesTests(unittest.TestCase):
         v=next(v for v in d['variants'] if v['id']==d['default_variant'])
         self.assertEqual(v['base_mesh'],v['operation_mesh'])
         self.assertEqual(v['input_relation'],'same_as_base')
-        self.assertFalse(v['occt']['native_call_executed'])
-        self.assertEqual(v['occt']['status'],'blocked')
-        self.assertIsNone(v['occt']['mesh'])
+        if d.get('faceface_protocol'):
+            spec=importlib.util.spec_from_file_location('case36_faceface_verifier',ROOT/'tools/verify_case36_faceface.py')
+            verifier=importlib.util.module_from_spec(spec);spec.loader.exec_module(verifier)
+            checks,_=verifier.case36_faceface_checks(d,ROOT)
+            self.assertTrue(all(checks.values()),[name for name,ok in checks.items() if not ok])
+            self.assertEqual(v['occt']['method'],'explicit_occ_composition')
+            self.assertFalse(v['occt']['native_call_executed'])
+        else:
+            self.assertFalse(v['occt']['native_call_executed'])
+            self.assertEqual(v['occt']['status'],'blocked')
+            self.assertIsNone(v['occt']['mesh'])
         self.assertEqual(v['occt']['source_sha256'],v['occt']['operation_input_sha256'])
         self.assertTrue(v.get('preparation_note'))
     def test_case22_keeps_the_original_radius_and_step_failure_record(self):

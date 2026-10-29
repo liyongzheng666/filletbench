@@ -102,10 +102,15 @@ def case36_input_checks(case,root=ROOT):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',type=Path);args=parser.parse_args()
-    case=read(ROOT/'web/data/original-occ/cases/36.json');checks,contract=case36_input_checks(case)
+    case=read(ROOT/'web/data/original-occ/cases/36.json')
+    baseline_scope='current original-input admission view'
+    if case.get('faceface_protocol'):
+        case=read(ROOT/'web/data/case36-input/published-case.json')['case']
+        baseline_scope='archived small-radius admission baseline; current R8 face-face results use verify_case36_faceface.py'
+    checks,contract=case36_input_checks(case)
     report={'schema':'case36.published-input-verification.v1','passed':all(checks.values()),'protocol_id':contract.get('id'),'checks':checks,'issues':[k for k,v in checks.items() if not v],
-            'scope':'Exact input and recorded preflight identity; no new native call, kernel limitation claim or human appearance acceptance.'}
+            'scope':'Exact input and recorded preflight identity; no new native call, kernel limitation claim or human appearance acceptance.','baseline_scope':baseline_scope}
     if args.output:args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-    print(json.dumps({'passed':report['passed'],'issues':report['issues']}));return 0 if report['passed'] else 1
+    print(json.dumps({'passed':report['passed'],'issues':report['issues'],'baseline_scope':baseline_scope}));return 0 if report['passed'] else 1
 
 if __name__=='__main__':sys.exit(main())

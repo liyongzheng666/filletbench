@@ -485,10 +485,23 @@ class Audit:
         self.require(catalog['source_review_state_sha256'] == self.initial_review_hash, 'published_original_review_source_changed')
         revisions = []
         input_admission_protocols = []
+        faceface_protocols = []
         for entry in catalog['cases']:
             n = entry['number']; case = read(self.repo / 'web' / entry['data'])
             contract = None
             admission = None
+            faceface = None
+            if case.get('faceface_protocol'):
+                from verify_case36_faceface import case36_faceface_checks
+                checks, faceface = case36_faceface_checks(case, self.repo)
+                checks['faceface_catalog_case_number'] = n == 36 and case.get('number') == n
+                for name, passed in checks.items():
+                    self.require(passed, 'published_' + name, number=n)
+                if all(checks.values()):
+                    for row in faceface['bindings']:
+                        if row['engine'] in ('occt_composite','occt_native'):
+                            bindings[(n,row['variant_id'])] = {row['summary_sha256']}
+                    faceface_protocols.append(dict(number=n,protocol=case['faceface_protocol'],source_sha256=case['source_sha256'],radius_mm=faceface['radius_mm'],variants=len(case['variants']),scope='Native face-face baseline and explicit trim construction are distinct; source-feature/human acceptance remain pending.'))
             if case.get('input_protocol'):
                 from audit_case36_input import case36_input_checks
                 checks, admission = case36_input_checks(case, self.repo)
@@ -548,11 +561,12 @@ class Audit:
                 for key in ('base_mesh', 'operation_mesh'):
                     if variant.get(key): self.require((self.repo / 'web' / variant[key]).is_file(), 'published_mesh_missing', number=n, variant=variant['id'], kind=key)
             if n == 36:
-                if admission:
+                if admission or faceface:
                     self.require(all(v['base_mesh'] == v['operation_mesh'] for v in case['variants']), 'published_case36_original_input_changed')
                 else:
                     self.require(all(v['base_mesh'] != v['operation_mesh'] for v in case['variants']), 'published_case36_extended_input_is_base')
         return dict(computation_variants_with_fresh_summary=fresh, catalog_sha256=sha(path), registered_public_revisions=revisions,
+                    registered_faceface_protocols=faceface_protocols,
                     registered_input_admission_protocols=input_admission_protocols,
                     frozen_originals_independently_preserved=True)
 
@@ -607,6 +621,7 @@ class Audit:
                                    'Historical source revisions remain separately marked replay tracks; their results do not become current-source defaults.',
                                    'Independent finite edge matching uses endpoint, length, all recorded samples and native face ownership; a sampled check is not global curve equivalence.',
                                    'Explicit construction execution is separate from native special-feature support. Native API completion, native BRep/BOP validity, STEP roundtrip, continuity and appearance remain independent.',
+                                   'The counts describe frozen original replay records; active face-face protocol bindings are recorded separately under published and are not a native-feature pass rate.',
                                    'Composition STEP gates were not newly executed by this auditor. Historical STEP failures are preserved as historical evidence.'],
                       issues=self.issues, cases=self.case_rows, native_runs=self.native_rows, composition_runs=self.composition_rows, g2_proxy_runs=self.g2_rows)
         output = self.repo / 'docs/original-series-audit.json'; output.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
@@ -623,7 +638,7 @@ class Audit:
             '- 33 的 a/b 两条独立反向偏距和 34 的 absolute/relative rho 分别通过独立数学剖面点到有限结果的距离核对；原生圆角仅作对照。',
             '- 35 三档 degree9 代理保留原始控制点和 α，独立采样验证有限结果；数字 softness 映射与完整 G2/外观验收未由本次采样证明。',
             '- 22 R6 原生 BREP 通过而 STEP 失败；独立重读新 STEP 仍出现 BOPAlgo_InvalidCurveOnSurface，旧失败记录继续保留。',
-            '- 36 原 base 是两个不相交有限面，面间最短距离 %.6f mm；延伸/裁公共带后共边圆角输入单独展示。' % gap_value(specifics),
+            ('- 36 当前保留原两张不相交、不等宽有限面，间距 %.6f mm；R8原生面面基准、四种显式裁剪和SMLib原生枚举分别绑定实际新结果；旧等宽L壳及小半径前置检查留档，不能充作本轮功能通过。' if published.get('registered_faceface_protocols') else '- 36 原 base 是两个不相交有限面，面间最短距离 %.6f mm；旧延伸/裁公共带控制与原有限输入分开记录。') % gap_value(specifics),
             '- 冻结源数据、运行记录与原版网页数据进行了机器绝对路径和参考图像/PDF 扫描；结果见 JSON 的 public_scan 与 issues。', '',
             '## 验证边界', '',
             '读取冻结 BREP、提取子体、缝合或构造操作输入，不等于从参数重建整个 base。组合配方执行不等于原生特殊 API；BREP、STEP、G0/G1/G2 和人工外观验收互不替代。此次不对原始厂商尺寸、全局曲面等价或外观作新验收，也未重新运行所有圆角。', '',

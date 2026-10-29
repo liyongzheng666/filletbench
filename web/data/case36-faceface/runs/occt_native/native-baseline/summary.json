@@ -1,0 +1,1029 @@
+{
+  "engine_version": "7.8.1",
+  "choice": 4,
+  "radius_mm": 8,
+  "guide_parameter_range_from_original_vertex_projections": [
+    -12.5,
+    12.5
+  ],
+  "seed_center_from_original_offset_planes": [
+    0,
+    8,
+    8
+  ],
+  "seed_value_called": true,
+  "seed_evaluated": true,
+  "seed_residual_norm": 0,
+  "seed_is_solution": true,
+  "native_section_angle_rad": 1.5707963267948966,
+  "native_section_radius_mm": 8,
+  "native_walking_called": true,
+  "walking_done": true,
+  "walking_completed_backward": true,
+  "line_point_count": 15,
+  "line": [
+    {
+      "guide_parameter": -7,
+      "contact1": [
+        -7,
+        0,
+        8
+      ],
+      "contact2": [
+        -7,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": -6,
+      "contact1": [
+        -6,
+        0,
+        8
+      ],
+      "contact2": [
+        -6,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": -5,
+      "contact1": [
+        -5,
+        0,
+        8
+      ],
+      "contact2": [
+        -5,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": -4,
+      "contact1": [
+        -4,
+        0,
+        8
+      ],
+      "contact2": [
+        -4,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": -3,
+      "contact1": [
+        -3,
+        0,
+        8
+      ],
+      "contact2": [
+        -3,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": -2,
+      "contact1": [
+        -2,
+        0,
+        8
+      ],
+      "contact2": [
+        -2,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": -1,
+      "contact1": [
+        -1,
+        0,
+        8
+      ],
+      "contact2": [
+        -1,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 0,
+      "contact1": [
+        0,
+        0,
+        8
+      ],
+      "contact2": [
+        0,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 1,
+      "contact1": [
+        1,
+        0,
+        8
+      ],
+      "contact2": [
+        1,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 2,
+      "contact1": [
+        2,
+        0,
+        8
+      ],
+      "contact2": [
+        2,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 3,
+      "contact1": [
+        3,
+        0,
+        8
+      ],
+      "contact2": [
+        3,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 4,
+      "contact1": [
+        4,
+        0,
+        8
+      ],
+      "contact2": [
+        4,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 5,
+      "contact1": [
+        5,
+        0,
+        8
+      ],
+      "contact2": [
+        5,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 6,
+      "contact1": [
+        6,
+        0,
+        8
+      ],
+      "contact2": [
+        6,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    },
+    {
+      "guide_parameter": 7,
+      "contact1": [
+        7,
+        0,
+        8
+      ],
+      "contact2": [
+        7,
+        8,
+        0
+      ],
+      "on_original_face1": true,
+      "on_original_face2": true
+    }
+  ],
+  "native_approximation_called": true,
+  "approximation_done": true,
+  "result_brep_valid": true,
+  "step_transfer_status": 1,
+  "step_write_status": 1,
+  "surface_u_degree": 2,
+  "surface_v_degree": 4,
+  "status": "native_surface_candidate",
+  "process_returncode": 0,
+  "result_inspection_ocp": {
+    "stats": {
+      "null": false,
+      "valid": true,
+      "shape_type": "TopAbs_FACE",
+      "faces": 1,
+      "edges": 4,
+      "vertices": 4,
+      "solids": 0,
+      "shells": 0,
+      "area_mm2": 175.9291886010934,
+      "volume_mm3": 0.0,
+      "bbox_mm": [
+        -7.000000100000002,
+        -1e-07,
+        -1.000000004440892e-07,
+        7.0000001,
+        8.000000100000001,
+        8.000000100000001
+      ]
+    },
+    "bop_argument_check": {
+      "modes": [
+        "argument_type",
+        "self_interference",
+        "small_edges",
+        "rebuild_face",
+        "continuity",
+        "curve_on_surface"
+      ],
+      "has_faulty": false,
+      "has_errors": false,
+      "faults": []
+    },
+    "passed": true
+  },
+  "mesh_export": {
+    "status": "ok",
+    "triangles": 464,
+    "errors": []
+  },
+  "result_brep_sha256": "2eb63b309c4c2ab6663b41bf61424fe34446dd90d5d32a05e6f86ed2bfa362c4",
+  "independent_quality": {
+    "independent_reader_binding_version": "7.9.3.1.1",
+    "contact_rail_samples": [
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          -7.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          -7.000000000000002,
+          8.835497609333553e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 2.5121479338940403e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          -5.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          -5.0,
+          8.834700619279107e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 8.881784197001252e-16,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          -3.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          -3.000000000000001,
+          8.834700619279107e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 1.7763568394002505e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          0.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          -4.440892098500627e-16,
+          8.837091677604519e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 1.7763568394002505e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          3.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          2.999999999999999,
+          8.834700619279108e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 1.7763568394002505e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          5.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          5.000000000000001,
+          8.834700619279108e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 5.916456789157591e-31,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 1,
+        "requested_point_mm": [
+          7.0,
+          0.0,
+          8.0
+        ],
+        "actual_point_mm": [
+          7.000000000000001,
+          8.834700619279107e-31,
+          7.999999999999998
+        ],
+        "projection_distance_mm": 1.9860273225978185e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          -7.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          -7.000000000000001,
+          7.9999999999999964,
+          1.5777218104420236e-30
+        ],
+        "projection_distance_mm": 2.0350724194510405e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          -5.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          -4.999999999999999,
+          7.9999999999999964,
+          1.5777218104420236e-30
+        ],
+        "projection_distance_mm": 1.8310267194088946e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          -3.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          -2.9999999999999996,
+          7.999999999999998,
+          9.86076131526265e-31
+        ],
+        "projection_distance_mm": 1.3322676295501877e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          0.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          -5.828670879282074e-16,
+          7.999999999999998,
+          9.86076131526265e-31
+        ],
+        "projection_distance_mm": 9.93013661298909e-16,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          3.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          3.000000000000001,
+          7.999999999999998,
+          9.86076131526265e-31
+        ],
+        "projection_distance_mm": 1.3322676295501877e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          5.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          4.999999999999999,
+          7.9999999999999964,
+          1.5777218104420236e-30
+        ],
+        "projection_distance_mm": 1.8310267194088946e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      },
+      {
+        "support_index": 2,
+        "requested_point_mm": [
+          7.0,
+          8.0,
+          0.0
+        ],
+        "actual_point_mm": [
+          7.0,
+          7.9999999999999964,
+          1.5777218104420236e-30
+        ],
+        "projection_distance_mm": 3.552713678800501e-15,
+        "unoriented_tangent_plane_error_deg": 0.0,
+        "inside_or_on_original_face": true,
+        "inside_or_on_result_face": true
+      }
+    ],
+    "curvature_samples": [
+      {
+        "point_mm": [
+          -5.599999999999999,
+          0.08445239614586086,
+          6.840644087814709
+        ],
+        "radius_from_native_surface_d2_mm": 7.9999999999999964,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -5.599999999999999,
+          0.35309403114420657,
+          5.649504498307297
+        ],
+        "radius_from_native_surface_d2_mm": 7.999999999999998,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -5.599999999999999,
+          0.8209948000370194,
+          4.469860577979325
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -5.599999999999999,
+          1.4893917115914004,
+          3.351131351080648
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -5.599999999999999,
+          2.3431457505076203,
+          2.34314575050762
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -5.599999999999999,
+          3.3511313510806486,
+          1.4893917115914002
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -5.599999999999999,
+          4.469860577979324,
+          0.820994800037019
+        ],
+        "radius_from_native_surface_d2_mm": 7.999999999999998,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -5.599999999999998,
+          5.649504498307299,
+          0.35309403114420623
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -5.599999999999998,
+          6.840644087814708,
+          0.08445239614586073
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -2.8000000000000007,
+          0.08445239614586086,
+          6.840644087814709
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000005,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -2.8000000000000003,
+          0.35309403114420657,
+          5.649504498307297
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.8,
+          0.8209948000370194,
+          4.469860577979325
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.8000000000000003,
+          1.4893917115914004,
+          3.351131351080648
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000005,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -2.8000000000000003,
+          2.3431457505076203,
+          2.34314575050762
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.8000000000000003,
+          3.3511313510806486,
+          1.4893917115914002
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.8,
+          4.469860577979324,
+          0.820994800037019
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -2.7999999999999994,
+          5.649504498307299,
+          0.35309403114420623
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -2.8000000000000003,
+          6.840644087814708,
+          0.08445239614586073
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -5.860062167868704e-16,
+          0.08445239614586086,
+          6.840644087814709
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000005,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -1.010658833337681e-15,
+          0.35309403114420657,
+          5.649504498307297
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.5319092502739567e-16,
+          0.8209948000370194,
+          4.469860577979325
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.2607224211450185e-16,
+          1.4893917115914004,
+          3.351131351080648
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000005,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -9.755303858498071e-16,
+          2.3431457505076203,
+          2.34314575050762
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.2607224211450185e-16,
+          3.3511313510806486,
+          1.4893917115914002
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          -2.5319092502739567e-16,
+          4.469860577979324,
+          0.820994800037019
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -1.5006752373801932e-15,
+          5.649504498307299,
+          0.35309403114420623
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -5.860062167868703e-16,
+          6.840644087814708,
+          0.08445239614586073
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          2.7999999999999985,
+          0.08445239614586086,
+          6.840644087814709
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          2.799999999999998,
+          0.35309403114420657,
+          5.649504498307297
+        ],
+        "radius_from_native_surface_d2_mm": 7.999999999999998,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          2.799999999999998,
+          0.8209948000370194,
+          4.469860577979325
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          2.7999999999999976,
+          1.4893917115914004,
+          3.351131351080648
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          2.7999999999999985,
+          2.34314575050762,
+          2.3431457505076194
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          2.7999999999999976,
+          3.3511313510806486,
+          1.4893917115914002
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          2.799999999999998,
+          4.469860577979324,
+          0.820994800037019
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          2.799999999999998,
+          5.649504498307299,
+          0.35309403114420623
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          2.799999999999998,
+          6.840644087814708,
+          0.08445239614586073
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          5.6,
+          0.08445239614586086,
+          6.840644087814709
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          5.6,
+          0.35309403114420657,
+          5.649504498307297
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          5.6,
+          0.8209948000370194,
+          4.469860577979325
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          5.599999999999999,
+          1.4893917115914004,
+          3.351131351080648
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000005,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          5.6,
+          2.34314575050762,
+          2.3431457505076194
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          5.599999999999999,
+          3.3511313510806486,
+          1.4893917115914002
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 7.999999999999999
+      },
+      {
+        "point_mm": [
+          5.6,
+          4.469860577979324,
+          0.820994800037019
+        ],
+        "radius_from_native_surface_d2_mm": 8.0,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          5.599999999999999,
+          5.649504498307299,
+          0.35309403114420623
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000002,
+        "distance_to_inferred_circle_center_mm": 8.0
+      },
+      {
+        "point_mm": [
+          5.6,
+          6.840644087814708,
+          0.08445239614586073
+        ],
+        "radius_from_native_surface_d2_mm": 8.000000000000004,
+        "distance_to_inferred_circle_center_mm": 8.0
+      }
+    ],
+    "step_readback": {
+      "read_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
+      "passed": true,
+      "inspection": {
+        "stats": {
+          "null": false,
+          "valid": true,
+          "shape_type": "TopAbs_SHELL",
+          "faces": 1,
+          "edges": 4,
+          "vertices": 4,
+          "solids": 0,
+          "shells": 1,
+          "area_mm2": 175.92918860110342,
+          "volume_mm3": 0.0,
+          "bbox_mm": [
+            -7.0000001,
+            -1e-07,
+            -1.000000004440892e-07,
+            7.000000099999997,
+            8.0000001,
+            8.0000001
+          ]
+        },
+        "bop_argument_check": {
+          "modes": [
+            "argument_type",
+            "self_interference",
+            "small_edges",
+            "rebuild_face",
+            "continuity",
+            "curve_on_surface"
+          ],
+          "has_faulty": false,
+          "has_errors": false,
+          "faults": []
+        },
+        "passed": true
+      }
+    },
+    "gates": {
+      "all_rails_on_original_finite_faces": true,
+      "all_rails_on_native_result_boundary": true,
+      "contact_g0_samples_passed": true,
+      "unoriented_contact_g1_samples_passed": true,
+      "R8_d2_samples_passed": true,
+      "R8_circle_position_samples_passed": true,
+      "step_readback_passed": true
+    },
+    "sampled_gates_passed": true,
+    "scope": "Actual exported native BREP/STEP; sampled contact geometry and unoriented tangent planes only. No topological wall attachment, four-trim semantics or human appearance acceptance."
+  },
+  "source_brep": "data/original-occ/fixtures/c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1.brep",
+  "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "operation_input_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "requested_radius_mm": 8.0,
+  "method": "native_surface_surface_rolling_ball_walking_and_approximation",
+  "native_call_executed": true,
+  "api_success": true,
+  "source_finite_domains_preserved": true,
+  "input_surface_extension": false,
+  "input_common_edge_constructed": false,
+  "guide": {
+    "kind": "IntAna_QuadQuadGeo intersection of original supporting planes",
+    "range_source": "original vertex projections onto guide",
+    "parameter_range": [
+      -12.5,
+      12.5
+    ],
+    "is_existing_input_edge": false,
+    "center_initialization": "projection of original-plane signed-offset intersection; no input-face modification"
+  },
+  "returned_entity_kind": "separate_blend_face",
+  "original_trim_modes_native_parameter_available": false,
+  "four_trim_controls_supported": false,
+  "source_feature_passed": false,
+  "human_appearance_passed": false,
+  "reference_quarter_section_branch": true
+}

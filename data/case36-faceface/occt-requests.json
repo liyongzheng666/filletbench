@@ -1,0 +1,13 @@
+{
+  "schema": "case36.explicit-faceface-request.v1",
+  "source_brep": "data/original-occ/fixtures/c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1.brep",
+  "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "radius_mm": 8.0,
+  "modes": ["short", "long", "no", "to_walls"],
+  "untrimmed_working_envelope_x_mm": [-20.0, 20.0],
+  "work_envelope_is_pdf_dimension": false,
+  "method": "explicit_occ_composition",
+  "native_face_face_call": false,
+  "source_feature_certified": false,
+  "scope": "Exact original support input; analytic cylindrical blend patches with declared local end-boundary controls. No wall is added to the result. No general Parasolid trim semantics are certified."
+}

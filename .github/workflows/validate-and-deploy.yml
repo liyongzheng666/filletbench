@@ -90,22 +90,34 @@ jobs:
             runs/ci-case11/case11-convexity/report.json
             runs/ci-case11-reconstructed/report.json
             runs/ci-case11-material/new-geometry-audit.json
-      - name: Preserve the exact unequal case36 finite faces without fabricating an edge
+      - name: Construct and independently measure all four case36 trim patches
         run: |
-          python bench.py original --case 36 --out runs/ci-case36-input
-          python tools/audit_case36_input.py
+          python bench.py original --case 36 --out runs/ci-case36-faceface
+          python tools/verify_case36_faceface.py
+          python tools/audit_case36_faceface.py --occ-root runs/ci-case36-faceface/case36-faceface/occt-composite --sdk-root runs/not-executed-sdk --native-root runs/not-executed-native --output runs/ci-case36-composite-audit.json
           python - <<'PY'
           import hashlib,json,pathlib
-          root=pathlib.Path('runs/ci-case36-input/case36-input')
+          root=pathlib.Path('runs/ci-case36-faceface/case36-faceface/occt-composite')
           index=json.loads((root/'index.json').read_text())
-          assert len(index['rows'])==3
+          assert len(index['rows'])==4
           for row in index['rows']:
               s=json.loads(pathlib.Path(row['summary']).read_text())
               assert s['source_sha256']==s['operation_input_sha256']=='c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1'
               assert hashlib.sha256(pathlib.Path(row['before_brep']).read_bytes()).hexdigest()==s['source_sha256']
-              assert s['native_call_executed'] is False and s['outcome']=='blocked_no_shared_edge'
-              assert all(s['input_checks'].values()), s['input_checks']
+              assert s['native_call_executed'] is False and s['method']=='explicit_occ_composition'
+          a=json.loads(pathlib.Path('runs/ci-case36-composite-audit.json').read_text())
+          assert len(a['rows'])==4 and a['audit_consistency_passed']
+          for row in a['rows']:
+              assert all(row['local_geometry_gates'].values()) and all(row['native_geometry_gates'].values()), row['mode']
+              assert row['trim']['all_subcriteria_passed'], row['trim']
           PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: case36-occt-composite-measurements
+          path: |
+            runs/ci-case36-faceface/case36-faceface/occt-composite/index.json
+            runs/ci-case36-composite-audit.json
   smlib:
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -183,6 +195,34 @@ jobs:
               assert s['execution']['native_call_started'] and s['radius_mm']==r, s
               assert s['source_sha256']=='db6c6a783a9e19b1a705a6be8677db296592a0d4a72471a2044261e369b51301', s
           PY
+      - name: Execute and independently measure four native case36 trim modes
+        env:
+          SMLIB_ROOT: ${{ github.workspace }}/.cache/usd-brep
+          SMLIB_LIBRARY: ${{ github.workspace }}/.cache/smlib-core/libsmlib_filletbench.so
+        run: |
+          pip install -r requirements-occt.txt
+          python tools/run_case36_smlib.py --output runs/ci-case36-smlib
+          python tools/audit_case36_faceface.py --occ-root runs/not-executed-composite --sdk-root runs/ci-case36-smlib --native-root runs/not-executed-native --output runs/ci-case36-smlib-audit.json
+          python - <<'PY'
+          import json,pathlib
+          index=json.loads(pathlib.Path('runs/ci-case36-smlib/index.json').read_text())
+          assert len(index['rows'])==4
+          for row in index['rows']:
+              assert row['native_call_started'] and row['native_api_raw_status']==1000 and row['native_readback_passed'], row
+              assert row['source_sha256']=='c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1'
+          a=json.loads(pathlib.Path('runs/ci-case36-smlib-audit.json').read_text())
+          assert len(a['rows'])==4 and a['audit_consistency_passed']
+          for row in a['rows']:
+              assert all(row['local_geometry_gates'].values()) and all(row['native_geometry_gates'].values()), row['mode']
+              assert row['trim']['all_subcriteria_passed'], row['trim']
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: case36-native-smlib-measurements
+          path: |
+            runs/ci-case36-smlib/index.json
+            runs/ci-case36-smlib-audit.json
       - name: Confirm an admitted input and actual native call
         run: |
           python - <<'PY'

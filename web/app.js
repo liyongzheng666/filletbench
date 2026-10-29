@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
-import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.4.1';
+import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.5.0';
 import { faceLocalMesh } from './mesh.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
@@ -265,9 +265,10 @@ async function selectVariant(variant) {
 function renderNotice() {
   const variant = state.variant;
   const notice = $('#representationNotice');
+  if ($('#comparisonLegend')) $('#comparisonLegend').textContent = state.currentCase.faceface_protocol ? '红色：实际圆角片 · 灰线：原墙边界辅助 · 绿色：实际接触轨 · 蓝色：实际端部边界 · 共同比例' : '洋红：实际选边 · 棕色虚线：理论辅助位置 · 橙色：选面 · 共同比例';
   const parts = [];
   if (state.currentCase.source_quality_warning) parts.push(text(state.currentCase.source_quality_warning));
-  if (isOriginal(state) && (state.currentCase.revision || state.currentCase.input_correction)) {
+  if (isOriginal(state) && (state.currentCase.revision || state.currentCase.input_correction || state.currentCase.faceface_protocol)) {
     notice.textContent = 'ⓘ  ' + parts.join('  '); notice.hidden = false; return;
   }
   if (isOriginal(state)) {
@@ -342,11 +343,12 @@ function renderFindings() {
     const result = variant.occt || {};
     const humanNote = variant.human_note || state.currentCase.human_note || variant.human_review?.note;
     const humanStatus = variant.human_status || state.currentCase.human_status;
+    const currentHumanReview = state.currentCase.revision || state.currentCase.faceface_protocol;
     const cards = [
       ['原版参数 / 基础输入', variantLabel(variant), [originalParameterText(variant), variant.base_note || variant.input_note].filter(Boolean).join(' · ')],
       [originalMethod(variant), failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${historicalResult(variant) ? '历史记录 · 未复跑' : '本次实际处理'} · ${statusInfo(result).fullLabel}`, result.reason || result.summary || '没有完整处理记录。'],
       ['SMLib 对应证据', smlibResultLabel(variant), smlibResult(variant).reason || smlibResult(variant).summary || '对应关系尚未确认；第四栏只显示独立记录的 SMLib 实际产物。'],
-      ['人工核对与验证边界', state.currentCase.revision ? '修正版 · 等待人工核对' : humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus && !state.currentCase.revision ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
+      ['人工核对与验证边界', currentHumanReview ? '本轮结果 · 等待人工核对' : humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus && !currentHumanReview ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
     ];
     cards.forEach(([label, title, content], index) => { const card = newNode('article', 'finding' + (index === 1 && failedResult(variant) ? ' warn' : '')); const heading = newNode('div', 'finding-label'); heading.append(newNode('span', 'finding-number', index + 1), newNode('span', '', label)); card.append(heading, newNode('h3', '', title), newNode('p', '', text(content))); container.append(card); });
     return;
@@ -423,7 +425,7 @@ async function renderModels(token) {
       const auxiliary = entry.targets?.some((target) => target.target_kind === 'auxiliary_guide');
       const witnessCount = entry.targets?.filter((target) => target.target_kind === 'result_witness').length || 0;
       const edgeCount = entry.targets?.filter((target) => !['auxiliary_guide','selected_face','result_witness'].includes(target.target_kind)).length || 0;
-      const selectionLabel = entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : [witnessCount ? '绿色为实际自由边' : '', auxiliary ? '虚线为原位置辅助' : ''].filter(Boolean).join(' · ');
+      const selectionLabel = entry.engine === 'occt' ? [edgeCount ? `${edgeCount} 条选边` : '', entry.faces?.length ? `${entry.faces.length} 个选面` : '', auxiliary ? '虚线为理论辅助位置' : ''].filter(Boolean).join(' · ') || '本阶段未记录选边 / 选面' : [witnessCount ? state.currentCase.faceface_protocol ? '绿色为实际接触轨' : '绿色为实际自由边' : '', auxiliary ? '虚线为原位置辅助' : ''].filter(Boolean).join(' · ');
       const targetLabel = entry.engine === 'occt' && entry.targets?.length === 1 ? entry.targets[0].label : null;
       $('.model-label-text', stage).textContent = entry.label + (targetLabel ? ' · ' + targetLabel : selectionLabel ? ' · ' + selectionLabel : '');
       $('.model-hint', stage).hidden = false;
@@ -507,11 +509,12 @@ class MeshViewer {
       if (points.length < 2) continue;
       const targetGeometry = new THREE.BufferGeometry().setFromPoints(points.map((point) => new THREE.Vector3(...point)));
       const auxiliary = target.target_kind === 'auxiliary_guide';
-      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, transparent: true, opacity: 1, depthTest: false, depthWrite: false, linewidth: 2 });
+      const wallReference = target.target_kind === 'source_wall_boundary';
+      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: wallReference ? 0x6c8179 : target.target_kind === 'result_trim_boundary' ? 0x356ad2 : target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, transparent: true, opacity: wallReference ? .5 : 1, depthTest: wallReference, depthWrite: false, linewidth: 2 });
       const line = new THREE.Line(targetGeometry, targetMaterial); if (auxiliary) line.computeLineDistances(); line.renderOrder = 4; this.group.add(line);
-      if (!auxiliary) {
+      if (!auxiliary && !wallReference) {
         const ends = new THREE.BufferGeometry().setFromPoints([points[0], points[points.length - 1]].map((point) => new THREE.Vector3(...point)));
-        const dots = new THREE.Points(ends, new THREE.PointsMaterial({ color: target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, size: 3.5, sizeAttenuation: false, transparent: true, opacity: 1, depthTest: false, depthWrite: false })); dots.renderOrder = 5; this.group.add(dots);
+        const dots = new THREE.Points(ends, new THREE.PointsMaterial({ color: target.target_kind === 'result_trim_boundary' ? 0x356ad2 : target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, size: 3.5, sizeAttenuation: false, transparent: true, opacity: 1, depthTest: false, depthWrite: false })); dots.renderOrder = 5; this.group.add(dots);
       }
     }
     for (const selected of Array.isArray(selectedFaces) ? selectedFaces : []) {
@@ -667,7 +670,7 @@ async function renderReference() {
     const [x0, y0, x1, y1] = crop || [0, 0, 1, 1];
     const canvas = $('#referenceCanvas'); canvas.width = Math.max(1, Math.round((x1 - x0) * offscreen.width)); canvas.height = Math.max(1, Math.round((y1 - y0) * offscreen.height));
     canvas.getContext('2d').drawImage(offscreen, x0 * offscreen.width, y0 * offscreen.height, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-    $('#referenceCaption').textContent = `PDF 第 ${mapping.page} 页${crop ? ' · 局部裁切' : ' · 完整页'}`;
+    $('#referenceCaption').textContent = `PDF 第 ${mapping.page} 页${crop ? ' · 局部裁切' : ' · 完整页'}${state.variant?.reference_hint ? ' · ' + state.variant.reference_hint : ''}`;
     $('#referenceBadge').textContent = mapping.sourceMatch ? '摘要匹配 · 仅本地' : '本地 PDF · 请核对参考';
   } catch (error) { $('#referenceCaption').textContent = '参考页渲染失败'; toast(`本地 PDF：${error.message}`); }
   finally { if (token === referenceRenderToken) $('#referenceBusy').hidden = true; }
@@ -828,6 +831,13 @@ function expandCard(id) {
 }
 function stepCase(delta) { if (!state.currentCase || !state.catalog) return; const index = state.catalog.cases.findIndex((item) => item.id === state.currentCase.id); const item = state.catalog.cases[index + delta]; if (item) selectCase(item); }
 function wireUI() {
+  const comparisonGrid = $('#comparisonGrid');
+  const comparisonNavigation = $('#comparisonNavigation');
+  const updateComparisonNavigation = () => { comparisonNavigation.hidden = comparisonGrid.scrollWidth <= comparisonGrid.clientWidth + 1; };
+  new ResizeObserver(updateComparisonNavigation).observe(comparisonGrid);
+  $('#comparisonLeft').addEventListener('click', () => comparisonGrid.scrollTo({ left: 0, behavior: 'auto' }));
+  $('#comparisonRight').addEventListener('click', () => comparisonGrid.scrollTo({ left: comparisonGrid.scrollWidth - comparisonGrid.clientWidth, behavior: 'auto' }));
+  updateComparisonNavigation();
   $('.brand').addEventListener('click', (event) => { event.preventDefault(); const home = state.catalog?.cases[0]; if (home) selectCase(home); });
   $$('.collection-tabs button').forEach((button) => button.addEventListener('click', () => { if (button.dataset.series !== state.series || !state.catalog) selectCollection(button.dataset.series); }));
   $$('.input-stage-switch button').forEach((button) => button.addEventListener('click', () => { if (!state.variant) return; state.inputStage = button.dataset.inputStage; renderOriginalMetadata(); renderModels(++state.token); }));

@@ -1,9 +1,9 @@
 {
   "schema": "filletbench.original-series-independent-audit.v1",
-  "created_at": "2026-10-28T17:31:05.360623+00:00",
+  "created_at": "2026-10-29T05:21:47.896105+00:00",
   "passed": true,
   "review_state_sha256": "c4e90452d792e28b1b5a0c5a5237ba7043a235c98abffde445b2dbe70c0f8fa5",
-  "auditor_sha256": "183284cac40a249f038cfb4f4293ca44344d43a0755b3d71fb47e168a0b8bcbc",
+  "auditor_sha256": "06f8cc1b3d6a492de0e7a6ed7f6e6ed709d8b5f8b5e7e7ef861344791b882951",
   "audited_indexes": {
     "data/original-occ/index.json": "5ea5d0a360db9d7f5eadb20cf35a46ef9ede983158c55091c273163a6c85610f",
     "data/original-occ/manifest.json": "4c756674c80956cb59c42257b3bff99e7f8ef4b3e342d25ea3c61fc24139b390",
@@ -123,8 +123,8 @@
     }
   },
   "published": {
-    "computation_variants_with_fresh_summary": 132,
-    "catalog_sha256": "f14a86167f37cbb21736457b961a2205eff9c91ba6dfa1448e17c3139a14daa4",
+    "computation_variants_with_fresh_summary": 134,
+    "catalog_sha256": "9cf047b7957a3a1c930f0a73ad8da85e2da7c688e65f83bbc6b58a6a3a977cd0",
     "registered_public_revisions": [
       {
         "number": 11,
@@ -160,18 +160,20 @@
         ]
       }
     ],
-    "registered_input_admission_protocols": [
+    "registered_faceface_protocols": [
       {
         "number": 36,
         "protocol": {
-          "path": "data/case36-input/protocol.json",
-          "sha256": "a6d6b1c4c66a62395df217bb3803943bfec8ed3689276e5b56e7f95a59dbe11d"
+          "path": "data/case36-faceface/protocol.json",
+          "sha256": "b913b26b610acb42fc8fb03c146f4e2f200b75dd154d488739006d2e3a87e5d0"
         },
         "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
-        "native_call_executed": false,
-        "variants": 3
+        "radius_mm": 8,
+        "variants": 5,
+        "scope": "Native face-face baseline and explicit trim construction are distinct; source-feature/human acceptance remain pending."
       }
     ],
+    "registered_input_admission_protocols": [],
     "frozen_originals_independently_preserved": true
   },
   "public_scan": {
@@ -186,6 +188,7 @@
     "Historical source revisions remain separately marked replay tracks; their results do not become current-source defaults.",
     "Independent finite edge matching uses endpoint, length, all recorded samples and native face ownership; a sampled check is not global curve equivalence.",
     "Explicit construction execution is separate from native special-feature support. Native API completion, native BRep/BOP validity, STEP roundtrip, continuity and appearance remain independent.",
+    "The counts describe frozen original replay records; active face-face protocol bindings are recorded separately under published and are not a native-feature pass rate.",
     "Composition STEP gates were not newly executed by this auditor. Historical STEP failures are preserved as historical evidence."
   ],
   "issues": [],

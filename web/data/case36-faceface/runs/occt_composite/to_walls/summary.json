@@ -1,0 +1,2208 @@
+{
+  "schema": "case36.explicit-faceface-trim.v1",
+  "number": 36,
+  "mode": "to_walls",
+  "radius_mm": 8.0,
+  "engine": "OCCT",
+  "engine_version": "7.9.3",
+  "binding_version": "7.9.3.1.1",
+  "source_brep": "data/original-occ/fixtures/c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1.brep",
+  "source_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "operation_input_sha256": "c88672f2fa73d5b40f13de10442dea5e432c6bd0b8f91db4412cd54fe6fbc5a1",
+  "request_file": "data/case36-faceface/occt-requests.json",
+  "request_sha256": "398c017b02ae23408636d316a361a625b4e5f36451dec82d5f006d5d7b66b6d8",
+  "adapter_sha256": "514574fffdb7be300500a60de5f007225db15f680e8814a451fca48be50bcb7a",
+  "method": "explicit_occ_composition",
+  "method_label": "显式端边界插值构造，尚非Parasolid一般语义认证",
+  "native_face_face_call": false,
+  "native_edge_fillet_call": false,
+  "native_call_executed": false,
+  "api_success": null,
+  "construction_executed": true,
+  "walls_modified": false,
+  "result_kind": "single_blend_face",
+  "original_walls_added_to_result": false,
+  "source_feature_certified": false,
+  "source_feature_passed": false,
+  "human_appearance_acceptance": false,
+  "selected_source_faces": [
+    {
+      "source_face_index_1based": 1,
+      "stats": {
+        "null": false,
+        "valid": true,
+        "shape_type": "TopAbs_FACE",
+        "faces": 1,
+        "edges": 4,
+        "vertices": 4,
+        "solids": 0,
+        "shells": 0,
+        "area_mm2": 280.0,
+        "volume_mm3": 0.0,
+        "bbox_mm": [
+          -7.0,
+          0.0,
+          5.0,
+          7.0,
+          0.0,
+          25.0
+        ]
+      },
+      "support_plane_normal": [
+        -0.0,
+        -1.0,
+        -0.0
+      ],
+      "support_plane_location": [
+        0.0,
+        0.0,
+        15.0
+      ],
+      "x_interval_mm": [
+        -7.0,
+        7.0
+      ],
+      "role": "vertical_wall",
+      "plane_y_mm": 0.0
+    },
+    {
+      "source_face_index_1based": 2,
+      "stats": {
+        "null": false,
+        "valid": true,
+        "shape_type": "TopAbs_FACE",
+        "faces": 1,
+        "edges": 4,
+        "vertices": 4,
+        "solids": 0,
+        "shells": 0,
+        "area_mm2": 450.0,
+        "volume_mm3": 0.0,
+        "bbox_mm": [
+          -12.5,
+          5.0,
+          0.0,
+          12.5,
+          23.0,
+          0.0
+        ]
+      },
+      "support_plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "support_plane_location": [
+        0.0,
+        14.0,
+        0.0
+      ],
+      "x_interval_mm": [
+        -12.5,
+        12.5
+      ],
+      "role": "horizontal_wall",
+      "plane_z_mm": 0.0
+    }
+  ],
+  "source_measurements": {
+    "faces": [
+      {
+        "source_face_index_1based": 1,
+        "stats": {
+          "null": false,
+          "valid": true,
+          "shape_type": "TopAbs_FACE",
+          "faces": 1,
+          "edges": 4,
+          "vertices": 4,
+          "solids": 0,
+          "shells": 0,
+          "area_mm2": 280.0,
+          "volume_mm3": 0.0,
+          "bbox_mm": [
+            -7.0,
+            0.0,
+            5.0,
+            7.0,
+            0.0,
+            25.0
+          ]
+        },
+        "support_plane_normal": [
+          -0.0,
+          -1.0,
+          -0.0
+        ],
+        "support_plane_location": [
+          0.0,
+          0.0,
+          15.0
+        ],
+        "x_interval_mm": [
+          -7.0,
+          7.0
+        ],
+        "role": "vertical_wall",
+        "plane_y_mm": 0.0
+      },
+      {
+        "source_face_index_1based": 2,
+        "stats": {
+          "null": false,
+          "valid": true,
+          "shape_type": "TopAbs_FACE",
+          "faces": 1,
+          "edges": 4,
+          "vertices": 4,
+          "solids": 0,
+          "shells": 0,
+          "area_mm2": 450.0,
+          "volume_mm3": 0.0,
+          "bbox_mm": [
+            -12.5,
+            5.0,
+            0.0,
+            12.5,
+            23.0,
+            0.0
+          ]
+        },
+        "support_plane_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "support_plane_location": [
+          0.0,
+          14.0,
+          0.0
+        ],
+        "x_interval_mm": [
+          -12.5,
+          12.5
+        ],
+        "role": "horizontal_wall",
+        "plane_z_mm": 0.0
+      }
+    ],
+    "source_stats": {
+      "null": false,
+      "valid": true,
+      "shape_type": "TopAbs_COMPOUND",
+      "faces": 2,
+      "edges": 8,
+      "vertices": 8,
+      "solids": 0,
+      "shells": 0,
+      "area_mm2": 730.0,
+      "volume_mm3": 0.0,
+      "bbox_mm": [
+        -12.5,
+        0.0,
+        0.0,
+        12.5,
+        23.0,
+        25.0
+      ]
+    },
+    "finite_face_gap_mm": 7.0710678118654755
+  },
+  "parameters": {
+    "radius_mm": 8.0,
+    "cylinder_center_yz_mm": [
+      8.0,
+      8.0
+    ],
+    "theta_range_rad": [
+      0,
+      1.5707963267948966
+    ],
+    "vertical_contact_x_mm": [
+      -7.0,
+      7.0
+    ],
+    "horizontal_contact_x_mm": [
+      -12.5,
+      12.5
+    ],
+    "end_boundary_law": "explicit linear interpolation of cylinder UV end boundaries between the measured vertical and horizontal contact extents; not a general Parasolid trim law",
+    "working_envelope_x_mm": null,
+    "work_envelope_is_pdf_dimension": false,
+    "to_walls_general_law_certified": false,
+    "uv_boundary_corners_theta_x": [
+      [
+        0,
+        -7.0
+      ],
+      [
+        1.5707963267948966,
+        -12.5
+      ],
+      [
+        1.5707963267948966,
+        12.5
+      ],
+      [
+        0,
+        7.0
+      ]
+    ]
+  },
+  "outcome": "explicit_candidate",
+  "artifacts": {
+    "before_brep": "before.brep",
+    "before_mesh": "before.mesh.json",
+    "original_wall_boundaries": "wall-boundaries.json",
+    "result_brep": "result.brep",
+    "result_step": "result.step",
+    "result_mesh": "result.mesh.json",
+    "actual_contact_witnesses": "contact-witnesses.json"
+  },
+  "construction_apis": [
+    "Geom_CylindricalSurface",
+    "GCE2d_MakeSegment",
+    "BRepBuilderAPI_MakeEdge(curve2d,surface)",
+    "BRepBuilderAPI_MakeWire",
+    "BRepBuilderAPI_MakeFace(surface,wire)",
+    "BRepLib.BuildCurves3d"
+  ],
+  "result_brep_sha256": "186943bd8914b1c99928e25b305745273bdce11badeaf026a97362bf800d2180",
+  "result_inspection": {
+    "stats": {
+      "null": false,
+      "valid": true,
+      "shape_type": "TopAbs_FACE",
+      "faces": 1,
+      "edges": 4,
+      "vertices": 4,
+      "solids": 0,
+      "shells": 0,
+      "area_mm2": 245.04422698000388,
+      "volume_mm3": 0.0,
+      "bbox_mm": [
+        -12.5000001,
+        -1.0000000043531933e-07,
+        -1e-07,
+        12.5000001,
+        8.0000001,
+        8.0000001
+      ]
+    },
+    "bop_argument_check": {
+      "modes": [
+        "argument_type",
+        "self_interference",
+        "small_edges",
+        "rebuild_face",
+        "continuity",
+        "curve_on_surface"
+      ],
+      "has_faulty": false,
+      "has_errors": false,
+      "faults": []
+    },
+    "passed": true
+  },
+  "result_stats": {
+    "null": false,
+    "valid": true,
+    "shape_type": "TopAbs_FACE",
+    "faces": 1,
+    "edges": 4,
+    "vertices": 4,
+    "solids": 0,
+    "shells": 0,
+    "area_mm2": 245.04422698000388,
+    "volume_mm3": 0.0,
+    "bbox_mm": [
+      -12.5000001,
+      -1.0000000043531933e-07,
+      -1e-07,
+      12.5000001,
+      8.0000001,
+      8.0000001
+    ]
+  },
+  "step_roundtrip": {
+    "transfer": "IFSelect_ReturnStatus.IFSelect_RetDone",
+    "write": "IFSelect_ReturnStatus.IFSelect_RetDone",
+    "passed": true,
+    "read": "IFSelect_ReturnStatus.IFSelect_RetDone",
+    "readback": {
+      "stats": {
+        "null": false,
+        "valid": true,
+        "shape_type": "TopAbs_SHELL",
+        "faces": 1,
+        "edges": 4,
+        "vertices": 4,
+        "solids": 0,
+        "shells": 1,
+        "area_mm2": 245.04422698001625,
+        "volume_mm3": 0.0,
+        "bbox_mm": [
+          -12.5000001,
+          -1e-07,
+          -1e-07,
+          12.5000001,
+          8.0000001,
+          8.0000001
+        ]
+      },
+      "bop_argument_check": {
+        "modes": [
+          "argument_type",
+          "self_interference",
+          "small_edges",
+          "rebuild_face",
+          "continuity",
+          "curve_on_surface"
+        ],
+        "has_faulty": false,
+        "has_errors": false,
+        "faults": []
+      },
+      "passed": true
+    },
+    "relative_area_error": 5.0453927254669117e-14
+  },
+  "actual_geometry": {
+    "contacts": [
+      {
+        "support_role": "horizontal_wall",
+        "source_face_index_1based": 2,
+        "edge": {
+          "native_edge_index_1based_diagnostic": 2,
+          "start": [
+            -12.5,
+            7.999999999999999,
+            0.0
+          ],
+          "end": [
+            12.5,
+            7.999999999999999,
+            0.0
+          ],
+          "polyline": [
+            [
+              -12.5,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -11.693548387096774,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -10.887096774193548,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -10.080645161290322,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -9.274193548387096,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -8.467741935483872,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -7.661290322580645,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -6.854838709677419,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -6.048387096774194,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -5.241935483870969,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -4.435483870967742,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -3.6290322580645156,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -2.8225806451612905,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -2.016129032258064,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -1.2096774193548376,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              -0.40322580645161255,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              0.40322580645161255,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              1.2096774193548376,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              2.0161290322580627,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              2.8225806451612905,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              3.6290322580645156,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              4.435483870967741,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              5.241935483870969,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              6.048387096774191,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              6.854838709677419,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              7.661290322580644,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              8.467741935483872,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              9.274193548387096,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              10.080645161290324,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              10.887096774193546,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              11.693548387096776,
+              7.999999999999999,
+              0.0
+            ],
+            [
+              12.5,
+              7.999999999999999,
+              0.0
+            ]
+          ],
+          "length": 25.0,
+          "curve_type": "GeomAbs_BSplineCurve",
+          "adjacent_faces_1based": [
+            1
+          ]
+        },
+        "endpoints_mm": [
+          [
+            -12.5,
+            7.999999999999999,
+            0.0
+          ],
+          [
+            12.5,
+            7.999999999999999,
+            0.0
+          ]
+        ],
+        "x_interval_mm": [
+          -12.5,
+          12.5
+        ],
+        "samples": [
+          {
+            "point_mm": [
+              -12.5,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_ON",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 8.881784197001252e-16,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -11.693548387096774,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -10.887096774193548,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -10.080645161290322,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -9.274193548387096,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -8.467741935483872,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -7.661290322580645,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -6.854838709677419,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -6.048387096774194,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -5.241935483870969,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -4.435483870967742,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -3.6290322580645156,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -2.8225806451612905,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -2.016129032258064,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -1.2096774193548376,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -0.40322580645161255,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              0.40322580645161255,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              1.2096774193548376,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              2.0161290322580627,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              2.8225806451612905,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              3.6290322580645156,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              4.435483870967741,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              5.241935483870969,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              6.048387096774191,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              6.854838709677419,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              7.661290322580644,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              8.467741935483872,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              9.274193548387096,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              10.080645161290324,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              10.887096774193546,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              11.693548387096776,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              12.5,
+              7.999999999999999,
+              0.0
+            ],
+            "finite_face_state": "TopAbs_ON",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          }
+        ],
+        "all_samples_within_original_finite_face": true,
+        "max_g0_underlying_plane_error_mm": 0.0,
+        "max_g0_finite_face_distance_mm": 8.881784197001252e-16,
+        "max_g1_tangent_plane_angle_deg": 0.0
+      },
+      {
+        "support_role": "vertical_wall",
+        "source_face_index_1based": 1,
+        "edge": {
+          "native_edge_index_1based_diagnostic": 4,
+          "start": [
+            7.0,
+            0.0,
+            8.0
+          ],
+          "end": [
+            -7.0,
+            0.0,
+            8.0
+          ],
+          "polyline": [
+            [
+              7.0,
+              0.0,
+              8.0
+            ],
+            [
+              6.548387096774194,
+              0.0,
+              8.0
+            ],
+            [
+              6.096774193548387,
+              0.0,
+              8.0
+            ],
+            [
+              5.645161290322581,
+              0.0,
+              8.0
+            ],
+            [
+              5.193548387096774,
+              0.0,
+              8.0
+            ],
+            [
+              4.741935483870967,
+              0.0,
+              8.0
+            ],
+            [
+              4.290322580645161,
+              0.0,
+              8.0
+            ],
+            [
+              3.838709677419355,
+              0.0,
+              8.0
+            ],
+            [
+              3.3870967741935485,
+              0.0,
+              8.0
+            ],
+            [
+              2.9354838709677415,
+              0.0,
+              8.0
+            ],
+            [
+              2.483870967741935,
+              0.0,
+              8.0
+            ],
+            [
+              2.032258064516129,
+              0.0,
+              8.0
+            ],
+            [
+              1.5806451612903227,
+              0.0,
+              8.0
+            ],
+            [
+              1.129032258064516,
+              0.0,
+              8.0
+            ],
+            [
+              0.6774193548387099,
+              0.0,
+              8.0
+            ],
+            [
+              0.22580645161290303,
+              0.0,
+              8.0
+            ],
+            [
+              -0.22580645161290303,
+              0.0,
+              8.0
+            ],
+            [
+              -0.6774193548387106,
+              0.0,
+              8.0
+            ],
+            [
+              -1.1290322580645167,
+              0.0,
+              8.0
+            ],
+            [
+              -1.5806451612903227,
+              0.0,
+              8.0
+            ],
+            [
+              -2.0322580645161303,
+              0.0,
+              8.0
+            ],
+            [
+              -2.4838709677419364,
+              0.0,
+              8.0
+            ],
+            [
+              -2.9354838709677424,
+              0.0,
+              8.0
+            ],
+            [
+              -3.3870967741935485,
+              0.0,
+              8.0
+            ],
+            [
+              -3.8387096774193545,
+              0.0,
+              8.0
+            ],
+            [
+              -4.290322580645162,
+              0.0,
+              8.0
+            ],
+            [
+              -4.741935483870968,
+              0.0,
+              8.0
+            ],
+            [
+              -5.193548387096774,
+              0.0,
+              8.0
+            ],
+            [
+              -5.64516129032258,
+              0.0,
+              8.0
+            ],
+            [
+              -6.096774193548388,
+              0.0,
+              8.0
+            ],
+            [
+              -6.548387096774194,
+              0.0,
+              8.0
+            ],
+            [
+              -7.0,
+              0.0,
+              8.0
+            ]
+          ],
+          "length": 14.0,
+          "curve_type": "GeomAbs_BSplineCurve",
+          "adjacent_faces_1based": [
+            1
+          ]
+        },
+        "endpoints_mm": [
+          [
+            7.0,
+            0.0,
+            8.0
+          ],
+          [
+            -7.0,
+            0.0,
+            8.0
+          ]
+        ],
+        "x_interval_mm": [
+          -7.0,
+          7.0
+        ],
+        "samples": [
+          {
+            "point_mm": [
+              7.0,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_ON",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              6.548387096774194,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              6.096774193548387,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              5.645161290322581,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              5.193548387096774,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              4.741935483870967,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              4.290322580645161,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              3.838709677419355,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              3.3870967741935485,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              2.9354838709677415,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              2.483870967741935,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              2.032258064516129,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              1.5806451612903227,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              1.129032258064516,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              0.6774193548387099,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              0.22580645161290303,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -0.22580645161290303,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -0.6774193548387106,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -1.1290322580645167,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -1.5806451612903227,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -2.0322580645161303,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -2.4838709677419364,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -2.9354838709677424,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -3.3870967741935485,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -3.8387096774193545,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -4.290322580645162,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -4.741935483870968,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -5.193548387096774,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -5.64516129032258,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -6.096774193548388,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -6.548387096774194,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_IN",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          },
+          {
+            "point_mm": [
+              -7.0,
+              0.0,
+              8.0
+            ],
+            "finite_face_state": "TopAbs_ON",
+            "within_original_finite_face": true,
+            "g0_underlying_plane_error_mm": 0.0,
+            "g0_finite_face_distance_mm": 0.0,
+            "g1_tangent_plane_angle_deg": 0.0,
+            "actual_surface_projection_error_mm": 0.0
+          }
+        ],
+        "all_samples_within_original_finite_face": true,
+        "max_g0_underlying_plane_error_mm": 0.0,
+        "max_g0_finite_face_distance_mm": 0.0,
+        "max_g1_tangent_plane_angle_deg": 0.0
+      }
+    ],
+    "ends": [
+      {
+        "edge": {
+          "native_edge_index_1based_diagnostic": 1,
+          "start": [
+            -7.0,
+            0.0,
+            8.0
+          ],
+          "end": [
+            -12.5,
+            7.999999999999991,
+            2.9170188445507253e-16
+          ],
+          "polyline": [
+            [
+              -7.0,
+              0.0,
+              8.0
+            ],
+            [
+              -7.17741935483872,
+              0.01026795009986346,
+              7.594806641034543
+            ],
+            [
+              -7.354838709677428,
+              0.041045428803324555,
+              7.190653406807423
+            ],
+            [
+              -7.532258064516133,
+              0.09225342193825158,
+              6.788577762438666
+            ],
+            [
+              -7.709677419354838,
+              0.163760479896633,
+              6.389611829308107
+            ],
+            [
+              -7.887096774193545,
+              0.25538304925626926,
+              5.994779742448503
+            ],
+            [
+              -8.064516129032254,
+              0.3668859405407597,
+              5.605095025451136
+            ],
+            [
+              -8.241935483870966,
+              0.49798293026683027,
+              5.221557990523006
+            ],
+            [
+              -8.419354838709678,
+              0.64833749518687,
+              4.845153171093558
+            ],
+            [
+              -8.59677419354839,
+              0.8175636763933828,
+              4.4768467941277
+            ],
+            [
+              -8.7741935483871,
+              1.0052270707108724,
+              4.117584299060712
+            ],
+            [
+              -8.95161290322581,
+              1.2108459465595143,
+              3.768287910029454
+            ],
+            [
+              -9.129032258064518,
+              1.4338924812338045,
+              3.4298542678331176
+            ],
+            [
+              -9.306451612903226,
+              1.6737941162981715,
+              3.103152127815604
+            ],
+            [
+              -9.483870967741936,
+              1.929935027560408,
+              2.789020129620411
+            ],
+            [
+              -9.661290322580644,
+              2.201657705842556,
+              2.4882646445277694
+            ],
+            [
+              -9.838709677419352,
+              2.4882646445277645,
+              2.2016577058425604
+            ],
+            [
+              -10.016129032258062,
+              2.789020129620405,
+              1.9299350275604126
+            ],
+            [
+              -10.193548387096772,
+              3.1031521278155965,
+              1.6737941162981764
+            ],
+            [
+              -10.370967741935482,
+              3.429854267833111,
+              1.4338924812338079
+            ],
+            [
+              -10.548387096774192,
+              3.7682879100294473,
+              1.210845946559518
+            ],
+            [
+              -10.725806451612902,
+              4.117584299060705,
+              1.005227070710875
+            ],
+            [
+              -10.903225806451612,
+              4.476846794127691,
+              0.8175636763933873
+            ],
+            [
+              -11.08064516129032,
+              4.84515317109355,
+              0.6483374951868732
+            ],
+            [
+              -11.258064516129028,
+              5.221557990522997,
+              0.49798293026683377
+            ],
+            [
+              -11.435483870967737,
+              5.605095025451128,
+              0.36688594054076323
+            ],
+            [
+              -11.612903225806445,
+              5.994779742448493,
+              0.25538304925627264
+            ],
+            [
+              -11.790322580645157,
+              6.389611829308099,
+              0.16376047989663656
+            ],
+            [
+              -11.96774193548387,
+              6.788577762438659,
+              0.09225342193825395
+            ],
+            [
+              -12.145161290322582,
+              7.190653406807413,
+              0.04104542880332536
+            ],
+            [
+              -12.322580645161294,
+              7.594806641034534,
+              0.010267950099863154
+            ],
+            [
+              -12.5,
+              7.999999999999991,
+              2.9170188445507253e-16
+            ]
+          ],
+          "length": 13.71727634569219,
+          "curve_type": "GeomAbs_BSplineCurve",
+          "adjacent_faces_1based": [
+            1
+          ]
+        },
+        "x_range_mm": [
+          -12.5,
+          -7.0
+        ],
+        "constant_x_end": false
+      },
+      {
+        "edge": {
+          "native_edge_index_1based_diagnostic": 3,
+          "start": [
+            12.5,
+            7.999999999999998,
+            4.440892098500626e-16
+          ],
+          "end": [
+            7.000000000000006,
+            -1.5238732539495054e-16,
+            7.999999999999991
+          ],
+          "polyline": [
+            [
+              12.5,
+              7.999999999999998,
+              4.440892098500626e-16
+            ],
+            [
+              12.3225806451613,
+              7.594806641034542,
+              0.010267950099864535
+            ],
+            [
+              12.145161290322589,
+              7.190653406807423,
+              0.041045428803325706
+            ],
+            [
+              11.967741935483875,
+              6.788577762438665,
+              0.09225342193825257
+            ],
+            [
+              11.79032258064516,
+              6.389611829308105,
+              0.16376047989663378
+            ],
+            [
+              11.612903225806448,
+              5.994779742448501,
+              0.25538304925626987
+            ],
+            [
+              11.43548387096774,
+              5.605095025451134,
+              0.36688594054076024
+            ],
+            [
+              11.258064516129032,
+              5.221557990523004,
+              0.4979829302668308
+            ],
+            [
+              11.080645161290324,
+              4.845153171093556,
+              0.6483374951868706
+            ],
+            [
+              10.903225806451617,
+              4.476846794127699,
+              0.8175636763933835
+            ],
+            [
+              10.725806451612907,
+              4.117584299060711,
+              1.005227070710873
+            ],
+            [
+              10.5483870967742,
+              3.7682879100294535,
+              1.210845946559515
+            ],
+            [
+              10.37096774193549,
+              3.429854267833117,
+              1.4338924812338052
+            ],
+            [
+              10.19354838709678,
+              3.1031521278156036,
+              1.6737941162981729
+            ],
+            [
+              10.016129032258068,
+              2.78902012962041,
+              1.9299350275604088
+            ],
+            [
+              9.838709677419356,
+              2.4882646445277685,
+              2.201657705842557
+            ],
+            [
+              9.661290322580646,
+              2.2016577058425595,
+              2.4882646445277654
+            ],
+            [
+              9.483870967741936,
+              1.9299350275604108,
+              2.789020129620406
+            ],
+            [
+              9.306451612903228,
+              1.6737941162981755,
+              3.103152127815598
+            ],
+            [
+              9.129032258064518,
+              1.433892481233807,
+              3.4298542678331114
+            ],
+            [
+              8.951612903225808,
+              1.2108459465595163,
+              3.768287910029448
+            ],
+            [
+              8.7741935483871,
+              1.0052270707108732,
+              4.117584299060707
+            ],
+            [
+              8.596774193548391,
+              0.8175636763933843,
+              4.476846794127693
+            ],
+            [
+              8.41935483870968,
+              0.6483374951868714,
+              4.845153171093552
+            ],
+            [
+              8.241935483870972,
+              0.497982930266832,
+              5.221557990522999
+            ],
+            [
+              8.06451612903226,
+              0.36688594054076146,
+              5.6050950254511305
+            ],
+            [
+              7.887096774193551,
+              0.25538304925627087,
+              5.994779742448497
+            ],
+            [
+              7.709677419354841,
+              0.16376047989663323,
+              6.389611829308103
+            ],
+            [
+              7.532258064516132,
+              0.09225342193825217,
+              6.788577762438663
+            ],
+            [
+              7.354838709677425,
+              0.04104542880332524,
+              7.190653406807416
+            ],
+            [
+              7.177419354838715,
+              0.010267950099863097,
+              7.594806641034537
+            ],
+            [
+              7.000000000000006,
+              -1.5238732539495054e-16,
+              7.999999999999991
+            ]
+          ],
+          "length": 13.71727634569219,
+          "curve_type": "GeomAbs_BSplineCurve",
+          "adjacent_faces_1based": [
+            1
+          ]
+        },
+        "x_range_mm": [
+          7.000000000000006,
+          12.5
+        ],
+        "constant_x_end": false
+      }
+    ],
+    "curvature_samples": [
+      {
+        "point_mm": [
+          -6.04,
+          0.09849327523889784,
+          6.748524279678153
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          0.0,
+          0.09849327523889784,
+          6.748524279678153
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          6.04,
+          0.09849327523889784,
+          6.748524279678153
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -6.92,
+          0.8719478064930568,
+          4.368076002083626
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          0.0,
+          0.8719478064930568,
+          4.368076002083626
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          6.92,
+          0.8719478064930568,
+          4.368076002083626
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -7.8,
+          2.3431457505076194,
+          2.3431457505076203
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          0.0,
+          2.3431457505076194,
+          2.3431457505076203
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          7.800000000000001,
+          2.3431457505076194,
+          2.3431457505076203
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -8.68,
+          4.368076002083625,
+          0.8719478064930568
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          0.0,
+          4.368076002083625,
+          0.8719478064930568
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          8.680000000000001,
+          4.368076002083625,
+          0.8719478064930568
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          -9.559999999999999,
+          6.748524279678152,
+          0.09849327523889784
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          0.0,
+          6.748524279678152,
+          0.09849327523889784
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      },
+      {
+        "point_mm": [
+          9.559999999999999,
+          6.748524279678152,
+          0.09849327523889784
+        ],
+        "principal_curvatures_mm_inverse": [
+          -0.125,
+          0.0
+        ],
+        "radius_from_principal_curvature_mm": 8.0,
+        "radial_distance_to_axis_mm": 8.0
+      }
+    ],
+    "radius_range_mm": [
+      8.0,
+      8.0
+    ],
+    "both_underlying_support_planes_g0_g1_sampled_passed": true,
+    "both_original_finite_faces_contacted_over_full_track": true,
+    "scope": "Sampled local contact and curvature checks. Infinite-plane G0/G1, finite-face attachment, CAD validity, trim semantics and human acceptance remain separate."
+  },
+  "construction_checks": {
+    "one_face_no_added_walls": true,
+    "brep_and_bop": true,
+    "step_roundtrip": true,
+    "radius": true,
+    "underlying_plane_g0_g1_sampled": true
+  },
+  "source_unchanged": true,
+  "before_equals_exact_source_bytes": true,
+  "validation_boundary": "Only an explicit analytic cylindrical patch with the declared local boundary rule. Finite wall overhang is measured, not hidden; no general native face-face or Parasolid trim-mode acceptance."
+}

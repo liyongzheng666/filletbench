@@ -25,7 +25,7 @@ python bench.py serve
 
 网页保持 PDF、基础模型与选边、OCC、SMLib 横向四栏；三个3D视图同步旋转与缩放，窄屏横向滚动，各栏可放大。第四栏只显示经过对应关系核对的实际SMLib记录。
 
-目前74个原版视图有同约束SMLib证据（包含第08项4个新增半径视图，第11项3档已用修正版重新实跑）；58个协议尚未对齐、1个仅输入辅助项单独标明。原生调用失败、崩溃、无效或未验候选都不伪装成成功。[匹配与复现说明](docs/original-smlib-pairing-audit.md)
+第四栏分别记录普通同参 SMLib 实跑和第36项明确标注的原生面面协议。匹配、尚未执行、失败候选与生成待验分别显示；覆盖数量以当前目录和绑定核验记录为准。第36项的 OCC 显式构造与 SMLib 原生调用使用同源有限面、相同R8和明确的局部端部判据，不能据此宣称两个内核实现相同或具备通用 Parasolid 语义等价性。[匹配与复现说明](docs/original-smlib-pairing-audit.md)
 
 ## 第08项大半径缺口验证
 
@@ -63,24 +63,59 @@ python adapters/occt/case11-convexity/audit_material.py --output runs/my-case11-
 python adapters/smlib/run.py data/case11-convexity/smlib-candidate-v6-r3.job.json --output runs/my-case11-smlib-r3
 ```
 
-## 第36项原有限输入与前置检查
+## 第36项：原有限面上的面面圆角与端部边界
 
-第36项保持原基础的两张不等宽、无共边有限面：竖面宽14，横面宽25，有限面间距约7.071mm。当前三个原编号与半径 `part01-r1p0` / R1、`part01-r2p0` / R2、`part01-r0p5` / R0.5 都直接使用这份原始BREP作为实际操作输入，不扩面、不把横面裁窄、不缝合成L壳。
+[打开第36项](https://www.goudanx.top/filletbench/#series=original&case=36&variant=trim-to_walls-r8)。基础与操作输入都保持原始 `c886…` BREP：竖面宽14、横面宽25，两有限面间距约7.071mm，不预先延伸到共边或把横面裁窄。R8是本次重建试验值；原PDF没有给出这些尺寸的标定。
 
-本轮只执行输入身份和普通共边调用器的前置检查。原输入不存在共边，故该调用路线被阻止，`native_call_executed=false`；没有生成圆角结果，也不能记为内核圆角调用失败。原图的面面圆角与 `to_walls` / `no` / `short` / `long` 四种端部裁剪均未在此流程中实现。
+当前分开提供三条实际执行路线：
 
-旧的 `extended-overlap-band` 把两面扩到理论交线，并将25宽横面裁成14宽；它的普通圆角结果作为历史衍生控制隔离保留，不能代表当前原输入的能力。
+| 路线 | 实际构造与边界 |
+|---|---|
+| OCC 显式组合，OCCT 7.9.3 | 四种圆柱面边界控制；输出独立blend patch。`to_walls`采用从原墙面边界量测得到的UV端线插值，是本例显式构造规则。 |
+| OCC 低层原生面面基准，本次OCCT 7.8.1 | 从原支撑面及有限域执行滚动球walking和曲面逼近，给出一个R8基准；该选用接口没有四种trim枚举参数。 |
+| SMLib 10.0.0 原生面面调用 | 分别执行NONE、MINIMAL、MAXIMAL、BEVEL四个原生枚举；保留实际SDK产物和SMB读回检查。 |
+
+四栏中的结果是独立圆角片，不把原墙面拼进结果充当圆角成功。原有限墙面边界单独作为辅助线。SMLib的 `base_trim=0` 会分割调用副本的wall拓扑；原始输入文件保持不变，有限域面积、范围与边界另行核对，不能把“有限域保留”说成“调用副本拓扑未变”。
+
+| 局部控制 | OCC显式结果 | SMLib实际结果 |
+|---|---|---|
+| `to_walls` | 窄面接触轨x±7、宽面轨x±12.5，端边非统一x平切 | BEVEL：两接触轨端部分别对应原窄/宽面边界 |
+| `no` | 有限工作包络x±20 | NONE：本次返回x±14；未裁模式的工作包络由实现给定，不按两者同尺寸评分 |
+| `short` | x±7，按两原面x范围交集 | MINIMAL：x±7 |
+| `long` | x±12.5，按两原面x范围包络；窄面侧保留超出有限域的部分 | MAXIMAL：x±12.5 |
+
+R8、实际接触轨、端域、局部G0/G1、半径与CAD读回的本矩形子判据分别检查。通用 Parasolid 模式等价、全域形状和人工外观仍未认证；尤其不能把 `to_walls` 的本例UV插值规则推广为通用原生算法。
+
+**端点符合不等于整条曲线一致。** 对 `to_walls` 每端进行8193点原生只读查询，按同一物理截面角对齐，OCC组合与SMLib原生的最大观测X差约 **0.05614980mm**。这是采样对应差异，不是精确Hausdorff距离。short/long的本次端曲线差异接近数值精度；no的6mm差来自不同工作包络。[测量总览与差异图](https://www.goudanx.top/filletbench/data/case36-faceface/report.html) · [完整差异量测](docs/case36-faceface-differences.json)。
 
 ```sh
-python bench.py original --case 36 --out runs/my-case36-input
-python bench.py original --case 36 --variant part01-r1p0 --out runs/my-case36-r1-input
-# 显式重放旧衍生请求，仅用于历史调试
+# 当前OCC suite默认执行四个显式构造；--all亦采用这条默认路线
+python bench.py original --case 36 --out runs/my-case36-faceface
+# 只重新执行并更新一个控制，其他已发布同源记录保留
+python bench.py original --case 36 --variant trim-to_walls-r8 --out runs/my-case36-to_walls
+python bench.py build-original --suite-run runs/my-case36-to_walls
+# 配好SMLib后独立执行四个原生枚举；不会由OCC --all自动运行
+python tools/run_case36_smlib.py --output runs/my-case36-smlib
+# 先将OCCT_INCLUDE_DIR、OCCT_LIBRARY_DIR指向同一套已安装C++ SDK，再执行单独的原生面面基准
+python bench.py original --case 36 --variant native-faceface-r8 --out runs/my-case36-native
+# 只读比较实际SDK端曲线与OCC BREP；需要先执行对应原生/组合产物
+python tools/compare_case36_faceface_boundaries.py --occ-root runs/my-case36-faceface/case36-faceface/occt-composite --sdk-root runs/my-case36-smlib --query-sdk --output runs/my-case36-boundary-differences.json
+```
+
+低层原生入口缺少SDK或编译器时输出 `dependency_missing`、不调用内核并非零退出；不会换成组合结果。`build-original`会拒绝用这类未执行的请求更新当前公开记录，诊断仍保存在该suite目录。已有运行目录拒绝覆盖。源码与运行记录分别标注实际内核版本、输入表示和方法。
+
+此前R0.5/R1/R2普通共边前置检查和更早的共宽L壳实验仍可显式调试，均不再作为当前四模式结果：
+
+```sh
+python tools/run_case36_input.py --variant part01-r1p0 --output runs/my-case36-admission-history
 python adapters/occt/original/run.py --requests adapters/occt/original/requests.json --case 36 --output runs/my-case36-derived-history
 ```
 
+[面面协议与输入身份](data/case36-faceface/protocol.json) · [显式构造请求](data/case36-faceface/occt-requests.json)
+
 ## 按原版实际处理
 
-原版系列保留 **34 组模型、1 个说明项、129 个原有参数/视图**。旧版本的128个计算条目曾绑定执行记录，其中第36项3条使用的是改变有限域后的L形衍生输入，现已移至历史；当前这3条只记录原有限输入前置检查，不宣称执行了圆角。1个仅输入的辅助叶片保持不计算。50个原页面变体ID及参数顺序保留；人工备注和选边/选面按对应输入区分。视图数不等于成功构造数。
+原版系列保留 **34 组模型、1 个说明项和129份原始冻结参数/视图记录**。当前展示可增补新协议并隔离旧衍生结果：第36项现使用四种R8面面控制及独立原生基准，旧3档普通共边前置检查与更早L壳实验保留为历史调试证据。1个仅输入的辅助叶片保持不计算。原页面ID、人工备注和参数历史保持可追溯；当前视图数量或控制器退出码不等于成功构造数。
 
 除第11项已登记的凸性修正版外，基础模型使用原版冻结的精确 BREP。第11项重新参数化建模，新旧输入及结果按SHA隔离；原始冻结文件保持不变。重新执行的是提取部件、必要的缝合/裁剪/延伸、原生圆角或显式组合流程。网页可切换“原基础模型”与“实际操作输入”；二者分别保存，不能互相冒充。
 

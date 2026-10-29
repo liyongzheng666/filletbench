@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0
+
+- Execute case36 R8 face-face tests on the exact original unequal, separated finite faces; keep the old admission-only and equal-width derivative runs as explicit history.
+- Publish four OCC cylindrical-patch composition controls and four SMLib native trim calls separately. Preserve real no-trim extent differences and finite-wall overhang.
+- Add a low-level native OCCT R8 surface/surface baseline, executed with the selected C++ SDK; the observed 7.8.1 interface has no four-trim enum. Missing dependencies produce structured records without a composite fallback.
+- Show the blend patch alone with original-wall auxiliary boundaries. Record SMLib call-copy wall topology splits separately from preservation of the original finite geometry domains.
+- Make current case36 suite defaults and `--all` run the four portable OCC compositions; select one trim mode or the separate native baseline explicitly. Bind site updates to the requested run while retaining verified same-source records for unrelated views.
+- Keep local rectangle/R8/contact/end-domain checks separate from general Parasolid semantics and pending human appearance acceptance.
+- Measure the actual to_walls end curves at8193 samples per end: matching endpoints still leave an observed same-section-angle X difference of about0.05614980mm. Publish the difference graph and retain no-trim working-envelope differences without calling them same-domain failures.
+
 ## 0.4.1
 
 - Restore the exact unequal, separated finite faces as both base and operation input for case36; archive the old equal-width, extended L-shell results.
