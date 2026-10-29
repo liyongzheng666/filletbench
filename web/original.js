@@ -1,5 +1,5 @@
 export const COLLECTIONS = {
-  original: { path: 'data/original-occ/catalog.json', label: '原版 OCC 人工核对系列', caseRoot: 'data/original-occ/cases/' },
+  original: { path: 'data/original-occ/catalog.json', label: '基准案例', caseRoot: 'data/original-occ/cases/' },
   comparison: { path: 'data/catalog.json', label: 'OCC–SMLib 对照实验', caseRoot: 'data/cases/' },
 };
 
@@ -65,7 +65,7 @@ export function originalDisplay(variant, stage = 'base') {
   const input = operationMesh(variant);
   const output = result.mesh || (result.display_input_on_missing_result === false ? null : input);
   return [
-    { engine: 'occt', source: stage === 'operation' ? input : baseMesh(variant), ...selectionFor(variant, stage), label: stage === 'operation' ? '实际操作输入' : '原版基础模型', reason: stage === 'operation' ? '未提供实际操作输入网格。' : '未提供原版基础模型网格；不会使用衍生输入代替。' },
+    { engine: 'occt', source: stage === 'operation' ? input : baseMesh(variant), ...selectionFor(variant, stage), label: stage === 'operation' ? '实际操作输入' : '基础模型', reason: stage === 'operation' ? '未提供实际操作输入网格。' : '未提供基础模型网格；不会使用衍生输入代替。' },
     { engine: 'smlib', source: output, ...(!result.mesh ? selectionFor(variant, 'operation') : { targets: result.result_witnesses || [], faces: [] }), label: originalResultLabel(variant), reason: result.reason || result.summary || '没有实际 OCC 输出；原目标与参数保持不变。' },
     { engine: 'smlibFourth', source: smlibResult(variant).mesh, targets: smlibResult(variant).result_witnesses || [], faces: [], label: smlibResultLabel(variant), reason: smlibResult(variant).reason || smlibResult(variant).summary || '尚无对应 SMLib 实际产物。' },
   ];

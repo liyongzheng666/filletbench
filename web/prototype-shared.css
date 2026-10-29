@@ -1,0 +1,12 @@
+/* PROTOTYPE: layout choices only; no benchmark evidence is changed. */
+body[data-prototype] .collection-tabs,body[data-prototype] .collection-description,body[data-prototype] .family-tag{display:none!important}
+body[data-prototype] .main{padding-bottom:120px}
+.prototype-switcher{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;align-items:center;gap:8px;background:#112044;color:#fff;border:1px solid #6682bc;border-radius:16px;padding:10px 12px;box-shadow:0 8px 35px #081a4740;font:13px/1.35 system-ui;max-width:calc(100vw - 24px)}
+.prototype-switcher button{border:1px solid #6682bc;background:#21365e;color:#fff;border-radius:8px;padding:9px 12px;white-space:nowrap;cursor:pointer;font:inherit}
+.prototype-switcher button[aria-pressed=true]{background:#2e6df6;border-color:#91b5ff}
+.prototype-switcher .prototype-current{min-width:170px;padding:0 8px}.prototype-current strong{display:block}.prototype-current small{display:block;color:#b6caed;font-size:10px;margin-top:3px}
+.prototype-state{position:fixed;right:14px;bottom:88px;z-index:900;color:#42618b;background:#f6f9ffed;border:1px solid #cbdaf1;border-radius:7px;padding:6px 10px;font:11px system-ui;max-width:280px}
+.prototype-reference{position:absolute;inset:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;pointer-events:none}.prototype-reference img{max-width:100%;max-height:calc(100% - 28px);object-fit:contain;background:#fff}.prototype-reference small{font-size:9px;color:#667a99;margin-top:7px;background:#fff;padding:3px 7px;border-radius:4px}
+.reference-stage:has(.prototype-reference:not([hidden])) .reference-empty{display:none!important}
+.prototype-selected-reference{font:11px system-ui;color:#496d9c}
+@media(max-width:760px){.prototype-switcher{gap:5px;padding:8px;bottom:10px}.prototype-switcher button{padding:8px}.prototype-switcher .prototype-current{min-width:0;font-size:11px}.prototype-current small{display:none}.prototype-switcher .prototype-choice{font-size:11px}.prototype-state{bottom:73px;max-width:calc(100vw - 28px)}}

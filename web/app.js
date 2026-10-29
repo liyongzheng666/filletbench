@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
-import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.5.0';
+import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?prototype=blue';
 import { faceLocalMesh } from './mesh.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
@@ -24,7 +24,7 @@ function variantLabel(variant) { return variant.label || (variant.radius_mm !== 
 function brief(value, max = 170) { const string = text(value, ''); return string.length > max ? string.slice(0, max) + '…' : string; }
 function originalParameterText(variant) {
   const parameters = variant.parameters;
-  if (!parameters || typeof parameters !== 'object') return text(parameters, '原版参数详见记录。');
+  if (!parameters || typeof parameters !== 'object') return text(parameters, '测试参数详见记录。');
   const parts = [parameters.summary, parameters.radius_text || (parameters.radius_mm !== undefined ? `R ${parameters.radius_mm} mm` : null), parameters.part_number ? `原部件 ${parameters.part_number}` : null, parameters.plan?.selection_note || parameters.preprocess?.description, parameters.construction].filter((value) => value !== undefined && value !== null && value !== '');
   return parts.length ? parts.map((value) => text(value)).join(' · ') : brief(parameters, 280);
 }
@@ -37,7 +37,7 @@ function addDetailLink(parent, label, path) { const url = safePath(path); if (!u
 function addModelDownloads(parent, engine = 'occt') {
   const variant = state.variant, result = engine === 'input' ? {} : variant[engine] || {};
   const files = [...(Array.isArray(result.files) ? result.files : [])];
-  if (engine === 'input' && variant.base_brep_url && !files.some((file) => file.path === variant.base_brep_url || (file.sha256 === variant.base_sha256 && /基础/.test(file.label || '')))) files.unshift({ label: '原版基础 BREP', path: variant.base_brep_url, sha256: variant.base_sha256, status: '原基础输入' });
+  if (engine === 'input' && variant.base_brep_url && !files.some((file) => file.path === variant.base_brep_url || (file.sha256 === variant.base_sha256 && /基础/.test(file.label || '')))) files.unshift({ label: '基础 BREP', path: variant.base_brep_url, sha256: variant.base_sha256, status: '原基础输入' });
   const list = newNode('ul', 'model-download-list');
   for (const file of files) {
     if (typeof file.path !== 'string') continue;
@@ -80,9 +80,9 @@ async function readCase(item, collection, series) {
 async function routeHash() {
   const token = ++state.routeToken;
   const hash = getHash();
-  let series = COLLECTIONS[hash.get('series')] ? hash.get('series') : 'original';
+  let series = 'original';
   const number = hash.get('case'), requested = hash.get('variant');
-  if (!hash.has('series') && requested) {
+  if (false && !hash.has('series') && requested) {
     const matches = await Promise.allSettled(['original', 'comparison'].map(async (candidate) => {
       const collection = await loadCollection(candidate);
       const item = collection.catalog.cases.find((entry) => getCaseNumber(entry) === String(number).padStart(2, '0'));
@@ -144,9 +144,9 @@ function renderCollectionUI() {
   const original = isOriginal(state);
   document.body.dataset.series = state.series;
   $$('.collection-tabs button').forEach((button) => { const active = button.dataset.series === state.series; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
-  $('#collectionContext').textContent = original ? '原版 OCC 系列' : 'OCCT × SMLib';
-  $('#collectionDescription').textContent = original ? '34 组原始编号 · 原版参数 / 基础输入 · 缝合、裁剪、延伸后的操作输入单列。32 为说明项。' : '独立的 OCC–SMLib 补充对照实验。各实验输入、参数与原版系列分别记录。';
-  $('#variantControlLabel').textContent = original ? '原版参数' : '测试参数';
+  $('#collectionContext').textContent = original ? '基准案例' : 'OCCT × SMLib';
+  $('#collectionDescription').textContent = original ? '34 组原始编号 · 测试参数 / 基础输入 · 缝合、裁剪、延伸后的操作输入单列。32 为说明项。' : '独立的 OCC–SMLib 补充对照实验。各实验输入、参数与原版系列分别记录。';
+  $('#variantControlLabel').textContent = original ? '测试参数' : '测试参数';
   $('#beforeControl').hidden = original; $('#beforeDivider').hidden = original;
   $('#originalPipeline').hidden = !original;
   $('#occtHeading').textContent = '基础模型与选边';
@@ -179,12 +179,12 @@ function renderList() {
   container.replaceChildren();
   for (const item of items) {
     const button = newNode('button', 'case-link' + (state.currentCase?.id === item.id ? ' active' : ''));
-    button.dataset.case = item.id;
+    button.dataset.case = item.id; button.title = `${getCaseNumber(item)} · ${item.title}`; button.setAttribute('aria-label', button.title);
     button.setAttribute('aria-current', state.currentCase?.id === item.id ? 'page' : 'false');
     button.append(newNode('span', 'case-number', getCaseNumber(item)));
     const content = newNode('span', 'case-link-content');
     const explanation = item.has_model === false || getCaseNumber(item) === '32';
-    content.append(newNode('span', 'case-link-title', item.title || `案例 ${getCaseNumber(item)}`), newNode('span', 'case-link-subtitle', explanation ? '说明项 · 无独立模型' : `${item.variant_count || '—'} 组参数 · 系列 ${(item.family || '—').toUpperCase()}`));
+    content.append(newNode('span', 'case-link-title', item.title || `案例 ${getCaseNumber(item)}`), newNode('span', 'case-link-subtitle', explanation ? '说明项 · 无独立模型' : `${item.variant_count || '—'} 个工况 · 可查看证据`));
     button.append(content, newNode('span', 'case-list-dot ' + caseTone(item)));
     button.addEventListener('click', () => selectCase(item));
     container.append(button);
@@ -205,7 +205,7 @@ async function selectCase(item, requestedVariant) {
     $('#caseKicker').textContent = `CASE ${getCaseNumber(data)}`;
     $('#caseTitle').textContent = data.title || item.title;
     $('#caseQuestion').textContent = data.question || item.question || '对照输入与实际内核输出，检查目标圆角能否可靠构建。';
-    $('#familyTag').textContent = (data.family || item.family) ? `系列 ${(data.family || item.family).toUpperCase()}` : '';
+    $('#familyTag').textContent = (data.family || item.family) ? '基准案例' : '';
     $('#familyTag').hidden = !$('#familyTag').textContent;
     document.title = `${getCaseNumber(data)} ${data.title || item.title} · FilletBench`;
     $('#variantSelect').replaceChildren();
@@ -216,7 +216,7 @@ async function selectCase(item, requestedVariant) {
     const groups = new Map();
     const multiPart = new Set(variants.map((variant) => variant.id.match(/part(\d+)/)?.[1]).filter(Boolean)).size > 1;
     for (const variant of variants) {
-      const groupName = isOriginal(state) ? '原版参数 / 基础输入' : variant.role === 'ordinary_challenge' ? '普通边圆角 · 挑战参数' : variant.role === 'ordinary_control' ? '普通边圆角 · 控制参数' : '补充证据 · 独立特殊协议';
+      const groupName = isOriginal(state) ? '测试参数 / 基础输入' : variant.role === 'ordinary_challenge' ? '普通边圆角 · 挑战参数' : variant.role === 'ordinary_control' ? '普通边圆角 · 控制参数' : '补充证据 · 独立特殊协议';
       if (!groups.has(groupName)) { const group = newNode('optgroup'); group.label = groupName; groups.set(groupName, group); $('#variantSelect').append(group); }
       const option = newNode('option'); option.value = variant.id;
       const part = multiPart ? `部件 ${Number(variant.id.match(/part(\d+)/)?.[1] || 1)} · ` : '';
@@ -273,7 +273,7 @@ function renderNotice() {
   }
   if (isOriginal(state)) {
     const relation = inputRelation(variant);
-    parts.push(variant.operation_relation_note || (relation === 'derived' ? '原基础与实际操作输入不同：中栏默认保留原基础，可单独查看缝合 / 裁剪 / 延伸后的输入。' : relation === 'part_selection' ? '中栏默认保留原基础总模型，实际操作输入单独显示本次选取的部件。' : relation === 'same_as_base' ? '本次直接使用原版基础几何；着色与网格记录可不同。' : relation === 'recorded_combination_input' ? '操作输入为组合流程入口；内部分割与 Boolean 步骤另见处理记录。' : '原基础与实际操作输入单列保留；具体部件与预处理步骤以操作记录为准。'));
+    parts.push(variant.operation_relation_note || (relation === 'derived' ? '原基础与实际操作输入不同：中栏默认保留原基础，可单独查看缝合 / 裁剪 / 延伸后的输入。' : relation === 'part_selection' ? '中栏默认保留原基础总模型，实际操作输入单独显示本次选取的部件。' : relation === 'same_as_base' ? '本次直接使用基础几何；着色与网格记录可不同。' : relation === 'recorded_combination_input' ? '操作输入为组合流程入口；内部分割与 Boolean 步骤另见处理记录。' : '原基础与实际操作输入单列保留；具体部件与预处理步骤以操作记录为准。'));
     const scope = variant.scope_note || variant.input_construction_note || variant.input_note || state.currentCase.scope_note;
     if (scope) parts.push(text(scope));
     parts.push(historicalResult(variant) ? '历史处理记录 · 本次未复跑。' : '已记录本次复跑证据。');
@@ -317,9 +317,9 @@ function renderOriginalMetadata() {
   const relationLabel = { same_as_base: '同原基础几何', part_selection: '原基础的部件', derived: '已衍生', recorded_combination_input: '组合流程入口', recorded_input: '单列操作记录' }[relation];
   $('#occtHeading').textContent = operation ? '实际操作输入' : '基础模型与选边';
   $('#occtVersion').textContent = operation ? 'OPERATION INPUT' : 'ORIGINAL BASE';
-  $('#occtStatus').textContent = operation ? relationLabel : '原版基础';
+  $('#occtStatus').textContent = operation ? relationLabel : '基础';
   $('#occtStatus').className = 'status-badge neutral';
-  $('#occtCaption').textContent = operation ? text(variant.operation_relation_note || variant.operation_note || variant.preparation_note || variant.operation_input?.note, `实际操作输入 · ${relationLabel}`) : '原版参数 / 基础输入 · 原选边 / 选面';
+  $('#occtCaption').textContent = operation ? text(variant.operation_relation_note || variant.operation_note || variant.preparation_note || variant.operation_input?.note, `实际操作输入 · ${relationLabel}`) : '测试参数 / 基础输入 · 原选边 / 选面';
   $('#occtCaption').title = $('#occtCaption').textContent;
   $('#smlibStatus').textContent = (historicalResult(variant) ? '历史 · ' : '') + info.fullLabel;
   $('#smlibStatus').className = `status-badge ${failedResult(variant) ? 'failed' : info.tone}`;
@@ -345,10 +345,10 @@ function renderFindings() {
     const humanStatus = variant.human_status || state.currentCase.human_status;
     const currentHumanReview = state.currentCase.revision || state.currentCase.faceface_protocol;
     const cards = [
-      ['原版参数 / 基础输入', variantLabel(variant), [originalParameterText(variant), variant.base_note || variant.input_note].filter(Boolean).join(' · ')],
+      ['测试参数 / 基础输入', variantLabel(variant), [originalParameterText(variant), variant.base_note || variant.input_note].filter(Boolean).join(' · ')],
       [originalMethod(variant), failedResult(variant) || !result.mesh ? originalResultLabel(variant) : `${historicalResult(variant) ? '历史记录 · 未复跑' : '本次实际处理'} · ${statusInfo(result).fullLabel}`, result.reason || result.summary || '没有完整处理记录。'],
       ['SMLib 对应证据', smlibResultLabel(variant), smlibResult(variant).reason || smlibResult(variant).summary || '对应关系尚未确认；第四栏只显示独立记录的 SMLib 实际产物。'],
-      ['人工核对与验证边界', currentHumanReview ? '本轮结果 · 等待人工核对' : humanNote ? '保留用户原确认 / 备注' : humanStatus ? `原人工状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus && !currentHumanReview ? '原人工状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
+      ['人工核对与验证边界', currentHumanReview ? '本轮结果 · 等待人工核对' : humanNote ? '保留用户原确认 / 备注' : humanStatus ? `视觉验收状态：${text(humanStatus)}` : '参考外观仍需人工核对', humanNote ? text(humanNote) : `${humanStatus && !currentHumanReview ? '视觉验收状态为历史记录，本次未重新验收。' : ''}${variant.scope_note || '基础重建、实际选边 / 选面、处理结果、独立几何验证与原图外观分别验收。'}`],
     ];
     cards.forEach(([label, title, content], index) => { const card = newNode('article', 'finding' + (index === 1 && failedResult(variant) ? ' warn' : '')); const heading = newNode('div', 'finding-label'); heading.append(newNode('span', 'finding-number', index + 1), newNode('span', '', label)); card.append(heading, newNode('h3', '', title), newNode('p', '', text(content))); container.append(card); });
     return;
@@ -447,7 +447,7 @@ class MeshViewer {
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.setClearColor(0xffffff, 0);
     $('.model-canvas', stage).append(this.renderer.domElement);
-    this.scene.add(new THREE.HemisphereLight(0xffffff, 0xa7b4ac, 2.6));
+    this.scene.add(new THREE.HemisphereLight(0xffffff, 0xa8b8d6, 2.6));
     const key = new THREE.DirectionalLight(0xffffff, 3); key.position.set(5, -7, 10); this.scene.add(key);
     const fill = new THREE.DirectionalLight(0xe9f3ef, 1.1); fill.position.set(-6, 3, 4); this.scene.add(fill);
     this.group = new THREE.Group(); this.scene.add(this.group);
@@ -491,13 +491,13 @@ class MeshViewer {
       const partId = mesh.part_ids?.[index] ?? mesh.metadata?.face_parts?.[faceId];
       const sourceColor = faceColor || partColors?.[partId];
       const color = new THREE.Color();
-      if (Array.isArray(sourceColor)) color.setRGB(...sourceColor.map((value) => value > 1 ? value / 255 : value)); else color.set(sourceColor || 0xc5d2ce);
+      if (Array.isArray(sourceColor)) color.setRGB(...sourceColor.map((value) => value > 1 ? value / 255 : value)); else color.set(sourceColor || 0xa8c6ef);
       for (let vertex = 0; vertex < 3; vertex++) colors.push(color.r, color.g, color.b);
     }
     coloredGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
     const material = new THREE.MeshStandardMaterial({ color: 0xffffff, vertexColors: true, metalness: .12, roughness: .5, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
     this.group.add(new THREE.Mesh(coloredGeometry, material));
-    const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x49645b, transparent: true, opacity: .62 });
+    const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x426291, transparent: true, opacity: .62 });
     if (Array.isArray(mesh.edges) && mesh.edges.length) {
       for (const edge of mesh.edges) { const points = edge.points || edge; if (!Array.isArray(points) || points.length < 2) continue; const edgeGeometry = new THREE.BufferGeometry().setFromPoints(points.map((point) => new THREE.Vector3(...point))); this.group.add(new THREE.Line(edgeGeometry, edgeMaterial)); }
     } else this.group.add(new THREE.LineSegments(new THREE.EdgesGeometry(geometry, 28), edgeMaterial));
@@ -509,8 +509,8 @@ class MeshViewer {
       if (points.length < 2) continue;
       const targetGeometry = new THREE.BufferGeometry().setFromPoints(points.map((point) => new THREE.Vector3(...point)));
       const auxiliary = target.target_kind === 'auxiliary_guide';
-      const wallReference = target.target_kind === 'source_wall_boundary';
-      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: wallReference ? 0x6c8179 : target.target_kind === 'result_trim_boundary' ? 0x356ad2 : target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, transparent: true, opacity: wallReference ? .5 : 1, depthTest: wallReference, depthWrite: false, linewidth: 2 });
+      const wallReference = target.target_kind === 'source_wall_boundary'; const wallColor = document.body.dataset.prototype === 'B' ? 0xb0c8ee : 0x647ca3;
+      const targetMaterial = auxiliary ? new THREE.LineDashedMaterial({ color: 0xb3855b, transparent: true, opacity: 1, depthTest: false, depthWrite: false, dashSize: this.radius * .04, gapSize: this.radius * .025 }) : new THREE.LineBasicMaterial({ color: wallReference ? wallColor : target.target_kind === 'result_trim_boundary' ? 0x356ad2 : target.target_kind === 'selected_face' ? 0xd3a04c : target.target_kind === 'result_witness' ? 0x129c7b : 0xe52d45, transparent: true, opacity: wallReference ? .5 : 1, depthTest: wallReference, depthWrite: false, linewidth: 2 });
       const line = new THREE.Line(targetGeometry, targetMaterial); if (auxiliary) line.computeLineDistances(); line.renderOrder = 4; this.group.add(line);
       if (!auxiliary && !wallReference) {
         const ends = new THREE.BufferGeometry().setFromPoints([points[0], points[points.length - 1]].map((point) => new THREE.Vector3(...point)));
@@ -782,7 +782,7 @@ function renderDetails() {
     if (!state.detailEngine || state.detailEngine === 'input') {
       if (isOriginal(state)) {
         const original = newNode('dl');
-        for (const [label, value] of [['集合', COLLECTIONS.original.label], ['原版参数', variant.parameters], ['基础模型', baseMesh(variant)], ['实际操作输入', operationMesh(variant)], ['操作输入说明', variant.operation_note || variant.operation_input?.note], ['原选边 / 选面', { targets: variant.targets, selected_faces: variant.selected_faces }], ['历史处理状态', variant.historical_status], ['原人工状态', variant.human_status || state.currentCase.human_status], ['用户确认 / 备注', variant.human_note || state.currentCase.human_note], ['本次 OCC 证据', historicalResult(variant) ? '历史记录，本次未复跑' : '本次运行记录'], ['对应范围', variant.scope_note]]) original.append(newNode('dt', '', label), newNode('dd', '', text(value)));
+        for (const [label, value] of [['集合', COLLECTIONS.original.label], ['测试参数', variant.parameters], ['基础模型', baseMesh(variant)], ['实际操作输入', operationMesh(variant)], ['操作输入说明', variant.operation_note || variant.operation_input?.note], ['原选边 / 选面', { targets: variant.targets, selected_faces: variant.selected_faces }], ['历史处理状态', variant.historical_status], ['视觉验收状态', variant.human_status || state.currentCase.human_status], ['用户确认 / 备注', variant.human_note || state.currentCase.human_note], ['本次 OCC 证据', historicalResult(variant) ? '历史记录，本次未复跑' : '本次运行记录'], ['对应范围', variant.scope_note]]) original.append(newNode('dt', '', label), newNode('dd', '', text(value)));
         container.append(original);
         addModelDownloads(container, 'input');
         for (const [label, source] of [['打开原基础网格', baseMesh(variant)], ['打开实际操作输入网格', operationMesh(variant)]]) { const paragraph = newNode('p'); addDetailLink(paragraph, label, source); container.append(paragraph); }
@@ -886,7 +886,7 @@ function wireUI() {
     const editing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName);
     const dialogOpen = $$('dialog').some((dialog) => dialog.open);
     if (event.key === '/' && !editing && !dialogOpen) { event.preventDefault(); if (innerWidth <= 720) $('.sidebar').classList.add('is-open'); $('#caseSearch').focus(); }
-    if (!editing && !dialogOpen && !state.expanded && !event.altKey && !event.metaKey && !event.ctrlKey) { if (event.key === 'ArrowLeft') stepCase(-1); if (event.key === 'ArrowRight') stepCase(1); }
+    if (!document.body.dataset.prototype && !editing && !dialogOpen && !state.expanded && !event.altKey && !event.metaKey && !event.ctrlKey) { if (event.key === 'ArrowLeft') stepCase(-1); if (event.key === 'ArrowRight') stepCase(1); }
   });
 }
 boot();
