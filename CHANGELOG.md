@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.1
+
+- Apply the user-selected Blue Lab layout: white sidebar and canvases, cobalt controls and navy typography, with readable two-row result headers.
+- Present the primary corpus as 基准案例 and remove the competing collection tabs from the main page. Preserve historical experiment deep links with a clear return action.
+- Keep four horizontal comparison columns, native/composite labels, failure states, local PDF import and all benchmark evidence unchanged.
+- Retain alternative design prototypes on their own branch; no prototype controls or local reference-serving code are deployed.
+
 ## 0.5.0
 
 - Execute case36 R8 face-face tests on the exact original unequal, separated finite faces; keep the old admission-only and equal-width derivative runs as explicit history.

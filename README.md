@@ -2,7 +2,7 @@
 
 [打开对比网站](https://liyongzheng666.github.io/filletbench/) · [评测方法](docs/methodology.md) · [贡献案例](CONTRIBUTING.md)
 
-默认打开此前逐项人工调教的 **原版 OCC 系列**：原 PDF / 原基础模型与选边 / OCC实际结果 / SMLib实际结果。另保留独立的 OCC–SMLib 对照实验集合。保留失败、空结果、碎片和自交；**API 成功不是功能通过**。本库目前是探索性测评集，尚未建立可用于内核排名的统一通过率。
+网站以 **基准案例** 为主入口，沿用此前逐项核对的输入与工况：原 PDF / 基础模型与选边 / OCC实际结果 / SMLib实际结果。界面采用用户选定的“蓝白实验室”设计；历史实验保留既有链接与返回主入口的操作。保留失败、空结果、碎片和自交；**API 成功不是功能通过**。本库目前是探索性测评集，尚未建立可用于内核排名的统一通过率。[界面设计记录](docs/viewer-design.md)
 
 ## 快速开始
 
@@ -135,7 +135,7 @@ python bench.py serve
 
 [原版数据与身份边界](data/original-occ/README.md) · [原生复跑](docs/original-occ-native.md) · [组合复跑](docs/original-occ-compositions.md) · [独立审计](docs/original-series-audit.md)
 
-网页默认 `#series=original&case=22&variant=part01-r6`。以下普通请求及 SMLib 结果属于 **另一个实验集合**，不能替代原版人工调教协议；用 `#series=comparison` 查看。
+主入口使用 `#series=original`，保留案例与工况的精确链接，例如 `#series=original&case=22&variant=part01-r6`。以下普通请求及 SMLib 结果属于 **历史实验集合**，不能替代当前基准案例的协议；既有 `#series=comparison` 链接仍可查看原记录。
 
 ## 独立对照实验收录范围
 

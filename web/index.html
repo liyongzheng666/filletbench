@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f6f7f8">
+  <meta name="theme-color" content="#f4f7fc">
   <meta name="description" content="FilletBench：可复现的 OCCT / SMLib 圆角测试与本地参考图对照。">
-  <title>FilletBench · 圆角对照实验室</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>FilletBench · 几何圆角测评</title>
+  <link rel="icon" href="assets/favicon.svg?v=0.5.1" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="blue-lab.css?v=0.5.1">
   <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js"}}</script>
 </head>
-<body>
+<body class="blue-lab">
   <header class="topbar">
-    <a class="brand" href="#" aria-label="FilletBench 首页"><span class="brand-symbol">f<span>↗</span></span><span>Fillet<span class="brand-light">Bench</span><small>GEOMETRY, MADE VISIBLE.</small></span></a>
-    <div class="top-context"><span class="context-dot"></span>圆角对照实验室<span class="context-divider">/</span><span id="collectionContext">原版 OCC 系列</span></div>
+    <a class="brand" href="#" aria-label="FilletBench 首页"><span class="brand-symbol">f<span>↗</span></span><span>Fillet<span class="brand-light">Bench</span><small>REPRODUCIBLE GEOMETRY BENCHMARK</small></span></a>
+    <div class="top-context"><span class="context-dot"></span>几何圆角测评<span class="context-divider">/</span><span id="collectionContext">基准案例</span></div>
     <nav class="top-actions"><span class="local-tag"><span>◉</span> 本地参考 · 隐私优先</span><a href="https://github.com/liyongzheng666/filletbench" target="_blank" rel="noopener" class="repo-link">GitHub <span aria-hidden="true">↗</span></a></nav>
   </header>
   <aside class="sidebar">
-    <div class="sidebar-heading"><div><span class="eyebrow">THE COLLECTION</span><h2>案例目录 <span id="caseCount">—</span></h2></div><button id="mobileClose" class="icon-button mobile-only" aria-label="收起目录">×</button></div>
+    <div class="sidebar-heading"><div><span class="eyebrow">BENCHMARK CASES</span><h2><strong id="caseCatalogLabel">基准案例</strong> <span id="caseCount">—</span></h2></div><button id="mobileClose" class="icon-button mobile-only" aria-label="收起目录">×</button></div>
     <label class="search"><span aria-hidden="true">⌕</span><input id="caseSearch" type="search" placeholder="搜索编号、形状或问题" autocomplete="off" aria-label="搜索案例"><kbd>/</kbd></label>
     <div class="filters" role="group" aria-label="筛选案例"><button data-filter="all" class="active">全部</button><button data-filter="attention">待解决</button><button data-filter="mesh">已生成</button></div>
     <div id="caseList" class="case-list" aria-live="polite"><p class="list-message">正在读取案例…</p></div>
@@ -25,17 +26,17 @@
   </aside>
   <main id="main" class="main">
     <div id="bootError" class="boot-error" hidden></div>
-    <nav class="collection-tabs" aria-label="选择案例集合"><button data-series="original" class="active" aria-pressed="true">原版 OCC 人工核对系列 <span>34 组</span></button><button data-series="comparison" aria-pressed="false">OCC–SMLib 对照实验 <span>补充实验</span></button></nav>
-    <p id="collectionDescription" class="collection-description">原始编号、原版参数与基础模型，逐项对照实际 OCC 处理记录。</p>
+    <button id="returnToBenchmark" class="outline-button history-return" hidden>返回基准案例</button>
+    <p id="collectionDescription" class="collection-description">原始编号、测试参数与基础模型，逐项对照实际 OCC 处理记录。</p>
     <section class="case-heading">
       <div class="case-breadcrumb"><button id="mobileMenu" class="icon-button mobile-only" aria-label="展开案例目录">☰</button><span>BENCHMARK</span><span class="slash">/</span><span id="caseKicker">CASE —</span><div class="case-stepper"><button id="previousCase" class="icon-button" aria-label="上一个案例">←</button><button id="nextCase" class="icon-button" aria-label="下一个案例">→</button></div></div>
       <div class="case-title-line"><div><h1 id="caseTitle">每一处圆角，都值得看清。</h1><p id="caseQuestion" class="case-question">可复现输入、真实内核结果，以及只留在你浏览器中的原始参考。</p></div><span id="familyTag" class="family-tag" hidden></span></div>
     </section>
     <section class="variant-toolbar" aria-label="参数与视图">
-      <div class="variant-select"><span id="variantControlLabel" class="control-label">原版参数</span><select id="variantSelect" aria-label="选择测试参数与协议"></select><span id="variantMeta" class="parameter-badge" hidden></span></div>
+      <div class="variant-select"><span id="variantControlLabel" class="control-label">测试参数</span><select id="variantSelect" aria-label="选择测试参数与协议"></select><span id="variantMeta" class="parameter-badge" hidden></span></div>
       <div class="view-controls"><label id="beforeControl" class="toggle-control" hidden><input id="beforeToggle" type="checkbox"><span class="toggle-track"></span><span>建模前 / 目标边</span></label><span id="beforeDivider" class="toolbar-divider" hidden></span><label class="sync-control"><input id="syncToggle" type="checkbox" checked><span id="syncIcon">⛓</span><span>同步视角 · 共同比例</span></label><button id="resetView" class="subtle-button" title="重置三个模型的视角">↺ 重置</button></div>
     </section>
-    <section id="originalPipeline" class="original-pipeline" aria-label="原版处理阶段"><div class="input-stage-switch" role="group" aria-label="基础模型输入阶段"><span>基础模型</span><button data-input-stage="base" class="active" aria-pressed="true">原基础 · 选边 / 选面</button><button data-input-stage="operation" aria-pressed="false">实际操作输入</button></div><div id="pipelineBadges" class="pipeline-badges"></div></section>
+    <section id="originalPipeline" class="original-pipeline" aria-label="输入与处理阶段"><div class="input-stage-switch" role="group" aria-label="基础模型输入阶段"><span>基础模型</span><button data-input-stage="base" class="active" aria-pressed="true">基础模型 · 选边 / 选面</button><button data-input-stage="operation" aria-pressed="false">实际操作输入</button></div><div id="pipelineBadges" class="pipeline-badges"></div></section>
     <div id="representationNotice" class="representation-notice" hidden></div>
     <div id="comparisonNavigation" class="comparison-navigation" hidden><span>四栏对照 · 可横向查看</span><div><button id="comparisonLeft" class="outline-button">← 原图与输入</button><button id="comparisonRight" class="outline-button">OCC 与 SMLib →</button></div></div>
     <section id="comparisonGrid" class="comparison-grid" aria-label="PDF 原图、基础模型与选边、OCC 和 SMLib 实际结果横向四栏对照">
@@ -66,15 +67,15 @@
       </article>
     </section>
     <div class="comparison-footnote"><span id="comparisonLegend"><i class="legend-line"></i> 洋红：实际选边 · 棕色虚线：理论辅助位置 · 橙色：选面 · 共同比例</span><span id="validationFootnote">历史记录未复跑；几何、特殊语义和参考外观分别验收。</span></div>
-    <section class="findings-section"><div class="section-heading"><div><span class="eyebrow">READ THE RESULT</span><h2>这个结果说明了什么</h2></div><button id="openDetails" class="outline-button">判据与复现 <span>↗</span></button></div><div id="findings" class="findings-grid"></div></section>
+    <section class="findings-section"><div class="section-heading"><div><span class="eyebrow">READ THE RESULT</span><h2>结果与验证</h2></div><button id="openDetails" class="outline-button">判据与复现 <span>↗</span></button></div><div id="findings" class="findings-grid"></div></section>
     <footer class="page-footer"><span>FilletBench <b>·</b> Evidence before conclusions.</span><span>同一问题，保留每一处差异。</span></footer>
   </main>
   <input id="referenceFile" type="file" accept="application/pdf,image/png,image/jpeg,image/webp,image/gif" hidden>
   <div id="expandBackdrop" class="expand-backdrop" hidden></div>
   <dialog id="referenceDialog" class="reference-dialog"><div class="dialog-heading"><div><span class="eyebrow">YOUR FILE, YOUR BROWSER</span><h2>本地参考设置</h2></div><button id="closeReferenceDialog" class="icon-button" aria-label="关闭">×</button></div><p class="dialog-intro">选择 PDF 物理页；拖动预览可框选图形区域。参考文件与映射仅保存在当前浏览器。</p><div id="referenceFileInfo" class="file-info"></div><div id="pdfControls" class="pdf-controls" hidden><button id="pdfPrevious" class="outline-button" aria-label="上一页">←</button><label>第 <input id="pdfPageNumber" type="number" min="1" value="1"> 页 <span id="pdfPageCount"></span></label><button id="pdfNext" class="outline-button" aria-label="下一页">→</button><button id="suggestedCrop" class="text-button">使用建议区域</button><button id="resetCrop" class="text-button">显示完整页</button></div><div id="pdfPreview" class="pdf-preview" hidden><canvas id="pdfPreviewCanvas"></canvas><div id="cropSelection" class="crop-selection" hidden><span>选取区域</span></div></div><p id="referenceMatch" class="reference-match"></p><div class="dialog-actions"><button id="forgetReference" class="text-button danger-text">清除本地文件</button><div><button id="replaceReference" class="outline-button">更换文件</button><button id="applyReference" class="primary-button">应用到当前案例</button></div></div></dialog>
   <dialog id="detailDialog" class="detail-dialog"><div class="dialog-heading"><div><span class="eyebrow">THE EVIDENCE</span><h2 id="detailTitle">判据与复现</h2></div><button id="closeDetailDialog" class="icon-button" aria-label="关闭">×</button></div><div class="detail-tabs" role="tablist"><button class="active" data-tab="evidence" role="tab">判据与结果</button><button data-tab="reproduce" role="tab">复现命令</button><button data-tab="raw" role="tab">原始数据</button></div><div id="detailContent" class="detail-content"></div></dialog>
-  <dialog id="aboutDialog" class="about-dialog"><div class="dialog-heading"><div><span class="eyebrow">ABOUT THIS BENCHMARK</span><h2>能生成，只是第一步。</h2></div><button id="closeAboutDialog" class="icon-button" aria-label="关闭">×</button></div><p>默认“原版 OCC 人工核对系列”逐项保留原版参数、基础模型、原选边 / 选面、实际 OCC 处理记录及对应的 SMLib 证据。第四栏只显示本变体记录的 SMLib 实际产物；未匹配输入、选边、半径与方法时明确标注，缺少结果时保持空栏。缝合、裁剪、延伸后的操作输入单列，不能替换原基础。“OCC–SMLib 对照实验”保留独立的补充实验。</p><p>原生构建、显式组合、历史快照与本次复跑分别标注。普通边圆角通过不代表原图的高级语义通过；终止方式、连续性、自交及参考外观需分别验收。</p><p>原始 PDF 和参考截图不随公开仓库分发。你可以在本地载入自己的文件；页面没有上传接口，PDF 渲染和裁切都在浏览器内完成。</p><p class="about-small">原始编号为 01–28、30、31、33–36，共 34 组。29 已删除；32 为说明项，不列为测试案例。依赖随站点提供，无需访问第三方 CDN。</p><a class="primary-button" href="https://github.com/liyongzheng666/filletbench" target="_blank" rel="noopener">查看开源仓库 ↗</a></dialog>
+  <dialog id="aboutDialog" class="about-dialog"><div class="dialog-heading"><div><span class="eyebrow">ABOUT THIS BENCHMARK</span><h2>能生成，只是第一步。</h2></div><button id="closeAboutDialog" class="icon-button" aria-label="关闭">×</button></div><p>默认“基准案例”逐项保留测试参数、基础模型、原选边 / 选面、实际 OCC 处理记录及对应的 SMLib 证据。第四栏只显示本变体记录的 SMLib 实际产物；未匹配输入、选边、半径与方法时明确标注，缺少结果时保持空栏。缝合、裁剪、延伸后的操作输入单列，不能替换原基础。历史实验记录保留独立协议与普通控制，可通过原有链接溯源。</p><p>原生构建、显式组合、历史快照与本次复跑分别标注。普通边圆角通过不代表原图的高级语义通过；终止方式、连续性、自交及参考外观需分别验收。</p><p>原始 PDF 和参考截图不随公开仓库分发。你可以在本地载入自己的文件；页面没有上传接口，PDF 渲染和裁切都在浏览器内完成。</p><p class="about-small">原始编号为 01–28、30、31、33–36，共 34 组。29 已删除；32 为说明项，不列为测试案例。依赖随站点提供，无需访问第三方 CDN。</p><a class="primary-button" href="https://github.com/liyongzheng666/filletbench" target="_blank" rel="noopener">查看开源仓库 ↗</a></dialog>
   <div id="toast" class="toast" role="status" hidden></div>
-  <script type="module" src="app.js?v=0.5.0"></script>
+  <script type="module" src="app.js?v=0.5.1"></script>
 </body>
 </html>
