@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.2
+
+- Keep normal browsing at `/filletbench/`, remembering the exact selected case and variant locally and across refresh.
+- Continue accepting legacy parameterized links, then clean the address after loading their intended target.
+- Add an explicit copy-location action with compact share links, while retaining the primary benchmark as the fresh-entry default.
+
 ## 0.5.1
 
 - Apply the user-selected Blue Lab layout: white sidebar and canvases, cobalt controls and navy typography, with readable two-row result headers.

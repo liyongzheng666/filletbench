@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f4f7fc">
   <meta name="description" content="FilletBench：可复现的 OCCT / SMLib 圆角测试与本地参考图对照。">
+  <link rel="canonical" href="https://www.goudanx.top/filletbench/">
   <title>FilletBench · 几何圆角测评</title>
   <link rel="icon" href="assets/favicon.svg?v=0.5.1" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="blue-lab.css?v=0.5.1">
+  <link rel="stylesheet" href="blue-lab.css?v=0.5.2">
   <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js"}}</script>
 </head>
 <body class="blue-lab">
@@ -34,7 +35,7 @@
     </section>
     <section class="variant-toolbar" aria-label="参数与视图">
       <div class="variant-select"><span id="variantControlLabel" class="control-label">测试参数</span><select id="variantSelect" aria-label="选择测试参数与协议"></select><span id="variantMeta" class="parameter-badge" hidden></span></div>
-      <div class="view-controls"><label id="beforeControl" class="toggle-control" hidden><input id="beforeToggle" type="checkbox"><span class="toggle-track"></span><span>建模前 / 目标边</span></label><span id="beforeDivider" class="toolbar-divider" hidden></span><label class="sync-control"><input id="syncToggle" type="checkbox" checked><span id="syncIcon">⛓</span><span>同步视角 · 共同比例</span></label><button id="resetView" class="subtle-button" title="重置三个模型的视角">↺ 重置</button></div>
+      <div class="view-controls"><label id="beforeControl" class="toggle-control" hidden><input id="beforeToggle" type="checkbox"><span class="toggle-track"></span><span>建模前 / 目标边</span></label><span id="beforeDivider" class="toolbar-divider" hidden></span><label class="sync-control"><input id="syncToggle" type="checkbox" checked><span id="syncIcon">⛓</span><span>同步视角 · 共同比例</span></label><button id="copyCaseLink" class="subtle-button" title="复制可定位到当前案例与工况的链接">复制定位链接</button><button id="resetView" class="subtle-button" title="重置三个模型的视角">↺ 重置</button></div>
     </section>
     <section id="originalPipeline" class="original-pipeline" aria-label="输入与处理阶段"><div class="input-stage-switch" role="group" aria-label="基础模型输入阶段"><span>基础模型</span><button data-input-stage="base" class="active" aria-pressed="true">基础模型 · 选边 / 选面</button><button data-input-stage="operation" aria-pressed="false">实际操作输入</button></div><div id="pipelineBadges" class="pipeline-badges"></div></section>
     <div id="representationNotice" class="representation-notice" hidden></div>
@@ -76,6 +77,7 @@
   <dialog id="detailDialog" class="detail-dialog"><div class="dialog-heading"><div><span class="eyebrow">THE EVIDENCE</span><h2 id="detailTitle">判据与复现</h2></div><button id="closeDetailDialog" class="icon-button" aria-label="关闭">×</button></div><div class="detail-tabs" role="tablist"><button class="active" data-tab="evidence" role="tab">判据与结果</button><button data-tab="reproduce" role="tab">复现命令</button><button data-tab="raw" role="tab">原始数据</button></div><div id="detailContent" class="detail-content"></div></dialog>
   <dialog id="aboutDialog" class="about-dialog"><div class="dialog-heading"><div><span class="eyebrow">ABOUT THIS BENCHMARK</span><h2>能生成，只是第一步。</h2></div><button id="closeAboutDialog" class="icon-button" aria-label="关闭">×</button></div><p>默认“基准案例”逐项保留测试参数、基础模型、原选边 / 选面、实际 OCC 处理记录及对应的 SMLib 证据。第四栏只显示本变体记录的 SMLib 实际产物；未匹配输入、选边、半径与方法时明确标注，缺少结果时保持空栏。缝合、裁剪、延伸后的操作输入单列，不能替换原基础。历史实验记录保留独立协议与普通控制，可通过原有链接溯源。</p><p>原生构建、显式组合、历史快照与本次复跑分别标注。普通边圆角通过不代表原图的高级语义通过；终止方式、连续性、自交及参考外观需分别验收。</p><p>原始 PDF 和参考截图不随公开仓库分发。你可以在本地载入自己的文件；页面没有上传接口，PDF 渲染和裁切都在浏览器内完成。</p><p class="about-small">原始编号为 01–28、30、31、33–36，共 34 组。29 已删除；32 为说明项，不列为测试案例。依赖随站点提供，无需访问第三方 CDN。</p><a class="primary-button" href="https://github.com/liyongzheng666/filletbench" target="_blank" rel="noopener">查看开源仓库 ↗</a></dialog>
   <div id="toast" class="toast" role="status" hidden></div>
-  <script type="module" src="app.js?v=0.5.1"></script>
+  <dialog id="caseLinkDialog" class="case-link-dialog"><div class="dialog-heading"><h2>当前案例定位链接</h2><button id="closeCaseLinkDialog" class="icon-button" aria-label="关闭定位链接">×</button></div><p>复制此链接可让他人打开相同的案例与工况。</p><input id="caseShareLink" aria-label="当前案例定位链接" readonly></dialog>
+  <script type="module" src="app.js?v=0.5.2"></script>
 </body>
 </html>

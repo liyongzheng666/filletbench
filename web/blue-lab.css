@@ -151,6 +151,10 @@ body.blue-lab .crop-selection {border-color:var(--brand);background:#215be426;bo
 body.blue-lab .crop-selection span {background:var(--brand)}
 body.blue-lab .danger-text,body.blue-lab .model-file-status.failed {color:#b63341}
 body.blue-lab .toast {background:#173d79}
+body.blue-lab .case-link-dialog {width:min(640px,92vw);padding:24px;border:1px solid #d7e4f5;border-radius:10px}
+body.blue-lab .case-link-dialog h2 {font-size:18px}
+body.blue-lab .case-link-dialog p {font-size:13px;color:#536b8d}
+body.blue-lab .case-link-dialog input {width:100%;padding:11px;border:1px solid #d7e4f5;border-radius:5px;background:#f7faff;color:#244d8e;font-size:13px}
 body.blue-lab :is(button,a,input,select,[tabindex]):focus-visible {outline-color:#87aaff}
 @media(max-width:1100px){body.blue-lab .main{padding-inline:18px}body.blue-lab .comparison-grid{grid-template-columns:repeat(4,minmax(240px,1fr))}body.blue-lab .view-controls{margin-left:auto}}
 @media(max-width:720px){body.blue-lab .topbar{padding-inline:16px}body.blue-lab .sidebar{width:264px}body.blue-lab .main{margin-left:0;padding:83px 16px 24px}body.blue-lab .case-title-line h1{font-size:24px}body.blue-lab .variant-select{min-width:0;width:100%;flex-basis:100%}body.blue-lab .variant-select select{width:100%;min-width:0}body.blue-lab .control-label{display:none}body.blue-lab .view-controls{flex-wrap:wrap;justify-content:flex-start;width:100%}body.blue-lab .comparison-grid{grid-template-columns:repeat(4,minmax(280px,84vw));margin-inline:0;padding-inline:0}body.blue-lab .comparison-grid .model-stage,body.blue-lab .comparison-grid .reference-stage{height:360px;min-height:340px}body.blue-lab .comparison-grid .viewer-card.is-expanded{inset:2vh 3vw}body.blue-lab .comparison-grid .viewer-card.is-expanded .model-stage,body.blue-lab .comparison-grid .viewer-card.is-expanded .reference-stage{height:auto;min-height:0}}

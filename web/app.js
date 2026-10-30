@@ -3,6 +3,7 @@ import { OrbitControls } from './vendor/three/OrbitControls.js';
 import * as pdfjsLib from './vendor/pdfjs/pdf.min.mjs';
 import { COLLECTIONS, isOriginal, casePath, baseMesh, operationMesh, inputRelation, historicalResult, failedResult, originalMethod, originalResultLabel, originalDisplay, smlibResult, smlibResultLabel, smlibPairingLabel } from './original.js?v=0.5.1';
 import { faceLocalMesh } from './mesh.js';
+import { LAST_VIEW_KEY, initialView, rememberView, shareViewerURL } from './navigation.js?v=0.5.2';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const $ = (selector, parent = document) => parent.querySelector(selector);
@@ -29,8 +30,7 @@ function originalParameterText(variant) {
   return parts.length ? parts.map((value) => text(value)).join(' · ') : brief(parameters, 280);
 }
 function newNode(tag, className, content) { const node = document.createElement(tag); if (className) node.className = className; if (content !== undefined) node.textContent = content; return node; }
-function getHash() { return new URLSearchParams(location.hash.replace(/^#/, '')); }
-function setHash(caseData, variant) { const hash = new URLSearchParams({ series: state.series, case: getCaseNumber(caseData) }); if (variant) hash.set('variant', variant.id); if (location.hash.slice(1) !== hash.toString()) history.replaceState(null, '', '#' + hash); }
+function rememberSelection(caseData, variant) { rememberView(window, { series: state.series, case: getCaseNumber(caseData), variant: variant?.id || null }); }
 async function fetchJSON(path) { const response = await fetch(path, { cache: 'no-cache' }); if (!response.ok) throw new Error(`${response.status} · ${path}`); return response.json(); }
 function safePath(path) { if (typeof path !== 'string') return null; const url = new URL(path, location.href); return url.origin === location.origin ? url.href : null; }
 function addDetailLink(parent, label, path) { const url = safePath(path); if (!url) return; const link = newNode('a', 'detail-link', label); link.href = url; link.target = '_blank'; link.rel = 'noopener'; parent.append(link); }
@@ -79,10 +79,10 @@ async function readCase(item, collection, series) {
 }
 async function routeHash() {
   const token = ++state.routeToken;
-  const hash = getHash();
-  let series = COLLECTIONS[hash.get('series')] ? hash.get('series') : 'original';
-  const number = hash.get('case'), requested = hash.get('variant');
-  if (!hash.has('series') && requested) {
+  const route = initialView(location.href, history.state, readStorage(LAST_VIEW_KEY, null));
+  let series = route.series;
+  const number = route.case, requested = route.variant;
+  if (route.explicitSeries === false && requested) {
     const matches = await Promise.allSettled(['original', 'comparison'].map(async (candidate) => {
       const collection = await loadCollection(candidate);
       const item = collection.catalog.cases.find((entry) => getCaseNumber(entry) === String(number).padStart(2, '0'));
@@ -236,7 +236,7 @@ async function selectCase(item, requestedVariant) {
     $('#nextCase').disabled = index === state.catalog.cases.length - 1;
     $('.sidebar').classList.remove('is-open');
     if (chosen) await selectVariant(chosen); else {
-      state.variant = null; ++state.token; setHash(state.currentCase);
+      state.variant = null; ++state.token; rememberSelection(state.currentCase);
       $('#variantMeta').hidden = true; $('#representationNotice').hidden = true; $('#pipelineBadges').replaceChildren();
       const explanation = data.has_model === false || getCaseNumber(data) === '32';
       $('#findings').replaceChildren(newNode('p', 'list-message', explanation ? text(data.note || data.question, '本项仅为原文说明，不建立独立模型或执行圆角任务。') : '该案例尚无测试变体；不会显示其他案例的结果。'));
@@ -257,7 +257,7 @@ async function selectVariant(variant) {
   $('#variantSelect').value = variant.id;
   $('#variantMeta').hidden = variant.role?.startsWith('ordinary_') || variant.radius_mm === undefined || variant.radius_mm === null;
   $('#variantMeta').textContent = `R ${text(variant.radius_mm, '—')} mm`;
-  setHash(state.currentCase, variant);
+  rememberSelection(state.currentCase, variant);
   renderNotice();
   renderFindings();
   renderReference();
@@ -850,6 +850,13 @@ function wireUI() {
   $('#mobileMenu').addEventListener('click', () => $('.sidebar').classList.toggle('is-open')); $('#mobileClose').addEventListener('click', () => $('.sidebar').classList.remove('is-open'));
   $('#beforeToggle').addEventListener('change', () => { if (state.variant) renderModels(++state.token); });
   $('#resetView').addEventListener('click', () => Object.values(state.viewers).forEach((viewer) => viewer.reset()));
+  $('#copyCaseLink').addEventListener('click', async () => {
+    if (!state.currentCase) return;
+    const link = shareViewerURL(location.href, { series: state.series, case: getCaseNumber(state.currentCase), variant: state.variant?.id || null });
+    try { await navigator.clipboard.writeText(link); toast(`已复制第${getCaseNumber(state.currentCase)}项定位链接。`); }
+    catch { $('#caseShareLink').value = link; $('#caseLinkDialog').showModal(); $('#caseShareLink').select(); }
+  });
+  $('#closeCaseLinkDialog').addEventListener('click', () => $('#caseLinkDialog').close());
   $('#syncToggle').addEventListener('change', () => { const viewers = Object.values(state.viewers).filter((viewer) => viewer.hasMesh); if ($('#syncToggle').checked && viewers.length > 1) for (const viewer of viewers.slice(1)) viewer.copyCamera(viewers[0]); });
   $$('.expand-button').forEach((button) => button.addEventListener('click', () => expandCard(button.dataset.expand))); $('#expandBackdrop').addEventListener('click', () => expandCard(null));
   $('#referenceStage').addEventListener('dblclick', () => { if (!$('#referenceImageWrap').hidden) expandCard('referenceCard'); });
@@ -882,6 +889,7 @@ function wireUI() {
   $('#aboutButton').addEventListener('click', () => $('#aboutDialog').showModal()); $('#closeAboutDialog').addEventListener('click', () => $('#aboutDialog').close());
   $$('dialog').forEach((dialog) => dialog.addEventListener('click', (event) => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } }));
   window.addEventListener('hashchange', () => routeHash());
+  window.addEventListener('popstate', () => routeHash());
   window.addEventListener('resize', () => { if ($('#referenceDialog').open) updateCropOverlay(); });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') { expandCard(null); $('.sidebar').classList.remove('is-open'); }

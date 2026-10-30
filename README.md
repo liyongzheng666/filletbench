@@ -4,6 +4,8 @@
 
 网站以 **基准案例** 为主入口，沿用此前逐项核对的输入与工况：原 PDF / 基础模型与选边 / OCC实际结果 / SMLib实际结果。界面采用用户选定的“蓝白实验室”设计；历史实验保留既有链接与返回主入口的操作。保留失败、空结果、碎片和自交；**API 成功不是功能通过**。本库目前是探索性测评集，尚未建立可用于内核排名的统一通过率。[界面设计记录](docs/viewer-design.md)
 
+日常访问只需 `https://www.goudanx.top/filletbench/`。页面会在本浏览器记住案例和工况，切换或刷新保持简洁地址。分享某个工况时点“复制定位链接”，生成如 `#31/body-r7` 的定位信息；旧版长链接仍兼容，载入后会自动收起地址中的参数。
+
 ## 快速开始
 
 Python 3.10+，推荐独立虚拟环境。OCCT 通过固定版本的 [CadQuery/OCP](https://github.com/CadQuery/OCP) 绑定运行；SMLib 使用 [NVIDIA USD BRep](https://github.com/NVIDIA-Omniverse/usd-brep) 中的开源内核源码，需另行构建，库内不分发 SDK 或二进制。

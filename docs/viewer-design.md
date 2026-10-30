@@ -19,3 +19,10 @@ Actual result-face colors and selected geometry remain semantic overlays; no
 model geometry, numerical result or acceptance state is changed by this skin.
 Local PDF/image import remains browser-only. The prototype's local reference
 server, theme switcher and alternative CSS are not part of the production site.
+
+The normal address remains `/filletbench/`. The selected benchmark case and
+variant are remembered locally and in the current history entry, so refresh
+retains the exact selection. Explicit legacy links take precedence, load their
+original target, and then clear the address. The copy-location action creates a
+compact share link such as `#31/body-r7`; historical experiment links use the
+`#history/` prefix and do not replace the last benchmark saved for a fresh visit.
